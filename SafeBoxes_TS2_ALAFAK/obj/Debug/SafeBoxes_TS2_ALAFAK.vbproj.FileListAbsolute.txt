@@ -1,0 +1,13 @@
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\SafeBoxes_TS2_ALAFAK.exe.config
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\SafeBoxes_TS2_ALAFAK.exe
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\SafeBoxes_TS2_ALAFAK.pdb
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\SafeBoxes_TS2_ALAFAK.xml
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbprojResolveAssemblyReference.cache
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.frm_main.resources
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Resources.resources
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbproj.GenerateResource.Cache
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbproj.CoreCompileInputs.cache
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.exe
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.xml
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.pdb
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\testDatabase.accdb
