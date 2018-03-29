@@ -24,7 +24,7 @@ Module OleDb_Tools
     'Mostly SELECT...
     '...Only SELECT :P
     Public Function ReadQueryOut(ByVal theQuery As String) As DataSet
-
+        dbDataSet.Clear() 'Empty the Data Set incase it has any information
         theCommand.CommandText = theQuery 'Set the command text (set the query)
         theCommand.Connection = theCon 'Set the connection the will be used by the command
         dbDataAdapter.SelectCommand = theCommand 'Append the command to the data adapter and execute
@@ -32,6 +32,12 @@ Module OleDb_Tools
         dbDataAdapter.Dispose() 'Distroy the data adapter to conserve memory since it is not needed anymore
         Return dbDataSet 'Return the data set to be readed by the caller
     End Function
+
+    Public Sub ExecuteQuery(ByVal theQuery As String)
+        theCommand.CommandText = theQuery 'Set the command text (set the query)
+        theCommand.Connection = theCon 'Set the connection the will be used by the command
+        theCommand.ExecuteNonQuery() 'Execute non SELECT query
+    End Sub
 
 
 End Module
