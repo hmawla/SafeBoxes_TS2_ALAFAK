@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Frm_main
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -22,17 +22,36 @@ Partial Class Frm_main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
+        '
+        'MaterialRaisedButton1
+        '
+        Me.MaterialRaisedButton1.AutoSize = True
+        Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialRaisedButton1.Depth = 0
+        Me.MaterialRaisedButton1.Icon = Nothing
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(12, 71)
+        Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
+        Me.MaterialRaisedButton1.Primary = True
+        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(126, 36)
+        Me.MaterialRaisedButton1.TabIndex = 0
+        Me.MaterialRaisedButton1.Text = "New Contract"
+        Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(638, 412)
+        Me.ClientSize = New System.Drawing.Size(786, 516)
+        Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Name = "Frm_main"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
+    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
 End Class

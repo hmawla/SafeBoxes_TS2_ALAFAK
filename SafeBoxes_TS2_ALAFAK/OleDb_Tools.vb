@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Module OleDb_Tools
     'Declare the connection string to be used later (change this when LDM database is done)
-    Private conString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DATADIRECTORY|testDatabase.accdb;"
+    Private conString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DATADIRECTORY|OurTables.accdb;"
 
     'Declare the connection using the connection string
     Private theCon As New OleDbConnection(conString)
