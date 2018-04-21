@@ -97,6 +97,12 @@
     <Compile Include="Frm_newContract.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_SelectAccount.Designer.vb">
+      <DependentUpon>Frm_SelectAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_SelectAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OleDb_Tools.vb" />
     <Compile Include="Frm_main.vb">
       <SubType>Form</SubType>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_newContract.resx">
       <DependentUpon>Frm_newContract.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_SelectAccount.resx">
+      <DependentUpon>Frm_SelectAccount.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

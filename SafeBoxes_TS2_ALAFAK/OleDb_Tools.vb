@@ -24,7 +24,7 @@ Module OleDb_Tools
     'Mostly SELECT...
     '...Only SELECT :P
     Public Function ReadQueryOut(ByVal theQuery As String) As DataSet
-        dbDataSet.Clear() 'Empty the Data Set incase it has any information
+        dbDataSet.Reset() 'Empty the Data Set in case it has any information
         theCommand.CommandText = theQuery 'Set the command text (set the query)
         theCommand.Connection = theCon 'Set the connection the will be used by the command
         dbDataAdapter.SelectCommand = theCommand 'Append the command to the data adapter and execute
@@ -37,6 +37,11 @@ Module OleDb_Tools
         theCommand.CommandText = theQuery 'Set the command text (set the query)
         theCommand.Connection = theCon 'Set the connection the will be used by the command
         theCommand.ExecuteNonQuery() 'Execute non SELECT query
+    End Sub
+
+    Public Sub FillDGV(ByVal theDGV As DataGridView, ByVal theQuery As String)
+        dbDataSet = ReadQueryOut(theQuery) 'Activate the select query and fill dbDataSet with the output
+        theDGV.DataSource = dbDataSet.Tables(0) 'Set the data source for the following DataGridView
     End Sub
 
 

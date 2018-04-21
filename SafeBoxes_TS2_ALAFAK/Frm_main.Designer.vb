@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Frm_main
-    Inherits MaterialSkin.Controls.MaterialForm
+    Inherits Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -23,6 +23,7 @@ Partial Class Frm_main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'MaterialRaisedButton1
@@ -31,7 +32,7 @@ Partial Class Frm_main
         Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton1.Depth = 0
         Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(12, 71)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(12, 68)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
@@ -40,11 +41,27 @@ Partial Class Frm_main
         Me.MaterialRaisedButton1.Text = "New Contract"
         Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         '
+        'MaterialRaisedButton2
+        '
+        Me.MaterialRaisedButton2.AutoSize = True
+        Me.MaterialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialRaisedButton2.Depth = 0
+        Me.MaterialRaisedButton2.Icon = Nothing
+        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(144, 68)
+        Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
+        Me.MaterialRaisedButton2.Primary = True
+        Me.MaterialRaisedButton2.Size = New System.Drawing.Size(136, 36)
+        Me.MaterialRaisedButton2.TabIndex = 1
+        Me.MaterialRaisedButton2.Text = "Select Account"
+        Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(786, 516)
+        Me.Controls.Add(Me.MaterialRaisedButton2)
         Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Name = "Frm_main"
         Me.Text = "Form1"
@@ -54,4 +71,5 @@ Partial Class Frm_main
     End Sub
 
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
 End Class
