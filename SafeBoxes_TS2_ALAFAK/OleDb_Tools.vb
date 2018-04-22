@@ -41,6 +41,7 @@ Module OleDb_Tools
 
     Public Sub FillDGV(ByVal theDGV As DataGridView, ByVal theQuery As String)
         dbDataSet = ReadQueryOut(theQuery) 'Activate the select query and fill dbDataSet with the output
+        'theDGV.Rows.Clear() 'Clears the data grid view in case it contains data
         theDGV.DataSource = dbDataSet.Tables(0) 'Set the data source for the following DataGridView
     End Sub
 

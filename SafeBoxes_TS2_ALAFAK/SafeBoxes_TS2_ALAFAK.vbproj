@@ -91,6 +91,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_newContract.Designer.vb">
       <DependentUpon>Frm_newContract.vb</DependentUpon>
     </Compile>
@@ -128,6 +134,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_main.resx">
       <DependentUpon>Frm_main.vb</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +170,7 @@
     <Content Include="OurTables.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\safeboxes_splash.gif" />
     <Content Include="testDatabase.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
