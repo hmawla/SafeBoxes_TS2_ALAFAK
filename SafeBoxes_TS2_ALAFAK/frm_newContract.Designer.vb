@@ -36,20 +36,20 @@ Partial Class frm_newContract
         Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txt_accountid = New System.Windows.Forms.TextBox()
         Me.AccountsMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txt_clientinfo = New System.Windows.Forms.TextBox()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel11 = New MaterialSkin.Controls.MaterialLabel()
         Me.BoxesMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
+        Me.MaterialLabel11 = New MaterialSkin.Controls.MaterialLabel()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AccountsMenuStrip.SuspendLayout()
         Me.BoxesMenuStrip.SuspendLayout()
@@ -211,16 +211,16 @@ Partial Class frm_newContract
         Me.MaterialLabel7.TabIndex = 32
         Me.MaterialLabel7.Text = "Account ID:*"
         '
-        'TextBox3
+        'txt_accountid
         '
-        Me.TextBox3.ContextMenuStrip = Me.AccountsMenuStrip
-        Me.TextBox3.Font = New System.Drawing.Font("Roboto", 12.0!)
-        Me.TextBox3.Location = New System.Drawing.Point(16, 84)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(148, 27)
-        Me.TextBox3.TabIndex = 0
-        Me.TextBox3.Text = "<AccountId>"
+        Me.txt_accountid.ContextMenuStrip = Me.AccountsMenuStrip
+        Me.txt_accountid.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.txt_accountid.Location = New System.Drawing.Point(16, 84)
+        Me.txt_accountid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_accountid.Name = "txt_accountid"
+        Me.txt_accountid.Size = New System.Drawing.Size(148, 27)
+        Me.txt_accountid.TabIndex = 0
+        Me.txt_accountid.Text = "<AccountId>"
         '
         'AccountsMenuStrip
         '
@@ -246,28 +246,28 @@ Partial Class frm_newContract
         Me.MaterialLabel8.Depth = 0
         Me.MaterialLabel8.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel8.Location = New System.Drawing.Point(213, 53)
+        Me.MaterialLabel8.Location = New System.Drawing.Point(207, 53)
         Me.MaterialLabel8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel8.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel8.Name = "MaterialLabel8"
-        Me.MaterialLabel8.Size = New System.Drawing.Size(135, 19)
+        Me.MaterialLabel8.Size = New System.Drawing.Size(82, 19)
         Me.MaterialLabel8.TabIndex = 35
-        Me.MaterialLabel8.Text = "Client Info: <INFO>"
+        Me.MaterialLabel8.Text = "Client Info:"
         '
-        'TextBox4
+        'txt_clientinfo
         '
-        Me.TextBox4.BackColor = System.Drawing.Color.White
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox4.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.TextBox4.Location = New System.Drawing.Point(211, 84)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox4.Size = New System.Drawing.Size(281, 165)
-        Me.TextBox4.TabIndex = 36
-        Me.TextBox4.Text = "<INFO HERE>"
+        Me.txt_clientinfo.BackColor = System.Drawing.Color.White
+        Me.txt_clientinfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txt_clientinfo.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.txt_clientinfo.Location = New System.Drawing.Point(211, 84)
+        Me.txt_clientinfo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txt_clientinfo.Multiline = True
+        Me.txt_clientinfo.Name = "txt_clientinfo"
+        Me.txt_clientinfo.ReadOnly = True
+        Me.txt_clientinfo.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txt_clientinfo.Size = New System.Drawing.Size(281, 165)
+        Me.txt_clientinfo.TabIndex = 36
+        Me.txt_clientinfo.Text = "<INFO HERE>"
         '
         'MaterialLabel9
         '
@@ -314,6 +314,18 @@ Partial Class frm_newContract
         Me.TextBox6.TabIndex = 1
         Me.TextBox6.Text = "<BoxId>"
         '
+        'BoxesMenuStrip
+        '
+        Me.BoxesMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectBoxToolStripMenuItem})
+        Me.BoxesMenuStrip.Name = "BoxesMenuStrip"
+        Me.BoxesMenuStrip.Size = New System.Drawing.Size(128, 26)
+        '
+        'SelectBoxToolStripMenuItem
+        '
+        Me.SelectBoxToolStripMenuItem.Name = "SelectBoxToolStripMenuItem"
+        Me.SelectBoxToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.SelectBoxToolStripMenuItem.Text = "Select Box"
+        '
         'MaterialLabel10
         '
         Me.MaterialLabel10.AutoSize = True
@@ -342,18 +354,6 @@ Partial Class frm_newContract
         Me.MaterialLabel11.TabIndex = 43
         Me.MaterialLabel11.Text = "Employee ID: <EmpId>"
         '
-        'BoxesMenuStrip
-        '
-        Me.BoxesMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectBoxToolStripMenuItem})
-        Me.BoxesMenuStrip.Name = "BoxesMenuStrip"
-        Me.BoxesMenuStrip.Size = New System.Drawing.Size(128, 26)
-        '
-        'SelectBoxToolStripMenuItem
-        '
-        Me.SelectBoxToolStripMenuItem.Name = "SelectBoxToolStripMenuItem"
-        Me.SelectBoxToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
-        Me.SelectBoxToolStripMenuItem.Text = "Select Box"
-        '
         'frm_newContract
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -366,9 +366,9 @@ Partial Class frm_newContract
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MaterialLabel9)
         Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txt_clientinfo)
         Me.Controls.Add(Me.MaterialLabel8)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txt_accountid)
         Me.Controls.Add(Me.MaterialLabel7)
         Me.Controls.Add(Me.MaterialLabel6)
         Me.Controls.Add(Me.TextBox2)
@@ -409,9 +409,9 @@ Partial Class frm_newContract
     Friend WithEvents MaterialLabel6 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txt_accountid As TextBox
     Friend WithEvents MaterialLabel8 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txt_clientinfo As TextBox
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Button1 As Button

@@ -15,6 +15,7 @@
 
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
         btn_reset.Enabled = True
+        btn_select.Enabled = False
         If rdb_byid.Checked Then
             FillDGV(dgv_accounts, "SELECT AccountId, ClientFName & ' ' & ClientLName as client, ClientMother, ClientDOB  FROM Clients C, ClientDepAccount A WHERE A.ClientId = C.ClientId AND C.ClientId = " & txt_byid.Text)
         Else
@@ -40,4 +41,14 @@
         FillDGV(dgv_accounts, "SELECT AccountId, ClientFName & ' ' & ClientLName as client, ClientMother, ClientDOB  FROM Clients C, ClientDepAccount A WHERE A.ClientId = C.ClientId")
         btn_reset.Enabled = False
     End Sub
+
+    Private Sub dgv_accounts_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_accounts.RowEnter
+        btn_select.Enabled = True
+    End Sub
+
+    Private Sub btn_select_Click(sender As Object, e As EventArgs) Handles btn_select.Click
+        frm_newContract.txt_accountid.Text = dgv_accounts.SelectedRows.Item(0).Cells.Item(0).Value
+        Me.Close()
+    End Sub
+
 End Class
