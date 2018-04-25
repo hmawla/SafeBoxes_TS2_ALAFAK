@@ -14,10 +14,10 @@ Public Class frm_newContract
         txt_clientinfo.Text = ""
         Dim i As Integer = 1
         Try
-            ds = ReadQueryOut("SELECT c.ClientId, ClientFName, ClientLName, ClientMName, ClientMother, ClientDOB FROM Clients c, ClientDepAccount a WHERE c.ClientId = a.ClientId AND a.accountid = " & txt_accountid.Text)
+            ds = ReadQueryOut("SELECT c.ClientId, ClientFName, ClientLName, ClientDOB FROM Clients c, ClientDepAccount a WHERE c.ClientId = a.ClientId AND a.accountid = " & txt_accountid.Text)
             If ds.Tables(0).Rows.Count <> 0 Then
                 For Each datarow As DataRow In ds.Tables(0).Rows
-                    txt_clientinfo.Text = txt_clientinfo.Text & "(" & i & ")" & vbNewLine & "Client ID: " & datarow.Item(0) & vbNewLine & "Client Name: " & datarow.Item(1) & " " & datarow.Item(2) & vbNewLine & vbNewLine
+                    txt_clientinfo.Text = txt_clientinfo.Text & "(" & i & ")" & vbNewLine & "Client ID: " & datarow.Item(0) & vbNewLine & "Client Name: " & datarow.Item(1) & " " & datarow.Item(2) & vbNewLine & "BirthDate: " & datarow.Item(3) & vbNewLine & vbNewLine
                     i = i + 1
                 Next
             Else
