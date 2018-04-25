@@ -26,9 +26,9 @@ Partial Class frm_newContract
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
+        Me.lbl_contractid = New MaterialSkin.Controls.MaterialLabel()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbox_buildings = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
@@ -44,7 +44,7 @@ Partial Class frm_newContract
         Me.txt_clientinfo = New System.Windows.Forms.TextBox()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_submit = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.BoxesMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -87,19 +87,19 @@ Partial Class frm_newContract
         Me.MaterialLabel1.TabIndex = 21
         Me.MaterialLabel1.Text = "Expiry Date:*"
         '
-        'MaterialLabel2
+        'lbl_contractid
         '
-        Me.MaterialLabel2.AutoSize = True
-        Me.MaterialLabel2.Depth = 0
-        Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel2.Location = New System.Drawing.Point(13, 9)
-        Me.MaterialLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel2.Name = "MaterialLabel2"
-        Me.MaterialLabel2.Size = New System.Drawing.Size(153, 19)
-        Me.MaterialLabel2.TabIndex = 23
-        Me.MaterialLabel2.Text = "Contract ID: <ContId>"
+        Me.lbl_contractid.AutoSize = True
+        Me.lbl_contractid.Depth = 0
+        Me.lbl_contractid.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lbl_contractid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lbl_contractid.Location = New System.Drawing.Point(13, 9)
+        Me.lbl_contractid.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_contractid.MouseState = MaterialSkin.MouseState.HOVER
+        Me.lbl_contractid.Name = "lbl_contractid"
+        Me.lbl_contractid.Size = New System.Drawing.Size(153, 19)
+        Me.lbl_contractid.TabIndex = 23
+        Me.lbl_contractid.Text = "Contract ID: <ContId>"
         '
         'DateTimePicker1
         '
@@ -112,15 +112,14 @@ Partial Class frm_newContract
         Me.DateTimePicker1.Size = New System.Drawing.Size(137, 27)
         Me.DateTimePicker1.TabIndex = 6
         '
-        'ComboBox1
+        'cbox_buildings
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(16, 360)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(148, 28)
-        Me.ComboBox1.TabIndex = 4
-        Me.ComboBox1.Text = "<BuildingName>"
+        Me.cbox_buildings.FormattingEnabled = True
+        Me.cbox_buildings.Location = New System.Drawing.Point(16, 360)
+        Me.cbox_buildings.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cbox_buildings.Name = "cbox_buildings"
+        Me.cbox_buildings.Size = New System.Drawing.Size(148, 28)
+        Me.cbox_buildings.TabIndex = 4
         '
         'MaterialLabel3
         '
@@ -259,6 +258,7 @@ Partial Class frm_newContract
         Me.txt_clientinfo.BackColor = System.Drawing.Color.White
         Me.txt_clientinfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_clientinfo.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.txt_clientinfo.Font = New System.Drawing.Font("Agency FB", 13.0!, System.Drawing.FontStyle.Bold)
         Me.txt_clientinfo.Location = New System.Drawing.Point(211, 84)
         Me.txt_clientinfo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txt_clientinfo.Multiline = True
@@ -293,15 +293,15 @@ Partial Class frm_newContract
         Me.TextBox5.TabIndex = 7
         Me.TextBox5.Text = "<ContNote>"
         '
-        'Button1
+        'btn_submit
         '
-        Me.Button1.Location = New System.Drawing.Point(416, 485)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(76, 40)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_submit.Location = New System.Drawing.Point(416, 485)
+        Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btn_submit.Name = "btn_submit"
+        Me.btn_submit.Size = New System.Drawing.Size(76, 40)
+        Me.btn_submit.TabIndex = 8
+        Me.btn_submit.Text = "Submit"
+        Me.btn_submit.UseVisualStyleBackColor = True
         '
         'TextBox6
         '
@@ -363,7 +363,7 @@ Partial Class frm_newContract
         Me.Controls.Add(Me.MaterialLabel11)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.MaterialLabel10)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_submit)
         Me.Controls.Add(Me.MaterialLabel9)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.txt_clientinfo)
@@ -376,9 +376,9 @@ Partial Class frm_newContract
         Me.Controls.Add(Me.MaterialLabel4)
         Me.Controls.Add(Me.NumericUpDown1)
         Me.Controls.Add(Me.MaterialLabel3)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbox_buildings)
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.MaterialLabel2)
+        Me.Controls.Add(Me.lbl_contractid)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox1)
@@ -399,9 +399,9 @@ Partial Class frm_newContract
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents lbl_contractid As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbox_buildings As ComboBox
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents MaterialLabel4 As MaterialSkin.Controls.MaterialLabel
@@ -414,7 +414,7 @@ Partial Class frm_newContract
     Friend WithEvents txt_clientinfo As TextBox
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_submit As Button
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents MaterialLabel10 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel11 As MaterialSkin.Controls.MaterialLabel
