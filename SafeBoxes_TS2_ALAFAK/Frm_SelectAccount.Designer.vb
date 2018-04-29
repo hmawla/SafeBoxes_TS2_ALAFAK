@@ -63,7 +63,7 @@ Partial Class Frm_SelectAccount
         Me.dgv_accounts.RowHeadersVisible = False
         Me.dgv_accounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_accounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_accounts.Size = New System.Drawing.Size(725, 328)
+        Me.dgv_accounts.Size = New System.Drawing.Size(603, 328)
         Me.dgv_accounts.TabIndex = 0
         '
         'txt_byid
@@ -77,7 +77,7 @@ Partial Class Frm_SelectAccount
         'btn_search
         '
         Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_search.Location = New System.Drawing.Point(463, 54)
+        Me.btn_search.Location = New System.Drawing.Point(341, 54)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(70, 35)
@@ -98,7 +98,7 @@ Partial Class Frm_SelectAccount
         Me.grp_search.Font = New System.Drawing.Font("Roboto", 12.0!)
         Me.grp_search.Location = New System.Drawing.Point(18, 12)
         Me.grp_search.Name = "grp_search"
-        Me.grp_search.Size = New System.Drawing.Size(572, 113)
+        Me.grp_search.Size = New System.Drawing.Size(450, 113)
         Me.grp_search.TabIndex = 4
         Me.grp_search.TabStop = False
         Me.grp_search.Text = "Search"
@@ -107,7 +107,7 @@ Partial Class Frm_SelectAccount
         '
         Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_reset.Enabled = False
-        Me.btn_reset.Location = New System.Drawing.Point(541, 54)
+        Me.btn_reset.Location = New System.Drawing.Point(419, 54)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(24, 35)
@@ -133,7 +133,7 @@ Partial Class Frm_SelectAccount
         Me.txt_byname.Location = New System.Drawing.Point(162, 58)
         Me.txt_byname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byname.Name = "txt_byname"
-        Me.txt_byname.Size = New System.Drawing.Size(293, 27)
+        Me.txt_byname.Size = New System.Drawing.Size(171, 27)
         Me.txt_byname.TabIndex = 4
         '
         'rdb_byid
@@ -152,7 +152,7 @@ Partial Class Frm_SelectAccount
         '
         Me.btn_select.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_select.Enabled = False
-        Me.btn_select.Location = New System.Drawing.Point(631, 471)
+        Me.btn_select.Location = New System.Drawing.Point(509, 471)
         Me.btn_select.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_select.Name = "btn_select"
         Me.btn_select.Size = New System.Drawing.Size(112, 35)
@@ -166,9 +166,9 @@ Partial Class Frm_SelectAccount
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 12.0!)
-        Me.GroupBox1.Location = New System.Drawing.Point(596, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(474, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(142, 113)
+        Me.GroupBox1.Size = New System.Drawing.Size(148, 113)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Type"
@@ -200,7 +200,7 @@ Partial Class Frm_SelectAccount
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(756, 520)
+        Me.ClientSize = New System.Drawing.Size(634, 520)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btn_select)
         Me.Controls.Add(Me.grp_search)

@@ -91,6 +91,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_SelectBox.Designer.vb">
+      <DependentUpon>Frm_SelectBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_SelectBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SplashScreen.Designer.vb">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </Compile>
@@ -134,6 +140,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frm_SelectBox.resx">
+      <DependentUpon>Frm_SelectBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>

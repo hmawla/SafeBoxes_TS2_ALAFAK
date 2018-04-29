@@ -1,16 +1,20 @@
 ﻿Imports System.ComponentModel
+Imports System.Data
 
 Public Class frm_newContract
+    Dim formLoaded As Boolean = False
     Dim ds As DataSet
+    Dim anotherds As DataSet
     Dim theNewId As Integer
     Dim isSubmitting As Boolean = False
+    Dim bs As New BindingSource
 
     Private Sub SelectAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAccountToolStripMenuItem.Click
         Frm_SelectAccount.ShowDialog()
     End Sub
 
     Private Sub txt_accountid_Leave(sender As Object, e As EventArgs) Handles txt_accountid.Leave
-        ds.Reset()
+        'ds.Reset()
         txt_clientinfo.Text = ""
         Dim i As Integer = 1
         Try
@@ -31,6 +35,7 @@ Public Class frm_newContract
             txt_accountid.Focus()
             txt_accountid.SelectAll()
         End Try
+        formLoaded = True
     End Sub
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
@@ -49,16 +54,31 @@ Public Class frm_newContract
         ds = ReadQueryOut("SELECT MAX(ContId) FROM Contract")
         theNewId = ds.Tables(0).Rows(0).Item(0) + 1
         ds.Reset()
-        ds = ReadQueryOut("SELECT BuildingName FROM Buildings")
-        For Each datarow As DataRow In ds.Tables(0).Rows
-            cbox_buildings.Items.Add(datarow.Item(0))
-        Next
+        FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
+        FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+        FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+
         Try
             ExecuteQuery("INSERT INTO CONTRACT(ContId) VALUES(" & theNewId & ")")
             lbl_contractid.Text = "Contract ID: " & theNewId
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
-        cbox_buildings.SelectedIndex = 0
+    End Sub
+
+    Private Sub SelectBoxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectBoxToolStripMenuItem.Click
+        Frm_SelectBox.ShowDialog()
+    End Sub
+
+    Private Sub cbox_regions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbox_regions.SelectedIndexChanged
+        If formLoaded Then
+            FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+        End If
+    End Sub
+
+    Private Sub cbox_streets_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbox_streets.SelectedIndexChanged
+        If formLoaded Then
+            FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+        End If
     End Sub
 End Class
