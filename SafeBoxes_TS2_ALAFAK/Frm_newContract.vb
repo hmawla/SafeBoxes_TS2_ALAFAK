@@ -51,19 +51,12 @@ Public Class frm_newContract
     End Sub
 
     Private Sub frm_newContract_Load(sender As Object, e As EventArgs) Handles Me.Load
-        ds = ReadQueryOut("SELECT MAX(ContId) FROM Contract")
-        theNewId = ds.Tables(0).Rows(0).Item(0) + 1
-        ds.Reset()
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
-
-        Try
-            ExecuteQuery("INSERT INTO CONTRACT(ContId) VALUES(" & theNewId & ")")
-            lbl_contractid.Text = "Contract ID: " & theNewId
-        Catch ex As Exception
-            MsgBox(ex.ToString)
-        End Try
+        theNewId = genID("Contract", "ContId")
+        ExecuteQuery("INSERT INTO Contract(ContId) VALUES(" & theNewId & ")")
+        lbl_contractid.Text = "Contract ID: " & theNewId
     End Sub
 
     Private Sub SelectBoxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectBoxToolStripMenuItem.Click
@@ -80,5 +73,9 @@ Public Class frm_newContract
         If formLoaded Then
             FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
         End If
+    End Sub
+
+    Private Sub NewBuildingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewBuildingToolStripMenuItem.Click
+        Frm_NewBuilding.ShowDialog()
     End Sub
 End Class

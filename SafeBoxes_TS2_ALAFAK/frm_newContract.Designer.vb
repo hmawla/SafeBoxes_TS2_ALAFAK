@@ -29,6 +29,8 @@ Partial Class frm_newContract
         Me.lbl_contractid = New MaterialSkin.Controls.MaterialLabel()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.cbox_buildings = New System.Windows.Forms.ComboBox()
+        Me.BuildingsMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.NewBuildingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
@@ -45,7 +47,7 @@ Partial Class frm_newContract
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.btn_submit = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txt_boxes = New System.Windows.Forms.TextBox()
         Me.BoxesMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
@@ -54,6 +56,7 @@ Partial Class frm_newContract
         Me.cbox_regions = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_streets = New System.Windows.Forms.ComboBox()
+        Me.BuildingsMenuStrip.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AccountsMenuStrip.SuspendLayout()
         Me.BoxesMenuStrip.SuspendLayout()
@@ -119,6 +122,7 @@ Partial Class frm_newContract
         'cbox_buildings
         '
         Me.cbox_buildings.BackColor = System.Drawing.Color.White
+        Me.cbox_buildings.ContextMenuStrip = Me.BuildingsMenuStrip
         Me.cbox_buildings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbox_buildings.ForeColor = System.Drawing.Color.Black
         Me.cbox_buildings.FormattingEnabled = True
@@ -127,6 +131,18 @@ Partial Class frm_newContract
         Me.cbox_buildings.Name = "cbox_buildings"
         Me.cbox_buildings.Size = New System.Drawing.Size(148, 28)
         Me.cbox_buildings.TabIndex = 6
+        '
+        'BuildingsMenuStrip
+        '
+        Me.BuildingsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewBuildingToolStripMenuItem})
+        Me.BuildingsMenuStrip.Name = "BuildingsMenuStrip"
+        Me.BuildingsMenuStrip.Size = New System.Drawing.Size(153, 48)
+        '
+        'NewBuildingToolStripMenuItem
+        '
+        Me.NewBuildingToolStripMenuItem.Name = "NewBuildingToolStripMenuItem"
+        Me.NewBuildingToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewBuildingToolStripMenuItem.Text = "New Building"
         '
         'MaterialLabel3
         '
@@ -310,16 +326,16 @@ Partial Class frm_newContract
         Me.btn_submit.Text = "Submit"
         Me.btn_submit.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'txt_boxes
         '
-        Me.TextBox6.ContextMenuStrip = Me.BoxesMenuStrip
-        Me.TextBox6.Font = New System.Drawing.Font("Roboto", 12.0!)
-        Me.TextBox6.Location = New System.Drawing.Point(172, 67)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(148, 27)
-        Me.TextBox6.TabIndex = 1
-        Me.TextBox6.Text = "<BoxId>"
+        Me.txt_boxes.ContextMenuStrip = Me.BoxesMenuStrip
+        Me.txt_boxes.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.txt_boxes.Location = New System.Drawing.Point(172, 67)
+        Me.txt_boxes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_boxes.Name = "txt_boxes"
+        Me.txt_boxes.Size = New System.Drawing.Size(148, 27)
+        Me.txt_boxes.TabIndex = 1
+        Me.txt_boxes.Text = "<BoxId>"
         '
         'BoxesMenuStrip
         '
@@ -424,7 +440,7 @@ Partial Class frm_newContract
         Me.Controls.Add(Me.MaterialLabel2)
         Me.Controls.Add(Me.cbox_regions)
         Me.Controls.Add(Me.MaterialLabel11)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.txt_boxes)
         Me.Controls.Add(Me.MaterialLabel10)
         Me.Controls.Add(Me.btn_submit)
         Me.Controls.Add(Me.MaterialLabel9)
@@ -451,6 +467,7 @@ Partial Class frm_newContract
         Me.MaximizeBox = False
         Me.Name = "frm_newContract"
         Me.Text = "New Contract"
+        Me.BuildingsMenuStrip.ResumeLayout(False)
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AccountsMenuStrip.ResumeLayout(False)
         Me.BoxesMenuStrip.ResumeLayout(False)
@@ -478,7 +495,7 @@ Partial Class frm_newContract
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents btn_submit As Button
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txt_boxes As TextBox
     Friend WithEvents MaterialLabel10 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel11 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents AccountsMenuStrip As ContextMenuStrip
@@ -490,4 +507,6 @@ Partial Class frm_newContract
     Friend WithEvents cbox_regions As ComboBox
     Friend WithEvents MaterialLabel12 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_streets As ComboBox
+    Friend WithEvents BuildingsMenuStrip As ContextMenuStrip
+    Friend WithEvents NewBuildingToolStripMenuItem As ToolStripMenuItem
 End Class

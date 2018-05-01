@@ -176,7 +176,7 @@ Partial Class Frm_SelectAccount
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 56)
+        Me.RadioButton1.Location = New System.Drawing.Point(6, 54)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(91, 24)
         Me.RadioButton1.TabIndex = 5

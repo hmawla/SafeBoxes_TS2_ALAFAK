@@ -15,8 +15,6 @@ Module OleDb_Tools
     'Declare Data Set that will hold the data that is given by the Data Table
     Private dbDataSet As New DataSet
 
-    Private dbBindingSource As New BindingSource
-
     'Used to initialize the connection at the main form load
     Public Sub InitCon()
         theCon.Open()
@@ -42,17 +40,41 @@ Module OleDb_Tools
     End Sub
 
     Public Sub FillDGV(ByRef theDGV As DataGridView, ByVal theQuery As String)
-        dbDataSet = ReadQueryOut(theQuery) 'Activate the select query and fill dbDataSet with the output
-        theDGV.DataSource = dbDataSet.Tables(0) 'Set the data source for the following DataGridView
+        Dim dgvDbDataSet As New DataSet
+        dgvDbDataSet = ReadQueryOut(theQuery).Copy() 'Activate the select query and fill dbDataSet with the output
+        theDGV.DataSource = dgvDbDataSet.Tables(0) 'Set the data source for the following DataGridView
     End Sub
+
+    Public Function genID(ByVal theTable As String, ByVal theColumn As String)
+        dbDataSet = ReadQueryOut("SELECT MAX(" & theColumn & ") FROM " & theTable)
+        Return dbDataSet.Tables(0).Rows(0).Item(0) + 1
+    End Function
 
     Public Sub FillCBox(ByRef theCBox As ComboBox, ByVal theQuery As String, ByVal ValueMember As String, ByVal DisplayName As String)
         Dim cBoxDbDataSet As New DataSet
+        theCBox.Text = ""
         cBoxDbDataSet = ReadQueryOut(theQuery).Copy() 'This is the new way to get data from the database into the Combo Box, but still has some issues, and currently declared as an issue in github
         theCBox.DataSource = cBoxDbDataSet.Tables(0) 'lets's hope someone help fixing it.
         theCBox.ValueMember = ValueMember 'The problem is when I use this procedure the data is filled perfectly in the combo box but when I access the database using any query after that, it remove the data from the combo box
         theCBox.DisplayMember = DisplayName 'So now I have to refresh the combo box everytime using this function... Any Ideas?
     End Sub
+
+    Public Function Exists(ByVal theObj As String, ByVal theQuery As String) As Boolean
+        Try
+            dbDataSet = ReadQueryOut(theQuery)
+        Catch ex As Exception
+            Return False
+        End Try
+
+        Dim i As Integer
+        For i = 0 To dbDataSet.Tables(0).Rows.Count - 1
+            If dbDataSet.Tables(0).Rows(i).Item(0) = theObj Then
+                Return True
+            End If
+        Next
+        Return False
+
+    End Function
 
 
 End Module
