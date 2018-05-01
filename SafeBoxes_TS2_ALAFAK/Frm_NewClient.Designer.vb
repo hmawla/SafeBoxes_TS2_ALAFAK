@@ -157,12 +157,12 @@ Partial Class Frm_NewClient
         'dtpick_birth
         '
         Me.dtpick_birth.CustomFormat = "MMMM dd, yyyy - dddd"
-        Me.dtpick_birth.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.dtpick_birth.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.dtpick_birth.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpick_birth.Location = New System.Drawing.Point(19, 178)
         Me.dtpick_birth.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.dtpick_birth.Name = "dtpick_birth"
-        Me.dtpick_birth.Size = New System.Drawing.Size(148, 27)
+        Me.dtpick_birth.Size = New System.Drawing.Size(148, 26)
         Me.dtpick_birth.TabIndex = 38
         '
         'MaterialLabel2

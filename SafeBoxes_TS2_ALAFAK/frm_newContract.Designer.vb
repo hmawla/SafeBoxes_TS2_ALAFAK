@@ -67,7 +67,7 @@ Partial Class frm_newContract
         Me.TextBox1.Location = New System.Drawing.Point(16, 123)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(148, 27)
+        Me.TextBox1.Size = New System.Drawing.Size(148, 26)
         Me.TextBox1.TabIndex = 2
         Me.TextBox1.Text = "<ContPhone1>"
         '
@@ -111,12 +111,12 @@ Partial Class frm_newContract
         'DateTimePicker1
         '
         Me.DateTimePicker1.CustomFormat = "MMMM dd, yyyy - dddd"
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker1.Location = New System.Drawing.Point(328, 311)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 27)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 26)
         Me.DateTimePicker1.TabIndex = 9
         '
         'cbox_buildings
@@ -136,12 +136,12 @@ Partial Class frm_newContract
         '
         Me.BuildingsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewBuildingToolStripMenuItem})
         Me.BuildingsMenuStrip.Name = "BuildingsMenuStrip"
-        Me.BuildingsMenuStrip.Size = New System.Drawing.Size(153, 48)
+        Me.BuildingsMenuStrip.Size = New System.Drawing.Size(146, 26)
         '
         'NewBuildingToolStripMenuItem
         '
         Me.NewBuildingToolStripMenuItem.Name = "NewBuildingToolStripMenuItem"
-        Me.NewBuildingToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewBuildingToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.NewBuildingToolStripMenuItem.Text = "New Building"
         '
         'MaterialLabel3
@@ -160,12 +160,12 @@ Partial Class frm_newContract
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.NumericUpDown1.Location = New System.Drawing.Point(172, 231)
         Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {15, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(148, 27)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(148, 26)
         Me.NumericUpDown1.TabIndex = 7
         '
         'MaterialLabel4
@@ -215,7 +215,7 @@ Partial Class frm_newContract
         Me.TextBox2.Location = New System.Drawing.Point(172, 123)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(148, 27)
+        Me.TextBox2.Size = New System.Drawing.Size(148, 26)
         Me.TextBox2.TabIndex = 3
         Me.TextBox2.Text = "<ContPhone2>"
         '
@@ -236,11 +236,11 @@ Partial Class frm_newContract
         'txt_accountid
         '
         Me.txt_accountid.ContextMenuStrip = Me.AccountsMenuStrip
-        Me.txt_accountid.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.txt_accountid.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.txt_accountid.Location = New System.Drawing.Point(16, 67)
         Me.txt_accountid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_accountid.Name = "txt_accountid"
-        Me.txt_accountid.Size = New System.Drawing.Size(148, 27)
+        Me.txt_accountid.Size = New System.Drawing.Size(148, 26)
         Me.txt_accountid.TabIndex = 0
         Me.txt_accountid.Text = "<AccountId>"
         '
@@ -329,11 +329,11 @@ Partial Class frm_newContract
         'txt_boxes
         '
         Me.txt_boxes.ContextMenuStrip = Me.BoxesMenuStrip
-        Me.txt_boxes.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.txt_boxes.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.txt_boxes.Location = New System.Drawing.Point(172, 67)
         Me.txt_boxes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_boxes.Name = "txt_boxes"
-        Me.txt_boxes.Size = New System.Drawing.Size(148, 27)
+        Me.txt_boxes.Size = New System.Drawing.Size(148, 26)
         Me.txt_boxes.TabIndex = 1
         Me.txt_boxes.Text = "<BoxId>"
         '
@@ -461,7 +461,7 @@ Partial Class frm_newContract
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox1)
-        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False

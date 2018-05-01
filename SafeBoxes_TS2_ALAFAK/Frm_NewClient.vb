@@ -14,4 +14,37 @@
         ExecuteQuery("UPDATE Clients SET ClientFName = " & txt_fname.Text & ", ClientLName = " & txt_lname.Text & ", ClientMName = " & txt_father.Text & ", ClientMother = " & txt_mother.Text & ", ClientDOB = '" & dtpick_birth.Value & "'. ClientRegisterNbr = " & txt_rnumber.Text & ", ClientPostNbr = " & txt_pbnumber.Text & ", RegionId = " & cbox_regions.SelectedValue & " WHERE ClientId = " & theNewId)
         Me.Close()
     End Sub
+
+    Private Sub dtpick_birth_ValueChanged(sender As Object, e As EventArgs) Handles dtpick_birth.ValueChanged
+        If dtpick_birth.Value > DateTime.Now.AddYears(-18) Then
+            MessageBox.Show("enter a valid date! " & vbNewLine & "Notice: the client should be at least 18 years old")
+            dtpick_birth.Value = DateTime.Now.AddYears(-18)
+        End If
+    End Sub
+
+    Private Sub txt_rnumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_rnumber.KeyPress
+        Only_Number(txt_rnumber, e)
+    End Sub
+
+    Private Sub txt_pbnumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_pbnumber.KeyPress
+        Only_Number(txt_rnumber, e)
+    End Sub
+
+
+
+    Private Sub txt_fname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_fname.KeyPress
+        Only_char(txt_fname, e)
+    End Sub
+
+    Private Sub txt_father_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_father.KeyPress
+        Only_char(txt_father, e)
+    End Sub
+
+    Private Sub txt_lname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_lname.KeyPress
+        Only_char(txt_lname, e)
+    End Sub
+
+    Private Sub txt_mother_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_mother.KeyPress
+        Only_char(txt_mother, e)
+    End Sub
 End Class

@@ -78,4 +78,12 @@ Public Class frm_newContract
     Private Sub NewBuildingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewBuildingToolStripMenuItem.Click
         Frm_NewBuilding.ShowDialog()
     End Sub
+
+    Private Sub txt_accountid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_accountid.KeyPress
+        Only_Number(txt_accountid, e)
+    End Sub
+
+    Private Sub txt_boxes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_boxes.KeyPress
+        Only_Number(txt_boxes, e)
+    End Sub
 End Class
