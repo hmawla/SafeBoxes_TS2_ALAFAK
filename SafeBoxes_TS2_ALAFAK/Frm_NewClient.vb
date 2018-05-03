@@ -11,7 +11,7 @@
         If Not Exists(cbox_regions.Text, "SELECT RegionName FROM Regions") Then
             ExecuteQuery("INSERT INTO Regions VALUES(" & genID("Regions", "RegionId") & ", '" & cbox_regions.Text & "')")
         End If
-        ExecuteQuery("UPDATE Clients SET ClientFName = " & txt_fname.Text & ", ClientLName = " & txt_lname.Text & ", ClientMName = " & txt_father.Text & ", ClientMother = " & txt_mother.Text & ", ClientDOB = '" & dtpick_birth.Value & "'. ClientRegisterNbr = " & txt_rnumber.Text & ", ClientPostNbr = " & txt_pbnumber.Text & ", RegionId = " & cbox_regions.SelectedValue & " WHERE ClientId = " & theNewId)
+        ExecuteQuery("UPDATE Clients SET ClientFName = '" & txt_fname.Text & "', ClientLName = '" & txt_lname.Text & "', ClientMName = '" & txt_father.Text & "', ClientMother = '" & txt_mother.Text & "', ClientDOB = '" & dtpick_birth.Value.ToShortDateString & "', ClientRegisterNbr = " & txt_rnumber.Text & ", PostBoxNbr = " & txt_pbnumber.Text & ", RegionId = " & cbox_regions.SelectedValue & " WHERE ClientId = " & theNewId)
         Me.Close()
     End Sub
 

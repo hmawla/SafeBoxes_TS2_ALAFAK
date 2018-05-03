@@ -156,7 +156,7 @@ Partial Class Frm_NewClient
         '
         'dtpick_birth
         '
-        Me.dtpick_birth.CustomFormat = "MMMM dd, yyyy - dddd"
+        Me.dtpick_birth.CustomFormat = "dd-mm-yyyy"
         Me.dtpick_birth.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.dtpick_birth.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpick_birth.Location = New System.Drawing.Point(19, 178)
