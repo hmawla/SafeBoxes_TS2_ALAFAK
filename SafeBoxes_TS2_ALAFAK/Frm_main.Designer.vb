@@ -24,6 +24,7 @@ Partial Class Frm_main
     Private Sub InitializeComponent()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.btn_newclient = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'MaterialRaisedButton1
@@ -56,11 +57,27 @@ Partial Class Frm_main
         Me.btn_newclient.Text = "New Client"
         Me.btn_newclient.UseVisualStyleBackColor = True
         '
+        'MaterialRaisedButton2
+        '
+        Me.MaterialRaisedButton2.AutoSize = True
+        Me.MaterialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialRaisedButton2.Depth = 0
+        Me.MaterialRaisedButton2.Icon = Nothing
+        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(250, 68)
+        Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
+        Me.MaterialRaisedButton2.Primary = True
+        Me.MaterialRaisedButton2.Size = New System.Drawing.Size(120, 36)
+        Me.MaterialRaisedButton2.TabIndex = 3
+        Me.MaterialRaisedButton2.Text = "New Company"
+        Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(786, 516)
+        Me.Controls.Add(Me.MaterialRaisedButton2)
         Me.Controls.Add(Me.btn_newclient)
         Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Name = "Frm_main"
@@ -72,4 +89,5 @@ Partial Class Frm_main
 
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents btn_newclient As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
 End Class

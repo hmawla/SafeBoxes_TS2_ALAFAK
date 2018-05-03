@@ -187,6 +187,12 @@
     <Compile Include="Frm_NewClient.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_NewCompany.Designer.vb">
+      <DependentUpon>Frm_NewCompany.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_NewCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_SelectBox.Designer.vb">
       <DependentUpon>Frm_SelectBox.vb</DependentUpon>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewClient.resx">
       <DependentUpon>Frm_NewClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NewCompany.resx">
+      <DependentUpon>Frm_NewCompany.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_SelectBox.resx">
       <DependentUpon>Frm_SelectBox.vb</DependentUpon>

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Frm_SelectAccount
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class Frm_SelectAccountClient
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Frm_SelectAccount
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.dgv_accounts = New System.Windows.Forms.DataGridView()
         Me.txt_byid = New System.Windows.Forms.TextBox()
@@ -31,12 +31,8 @@ Partial Class Frm_SelectAccount
         Me.txt_byname = New System.Windows.Forms.TextBox()
         Me.rdb_byid = New System.Windows.Forms.RadioButton()
         Me.btn_select = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grp_search.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv_accounts
@@ -77,7 +73,7 @@ Partial Class Frm_SelectAccount
         'btn_search
         '
         Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_search.Location = New System.Drawing.Point(341, 54)
+        Me.btn_search.Location = New System.Drawing.Point(494, 54)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(70, 35)
@@ -98,7 +94,7 @@ Partial Class Frm_SelectAccount
         Me.grp_search.Font = New System.Drawing.Font("Roboto", 12.0!)
         Me.grp_search.Location = New System.Drawing.Point(18, 12)
         Me.grp_search.Name = "grp_search"
-        Me.grp_search.Size = New System.Drawing.Size(450, 113)
+        Me.grp_search.Size = New System.Drawing.Size(603, 113)
         Me.grp_search.TabIndex = 4
         Me.grp_search.TabStop = False
         Me.grp_search.Text = "Search"
@@ -107,7 +103,7 @@ Partial Class Frm_SelectAccount
         '
         Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_reset.Enabled = False
-        Me.btn_reset.Location = New System.Drawing.Point(419, 54)
+        Me.btn_reset.Location = New System.Drawing.Point(572, 54)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(24, 35)
@@ -133,7 +129,7 @@ Partial Class Frm_SelectAccount
         Me.txt_byname.Location = New System.Drawing.Point(162, 58)
         Me.txt_byname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byname.Name = "txt_byname"
-        Me.txt_byname.Size = New System.Drawing.Size(171, 27)
+        Me.txt_byname.Size = New System.Drawing.Size(324, 27)
         Me.txt_byname.TabIndex = 4
         '
         'rdb_byid
@@ -160,48 +156,12 @@ Partial Class Frm_SelectAccount
         Me.btn_select.Text = "Select"
         Me.btn_select.UseVisualStyleBackColor = True
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 12.0!)
-        Me.GroupBox1.Location = New System.Drawing.Point(474, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(148, 113)
-        Me.GroupBox1.TabIndex = 7
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Type"
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 54)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(91, 24)
-        Me.RadioButton1.TabIndex = 5
-        Me.RadioButton1.Text = "By Name"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Checked = True
-        Me.RadioButton2.Location = New System.Drawing.Point(6, 26)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(63, 24)
-        Me.RadioButton2.TabIndex = 3
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "By ID"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
         'Frm_SelectAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(634, 520)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btn_select)
         Me.Controls.Add(Me.grp_search)
         Me.Controls.Add(Me.dgv_accounts)
@@ -212,8 +172,6 @@ Partial Class Frm_SelectAccount
         CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grp_search.ResumeLayout(False)
         Me.grp_search.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -227,7 +185,4 @@ Partial Class Frm_SelectAccount
     Friend WithEvents rdb_byid As RadioButton
     Friend WithEvents btn_select As Button
     Friend WithEvents btn_reset As Button
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
 End Class

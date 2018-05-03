@@ -18,4 +18,8 @@
     Private Sub btn_newclient_Click(sender As Object, e As EventArgs) Handles btn_newclient.Click
         Frm_NewClient.Show
     End Sub
+
+    Private Sub MaterialRaisedButton2_Click_1(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
+        Frm_NewCompany.Show()
+    End Sub
 End Class

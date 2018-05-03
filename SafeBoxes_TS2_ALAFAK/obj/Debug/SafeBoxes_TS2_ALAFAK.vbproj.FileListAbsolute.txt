@@ -65,3 +65,4 @@ C:\Users\kassem\Documents\GitHub\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\D
 C:\Users\kassem\Documents\GitHub\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Resources.resources
 C:\Users\kassem\Documents\GitHub\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbproj.GenerateResource.Cache
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbproj.CopyComplete
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_NewCompany.resources
