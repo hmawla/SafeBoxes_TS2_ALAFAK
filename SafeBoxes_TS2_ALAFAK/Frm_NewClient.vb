@@ -8,16 +8,20 @@
     End Sub
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
-        If Not Exists(cbox_regions.Text, "SELECT RegionName FROM Regions") Then
-            ExecuteQuery("INSERT INTO Regions VALUES(" & genID("Regions", "RegionId") & ", '" & cbox_regions.Text & "')")
+        If txt_fname.Text = "" Or txt_lname.Text = "" Or txt_father.Text = "" Or txt_mother.Text = "" Or txt_pbnumber.Text = "" Or txt_rnumber.Text = "" Or dtpick_birth.Value > DateTime.Now.AddYears(-18) Or dtpick_birth.Value = "" Then
+            MessageBox.Show("Please fill all needed information!")
+        Else
+            If Not Exists(cbox_regions.Text, "SELECT RegionName FROM Regions") Then
+                ExecuteQuery("INSERT INTO Regions VALUES(" & genID("Regions", "RegionId") & ", '" & cbox_regions.Text & "')")
+            End If
+            ExecuteQuery("UPDATE Clients SET ClientFName = '" & txt_fname.Text & "', ClientLName = '" & txt_lname.Text & "', ClientMName = '" & txt_father.Text & "', ClientMother = '" & txt_mother.Text & "', ClientDOB = '" & dtpick_birth.Value.ToShortDateString & "', ClientRegisterNbr = " & txt_rnumber.Text & ", PostBoxNbr = " & txt_pbnumber.Text & ", RegionId = " & cbox_regions.SelectedValue & " WHERE ClientId = " & theNewId)
+            Me.Close()
         End If
-        ExecuteQuery("UPDATE Clients SET ClientFName = '" & txt_fname.Text & "', ClientLName = '" & txt_lname.Text & "', ClientMName = '" & txt_father.Text & "', ClientMother = '" & txt_mother.Text & "', ClientDOB = '" & dtpick_birth.Value.ToShortDateString & "', ClientRegisterNbr = " & txt_rnumber.Text & ", PostBoxNbr = " & txt_pbnumber.Text & ", RegionId = " & cbox_regions.SelectedValue & " WHERE ClientId = " & theNewId)
-        Me.Close()
     End Sub
 
     Private Sub dtpick_birth_ValueChanged(sender As Object, e As EventArgs) Handles dtpick_birth.ValueChanged
         If dtpick_birth.Value > DateTime.Now.AddYears(-18) Then
-            MessageBox.Show("enter a valid date! " & vbNewLine & "Notice: the client should be at least 18 years old")
+            MessageBox.Show("Enter a valid date! " & vbNewLine & "Notice: the client should be at least 18 years old!")
             dtpick_birth.Value = DateTime.Now.AddYears(-18)
         End If
     End Sub
