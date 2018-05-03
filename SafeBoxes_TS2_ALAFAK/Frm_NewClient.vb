@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
-        If txt_fname.Text = "" Or txt_lname.Text = "" Or txt_father.Text = "" Or txt_mother.Text = "" Or txt_pbnumber.Text = "" Or txt_rnumber.Text = "" Or dtpick_birth.Value > DateTime.Now.AddYears(-18) Or dtpick_birth.Value = "" Then
+        If txt_fname.Text = "" Or txt_lname.Text = "" Or txt_father.Text = "" Or txt_mother.Text = "" Or txt_pbnumber.Text = "" Or txt_rnumber.Text = "" Or dtpick_birth.Value > DateTime.Now.AddYears(-18) Or cbox_regions.Text = "" Then
             MessageBox.Show("Please fill all needed information!")
         Else
             If Not Exists(cbox_regions.Text, "SELECT RegionName FROM Regions") Then
