@@ -169,10 +169,10 @@
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Frm_NewAccount.Designer.vb">
-      <DependentUpon>Frm_NewAccount.vb</DependentUpon>
+    <Compile Include="Frm_NewAccountClient.Designer.vb">
+      <DependentUpon>Frm_NewAccountClient.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frm_NewAccount.vb">
+    <Compile Include="Frm_NewAccountClient.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_NewBuilding.Designer.vb">
@@ -193,6 +193,12 @@
     <Compile Include="Frm_NewCompany.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_NewInfoVoucher.Designer.vb">
+      <DependentUpon>Frm_NewInfoVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_NewInfoVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_SelectBox.Designer.vb">
       <DependentUpon>Frm_SelectBox.vb</DependentUpon>
     </Compile>
@@ -211,10 +217,10 @@
     <Compile Include="Frm_newContract.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_SelectAccount.Designer.vb">
-      <DependentUpon>Frm_SelectAccount.vb</DependentUpon>
+    <Compile Include="Frm_SelectAccountClient.Designer.vb">
+      <DependentUpon>Frm_SelectAccountClient.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frm_SelectAccount.vb">
+    <Compile Include="Frm_SelectAccountClient.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OleDb_Tools.vb" />
@@ -246,8 +252,8 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_NewAccount.resx">
-      <DependentUpon>Frm_NewAccount.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_NewAccountClient.resx">
+      <DependentUpon>Frm_NewAccountClient.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewBuilding.resx">
       <DependentUpon>Frm_NewBuilding.vb</DependentUpon>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewCompany.resx">
       <DependentUpon>Frm_NewCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NewInfoVoucher.resx">
+      <DependentUpon>Frm_NewInfoVoucher.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_SelectBox.resx">
       <DependentUpon>Frm_SelectBox.vb</DependentUpon>
@@ -270,8 +279,8 @@
     <EmbeddedResource Include="frm_newContract.resx">
       <DependentUpon>Frm_newContract.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_SelectAccount.resx">
-      <DependentUpon>Frm_SelectAccount.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_SelectAccountClient.resx">
+      <DependentUpon>Frm_SelectAccountClient.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

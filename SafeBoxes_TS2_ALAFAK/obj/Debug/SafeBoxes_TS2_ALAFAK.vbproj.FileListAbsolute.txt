@@ -14,7 +14,6 @@ C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\OurTables.accdb
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.frm_newContract.resources
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\MaterialSkin.dll
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_SelectAccount.resources
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.SplashScreen.resources
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_SelectBox.resources
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_NewBuilding.resources
@@ -31,7 +30,6 @@ C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\Interop.CrystalActiveXReportViewerLib13.dll
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\AxInterop.CrystalActiveXReportViewerLib13.dll
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbproj.ResolveComReference.cache
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_NewAccount.resources
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_NewClient.resources
 C:\Users\kassem\Documents\GitHub\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\SafeBoxes_TS2_ALAFAK.exe.config
 C:\Users\kassem\Documents\GitHub\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\Interop.CrystalActiveXReportViewerLib13.dll
@@ -66,3 +64,6 @@ C:\Users\kassem\Documents\GitHub\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\D
 C:\Users\kassem\Documents\GitHub\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbproj.GenerateResource.Cache
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbproj.CopyComplete
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_NewCompany.resources
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_NewAccountClient.resources
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_NewInfoVoucher.resources
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_SelectAccountClient.resources

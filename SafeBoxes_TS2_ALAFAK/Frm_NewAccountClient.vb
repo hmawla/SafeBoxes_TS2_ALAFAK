@@ -1,3 +1,3 @@
-﻿Public Class Frm_NewAccount
+﻿Public Class Frm_NewAccountClient
 
 End Class

@@ -10,7 +10,7 @@ Public Class frm_newContract
     Dim bs As New BindingSource
 
     Private Sub SelectAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAccountToolStripMenuItem.Click
-        Frm_SelectAccount.ShowDialog()
+        Frm_SelectAccountClient.ShowDialog()
     End Sub
 
     Private Sub txt_accountid_Leave(sender As Object, e As EventArgs) Handles txt_accountid.Leave
