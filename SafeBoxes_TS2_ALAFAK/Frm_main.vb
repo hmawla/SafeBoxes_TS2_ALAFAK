@@ -1,4 +1,8 @@
 ﻿Public Class Frm_main
+    Public accountid As String
+    Public clientid As String
+    Public employeeid As String
+
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
         InitCon()
     End Sub
@@ -16,10 +20,14 @@
     End Sub
 
     Private Sub btn_newclient_Click(sender As Object, e As EventArgs) Handles btn_newclient.Click
-        Frm_NewClient.Show
+        Frm_NewClient.Show()
     End Sub
 
     Private Sub MaterialRaisedButton2_Click_1(sender As Object, e As EventArgs) Handles MaterialRaisedButton2.Click
         Frm_NewCompany.Show()
+    End Sub
+
+    Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
+        Frm_NewInfoVoucher.Show()
     End Sub
 End Class

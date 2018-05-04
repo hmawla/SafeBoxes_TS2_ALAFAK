@@ -10,11 +10,12 @@ Public Class frm_newContract
     Dim bs As New BindingSource
 
     Private Sub SelectAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAccountToolStripMenuItem.Click
+        Frm_main.accountid = 0
         Frm_SelectAccountClient.ShowDialog()
+        txt_accountid.Text = Frm_main.accountid
     End Sub
 
     Private Sub txt_accountid_Leave(sender As Object, e As EventArgs) Handles txt_accountid.Leave
-        'ds.Reset()
         txt_clientinfo.Text = ""
         Dim i As Integer = 1
         Try
@@ -35,11 +36,12 @@ Public Class frm_newContract
             txt_accountid.Focus()
             txt_accountid.SelectAll()
         End Try
-        formLoaded = True
+
     End Sub
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
         isSubmitting = True
+        AddBuilding(cbox_regions, cbox_streets, cbox_buildings)
         Me.Close()
     End Sub
 
@@ -57,6 +59,7 @@ Public Class frm_newContract
         theNewId = genID("Contract", "ContId")
         ExecuteQuery("INSERT INTO Contract(ContId) VALUES(" & theNewId & ")")
         lbl_contractid.Text = "Contract ID: " & theNewId
+        formLoaded = True
     End Sub
 
     Private Sub SelectBoxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectBoxToolStripMenuItem.Click

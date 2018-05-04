@@ -156,7 +156,7 @@ Partial Class Frm_SelectAccountClient
         Me.btn_select.Text = "Select"
         Me.btn_select.UseVisualStyleBackColor = True
         '
-        'Frm_SelectAccount
+        'Frm_SelectAccountClient
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -167,7 +167,7 @@ Partial Class Frm_SelectAccountClient
         Me.Controls.Add(Me.dgv_accounts)
         Me.Font = New System.Drawing.Font("Roboto", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Name = "Frm_SelectAccount"
+        Me.Name = "Frm_SelectAccountClient"
         Me.Text = "Frm_SelectAccount"
         CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grp_search.ResumeLayout(False)

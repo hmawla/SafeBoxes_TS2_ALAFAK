@@ -123,7 +123,6 @@ Partial Class frm_newContract
         '
         Me.cbox_buildings.BackColor = System.Drawing.Color.White
         Me.cbox_buildings.ContextMenuStrip = Me.BuildingsMenuStrip
-        Me.cbox_buildings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbox_buildings.ForeColor = System.Drawing.Color.Black
         Me.cbox_buildings.FormattingEnabled = True
         Me.cbox_buildings.Location = New System.Drawing.Point(16, 230)
@@ -394,7 +393,6 @@ Partial Class frm_newContract
         'cbox_regions
         '
         Me.cbox_regions.BackColor = System.Drawing.Color.White
-        Me.cbox_regions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbox_regions.ForeColor = System.Drawing.Color.Black
         Me.cbox_regions.FormattingEnabled = True
         Me.cbox_regions.Location = New System.Drawing.Point(16, 177)
@@ -420,7 +418,6 @@ Partial Class frm_newContract
         'cbox_streets
         '
         Me.cbox_streets.BackColor = System.Drawing.Color.White
-        Me.cbox_streets.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbox_streets.ForeColor = System.Drawing.Color.Black
         Me.cbox_streets.FormattingEnabled = True
         Me.cbox_streets.Location = New System.Drawing.Point(172, 177)

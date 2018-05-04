@@ -22,26 +22,27 @@ Partial Class Frm_NewInfoVoucher
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_compname = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txt_clientid = New System.Windows.Forms.TextBox()
+        Me.txt_clientname = New System.Windows.Forms.TextBox()
+        Me.txt_phonenumber = New System.Windows.Forms.TextBox()
+        Me.chk_phone = New System.Windows.Forms.CheckBox()
+        Me.chk_mailpost = New System.Windows.Forms.CheckBox()
+        Me.txt_mailpost = New System.Windows.Forms.TextBox()
+        Me.chk_email = New System.Windows.Forms.CheckBox()
+        Me.txt_email = New System.Windows.Forms.TextBox()
+        Me.chk_other = New System.Windows.Forms.CheckBox()
+        Me.txt_otherconn = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpick_fromtime = New System.Windows.Forms.DateTimePicker()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
+        Me.chklist_exceptdays = New System.Windows.Forms.CheckedListBox()
+        Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
+        Me.dtpick_totime = New System.Windows.Forms.DateTimePicker()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_streets = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
@@ -49,14 +50,23 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_buildings = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txt_subjectbody = New System.Windows.Forms.TextBox()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_submit = New System.Windows.Forms.Button()
+        Me.cbox_subjecttitles = New System.Windows.Forms.ComboBox()
+        Me.ClientSelector = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.txt_contractid = New System.Windows.Forms.TextBox()
+        Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
+        Me.ContractSelector = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ContraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaterialLabel11 = New MaterialSkin.Controls.MaterialLabel()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.ClientSelector.SuspendLayout()
+        Me.ContractSelector.SuspendLayout()
         Me.SuspendLayout()
         '
         'MaterialLabel5
@@ -79,7 +89,7 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(162, 9)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(119, 9)
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
@@ -87,107 +97,111 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel1.TabIndex = 59
         Me.MaterialLabel1.Text = "Client Name:"
         '
-        'txt_compname
+        'txt_clientid
         '
-        Me.txt_compname.Location = New System.Drawing.Point(19, 33)
-        Me.txt_compname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txt_compname.Name = "txt_compname"
-        Me.txt_compname.Size = New System.Drawing.Size(139, 26)
-        Me.txt_compname.TabIndex = 56
+        Me.txt_clientid.ContextMenuStrip = Me.ClientSelector
+        Me.txt_clientid.Location = New System.Drawing.Point(19, 33)
+        Me.txt_clientid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_clientid.Name = "txt_clientid"
+        Me.txt_clientid.Size = New System.Drawing.Size(96, 26)
+        Me.txt_clientid.TabIndex = 56
         '
-        'TextBox1
+        'txt_clientname
         '
-        Me.TextBox1.Location = New System.Drawing.Point(166, 33)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(274, 26)
-        Me.TextBox1.TabIndex = 58
+        Me.txt_clientname.Location = New System.Drawing.Point(123, 33)
+        Me.txt_clientname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_clientname.Name = "txt_clientname"
+        Me.txt_clientname.ReadOnly = True
+        Me.txt_clientname.Size = New System.Drawing.Size(175, 26)
+        Me.txt_clientname.TabIndex = 58
         '
-        'TextBox2
+        'txt_phonenumber
         '
-        Me.TextBox2.Location = New System.Drawing.Point(6, 57)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(156, 26)
-        Me.TextBox2.TabIndex = 60
+        Me.txt_phonenumber.Location = New System.Drawing.Point(6, 57)
+        Me.txt_phonenumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_phonenumber.Name = "txt_phonenumber"
+        Me.txt_phonenumber.Size = New System.Drawing.Size(156, 26)
+        Me.txt_phonenumber.TabIndex = 60
         '
-        'CheckBox1
+        'chk_phone
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Checked = True
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 25)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(138, 24)
-        Me.CheckBox1.TabIndex = 62
-        Me.CheckBox1.Text = "Phone Number:"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.chk_phone.AutoSize = True
+        Me.chk_phone.Checked = True
+        Me.chk_phone.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_phone.Location = New System.Drawing.Point(6, 25)
+        Me.chk_phone.Name = "chk_phone"
+        Me.chk_phone.Size = New System.Drawing.Size(138, 24)
+        Me.chk_phone.TabIndex = 62
+        Me.chk_phone.Text = "Phone Number:"
+        Me.chk_phone.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'chk_mailpost
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(170, 25)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(156, 24)
-        Me.CheckBox2.TabIndex = 64
-        Me.CheckBox2.Text = "Mail Post Number:"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.chk_mailpost.AutoSize = True
+        Me.chk_mailpost.Location = New System.Drawing.Point(170, 25)
+        Me.chk_mailpost.Name = "chk_mailpost"
+        Me.chk_mailpost.Size = New System.Drawing.Size(156, 24)
+        Me.chk_mailpost.TabIndex = 64
+        Me.chk_mailpost.Text = "Mail Post Number:"
+        Me.chk_mailpost.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'txt_mailpost
         '
-        Me.TextBox3.Location = New System.Drawing.Point(170, 57)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(156, 26)
-        Me.TextBox3.TabIndex = 63
+        Me.txt_mailpost.Enabled = False
+        Me.txt_mailpost.Location = New System.Drawing.Point(170, 57)
+        Me.txt_mailpost.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_mailpost.Name = "txt_mailpost"
+        Me.txt_mailpost.Size = New System.Drawing.Size(156, 26)
+        Me.txt_mailpost.TabIndex = 63
         '
-        'CheckBox3
+        'chk_email
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(334, 25)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(71, 24)
-        Me.CheckBox3.TabIndex = 66
-        Me.CheckBox3.Text = "Email:"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.chk_email.AutoSize = True
+        Me.chk_email.Location = New System.Drawing.Point(334, 25)
+        Me.chk_email.Name = "chk_email"
+        Me.chk_email.Size = New System.Drawing.Size(71, 24)
+        Me.chk_email.TabIndex = 66
+        Me.chk_email.Text = "Email:"
+        Me.chk_email.UseVisualStyleBackColor = True
         '
-        'TextBox4
+        'txt_email
         '
-        Me.TextBox4.Location = New System.Drawing.Point(334, 57)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(156, 26)
-        Me.TextBox4.TabIndex = 65
+        Me.txt_email.Enabled = False
+        Me.txt_email.Location = New System.Drawing.Point(334, 57)
+        Me.txt_email.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_email.Name = "txt_email"
+        Me.txt_email.Size = New System.Drawing.Size(156, 26)
+        Me.txt_email.TabIndex = 65
         '
-        'CheckBox4
+        'chk_other
         '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(6, 91)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(72, 24)
-        Me.CheckBox4.TabIndex = 68
-        Me.CheckBox4.Text = "Other:"
-        Me.CheckBox4.UseVisualStyleBackColor = True
+        Me.chk_other.AutoSize = True
+        Me.chk_other.Location = New System.Drawing.Point(6, 91)
+        Me.chk_other.Name = "chk_other"
+        Me.chk_other.Size = New System.Drawing.Size(72, 24)
+        Me.chk_other.TabIndex = 68
+        Me.chk_other.Text = "Other:"
+        Me.chk_other.UseVisualStyleBackColor = True
         '
-        'TextBox5
+        'txt_otherconn
         '
-        Me.TextBox5.Location = New System.Drawing.Point(6, 123)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(484, 26)
-        Me.TextBox5.TabIndex = 67
+        Me.txt_otherconn.Enabled = False
+        Me.txt_otherconn.Location = New System.Drawing.Point(6, 123)
+        Me.txt_otherconn.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_otherconn.Name = "txt_otherconn"
+        Me.txt_otherconn.Size = New System.Drawing.Size(484, 26)
+        Me.txt_otherconn.TabIndex = 67
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.CheckBox1)
-        Me.GroupBox1.Controls.Add(Me.CheckBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.CheckBox3)
-        Me.GroupBox1.Controls.Add(Me.CheckBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.chk_phone)
+        Me.GroupBox1.Controls.Add(Me.chk_other)
+        Me.GroupBox1.Controls.Add(Me.txt_phonenumber)
+        Me.GroupBox1.Controls.Add(Me.txt_otherconn)
+        Me.GroupBox1.Controls.Add(Me.txt_mailpost)
+        Me.GroupBox1.Controls.Add(Me.chk_email)
+        Me.GroupBox1.Controls.Add(Me.chk_mailpost)
+        Me.GroupBox1.Controls.Add(Me.txt_email)
         Me.GroupBox1.Location = New System.Drawing.Point(547, 305)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(522, 180)
@@ -195,13 +209,13 @@ Partial Class Frm_NewInfoVoucher
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Connection Ways"
         '
-        'DateTimePicker1
+        'dtpick_fromtime
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker1.Location = New System.Drawing.Point(13, 44)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(139, 26)
-        Me.DateTimePicker1.TabIndex = 70
+        Me.dtpick_fromtime.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpick_fromtime.Location = New System.Drawing.Point(13, 44)
+        Me.dtpick_fromtime.Name = "dtpick_fromtime"
+        Me.dtpick_fromtime.Size = New System.Drawing.Size(139, 26)
+        Me.dtpick_fromtime.TabIndex = 70
         '
         'MaterialLabel2
         '
@@ -220,17 +234,42 @@ Partial Class Frm_NewInfoVoucher
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.MaterialLabel4)
-        Me.GroupBox2.Controls.Add(Me.CheckedListBox1)
+        Me.GroupBox2.Controls.Add(Me.chklist_exceptdays)
         Me.GroupBox2.Controls.Add(Me.MaterialLabel3)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox2.Controls.Add(Me.dtpick_totime)
         Me.GroupBox2.Controls.Add(Me.MaterialLabel2)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox2.Controls.Add(Me.dtpick_fromtime)
         Me.GroupBox2.Location = New System.Drawing.Point(547, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(522, 179)
         Me.GroupBox2.TabIndex = 72
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Contact Time"
+        '
+        'MaterialLabel4
+        '
+        Me.MaterialLabel4.AutoSize = True
+        Me.MaterialLabel4.Depth = 0
+        Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel4.Location = New System.Drawing.Point(8, 87)
+        Me.MaterialLabel4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel4.Name = "MaterialLabel4"
+        Me.MaterialLabel4.Size = New System.Drawing.Size(58, 19)
+        Me.MaterialLabel4.TabIndex = 75
+        Me.MaterialLabel4.Text = "Except:"
+        '
+        'chklist_exceptdays
+        '
+        Me.chklist_exceptdays.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.chklist_exceptdays.FormattingEnabled = True
+        Me.chklist_exceptdays.Items.AddRange(New Object() {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"})
+        Me.chklist_exceptdays.Location = New System.Drawing.Point(3, 109)
+        Me.chklist_exceptdays.MultiColumn = True
+        Me.chklist_exceptdays.Name = "chklist_exceptdays"
+        Me.chklist_exceptdays.Size = New System.Drawing.Size(516, 67)
+        Me.chklist_exceptdays.TabIndex = 74
         '
         'MaterialLabel3
         '
@@ -246,38 +285,13 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel3.TabIndex = 73
         Me.MaterialLabel3.Text = "To:"
         '
-        'DateTimePicker2
+        'dtpick_totime
         '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker2.Location = New System.Drawing.Point(158, 44)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(139, 26)
-        Me.DateTimePicker2.TabIndex = 72
-        '
-        'CheckedListBox1
-        '
-        Me.CheckedListBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.CheckedListBox1.FormattingEnabled = True
-        Me.CheckedListBox1.Items.AddRange(New Object() {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"})
-        Me.CheckedListBox1.Location = New System.Drawing.Point(3, 109)
-        Me.CheckedListBox1.MultiColumn = True
-        Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(516, 67)
-        Me.CheckedListBox1.TabIndex = 74
-        '
-        'MaterialLabel4
-        '
-        Me.MaterialLabel4.AutoSize = True
-        Me.MaterialLabel4.Depth = 0
-        Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel4.Location = New System.Drawing.Point(8, 87)
-        Me.MaterialLabel4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel4.Name = "MaterialLabel4"
-        Me.MaterialLabel4.Size = New System.Drawing.Size(58, 19)
-        Me.MaterialLabel4.TabIndex = 75
-        Me.MaterialLabel4.Text = "Except:"
+        Me.dtpick_totime.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpick_totime.Location = New System.Drawing.Point(158, 44)
+        Me.dtpick_totime.Name = "dtpick_totime"
+        Me.dtpick_totime.Size = New System.Drawing.Size(139, 26)
+        Me.dtpick_totime.TabIndex = 72
         '
         'MaterialLabel12
         '
@@ -296,7 +310,6 @@ Partial Class Frm_NewInfoVoucher
         'cbox_streets
         '
         Me.cbox_streets.BackColor = System.Drawing.Color.White
-        Me.cbox_streets.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbox_streets.ForeColor = System.Drawing.Color.Black
         Me.cbox_streets.FormattingEnabled = True
         Me.cbox_streets.Location = New System.Drawing.Point(166, 51)
@@ -322,7 +335,6 @@ Partial Class Frm_NewInfoVoucher
         'cbox_regions
         '
         Me.cbox_regions.BackColor = System.Drawing.Color.White
-        Me.cbox_regions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbox_regions.ForeColor = System.Drawing.Color.Black
         Me.cbox_regions.FormattingEnabled = True
         Me.cbox_regions.Location = New System.Drawing.Point(10, 51)
@@ -348,7 +360,6 @@ Partial Class Frm_NewInfoVoucher
         'cbox_buildings
         '
         Me.cbox_buildings.BackColor = System.Drawing.Color.White
-        Me.cbox_buildings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbox_buildings.ForeColor = System.Drawing.Color.Black
         Me.cbox_buildings.FormattingEnabled = True
         Me.cbox_buildings.Location = New System.Drawing.Point(322, 51)
@@ -372,14 +383,6 @@ Partial Class Frm_NewInfoVoucher
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Address"
         '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(19, 88)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(521, 26)
-        Me.TextBox6.TabIndex = 69
-        '
         'MaterialLabel8
         '
         Me.MaterialLabel8.AutoSize = True
@@ -394,14 +397,15 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel8.TabIndex = 80
         Me.MaterialLabel8.Text = "Subject Title:"
         '
-        'TextBox7
+        'txt_subjectbody
         '
-        Me.TextBox7.Location = New System.Drawing.Point(19, 143)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(521, 342)
-        Me.TextBox7.TabIndex = 81
+        Me.txt_subjectbody.Location = New System.Drawing.Point(19, 143)
+        Me.txt_subjectbody.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_subjectbody.Multiline = True
+        Me.txt_subjectbody.Name = "txt_subjectbody"
+        Me.txt_subjectbody.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txt_subjectbody.Size = New System.Drawing.Size(521, 342)
+        Me.txt_subjectbody.TabIndex = 81
         '
         'MaterialLabel9
         '
@@ -417,14 +421,83 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel9.TabIndex = 82
         Me.MaterialLabel9.Text = "Subject Body:"
         '
-        'Button1
+        'btn_submit
         '
-        Me.Button1.Location = New System.Drawing.Point(447, 29)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 34)
-        Me.Button1.TabIndex = 83
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_submit.Location = New System.Drawing.Point(447, 29)
+        Me.btn_submit.Name = "btn_submit"
+        Me.btn_submit.Size = New System.Drawing.Size(93, 34)
+        Me.btn_submit.TabIndex = 83
+        Me.btn_submit.Text = "Submit"
+        Me.btn_submit.UseVisualStyleBackColor = True
+        '
+        'cbox_subjecttitles
+        '
+        Me.cbox_subjecttitles.FormattingEnabled = True
+        Me.cbox_subjecttitles.Location = New System.Drawing.Point(19, 86)
+        Me.cbox_subjecttitles.Name = "cbox_subjecttitles"
+        Me.cbox_subjecttitles.Size = New System.Drawing.Size(279, 28)
+        Me.cbox_subjecttitles.TabIndex = 84
+        '
+        'ClientSelector
+        '
+        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
+        Me.ClientSelector.Name = "ContextMenuStrip1"
+        Me.ClientSelector.Size = New System.Drawing.Size(140, 26)
+        '
+        'SelectClientToolStripMenuItem
+        '
+        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
+        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.SelectClientToolStripMenuItem.Text = "Select Client"
+        '
+        'txt_contractid
+        '
+        Me.txt_contractid.ContextMenuStrip = Me.ContractSelector
+        Me.txt_contractid.Location = New System.Drawing.Point(306, 33)
+        Me.txt_contractid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_contractid.Name = "txt_contractid"
+        Me.txt_contractid.Size = New System.Drawing.Size(134, 26)
+        Me.txt_contractid.TabIndex = 86
+        '
+        'MaterialLabel10
+        '
+        Me.MaterialLabel10.AutoSize = True
+        Me.MaterialLabel10.Depth = 0
+        Me.MaterialLabel10.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel10.Location = New System.Drawing.Point(302, 9)
+        Me.MaterialLabel10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.MaterialLabel10.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel10.Name = "MaterialLabel10"
+        Me.MaterialLabel10.Size = New System.Drawing.Size(89, 19)
+        Me.MaterialLabel10.TabIndex = 87
+        Me.MaterialLabel10.Text = "Contract ID:"
+        '
+        'ContractSelector
+        '
+        Me.ContractSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContraToolStripMenuItem})
+        Me.ContractSelector.Name = "ContractSelector"
+        Me.ContractSelector.Size = New System.Drawing.Size(155, 26)
+        '
+        'ContraToolStripMenuItem
+        '
+        Me.ContraToolStripMenuItem.Name = "ContraToolStripMenuItem"
+        Me.ContraToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.ContraToolStripMenuItem.Text = "Select Contract"
+        '
+        'MaterialLabel11
+        '
+        Me.MaterialLabel11.AutoSize = True
+        Me.MaterialLabel11.Depth = 0
+        Me.MaterialLabel11.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel11.Location = New System.Drawing.Point(307, 90)
+        Me.MaterialLabel11.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.MaterialLabel11.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel11.Name = "MaterialLabel11"
+        Me.MaterialLabel11.Size = New System.Drawing.Size(159, 19)
+        Me.MaterialLabel11.TabIndex = 89
+        Me.MaterialLabel11.Text = "Employee ID: <EmpId>"
         '
         'Frm_NewInfoVoucher
         '
@@ -432,28 +505,33 @@ Partial Class Frm_NewInfoVoucher
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1081, 501)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.MaterialLabel11)
+        Me.Controls.Add(Me.MaterialLabel10)
+        Me.Controls.Add(Me.txt_contractid)
+        Me.Controls.Add(Me.cbox_subjecttitles)
+        Me.Controls.Add(Me.btn_submit)
         Me.Controls.Add(Me.MaterialLabel9)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.txt_subjectbody)
         Me.Controls.Add(Me.MaterialLabel8)
-        Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MaterialLabel5)
         Me.Controls.Add(Me.MaterialLabel1)
-        Me.Controls.Add(Me.txt_compname)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txt_clientid)
+        Me.Controls.Add(Me.txt_clientname)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_NewInfoVoucher"
-        Me.Text = "Frm_NewInfoVoucher"
+        Me.Text = "Info Voucher"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.ClientSelector.ResumeLayout(False)
+        Me.ContractSelector.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -461,24 +539,24 @@ Partial Class Frm_NewInfoVoucher
 
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_compname As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txt_clientid As TextBox
+    Friend WithEvents txt_clientname As TextBox
+    Friend WithEvents txt_phonenumber As TextBox
+    Friend WithEvents chk_phone As CheckBox
+    Friend WithEvents chk_mailpost As CheckBox
+    Friend WithEvents txt_mailpost As TextBox
+    Friend WithEvents chk_email As CheckBox
+    Friend WithEvents txt_email As TextBox
+    Friend WithEvents chk_other As CheckBox
+    Friend WithEvents txt_otherconn As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpick_fromtime As DateTimePicker
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents MaterialLabel4 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents chklist_exceptdays As CheckedListBox
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents dtpick_totime As DateTimePicker
     Friend WithEvents MaterialLabel12 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_streets As ComboBox
     Friend WithEvents MaterialLabel6 As MaterialSkin.Controls.MaterialLabel
@@ -486,9 +564,16 @@ Partial Class Frm_NewInfoVoucher
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_buildings As ComboBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents TextBox6 As TextBox
     Friend WithEvents MaterialLabel8 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txt_subjectbody As TextBox
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_submit As Button
+    Friend WithEvents cbox_subjecttitles As ComboBox
+    Friend WithEvents ClientSelector As ContextMenuStrip
+    Friend WithEvents SelectClientToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents txt_contractid As TextBox
+    Friend WithEvents MaterialLabel10 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents ContractSelector As ContextMenuStrip
+    Friend WithEvents ContraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MaterialLabel11 As MaterialSkin.Controls.MaterialLabel
 End Class

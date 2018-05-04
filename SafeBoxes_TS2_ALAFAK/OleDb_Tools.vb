@@ -75,6 +75,43 @@ Module OleDb_Tools
         Return False
 
     End Function
+
+    Public Sub AddBuilding(ByRef cbox_regions As ComboBox, ByRef cbox_streets As ComboBox, ByRef cbox_building As ComboBox)
+        Dim i As Integer
+        Dim theStreet As String = cbox_streets.Text
+        Dim theBuilding As String = cbox_building.Text
+        If cbox_regions.SelectedValue > 0 Then
+            Dim selectedRegion As String = cbox_regions.SelectedValue
+        End If
+        If cbox_streets.SelectedValue > 0 Then
+            Dim selectedStreet As String = cbox_streets.SelectedValue
+        End If
+
+        For i = 1 To 3
+            If Exists(cbox_regions.Text, "SELECT RegionName FROM Regions") Then
+                If Exists(cbox_streets.Text, "SELECT StreetName FROM Streets WHERE StreetId = " & cbox_streets.SelectedValue & " AND RegionId = " & cbox_regions.SelectedValue) Then
+                    If Exists(cbox_building.Text, "SELECT BuildingName FROM Buildings b, Streets s WHERE b.StreetId = " & cbox_streets.SelectedValue & " AND RegionId = " & cbox_regions.SelectedValue) Then
+                        GoTo End_Of_For
+                    Else
+                        ExecuteQuery("INSERT INTO Buildings VALUES(" & genID("Buildings", "BuildingId") & ", '" & theBuilding & "', " & cbox_streets.SelectedValue & ")")
+                        GoTo End_Of_For
+                    End If
+                Else
+                    Dim streetId As String = genID("Streets", "StreetId")
+                    ExecuteQuery("INSERT INTO Streets VALUES(" & streetId & ", '" & theStreet & "', " & cbox_regions.SelectedValue & ")")
+                    FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+                    cbox_streets.SelectedValue = streetId
+                End If
+            Else
+                Dim regionId As String = genID("Regions", "RegionId")
+                ExecuteQuery("INSERT INTO Regions VALUES(" & regionId & ", '" & cbox_regions.Text & "')")
+                FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
+                cbox_regions.SelectedValue = regionId
+            End If
+        Next
+End_Of_For:
+    End Sub
+
     Public Sub Only_Number(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
             MessageBox.Show("Please enter numbers only")

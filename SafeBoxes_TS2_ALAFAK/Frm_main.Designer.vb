@@ -25,6 +25,7 @@ Partial Class Frm_main
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.btn_newclient = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialRaisedButton3 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'MaterialRaisedButton1
@@ -72,11 +73,27 @@ Partial Class Frm_main
         Me.MaterialRaisedButton2.Text = "New Company"
         Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
         '
+        'MaterialRaisedButton3
+        '
+        Me.MaterialRaisedButton3.AutoSize = True
+        Me.MaterialRaisedButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialRaisedButton3.Depth = 0
+        Me.MaterialRaisedButton3.Icon = Nothing
+        Me.MaterialRaisedButton3.Location = New System.Drawing.Point(376, 68)
+        Me.MaterialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton3.Name = "MaterialRaisedButton3"
+        Me.MaterialRaisedButton3.Primary = True
+        Me.MaterialRaisedButton3.Size = New System.Drawing.Size(134, 36)
+        Me.MaterialRaisedButton3.TabIndex = 4
+        Me.MaterialRaisedButton3.Text = "New Info Vouch"
+        Me.MaterialRaisedButton3.UseVisualStyleBackColor = True
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(786, 516)
+        Me.Controls.Add(Me.MaterialRaisedButton3)
         Me.Controls.Add(Me.MaterialRaisedButton2)
         Me.Controls.Add(Me.btn_newclient)
         Me.Controls.Add(Me.MaterialRaisedButton1)
@@ -90,4 +107,5 @@ Partial Class Frm_main
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents btn_newclient As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialRaisedButton3 As MaterialSkin.Controls.MaterialRaisedButton
 End Class
