@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_newContract
     Inherits Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,23 +20,21 @@ Partial Class frm_newContract
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_phone1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.lbl_contractid = New MaterialSkin.Controls.MaterialLabel()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
         Me.cbox_buildings = New System.Windows.Forms.ComboBox()
-        Me.BuildingsMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.NewBuildingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.txt_floor = New System.Windows.Forms.NumericUpDown()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txt_phone2 = New System.Windows.Forms.TextBox()
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_accountid = New System.Windows.Forms.TextBox()
         Me.AccountsMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -45,31 +43,29 @@ Partial Class frm_newContract
         Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_clientinfo = New System.Windows.Forms.TextBox()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txt_contnote = New System.Windows.Forms.TextBox()
         Me.btn_submit = New System.Windows.Forms.Button()
         Me.txt_boxes = New System.Windows.Forms.TextBox()
         Me.BoxesMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel11 = New MaterialSkin.Controls.MaterialLabel()
+        Me.lbl_empid = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_regions = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_streets = New System.Windows.Forms.ComboBox()
-        Me.BuildingsMenuStrip.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AccountsMenuStrip.SuspendLayout()
         Me.BoxesMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txt_phone1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(16, 123)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(148, 26)
-        Me.TextBox1.TabIndex = 2
-        Me.TextBox1.Text = "<ContPhone1>"
+        Me.txt_phone1.Location = New System.Drawing.Point(16, 123)
+        Me.txt_phone1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_phone1.Name = "txt_phone1"
+        Me.txt_phone1.Size = New System.Drawing.Size(148, 26)
+        Me.txt_phone1.TabIndex = 2
         '
         'Label3
         '
@@ -108,21 +104,21 @@ Partial Class frm_newContract
         Me.lbl_contractid.TabIndex = 23
         Me.lbl_contractid.Text = "Contract ID: <ContId>"
         '
-        'DateTimePicker1
+        'dtpick_exdate
         '
-        Me.DateTimePicker1.CustomFormat = "MMMM dd, yyyy - dddd"
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(328, 311)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(137, 26)
-        Me.DateTimePicker1.TabIndex = 9
+        Me.dtpick_exdate.CustomFormat = "dd/mm/yyyy"
+        Me.dtpick_exdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.dtpick_exdate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpick_exdate.Location = New System.Drawing.Point(328, 311)
+        Me.dtpick_exdate.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.dtpick_exdate.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
+        Me.dtpick_exdate.Name = "dtpick_exdate"
+        Me.dtpick_exdate.Size = New System.Drawing.Size(137, 26)
+        Me.dtpick_exdate.TabIndex = 9
         '
         'cbox_buildings
         '
         Me.cbox_buildings.BackColor = System.Drawing.Color.White
-        Me.cbox_buildings.ContextMenuStrip = Me.BuildingsMenuStrip
         Me.cbox_buildings.ForeColor = System.Drawing.Color.Black
         Me.cbox_buildings.FormattingEnabled = True
         Me.cbox_buildings.Location = New System.Drawing.Point(16, 230)
@@ -130,18 +126,6 @@ Partial Class frm_newContract
         Me.cbox_buildings.Name = "cbox_buildings"
         Me.cbox_buildings.Size = New System.Drawing.Size(148, 28)
         Me.cbox_buildings.TabIndex = 6
-        '
-        'BuildingsMenuStrip
-        '
-        Me.BuildingsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewBuildingToolStripMenuItem})
-        Me.BuildingsMenuStrip.Name = "BuildingsMenuStrip"
-        Me.BuildingsMenuStrip.Size = New System.Drawing.Size(146, 26)
-        '
-        'NewBuildingToolStripMenuItem
-        '
-        Me.NewBuildingToolStripMenuItem.Name = "NewBuildingToolStripMenuItem"
-        Me.NewBuildingToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
-        Me.NewBuildingToolStripMenuItem.Text = "New Building"
         '
         'MaterialLabel3
         '
@@ -157,15 +141,15 @@ Partial Class frm_newContract
         Me.MaterialLabel3.TabIndex = 26
         Me.MaterialLabel3.Text = "Street*:"
         '
-        'NumericUpDown1
+        'txt_floor
         '
-        Me.NumericUpDown1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.NumericUpDown1.Location = New System.Drawing.Point(172, 231)
-        Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {15, 0, 0, 0})
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(148, 26)
-        Me.NumericUpDown1.TabIndex = 7
+        Me.txt_floor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txt_floor.Location = New System.Drawing.Point(172, 231)
+        Me.txt_floor.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txt_floor.Maximum = New Decimal(New Integer() {15, 0, 0, 0})
+        Me.txt_floor.Name = "txt_floor"
+        Me.txt_floor.Size = New System.Drawing.Size(148, 26)
+        Me.txt_floor.TabIndex = 7
         '
         'MaterialLabel4
         '
@@ -209,14 +193,13 @@ Partial Class frm_newContract
         Me.MaterialLabel6.TabIndex = 31
         Me.MaterialLabel6.Text = "Phone Number 2:"
         '
-        'TextBox2
+        'txt_phone2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(172, 123)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(148, 26)
-        Me.TextBox2.TabIndex = 3
-        Me.TextBox2.Text = "<ContPhone2>"
+        Me.txt_phone2.Location = New System.Drawing.Point(172, 123)
+        Me.txt_phone2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_phone2.Name = "txt_phone2"
+        Me.txt_phone2.Size = New System.Drawing.Size(148, 26)
+        Me.txt_phone2.TabIndex = 3
         '
         'MaterialLabel7
         '
@@ -241,7 +224,6 @@ Partial Class frm_newContract
         Me.txt_accountid.Name = "txt_accountid"
         Me.txt_accountid.Size = New System.Drawing.Size(148, 26)
         Me.txt_accountid.TabIndex = 0
-        Me.txt_accountid.Text = "<AccountId>"
         '
         'AccountsMenuStrip
         '
@@ -289,7 +271,6 @@ Partial Class frm_newContract
         Me.txt_clientinfo.ScrollBars = System.Windows.Forms.ScrollBars.Both
         Me.txt_clientinfo.Size = New System.Drawing.Size(221, 195)
         Me.txt_clientinfo.TabIndex = 36
-        Me.txt_clientinfo.Text = "<INFO HERE>"
         '
         'MaterialLabel9
         '
@@ -305,15 +286,14 @@ Partial Class frm_newContract
         Me.MaterialLabel9.TabIndex = 38
         Me.MaterialLabel9.Text = "Note:"
         '
-        'TextBox5
+        'txt_contnote
         '
-        Me.TextBox5.Location = New System.Drawing.Point(16, 289)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(304, 49)
-        Me.TextBox5.TabIndex = 8
-        Me.TextBox5.Text = "<ContNote>"
+        Me.txt_contnote.Location = New System.Drawing.Point(16, 289)
+        Me.txt_contnote.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_contnote.Multiline = True
+        Me.txt_contnote.Name = "txt_contnote"
+        Me.txt_contnote.Size = New System.Drawing.Size(304, 49)
+        Me.txt_contnote.TabIndex = 8
         '
         'btn_submit
         '
@@ -334,7 +314,6 @@ Partial Class frm_newContract
         Me.txt_boxes.Name = "txt_boxes"
         Me.txt_boxes.Size = New System.Drawing.Size(148, 26)
         Me.txt_boxes.TabIndex = 1
-        Me.txt_boxes.Text = "<BoxId>"
         '
         'BoxesMenuStrip
         '
@@ -362,19 +341,19 @@ Partial Class frm_newContract
         Me.MaterialLabel10.TabIndex = 40
         Me.MaterialLabel10.Text = "Box ID:*"
         '
-        'MaterialLabel11
+        'lbl_empid
         '
-        Me.MaterialLabel11.AutoSize = True
-        Me.MaterialLabel11.Depth = 0
-        Me.MaterialLabel11.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel11.Location = New System.Drawing.Point(178, 9)
-        Me.MaterialLabel11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.MaterialLabel11.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel11.Name = "MaterialLabel11"
-        Me.MaterialLabel11.Size = New System.Drawing.Size(159, 19)
-        Me.MaterialLabel11.TabIndex = 43
-        Me.MaterialLabel11.Text = "Employee ID: <EmpId>"
+        Me.lbl_empid.AutoSize = True
+        Me.lbl_empid.Depth = 0
+        Me.lbl_empid.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.lbl_empid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.lbl_empid.Location = New System.Drawing.Point(178, 9)
+        Me.lbl_empid.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbl_empid.MouseState = MaterialSkin.MouseState.HOVER
+        Me.lbl_empid.Name = "lbl_empid"
+        Me.lbl_empid.Size = New System.Drawing.Size(159, 19)
+        Me.lbl_empid.TabIndex = 43
+        Me.lbl_empid.Text = "Employee ID: <EmpId>"
         '
         'MaterialLabel2
         '
@@ -436,36 +415,35 @@ Partial Class frm_newContract
         Me.Controls.Add(Me.cbox_streets)
         Me.Controls.Add(Me.MaterialLabel2)
         Me.Controls.Add(Me.cbox_regions)
-        Me.Controls.Add(Me.MaterialLabel11)
+        Me.Controls.Add(Me.lbl_empid)
         Me.Controls.Add(Me.txt_boxes)
         Me.Controls.Add(Me.MaterialLabel10)
         Me.Controls.Add(Me.btn_submit)
         Me.Controls.Add(Me.MaterialLabel9)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txt_contnote)
         Me.Controls.Add(Me.txt_clientinfo)
         Me.Controls.Add(Me.MaterialLabel8)
         Me.Controls.Add(Me.txt_accountid)
         Me.Controls.Add(Me.MaterialLabel7)
         Me.Controls.Add(Me.MaterialLabel6)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txt_phone2)
         Me.Controls.Add(Me.MaterialLabel5)
         Me.Controls.Add(Me.MaterialLabel4)
-        Me.Controls.Add(Me.NumericUpDown1)
+        Me.Controls.Add(Me.txt_floor)
         Me.Controls.Add(Me.MaterialLabel3)
         Me.Controls.Add(Me.cbox_buildings)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtpick_exdate)
         Me.Controls.Add(Me.lbl_contractid)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txt_phone1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.Name = "frm_newContract"
         Me.Text = "New Contract"
-        Me.BuildingsMenuStrip.ResumeLayout(False)
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AccountsMenuStrip.ResumeLayout(False)
         Me.BoxesMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -473,28 +451,28 @@ Partial Class frm_newContract
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_phone1 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents lbl_contractid As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpick_exdate As DateTimePicker
     Friend WithEvents cbox_buildings As ComboBox
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents txt_floor As NumericUpDown
     Friend WithEvents MaterialLabel4 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel6 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txt_phone2 As TextBox
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_accountid As TextBox
     Friend WithEvents MaterialLabel8 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_clientinfo As TextBox
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txt_contnote As TextBox
     Friend WithEvents btn_submit As Button
     Friend WithEvents txt_boxes As TextBox
     Friend WithEvents MaterialLabel10 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents MaterialLabel11 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents lbl_empid As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents AccountsMenuStrip As ContextMenuStrip
     Friend WithEvents SelectAccountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewAccountToolStripMenuItem As ToolStripMenuItem
@@ -504,6 +482,4 @@ Partial Class frm_newContract
     Friend WithEvents cbox_regions As ComboBox
     Friend WithEvents MaterialLabel12 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_streets As ComboBox
-    Friend WithEvents BuildingsMenuStrip As ContextMenuStrip
-    Friend WithEvents NewBuildingToolStripMenuItem As ToolStripMenuItem
 End Class

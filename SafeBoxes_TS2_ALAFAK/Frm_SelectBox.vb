@@ -4,6 +4,7 @@ Public Class Frm_SelectBox
     Private Sub Frm_SelectBox_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillDGV(dgv_boxes, "SELECT BoxId, Length, Width, Height, InsurancePrice, RentPrice FROM Boxes b, BoxSizes bs, BoxSizesDate bsd WHERE b.SizeId = bs.SizeId AND bs.SizeId = bsd.SizeId AND BoxId NOT IN (SELECT BoxId FROM Contract)") 'Fill the data grid view with all data
         FillCBox(cbox_boxsizes, "SELECT SizeId,Length + 'cm x ' + Width + 'cm x ' + Height + 'cm' AS prop FROM BoxSizes", "SizeId", "prop") 'Fill the search combo box with all available sizes
+        FillCBox(cbox_addsize, "SELECT SizeId,Length + 'cm x ' + Width + 'cm x ' + Height + 'cm' AS prop FROM BoxSizes", "SizeId", "prop") 'Fill the search combo box with all available sizes
     End Sub
 
 
@@ -26,5 +27,10 @@ Public Class Frm_SelectBox
 
     Private Sub dgv_boxes_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_boxes.RowEnter
         btn_select.Enabled = True
+    End Sub
+
+    Private Sub btn_addbox_Click(sender As Object, e As EventArgs) Handles btn_addbox.Click
+        ExecuteQuery("INSERT INTO Boxes VALUES(" & genID("Boxes", "BoxId") & ", " & cbox_addsize.SelectedValue & ")")
+        FillDGV(dgv_boxes, "SELECT BoxId, Length, Width, Height, InsurancePrice, RentPrice FROM Boxes b, BoxSizes bs, BoxSizesDate bsd WHERE b.SizeId = bs.SizeId AND bs.SizeId = bsd.SizeId AND BoxId NOT IN (SELECT BoxId FROM Contract)") 'Fill the data grid view with all data
     End Sub
 End Class

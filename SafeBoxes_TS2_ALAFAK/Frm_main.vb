@@ -1,6 +1,7 @@
 ﻿Public Class Frm_main
     Public accountid As String
     Public clientid As String
+    Public contractid As String
     Public employeeid As String
 
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -29,5 +30,14 @@
 
     Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton3.Click
         Frm_NewInfoVoucher.Show()
+    End Sub
+
+    Private Sub btn_submitemp_Click(sender As Object, e As EventArgs) Handles btn_submitemp.Click
+        If Exists(txt_empid.Text, "SELECT EmpId FROM Employees") Then
+            employeeid = txt_empid.Text
+            lbl_empid.Text = "Employee ID: " & txt_empid.Text
+        Else
+            MessageBox.Show("Invalid Employee ID!")
+        End If
     End Sub
 End Class

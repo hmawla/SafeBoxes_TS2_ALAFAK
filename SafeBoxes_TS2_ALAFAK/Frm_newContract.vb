@@ -41,8 +41,20 @@ Public Class frm_newContract
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
         isSubmitting = True
-        AddBuilding(cbox_regions, cbox_streets, cbox_buildings)
-        Me.Close()
+        If txt_accountid.Text = "" Or txt_boxes.Text = "" Or txt_floor.Text = "" Then
+            MessageBox.Show("Please fill all needed information!")
+        ElseIf txt_contnote.TextLength > 0 Then
+            ExecuteQuery("UPDATE Contract SET AccountId = " & txt_accountid.Text & ", BoxId = " & txt_boxes.Text & ", BuildingId = " & cbox_buildings.SelectedValue & ", EmpId = " & Frm_main.employeeid & ", ContFloor = " & txt_floor.Value & ", ContBDate = '" & Date.Today.ToShortDateString & "', ContToDate = '" & dtpick_exdate.Value.ToShortDateString & "', ContPhone1 = '" & txt_phone1.Text & "', ContPhone2 = '" & txt_phone2.Text & "', ContNote = '" & txt_contnote.Text & "' WHERE ContId = " & theNewId)
+            AddBuilding(cbox_regions, cbox_streets, cbox_buildings)
+            Frm_main.contractid = theNewId
+            Me.Close()
+        Else
+            ExecuteQuery("UPDATE Contract SET AccountId = " & txt_accountid.Text & ", BoxId = " & txt_boxes.Text & ", BuildingId = " & cbox_buildings.SelectedValue & ", EmpId = " & Frm_main.employeeid & ", ContFloor = " & txt_floor.Value & ", ContBDate = '" & Date.Today.ToShortDateString & "', ContToDate = '" & dtpick_exdate.Value.ToShortDateString & "', ContPhone1 = '" & txt_phone1.Text & "', ContPhone2 = '" & txt_phone2.Text & "' WHERE ContId = " & theNewId)
+            AddBuilding(cbox_regions, cbox_streets, cbox_buildings)
+            Frm_main.contractid = theNewId
+            Me.Close()
+        End If
+
     End Sub
 
     Private Sub frm_newContract_Closed(sender As Object, e As EventArgs) Handles Me.Closed
@@ -59,6 +71,7 @@ Public Class frm_newContract
         theNewId = genID("Contract", "ContId")
         ExecuteQuery("INSERT INTO Contract(ContId) VALUES(" & theNewId & ")")
         lbl_contractid.Text = "Contract ID: " & theNewId
+        lbl_empid.Text = "Employee ID: " & Frm_main.employeeid
         formLoaded = True
     End Sub
 
@@ -76,10 +89,6 @@ Public Class frm_newContract
         If formLoaded Then
             FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
         End If
-    End Sub
-
-    Private Sub NewBuildingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewBuildingToolStripMenuItem.Click
-        Frm_NewBuilding.ShowDialog()
     End Sub
 
     Private Sub txt_accountid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_accountid.KeyPress
