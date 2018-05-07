@@ -15,7 +15,8 @@
                 ExecuteQuery("INSERT INTO Regions VALUES(" & genID("Regions", "RegionId") & ", '" & cbox_regions.Text & "')")
             End If
             ExecuteQuery("UPDATE Clients SET ClientFName = '" & txt_fname.Text & "', ClientLName = '" & txt_lname.Text & "', ClientMName = '" & txt_father.Text & "', ClientMother = '" & txt_mother.Text & "', ClientDOB = '" & dtpick_birth.Value.ToShortDateString & "', ClientRegisterNbr = " & txt_rnumber.Text & ", PostBoxNbr = " & txt_pbnumber.Text & ", RegionId = " & cbox_regions.SelectedValue & " WHERE ClientId = " & theNewId)
-            Me.Close()
+            Frm_main.clientid = theNewId
+            Me.Dispose()
         End If
     End Sub
 
@@ -50,5 +51,10 @@
 
     Private Sub txt_mother_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_mother.KeyPress
         Only_char(txt_mother, e)
+    End Sub
+
+    Private Sub Frm_NewClient_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        ExecuteQuery("DELETE FROM Clients WHERE ClientId = " & theNewId)
+        Me.Dispose()
     End Sub
 End Class

@@ -181,12 +181,6 @@
     <Compile Include="Frm_NewAccountClient.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_NewBuilding.Designer.vb">
-      <DependentUpon>Frm_NewBuilding.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_NewBuilding.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Frm_NewClient.Designer.vb">
       <DependentUpon>Frm_NewClient.vb</DependentUpon>
     </Compile>
@@ -229,10 +223,10 @@
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_newContract.Designer.vb">
-      <DependentUpon>Frm_newContract.vb</DependentUpon>
+    <Compile Include="Frm_NewContract.Designer.vb">
+      <DependentUpon>Frm_NewContract.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frm_newContract.vb">
+    <Compile Include="Frm_NewContract.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_SelectAccountClient.Designer.vb">
@@ -273,9 +267,6 @@
     <EmbeddedResource Include="Frm_NewAccountClient.resx">
       <DependentUpon>Frm_NewAccountClient.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_NewBuilding.resx">
-      <DependentUpon>Frm_NewBuilding.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewClient.resx">
       <DependentUpon>Frm_NewClient.vb</DependentUpon>
     </EmbeddedResource>
@@ -300,8 +291,8 @@
     <EmbeddedResource Include="Frm_main.resx">
       <DependentUpon>Frm_main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_newContract.resx">
-      <DependentUpon>Frm_newContract.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_NewContract.resx">
+      <DependentUpon>Frm_NewContract.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_SelectAccountClient.resx">
       <DependentUpon>Frm_SelectAccountClient.vb</DependentUpon>

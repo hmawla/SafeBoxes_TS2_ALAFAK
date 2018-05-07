@@ -62,6 +62,11 @@ Partial Class Frm_NewInfoVoucher
         Me.ContraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel11 = New MaterialSkin.Controls.MaterialLabel()
+<<<<<<< HEAD
+=======
+        Me.NewClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewContractToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+>>>>>>> 85160ad44dce7b9c26be98fb2e30d920493081b1
         Me.ClientSelector.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -108,9 +113,15 @@ Partial Class Frm_NewInfoVoucher
         '
         'ClientSelector
         '
+<<<<<<< HEAD
         Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
         Me.ClientSelector.Name = "ContextMenuStrip1"
         Me.ClientSelector.Size = New System.Drawing.Size(140, 26)
+=======
+        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem, Me.NewClientToolStripMenuItem})
+        Me.ClientSelector.Name = "ContextMenuStrip1"
+        Me.ClientSelector.Size = New System.Drawing.Size(140, 48)
+>>>>>>> 85160ad44dce7b9c26be98fb2e30d920493081b1
         '
         'SelectClientToolStripMenuItem
         '
@@ -461,14 +472,24 @@ Partial Class Frm_NewInfoVoucher
         '
         'ContractSelector
         '
+<<<<<<< HEAD
         Me.ContractSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContraToolStripMenuItem})
         Me.ContractSelector.Name = "ContractSelector"
         Me.ContractSelector.Size = New System.Drawing.Size(155, 26)
+=======
+        Me.ContractSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContraToolStripMenuItem, Me.NewContractToolStripMenuItem})
+        Me.ContractSelector.Name = "ContractSelector"
+        Me.ContractSelector.Size = New System.Drawing.Size(181, 70)
+>>>>>>> 85160ad44dce7b9c26be98fb2e30d920493081b1
         '
         'ContraToolStripMenuItem
         '
         Me.ContraToolStripMenuItem.Name = "ContraToolStripMenuItem"
+<<<<<<< HEAD
         Me.ContraToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+=======
+        Me.ContraToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+>>>>>>> 85160ad44dce7b9c26be98fb2e30d920493081b1
         Me.ContraToolStripMenuItem.Text = "Select Contract"
         '
         'MaterialLabel10
@@ -498,6 +519,18 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel11.Size = New System.Drawing.Size(159, 19)
         Me.MaterialLabel11.TabIndex = 89
         Me.MaterialLabel11.Text = "Employee ID: <EmpId>"
+        '
+        'NewClientToolStripMenuItem
+        '
+        Me.NewClientToolStripMenuItem.Name = "NewClientToolStripMenuItem"
+        Me.NewClientToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NewClientToolStripMenuItem.Text = "New Client"
+        '
+        'NewContractToolStripMenuItem
+        '
+        Me.NewContractToolStripMenuItem.Name = "NewContractToolStripMenuItem"
+        Me.NewContractToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.NewContractToolStripMenuItem.Text = "New Contract"
         '
         'Frm_NewInfoVoucher
         '
@@ -576,4 +609,6 @@ Partial Class Frm_NewInfoVoucher
     Friend WithEvents ContractSelector As ContextMenuStrip
     Friend WithEvents ContraToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MaterialLabel11 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents NewClientToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NewContractToolStripMenuItem As ToolStripMenuItem
 End Class
