@@ -9,6 +9,10 @@
         txt_clientid.Text = Frm_main.clientid
     End Sub
 
+    Private Sub txt_clientid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_clientid.KeyPress
+        Only_Number(txt_clientid, e)
+    End Sub
+
     Private Sub txt_clientid_Leave(sender As Object, e As EventArgs) Handles txt_clientid.Leave
         If txt_clientid.Text <> "" Then
             If Exists(txt_clientid.Text, "SELECT ClientId FROM Clients") Then
@@ -25,5 +29,17 @@
             txt_clientid.Focus()
         End If
 
+    End Sub
+
+    Private Sub txt_contractid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_contractid.KeyPress
+        Only_Number(txt_contractid, e)
+    End Sub
+
+    Private Sub dtpick_totime_ValueChanged(sender As Object, e As EventArgs) Handles dtpick_totime.ValueChanged, dtpick_fromtime.ValueChanged
+        If dtpick_fromtime.Value >= dtpick_totime.Value Then
+            MessageBox.Show("From time should be greater than to time !")
+        ElseIf dtpick_totime.Value <= dtpick_fromtime.Value
+            MessageBox.Show("To time should be greater than from time !")
+        End If
     End Sub
 End Class
