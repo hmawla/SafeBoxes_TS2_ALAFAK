@@ -119,12 +119,18 @@ End_Of_For:
         End If
     End Sub
     Public Sub Only_char(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-
         If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
             MessageBox.Show("Please enter characters only")
             e.Handled = True
         End If
+    End Sub
 
+    Public Sub Toggle(ByRef theObj As Control)
+        If theObj.Enabled Then
+            theObj.Enabled = False
+        Else
+            theObj.Enabled = True
+        End If
     End Sub
 
 End Module

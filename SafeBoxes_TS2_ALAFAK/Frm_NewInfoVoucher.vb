@@ -76,4 +76,8 @@
             MessageBox.Show("To time should be greater than from time !")
         End If
     End Sub
+
+    Private Sub chk_phone_CheckedChanged(sender As Object, e As EventArgs) Handles chk_phone.CheckedChanged
+        Toggle(txt_phonenumber)
+    End Sub
 End Class

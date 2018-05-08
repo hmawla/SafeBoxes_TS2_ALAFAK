@@ -28,6 +28,7 @@ Partial Class Frm_NewInfoVoucher
         Me.txt_clientid = New System.Windows.Forms.TextBox()
         Me.ClientSelector = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txt_clientname = New System.Windows.Forms.TextBox()
         Me.txt_phonenumber = New System.Windows.Forms.TextBox()
         Me.chk_phone = New System.Windows.Forms.CheckBox()
@@ -60,10 +61,9 @@ Partial Class Frm_NewInfoVoucher
         Me.txt_contractid = New System.Windows.Forms.TextBox()
         Me.ContractSelector = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ContraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewContractToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel11 = New MaterialSkin.Controls.MaterialLabel()
-        Me.NewClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewContractToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientSelector.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -110,9 +110,6 @@ Partial Class Frm_NewInfoVoucher
         '
         'ClientSelector
         '
-        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
-        Me.ClientSelector.Name = "ContextMenuStrip1"
-        Me.ClientSelector.Size = New System.Drawing.Size(140, 26)
         Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem, Me.NewClientToolStripMenuItem})
         Me.ClientSelector.Name = "ContextMenuStrip1"
         Me.ClientSelector.Size = New System.Drawing.Size(140, 48)
@@ -122,6 +119,12 @@ Partial Class Frm_NewInfoVoucher
         Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
         Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.SelectClientToolStripMenuItem.Text = "Select Client"
+        '
+        'NewClientToolStripMenuItem
+        '
+        Me.NewClientToolStripMenuItem.Name = "NewClientToolStripMenuItem"
+        Me.NewClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.NewClientToolStripMenuItem.Text = "New Client"
         '
         'txt_clientname
         '
@@ -466,19 +469,21 @@ Partial Class Frm_NewInfoVoucher
         '
         'ContractSelector
         '
-        Me.ContractSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContraToolStripMenuItem})
-        Me.ContractSelector.Name = "ContractSelector"
-        Me.ContractSelector.Size = New System.Drawing.Size(155, 26)
         Me.ContractSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContraToolStripMenuItem, Me.NewContractToolStripMenuItem})
         Me.ContractSelector.Name = "ContractSelector"
-        Me.ContractSelector.Size = New System.Drawing.Size(181, 70)
+        Me.ContractSelector.Size = New System.Drawing.Size(155, 48)
         '
         'ContraToolStripMenuItem
         '
         Me.ContraToolStripMenuItem.Name = "ContraToolStripMenuItem"
         Me.ContraToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
-        Me.ContraToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ContraToolStripMenuItem.Text = "Select Contract"
+        '
+        'NewContractToolStripMenuItem
+        '
+        Me.NewContractToolStripMenuItem.Name = "NewContractToolStripMenuItem"
+        Me.NewContractToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.NewContractToolStripMenuItem.Text = "New Contract"
         '
         'MaterialLabel10
         '
@@ -507,18 +512,6 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel11.Size = New System.Drawing.Size(159, 19)
         Me.MaterialLabel11.TabIndex = 89
         Me.MaterialLabel11.Text = "Employee ID: <EmpId>"
-        '
-        'NewClientToolStripMenuItem
-        '
-        Me.NewClientToolStripMenuItem.Name = "NewClientToolStripMenuItem"
-        Me.NewClientToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.NewClientToolStripMenuItem.Text = "New Client"
-        '
-        'NewContractToolStripMenuItem
-        '
-        Me.NewContractToolStripMenuItem.Name = "NewContractToolStripMenuItem"
-        Me.NewContractToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.NewContractToolStripMenuItem.Text = "New Contract"
         '
         'Frm_NewInfoVoucher
         '
