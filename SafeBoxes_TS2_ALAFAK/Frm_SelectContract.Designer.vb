@@ -88,16 +88,6 @@ Partial Class Frm_SelectContract
         Me.btn_search.Text = "Search"
         Me.btn_search.UseVisualStyleBackColor = True
         '
-        'rdb_byname
-        '
-        Me.rdb_byname.AutoSize = True
-        Me.rdb_byname.Location = New System.Drawing.Point(162, 26)
-        Me.rdb_byname.Name = "rdb_byname"
-        Me.rdb_byname.Size = New System.Drawing.Size(91, 24)
-        Me.rdb_byname.TabIndex = 5
-        Me.rdb_byname.Text = "By Name"
-        Me.rdb_byname.UseVisualStyleBackColor = True
-        '
         'txt_byname
         '
         Me.txt_byname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -108,18 +98,6 @@ Partial Class Frm_SelectContract
         Me.txt_byname.Name = "txt_byname"
         Me.txt_byname.Size = New System.Drawing.Size(324, 26)
         Me.txt_byname.TabIndex = 4
-        '
-        'rdb_byid
-        '
-        Me.rdb_byid.AutoSize = True
-        Me.rdb_byid.Checked = True
-        Me.rdb_byid.Location = New System.Drawing.Point(6, 26)
-        Me.rdb_byid.Name = "rdb_byid"
-        Me.rdb_byid.Size = New System.Drawing.Size(66, 24)
-        Me.rdb_byid.TabIndex = 3
-        Me.rdb_byid.TabStop = True
-        Me.rdb_byid.Text = "By ID"
-        Me.rdb_byid.UseVisualStyleBackColor = True
         '
         'txt_byid
         '
