@@ -1,10 +1,13 @@
 ﻿Public Class Frm_NewInfoVoucher
     Dim formLoaded As Boolean = False
+    Dim check
     Private Sub Frm_NewInfoVoucher_Load(sender As Object, e As EventArgs) Handles Me.Load
         FillCBox(cbox_subjecttitles, "SELECT InfoSubjTitleId, InfoSubjTitle FROM InfoSubjectTitles", "InfoSubjTitleId", "InfoSubjTitle")
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+        FillCheckList(chklist_exceptdays, "SELECT * FROM Days", "DayId", "DayName")
+
         formLoaded = True
     End Sub
 
@@ -91,5 +94,28 @@
 
     Private Sub chk_other_CheckedChanged(sender As Object, e As EventArgs) Handles chk_other.CheckedChanged
         Toggle(txt_otherconn)
+    End Sub
+
+    Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
+        Dim theNewId As Integer = genID("InfoVoucher", "InfoVoucherId")
+        ExecuteQuery("INSERT INTO InfoVoucher VALUES(" & theNewId & ", '" & dtpick_fromtime.Value.ToShortTimeString & "', '" & dtpick_totime.Value.ToShortTimeString & "', '" & Date.Today.ToShortDateString & "', '" & txt_subjectbody.Text & "', " & txt_contractid.Text & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & cbox_subjecttitles.SelectedValue & ", " & txt_clientid.Text & ")")
+
+        For Each indexChecked In chklist_exceptdays.CheckedIndices
+            ExecuteQuery("INSERT INTO InfoVoucherExDays Values(" + theNewId + ", " + (Int(indexChecked.ToString()) + 1) + ")")
+        Next
+
+        If chk_phone.Checked Then
+            ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 1, '" & txt_phonenumber.Text & "')")
+        End If
+        If chk_mailpost.Checked Then
+            ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 2, '" & txt_mailpost.Text & "')")
+        End If
+        If chk_email.Checked Then
+            ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 3, '" & txt_email.Text & "')")
+        End If
+        If chk_other.Checked Then
+            ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 4, '" & txt_otherconn.Text & "')")
+        End If
+
     End Sub
 End Class

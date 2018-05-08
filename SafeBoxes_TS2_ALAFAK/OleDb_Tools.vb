@@ -53,6 +53,7 @@ Module OleDb_Tools
         Return dbDataSet.Tables(0).Rows(0).Item(0) + 1
     End Function
 
+    'Fills a Combobox with the given query
     Public Sub FillCBox(ByRef theCBox As ComboBox, ByVal theQuery As String, ByVal ValueMember As String, ByVal DisplayName As String)
         Dim cBoxDbDataSet As New DataSet
         theCBox.Text = ""
@@ -60,6 +61,14 @@ Module OleDb_Tools
         theCBox.DataSource = cBoxDbDataSet.Tables(0) 'lets's hope someone help fixing it.
         theCBox.ValueMember = ValueMember 'The problem is when I use this procedure the data is filled perfectly in the combo box but when I access the database using any query after that, it remove the data from the combo box
         theCBox.DisplayMember = DisplayName 'So now I have to refresh the combo box everytime using this function... Any Ideas?
+    End Sub
+
+    Public Sub FillCheckList(ByRef theCheckList As CheckedListBox, ByVal theQuery As String, ByVal ValueMember As String, ByVal DisplayName As String)
+        Dim cBoxDbDataSet As New DataSet
+        cBoxDbDataSet = ReadQueryOut(theQuery).Copy() 'This is the new way to get data from the database into the Combo Box, but still has some issues, and currently declared as an issue in github
+        theCheckList.DataSource = cBoxDbDataSet.Tables(0) 'lets's hope someone help fixing it.
+        theCheckList.ValueMember = ValueMember 'The problem is when I use this procedure the data is filled perfectly in the combo box but when I access the database using any query after that, it remove the data from the combo box
+        theCheckList.DisplayMember = DisplayName 'So now I have to refresh the combo box everytime using this function... Any Ideas?
     End Sub
 
     'Checks if the item exists in the database using a query
@@ -81,19 +90,24 @@ Module OleDb_Tools
     End Function
 
     'A Tool to add a building from scratch street and region
-    Public Sub AddBuilding(ByRef cbox_regions As ComboBox, ByRef cbox_streets As ComboBox, ByRef cbox_building As ComboBox)
+    Public Function AddBuilding(ByRef cbox_regions As ComboBox, ByRef cbox_streets As ComboBox, ByRef cbox_building As ComboBox) As Integer
         'used in the loop
         Dim i As Integer
         'Conserves Old values
         Dim theStreet As String = cbox_streets.Text
         Dim theBuilding As String = cbox_building.Text
+        Dim theBuildingId As Integer
         'Conserves New Values
         If cbox_regions.SelectedValue > 0 Then
-            Dim selectedRegion As String = cbox_regions.SelectedValue
+            If cbox_streets.SelectedValue > 0 Then
+                If cbox_building.SelectedValue > 0 Then
+                    theBuildingId = cbox_building.SelectedValue
+                    GoTo End_Of_For
+                End If
+            End If
         End If
-        If cbox_streets.SelectedValue > 0 Then
-            Dim selectedStreet As String = cbox_streets.SelectedValue
-        End If
+
+
 
         'Enters a checking loop that runs 3 times, each time for Region, Street, and Building respectively
         'Each time it checks of the item exists then jump to the next else add the item and continue
@@ -104,7 +118,8 @@ Module OleDb_Tools
                     If Exists(cbox_building.Text, "SELECT BuildingName FROM Buildings b, Streets s WHERE b.StreetId = " & cbox_streets.SelectedValue & " AND RegionId = " & cbox_regions.SelectedValue) Then
                         GoTo End_Of_For
                     Else
-                        ExecuteQuery("INSERT INTO Buildings VALUES(" & genID("Buildings", "BuildingId") & ", '" & theBuilding & "', " & cbox_streets.SelectedValue & ")")
+                        theBuildingId = genID("Buildings", "BuildingId")
+                        ExecuteQuery("INSERT INTO Buildings VALUES(" & theBuildingId & ", '" & theBuilding & "', " & cbox_streets.SelectedValue & ")")
                         GoTo End_Of_For
                     End If
                 Else
@@ -121,7 +136,8 @@ Module OleDb_Tools
             End If
         Next
 End_Of_For:
-    End Sub
+        Return theBuildingId
+    End Function
 
     'Used to check textboxes for characters other than numbers
     Public Sub Only_Number(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)

@@ -63,7 +63,6 @@ Partial Class Frm_NewInfoVoucher
         Me.ContraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewContractToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel11 = New MaterialSkin.Controls.MaterialLabel()
         Me.ClientSelector.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -285,7 +284,6 @@ Partial Class Frm_NewInfoVoucher
         '
         Me.chklist_exceptdays.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.chklist_exceptdays.FormattingEnabled = True
-        Me.chklist_exceptdays.Items.AddRange(New Object() {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"})
         Me.chklist_exceptdays.Location = New System.Drawing.Point(3, 109)
         Me.chklist_exceptdays.MultiColumn = True
         Me.chklist_exceptdays.Name = "chklist_exceptdays"
@@ -456,7 +454,7 @@ Partial Class Frm_NewInfoVoucher
         Me.cbox_subjecttitles.FormattingEnabled = True
         Me.cbox_subjecttitles.Location = New System.Drawing.Point(19, 86)
         Me.cbox_subjecttitles.Name = "cbox_subjecttitles"
-        Me.cbox_subjecttitles.Size = New System.Drawing.Size(279, 28)
+        Me.cbox_subjecttitles.Size = New System.Drawing.Size(521, 28)
         Me.cbox_subjecttitles.TabIndex = 84
         '
         'txt_contractid
@@ -500,27 +498,12 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel10.TabIndex = 87
         Me.MaterialLabel10.Text = "Contract ID:"
         '
-        'MaterialLabel11
-        '
-        Me.MaterialLabel11.AutoSize = True
-        Me.MaterialLabel11.Depth = 0
-        Me.MaterialLabel11.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel11.Location = New System.Drawing.Point(307, 90)
-        Me.MaterialLabel11.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.MaterialLabel11.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel11.Name = "MaterialLabel11"
-        Me.MaterialLabel11.Size = New System.Drawing.Size(159, 19)
-        Me.MaterialLabel11.TabIndex = 89
-        Me.MaterialLabel11.Text = "Employee ID: <EmpId>"
-        '
         'Frm_NewInfoVoucher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1081, 501)
-        Me.Controls.Add(Me.MaterialLabel11)
         Me.Controls.Add(Me.MaterialLabel10)
         Me.Controls.Add(Me.txt_contractid)
         Me.Controls.Add(Me.cbox_subjecttitles)
@@ -590,7 +573,6 @@ Partial Class Frm_NewInfoVoucher
     Friend WithEvents MaterialLabel10 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents ContractSelector As ContextMenuStrip
     Friend WithEvents ContraToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MaterialLabel11 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents NewClientToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewContractToolStripMenuItem As ToolStripMenuItem
 End Class
