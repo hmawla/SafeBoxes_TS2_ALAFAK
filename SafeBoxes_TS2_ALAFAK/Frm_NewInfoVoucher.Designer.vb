@@ -137,6 +137,7 @@ Partial Class Frm_NewInfoVoucher
         '
         'txt_phonenumber
         '
+        Me.txt_phonenumber.Enabled = False
         Me.txt_phonenumber.Location = New System.Drawing.Point(6, 57)
         Me.txt_phonenumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_phonenumber.Name = "txt_phonenumber"

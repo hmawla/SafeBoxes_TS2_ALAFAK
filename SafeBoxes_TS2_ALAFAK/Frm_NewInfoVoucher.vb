@@ -80,4 +80,16 @@
     Private Sub chk_phone_CheckedChanged(sender As Object, e As EventArgs) Handles chk_phone.CheckedChanged
         Toggle(txt_phonenumber)
     End Sub
+
+    Private Sub chk_mailpost_CheckedChanged(sender As Object, e As EventArgs) Handles chk_mailpost.CheckedChanged
+        Toggle(txt_mailpost)
+    End Sub
+
+    Private Sub chk_email_CheckedChanged(sender As Object, e As EventArgs) Handles chk_email.CheckedChanged
+        Toggle(txt_email)
+    End Sub
+
+    Private Sub chk_other_CheckedChanged(sender As Object, e As EventArgs) Handles chk_other.CheckedChanged
+        Toggle(txt_otherconn)
+    End Sub
 End Class

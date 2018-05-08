@@ -128,6 +128,7 @@ End_Of_For:
     Public Sub Toggle(ByRef theObj As Control)
         If theObj.Enabled Then
             theObj.Enabled = False
+            theObj.Text = ""
         Else
             theObj.Enabled = True
         End If
