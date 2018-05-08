@@ -2,7 +2,6 @@ C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\SafeBoxes_TS2_ALAFAK.exe
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\SafeBoxes_TS2_ALAFAK.pdb
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\SafeBoxes_TS2_ALAFAK.xml
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbprojResolveAssemblyReference.cache
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.frm_main.resources
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Resources.resources
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbproj.GenerateResource.Cache
@@ -16,18 +15,8 @@ C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\MaterialSkin.dll
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.SplashScreen.resources
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_SelectBox.resources
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\CrystalDecisions.Windows.Forms.dll
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\FlashControlV71.dll
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\stdole.dll
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\Interop.CrystalActiveXReportViewerLib13.dll
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\AxInterop.CrystalActiveXReportViewerLib13.dll
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\Interop.CrystalActiveXReportViewerLib13.dll
-C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\AxInterop.CrystalActiveXReportViewerLib13.dll
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbproj.ResolveComReference.cache
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_NewClient.resources
 C:\Users\kassem\Documents\GitHub\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\SafeBoxes_TS2_ALAFAK.exe.config
@@ -68,3 +57,4 @@ C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_SelectAccountClient.resources
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_SelectClient.resources
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_SelectContract.resources
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.vbprojAssemblyReference.cache
