@@ -57,7 +57,7 @@ Partial Class Frm_SelectClient
         Me.grp_search.Controls.Add(Me.txt_byname)
         Me.grp_search.Controls.Add(Me.rdb_byid)
         Me.grp_search.Controls.Add(Me.txt_byid)
-        Me.grp_search.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.grp_search.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.grp_search.Location = New System.Drawing.Point(16, 13)
         Me.grp_search.Name = "grp_search"
         Me.grp_search.Size = New System.Drawing.Size(629, 113)
@@ -106,7 +106,7 @@ Partial Class Frm_SelectClient
         Me.txt_byname.Location = New System.Drawing.Point(162, 58)
         Me.txt_byname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byname.Name = "txt_byname"
-        Me.txt_byname.Size = New System.Drawing.Size(350, 27)
+        Me.txt_byname.Size = New System.Drawing.Size(350, 26)
         Me.txt_byname.TabIndex = 4
         '
         'rdb_byid
@@ -115,7 +115,7 @@ Partial Class Frm_SelectClient
         Me.rdb_byid.Checked = True
         Me.rdb_byid.Location = New System.Drawing.Point(6, 26)
         Me.rdb_byid.Name = "rdb_byid"
-        Me.rdb_byid.Size = New System.Drawing.Size(63, 24)
+        Me.rdb_byid.Size = New System.Drawing.Size(66, 24)
         Me.rdb_byid.TabIndex = 3
         Me.rdb_byid.TabStop = True
         Me.rdb_byid.Text = "By ID"
@@ -126,7 +126,7 @@ Partial Class Frm_SelectClient
         Me.txt_byid.Location = New System.Drawing.Point(6, 58)
         Me.txt_byid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byid.Name = "txt_byid"
-        Me.txt_byid.Size = New System.Drawing.Size(148, 27)
+        Me.txt_byid.Size = New System.Drawing.Size(148, 26)
         Me.txt_byid.TabIndex = 1
         '
         'dgv_clients

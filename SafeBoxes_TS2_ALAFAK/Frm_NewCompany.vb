@@ -19,4 +19,12 @@
 
 
     End Sub
+
+    Private Sub txt_compname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_compname.KeyPress
+        Only_char(txt_compname, e)
+    End Sub
+
+    Private Sub cbox_comptypes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_comptypes.KeyPress
+        Only_char(cbox_comptypes, e)
+    End Sub
 End Class

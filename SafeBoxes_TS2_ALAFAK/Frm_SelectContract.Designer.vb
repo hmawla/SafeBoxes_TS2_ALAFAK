@@ -57,7 +57,7 @@ Partial Class Frm_SelectContract
         Me.grp_search.Controls.Add(Me.txt_byname)
         Me.grp_search.Controls.Add(Me.rdb_byboxid)
         Me.grp_search.Controls.Add(Me.txt_byid)
-        Me.grp_search.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.grp_search.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.grp_search.Location = New System.Drawing.Point(16, 13)
         Me.grp_search.Name = "grp_search"
         Me.grp_search.Size = New System.Drawing.Size(603, 113)
@@ -88,24 +88,45 @@ Partial Class Frm_SelectContract
         Me.btn_search.Text = "Search"
         Me.btn_search.UseVisualStyleBackColor = True
         '
-        'rdb_byboxid
+        'rdb_byname
         '
-        Me.rdb_byboxid.AutoSize = True
-        Me.rdb_byboxid.Checked = True
-        Me.rdb_byboxid.Location = New System.Drawing.Point(6, 26)
-        Me.rdb_byboxid.Name = "rdb_byboxid"
-        Me.rdb_byboxid.Size = New System.Drawing.Size(94, 24)
-        Me.rdb_byboxid.TabIndex = 3
-        Me.rdb_byboxid.TabStop = True
-        Me.rdb_byboxid.Text = "By Box ID"
-        Me.rdb_byboxid.UseVisualStyleBackColor = True
+        Me.rdb_byname.AutoSize = True
+        Me.rdb_byname.Location = New System.Drawing.Point(162, 26)
+        Me.rdb_byname.Name = "rdb_byname"
+        Me.rdb_byname.Size = New System.Drawing.Size(91, 24)
+        Me.rdb_byname.TabIndex = 5
+        Me.rdb_byname.Text = "By Name"
+        Me.rdb_byname.UseVisualStyleBackColor = True
+        '
+        'txt_byname
+        '
+        Me.txt_byname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_byname.Enabled = False
+        Me.txt_byname.Location = New System.Drawing.Point(162, 58)
+        Me.txt_byname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_byname.Name = "txt_byname"
+        Me.txt_byname.Size = New System.Drawing.Size(324, 26)
+        Me.txt_byname.TabIndex = 4
+        '
+        'rdb_byid
+        '
+        Me.rdb_byid.AutoSize = True
+        Me.rdb_byid.Checked = True
+        Me.rdb_byid.Location = New System.Drawing.Point(6, 26)
+        Me.rdb_byid.Name = "rdb_byid"
+        Me.rdb_byid.Size = New System.Drawing.Size(66, 24)
+        Me.rdb_byid.TabIndex = 3
+        Me.rdb_byid.TabStop = True
+        Me.rdb_byid.Text = "By ID"
+        Me.rdb_byid.UseVisualStyleBackColor = True
         '
         'txt_byid
         '
         Me.txt_byid.Location = New System.Drawing.Point(7, 58)
         Me.txt_byid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byid.Name = "txt_byid"
-        Me.txt_byid.Size = New System.Drawing.Size(236, 27)
+        Me.txt_byid.Size = New System.Drawing.Size(148, 26)
         Me.txt_byid.TabIndex = 1
         '
         'dgv_contracts
