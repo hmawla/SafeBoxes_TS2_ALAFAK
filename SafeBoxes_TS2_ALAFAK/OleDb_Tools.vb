@@ -33,18 +33,21 @@ Module OleDb_Tools
         Return dbDataSet 'Return the data set to be readed by the caller
     End Function
 
+    'Execute a non-output query (DML,DDL)
     Public Sub ExecuteQuery(ByVal theQuery As String)
         theCommand.CommandText = theQuery 'Set the command text (set the query)
         theCommand.Connection = theCon 'Set the connection the will be used by the command
         theCommand.ExecuteNonQuery() 'Execute non SELECT query
     End Sub
 
+    'Fills a data grid view with the given query
     Public Sub FillDGV(ByRef theDGV As DataGridView, ByVal theQuery As String)
         Dim dgvDbDataSet As New DataSet
         dgvDbDataSet = ReadQueryOut(theQuery).Copy() 'Activate the select query and fill dbDataSet with the output
         theDGV.DataSource = dgvDbDataSet.Tables(0) 'Set the data source for the following DataGridView
     End Sub
 
+    'Used to generate a new unique ID for any given table
     Public Function genID(ByVal theTable As String, ByVal theColumn As String)
         dbDataSet = ReadQueryOut("SELECT MAX(" & theColumn & ") FROM " & theTable)
         Return dbDataSet.Tables(0).Rows(0).Item(0) + 1
@@ -59,6 +62,7 @@ Module OleDb_Tools
         theCBox.DisplayMember = DisplayName 'So now I have to refresh the combo box everytime using this function... Any Ideas?
     End Sub
 
+    'Checks if the item exists in the database using a query
     Public Function Exists(ByVal theObj As String, ByVal theQuery As String) As Boolean
         Try
             dbDataSet = ReadQueryOut(theQuery)
@@ -76,10 +80,14 @@ Module OleDb_Tools
 
     End Function
 
+    'A Tool to add a building from scratch street and region
     Public Sub AddBuilding(ByRef cbox_regions As ComboBox, ByRef cbox_streets As ComboBox, ByRef cbox_building As ComboBox)
+        'used in the loop
         Dim i As Integer
+        'Conserves Old values
         Dim theStreet As String = cbox_streets.Text
         Dim theBuilding As String = cbox_building.Text
+        'Conserves New Values
         If cbox_regions.SelectedValue > 0 Then
             Dim selectedRegion As String = cbox_regions.SelectedValue
         End If
@@ -87,6 +95,9 @@ Module OleDb_Tools
             Dim selectedStreet As String = cbox_streets.SelectedValue
         End If
 
+        'Enters a checking loop that runs 3 times, each time for Region, Street, and Building respectively
+        'Each time it checks of the item exists then jump to the next else add the item and continue
+        'Until the last ittiration is reached
         For i = 1 To 3
             If Exists(cbox_regions.Text, "SELECT RegionName FROM Regions") Then
                 If Exists(cbox_streets.Text, "SELECT StreetName FROM Streets WHERE StreetId = " & cbox_streets.SelectedValue & " AND RegionId = " & cbox_regions.SelectedValue) Then
@@ -112,12 +123,15 @@ Module OleDb_Tools
 End_Of_For:
     End Sub
 
+    'Used to check textboxes for characters other than numbers
     Public Sub Only_Number(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
             MessageBox.Show("Please enter numbers only")
             e.Handled = True
         End If
     End Sub
+
+    'Used to check textboxes for characters other than ASCII Characters
     Public Sub Only_char(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
             MessageBox.Show("Please enter characters only")
@@ -125,6 +139,7 @@ End_Of_For:
         End If
     End Sub
 
+    'Toggles any control state
     Public Sub Toggle(ByRef theObj As Control)
         If theObj.Enabled Then
             theObj.Enabled = False
