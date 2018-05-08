@@ -11,10 +11,6 @@
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
         frm_newContract.Show()
-        Dim cr As CrystalReport1 = New CrystalReport1
-        CrystalReportViewer1.ReportSource = cr
-        cr.Refresh()
-        CrystalReportViewer1.Refresh()
 
     End Sub
 
@@ -38,12 +34,7 @@
         Frm_NewInfoVoucher.Show()
     End Sub
 
-    Private Sub btn_submitemp_Click(sender As Object, e As EventArgs) Handles btn_submitemp.Click
-        If Exists(txt_empid.Text, "SELECT EmpId FROM Employees") Then
-            employeeid = txt_empid.Text
-            lbl_empid.Text = "Employee ID: " & txt_empid.Text
-        Else
-            MessageBox.Show("Invalid Employee ID!")
-        End If
+    Private Sub btn_submitemp_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

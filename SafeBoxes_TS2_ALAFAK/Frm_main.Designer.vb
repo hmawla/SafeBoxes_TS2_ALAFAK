@@ -26,9 +26,6 @@ Partial Class Frm_main
         Me.btn_newclient = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton3 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.txt_empid = New System.Windows.Forms.TextBox()
-        Me.lbl_empid = New MaterialSkin.Controls.MaterialLabel()
-        Me.btn_submitemp = New System.Windows.Forms.Button()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.CrystalReport11 = New SafeBoxes_TS2_ALAFAK.CrystalReport1()
         Me.SuspendLayout()
@@ -97,37 +94,6 @@ Partial Class Frm_main
         Me.MaterialRaisedButton3.Text = "New Info Vouch"
         Me.MaterialRaisedButton3.UseVisualStyleBackColor = True
         '
-        'txt_empid
-        '
-        Me.txt_empid.Location = New System.Drawing.Point(13, 33)
-        Me.txt_empid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txt_empid.Name = "txt_empid"
-        Me.txt_empid.Size = New System.Drawing.Size(148, 26)
-        Me.txt_empid.TabIndex = 5
-        '
-        'lbl_empid
-        '
-        Me.lbl_empid.AutoSize = True
-        Me.lbl_empid.Depth = 0
-        Me.lbl_empid.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.lbl_empid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lbl_empid.Location = New System.Drawing.Point(9, 9)
-        Me.lbl_empid.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.lbl_empid.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lbl_empid.Name = "lbl_empid"
-        Me.lbl_empid.Size = New System.Drawing.Size(97, 19)
-        Me.lbl_empid.TabIndex = 54
-        Me.lbl_empid.Text = "Employee ID:"
-        '
-        'btn_submitemp
-        '
-        Me.btn_submitemp.Location = New System.Drawing.Point(168, 30)
-        Me.btn_submitemp.Name = "btn_submitemp"
-        Me.btn_submitemp.Size = New System.Drawing.Size(89, 32)
-        Me.btn_submitemp.TabIndex = 55
-        Me.btn_submitemp.Text = "Set"
-        Me.btn_submitemp.UseVisualStyleBackColor = True
-        '
         'CrystalReportViewer1
         '
         Me.CrystalReportViewer1.ActiveViewIndex = 0
@@ -145,9 +111,6 @@ Partial Class Frm_main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(959, 501)
         Me.Controls.Add(Me.CrystalReportViewer1)
-        Me.Controls.Add(Me.btn_submitemp)
-        Me.Controls.Add(Me.lbl_empid)
-        Me.Controls.Add(Me.txt_empid)
         Me.Controls.Add(Me.MaterialRaisedButton3)
         Me.Controls.Add(Me.MaterialRaisedButton2)
         Me.Controls.Add(Me.btn_newclient)
@@ -165,9 +128,6 @@ Partial Class Frm_main
     Friend WithEvents btn_newclient As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton3 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents txt_empid As TextBox
-    Friend WithEvents lbl_empid As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents btn_submitemp As Button
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents CrystalReport11 As CrystalReport1
 End Class

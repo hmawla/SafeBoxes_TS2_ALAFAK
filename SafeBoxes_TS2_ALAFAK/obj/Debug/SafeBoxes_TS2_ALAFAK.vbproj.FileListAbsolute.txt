@@ -68,3 +68,4 @@ C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\bin\Debug\AxInterop.CrystalActiveXReportViewerLib13.dll
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\Interop.CrystalActiveXReportViewerLib13.dll
 C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\AxInterop.CrystalActiveXReportViewerLib13.dll
+C:\Users\pedro\source\repos\SafeBoxes_TS2_ALAFAK\SafeBoxes_TS2_ALAFAK\obj\Debug\SafeBoxes_TS2_ALAFAK.Frm_Login.resources
