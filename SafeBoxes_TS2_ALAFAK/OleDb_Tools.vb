@@ -50,7 +50,12 @@ Module OleDb_Tools
     'Used to generate a new unique ID for any given table
     Public Function genID(ByVal theTable As String, ByVal theColumn As String)
         dbDataSet = ReadQueryOut("SELECT MAX(" & theColumn & ") FROM " & theTable)
-        Return dbDataSet.Tables(0).Rows(0).Item(0) + 1
+        If Not dbDataSet.Tables(0).Rows(0).Item(0).GetType.ToString().ToLower().Equals("system.dbnull") Then
+            Return dbDataSet.Tables(0).Rows(0).Item(0) + 1
+        Else
+            Return 1
+        End If
+
     End Function
 
     'Fills a Combobox with the given query

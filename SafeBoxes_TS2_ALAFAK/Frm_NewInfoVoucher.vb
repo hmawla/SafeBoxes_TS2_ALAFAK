@@ -97,12 +97,13 @@
     End Sub
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
-        Dim theNewId As Integer = genID("InfoVoucher", "InfoVoucherId")
+        Dim theNewId As Integer = genID("InfoVoucher", "InfoVouchId")
         ExecuteQuery("INSERT INTO InfoVoucher VALUES(" & theNewId & ", '" & dtpick_fromtime.Value.ToShortTimeString & "', '" & dtpick_totime.Value.ToShortTimeString & "', '" & Date.Today.ToShortDateString & "', '" & txt_subjectbody.Text & "', " & txt_contractid.Text & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & cbox_subjecttitles.SelectedValue & ", " & txt_clientid.Text & ")")
 
         For Each indexChecked In chklist_exceptdays.CheckedIndices
-            ExecuteQuery("INSERT INTO InfoVoucherExDays Values(" + theNewId + ", " + (Int(indexChecked.ToString()) + 1) + ")")
+            ExecuteQuery("INSERT INTO InfoVoucherExDays Values(" & theNewId & ", " & (Int(indexChecked.ToString()) + 1) & ")")
         Next
+
 
         If chk_phone.Checked Then
             ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 1, '" & txt_phonenumber.Text & "')")
