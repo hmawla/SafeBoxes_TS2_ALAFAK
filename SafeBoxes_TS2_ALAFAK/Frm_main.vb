@@ -6,10 +6,16 @@
 
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
         InitCon()
+
     End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
         frm_newContract.Show()
+        Dim cr As CrystalReport1 = New CrystalReport1
+        CrystalReportViewer1.ReportSource = cr
+        cr.Refresh()
+        CrystalReportViewer1.Refresh()
+
     End Sub
 
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs)

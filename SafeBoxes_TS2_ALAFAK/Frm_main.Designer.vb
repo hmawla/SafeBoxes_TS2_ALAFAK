@@ -29,6 +29,8 @@ Partial Class Frm_main
         Me.txt_empid = New System.Windows.Forms.TextBox()
         Me.lbl_empid = New MaterialSkin.Controls.MaterialLabel()
         Me.btn_submitemp = New System.Windows.Forms.Button()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.CrystalReport11 = New SafeBoxes_TS2_ALAFAK.CrystalReport1()
         Me.SuspendLayout()
         '
         'MaterialRaisedButton1
@@ -126,11 +128,23 @@ Partial Class Frm_main
         Me.btn_submitemp.Text = "Set"
         Me.btn_submitemp.UseVisualStyleBackColor = True
         '
+        'CrystalReportViewer1
+        '
+        Me.CrystalReportViewer1.ActiveViewIndex = 0
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(13, 117)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ReportSource = Me.CrystalReport11
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(790, 372)
+        Me.CrystalReportViewer1.TabIndex = 56
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(959, 360)
+        Me.ClientSize = New System.Drawing.Size(959, 501)
+        Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.btn_submitemp)
         Me.Controls.Add(Me.lbl_empid)
         Me.Controls.Add(Me.txt_empid)
@@ -154,4 +168,6 @@ Partial Class Frm_main
     Friend WithEvents txt_empid As TextBox
     Friend WithEvents lbl_empid As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents btn_submitemp As Button
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents CrystalReport11 As CrystalReport1
 End Class
