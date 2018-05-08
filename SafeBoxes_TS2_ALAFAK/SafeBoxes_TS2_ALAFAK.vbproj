@@ -173,7 +173,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Frm_Login.Designer.vb">
       <DependentUpon>Frm_Login.vb</DependentUpon>
@@ -197,6 +196,12 @@
       <DependentUpon>Frm_NewCompany.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm_NewCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_NewEmployee.Designer.vb">
+      <DependentUpon>Frm_NewEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_NewEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_NewInfoVoucher.Designer.vb">
@@ -281,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewCompany.resx">
       <DependentUpon>Frm_NewCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NewEmployee.resx">
+      <DependentUpon>Frm_NewEmployee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewInfoVoucher.resx">
       <DependentUpon>Frm_NewInfoVoucher.vb</DependentUpon>
