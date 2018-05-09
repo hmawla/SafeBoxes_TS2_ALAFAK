@@ -37,4 +37,8 @@
     Private Sub btn_submitemp_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton4.Click
+        Frm_NewEmployee.Show()
+    End Sub
 End Class
