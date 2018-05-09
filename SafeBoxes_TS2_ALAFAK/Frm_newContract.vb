@@ -55,8 +55,9 @@ Public Class frm_newContract
 
     End Sub
 
+    'Check for problems
     Private Sub frm_newContract_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        If isSubmitting = False Then
+        If isSubmitting = False And Frm_Contracts.contractId = 0 Then
             ExecuteQuery("DELETE FROM Contract WHERE ContId = " & theNewId)
         End If
 
@@ -72,9 +73,10 @@ Public Class frm_newContract
             ExecuteQuery("INSERT INTO Contract(ContId) VALUES(" & theNewId & ")")
             lbl_contractid.Text = "Contract ID: " & theNewId
         Else
-            lbl_contractid.Text = "Contract ID: " & Frm_Contracts.contractId
+            theNewId = Frm_Contracts.contractId
+            lbl_contractid.Text = "Contract ID: " & theNewId
             Dim theContDetails As New DataSet
-            theContDetails = ReadQueryOut("SELECT * FROM Contract WHERE ContId = " & Frm_Contracts.contractId)
+            theContDetails = ReadQueryOut("SELECT * FROM Contract WHERE ContId = " & theNewId)
             Dim rows As DataRow = theContDetails.Tables(0).Rows(0)
             dtpick_exdate.Value = rows.Item(2)
             txt_contnote.Text = rows.Item(3)
@@ -90,9 +92,6 @@ Public Class frm_newContract
             cbox_regions.SelectedValue = rows.Item(2)
             cbox_streets.SelectedValue = rows.Item(1)
             cbox_buildings.SelectedValue = rows.Item(0)
-
-
-
         End If
 
         formLoaded = True
