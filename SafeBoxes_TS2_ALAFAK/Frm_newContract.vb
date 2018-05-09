@@ -66,10 +66,35 @@ Public Class frm_newContract
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
-        theNewId = genID("Contract", "ContId")
-        ExecuteQuery("INSERT INTO Contract(ContId) VALUES(" & theNewId & ")")
-        lbl_contractid.Text = "Contract ID: " & theNewId
         lbl_empid.Text = "Employee ID: " & Frm_main.employeeid
+        If Frm_Contracts.contractId = 0 Then
+            theNewId = genID("Contract", "ContId")
+            ExecuteQuery("INSERT INTO Contract(ContId) VALUES(" & theNewId & ")")
+            lbl_contractid.Text = "Contract ID: " & theNewId
+        Else
+            lbl_contractid.Text = "Contract ID: " & Frm_Contracts.contractId
+            Dim theContDetails As New DataSet
+            theContDetails = ReadQueryOut("SELECT * FROM Contract WHERE ContId = " & Frm_Contracts.contractId)
+            Dim rows As DataRow = theContDetails.Tables(0).Rows(0)
+            dtpick_exdate.Value = rows.Item(2)
+            txt_contnote.Text = rows.Item(3)
+            txt_floor.Value = rows.Item(4)
+            txt_phone1.Text = rows.Item(5)
+            txt_phone2.Text = rows.Item(6)
+            txt_accountid.Text = rows.Item(9)
+            txt_boxes.Text = rows.Item(10)
+            Dim theBuilding As String = rows.Item(8)
+            theContDetails.Reset()
+            theContDetails = ReadQueryOut("SELECT BuildingId, Streets.StreetId, RegionId FROM Buildings, Streets WHERE BuildingId = " & theBuilding)
+            rows = theContDetails.Tables(0).Rows(0)
+            cbox_regions.SelectedValue = rows.Item(2)
+            cbox_streets.SelectedValue = rows.Item(1)
+            cbox_buildings.SelectedValue = rows.Item(0)
+
+
+
+        End If
+
         formLoaded = True
     End Sub
 
