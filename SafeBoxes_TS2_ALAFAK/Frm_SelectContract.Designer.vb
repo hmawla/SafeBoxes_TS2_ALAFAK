@@ -22,17 +22,21 @@ Partial Class Frm_SelectContract
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btn_select = New System.Windows.Forms.Button()
         Me.grp_search = New System.Windows.Forms.GroupBox()
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
-        Me.rdb_byboxid = New System.Windows.Forms.RadioButton()
-        Me.txt_byid = New System.Windows.Forms.TextBox()
-        Me.dgv_contracts = New System.Windows.Forms.DataGridView()
         Me.rdb_byaccountid = New System.Windows.Forms.RadioButton()
-        Me.txt_byname = New System.Windows.Forms.TextBox()
+        Me.txt_byaccid = New System.Windows.Forms.TextBox()
+        Me.rdb_byboxid = New System.Windows.Forms.RadioButton()
+        Me.txt_byboxid = New System.Windows.Forms.TextBox()
+        Me.dgv_contracts = New System.Windows.Forms.DataGridView()
+        Me.ContextAccountSelect = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SelectAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.grp_search.SuspendLayout()
         CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextAccountSelect.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn_select
@@ -54,9 +58,9 @@ Partial Class Frm_SelectContract
         Me.grp_search.Controls.Add(Me.btn_reset)
         Me.grp_search.Controls.Add(Me.btn_search)
         Me.grp_search.Controls.Add(Me.rdb_byaccountid)
-        Me.grp_search.Controls.Add(Me.txt_byname)
+        Me.grp_search.Controls.Add(Me.txt_byaccid)
         Me.grp_search.Controls.Add(Me.rdb_byboxid)
-        Me.grp_search.Controls.Add(Me.txt_byid)
+        Me.grp_search.Controls.Add(Me.txt_byboxid)
         Me.grp_search.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.grp_search.Location = New System.Drawing.Point(16, 13)
         Me.grp_search.Name = "grp_search"
@@ -88,24 +92,44 @@ Partial Class Frm_SelectContract
         Me.btn_search.Text = "Search"
         Me.btn_search.UseVisualStyleBackColor = True
         '
-        'txt_byname
+        'rdb_byaccountid
         '
-        Me.txt_byname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.rdb_byaccountid.AutoSize = True
+        Me.rdb_byaccountid.Location = New System.Drawing.Point(251, 26)
+        Me.rdb_byaccountid.Name = "rdb_byaccountid"
+        Me.rdb_byaccountid.Size = New System.Drawing.Size(129, 24)
+        Me.rdb_byaccountid.TabIndex = 5
+        Me.rdb_byaccountid.Text = "By Account ID"
+        Me.rdb_byaccountid.UseVisualStyleBackColor = True
+        '
+        'txt_byaccid
+        '
+        Me.txt_byaccid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_byname.Enabled = False
-        Me.txt_byname.Location = New System.Drawing.Point(162, 58)
-        Me.txt_byname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txt_byname.Name = "txt_byname"
-        Me.txt_byname.Size = New System.Drawing.Size(324, 26)
-        Me.txt_byname.TabIndex = 4
+        Me.txt_byaccid.ContextMenuStrip = Me.ContextAccountSelect
+        Me.txt_byaccid.Enabled = False
+        Me.txt_byaccid.Location = New System.Drawing.Point(251, 58)
+        Me.txt_byaccid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_byaccid.Name = "txt_byaccid"
+        Me.txt_byaccid.Size = New System.Drawing.Size(236, 26)
+        Me.txt_byaccid.TabIndex = 4
         '
-        'txt_byid
+        'rdb_byboxid
         '
-        Me.txt_byid.Location = New System.Drawing.Point(7, 58)
-        Me.txt_byid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txt_byid.Name = "txt_byid"
-        Me.txt_byid.Size = New System.Drawing.Size(148, 26)
-        Me.txt_byid.TabIndex = 1
+        Me.rdb_byboxid.Location = New System.Drawing.Point(7, 26)
+        Me.rdb_byboxid.Name = "rdb_byboxid"
+        Me.rdb_byboxid.Size = New System.Drawing.Size(104, 24)
+        Me.rdb_byboxid.TabIndex = 7
+        Me.rdb_byboxid.Text = "By Box ID"
+        '
+        'txt_byboxid
+        '
+        Me.txt_byboxid.Enabled = False
+        Me.txt_byboxid.Location = New System.Drawing.Point(7, 58)
+        Me.txt_byboxid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_byboxid.Name = "txt_byboxid"
+        Me.txt_byboxid.Size = New System.Drawing.Size(236, 26)
+        Me.txt_byboxid.TabIndex = 1
         '
         'dgv_contracts
         '
@@ -134,26 +158,17 @@ Partial Class Frm_SelectContract
         Me.dgv_contracts.Size = New System.Drawing.Size(603, 328)
         Me.dgv_contracts.TabIndex = 7
         '
-        'rdb_byaccountid
+        'ContextAccountSelect
         '
-        Me.rdb_byaccountid.AutoSize = True
-        Me.rdb_byaccountid.Location = New System.Drawing.Point(251, 26)
-        Me.rdb_byaccountid.Name = "rdb_byaccountid"
-        Me.rdb_byaccountid.Size = New System.Drawing.Size(125, 24)
-        Me.rdb_byaccountid.TabIndex = 5
-        Me.rdb_byaccountid.Text = "By Account ID"
-        Me.rdb_byaccountid.UseVisualStyleBackColor = True
+        Me.ContextAccountSelect.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectAccountToolStripMenuItem})
+        Me.ContextAccountSelect.Name = "ContextAccountSelect"
+        Me.ContextAccountSelect.Size = New System.Drawing.Size(154, 26)
         '
-        'txt_byname
+        'SelectAccountToolStripMenuItem
         '
-        Me.txt_byname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_byname.Enabled = False
-        Me.txt_byname.Location = New System.Drawing.Point(251, 58)
-        Me.txt_byname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txt_byname.Name = "txt_byname"
-        Me.txt_byname.Size = New System.Drawing.Size(236, 27)
-        Me.txt_byname.TabIndex = 4
+        Me.SelectAccountToolStripMenuItem.Name = "SelectAccountToolStripMenuItem"
+        Me.SelectAccountToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectAccountToolStripMenuItem.Text = "Select Account"
         '
         'Frm_SelectContract
         '
@@ -169,6 +184,7 @@ Partial Class Frm_SelectContract
         Me.grp_search.ResumeLayout(False)
         Me.grp_search.PerformLayout()
         CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextAccountSelect.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -178,8 +194,10 @@ Partial Class Frm_SelectContract
     Friend WithEvents btn_reset As Button
     Friend WithEvents btn_search As Button
     Friend WithEvents rdb_byboxid As RadioButton
-    Friend WithEvents txt_byid As TextBox
+    Friend WithEvents txt_byboxid As TextBox
     Friend WithEvents dgv_contracts As DataGridView
     Friend WithEvents rdb_byaccountid As RadioButton
-    Friend WithEvents txt_byname As TextBox
+    Friend WithEvents txt_byaccid As TextBox
+    Friend WithEvents ContextAccountSelect As ContextMenuStrip
+    Friend WithEvents SelectAccountToolStripMenuItem As ToolStripMenuItem
 End Class

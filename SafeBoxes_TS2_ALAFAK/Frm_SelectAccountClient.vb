@@ -48,7 +48,6 @@
 
     Private Sub btn_select_Click(sender As Object, e As EventArgs) Handles btn_select.Click
         Frm_main.accountid = dgv_accounts.SelectedRows.Item(0).Cells.Item(0).Value
-        'frm_newContract.txt_accountid.Text = dgv_accounts.SelectedRows.Item(0).Cells.Item(0).Value
         Me.Close()
     End Sub
 

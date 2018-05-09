@@ -39,7 +39,7 @@ Partial Class Frm_NewAccountClient
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel5.Location = New System.Drawing.Point(61, 73)
+        Me.MaterialLabel5.Location = New System.Drawing.Point(9, 94)
         Me.MaterialLabel5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel5.Name = "MaterialLabel5"
@@ -49,7 +49,7 @@ Partial Class Frm_NewAccountClient
         '
         'txt_compname
         '
-        Me.txt_compname.Location = New System.Drawing.Point(65, 97)
+        Me.txt_compname.Location = New System.Drawing.Point(13, 118)
         Me.txt_compname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_compname.Name = "txt_compname"
         Me.txt_compname.Size = New System.Drawing.Size(139, 26)
@@ -61,7 +61,7 @@ Partial Class Frm_NewAccountClient
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(208, 73)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(156, 94)
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
@@ -71,7 +71,7 @@ Partial Class Frm_NewAccountClient
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(212, 97)
+        Me.TextBox1.Location = New System.Drawing.Point(160, 118)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
