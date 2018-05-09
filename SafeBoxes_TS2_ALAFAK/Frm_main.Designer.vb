@@ -42,6 +42,9 @@ Partial Class Frm_main
         Me.MaterialRaisedButton17 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.btn_contractsman = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_clientsman = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.btn_compman = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.btn_infovouchman = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'MaterialRaisedButton1
@@ -359,11 +362,62 @@ Partial Class Frm_main
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Our Final Forms"
         '
+        'btn_clientsman
+        '
+        Me.btn_clientsman.AutoSize = True
+        Me.btn_clientsman.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_clientsman.Depth = 0
+        Me.btn_clientsman.Icon = Nothing
+        Me.btn_clientsman.Location = New System.Drawing.Point(13, 294)
+        Me.btn_clientsman.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_clientsman.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_clientsman.Name = "btn_clientsman"
+        Me.btn_clientsman.Primary = True
+        Me.btn_clientsman.Size = New System.Drawing.Size(145, 36)
+        Me.btn_clientsman.TabIndex = 21
+        Me.btn_clientsman.Text = "Clients Manager"
+        Me.btn_clientsman.UseVisualStyleBackColor = True
+        '
+        'btn_compman
+        '
+        Me.btn_compman.AutoSize = True
+        Me.btn_compman.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_compman.Depth = 0
+        Me.btn_compman.Icon = Nothing
+        Me.btn_compman.Location = New System.Drawing.Point(191, 248)
+        Me.btn_compman.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_compman.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_compman.Name = "btn_compman"
+        Me.btn_compman.Primary = True
+        Me.btn_compman.Size = New System.Drawing.Size(168, 36)
+        Me.btn_compman.TabIndex = 22
+        Me.btn_compman.Text = "Comapnies Manager"
+        Me.btn_compman.UseVisualStyleBackColor = True
+        '
+        'btn_infovouchman
+        '
+        Me.btn_infovouchman.AutoSize = True
+        Me.btn_infovouchman.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_infovouchman.Depth = 0
+        Me.btn_infovouchman.Icon = Nothing
+        Me.btn_infovouchman.Location = New System.Drawing.Point(367, 248)
+        Me.btn_infovouchman.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_infovouchman.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_infovouchman.Name = "btn_infovouchman"
+        Me.btn_infovouchman.Primary = True
+        Me.btn_infovouchman.Size = New System.Drawing.Size(183, 36)
+        Me.btn_infovouchman.TabIndex = 23
+        Me.btn_infovouchman.Text = "InfoVoucher Manager"
+        Me.btn_infovouchman.UseVisualStyleBackColor = True
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(679, 412)
+        Me.Controls.Add(Me.btn_infovouchman)
+        Me.Controls.Add(Me.btn_compman)
+        Me.Controls.Add(Me.btn_clientsman)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_contractsman)
         Me.Controls.Add(Me.MaterialRaisedButton17)
@@ -413,4 +467,7 @@ Partial Class Frm_main
     Friend WithEvents MaterialRaisedButton17 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents btn_contractsman As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents Label1 As Label
+    Friend WithEvents btn_clientsman As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents btn_compman As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents btn_infovouchman As MaterialSkin.Controls.MaterialRaisedButton
 End Class

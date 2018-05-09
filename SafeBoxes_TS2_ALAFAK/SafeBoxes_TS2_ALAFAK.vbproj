@@ -166,10 +166,28 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_Clients.Designer.vb">
+      <DependentUpon>Frm_Clients.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Clients.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Companies.Designer.vb">
+      <DependentUpon>Frm_Companies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Companies.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_Contracts.Designer.vb">
       <DependentUpon>Frm_Contracts.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm_Contracts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_InfoVoucher.Designer.vb">
+      <DependentUpon>Frm_InfoVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_InfoVoucher.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Login.Designer.vb">
@@ -269,8 +287,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frm_Clients.resx">
+      <DependentUpon>Frm_Clients.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Companies.resx">
+      <DependentUpon>Frm_Companies.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Contracts.resx">
       <DependentUpon>Frm_Contracts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_InfoVoucher.resx">
+      <DependentUpon>Frm_InfoVoucher.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.vb</DependentUpon>

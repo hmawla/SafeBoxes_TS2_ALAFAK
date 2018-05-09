@@ -45,4 +45,16 @@
     Private Sub btn_contractsman_Click(sender As Object, e As EventArgs) Handles btn_contractsman.Click
         Frm_Contracts.Show()
     End Sub
+
+    Private Sub MaterialRaisedButton18_Click(sender As Object, e As EventArgs) Handles btn_clientsman.Click
+        Frm_Clients.Show()
+    End Sub
+
+    Private Sub MaterialRaisedButton18_Click_1(sender As Object, e As EventArgs) Handles btn_compman.Click
+        Frm_Companies.Show()
+    End Sub
+
+    Private Sub MaterialRaisedButton19_Click(sender As Object, e As EventArgs) Handles btn_infovouchman.Click
+        Frm_InfoVoucher.Show()
+    End Sub
 End Class
