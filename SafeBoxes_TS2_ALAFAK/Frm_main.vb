@@ -41,4 +41,8 @@
     Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton4.Click
         Frm_NewEmployee.Show()
     End Sub
+
+    Private Sub btn_contractsman_Click(sender As Object, e As EventArgs) Handles btn_contractsman.Click
+        Frm_Contracts.Show()
+    End Sub
 End Class

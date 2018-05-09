@@ -40,6 +40,8 @@ Partial Class Frm_main
         Me.MaterialRaisedButton15 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton16 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton17 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.btn_contractsman = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'MaterialRaisedButton1
@@ -330,11 +332,40 @@ Partial Class Frm_main
         Me.MaterialRaisedButton17.Text = "Careers"
         Me.MaterialRaisedButton17.UseVisualStyleBackColor = True
         '
+        'btn_contractsman
+        '
+        Me.btn_contractsman.AutoSize = True
+        Me.btn_contractsman.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_contractsman.Depth = 0
+        Me.btn_contractsman.Icon = Nothing
+        Me.btn_contractsman.Location = New System.Drawing.Point(13, 248)
+        Me.btn_contractsman.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_contractsman.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_contractsman.Name = "btn_contractsman"
+        Me.btn_contractsman.Primary = True
+        Me.btn_contractsman.Size = New System.Drawing.Size(170, 36)
+        Me.btn_contractsman.TabIndex = 19
+        Me.btn_contractsman.Text = "Contracts Manager"
+        Me.btn_contractsman.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Cooper Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Green
+        Me.Label1.Location = New System.Drawing.Point(12, 223)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(145, 19)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Our Final Forms"
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(679, 221)
+        Me.ClientSize = New System.Drawing.Size(679, 412)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btn_contractsman)
         Me.Controls.Add(Me.MaterialRaisedButton17)
         Me.Controls.Add(Me.MaterialRaisedButton16)
         Me.Controls.Add(Me.MaterialRaisedButton15)
@@ -380,4 +411,6 @@ Partial Class Frm_main
     Friend WithEvents MaterialRaisedButton15 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton16 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton17 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents btn_contractsman As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents Label1 As Label
 End Class
