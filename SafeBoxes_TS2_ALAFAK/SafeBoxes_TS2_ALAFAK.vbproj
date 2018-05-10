@@ -166,6 +166,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_Report_MissingKeys.Designer.vb">
+      <DependentUpon>Frm_Report_MissingKeys.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_MissingKeys.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_RenewContract.Designer.vb">
+      <DependentUpon>Frm_Report_RenewContract.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_RenewContract.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Redeliver_Date.Designer.vb">
       <DependentUpon>Redeliver_Date.vb</DependentUpon>
     </Compile>
@@ -322,6 +334,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewInfoVoucher.resx">
       <DependentUpon>Frm_NewInfoVoucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_MissingKeys.resx">
+      <DependentUpon>Frm_Report_MissingKeys.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_RenewContract.resx">
+      <DependentUpon>Frm_Report_RenewContract.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_SelectBox.resx">
       <DependentUpon>Frm_SelectBox.vb</DependentUpon>

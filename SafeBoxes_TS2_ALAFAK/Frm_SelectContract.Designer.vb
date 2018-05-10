@@ -29,14 +29,14 @@ Partial Class Frm_SelectContract
         Me.btn_search = New System.Windows.Forms.Button()
         Me.rdb_byaccountid = New System.Windows.Forms.RadioButton()
         Me.txt_byaccid = New System.Windows.Forms.TextBox()
+        Me.ContextAccountSelect = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SelectAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.rdb_byboxid = New System.Windows.Forms.RadioButton()
         Me.txt_byboxid = New System.Windows.Forms.TextBox()
         Me.dgv_contracts = New System.Windows.Forms.DataGridView()
-        Me.ContextAccountSelect = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.SelectAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.grp_search.SuspendLayout()
-        CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextAccountSelect.SuspendLayout()
+        CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_select
@@ -114,6 +114,18 @@ Partial Class Frm_SelectContract
         Me.txt_byaccid.Size = New System.Drawing.Size(236, 26)
         Me.txt_byaccid.TabIndex = 4
         '
+        'ContextAccountSelect
+        '
+        Me.ContextAccountSelect.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectAccountToolStripMenuItem})
+        Me.ContextAccountSelect.Name = "ContextAccountSelect"
+        Me.ContextAccountSelect.Size = New System.Drawing.Size(154, 26)
+        '
+        'SelectAccountToolStripMenuItem
+        '
+        Me.SelectAccountToolStripMenuItem.Name = "SelectAccountToolStripMenuItem"
+        Me.SelectAccountToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.SelectAccountToolStripMenuItem.Text = "Select Account"
+        '
         'rdb_byboxid
         '
         Me.rdb_byboxid.Location = New System.Drawing.Point(7, 26)
@@ -158,18 +170,6 @@ Partial Class Frm_SelectContract
         Me.dgv_contracts.Size = New System.Drawing.Size(603, 328)
         Me.dgv_contracts.TabIndex = 7
         '
-        'ContextAccountSelect
-        '
-        Me.ContextAccountSelect.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectAccountToolStripMenuItem})
-        Me.ContextAccountSelect.Name = "ContextAccountSelect"
-        Me.ContextAccountSelect.Size = New System.Drawing.Size(154, 26)
-        '
-        'SelectAccountToolStripMenuItem
-        '
-        Me.SelectAccountToolStripMenuItem.Name = "SelectAccountToolStripMenuItem"
-        Me.SelectAccountToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.SelectAccountToolStripMenuItem.Text = "Select Account"
-        '
         'Frm_SelectContract
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -183,8 +183,8 @@ Partial Class Frm_SelectContract
         Me.Text = "Frm_SelectContract"
         Me.grp_search.ResumeLayout(False)
         Me.grp_search.PerformLayout()
-        CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextAccountSelect.ResumeLayout(False)
+        CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
