@@ -166,6 +166,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_Report_Authorizations.Designer.vb">
+      <DependentUpon>Frm_Report_Authorizations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_Authorizations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_EndingContracts.Designer.vb">
+      <DependentUpon>Frm_Report_EndingContracts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_EndingContracts.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_Report_MissingKeys.Designer.vb">
       <DependentUpon>Frm_Report_MissingKeys.vb</DependentUpon>
     </Compile>
@@ -176,6 +188,12 @@
       <DependentUpon>Frm_Report_RenewContract.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm_Report_RenewContract.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_WithdrawPermission.Designer.vb">
+      <DependentUpon>Frm_Report_WithdrawPermission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_WithdrawPermission.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Redeliver_Date.Designer.vb">
@@ -335,11 +353,20 @@
     <EmbeddedResource Include="Frm_NewInfoVoucher.resx">
       <DependentUpon>Frm_NewInfoVoucher.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_Authorizations.resx">
+      <DependentUpon>Frm_Report_Authorizations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_EndingContracts.resx">
+      <DependentUpon>Frm_Report_EndingContracts.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_MissingKeys.resx">
       <DependentUpon>Frm_Report_MissingKeys.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_RenewContract.resx">
       <DependentUpon>Frm_Report_RenewContract.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_WithdrawPermission.resx">
+      <DependentUpon>Frm_Report_WithdrawPermission.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_SelectBox.resx">
       <DependentUpon>Frm_SelectBox.vb</DependentUpon>
