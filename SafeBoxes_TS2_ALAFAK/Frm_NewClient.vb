@@ -2,10 +2,31 @@
     Dim theNewId As Integer
     Dim isSubmitting As Boolean = False
     Private Sub Frm_NewClient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
-        theNewId = genID("Clients", "ClientId")
-        ExecuteQuery("INSERT INTO Clients(ClientId) VALUES(" & theNewId & ")")
-        lbl_cid.Text = "ClientId ID: " & theNewId
+        If Frm_Clients.clientId = 0 Then
+            theNewId = genID("Clients", "ClientId")
+            ExecuteQuery("INSERT INTO Clients(ClientId) VALUES(" & theNewId & ")")
+            lbl_cid.Text = "ClientId ID: " & theNewId
+        Else
+            theNewId = Frm_Clients.clientId
+            lbl_cid.Text = "Client ID: " & theNewId
+            Dim theContDetails As New DataSet
+            theContDetails = ReadQueryOut("SELECT * FROM Clients WHERE ClientId = " & theNewId)
+            Dim rows As DataRow = theContDetails.Tables(0).Rows(0)
+            txt_fname.Text = rows.Item(1)
+            txt_father.Text = rows.Item(2)
+            txt_lname.Text = rows.Item(3)
+            dtpick_birth.Value = rows.Item(4)
+            txt_mother.Text = rows.Item(5)
+            txt_rnumber.Text = rows.Item(6)
+            txt_pbnumber.Text = rows.Item(7)
+            Dim theRegion As String = rows.Item(8)
+            theContDetails.Reset()
+            theContDetails = ReadQueryOut("SELECT RegionId,RegionName FROM Regions WHERE RegionId = " & theRegion)
+            rows = theContDetails.Tables(0).Rows(0)
+            cbox_regions.SelectedValue = rows.Item(0)
+        End If
     End Sub
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
