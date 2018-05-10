@@ -1,5 +1,6 @@
 ﻿Public Class Frm_NewClient
     Dim theNewId As Integer
+    Dim isSubmitting As Boolean = False
     Private Sub Frm_NewClient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         theNewId = genID("Clients", "ClientId")
@@ -8,6 +9,7 @@
     End Sub
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
+        isSubmitting = True
         If txt_fname.Text = "" Or txt_lname.Text = "" Or txt_father.Text = "" Or txt_mother.Text = "" Or txt_pbnumber.Text = "" Or txt_rnumber.Text = "" Or dtpick_birth.Value > DateTime.Now.AddYears(-18) Or cbox_regions.Text = "" Then
             MessageBox.Show("Please fill all needed information!")
         Else
@@ -54,7 +56,9 @@
     End Sub
 
     Private Sub Frm_NewClient_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        ExecuteQuery("DELETE FROM Clients WHERE ClientId = " & theNewId)
-        Me.Dispose()
+        If Not isSubmitting Then
+            ExecuteQuery("DELETE FROM Clients WHERE ClientId = " & theNewId)
+            Me.Dispose()
+        End If
     End Sub
 End Class
