@@ -54,9 +54,12 @@ Partial Class frm_newContract
         Me.cbox_regions = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_streets = New System.Windows.Forms.ComboBox()
+        Me.EmployeeMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AccountsMenuStrip.SuspendLayout()
         Me.BoxesMenuStrip.SuspendLayout()
+        Me.EmployeeMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'txt_phone1
@@ -344,6 +347,7 @@ Partial Class frm_newContract
         'lbl_empid
         '
         Me.lbl_empid.AutoSize = True
+        Me.lbl_empid.ContextMenuStrip = Me.EmployeeMenuStrip
         Me.lbl_empid.Depth = 0
         Me.lbl_empid.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.lbl_empid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -405,6 +409,18 @@ Partial Class frm_newContract
         Me.cbox_streets.Size = New System.Drawing.Size(148, 28)
         Me.cbox_streets.TabIndex = 5
         '
+        'EmployeeMenuStrip
+        '
+        Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
+        Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
+        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 26)
+        '
+        'SelectDifferentEmployeeToolStripMenuItem
+        '
+        Me.SelectDifferentEmployeeToolStripMenuItem.Name = "SelectDifferentEmployeeToolStripMenuItem"
+        Me.SelectDifferentEmployeeToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.SelectDifferentEmployeeToolStripMenuItem.Text = "Select Different Employee"
+        '
         'frm_newContract
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -446,6 +462,7 @@ Partial Class frm_newContract
         CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AccountsMenuStrip.ResumeLayout(False)
         Me.BoxesMenuStrip.ResumeLayout(False)
+        Me.EmployeeMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -482,4 +499,6 @@ Partial Class frm_newContract
     Friend WithEvents cbox_regions As ComboBox
     Friend WithEvents MaterialLabel12 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_streets As ComboBox
+    Friend WithEvents EmployeeMenuStrip As ContextMenuStrip
+    Friend WithEvents SelectDifferentEmployeeToolStripMenuItem As ToolStripMenuItem
 End Class

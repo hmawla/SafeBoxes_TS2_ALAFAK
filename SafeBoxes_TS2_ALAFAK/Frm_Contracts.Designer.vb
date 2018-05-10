@@ -24,13 +24,21 @@ Partial Class Frm_Contracts
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tab_datacontrol = New System.Windows.Forms.TabPage()
-        Me.tab_filter = New System.Windows.Forms.TabPage()
-        Me.btn_newcontract = New System.Windows.Forms.Button()
-        Me.btn_delcontract = New System.Windows.Forms.Button()
-        Me.btn_modcontract = New System.Windows.Forms.Button()
-        Me.txt_details = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btn_keydelivered = New System.Windows.Forms.Button()
+        Me.btn_showmissingkeys = New System.Windows.Forms.Button()
+        Me.btn_addmissingkeys = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_modcontract = New System.Windows.Forms.Button()
+        Me.btn_delcontract = New System.Windows.Forms.Button()
+        Me.btn_newcontract = New System.Windows.Forms.Button()
+        Me.tab_filter = New System.Windows.Forms.TabPage()
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
         Me.rdb_byaccountid = New System.Windows.Forms.RadioButton()
@@ -38,10 +46,18 @@ Partial Class Frm_Contracts
         Me.rdb_byboxid = New System.Windows.Forms.RadioButton()
         Me.txt_byboxid = New System.Windows.Forms.TextBox()
         Me.dgv_contracts = New System.Windows.Forms.DataGridView()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MissingKeysReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RenewReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContractsEndReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WithdrawPermissionsReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientAuthorizationsReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
         Me.tab_filter.SuspendLayout()
         CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -50,27 +66,167 @@ Partial Class Frm_Contracts
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
-        Me.TabControl1.Location = New System.Drawing.Point(13, 12)
+        Me.TabControl1.Location = New System.Drawing.Point(13, 27)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(695, 178)
+        Me.TabControl1.Size = New System.Drawing.Size(668, 178)
         Me.TabControl1.TabIndex = 1
         '
         'tab_datacontrol
         '
+        Me.tab_datacontrol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tab_datacontrol.Controls.Add(Me.Label2)
+        Me.tab_datacontrol.Controls.Add(Me.Button4)
+        Me.tab_datacontrol.Controls.Add(Me.Button3)
+        Me.tab_datacontrol.Controls.Add(Me.Button2)
+        Me.tab_datacontrol.Controls.Add(Me.Label4)
+        Me.tab_datacontrol.Controls.Add(Me.Button1)
+        Me.tab_datacontrol.Controls.Add(Me.Label3)
+        Me.tab_datacontrol.Controls.Add(Me.btn_keydelivered)
+        Me.tab_datacontrol.Controls.Add(Me.btn_showmissingkeys)
+        Me.tab_datacontrol.Controls.Add(Me.btn_addmissingkeys)
         Me.tab_datacontrol.Controls.Add(Me.Label1)
-        Me.tab_datacontrol.Controls.Add(Me.txt_details)
         Me.tab_datacontrol.Controls.Add(Me.btn_modcontract)
         Me.tab_datacontrol.Controls.Add(Me.btn_delcontract)
         Me.tab_datacontrol.Controls.Add(Me.btn_newcontract)
         Me.tab_datacontrol.Location = New System.Drawing.Point(4, 29)
         Me.tab_datacontrol.Name = "tab_datacontrol"
         Me.tab_datacontrol.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_datacontrol.Size = New System.Drawing.Size(687, 145)
+        Me.tab_datacontrol.Size = New System.Drawing.Size(660, 145)
         Me.tab_datacontrol.TabIndex = 0
         Me.tab_datacontrol.Text = "Data Control"
         Me.tab_datacontrol.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(473, 17)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(105, 20)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "Permissions"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(477, 75)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(151, 29)
+        Me.Button4.TabIndex = 14
+        Me.Button4.Text = "Authorize"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(477, 40)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(151, 29)
+        Me.Button3.TabIndex = 13
+        Me.Button3.Text = "Withdraw Permission"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(320, 75)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(151, 29)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "End"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(316, 17)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(156, 20)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Manage Contracts"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(320, 40)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(151, 29)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Renew"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(159, 17)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(116, 20)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Manage Keys"
+        '
+        'btn_keydelivered
+        '
+        Me.btn_keydelivered.Enabled = False
+        Me.btn_keydelivered.Location = New System.Drawing.Point(163, 110)
+        Me.btn_keydelivered.Name = "btn_keydelivered"
+        Me.btn_keydelivered.Size = New System.Drawing.Size(151, 29)
+        Me.btn_keydelivered.TabIndex = 8
+        Me.btn_keydelivered.Text = "Key Delivered"
+        Me.btn_keydelivered.UseVisualStyleBackColor = True
+        '
+        'btn_showmissingkeys
+        '
+        Me.btn_showmissingkeys.Location = New System.Drawing.Point(163, 40)
+        Me.btn_showmissingkeys.Name = "btn_showmissingkeys"
+        Me.btn_showmissingkeys.Size = New System.Drawing.Size(151, 29)
+        Me.btn_showmissingkeys.TabIndex = 7
+        Me.btn_showmissingkeys.Text = "Show Missing"
+        Me.btn_showmissingkeys.UseVisualStyleBackColor = True
+        '
+        'btn_addmissingkeys
+        '
+        Me.btn_addmissingkeys.Location = New System.Drawing.Point(163, 75)
+        Me.btn_addmissingkeys.Name = "btn_addmissingkeys"
+        Me.btn_addmissingkeys.Size = New System.Drawing.Size(151, 29)
+        Me.btn_addmissingkeys.TabIndex = 6
+        Me.btn_addmissingkeys.Text = "Add Missing"
+        Me.btn_addmissingkeys.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 17)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(67, 20)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Control"
+        '
+        'btn_modcontract
+        '
+        Me.btn_modcontract.Location = New System.Drawing.Point(6, 75)
+        Me.btn_modcontract.Name = "btn_modcontract"
+        Me.btn_modcontract.Size = New System.Drawing.Size(151, 29)
+        Me.btn_modcontract.TabIndex = 2
+        Me.btn_modcontract.Text = "Modify Selected"
+        Me.btn_modcontract.UseVisualStyleBackColor = True
+        '
+        'btn_delcontract
+        '
+        Me.btn_delcontract.Location = New System.Drawing.Point(6, 110)
+        Me.btn_delcontract.Name = "btn_delcontract"
+        Me.btn_delcontract.Size = New System.Drawing.Size(151, 29)
+        Me.btn_delcontract.TabIndex = 1
+        Me.btn_delcontract.Text = "Delete Selected"
+        Me.btn_delcontract.UseVisualStyleBackColor = True
+        '
+        'btn_newcontract
+        '
+        Me.btn_newcontract.Location = New System.Drawing.Point(6, 40)
+        Me.btn_newcontract.Name = "btn_newcontract"
+        Me.btn_newcontract.Size = New System.Drawing.Size(151, 29)
+        Me.btn_newcontract.TabIndex = 0
+        Me.btn_newcontract.Text = "Add new"
+        Me.btn_newcontract.UseVisualStyleBackColor = True
         '
         'tab_filter
         '
@@ -83,74 +239,16 @@ Partial Class Frm_Contracts
         Me.tab_filter.Location = New System.Drawing.Point(4, 29)
         Me.tab_filter.Name = "tab_filter"
         Me.tab_filter.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_filter.Size = New System.Drawing.Size(687, 145)
+        Me.tab_filter.Size = New System.Drawing.Size(660, 145)
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
-        '
-        'btn_newcontract
-        '
-        Me.btn_newcontract.Location = New System.Drawing.Point(6, 40)
-        Me.btn_newcontract.Name = "btn_newcontract"
-        Me.btn_newcontract.Size = New System.Drawing.Size(151, 29)
-        Me.btn_newcontract.TabIndex = 0
-        Me.btn_newcontract.Text = "Add new"
-        Me.btn_newcontract.UseVisualStyleBackColor = True
-        '
-        'btn_delcontract
-        '
-        Me.btn_delcontract.Location = New System.Drawing.Point(6, 110)
-        Me.btn_delcontract.Name = "btn_delcontract"
-        Me.btn_delcontract.Size = New System.Drawing.Size(151, 29)
-        Me.btn_delcontract.TabIndex = 1
-        Me.btn_delcontract.Text = "Delete Selected"
-        Me.btn_delcontract.UseVisualStyleBackColor = True
-        '
-        'btn_modcontract
-        '
-        Me.btn_modcontract.Location = New System.Drawing.Point(6, 75)
-        Me.btn_modcontract.Name = "btn_modcontract"
-        Me.btn_modcontract.Size = New System.Drawing.Size(151, 29)
-        Me.btn_modcontract.TabIndex = 2
-        Me.btn_modcontract.Text = "Modify Selected"
-        Me.btn_modcontract.UseVisualStyleBackColor = True
-        '
-        'txt_details
-        '
-        Me.txt_details.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_details.Location = New System.Drawing.Point(163, 40)
-        Me.txt_details.Multiline = True
-        Me.txt_details.Name = "txt_details"
-        Me.txt_details.ReadOnly = True
-        Me.txt_details.Size = New System.Drawing.Size(518, 99)
-        Me.txt_details.TabIndex = 3
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 17)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 20)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Control"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(159, 17)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(141, 20)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Selected Details"
         '
         'btn_reset
         '
         Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_reset.Enabled = False
-        Me.btn_reset.Location = New System.Drawing.Point(656, 100)
+        Me.btn_reset.Location = New System.Drawing.Point(871, 100)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(24, 35)
@@ -161,7 +259,7 @@ Partial Class Frm_Contracts
         'btn_search
         '
         Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_search.Location = New System.Drawing.Point(578, 100)
+        Me.btn_search.Location = New System.Drawing.Point(793, 100)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(70, 35)
@@ -187,7 +285,7 @@ Partial Class Frm_Contracts
         Me.txt_byaccid.Location = New System.Drawing.Point(6, 104)
         Me.txt_byaccid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byaccid.Name = "txt_byaccid"
-        Me.txt_byaccid.Size = New System.Drawing.Size(236, 26)
+        Me.txt_byaccid.Size = New System.Drawing.Size(451, 26)
         Me.txt_byaccid.TabIndex = 10
         '
         'rdb_byboxid
@@ -222,7 +320,7 @@ Partial Class Frm_Contracts
         Me.dgv_contracts.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgv_contracts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgv_contracts.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_contracts.Location = New System.Drawing.Point(13, 194)
+        Me.dgv_contracts.Location = New System.Drawing.Point(13, 209)
         Me.dgv_contracts.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgv_contracts.MultiSelect = False
         Me.dgv_contracts.Name = "dgv_contracts"
@@ -231,17 +329,66 @@ Partial Class Frm_Contracts
         Me.dgv_contracts.RowHeadersVisible = False
         Me.dgv_contracts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_contracts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_contracts.Size = New System.Drawing.Size(695, 339)
+        Me.dgv_contracts.Size = New System.Drawing.Size(668, 324)
         Me.dgv_contracts.TabIndex = 8
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportsToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(693, 24)
+        Me.MenuStrip1.TabIndex = 10
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MissingKeysReportsToolStripMenuItem, Me.RenewReportsToolStripMenuItem, Me.ContractsEndReportsToolStripMenuItem, Me.WithdrawPermissionsReportsToolStripMenuItem, Me.ClientAuthorizationsReportsToolStripMenuItem})
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.ReportsToolStripMenuItem.Text = "Reports"
+        '
+        'MissingKeysReportsToolStripMenuItem
+        '
+        Me.MissingKeysReportsToolStripMenuItem.Name = "MissingKeysReportsToolStripMenuItem"
+        Me.MissingKeysReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.MissingKeysReportsToolStripMenuItem.Text = "Missing Keys Reports"
+        '
+        'RenewReportsToolStripMenuItem
+        '
+        Me.RenewReportsToolStripMenuItem.Name = "RenewReportsToolStripMenuItem"
+        Me.RenewReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.RenewReportsToolStripMenuItem.Text = "Renews Reports"
+        '
+        'ContractsEndReportsToolStripMenuItem
+        '
+        Me.ContractsEndReportsToolStripMenuItem.Name = "ContractsEndReportsToolStripMenuItem"
+        Me.ContractsEndReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.ContractsEndReportsToolStripMenuItem.Text = "Contracts End Reports"
+        '
+        'WithdrawPermissionsReportsToolStripMenuItem
+        '
+        Me.WithdrawPermissionsReportsToolStripMenuItem.Name = "WithdrawPermissionsReportsToolStripMenuItem"
+        Me.WithdrawPermissionsReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.WithdrawPermissionsReportsToolStripMenuItem.Text = "Withdraw Permissions Reports"
+        '
+        'ClientAuthorizationsReportsToolStripMenuItem
+        '
+        Me.ClientAuthorizationsReportsToolStripMenuItem.Name = "ClientAuthorizationsReportsToolStripMenuItem"
+        Me.ClientAuthorizationsReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.ClientAuthorizationsReportsToolStripMenuItem.Text = "Client Authorizations Reports"
         '
         'Frm_Contracts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(720, 547)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(693, 547)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.dgv_contracts)
         Me.Controls.Add(Me.TabControl1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Contracts"
         Me.Text = "Contracts Management"
@@ -251,14 +398,15 @@ Partial Class Frm_Contracts
         Me.tab_filter.ResumeLayout(False)
         Me.tab_filter.PerformLayout()
         CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents tab_datacontrol As TabPage
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents txt_details As TextBox
     Friend WithEvents btn_modcontract As Button
     Friend WithEvents btn_delcontract As Button
     Friend WithEvents btn_newcontract As Button
@@ -270,4 +418,21 @@ Partial Class Frm_Contracts
     Friend WithEvents rdb_byboxid As RadioButton
     Friend WithEvents txt_byboxid As TextBox
     Friend WithEvents dgv_contracts As DataGridView
+    Friend WithEvents Label3 As Label
+    Friend WithEvents btn_keydelivered As Button
+    Friend WithEvents btn_showmissingkeys As Button
+    Friend WithEvents btn_addmissingkeys As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MissingKeysReportsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RenewReportsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContractsEndReportsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WithdrawPermissionsReportsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClientAuthorizationsReportsToolStripMenuItem As ToolStripMenuItem
 End Class

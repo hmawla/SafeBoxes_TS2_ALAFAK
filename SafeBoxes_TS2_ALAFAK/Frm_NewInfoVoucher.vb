@@ -54,18 +54,22 @@
         Frm_main.clientid = 0
         Frm_NewClient.ShowDialog()
         txt_clientid.Text = Frm_main.clientid
+        Frm_main.clientid = -1
     End Sub
 
     Private Sub ContraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContraToolStripMenuItem.Click
         Frm_main.contractid = 0
-        Frm_SelectContract.ShowDialog()
+        MessageBox.Show("Double click on the desired contract to select it!")
+        Frm_Contracts.ShowDialog()
         txt_contractid.Text = Frm_main.contractid
+        Frm_main.contractid = -1
     End Sub
 
     Private Sub NewContractToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewContractToolStripMenuItem.Click
         Frm_main.contractid = 0
         frm_newContract.ShowDialog()
         txt_contractid.Text = Frm_main.contractid
+        Frm_main.contractid = -1
     End Sub
 
     Private Sub txt_contractid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_contractid.KeyPress

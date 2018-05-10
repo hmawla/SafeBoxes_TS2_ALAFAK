@@ -9,6 +9,7 @@ Public Class frm_newContract
     Dim isSubmitting As Boolean = False
     Dim bs As New BindingSource
 
+
     Private Sub SelectAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAccountToolStripMenuItem.Click
         Frm_main.accountid = 0
         Frm_SelectAccountClient.ShowDialog()
