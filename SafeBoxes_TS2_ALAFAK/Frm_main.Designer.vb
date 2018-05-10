@@ -46,6 +46,7 @@ Partial Class Frm_main
         Me.btn_compman = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.btn_infovouchman = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton18 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialRaisedButton19 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'MaterialRaisedButton1
@@ -427,11 +428,28 @@ Partial Class Frm_main
         Me.MaterialRaisedButton18.Text = "Employees Manager"
         Me.MaterialRaisedButton18.UseVisualStyleBackColor = True
         '
+        'MaterialRaisedButton19
+        '
+        Me.MaterialRaisedButton19.AutoSize = True
+        Me.MaterialRaisedButton19.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialRaisedButton19.Depth = 0
+        Me.MaterialRaisedButton19.Icon = Nothing
+        Me.MaterialRaisedButton19.Location = New System.Drawing.Point(342, 294)
+        Me.MaterialRaisedButton19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MaterialRaisedButton19.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton19.Name = "MaterialRaisedButton19"
+        Me.MaterialRaisedButton19.Primary = True
+        Me.MaterialRaisedButton19.Size = New System.Drawing.Size(117, 36)
+        Me.MaterialRaisedButton19.TabIndex = 25
+        Me.MaterialRaisedButton19.Text = "Box Manager"
+        Me.MaterialRaisedButton19.UseVisualStyleBackColor = True
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(679, 412)
+        Me.Controls.Add(Me.MaterialRaisedButton19)
         Me.Controls.Add(Me.MaterialRaisedButton18)
         Me.Controls.Add(Me.btn_infovouchman)
         Me.Controls.Add(Me.btn_compman)
@@ -489,4 +507,5 @@ Partial Class Frm_main
     Friend WithEvents btn_compman As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents btn_infovouchman As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton18 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialRaisedButton19 As MaterialSkin.Controls.MaterialRaisedButton
 End Class
