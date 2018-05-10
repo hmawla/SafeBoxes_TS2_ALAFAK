@@ -62,7 +62,7 @@ Partial Class Frm_NewClient
         Me.txt_fname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_fname.Name = "txt_fname"
         Me.txt_fname.Size = New System.Drawing.Size(148, 26)
-        Me.txt_fname.TabIndex = 25
+        Me.txt_fname.TabIndex = 0
         '
         'btn_submit
         '
@@ -70,7 +70,7 @@ Partial Class Frm_NewClient
         Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_submit.Name = "btn_submit"
         Me.btn_submit.Size = New System.Drawing.Size(112, 35)
-        Me.btn_submit.TabIndex = 26
+        Me.btn_submit.TabIndex = 8
         Me.btn_submit.Text = "Submit"
         Me.btn_submit.UseVisualStyleBackColor = True
         '
@@ -108,7 +108,7 @@ Partial Class Frm_NewClient
         Me.txt_father.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_father.Name = "txt_father"
         Me.txt_father.Size = New System.Drawing.Size(148, 26)
-        Me.txt_father.TabIndex = 33
+        Me.txt_father.TabIndex = 2
         '
         'MaterialLabel7
         '
@@ -130,7 +130,7 @@ Partial Class Frm_NewClient
         Me.txt_lname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_lname.Name = "txt_lname"
         Me.txt_lname.Size = New System.Drawing.Size(148, 26)
-        Me.txt_lname.TabIndex = 34
+        Me.txt_lname.TabIndex = 1
         '
         'txt_mother
         '
@@ -138,7 +138,7 @@ Partial Class Frm_NewClient
         Me.txt_mother.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_mother.Name = "txt_mother"
         Me.txt_mother.Size = New System.Drawing.Size(148, 26)
-        Me.txt_mother.TabIndex = 37
+        Me.txt_mother.TabIndex = 3
         '
         'MaterialLabel1
         '
@@ -163,7 +163,7 @@ Partial Class Frm_NewClient
         Me.dtpick_birth.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.dtpick_birth.Name = "dtpick_birth"
         Me.dtpick_birth.Size = New System.Drawing.Size(148, 26)
-        Me.dtpick_birth.TabIndex = 38
+        Me.dtpick_birth.TabIndex = 4
         '
         'MaterialLabel2
         '
@@ -185,7 +185,7 @@ Partial Class Frm_NewClient
         Me.txt_rnumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_rnumber.Name = "txt_rnumber"
         Me.txt_rnumber.Size = New System.Drawing.Size(148, 26)
-        Me.txt_rnumber.TabIndex = 41
+        Me.txt_rnumber.TabIndex = 6
         '
         'MaterialLabel3
         '
@@ -207,7 +207,7 @@ Partial Class Frm_NewClient
         Me.txt_pbnumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_pbnumber.Name = "txt_pbnumber"
         Me.txt_pbnumber.Size = New System.Drawing.Size(148, 26)
-        Me.txt_pbnumber.TabIndex = 43
+        Me.txt_pbnumber.TabIndex = 7
         '
         'MaterialLabel4
         '
@@ -246,7 +246,7 @@ Partial Class Frm_NewClient
         Me.cbox_regions.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_regions.Name = "cbox_regions"
         Me.cbox_regions.Size = New System.Drawing.Size(148, 28)
-        Me.cbox_regions.TabIndex = 46
+        Me.cbox_regions.TabIndex = 5
         '
         'Frm_NewClient
         '
