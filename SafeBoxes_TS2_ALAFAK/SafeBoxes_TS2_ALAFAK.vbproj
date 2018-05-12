@@ -335,6 +335,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frm_Boxes.resx">
+      <DependentUpon>Frm_Boxes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Clients.resx">
       <DependentUpon>Frm_Clients.vb</DependentUpon>
     </EmbeddedResource>
@@ -343,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Contracts.resx">
       <DependentUpon>Frm_Contracts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Employees.resx">
+      <DependentUpon>Frm_Employees.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_InfoVoucher.resx">
       <DependentUpon>Frm_InfoVoucher.vb</DependentUpon>
