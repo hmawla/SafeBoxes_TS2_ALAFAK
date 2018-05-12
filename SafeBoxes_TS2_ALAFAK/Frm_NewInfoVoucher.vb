@@ -123,4 +123,28 @@
         End If
 
     End Sub
+
+    Private Sub cbox_subjecttitles_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_subjecttitles.KeyPress
+        Only_char(cbox_subjecttitles, e)
+    End Sub
+
+    Private Sub cbox_regions_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_regions.KeyPress
+        Only_char(cbox_regions, e)
+    End Sub
+
+    Private Sub cbox_streets_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_streets.KeyPress
+        Only_char(cbox_streets, e)
+    End Sub
+
+    Private Sub cbox_buildings_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_buildings.KeyPress
+        Only_char(cbox_buildings, e)
+    End Sub
+
+    Private Sub txt_phonenumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_phonenumber.KeyPress
+        Only_Number(txt_phonenumber, e)
+    End Sub
+
+    Private Sub txt_mailpost_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_mailpost.KeyPress
+        Only_Number(txt_mailpost, e)
+    End Sub
 End Class

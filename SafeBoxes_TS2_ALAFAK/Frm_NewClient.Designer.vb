@@ -219,9 +219,9 @@ Partial Class Frm_NewClient
         Me.MaterialLabel4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel4.Name = "MaterialLabel4"
-        Me.MaterialLabel4.Size = New System.Drawing.Size(129, 19)
+        Me.MaterialLabel4.Size = New System.Drawing.Size(130, 19)
         Me.MaterialLabel4.TabIndex = 42
-        Me.MaterialLabel4.Text = "Post Box Number;"
+        Me.MaterialLabel4.Text = "Post Box Number:"
         '
         'MaterialLabel8
         '

@@ -239,7 +239,7 @@ Partial Class Frm_Contracts
         Me.tab_filter.Location = New System.Drawing.Point(4, 29)
         Me.tab_filter.Name = "tab_filter"
         Me.tab_filter.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_filter.Size = New System.Drawing.Size(660, 145)
+        Me.tab_filter.Size = New System.Drawing.Size(660, 141)
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True

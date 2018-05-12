@@ -82,4 +82,8 @@
             Me.Dispose()
         End If
     End Sub
+
+    Private Sub cbox_regions_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_regions.KeyPress
+        Only_char(cbox_regions, e)
+    End Sub
 End Class
