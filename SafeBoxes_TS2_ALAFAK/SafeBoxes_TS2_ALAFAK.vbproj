@@ -347,9 +347,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+=======
+    <EmbeddedResource Include="Frm_Boxes.resx">
+      <DependentUpon>Frm_Boxes.vb</DependentUpon>
+>>>>>>> 221d888497fb03db58575245230c1b77aba4c68c
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Clients.resx">
       <DependentUpon>Frm_Clients.vb</DependentUpon>
@@ -359,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Contracts.resx">
       <DependentUpon>Frm_Contracts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Employees.resx">
+      <DependentUpon>Frm_Employees.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_InfoVoucher.resx">
       <DependentUpon>Frm_InfoVoucher.vb</DependentUpon>
