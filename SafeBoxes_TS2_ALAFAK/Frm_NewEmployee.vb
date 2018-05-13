@@ -20,21 +20,9 @@
     End Sub
 
     Private Sub Frm_NewEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Frm_Employees.EmpId = 0 Then
-            theNewId = genID("Employees", "EmpId")
-            ExecuteQuery("INSERT INTO Employees(EmpId) VALUES(" & theNewId & ")")
-            lbl_Empid.Text = "Employee's ID: " & theNewId
-        Else
-            theNewId = Frm_Employees.EmpId
-            lbl_Empid.Text = "Employee's ID: " & theNewId
-            Dim theContDetails As New DataSet
-            theContDetails = ReadQueryOut("SELECT * FROM Employees WHERE EmpId = " & theNewId)
-            Dim rows As DataRow = theContDetails.Tables(0).Rows(0)
-            txt_fname.Text = rows.Item(1)
-            txt_father.Text = rows.Item(2)
-            txt_lname.Text = rows.Item(3)
-        End If
-
+        theNewId = genID("Employees", "EmpId")
+        ExecuteQuery("INSERT INTO Employees(EmpId) VALUES(" & theNewId & ")")
+        lbl_Empid.Text = "Employee's ID: " & theNewId
     End Sub
 
     Private Sub txt_father_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_father.KeyPress
