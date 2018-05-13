@@ -33,4 +33,17 @@ Public Class Frm_Clients
             btn_modclient.Enabled = False
         End Try
     End Sub
+
+    Private Sub dgv_clients_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_clients.CellDoubleClick
+        If Frm_main.clientid = 0 Then
+            Try
+                If dgv_clients.SelectedRows(0).Cells(0).Value > 0 Then
+                End If
+                Frm_main.clientid = dgv_clients.SelectedRows(0).Cells(0).Value
+                Me.Dispose()
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
 End Class

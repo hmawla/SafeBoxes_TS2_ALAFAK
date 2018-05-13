@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Module OleDb_Tools
     'Declare the connection string to be used later (change this when LDM database is done)
-    Private conString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DATADIRECTORY|OurTables.accdb;"
+    Private ReadOnly conString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DATADIRECTORY|OurTables.accdb;"
 
     'Declare the connection using the connection string
     Private theCon As New OleDbConnection(conString)
@@ -48,7 +48,7 @@ Module OleDb_Tools
     End Sub
 
     'Used to generate a new unique ID for any given table
-    Public Function genID(ByVal theTable As String, ByVal theColumn As String)
+    Public Function GenID(ByVal theTable As String, ByVal theColumn As String)
         dbDataSet = ReadQueryOut("SELECT MAX(" & theColumn & ") FROM " & theTable)
         If Not dbDataSet.Tables(0).Rows(0).Item(0).GetType.ToString().ToLower().Equals("system.dbnull") Then
             Return dbDataSet.Tables(0).Rows(0).Item(0) + 1
@@ -123,18 +123,18 @@ Module OleDb_Tools
                     If Exists(cbox_building.Text, "SELECT BuildingName FROM Buildings b, Streets s WHERE b.StreetId = " & cbox_streets.SelectedValue & " AND RegionId = " & cbox_regions.SelectedValue) Then
                         GoTo End_Of_For
                     Else
-                        theBuildingId = genID("Buildings", "BuildingId")
+                        theBuildingId = GenID("Buildings", "BuildingId")
                         ExecuteQuery("INSERT INTO Buildings VALUES(" & theBuildingId & ", '" & theBuilding & "', " & cbox_streets.SelectedValue & ")")
                         GoTo End_Of_For
                     End If
                 Else
-                    Dim streetId As String = genID("Streets", "StreetId")
+                    Dim streetId As String = GenID("Streets", "StreetId")
                     ExecuteQuery("INSERT INTO Streets VALUES(" & streetId & ", '" & theStreet & "', " & cbox_regions.SelectedValue & ")")
                     FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
                     cbox_streets.SelectedValue = streetId
                 End If
             Else
-                Dim regionId As String = genID("Regions", "RegionId")
+                Dim regionId As String = GenID("Regions", "RegionId")
                 ExecuteQuery("INSERT INTO Regions VALUES(" & regionId & ", '" & cbox_regions.Text & "')")
                 FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
                 cbox_regions.SelectedValue = regionId

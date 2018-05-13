@@ -5,7 +5,7 @@
 
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         If Frm_Clients.clientId = 0 Then
-            theNewId = genID("Clients", "ClientId")
+            theNewId = GenID("Clients", "ClientId")
             ExecuteQuery("INSERT INTO Clients(ClientId) VALUES(" & theNewId & ")")
             lbl_cid.Text = "ClientId ID: " & theNewId
         Else
@@ -35,7 +35,7 @@
             MessageBox.Show("Please fill all needed information!")
         Else
             If Not Exists(cbox_regions.Text, "SELECT RegionName FROM Regions") Then
-                ExecuteQuery("INSERT INTO Regions VALUES(" & genID("Regions", "RegionId") & ", '" & cbox_regions.Text & "')")
+                ExecuteQuery("INSERT INTO Regions VALUES(" & GenID("Regions", "RegionId") & ", '" & cbox_regions.Text & "')")
             End If
             ExecuteQuery("UPDATE Clients SET ClientFName = '" & txt_fname.Text & "', ClientLName = '" & txt_lname.Text & "', ClientMName = '" & txt_father.Text & "', ClientMother = '" & txt_mother.Text & "', ClientDOB = '" & dtpick_birth.Value.ToShortDateString & "', ClientRegisterNbr = " & txt_rnumber.Text & ", PostBoxNbr = " & txt_pbnumber.Text & ", RegionId = " & cbox_regions.SelectedValue & " WHERE ClientId = " & theNewId)
             Frm_main.clientid = theNewId

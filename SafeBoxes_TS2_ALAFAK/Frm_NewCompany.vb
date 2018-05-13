@@ -5,7 +5,7 @@
     Private Sub Frm_NewCompany_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillCBox(cbox_comptypes, "SELECT CompTypeId, CompType FROM CompType", "CompTypeId", "CompType")
         If Frm_Companies.companyId = 0 Then
-            theNewId = genID("Company", "CompId")
+            theNewId = GenID("Company", "CompId")
             ExecuteQuery("INSERT INTO Company(CompId) VALUES(" & theNewId & ")")
             lbl_compid.Text = "Company ID: " & theNewId
         Else

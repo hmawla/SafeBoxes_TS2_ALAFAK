@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frm_newContract
+Partial Class Frm_newContract
     Inherits Form
 
     'Form overrides dispose to clean up the component list.

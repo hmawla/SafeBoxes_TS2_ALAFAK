@@ -1,8 +1,9 @@
 ﻿Public Class Frm_main
-    Public accountid As String
-    Public clientid As String
-    Public contractid As String
-    Public employeeid As String
+    Public accountid As Integer
+    Public clientid As Integer
+    Public contractid As Integer
+    Public employeeid As Integer
+    Public loggedEmpId As Integer
 
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
         InitCon()
@@ -15,7 +16,7 @@
     End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
-        frm_newContract.Show()
+        Frm_newContract.Show()
 
     End Sub
 

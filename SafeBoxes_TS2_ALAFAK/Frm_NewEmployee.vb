@@ -1,7 +1,7 @@
 ﻿Public Class Frm_NewEmployee
     Dim theNewId As Integer
     Dim isSubmitting As Boolean = False
-    Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
+    Private Sub Btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
         isSubmitting = True
         If txt_fname.Text = "" Or txt_lname.Text = "" Or txt_father.Text = "" Then
             MessageBox.Show("Please fill all needed information!")
@@ -21,7 +21,7 @@
 
     Private Sub Frm_NewEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Frm_Employees.EmpId = 0 Then
-            theNewId = genID("Employees", "EmpId")
+            theNewId = GenID("Employees", "EmpId")
             ExecuteQuery("INSERT INTO Employees(EmpId) VALUES(" & theNewId & ")")
             lbl_Empid.Text = "Employee's ID: " & theNewId
         Else
@@ -37,15 +37,15 @@
 
     End Sub
 
-    Private Sub txt_father_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_father.KeyPress
+    Private Sub Txt_father_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_father.KeyPress
         Only_char(txt_father, e)
     End Sub
 
-    Private Sub txt_fname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_fname.KeyPress
+    Private Sub Txt_fname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_fname.KeyPress
         Only_char(txt_fname, e)
     End Sub
 
-    Private Sub txt_lname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_lname.KeyPress
+    Private Sub Txt_lname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_lname.KeyPress
         Only_char(txt_lname, e)
     End Sub
 End Class

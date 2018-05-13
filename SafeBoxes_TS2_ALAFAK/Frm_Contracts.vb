@@ -11,26 +11,26 @@
     Public contractId As Integer
 
     Private Sub Frm_Contracts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId")
+        FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
     End Sub
 
     Private Sub btn_newcontract_Click(sender As Object, e As EventArgs) Handles btn_newcontract.Click
         contractId = 0
-        frm_newContract.ShowDialog()
-        FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId")
+        Frm_newContract.ShowDialog()
+        FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
     End Sub
 
     Private Sub btn_modcontract_Click(sender As Object, e As EventArgs) Handles btn_modcontract.Click
         contractId = dgv_contracts.SelectedRows(0).Cells(0).Value
-        frm_newContract.ShowDialog()
-        FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId")
+        Frm_newContract.ShowDialog()
+        FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
     End Sub
 
     Private Sub btn_delcontract_Click(sender As Object, e As EventArgs) Handles btn_delcontract.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value, "Delete Contract", MessageBoxButtons.YesNo)
         If result = DialogResult.Yes Then
             ExecuteQuery("DELETE FROM Contract WHERE ContId = " & dgv_contracts.SelectedRows(0).Cells(0).Value)
-            FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId")
+            FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
         End If
 
     End Sub
@@ -41,10 +41,18 @@
             End If
             btn_delcontract.Enabled = True
             btn_modcontract.Enabled = True
+            btn_renew.Enabled = True
+            btn_end.Enabled = True
+            btn_withdraw.Enabled = True
+            btn_authorize.Enabled = true
             btn_addmissingkeys.Enabled = True
         Catch ex As Exception
             btn_delcontract.Enabled = False
             btn_modcontract.Enabled = False
+            btn_renew.Enabled = False
+            btn_end.Enabled = False
+            btn_withdraw.Enabled = False
+            btn_authorize.Enabled = False
             btn_addmissingkeys.Enabled = False
         End Try
     End Sub
@@ -53,7 +61,7 @@
         If Not Exists(dgv_contracts.SelectedRows(0).Cells(0).Value, "SELECT ContId FROM MissingKeys WHERE RedeliverDate IS NULL AND ContId = " & dgv_contracts.SelectedRows(0).Cells(0).Value) Then
             Dim result As DialogResult = MessageBox.Show("Are you sure you want to submit missing keys to contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value, "Submit Missing Keys", MessageBoxButtons.YesNo)
             If result = DialogResult.Yes Then
-                Dim theNewId As Integer = genID("MissingKeys", "MissKeyId")
+                Dim theNewId As Integer = GenID("MissingKeys", "MissKeyId")
                 ExecuteQuery("INSERT INTO MissingKeys(MissKeyId, MissKeyDate, ContId) VALUES(" & theNewId & ", date(), " & dgv_contracts.SelectedRows(0).Cells(0).Value & ")")
             End If
         Else
@@ -64,11 +72,18 @@
 
     Private Sub btn_showmissingkeys_Click(sender As Object, e As EventArgs) Handles btn_showmissingkeys.Click
         If Not btn_showmissingkeys.Text.Equals("Reset") Then
-            FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId IN (SELECT ContId FROM MissingKeys WHERE RedeliverDate IS NULL)")
+            FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId IN (SELECT ContId FROM MissingKeys WHERE RedeliverDate IS NULL) AND ContId NOT IN (SELECT ContId FROM ContEnd)")
             btn_showmissingkeys.Text = "Reset"
-            btn_keydelivered.Enabled = True
+            Try
+                If dgv_contracts.SelectedRows(0).Cells(0).Value > 0 Then
+                End If
+                btn_keydelivered.Enabled = True
+            Catch ex As Exception
+
+            End Try
+
         Else
-            FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId")
+            FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
             btn_showmissingkeys.Text = "ShowMissing"
             btn_keydelivered.Enabled = False
         End If
@@ -110,5 +125,22 @@
 
     Private Sub RenewReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenewReportsToolStripMenuItem.Click
         Frm_Report_RenewContract.ShowDialog()
+    End Sub
+
+    Private Sub btn_renew_Click(sender As Object, e As EventArgs) Handles btn_renew.Click
+        Frm_main.contractid = dgv_contracts.SelectedRows(0).Cells(0).Value
+        Frm_RenewContract.ShowDialog()
+        FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
+    End Sub
+
+    Private Sub btn_end_Click(sender As Object, e As EventArgs) Handles btn_end.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to end contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value, "End Contract", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            Dim theNewId As Integer = GenID("ContEnd", "ContEndId")
+            ExecuteQuery("INSERT INTO ContEnd VALUES(" & theNewId & ", date(), " & dgv_contracts.SelectedRows(0).Cells(0).Value & ")")
+            MessageBox.Show("Contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value & " is now ended and cannot be reused!")
+            FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
+        End If
+
     End Sub
 End Class

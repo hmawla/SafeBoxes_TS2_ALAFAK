@@ -10,7 +10,7 @@
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
         FillCheckList(chklist_exceptdays, "SELECT * FROM Days", "DayId", "DayName")
         If Frm_InfoVoucher.infovouchId = 0 Then
-            theNewId = genID("InfoVoucher", "InfoVouchId")
+            theNewId = GenID("InfoVoucher", "InfoVouchId")
             ExecuteQuery("INSERT INTO InfoVoucher(InfoVouchId) VALUES(" & theNewId & ")")
         Else
             theNewId = Frm_InfoVoucher.infovouchId
@@ -94,7 +94,7 @@
 
     Private Sub NewContractToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewContractToolStripMenuItem.Click
         Frm_main.contractid = 0
-        frm_newContract.ShowDialog()
+        Frm_newContract.ShowDialog()
         txt_contractid.Text = Frm_main.contractid
         Frm_main.contractid = -1
     End Sub

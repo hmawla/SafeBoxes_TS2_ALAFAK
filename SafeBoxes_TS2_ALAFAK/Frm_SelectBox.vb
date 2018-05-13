@@ -15,7 +15,7 @@ Public Class Frm_SelectBox
     End Sub
 
     Private Sub btn_select_Click(sender As Object, e As EventArgs) Handles btn_select.Click
-        frm_newContract.txt_boxes.Text = dgv_boxes.SelectedRows.Item(0).Cells.Item(0).Value 'submit the selected record
+        Frm_newContract.txt_boxes.Text = dgv_boxes.SelectedRows.Item(0).Cells.Item(0).Value 'submit the selected record
         Me.Close()
     End Sub
 
@@ -30,7 +30,7 @@ Public Class Frm_SelectBox
     End Sub
 
     Private Sub btn_addbox_Click(sender As Object, e As EventArgs) Handles btn_addbox.Click
-        ExecuteQuery("INSERT INTO Boxes VALUES(" & genID("Boxes", "BoxId") & ", " & cbox_addsize.SelectedValue & ")")
+        ExecuteQuery("INSERT INTO Boxes VALUES(" & GenID("Boxes", "BoxId") & ", " & cbox_addsize.SelectedValue & ")")
         FillDGV(dgv_boxes, "SELECT BoxId, Length, Width, Height, InsurancePrice, RentPrice FROM Boxes b, BoxSizes bs, BoxSizesDate bsd WHERE b.SizeId = bs.SizeId AND bs.SizeId = bsd.SizeId AND BoxId NOT IN (SELECT BoxId FROM Contract)") 'Fill the data grid view with all data
     End Sub
 End Class

@@ -272,7 +272,7 @@ Partial Class Frm_Contracts
         Me.rdb_byaccountid.AutoSize = True
         Me.rdb_byaccountid.Location = New System.Drawing.Point(6, 72)
         Me.rdb_byaccountid.Name = "rdb_byaccountid"
-        Me.rdb_byaccountid.Size = New System.Drawing.Size(129, 24)
+        Me.rdb_byaccountid.Size = New System.Drawing.Size(125, 24)
         Me.rdb_byaccountid.TabIndex = 11
         Me.rdb_byaccountid.Text = "By Account ID"
         Me.rdb_byaccountid.UseVisualStyleBackColor = True
@@ -285,7 +285,7 @@ Partial Class Frm_Contracts
         Me.txt_byaccid.Location = New System.Drawing.Point(6, 104)
         Me.txt_byaccid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byaccid.Name = "txt_byaccid"
-        Me.txt_byaccid.Size = New System.Drawing.Size(451, 26)
+        Me.txt_byaccid.Size = New System.Drawing.Size(451, 27)
         Me.txt_byaccid.TabIndex = 10
         '
         'rdb_byboxid
@@ -302,7 +302,7 @@ Partial Class Frm_Contracts
         Me.txt_byboxid.Location = New System.Drawing.Point(6, 38)
         Me.txt_byboxid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byboxid.Name = "txt_byboxid"
-        Me.txt_byboxid.Size = New System.Drawing.Size(236, 26)
+        Me.txt_byboxid.Size = New System.Drawing.Size(236, 27)
         Me.txt_byboxid.TabIndex = 8
         '
         'dgv_contracts
@@ -387,7 +387,7 @@ Partial Class Frm_Contracts
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.dgv_contracts)
         Me.Controls.Add(Me.TabControl1)
-        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Contracts"
