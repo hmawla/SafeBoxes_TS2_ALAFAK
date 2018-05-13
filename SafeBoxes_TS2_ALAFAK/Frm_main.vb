@@ -62,4 +62,12 @@
     Private Sub MaterialRaisedButton19_Click(sender As Object, e As EventArgs) Handles btn_infovouchman.Click
         Frm_InfoVoucher.Show()
     End Sub
+
+    Private Sub MaterialRaisedButton19_Click_1(sender As Object, e As EventArgs) Handles MaterialRaisedButton19.Click
+        Frm_Boxes.Show()
+    End Sub
+
+    Private Sub MaterialRaisedButton18_Click_2(sender As Object, e As EventArgs) Handles MaterialRaisedButton18.Click
+        Frm_Employees.Show()
+    End Sub
 End Class
