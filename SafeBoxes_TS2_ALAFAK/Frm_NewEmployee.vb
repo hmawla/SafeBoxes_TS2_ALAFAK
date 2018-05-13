@@ -7,7 +7,7 @@
             MessageBox.Show("Please fill all needed information!")
         Else
             ExecuteQuery("UPDATE Employees SET EmpFName = '" & txt_fname.Text & "', EmpLName = '" & txt_lname.Text & "', EmpMName = '" & txt_fname.Text & "' WHERE EmpId = " & theNewId)
-            Frm_main.clientid = theNewId
+            Frm_main.employeeid = theNewId
             Me.Dispose()
         End If
     End Sub
