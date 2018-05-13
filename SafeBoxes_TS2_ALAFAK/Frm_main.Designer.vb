@@ -47,6 +47,7 @@ Partial Class Frm_main
         Me.btn_infovouchman = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton18 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton19 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.SuspendLayout()
         '
         'MaterialRaisedButton1
@@ -444,11 +445,22 @@ Partial Class Frm_main
         Me.MaterialRaisedButton19.Text = "Box Manager"
         Me.MaterialRaisedButton19.UseVisualStyleBackColor = True
         '
+        'CrystalReportViewer1
+        '
+        Me.CrystalReportViewer1.ActiveViewIndex = -1
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(651, 14)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(559, 386)
+        Me.CrystalReportViewer1.TabIndex = 26
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(679, 412)
+        Me.ClientSize = New System.Drawing.Size(1222, 412)
+        Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.MaterialRaisedButton19)
         Me.Controls.Add(Me.MaterialRaisedButton18)
         Me.Controls.Add(Me.btn_infovouchman)
@@ -508,4 +520,5 @@ Partial Class Frm_main
     Friend WithEvents btn_infovouchman As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton18 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton19 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class
