@@ -46,7 +46,6 @@ Partial Class Frm_Clients
         '
         'tab_filter
         '
-<<<<<<< HEAD
         Me.dgv_clients.AllowUserToAddRows = False
         Me.dgv_clients.AllowUserToDeleteRows = False
         Me.dgv_clients.AllowUserToResizeRows = False
@@ -71,7 +70,6 @@ Partial Class Frm_Clients
         Me.dgv_clients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_clients.Size = New System.Drawing.Size(699, 385)
         Me.dgv_clients.TabIndex = 10
-=======
         Me.tab_filter.Controls.Add(Me.btn_reset)
         Me.tab_filter.Controls.Add(Me.btn_search)
         Me.tab_filter.Controls.Add(Me.rdb_byClientName)
@@ -85,7 +83,6 @@ Partial Class Frm_Clients
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
->>>>>>> 221d888497fb03db58575245230c1b77aba4c68c
         '
         'txt_bycid
         '
@@ -108,7 +105,6 @@ Partial Class Frm_Clients
         '
         Me.txt_bycname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-<<<<<<< HEAD
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
         Me.TabControl1.Location = New System.Drawing.Point(20, 20)
@@ -117,7 +113,6 @@ Partial Class Frm_Clients
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(699, 184)
         Me.TabControl1.TabIndex = 9
-=======
         Me.txt_bycname.Enabled = False
         Me.txt_bycname.Location = New System.Drawing.Point(6, 104)
         Me.txt_bycname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -157,7 +152,6 @@ Partial Class Frm_Clients
         Me.btn_reset.TabIndex = 12
         Me.btn_reset.Text = "X"
         Me.btn_reset.UseVisualStyleBackColor = True
->>>>>>> 221d888497fb03db58575245230c1b77aba4c68c
         '
         'tab_datacontrol
         '
@@ -176,7 +170,6 @@ Partial Class Frm_Clients
         Me.tab_datacontrol.Text = "Data Control"
         Me.tab_datacontrol.UseVisualStyleBackColor = True
         '
-<<<<<<< HEAD
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -220,7 +213,6 @@ Partial Class Frm_Clients
         Me.btn_modclient.TabIndex = 2
         Me.btn_modclient.Text = "Modify Selected"
         Me.btn_modclient.UseVisualStyleBackColor = True
-=======
         'btn_newclient
         '
         Me.btn_newclient.Location = New System.Drawing.Point(6, 40)
@@ -229,7 +221,6 @@ Partial Class Frm_Clients
         Me.btn_newclient.TabIndex = 0
         Me.btn_newclient.Text = "Add new"
         Me.btn_newclient.UseVisualStyleBackColor = True
->>>>>>> 221d888497fb03db58575245230c1b77aba4c68c
         '
         'btn_delclient
         '
@@ -241,7 +232,6 @@ Partial Class Frm_Clients
         Me.btn_delclient.Text = "Delete Selected"
         Me.btn_delclient.UseVisualStyleBackColor = True
         '
-<<<<<<< HEAD
         'btn_newclient
         '
         Me.btn_newclient.Location = New System.Drawing.Point(7, 30)
@@ -268,7 +258,6 @@ Partial Class Frm_Clients
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
-=======
         'btn_modclient
         '
         Me.btn_modclient.Location = New System.Drawing.Point(6, 75)
@@ -277,11 +266,9 @@ Partial Class Frm_Clients
         Me.btn_modclient.TabIndex = 2
         Me.btn_modclient.Text = "Modify Selected"
         Me.btn_modclient.UseVisualStyleBackColor = True
->>>>>>> 221d888497fb03db58575245230c1b77aba4c68c
         '
         'txt_details
         '
-<<<<<<< HEAD
         Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_reset.Enabled = False
         Me.btn_reset.Location = New System.Drawing.Point(984, 154)
@@ -291,7 +278,6 @@ Partial Class Frm_Clients
         Me.btn_reset.TabIndex = 12
         Me.btn_reset.Text = "X"
         Me.btn_reset.UseVisualStyleBackColor = True
-=======
         Me.txt_details.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_details.Location = New System.Drawing.Point(163, 40)
@@ -300,11 +286,9 @@ Partial Class Frm_Clients
         Me.txt_details.ReadOnly = True
         Me.txt_details.Size = New System.Drawing.Size(518, 99)
         Me.txt_details.TabIndex = 3
->>>>>>> 221d888497fb03db58575245230c1b77aba4c68c
         '
         'Label1
         '
-<<<<<<< HEAD
         Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_search.Location = New System.Drawing.Point(867, 154)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
@@ -313,7 +297,6 @@ Partial Class Frm_Clients
         Me.btn_search.TabIndex = 9
         Me.btn_search.Text = "Filter"
         Me.btn_search.UseVisualStyleBackColor = True
-=======
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 17)
@@ -321,11 +304,9 @@ Partial Class Frm_Clients
         Me.Label1.Size = New System.Drawing.Size(67, 20)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Control"
->>>>>>> 221d888497fb03db58575245230c1b77aba4c68c
         '
         'Label2
         '
-<<<<<<< HEAD
         Me.rdb_byClientName.AutoSize = True
         Me.rdb_byClientName.Location = New System.Drawing.Point(9, 111)
         Me.rdb_byClientName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -334,7 +315,6 @@ Partial Class Frm_Clients
         Me.rdb_byClientName.TabIndex = 11
         Me.rdb_byClientName.Text = "By Client Name"
         Me.rdb_byClientName.UseVisualStyleBackColor = True
-=======
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(159, 17)
@@ -342,13 +322,11 @@ Partial Class Frm_Clients
         Me.Label2.Size = New System.Drawing.Size(141, 20)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Selected Details"
->>>>>>> 221d888497fb03db58575245230c1b77aba4c68c
         '
         'TabControl1
         '
         Me.TabControl1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-<<<<<<< HEAD
         Me.txt_bycname.Enabled = False
         Me.txt_bycname.Location = New System.Drawing.Point(9, 160)
         Me.txt_bycname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
@@ -364,7 +342,6 @@ Partial Class Frm_Clients
         Me.rdb_byClientid.Size = New System.Drawing.Size(156, 37)
         Me.rdb_byClientid.TabIndex = 13
         Me.rdb_byClientid.Text = "By Client ID"
-=======
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
         Me.TabControl1.Location = New System.Drawing.Point(13, 13)
@@ -372,18 +349,15 @@ Partial Class Frm_Clients
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(695, 178)
         Me.TabControl1.TabIndex = 9
->>>>>>> 221d888497fb03db58575245230c1b77aba4c68c
         '
         'dgv_clients
         '
-<<<<<<< HEAD
         Me.txt_bycid.Enabled = False
         Me.txt_bycid.Location = New System.Drawing.Point(9, 58)
         Me.txt_bycid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_bycid.Name = "txt_bycid"
         Me.txt_bycid.Size = New System.Drawing.Size(352, 26)
         Me.txt_bycid.TabIndex = 8
-=======
         Me.dgv_clients.AllowUserToAddRows = False
         Me.dgv_clients.AllowUserToDeleteRows = False
         Me.dgv_clients.AllowUserToResizeRows = False
@@ -408,7 +382,6 @@ Partial Class Frm_Clients
         Me.dgv_clients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_clients.Size = New System.Drawing.Size(695, 339)
         Me.dgv_clients.TabIndex = 10
->>>>>>> 221d888497fb03db58575245230c1b77aba4c68c
         '
         'Frm_Clients
         '
