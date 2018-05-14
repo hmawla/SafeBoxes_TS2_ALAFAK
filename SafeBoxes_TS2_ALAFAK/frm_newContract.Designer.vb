@@ -50,12 +50,12 @@ Partial Class Frm_newContract
         Me.SelectBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
         Me.lbl_empid = New MaterialSkin.Controls.MaterialLabel()
+        Me.EmployeeMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_regions = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_streets = New System.Windows.Forms.ComboBox()
-        Me.EmployeeMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AccountsMenuStrip.SuspendLayout()
         Me.BoxesMenuStrip.SuspendLayout()
@@ -89,7 +89,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
-        Me.MaterialLabel1.Size = New System.Drawing.Size(94, 19)
+        Me.MaterialLabel1.Size = New System.Drawing.Size(93, 18)
         Me.MaterialLabel1.TabIndex = 21
         Me.MaterialLabel1.Text = "Expiry Date:*"
         '
@@ -103,7 +103,7 @@ Partial Class Frm_newContract
         Me.lbl_contractid.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_contractid.MouseState = MaterialSkin.MouseState.HOVER
         Me.lbl_contractid.Name = "lbl_contractid"
-        Me.lbl_contractid.Size = New System.Drawing.Size(153, 19)
+        Me.lbl_contractid.Size = New System.Drawing.Size(152, 18)
         Me.lbl_contractid.TabIndex = 23
         Me.lbl_contractid.Text = "Contract ID: <ContId>"
         '
@@ -140,7 +140,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
-        Me.MaterialLabel3.Size = New System.Drawing.Size(59, 19)
+        Me.MaterialLabel3.Size = New System.Drawing.Size(58, 18)
         Me.MaterialLabel3.TabIndex = 26
         Me.MaterialLabel3.Text = "Street*:"
         '
@@ -164,7 +164,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel4.Name = "MaterialLabel4"
-        Me.MaterialLabel4.Size = New System.Drawing.Size(54, 19)
+        Me.MaterialLabel4.Size = New System.Drawing.Size(53, 18)
         Me.MaterialLabel4.TabIndex = 28
         Me.MaterialLabel4.Text = "Floor:*"
         '
@@ -178,7 +178,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel5.Name = "MaterialLabel5"
-        Me.MaterialLabel5.Size = New System.Drawing.Size(130, 19)
+        Me.MaterialLabel5.Size = New System.Drawing.Size(129, 18)
         Me.MaterialLabel5.TabIndex = 29
         Me.MaterialLabel5.Text = "Phone Number 1:*"
         '
@@ -192,7 +192,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel6.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel6.Name = "MaterialLabel6"
-        Me.MaterialLabel6.Size = New System.Drawing.Size(124, 19)
+        Me.MaterialLabel6.Size = New System.Drawing.Size(123, 18)
         Me.MaterialLabel6.TabIndex = 31
         Me.MaterialLabel6.Text = "Phone Number 2:"
         '
@@ -214,7 +214,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel7.Name = "MaterialLabel7"
-        Me.MaterialLabel7.Size = New System.Drawing.Size(93, 19)
+        Me.MaterialLabel7.Size = New System.Drawing.Size(92, 18)
         Me.MaterialLabel7.TabIndex = 32
         Me.MaterialLabel7.Text = "Account ID:*"
         '
@@ -256,7 +256,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel8.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel8.Name = "MaterialLabel8"
-        Me.MaterialLabel8.Size = New System.Drawing.Size(82, 19)
+        Me.MaterialLabel8.Size = New System.Drawing.Size(81, 18)
         Me.MaterialLabel8.TabIndex = 35
         Me.MaterialLabel8.Text = "Client Info:"
         '
@@ -285,7 +285,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel9.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel9.Name = "MaterialLabel9"
-        Me.MaterialLabel9.Size = New System.Drawing.Size(46, 19)
+        Me.MaterialLabel9.Size = New System.Drawing.Size(45, 18)
         Me.MaterialLabel9.TabIndex = 38
         Me.MaterialLabel9.Text = "Note:"
         '
@@ -340,7 +340,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel10.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel10.Name = "MaterialLabel10"
-        Me.MaterialLabel10.Size = New System.Drawing.Size(62, 19)
+        Me.MaterialLabel10.Size = New System.Drawing.Size(61, 18)
         Me.MaterialLabel10.TabIndex = 40
         Me.MaterialLabel10.Text = "Box ID:*"
         '
@@ -355,9 +355,21 @@ Partial Class Frm_newContract
         Me.lbl_empid.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_empid.MouseState = MaterialSkin.MouseState.HOVER
         Me.lbl_empid.Name = "lbl_empid"
-        Me.lbl_empid.Size = New System.Drawing.Size(159, 19)
+        Me.lbl_empid.Size = New System.Drawing.Size(158, 18)
         Me.lbl_empid.TabIndex = 43
         Me.lbl_empid.Text = "Employee ID: <EmpId>"
+        '
+        'EmployeeMenuStrip
+        '
+        Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
+        Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
+        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 48)
+        '
+        'SelectDifferentEmployeeToolStripMenuItem
+        '
+        Me.SelectDifferentEmployeeToolStripMenuItem.Name = "SelectDifferentEmployeeToolStripMenuItem"
+        Me.SelectDifferentEmployeeToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.SelectDifferentEmployeeToolStripMenuItem.Text = "Select Different Employee"
         '
         'MaterialLabel2
         '
@@ -369,7 +381,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel2.Name = "MaterialLabel2"
-        Me.MaterialLabel2.Size = New System.Drawing.Size(65, 19)
+        Me.MaterialLabel2.Size = New System.Drawing.Size(64, 18)
         Me.MaterialLabel2.TabIndex = 45
         Me.MaterialLabel2.Text = "Region*:"
         '
@@ -394,7 +406,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel12.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel12.Name = "MaterialLabel12"
-        Me.MaterialLabel12.Size = New System.Drawing.Size(72, 19)
+        Me.MaterialLabel12.Size = New System.Drawing.Size(71, 18)
         Me.MaterialLabel12.TabIndex = 47
         Me.MaterialLabel12.Text = "Building:*"
         '
@@ -409,19 +421,7 @@ Partial Class Frm_newContract
         Me.cbox_streets.Size = New System.Drawing.Size(148, 28)
         Me.cbox_streets.TabIndex = 5
         '
-        'EmployeeMenuStrip
-        '
-        Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
-        Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
-        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 26)
-        '
-        'SelectDifferentEmployeeToolStripMenuItem
-        '
-        Me.SelectDifferentEmployeeToolStripMenuItem.Name = "SelectDifferentEmployeeToolStripMenuItem"
-        Me.SelectDifferentEmployeeToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.SelectDifferentEmployeeToolStripMenuItem.Text = "Select Different Employee"
-        '
-        'frm_newContract
+        'Frm_newContract
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -457,7 +457,7 @@ Partial Class Frm_newContract
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
-        Me.Name = "frm_newContract"
+        Me.Name = "Frm_newContract"
         Me.Text = "New Contract"
         CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AccountsMenuStrip.ResumeLayout(False)

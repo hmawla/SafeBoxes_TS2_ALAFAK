@@ -100,10 +100,10 @@ Partial Class Frm_Contracts
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(473, 3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(105, 20)
+        Me.Label2.Size = New System.Drawing.Size(98, 19)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Permissions"
         '
@@ -137,10 +137,10 @@ Partial Class Frm_Contracts
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.Location = New System.Drawing.Point(316, 3)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(156, 20)
+        Me.Label4.Size = New System.Drawing.Size(141, 19)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Manage Contracts"
         '
@@ -156,10 +156,10 @@ Partial Class Frm_Contracts
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(159, 3)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(116, 20)
+        Me.Label3.Size = New System.Drawing.Size(107, 19)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Manage Keys"
         '
@@ -194,10 +194,10 @@ Partial Class Frm_Contracts
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(6, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 20)
+        Me.Label1.Size = New System.Drawing.Size(61, 19)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Control"
         '
@@ -246,9 +246,9 @@ Partial Class Frm_Contracts
         '
         'btn_reset
         '
-        Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_reset.Enabled = False
-        Me.btn_reset.Location = New System.Drawing.Point(871, 100)
+        Me.btn_reset.Location = New System.Drawing.Point(629, 100)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(24, 35)
@@ -258,8 +258,8 @@ Partial Class Frm_Contracts
         '
         'btn_search
         '
-        Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_search.Location = New System.Drawing.Point(793, 100)
+        Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_search.Location = New System.Drawing.Point(551, 98)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(70, 35)
@@ -270,7 +270,7 @@ Partial Class Frm_Contracts
         'rdb_byaccountid
         '
         Me.rdb_byaccountid.AutoSize = True
-        Me.rdb_byaccountid.Location = New System.Drawing.Point(6, 72)
+        Me.rdb_byaccountid.Location = New System.Drawing.Point(6, 43)
         Me.rdb_byaccountid.Name = "rdb_byaccountid"
         Me.rdb_byaccountid.Size = New System.Drawing.Size(125, 24)
         Me.rdb_byaccountid.TabIndex = 11
@@ -282,10 +282,10 @@ Partial Class Frm_Contracts
         Me.txt_byaccid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_byaccid.Enabled = False
-        Me.txt_byaccid.Location = New System.Drawing.Point(6, 104)
+        Me.txt_byaccid.Location = New System.Drawing.Point(138, 42)
         Me.txt_byaccid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byaccid.Name = "txt_byaccid"
-        Me.txt_byaccid.Size = New System.Drawing.Size(451, 27)
+        Me.txt_byaccid.Size = New System.Drawing.Size(215, 27)
         Me.txt_byaccid.TabIndex = 10
         '
         'rdb_byboxid
@@ -299,10 +299,10 @@ Partial Class Frm_Contracts
         'txt_byboxid
         '
         Me.txt_byboxid.Enabled = False
-        Me.txt_byboxid.Location = New System.Drawing.Point(6, 38)
+        Me.txt_byboxid.Location = New System.Drawing.Point(138, 5)
         Me.txt_byboxid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byboxid.Name = "txt_byboxid"
-        Me.txt_byboxid.Size = New System.Drawing.Size(236, 27)
+        Me.txt_byboxid.Size = New System.Drawing.Size(215, 27)
         Me.txt_byboxid.TabIndex = 8
         '
         'dgv_contracts

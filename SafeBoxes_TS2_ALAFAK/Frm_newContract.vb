@@ -123,4 +123,11 @@ Public Class Frm_newContract
     Private Sub Txt_boxes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_boxes.KeyPress
         Only_Number(txt_boxes, e)
     End Sub
+
+    Private Sub SelectDifferentEmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectDifferentEmployeeToolStripMenuItem.Click
+        Frm_main.employeeid = 0
+        Frm_Employees.ShowDialog()
+        EmpId = Frm_main.employeeid
+        lbl_empid.Text = "Employee ID: " & EmpId
+    End Sub
 End Class

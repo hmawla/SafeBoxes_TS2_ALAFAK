@@ -7,11 +7,6 @@
 
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
         InitCon()
-        Dim cr As New CrystalReport1
-        Dim ds As New DataSet
-        ds = ReadQueryOut("SELECT * FROM Buildings WHERE BuildingName = 'Main'")
-        cr.Database.Tables(0).SetDataSource(ds.Tables(0))
-        CrystalReportViewer1.ReportSource = cr
 
     End Sub
 
