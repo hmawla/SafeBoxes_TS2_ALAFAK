@@ -80,4 +80,9 @@ the_End:
         EmpId = Frm_main.employeeid
         Lbl_EmpId.Text = "Employee ID: " & EmpId
     End Sub
+
+    Private Sub Txt_ClientId_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_ClientId.KeyPress
+        Only_Number(Txt_ClientId, e)
+    End Sub
+
 End Class

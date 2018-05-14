@@ -132,6 +132,7 @@ Partial Class Frm_Boxes
         '
         'btn_modbox
         '
+        Me.btn_modbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.btn_modbox.Location = New System.Drawing.Point(6, 75)
         Me.btn_modbox.Name = "btn_modbox"
         Me.btn_modbox.Size = New System.Drawing.Size(151, 29)
@@ -141,6 +142,7 @@ Partial Class Frm_Boxes
         '
         'btn_delbox
         '
+        Me.btn_delbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.btn_delbox.Location = New System.Drawing.Point(6, 110)
         Me.btn_delbox.Name = "btn_delbox"
         Me.btn_delbox.Size = New System.Drawing.Size(151, 29)
@@ -150,6 +152,7 @@ Partial Class Frm_Boxes
         '
         'btn_newbox
         '
+        Me.btn_newbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.btn_newbox.Location = New System.Drawing.Point(6, 40)
         Me.btn_newbox.Name = "btn_newbox"
         Me.btn_newbox.Size = New System.Drawing.Size(151, 29)

@@ -7,13 +7,13 @@
 
     Private Sub btn_newbox_Click(sender As Object, e As EventArgs) Handles btn_newbox.Click
         BoxId = 0
-        ' Frm_NewBox.ShowDialog()
+        Frm_SelectBox.ShowDialog()
         FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b,BoxSizes bs WHERE b.SizeId=bs.SizeId")
     End Sub
 
     Private Sub btn_modbox_Click(sender As Object, e As EventArgs) Handles btn_modbox.Click
         BoxId = dgv_boxes.SelectedRows(0).Cells(0).Value
-        ' Frm_NewBox.ShowDialog()
+        Frm_SelectBox.ShowDialog()
         FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b,BoxSizes bs WHERE b.SizeId=bs.SizeId")
     End Sub
 

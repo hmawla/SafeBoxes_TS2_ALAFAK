@@ -123,4 +123,12 @@ Public Class Frm_newContract
     Private Sub Txt_boxes_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_boxes.KeyPress
         Only_Number(txt_boxes, e)
     End Sub
+
+    Private Sub txt_phone2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_phone2.KeyPress
+        Only_Number(txt_phone2, e)
+    End Sub
+
+    Private Sub txt_phone1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_phone1.KeyPress
+        Only_Number(txt_phone1, e)
+    End Sub
 End Class

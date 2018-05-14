@@ -50,12 +50,12 @@ Partial Class Frm_newContract
         Me.SelectBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
         Me.lbl_empid = New MaterialSkin.Controls.MaterialLabel()
+        Me.EmployeeMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_regions = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_streets = New System.Windows.Forms.ComboBox()
-        Me.EmployeeMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AccountsMenuStrip.SuspendLayout()
         Me.BoxesMenuStrip.SuspendLayout()
@@ -359,6 +359,18 @@ Partial Class Frm_newContract
         Me.lbl_empid.TabIndex = 43
         Me.lbl_empid.Text = "Employee ID: <EmpId>"
         '
+        'EmployeeMenuStrip
+        '
+        Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
+        Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
+        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 26)
+        '
+        'SelectDifferentEmployeeToolStripMenuItem
+        '
+        Me.SelectDifferentEmployeeToolStripMenuItem.Name = "SelectDifferentEmployeeToolStripMenuItem"
+        Me.SelectDifferentEmployeeToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.SelectDifferentEmployeeToolStripMenuItem.Text = "Select Different Employee"
+        '
         'MaterialLabel2
         '
         Me.MaterialLabel2.AutoSize = True
@@ -409,19 +421,7 @@ Partial Class Frm_newContract
         Me.cbox_streets.Size = New System.Drawing.Size(148, 28)
         Me.cbox_streets.TabIndex = 5
         '
-        'EmployeeMenuStrip
-        '
-        Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
-        Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
-        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 26)
-        '
-        'SelectDifferentEmployeeToolStripMenuItem
-        '
-        Me.SelectDifferentEmployeeToolStripMenuItem.Name = "SelectDifferentEmployeeToolStripMenuItem"
-        Me.SelectDifferentEmployeeToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.SelectDifferentEmployeeToolStripMenuItem.Text = "Select Different Employee"
-        '
-        'frm_newContract
+        'Frm_newContract
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -457,7 +457,7 @@ Partial Class Frm_newContract
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
-        Me.Name = "frm_newContract"
+        Me.Name = "Frm_newContract"
         Me.Text = "New Contract"
         CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AccountsMenuStrip.ResumeLayout(False)

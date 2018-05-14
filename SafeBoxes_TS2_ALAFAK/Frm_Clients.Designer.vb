@@ -24,6 +24,8 @@ Partial Class Frm_Clients
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tab_datacontrol = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_details = New System.Windows.Forms.TextBox()
         Me.btn_modclient = New System.Windows.Forms.Button()
         Me.btn_delclient = New System.Windows.Forms.Button()
@@ -36,8 +38,6 @@ Partial Class Frm_Clients
         Me.rdb_byClientid = New System.Windows.Forms.RadioButton()
         Me.txt_bycid = New System.Windows.Forms.TextBox()
         Me.dgv_clients = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
         Me.tab_filter.SuspendLayout()
@@ -73,6 +73,26 @@ Partial Class Frm_Clients
         Me.tab_datacontrol.TabIndex = 0
         Me.tab_datacontrol.Text = "Data Control"
         Me.tab_datacontrol.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(163, 6)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(141, 20)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Selected Details"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(7, 5)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(67, 20)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Control"
         '
         'txt_details
         '
@@ -128,7 +148,7 @@ Partial Class Frm_Clients
         Me.tab_filter.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tab_filter.Name = "tab_filter"
         Me.tab_filter.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tab_filter.Size = New System.Drawing.Size(685, 130)
+        Me.tab_filter.Size = New System.Drawing.Size(685, 152)
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
@@ -137,7 +157,7 @@ Partial Class Frm_Clients
         '
         Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_reset.Enabled = False
-        Me.btn_reset.Location = New System.Drawing.Point(557, 80)
+        Me.btn_reset.Location = New System.Drawing.Point(639, 90)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(36, 54)
@@ -148,7 +168,7 @@ Partial Class Frm_Clients
         'btn_search
         '
         Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_search.Location = New System.Drawing.Point(419, 77)
+        Me.btn_search.Location = New System.Drawing.Point(522, 90)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(105, 54)
@@ -159,7 +179,7 @@ Partial Class Frm_Clients
         'rdb_byClientName
         '
         Me.rdb_byClientName.AutoSize = True
-        Me.rdb_byClientName.Location = New System.Drawing.Point(373, 9)
+        Me.rdb_byClientName.Location = New System.Drawing.Point(373, 15)
         Me.rdb_byClientName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rdb_byClientName.Name = "rdb_byClientName"
         Me.rdb_byClientName.Size = New System.Drawing.Size(135, 24)
@@ -175,7 +195,7 @@ Partial Class Frm_Clients
         Me.txt_bycname.Location = New System.Drawing.Point(373, 58)
         Me.txt_bycname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_bycname.Name = "txt_bycname"
-        Me.txt_bycname.Size = New System.Drawing.Size(346, 27)
+        Me.txt_bycname.Size = New System.Drawing.Size(302, 26)
         Me.txt_bycname.TabIndex = 10
         '
         'rdb_byClientid
@@ -193,7 +213,7 @@ Partial Class Frm_Clients
         Me.txt_bycid.Location = New System.Drawing.Point(9, 58)
         Me.txt_bycid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_bycid.Name = "txt_bycid"
-        Me.txt_bycid.Size = New System.Drawing.Size(352, 27)
+        Me.txt_bycid.Size = New System.Drawing.Size(352, 26)
         Me.txt_bycid.TabIndex = 8
         '
         'dgv_clients
@@ -223,26 +243,6 @@ Partial Class Frm_Clients
         Me.dgv_clients.Size = New System.Drawing.Size(693, 358)
         Me.dgv_clients.TabIndex = 10
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(7, 5)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 20)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Control"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(163, 6)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(141, 20)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Selected Details"
-        '
         'Frm_Clients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -251,7 +251,7 @@ Partial Class Frm_Clients
         Me.ClientSize = New System.Drawing.Size(719, 581)
         Me.Controls.Add(Me.dgv_clients)
         Me.Controls.Add(Me.TabControl1)
-        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Clients"
         Me.Text = "Clients Management"
