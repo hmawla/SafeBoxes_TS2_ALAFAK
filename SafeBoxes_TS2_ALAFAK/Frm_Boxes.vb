@@ -63,4 +63,8 @@
         txt_bybid.Text = ""
         cbox_boxsizes.SelectedItem = -1
     End Sub
+
+    Private Sub txt_bybid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bybid.KeyPress
+        Only_Number(txt_bybid, e)
+    End Sub
 End Class

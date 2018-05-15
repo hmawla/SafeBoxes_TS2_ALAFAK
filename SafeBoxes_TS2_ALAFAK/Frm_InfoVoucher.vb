@@ -73,4 +73,12 @@
         txt_byInfovouchid.Text = ""
         txt_byClientName.Text = ""
     End Sub
+
+    Private Sub txt_byInfovouchid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byInfovouchid.KeyPress
+        Only_Number(txt_byInfovouchid, e)
+    End Sub
+
+    Private Sub txt_byClientName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byClientName.KeyPress
+        Only_char(txt_byClientName, e)
+    End Sub
 End Class
