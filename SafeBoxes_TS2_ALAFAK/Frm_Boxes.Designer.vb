@@ -93,11 +93,11 @@ Partial Class Frm_Boxes
         Me.tab_datacontrol.Controls.Add(Me.btn_modbox)
         Me.tab_datacontrol.Controls.Add(Me.btn_delbox)
         Me.tab_datacontrol.Controls.Add(Me.btn_newbox)
-        Me.tab_datacontrol.Location = New System.Drawing.Point(4, 29)
+        Me.tab_datacontrol.Location = New System.Drawing.Point(4, 28)
         Me.tab_datacontrol.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tab_datacontrol.Name = "tab_datacontrol"
         Me.tab_datacontrol.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tab_datacontrol.Size = New System.Drawing.Size(654, 156)
+        Me.tab_datacontrol.Size = New System.Drawing.Size(654, 157)
         Me.tab_datacontrol.TabIndex = 0
         Me.tab_datacontrol.Text = "Data Control"
         Me.tab_datacontrol.UseVisualStyleBackColor = True
@@ -148,8 +148,12 @@ Partial Class Frm_Boxes
         '
         'btn_delbox
         '
+        Me.btn_delbox.Location = New System.Drawing.Point(8, 108)
         Me.btn_delbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_delbox.Name = "btn_delbox"
+        Me.btn_delbox.Size = New System.Drawing.Size(151, 29)
+        Me.btn_delbox.TabIndex = 6
+        Me.btn_delbox.Text = "Delete Selected"
         '
         'btn_newbox
         '
@@ -169,11 +173,11 @@ Partial Class Frm_Boxes
         Me.tab_filter.Controls.Add(Me.txt_bybsize)
         Me.tab_filter.Controls.Add(Me.txt_bybid)
         Me.tab_filter.Controls.Add(Me.rdb_byBoxid)
-        Me.tab_filter.Location = New System.Drawing.Point(4, 29)
+        Me.tab_filter.Location = New System.Drawing.Point(4, 28)
         Me.tab_filter.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tab_filter.Name = "tab_filter"
         Me.tab_filter.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tab_filter.Size = New System.Drawing.Size(654, 156)
+        Me.tab_filter.Size = New System.Drawing.Size(654, 157)
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
@@ -207,7 +211,7 @@ Partial Class Frm_Boxes
         Me.rdb_byBoxSize.Location = New System.Drawing.Point(9, 56)
         Me.rdb_byBoxSize.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rdb_byBoxSize.Name = "rdb_byBoxSize"
-        Me.rdb_byBoxSize.Size = New System.Drawing.Size(109, 23)
+        Me.rdb_byBoxSize.Size = New System.Drawing.Size(110, 23)
         Me.rdb_byBoxSize.TabIndex = 11
         Me.rdb_byBoxSize.Text = "By Box Size"
         Me.rdb_byBoxSize.UseVisualStyleBackColor = True
@@ -243,7 +247,7 @@ Partial Class Frm_Boxes
         '
         'Frm_Boxes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 628)
