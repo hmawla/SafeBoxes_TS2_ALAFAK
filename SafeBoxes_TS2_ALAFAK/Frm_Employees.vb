@@ -45,4 +45,33 @@
             End Try
         End If
     End Sub
+
+    Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click
+        FillDGV(dgv_employees, "SELECT EmpId AS [ID], EmpFName AS [First Name], EmpMName AS [Father Name], EmpLName AS [Last Name] FROM Employees")
+        btn_reset.Enabled = False
+        txt_byEmpid.Text = ""
+        txt_byEmpname.Text = ""
+    End Sub
+
+    Private Sub rdb_byEmpid_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byEmpid.CheckedChanged
+        txt_byEmpid.Enabled = True
+        txt_byEmpname.Enabled = False
+        txt_byEmpname.Text = ""
+    End Sub
+
+    Private Sub rdb_byEmpName_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byEmpName.CheckedChanged
+        txt_byEmpid.Enabled = False
+        txt_byEmpname.Enabled = True
+        txt_byEmpid.Text = ""
+    End Sub
+
+    Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        btn_reset.Enabled = True
+        If rdb_byEmpid.Checked Then
+            FillDGV(dgv_employees, "SELECT EmpId AS [ID], EmpFName AS [First Name], EmpMName AS [Father Name], EmpLName AS [Last Name] FROM Employees WHERE EmpId=" & txt_byEmpid.Text)
+        Else
+            FillDGV(dgv_employees, "SELECT EmpId AS [ID], EmpFName AS [First Name], EmpMName AS [Father Name], EmpLName AS [Last Name] FROM Employees WHERE EmpFName LIKE '%" & txt_byEmpname.Text & "%' OR EmpMName LIKE '%" & txt_byEmpname.Text & "%' OR EmpLName LIKE '%" & txt_byEmpname.Text & "%'")
+            'FillDGV(dgv_employees, "SELECT EmpId AS [ID], EmpFName AS [First Name], EmpMName AS [Father Name], EmpLName AS [Last Name] FROM (SELECT EmpId, EmpFName, EmpMName, EmpLName AS [Last Name],EmpFName + ' ' + EmpMName + ' ' + EmpLName AS fullname FROM Employees) DATA WHERE DATA.fullname LIKE '%" & txt_byEmpname.Text & "%'")
+        End If
+    End Sub
 End Class

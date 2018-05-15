@@ -104,22 +104,22 @@ Partial Class Frm_Employees
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(163, 5)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(125, 19)
+        Me.Label2.Size = New System.Drawing.Size(141, 20)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Selected Details"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(8, 5)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 19)
+        Me.Label1.Size = New System.Drawing.Size(67, 20)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Control"
         '
@@ -185,7 +185,7 @@ Partial Class Frm_Employees
         'btn_reset
         '
         Me.btn_reset.Enabled = False
-        Me.btn_reset.Location = New System.Drawing.Point(144, 105)
+        Me.btn_reset.Location = New System.Drawing.Point(606, 90)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(36, 54)
@@ -195,7 +195,7 @@ Partial Class Frm_Employees
         '
         'btn_search
         '
-        Me.btn_search.Location = New System.Drawing.Point(27, 105)
+        Me.btn_search.Location = New System.Drawing.Point(489, 90)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(105, 54)
@@ -206,10 +206,10 @@ Partial Class Frm_Employees
         'rdb_byEmpName
         '
         Me.rdb_byEmpName.AutoSize = True
-        Me.rdb_byEmpName.Location = New System.Drawing.Point(375, 9)
+        Me.rdb_byEmpName.Location = New System.Drawing.Point(317, 9)
         Me.rdb_byEmpName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rdb_byEmpName.Name = "rdb_byEmpName"
-        Me.rdb_byEmpName.Size = New System.Drawing.Size(164, 24)
+        Me.rdb_byEmpName.Size = New System.Drawing.Size(165, 24)
         Me.rdb_byEmpName.TabIndex = 11
         Me.rdb_byEmpName.Text = "By Employee Name"
         Me.rdb_byEmpName.UseVisualStyleBackColor = True
@@ -219,10 +219,10 @@ Partial Class Frm_Employees
         Me.txt_byEmpname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_byEmpname.Enabled = False
-        Me.txt_byEmpname.Location = New System.Drawing.Point(375, 58)
+        Me.txt_byEmpname.Location = New System.Drawing.Point(317, 58)
         Me.txt_byEmpname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_byEmpname.Name = "txt_byEmpname"
-        Me.txt_byEmpname.Size = New System.Drawing.Size(324, 27)
+        Me.txt_byEmpname.Size = New System.Drawing.Size(324, 26)
         Me.txt_byEmpname.TabIndex = 10
         '
         'txt_byEmpid
@@ -231,7 +231,7 @@ Partial Class Frm_Employees
         Me.txt_byEmpid.Location = New System.Drawing.Point(9, 58)
         Me.txt_byEmpid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_byEmpid.Name = "txt_byEmpid"
-        Me.txt_byEmpid.Size = New System.Drawing.Size(352, 27)
+        Me.txt_byEmpid.Size = New System.Drawing.Size(299, 26)
         Me.txt_byEmpid.TabIndex = 8
         '
         'rdb_byEmpid
@@ -251,7 +251,7 @@ Partial Class Frm_Employees
         Me.ClientSize = New System.Drawing.Size(685, 577)
         Me.Controls.Add(Me.dgv_employees)
         Me.Controls.Add(Me.TabControl1)
-        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Employees"
         Me.Text = "Employees Management"
