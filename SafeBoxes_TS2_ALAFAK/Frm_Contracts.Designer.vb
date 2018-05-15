@@ -41,8 +41,8 @@ Partial Class Frm_Contracts
         Me.tab_filter = New System.Windows.Forms.TabPage()
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
-        Me.rdb_byaccountid = New System.Windows.Forms.RadioButton()
-        Me.txt_byaccid = New System.Windows.Forms.TextBox()
+        Me.rdb_bycontid = New System.Windows.Forms.RadioButton()
+        Me.txt_bycontid = New System.Windows.Forms.TextBox()
         Me.rdb_byboxid = New System.Windows.Forms.RadioButton()
         Me.txt_byboxid = New System.Windows.Forms.TextBox()
         Me.dgv_contracts = New System.Windows.Forms.DataGridView()
@@ -100,10 +100,10 @@ Partial Class Frm_Contracts
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(473, 3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 19)
+        Me.Label2.Size = New System.Drawing.Size(105, 20)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Permissions"
         '
@@ -137,10 +137,10 @@ Partial Class Frm_Contracts
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.Location = New System.Drawing.Point(316, 3)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(141, 19)
+        Me.Label4.Size = New System.Drawing.Size(156, 20)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Manage Contracts"
         '
@@ -156,10 +156,10 @@ Partial Class Frm_Contracts
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(159, 3)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 19)
+        Me.Label3.Size = New System.Drawing.Size(116, 20)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Manage Keys"
         '
@@ -194,10 +194,10 @@ Partial Class Frm_Contracts
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(6, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 19)
+        Me.Label1.Size = New System.Drawing.Size(67, 20)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Control"
         '
@@ -232,8 +232,8 @@ Partial Class Frm_Contracts
         '
         Me.tab_filter.Controls.Add(Me.btn_reset)
         Me.tab_filter.Controls.Add(Me.btn_search)
-        Me.tab_filter.Controls.Add(Me.rdb_byaccountid)
-        Me.tab_filter.Controls.Add(Me.txt_byaccid)
+        Me.tab_filter.Controls.Add(Me.rdb_bycontid)
+        Me.tab_filter.Controls.Add(Me.txt_bycontid)
         Me.tab_filter.Controls.Add(Me.rdb_byboxid)
         Me.tab_filter.Controls.Add(Me.txt_byboxid)
         Me.tab_filter.Location = New System.Drawing.Point(4, 29)
@@ -267,26 +267,26 @@ Partial Class Frm_Contracts
         Me.btn_search.Text = "Filter"
         Me.btn_search.UseVisualStyleBackColor = True
         '
-        'rdb_byaccountid
+        'rdb_bycontid
         '
-        Me.rdb_byaccountid.AutoSize = True
-        Me.rdb_byaccountid.Location = New System.Drawing.Point(6, 43)
-        Me.rdb_byaccountid.Name = "rdb_byaccountid"
-        Me.rdb_byaccountid.Size = New System.Drawing.Size(125, 24)
-        Me.rdb_byaccountid.TabIndex = 11
-        Me.rdb_byaccountid.Text = "By Account ID"
-        Me.rdb_byaccountid.UseVisualStyleBackColor = True
+        Me.rdb_bycontid.AutoSize = True
+        Me.rdb_bycontid.Location = New System.Drawing.Point(6, 43)
+        Me.rdb_bycontid.Name = "rdb_bycontid"
+        Me.rdb_bycontid.Size = New System.Drawing.Size(131, 24)
+        Me.rdb_bycontid.TabIndex = 11
+        Me.rdb_bycontid.Text = "By Contract ID"
+        Me.rdb_bycontid.UseVisualStyleBackColor = True
         '
-        'txt_byaccid
+        'txt_bycontid
         '
-        Me.txt_byaccid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txt_bycontid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_byaccid.Enabled = False
-        Me.txt_byaccid.Location = New System.Drawing.Point(138, 42)
-        Me.txt_byaccid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txt_byaccid.Name = "txt_byaccid"
-        Me.txt_byaccid.Size = New System.Drawing.Size(215, 27)
-        Me.txt_byaccid.TabIndex = 10
+        Me.txt_bycontid.Enabled = False
+        Me.txt_bycontid.Location = New System.Drawing.Point(138, 42)
+        Me.txt_bycontid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_bycontid.Name = "txt_bycontid"
+        Me.txt_bycontid.Size = New System.Drawing.Size(215, 26)
+        Me.txt_bycontid.TabIndex = 10
         '
         'rdb_byboxid
         '
@@ -302,7 +302,7 @@ Partial Class Frm_Contracts
         Me.txt_byboxid.Location = New System.Drawing.Point(138, 5)
         Me.txt_byboxid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byboxid.Name = "txt_byboxid"
-        Me.txt_byboxid.Size = New System.Drawing.Size(215, 27)
+        Me.txt_byboxid.Size = New System.Drawing.Size(215, 26)
         Me.txt_byboxid.TabIndex = 8
         '
         'dgv_contracts
@@ -387,7 +387,7 @@ Partial Class Frm_Contracts
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.dgv_contracts)
         Me.Controls.Add(Me.TabControl1)
-        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Contracts"
@@ -413,8 +413,8 @@ Partial Class Frm_Contracts
     Friend WithEvents tab_filter As TabPage
     Friend WithEvents btn_reset As Button
     Friend WithEvents btn_search As Button
-    Friend WithEvents rdb_byaccountid As RadioButton
-    Friend WithEvents txt_byaccid As TextBox
+    Friend WithEvents rdb_bycontid As RadioButton
+    Friend WithEvents txt_bycontid As TextBox
     Friend WithEvents rdb_byboxid As RadioButton
     Friend WithEvents txt_byboxid As TextBox
     Friend WithEvents dgv_contracts As DataGridView

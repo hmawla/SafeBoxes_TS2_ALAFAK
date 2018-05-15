@@ -143,4 +143,41 @@
         End If
 
     End Sub
+
+    Private Sub rdb_byboxid_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byboxid.CheckedChanged
+        txt_byboxid.Enabled = True
+        txt_bycontid.Enabled = False
+        txt_bycontid.Text = ""
+    End Sub
+
+    Private Sub rdb_bycontid_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_bycontid.CheckedChanged
+        txt_byboxid.Enabled = False
+        txt_bycontid.Enabled = True
+        txt_byboxid.Text = ""
+    End Sub
+
+    Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click
+        FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
+        btn_reset.Enabled = False
+        txt_byboxid.Text = ""
+        txt_bycontid.Text = ""
+    End Sub
+
+    Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        btn_reset.Enabled = True
+        If rdb_byboxid.Checked Then
+            FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd) AND BoxId=" & txt_byboxid.Text)
+        Else
+            FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd) AND ContId=" & txt_bycontid.Text)
+
+        End If
+    End Sub
+
+    Private Sub txt_byboxid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byboxid.KeyPress
+        Only_Number(txt_byboxid, e)
+    End Sub
+
+    Private Sub txt_bycontid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bycontid.KeyPress
+        Only_Number(txt_bycontid, e)
+    End Sub
 End Class
