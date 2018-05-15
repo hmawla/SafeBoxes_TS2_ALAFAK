@@ -77,20 +77,20 @@ Partial Class Frm_Clients
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(163, 6)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(125, 19)
+        Me.Label2.Size = New System.Drawing.Size(141, 20)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Selected Details"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(7, 5)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 19)
+        Me.Label1.Size = New System.Drawing.Size(67, 20)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Control"
         '
@@ -182,7 +182,7 @@ Partial Class Frm_Clients
         Me.rdb_byClientName.Location = New System.Drawing.Point(10, 56)
         Me.rdb_byClientName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rdb_byClientName.Name = "rdb_byClientName"
-        Me.rdb_byClientName.Size = New System.Drawing.Size(135, 23)
+        Me.rdb_byClientName.Size = New System.Drawing.Size(135, 24)
         Me.rdb_byClientName.TabIndex = 11
         Me.rdb_byClientName.Text = "By Client Name"
         Me.rdb_byClientName.UseVisualStyleBackColor = True
@@ -195,7 +195,7 @@ Partial Class Frm_Clients
         Me.txt_bycname.Location = New System.Drawing.Point(175, 54)
         Me.txt_bycname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_bycname.Name = "txt_bycname"
-        Me.txt_bycname.Size = New System.Drawing.Size(302, 27)
+        Me.txt_bycname.Size = New System.Drawing.Size(302, 26)
         Me.txt_bycname.TabIndex = 10
         '
         'rdb_byClientid
@@ -213,7 +213,7 @@ Partial Class Frm_Clients
         Me.txt_bycid.Location = New System.Drawing.Point(175, 14)
         Me.txt_bycid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_bycid.Name = "txt_bycid"
-        Me.txt_bycid.Size = New System.Drawing.Size(352, 26)
+        Me.txt_bycid.Size = New System.Drawing.Size(302, 26)
         Me.txt_bycid.TabIndex = 8
         '
         'dgv_clients

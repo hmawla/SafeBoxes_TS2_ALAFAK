@@ -35,9 +35,9 @@ Partial Class Frm_Boxes
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
         Me.rdb_byBoxSize = New System.Windows.Forms.RadioButton()
-        Me.txt_bybsize = New System.Windows.Forms.TextBox()
         Me.txt_bybid = New System.Windows.Forms.TextBox()
         Me.rdb_byBoxid = New System.Windows.Forms.RadioButton()
+        Me.cbox_boxsizes = New System.Windows.Forms.ComboBox()
         CType(Me.dgv_boxes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
@@ -77,7 +77,7 @@ Partial Class Frm_Boxes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
-        Me.TabControl1.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.TabControl1.Location = New System.Drawing.Point(13, 14)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
@@ -93,11 +93,11 @@ Partial Class Frm_Boxes
         Me.tab_datacontrol.Controls.Add(Me.btn_modbox)
         Me.tab_datacontrol.Controls.Add(Me.btn_delbox)
         Me.tab_datacontrol.Controls.Add(Me.btn_newbox)
-        Me.tab_datacontrol.Location = New System.Drawing.Point(4, 28)
+        Me.tab_datacontrol.Location = New System.Drawing.Point(4, 29)
         Me.tab_datacontrol.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tab_datacontrol.Name = "tab_datacontrol"
         Me.tab_datacontrol.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tab_datacontrol.Size = New System.Drawing.Size(654, 157)
+        Me.tab_datacontrol.Size = New System.Drawing.Size(654, 156)
         Me.tab_datacontrol.TabIndex = 0
         Me.tab_datacontrol.Text = "Data Control"
         Me.tab_datacontrol.UseVisualStyleBackColor = True
@@ -105,22 +105,22 @@ Partial Class Frm_Boxes
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(163, 5)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(125, 19)
+        Me.Label2.Size = New System.Drawing.Size(141, 20)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Selected Details"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(8, 5)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 19)
+        Me.Label1.Size = New System.Drawing.Size(67, 20)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Control"
         '
@@ -167,17 +167,17 @@ Partial Class Frm_Boxes
         '
         'tab_filter
         '
+        Me.tab_filter.Controls.Add(Me.cbox_boxsizes)
         Me.tab_filter.Controls.Add(Me.btn_reset)
         Me.tab_filter.Controls.Add(Me.btn_search)
         Me.tab_filter.Controls.Add(Me.rdb_byBoxSize)
-        Me.tab_filter.Controls.Add(Me.txt_bybsize)
         Me.tab_filter.Controls.Add(Me.txt_bybid)
         Me.tab_filter.Controls.Add(Me.rdb_byBoxid)
-        Me.tab_filter.Location = New System.Drawing.Point(4, 28)
+        Me.tab_filter.Location = New System.Drawing.Point(4, 29)
         Me.tab_filter.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tab_filter.Name = "tab_filter"
         Me.tab_filter.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tab_filter.Size = New System.Drawing.Size(654, 157)
+        Me.tab_filter.Size = New System.Drawing.Size(654, 156)
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
@@ -211,21 +211,10 @@ Partial Class Frm_Boxes
         Me.rdb_byBoxSize.Location = New System.Drawing.Point(9, 56)
         Me.rdb_byBoxSize.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rdb_byBoxSize.Name = "rdb_byBoxSize"
-        Me.rdb_byBoxSize.Size = New System.Drawing.Size(110, 23)
+        Me.rdb_byBoxSize.Size = New System.Drawing.Size(111, 24)
         Me.rdb_byBoxSize.TabIndex = 11
         Me.rdb_byBoxSize.Text = "By Box Size"
         Me.rdb_byBoxSize.UseVisualStyleBackColor = True
-        '
-        'txt_bybsize
-        '
-        Me.txt_bybsize.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_bybsize.Enabled = False
-        Me.txt_bybsize.Location = New System.Drawing.Point(175, 54)
-        Me.txt_bybsize.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.txt_bybsize.Name = "txt_bybsize"
-        Me.txt_bybsize.Size = New System.Drawing.Size(352, 27)
-        Me.txt_bybsize.TabIndex = 10
         '
         'txt_bybid
         '
@@ -233,7 +222,7 @@ Partial Class Frm_Boxes
         Me.txt_bybid.Location = New System.Drawing.Point(175, 14)
         Me.txt_bybid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_bybid.Name = "txt_bybid"
-        Me.txt_bybid.Size = New System.Drawing.Size(352, 27)
+        Me.txt_bybid.Size = New System.Drawing.Size(352, 26)
         Me.txt_bybid.TabIndex = 8
         '
         'rdb_byBoxid
@@ -245,15 +234,27 @@ Partial Class Frm_Boxes
         Me.rdb_byBoxid.TabIndex = 13
         Me.rdb_byBoxid.Text = "By Box ID"
         '
+        'cbox_boxsizes
+        '
+        Me.cbox_boxsizes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbox_boxsizes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbox_boxsizes.FormattingEnabled = True
+        Me.cbox_boxsizes.Location = New System.Drawing.Point(175, 56)
+        Me.cbox_boxsizes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cbox_boxsizes.Name = "cbox_boxsizes"
+        Me.cbox_boxsizes.Size = New System.Drawing.Size(352, 28)
+        Me.cbox_boxsizes.TabIndex = 14
+        '
         'Frm_Boxes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 628)
         Me.Controls.Add(Me.dgv_boxes)
         Me.Controls.Add(Me.TabControl1)
-        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Boxes"
         Me.Text = "Boxes Management"
@@ -280,7 +281,7 @@ Partial Class Frm_Boxes
     Friend WithEvents btn_reset As Button
     Friend WithEvents btn_search As Button
     Friend WithEvents rdb_byBoxSize As RadioButton
-    Friend WithEvents txt_bybsize As TextBox
     Friend WithEvents txt_bybid As TextBox
     Friend WithEvents rdb_byBoxid As RadioButton
+    Friend WithEvents cbox_boxsizes As ComboBox
 End Class

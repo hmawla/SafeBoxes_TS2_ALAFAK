@@ -34,4 +34,33 @@
             btn_modbox.Enabled = False
         End Try
     End Sub
+
+    Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        btn_reset.Enabled = True
+        btn_reset.Enabled = True
+        If rdb_byBoxid.Checked Then
+            FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b,BoxSizes bs WHERE b.BoxId=" & txt_bybid.Text & "AND b.SizeId=bs.SizeId")
+        Else
+            FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b, BoxSizes bs, BoxSizesDate bsd WHERE b.SizeId = " & cbox_boxsizes.SelectedValue & " AND bs.SizeId = " & cbox_boxsizes.SelectedValue & " AND bsd.SizeId = " & cbox_boxsizes.SelectedValue)
+        End If
+    End Sub
+
+    Private Sub rdb_byBoxid_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byBoxid.CheckedChanged
+        txt_bybid.Enabled = True
+        cbox_boxsizes.Enabled = False
+        cbox_boxsizes.SelectedItem = -1
+    End Sub
+
+    Private Sub rdb_byBoxSize_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byBoxSize.CheckedChanged
+        txt_bybid.Enabled = False
+        cbox_boxsizes.Enabled = True
+        txt_bybid.Text = ""
+    End Sub
+
+    Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click
+        FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b,BoxSizes bs WHERE b.SizeId=bs.SizeId")
+        btn_reset.Enabled = False
+        txt_bybid.Text = ""
+        cbox_boxsizes.SelectedItem = -1
+    End Sub
 End Class
