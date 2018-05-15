@@ -35,4 +35,32 @@
             btn_modcompany.Enabled = False
         End Try
     End Sub
+
+    Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        btn_reset.Enabled = True
+        If rdb_bycompid.Checked Then
+            FillDGV(dgv_companies, "SELECT CompId AS [ID], CompName AS [Company Name], CompType AS [Company Type]  FROM Company c,CompType ct WHERE c.CompId=" & txt_bycid.Text & " AND c.CompTypeId=ct.CompTypeId")
+        Else
+            FillDGV(dgv_companies, "SELECT CompId AS [ID], CompName AS [Company Name], CompType AS [Company Type]  FROM Company c,CompType ct WHERE c.CompName LIKE '%" & txt_bycname.Text & "%' AND c.CompTypeId=ct.CompTypeId")
+        End If
+    End Sub
+
+    Private Sub rdb_bycompid_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_bycompid.CheckedChanged
+        txt_bycid.Enabled = True
+        txt_bycname.Enabled = False
+        txt_bycname.Text = ""
+    End Sub
+
+    Private Sub rdb_bycompName_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_bycompName.CheckedChanged
+        txt_bycid.Enabled = False
+        txt_bycname.Enabled = True
+        txt_bycid.Text = ""
+    End Sub
+
+    Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click
+        FillDGV(dgv_companies, "SELECT CompId AS [ID], CompName AS [Company Name], CompType AS [Company Type]  FROM Company c,CompType ct WHERE c.CompTypeId=ct.CompTypeId")
+        btn_reset.Enabled = False
+        txt_bycid.Text = ""
+        txt_bycname.Text = ""
+    End Sub
 End Class
