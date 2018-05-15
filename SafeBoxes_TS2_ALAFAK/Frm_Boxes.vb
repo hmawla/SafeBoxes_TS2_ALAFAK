@@ -2,6 +2,7 @@
     Public BoxId As Integer
 
     Private Sub Frm_Boxes_Load(sender As Object, e As EventArgs) Handles Me.Load
+        FillCBox(cbox_boxsizes, "SELECT SizeId,Length + 'cm x ' + Width + 'cm x ' + Height + 'cm' AS prop FROM BoxSizes", "SizeId", "prop") 'Fill the search combo box with all available sizes
         FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b,BoxSizes bs WHERE b.SizeId=bs.SizeId")
     End Sub
 
@@ -36,7 +37,6 @@
     End Sub
 
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
-        btn_reset.Enabled = True
         btn_reset.Enabled = True
         If rdb_byBoxid.Checked Then
             FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b,BoxSizes bs WHERE b.BoxId=" & txt_bybid.Text & "AND b.SizeId=bs.SizeId")

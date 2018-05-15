@@ -239,6 +239,7 @@ Partial Class Frm_Boxes
         Me.cbox_boxsizes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbox_boxsizes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbox_boxsizes.Enabled = False
         Me.cbox_boxsizes.FormattingEnabled = True
         Me.cbox_boxsizes.Location = New System.Drawing.Point(175, 56)
         Me.cbox_boxsizes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
