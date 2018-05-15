@@ -148,13 +148,8 @@ Partial Class Frm_Boxes
         '
         'btn_delbox
         '
-        Me.btn_delbox.Location = New System.Drawing.Point(8, 108)
         Me.btn_delbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_delbox.Name = "btn_delbox"
-        Me.btn_delbox.Size = New System.Drawing.Size(151, 29)
-        Me.btn_delbox.TabIndex = 1
-        Me.btn_delbox.Text = "Delete Selected"
-        Me.btn_delbox.UseVisualStyleBackColor = True
         '
         'btn_newbox
         '

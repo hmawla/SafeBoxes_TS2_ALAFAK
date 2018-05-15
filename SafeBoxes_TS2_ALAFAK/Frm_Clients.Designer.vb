@@ -213,7 +213,7 @@ Partial Class Frm_Clients
         Me.txt_bycid.Location = New System.Drawing.Point(175, 14)
         Me.txt_bycid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_bycid.Name = "txt_bycid"
-        Me.txt_bycid.Size = New System.Drawing.Size(352, 27)
+        Me.txt_bycid.Size = New System.Drawing.Size(352, 26)
         Me.txt_bycid.TabIndex = 8
         '
         'dgv_clients
@@ -251,7 +251,7 @@ Partial Class Frm_Clients
         Me.ClientSize = New System.Drawing.Size(719, 581)
         Me.Controls.Add(Me.dgv_clients)
         Me.Controls.Add(Me.TabControl1)
-        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Clients"
         Me.Text = "Clients Management"

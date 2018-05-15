@@ -213,7 +213,7 @@ Partial Class Frm_Companies
         Me.rdb_bycompName.Name = "rdb_bycompName"
         Me.rdb_bycompName.Size = New System.Drawing.Size(135, 24)
         Me.rdb_bycompName.TabIndex = 11
-        Me.rdb_bycompName.Text = "By Client Name"
+        Me.rdb_bycompName.Text = "By Company Name"
         Me.rdb_bycompName.UseVisualStyleBackColor = True
         '
         'txt_bycname
@@ -234,7 +234,7 @@ Partial Class Frm_Companies
         Me.rdb_bycompid.Name = "rdb_bycompid"
         Me.rdb_bycompid.Size = New System.Drawing.Size(156, 37)
         Me.rdb_bycompid.TabIndex = 13
-        Me.rdb_bycompid.Text = "By Client ID"
+        Me.rdb_bycompid.Text = "By Company ID"
         '
         'txt_bycid
         '

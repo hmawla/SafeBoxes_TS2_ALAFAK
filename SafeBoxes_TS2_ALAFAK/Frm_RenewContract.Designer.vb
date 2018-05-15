@@ -27,7 +27,11 @@ Partial Class Frm_RenewContract
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DGVMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Lbl_EmpId = New MaterialSkin.Controls.MaterialLabel()
+        Me.EmployeeMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Lbl_ContId = New MaterialSkin.Controls.MaterialLabel()
         Me.DTPick_Expire = New System.Windows.Forms.DateTimePicker()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
@@ -39,14 +43,10 @@ Partial Class Frm_RenewContract
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.Btn_Add = New System.Windows.Forms.Button()
         Me.Btn_Submit = New System.Windows.Forms.Button()
-        Me.EmployeeMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DGVMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DGV_Clients, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ClientMenuStrip.SuspendLayout()
-        Me.EmployeeMenuStrip.SuspendLayout()
         Me.DGVMenuStrip.SuspendLayout()
+        Me.EmployeeMenuStrip.SuspendLayout()
+        Me.ClientMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'DGV_Clients
@@ -99,6 +99,18 @@ Partial Class Frm_RenewContract
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
         '
+        'DGVMenuStrip
+        '
+        Me.DGVMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoveSelectedToolStripMenuItem})
+        Me.DGVMenuStrip.Name = "DGVMenuStrip"
+        Me.DGVMenuStrip.Size = New System.Drawing.Size(165, 26)
+        '
+        'RemoveSelectedToolStripMenuItem
+        '
+        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
+        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
+        '
         'Lbl_EmpId
         '
         Me.Lbl_EmpId.AutoSize = True
@@ -110,9 +122,21 @@ Partial Class Frm_RenewContract
         Me.Lbl_EmpId.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Lbl_EmpId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Lbl_EmpId.Name = "Lbl_EmpId"
-        Me.Lbl_EmpId.Size = New System.Drawing.Size(158, 18)
+        Me.Lbl_EmpId.Size = New System.Drawing.Size(159, 19)
         Me.Lbl_EmpId.TabIndex = 49
         Me.Lbl_EmpId.Text = "Employee ID: <EmpId>"
+        '
+        'EmployeeMenuStrip
+        '
+        Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
+        Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
+        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 26)
+        '
+        'SelectDifferentEmployeeToolStripMenuItem
+        '
+        Me.SelectDifferentEmployeeToolStripMenuItem.Name = "SelectDifferentEmployeeToolStripMenuItem"
+        Me.SelectDifferentEmployeeToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.SelectDifferentEmployeeToolStripMenuItem.Text = "Select Different Employee"
         '
         'Lbl_ContId
         '
@@ -124,7 +148,7 @@ Partial Class Frm_RenewContract
         Me.Lbl_ContId.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Lbl_ContId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Lbl_ContId.Name = "Lbl_ContId"
-        Me.Lbl_ContId.Size = New System.Drawing.Size(152, 18)
+        Me.Lbl_ContId.Size = New System.Drawing.Size(153, 19)
         Me.Lbl_ContId.TabIndex = 50
         Me.Lbl_ContId.Text = "Contract ID: <ContId>"
         '
@@ -150,7 +174,7 @@ Partial Class Frm_RenewContract
         Me.MaterialLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel2.Name = "MaterialLabel2"
-        Me.MaterialLabel2.Size = New System.Drawing.Size(87, 18)
+        Me.MaterialLabel2.Size = New System.Drawing.Size(88, 19)
         Me.MaterialLabel2.TabIndex = 53
         Me.MaterialLabel2.Text = "Expiry Date:"
         '
@@ -186,7 +210,7 @@ Partial Class Frm_RenewContract
         Me.MaterialLabel7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel7.Name = "MaterialLabel7"
-        Me.MaterialLabel7.Size = New System.Drawing.Size(69, 18)
+        Me.MaterialLabel7.Size = New System.Drawing.Size(70, 19)
         Me.MaterialLabel7.TabIndex = 55
         Me.MaterialLabel7.Text = "Client ID:"
         '
@@ -210,7 +234,7 @@ Partial Class Frm_RenewContract
         Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
-        Me.MaterialLabel3.Size = New System.Drawing.Size(95, 18)
+        Me.MaterialLabel3.Size = New System.Drawing.Size(96, 19)
         Me.MaterialLabel3.TabIndex = 57
         Me.MaterialLabel3.Text = "Client Name:"
         '
@@ -235,30 +259,6 @@ Partial Class Frm_RenewContract
         Me.Btn_Submit.Text = "Submit"
         Me.Btn_Submit.UseVisualStyleBackColor = True
         '
-        'EmployeeMenuStrip
-        '
-        Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
-        Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
-        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 48)
-        '
-        'SelectDifferentEmployeeToolStripMenuItem
-        '
-        Me.SelectDifferentEmployeeToolStripMenuItem.Name = "SelectDifferentEmployeeToolStripMenuItem"
-        Me.SelectDifferentEmployeeToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.SelectDifferentEmployeeToolStripMenuItem.Text = "Select Different Employee"
-        '
-        'DGVMenuStrip
-        '
-        Me.DGVMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoveSelectedToolStripMenuItem})
-        Me.DGVMenuStrip.Name = "DGVMenuStrip"
-        Me.DGVMenuStrip.Size = New System.Drawing.Size(165, 26)
-        '
-        'RemoveSelectedToolStripMenuItem
-        '
-        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
-        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
-        '
         'Frm_RenewContract
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -276,14 +276,14 @@ Partial Class Frm_RenewContract
         Me.Controls.Add(Me.Lbl_ContId)
         Me.Controls.Add(Me.Lbl_EmpId)
         Me.Controls.Add(Me.DGV_Clients)
-        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_RenewContract"
         Me.Text = "Renew Contract"
         CType(Me.DGV_Clients, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ClientMenuStrip.ResumeLayout(False)
-        Me.EmployeeMenuStrip.ResumeLayout(False)
         Me.DGVMenuStrip.ResumeLayout(False)
+        Me.EmployeeMenuStrip.ResumeLayout(False)
+        Me.ClientMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -129,5 +129,11 @@ Public Class Frm_newContract
         Frm_Employees.ShowDialog()
         EmpId = Frm_main.employeeid
         lbl_empid.Text = "Employee ID: " & EmpId
+    Private Sub txt_phone2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_phone2.KeyPress
+        Only_Number(txt_phone2, e)
+    End Sub
+
+    Private Sub txt_phone1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_phone1.KeyPress
+        Only_Number(txt_phone1, e)
     End Sub
 End Class

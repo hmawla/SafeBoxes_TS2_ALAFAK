@@ -46,4 +46,52 @@ Public Class Frm_Clients
             End Try
         End If
     End Sub
+
+    Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        btn_reset.Enabled = True
+        If rdb_byClientid.Checked Then
+            FillDGV(dgv_clients, "SELECT ClientId as ID, ClientFName + ' ' + ClientLName as [Full Name], ClientMName as [Father's Name], ClientMother as [Mother's Name], ClientDOB as [Birth Date] FROM Clients WHERE ClientId = " & txt_bycid.Text)
+        Else
+            Dim firstName As String
+            Dim lastName As String = ""
+            firstName = txt_bycname.Text.Split(New Char() {" "c})(0)
+            Try
+                lastName = txt_bycname.Text.Split(New Char() {" "c})(1)
+            Catch ex As Exception
+
+            End Try
+            Dim theQuery As String = "SELECT ClientId as ID, ClientFName + ' ' + ClientLName as [Full Name], ClientMName as [Father's Name], ClientMother as [Mother's Name], ClientDOB as [Birth Date] FROM Clients WHERE ClientFName LIKE '%" & firstName & "%'"
+            If lastName <> "" Then
+                theQuery = "SELECT ClientId as ID, ClientFName + ' ' + ClientLName as [Full Name], ClientMName as [Father's Name], ClientMother as [Mother's Name], ClientDOB as [Birth Date] FROM Clients WHERE ClientFName LIKE '%" & firstName & "%' AND ClientLName LIKE '%" & lastName & "%'"
+            End If
+            FillDGV(dgv_clients, theQuery)
+        End If
+    End Sub
+
+    Private Sub rdb_byClientid_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byClientid.CheckedChanged
+        txt_bycid.Enabled = True
+        txt_bycname.Enabled = False
+        txt_bycname.Text = ""
+    End Sub
+
+    Private Sub rdb_byClientName_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byClientName.CheckedChanged
+        txt_bycid.Enabled = False
+        txt_bycname.Enabled = True
+        txt_bycid.Text = ""
+    End Sub
+
+    Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click
+        FillDGV(dgv_clients, "SELECT ClientId as ID, ClientFName + ' ' + ClientLName as [Full Name], ClientMName as [Father's Name], ClientMother as [Mother's Name], ClientDOB as [Birth Date] FROM Clients")
+        btn_reset.Enabled = False
+        txt_bycid.Text = ""
+        txt_bycname.Text = ""
+    End Sub
+
+    Private Sub txt_bycname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bycname.KeyPress
+        Only_char(txt_bycname, e)
+    End Sub
+
+    Private Sub txt_bycid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bycid.KeyPress
+        Only_Number(txt_bycid, e)
+    End Sub
 End Class
