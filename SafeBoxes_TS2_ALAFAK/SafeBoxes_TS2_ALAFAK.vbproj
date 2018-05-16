@@ -172,6 +172,12 @@
     <Compile Include="Frm_Boxes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_ContractVisits.Designer.vb">
+      <DependentUpon>Frm_ContractVisits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ContractVisits.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_Employees.Designer.vb">
       <DependentUpon>Frm_Employees.vb</DependentUpon>
     </Compile>
@@ -358,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Contracts.resx">
       <DependentUpon>Frm_Contracts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ContractVisits.resx">
+      <DependentUpon>Frm_ContractVisits.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Employees.resx">
       <DependentUpon>Frm_Employees.vb</DependentUpon>

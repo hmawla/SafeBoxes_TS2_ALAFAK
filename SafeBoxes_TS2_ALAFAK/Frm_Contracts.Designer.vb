@@ -53,6 +53,7 @@ Partial Class Frm_Contracts
         Me.ContractsEndReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WithdrawPermissionsReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientAuthorizationsReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btn_visits = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
         Me.tab_filter.SuspendLayout()
@@ -75,6 +76,7 @@ Partial Class Frm_Contracts
         'tab_datacontrol
         '
         Me.tab_datacontrol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tab_datacontrol.Controls.Add(Me.btn_visits)
         Me.tab_datacontrol.Controls.Add(Me.Label2)
         Me.tab_datacontrol.Controls.Add(Me.btn_authorize)
         Me.tab_datacontrol.Controls.Add(Me.btn_withdraw)
@@ -378,6 +380,15 @@ Partial Class Frm_Contracts
         Me.ClientAuthorizationsReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
         Me.ClientAuthorizationsReportsToolStripMenuItem.Text = "Client Authorizations Reports"
         '
+        'btn_visits
+        '
+        Me.btn_visits.Location = New System.Drawing.Point(321, 96)
+        Me.btn_visits.Name = "btn_visits"
+        Me.btn_visits.Size = New System.Drawing.Size(151, 29)
+        Me.btn_visits.TabIndex = 16
+        Me.btn_visits.Text = "Visits"
+        Me.btn_visits.UseVisualStyleBackColor = True
+        '
         'Frm_Contracts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -435,4 +446,5 @@ Partial Class Frm_Contracts
     Friend WithEvents ContractsEndReportsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents WithdrawPermissionsReportsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClientAuthorizationsReportsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btn_visits As Button
 End Class
