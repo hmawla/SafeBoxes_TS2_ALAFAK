@@ -33,4 +33,52 @@
             btn_modinfovouch.Enabled = False
         End Try
     End Sub
+
+    Private Sub rdb_byinfovouchid_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byinfovouchid.CheckedChanged
+        txt_byInfovouchid.Enabled = True
+        txt_byClientName.Enabled = False
+        txt_byClientName.Text = ""
+    End Sub
+
+    Private Sub rdb_byClientName_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byClientName.CheckedChanged
+        txt_byInfovouchid.Enabled = False
+        txt_byClientName.Enabled = True
+        txt_byInfovouchid.Text = ""
+    End Sub
+
+    Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        btn_reset.Enabled = True
+        If rdb_byinfovouchid.Checked Then
+            FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS ID, InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId AS [Contract ID], BuildingName AS Address, InfoSubjTitle, ClientFName AS [Client Name] FROM InfoVoucher i,Clients c, Buildings b,InfoSubjectTitles ist WHERE i.InfoVouchId=" & txt_byInfovouchid.Text & " AND i.BuildingId = b.BuildingId AND i.ClientId = c.ClientId AND i.InfoSubjTitleId=ist.InfoSubjTitleId")
+        Else
+            Dim firstName As String
+            Dim lastName As String = ""
+            firstName = txt_byClientName.Text.Split(New Char() {" "c})(0)
+            Try
+                lastName = txt_byClientName.Text.Split(New Char() {" "c})(1)
+            Catch ex As Exception
+
+            End Try
+            Dim theQuery As String = "SELECT InfoVouchId AS ID, InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId AS [Contract ID], BuildingName AS Address, InfoSubjTitle, ClientFName AS [Client Name] FROM InfoVoucher i,Clients c, Buildings b,InfoSubjectTitles ist WHERE i.BuildingId = b.BuildingId AND i.ClientId = c.ClientId AND i.InfoSubjTitleId=ist.InfoSubjTitleId AND ClientFName LIKE '%" & firstName & "%'"
+            If lastName <> "" Then
+                theQuery = "SELECT InfoVouchId AS ID, InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId AS [Contract ID], BuildingName AS Address, InfoSubjTitle, ClientFName AS [Client Name] FROM InfoVoucher i,Clients c, Buildings b,InfoSubjectTitles ist WHERE i.BuildingId = b.BuildingId AND i.ClientId = c.ClientId AND i.InfoSubjTitleId=ist.InfoSubjTitleId AND ClientFName LIKE '%" & firstName & "%' AND ClientLName LIKE '%" & lastName & "%'"
+            End If
+            FillDGV(dgv_infovouchers, theQuery)
+        End If
+    End Sub
+
+    Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click
+        FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS ID, InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId AS [Contract ID], BuildingName AS Address, InfoSubjTitle, ClientFName AS [Client Name] FROM InfoVoucher i,Clients c, Buildings b,InfoSubjectTitles ist WHERE i.BuildingId = b.BuildingId AND i.ClientId = c.ClientId AND i.InfoSubjTitleId=ist.InfoSubjTitleId")
+        btn_reset.Enabled = False
+        txt_byInfovouchid.Text = ""
+        txt_byClientName.Text = ""
+    End Sub
+
+    Private Sub txt_byInfovouchid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byInfovouchid.KeyPress
+        Only_Number(txt_byInfovouchid, e)
+    End Sub
+
+    Private Sub txt_byClientName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byClientName.KeyPress
+        Only_char(txt_byClientName, e)
+    End Sub
 End Class

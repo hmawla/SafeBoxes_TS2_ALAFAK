@@ -63,4 +63,12 @@
         txt_bycid.Text = ""
         txt_bycname.Text = ""
     End Sub
+
+    Private Sub txt_bycid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bycid.KeyPress
+        Only_Number(txt_bycid, e)
+    End Sub
+
+    Private Sub txt_bycname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bycname.KeyPress
+        Only_char(txt_bycname, e)
+    End Sub
 End Class

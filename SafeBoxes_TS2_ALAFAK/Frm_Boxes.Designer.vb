@@ -32,12 +32,12 @@ Partial Class Frm_Boxes
         Me.btn_delbox = New System.Windows.Forms.Button()
         Me.btn_newbox = New System.Windows.Forms.Button()
         Me.tab_filter = New System.Windows.Forms.TabPage()
+        Me.cbox_boxsizes = New System.Windows.Forms.ComboBox()
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
         Me.rdb_byBoxSize = New System.Windows.Forms.RadioButton()
         Me.txt_bybid = New System.Windows.Forms.TextBox()
         Me.rdb_byBoxid = New System.Windows.Forms.RadioButton()
-        Me.cbox_boxsizes = New System.Windows.Forms.ComboBox()
         CType(Me.dgv_boxes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
@@ -182,6 +182,19 @@ Partial Class Frm_Boxes
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
         '
+        'cbox_boxsizes
+        '
+        Me.cbox_boxsizes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbox_boxsizes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbox_boxsizes.Enabled = False
+        Me.cbox_boxsizes.FormattingEnabled = True
+        Me.cbox_boxsizes.Location = New System.Drawing.Point(175, 56)
+        Me.cbox_boxsizes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.cbox_boxsizes.Name = "cbox_boxsizes"
+        Me.cbox_boxsizes.Size = New System.Drawing.Size(352, 28)
+        Me.cbox_boxsizes.TabIndex = 14
+        '
         'btn_reset
         '
         Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -233,19 +246,6 @@ Partial Class Frm_Boxes
         Me.rdb_byBoxid.Size = New System.Drawing.Size(156, 37)
         Me.rdb_byBoxid.TabIndex = 13
         Me.rdb_byBoxid.Text = "By Box ID"
-        '
-        'cbox_boxsizes
-        '
-        Me.cbox_boxsizes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cbox_boxsizes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbox_boxsizes.Enabled = False
-        Me.cbox_boxsizes.FormattingEnabled = True
-        Me.cbox_boxsizes.Location = New System.Drawing.Point(175, 56)
-        Me.cbox_boxsizes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.cbox_boxsizes.Name = "cbox_boxsizes"
-        Me.cbox_boxsizes.Size = New System.Drawing.Size(352, 28)
-        Me.cbox_boxsizes.TabIndex = 14
         '
         'Frm_Boxes
         '

@@ -88,4 +88,12 @@
             FillDGV(dgv_employees, theQuery)
         End If
     End Sub
+
+    Private Sub txt_byEmpid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byEmpid.KeyPress
+        Only_Number(txt_byEmpid, e)
+    End Sub
+
+    Private Sub txt_byEmpname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byEmpname.KeyPress
+        Only_char(txt_byEmpname, e)
+    End Sub
 End Class
