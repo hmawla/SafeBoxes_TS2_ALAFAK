@@ -4,6 +4,7 @@
     Public contractid As Integer
     Public employeeid As Integer
     Public loggedEmpId As Integer
+    Public infovouchid As Integer
 
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
         InitCon()

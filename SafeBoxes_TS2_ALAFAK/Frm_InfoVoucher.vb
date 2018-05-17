@@ -81,4 +81,10 @@
     Private Sub txt_byClientName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byClientName.KeyPress
         Only_char(txt_byClientName, e)
     End Sub
+
+    Private Sub btn_connects_Click(sender As Object, e As EventArgs) Handles btn_connects.Click
+        Frm_main.infovouchid = dgv_infovouchers.SelectedRows(0).Cells(0).Value
+        Frm_Connects.ShowDialog()
+        FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS ID, InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId AS [Contract ID], BuildingName AS Address, InfoSubjTitle, ClientFName AS [Client Name] FROM InfoVoucher i,Clients c, Buildings b,InfoSubjectTitles ist WHERE i.BuildingId = b.BuildingId AND i.ClientId = c.ClientId AND i.InfoSubjTitleId=ist.InfoSubjTitleId")
+    End Sub
 End Class

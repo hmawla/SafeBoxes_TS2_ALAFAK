@@ -25,6 +25,7 @@ Partial Class Frm_InfoVoucher
         Me.dgv_infovouchers = New System.Windows.Forms.DataGridView()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tab_datacontrol = New System.Windows.Forms.TabPage()
+        Me.btn_connects = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_details = New System.Windows.Forms.TextBox()
@@ -59,7 +60,7 @@ Partial Class Frm_InfoVoucher
         Me.dgv_infovouchers.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgv_infovouchers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgv_infovouchers.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_infovouchers.Location = New System.Drawing.Point(13, 195)
+        Me.dgv_infovouchers.Location = New System.Drawing.Point(13, 223)
         Me.dgv_infovouchers.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgv_infovouchers.MultiSelect = False
         Me.dgv_infovouchers.Name = "dgv_infovouchers"
@@ -68,7 +69,7 @@ Partial Class Frm_InfoVoucher
         Me.dgv_infovouchers.RowHeadersVisible = False
         Me.dgv_infovouchers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_infovouchers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_infovouchers.Size = New System.Drawing.Size(695, 339)
+        Me.dgv_infovouchers.Size = New System.Drawing.Size(695, 311)
         Me.dgv_infovouchers.TabIndex = 10
         '
         'TabControl1
@@ -80,11 +81,12 @@ Partial Class Frm_InfoVoucher
         Me.TabControl1.Location = New System.Drawing.Point(13, 13)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(695, 178)
+        Me.TabControl1.Size = New System.Drawing.Size(695, 202)
         Me.TabControl1.TabIndex = 9
         '
         'tab_datacontrol
         '
+        Me.tab_datacontrol.Controls.Add(Me.btn_connects)
         Me.tab_datacontrol.Controls.Add(Me.Label2)
         Me.tab_datacontrol.Controls.Add(Me.Label1)
         Me.tab_datacontrol.Controls.Add(Me.txt_details)
@@ -94,16 +96,26 @@ Partial Class Frm_InfoVoucher
         Me.tab_datacontrol.Location = New System.Drawing.Point(4, 22)
         Me.tab_datacontrol.Name = "tab_datacontrol"
         Me.tab_datacontrol.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_datacontrol.Size = New System.Drawing.Size(687, 152)
+        Me.tab_datacontrol.Size = New System.Drawing.Size(687, 176)
         Me.tab_datacontrol.TabIndex = 0
         Me.tab_datacontrol.Text = "Data Control"
         Me.tab_datacontrol.UseVisualStyleBackColor = True
+        '
+        'btn_connects
+        '
+        Me.btn_connects.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_connects.Location = New System.Drawing.Point(6, 136)
+        Me.btn_connects.Name = "btn_connects"
+        Me.btn_connects.Size = New System.Drawing.Size(151, 29)
+        Me.btn_connects.TabIndex = 6
+        Me.btn_connects.Text = "Connect"
+        Me.btn_connects.UseVisualStyleBackColor = True
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(159, 17)
+        Me.Label2.Location = New System.Drawing.Point(159, 8)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(141, 20)
         Me.Label2.TabIndex = 5
@@ -113,7 +125,7 @@ Partial Class Frm_InfoVoucher
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 17)
+        Me.Label1.Location = New System.Drawing.Point(6, 8)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 20)
         Me.Label1.TabIndex = 4
@@ -123,16 +135,17 @@ Partial Class Frm_InfoVoucher
         '
         Me.txt_details.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_details.Location = New System.Drawing.Point(163, 40)
+        Me.txt_details.Location = New System.Drawing.Point(163, 31)
         Me.txt_details.Multiline = True
         Me.txt_details.Name = "txt_details"
         Me.txt_details.ReadOnly = True
-        Me.txt_details.Size = New System.Drawing.Size(518, 99)
+        Me.txt_details.Size = New System.Drawing.Size(518, 134)
         Me.txt_details.TabIndex = 3
         '
         'btn_modinfovouch
         '
-        Me.btn_modinfovouch.Location = New System.Drawing.Point(6, 75)
+        Me.btn_modinfovouch.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_modinfovouch.Location = New System.Drawing.Point(6, 66)
         Me.btn_modinfovouch.Name = "btn_modinfovouch"
         Me.btn_modinfovouch.Size = New System.Drawing.Size(151, 29)
         Me.btn_modinfovouch.TabIndex = 2
@@ -141,7 +154,8 @@ Partial Class Frm_InfoVoucher
         '
         'btn_delinfovouch
         '
-        Me.btn_delinfovouch.Location = New System.Drawing.Point(6, 110)
+        Me.btn_delinfovouch.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_delinfovouch.Location = New System.Drawing.Point(6, 101)
         Me.btn_delinfovouch.Name = "btn_delinfovouch"
         Me.btn_delinfovouch.Size = New System.Drawing.Size(151, 29)
         Me.btn_delinfovouch.TabIndex = 1
@@ -150,7 +164,8 @@ Partial Class Frm_InfoVoucher
         '
         'btn_newinfovouch
         '
-        Me.btn_newinfovouch.Location = New System.Drawing.Point(6, 40)
+        Me.btn_newinfovouch.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_newinfovouch.Location = New System.Drawing.Point(6, 31)
         Me.btn_newinfovouch.Name = "btn_newinfovouch"
         Me.btn_newinfovouch.Size = New System.Drawing.Size(151, 29)
         Me.btn_newinfovouch.TabIndex = 0
@@ -168,7 +183,7 @@ Partial Class Frm_InfoVoucher
         Me.tab_filter.Location = New System.Drawing.Point(4, 22)
         Me.tab_filter.Name = "tab_filter"
         Me.tab_filter.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_filter.Size = New System.Drawing.Size(687, 152)
+        Me.tab_filter.Size = New System.Drawing.Size(687, 176)
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
@@ -269,4 +284,5 @@ Partial Class Frm_InfoVoucher
     Friend WithEvents txt_byClientName As TextBox
     Friend WithEvents rdb_byinfovouchid As RadioButton
     Friend WithEvents txt_byInfovouchid As TextBox
+    Friend WithEvents btn_connects As Button
 End Class
