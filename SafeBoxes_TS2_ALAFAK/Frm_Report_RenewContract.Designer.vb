@@ -24,14 +24,13 @@ Partial Class Frm_Report_RenewContract
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Txt_ContId = New System.Windows.Forms.TextBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.Rdb_ByContId = New System.Windows.Forms.RadioButton()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.dgv_renew = New System.Windows.Forms.DataGridView()
+        Me.CRptV_Renew = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.dgv_renew, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -39,14 +38,14 @@ Partial Class Frm_Report_RenewContract
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.CheckBox1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.Txt_ContId)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.dtpick_exdate)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.Rdb_ByContId)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Location = New System.Drawing.Point(15, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(704, 134)
+        Me.GroupBox1.Size = New System.Drawing.Size(688, 134)
         Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filter"
@@ -61,13 +60,13 @@ Partial Class Frm_Report_RenewContract
         Me.CheckBox1.Text = "Delivered"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'Txt_ContId
         '
-        Me.TextBox1.Location = New System.Drawing.Point(6, 57)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(234, 26)
-        Me.TextBox1.TabIndex = 12
+        Me.Txt_ContId.Location = New System.Drawing.Point(6, 57)
+        Me.Txt_ContId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Txt_ContId.Name = "Txt_ContId"
+        Me.Txt_ContId.Size = New System.Drawing.Size(234, 26)
+        Me.Txt_ContId.TabIndex = 12
         '
         'RadioButton2
         '
@@ -92,16 +91,16 @@ Partial Class Frm_Report_RenewContract
         Me.dtpick_exdate.Size = New System.Drawing.Size(204, 26)
         Me.dtpick_exdate.TabIndex = 10
         '
-        'RadioButton1
+        'Rdb_ByContId
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 25)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(131, 24)
-        Me.RadioButton1.TabIndex = 16
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "By Contract ID"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.Rdb_ByContId.AutoSize = True
+        Me.Rdb_ByContId.Location = New System.Drawing.Point(6, 25)
+        Me.Rdb_ByContId.Name = "Rdb_ByContId"
+        Me.Rdb_ByContId.Size = New System.Drawing.Size(131, 24)
+        Me.Rdb_ByContId.TabIndex = 16
+        Me.Rdb_ByContId.TabStop = True
+        Me.Rdb_ByContId.Text = "By Contract ID"
+        Me.Rdb_ByContId.UseVisualStyleBackColor = True
         '
         'DateTimePicker1
         '
@@ -115,58 +114,43 @@ Partial Class Frm_Report_RenewContract
         Me.DateTimePicker1.Size = New System.Drawing.Size(204, 26)
         Me.DateTimePicker1.TabIndex = 11
         '
-        'dgv_renew
+        'CRptV_Renew
         '
-        Me.dgv_renew.AllowUserToAddRows = False
-        Me.dgv_renew.AllowUserToDeleteRows = False
-        Me.dgv_renew.AllowUserToResizeRows = False
-        Me.dgv_renew.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.CRptV_Renew.ActiveViewIndex = -1
+        Me.CRptV_Renew.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgv_renew.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgv_renew.BackgroundColor = System.Drawing.Color.White
-        Me.dgv_renew.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_renew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_renew.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dgv_renew.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgv_renew.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_renew.Location = New System.Drawing.Point(15, 157)
-        Me.dgv_renew.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.dgv_renew.MultiSelect = False
-        Me.dgv_renew.Name = "dgv_renew"
-        Me.dgv_renew.ReadOnly = True
-        Me.dgv_renew.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_renew.RowHeadersVisible = False
-        Me.dgv_renew.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.dgv_renew.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_renew.Size = New System.Drawing.Size(704, 393)
-        Me.dgv_renew.TabIndex = 18
+        Me.CRptV_Renew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CRptV_Renew.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CRptV_Renew.Location = New System.Drawing.Point(15, 152)
+        Me.CRptV_Renew.Name = "CRptV_Renew"
+        Me.CRptV_Renew.Size = New System.Drawing.Size(688, 428)
+        Me.CRptV_Renew.TabIndex = 20
         '
         'Frm_Report_RenewContract
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(734, 567)
+        Me.ClientSize = New System.Drawing.Size(718, 592)
+        Me.Controls.Add(Me.CRptV_Renew)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.dgv_renew)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Report_RenewContract"
         Me.Text = "Frm_Report_RenewContract"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.dgv_renew, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Txt_ContId As TextBox
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents dtpick_exdate As DateTimePicker
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents Rdb_ByContId As RadioButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents dgv_renew As DataGridView
+    Friend WithEvents CRptV_Renew As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class
