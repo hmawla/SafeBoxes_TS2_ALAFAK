@@ -32,12 +32,12 @@ Partial Class Frm_SignatureCards
         Me.btn_delbox = New System.Windows.Forms.Button()
         Me.btn_newbox = New System.Windows.Forms.Button()
         Me.tab_filter = New System.Windows.Forms.TabPage()
+        Me.txt_bycname = New System.Windows.Forms.TextBox()
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
-        Me.rdb_byBoxSize = New System.Windows.Forms.RadioButton()
+        Me.rdb_byCname = New System.Windows.Forms.RadioButton()
         Me.txt_bybid = New System.Windows.Forms.TextBox()
         Me.rdb_bysigncardid = New System.Windows.Forms.RadioButton()
-        Me.txt_bycname = New System.Windows.Forms.TextBox()
         CType(Me.dgv_signcard, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
@@ -170,7 +170,7 @@ Partial Class Frm_SignatureCards
         Me.tab_filter.Controls.Add(Me.txt_bycname)
         Me.tab_filter.Controls.Add(Me.btn_reset)
         Me.tab_filter.Controls.Add(Me.btn_search)
-        Me.tab_filter.Controls.Add(Me.rdb_byBoxSize)
+        Me.tab_filter.Controls.Add(Me.rdb_byCname)
         Me.tab_filter.Controls.Add(Me.txt_bybid)
         Me.tab_filter.Controls.Add(Me.rdb_bysigncardid)
         Me.tab_filter.Location = New System.Drawing.Point(4, 29)
@@ -181,6 +181,15 @@ Partial Class Frm_SignatureCards
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
+        '
+        'txt_bycname
+        '
+        Me.txt_bycname.Enabled = False
+        Me.txt_bycname.Location = New System.Drawing.Point(175, 55)
+        Me.txt_bycname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_bycname.Name = "txt_bycname"
+        Me.txt_bycname.Size = New System.Drawing.Size(352, 26)
+        Me.txt_bycname.TabIndex = 14
         '
         'btn_reset
         '
@@ -205,16 +214,16 @@ Partial Class Frm_SignatureCards
         Me.btn_search.Text = "Filter"
         Me.btn_search.UseVisualStyleBackColor = True
         '
-        'rdb_byBoxSize
+        'rdb_byCname
         '
-        Me.rdb_byBoxSize.AutoSize = True
-        Me.rdb_byBoxSize.Location = New System.Drawing.Point(9, 56)
-        Me.rdb_byBoxSize.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.rdb_byBoxSize.Name = "rdb_byBoxSize"
-        Me.rdb_byBoxSize.Size = New System.Drawing.Size(135, 24)
-        Me.rdb_byBoxSize.TabIndex = 11
-        Me.rdb_byBoxSize.Text = "By Client Name"
-        Me.rdb_byBoxSize.UseVisualStyleBackColor = True
+        Me.rdb_byCname.AutoSize = True
+        Me.rdb_byCname.Location = New System.Drawing.Point(9, 56)
+        Me.rdb_byCname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.rdb_byCname.Name = "rdb_byCname"
+        Me.rdb_byCname.Size = New System.Drawing.Size(135, 24)
+        Me.rdb_byCname.TabIndex = 11
+        Me.rdb_byCname.Text = "By Client Name"
+        Me.rdb_byCname.UseVisualStyleBackColor = True
         '
         'txt_bybid
         '
@@ -234,15 +243,6 @@ Partial Class Frm_SignatureCards
         Me.rdb_bysigncardid.TabIndex = 13
         Me.rdb_bysigncardid.Text = "By Sign Card ID"
         '
-        'txt_bycname
-        '
-        Me.txt_bycname.Enabled = False
-        Me.txt_bycname.Location = New System.Drawing.Point(175, 55)
-        Me.txt_bycname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.txt_bycname.Name = "txt_bycname"
-        Me.txt_bycname.Size = New System.Drawing.Size(352, 26)
-        Me.txt_bycname.TabIndex = 14
-        '
         'Frm_SignatureCards
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -251,7 +251,7 @@ Partial Class Frm_SignatureCards
         Me.Controls.Add(Me.dgv_signcard)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Frm_SignatureCards"
-        Me.Text = "Frm_SignatureCards"
+        Me.Text = "Signature Cards Manager"
         CType(Me.dgv_signcard, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.tab_datacontrol.ResumeLayout(False)
@@ -275,7 +275,7 @@ Partial Class Frm_SignatureCards
     Friend WithEvents txt_bycname As TextBox
     Friend WithEvents btn_reset As Button
     Friend WithEvents btn_search As Button
-    Friend WithEvents rdb_byBoxSize As RadioButton
+    Friend WithEvents rdb_byCname As RadioButton
     Friend WithEvents txt_bybid As TextBox
     Friend WithEvents rdb_bysigncardid As RadioButton
 End Class
