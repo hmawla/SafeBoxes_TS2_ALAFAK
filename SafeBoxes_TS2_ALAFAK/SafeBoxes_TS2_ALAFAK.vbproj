@@ -202,6 +202,12 @@
     <Compile Include="Frm_Report_Authorizations.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_Report_Contract.Designer.vb">
+      <DependentUpon>Frm_Report_Contract.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_Contract.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_Report_EndingContracts.Designer.vb">
       <DependentUpon>Frm_Report_EndingContracts.vb</DependentUpon>
     </Compile>
@@ -418,6 +424,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_Authorizations.resx">
       <DependentUpon>Frm_Report_Authorizations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_Contract.resx">
+      <DependentUpon>Frm_Report_Contract.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_EndingContracts.resx">
       <DependentUpon>Frm_Report_EndingContracts.vb</DependentUpon>
