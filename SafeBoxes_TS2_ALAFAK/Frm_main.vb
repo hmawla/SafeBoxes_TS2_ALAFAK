@@ -67,4 +67,8 @@
     Private Sub MaterialRaisedButton18_Click_2(sender As Object, e As EventArgs) Handles MaterialRaisedButton18.Click
         Frm_Employees.Show()
     End Sub
+
+    Private Sub MaterialRaisedButton20_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton20.Click
+        Frm_SignatureCards.Show()
+    End Sub
 End Class
