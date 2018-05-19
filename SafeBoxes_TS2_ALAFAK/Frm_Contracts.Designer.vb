@@ -24,6 +24,7 @@ Partial Class Frm_Contracts
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tab_datacontrol = New System.Windows.Forms.TabPage()
+        Me.btn_visits = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btn_authorize = New System.Windows.Forms.Button()
         Me.btn_withdraw = New System.Windows.Forms.Button()
@@ -53,7 +54,6 @@ Partial Class Frm_Contracts
         Me.ContractsEndReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WithdrawPermissionsReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientAuthorizationsReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btn_visits = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
         Me.tab_filter.SuspendLayout()
@@ -67,6 +67,7 @@ Partial Class Frm_Contracts
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
+        Me.TabControl1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(13, 27)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -98,6 +99,15 @@ Partial Class Frm_Contracts
         Me.tab_datacontrol.TabIndex = 0
         Me.tab_datacontrol.Text = "Data Control"
         Me.tab_datacontrol.UseVisualStyleBackColor = True
+        '
+        'btn_visits
+        '
+        Me.btn_visits.Location = New System.Drawing.Point(321, 96)
+        Me.btn_visits.Name = "btn_visits"
+        Me.btn_visits.Size = New System.Drawing.Size(151, 29)
+        Me.btn_visits.TabIndex = 16
+        Me.btn_visits.Text = "Visits"
+        Me.btn_visits.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -274,7 +284,7 @@ Partial Class Frm_Contracts
         Me.rdb_bycontid.AutoSize = True
         Me.rdb_bycontid.Location = New System.Drawing.Point(6, 43)
         Me.rdb_bycontid.Name = "rdb_bycontid"
-        Me.rdb_bycontid.Size = New System.Drawing.Size(131, 24)
+        Me.rdb_bycontid.Size = New System.Drawing.Size(127, 24)
         Me.rdb_bycontid.TabIndex = 11
         Me.rdb_bycontid.Text = "By Contract ID"
         Me.rdb_bycontid.UseVisualStyleBackColor = True
@@ -287,7 +297,7 @@ Partial Class Frm_Contracts
         Me.txt_bycontid.Location = New System.Drawing.Point(138, 42)
         Me.txt_bycontid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_bycontid.Name = "txt_bycontid"
-        Me.txt_bycontid.Size = New System.Drawing.Size(215, 26)
+        Me.txt_bycontid.Size = New System.Drawing.Size(215, 27)
         Me.txt_bycontid.TabIndex = 10
         '
         'rdb_byboxid
@@ -304,7 +314,7 @@ Partial Class Frm_Contracts
         Me.txt_byboxid.Location = New System.Drawing.Point(138, 5)
         Me.txt_byboxid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byboxid.Name = "txt_byboxid"
-        Me.txt_byboxid.Size = New System.Drawing.Size(215, 26)
+        Me.txt_byboxid.Size = New System.Drawing.Size(215, 27)
         Me.txt_byboxid.TabIndex = 8
         '
         'dgv_contracts
@@ -336,6 +346,7 @@ Partial Class Frm_Contracts
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.Font = New System.Drawing.Font("Roboto", 8.0!)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -347,47 +358,38 @@ Partial Class Frm_Contracts
         '
         Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MissingKeysReportsToolStripMenuItem, Me.RenewReportsToolStripMenuItem, Me.ContractsEndReportsToolStripMenuItem, Me.WithdrawPermissionsReportsToolStripMenuItem, Me.ClientAuthorizationsReportsToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
         Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'MissingKeysReportsToolStripMenuItem
         '
         Me.MissingKeysReportsToolStripMenuItem.Name = "MissingKeysReportsToolStripMenuItem"
-        Me.MissingKeysReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.MissingKeysReportsToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
         Me.MissingKeysReportsToolStripMenuItem.Text = "Missing Keys Reports"
         '
         'RenewReportsToolStripMenuItem
         '
         Me.RenewReportsToolStripMenuItem.Name = "RenewReportsToolStripMenuItem"
-        Me.RenewReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.RenewReportsToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
         Me.RenewReportsToolStripMenuItem.Text = "Renews Reports"
         '
         'ContractsEndReportsToolStripMenuItem
         '
         Me.ContractsEndReportsToolStripMenuItem.Name = "ContractsEndReportsToolStripMenuItem"
-        Me.ContractsEndReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.ContractsEndReportsToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
         Me.ContractsEndReportsToolStripMenuItem.Text = "Contracts End Reports"
         '
         'WithdrawPermissionsReportsToolStripMenuItem
         '
         Me.WithdrawPermissionsReportsToolStripMenuItem.Name = "WithdrawPermissionsReportsToolStripMenuItem"
-        Me.WithdrawPermissionsReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.WithdrawPermissionsReportsToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
         Me.WithdrawPermissionsReportsToolStripMenuItem.Text = "Withdraw Permissions Reports"
         '
         'ClientAuthorizationsReportsToolStripMenuItem
         '
         Me.ClientAuthorizationsReportsToolStripMenuItem.Name = "ClientAuthorizationsReportsToolStripMenuItem"
-        Me.ClientAuthorizationsReportsToolStripMenuItem.Size = New System.Drawing.Size(234, 22)
+        Me.ClientAuthorizationsReportsToolStripMenuItem.Size = New System.Drawing.Size(229, 22)
         Me.ClientAuthorizationsReportsToolStripMenuItem.Text = "Client Authorizations Reports"
-        '
-        'btn_visits
-        '
-        Me.btn_visits.Location = New System.Drawing.Point(321, 96)
-        Me.btn_visits.Name = "btn_visits"
-        Me.btn_visits.Size = New System.Drawing.Size(151, 29)
-        Me.btn_visits.TabIndex = 16
-        Me.btn_visits.Text = "Visits"
-        Me.btn_visits.UseVisualStyleBackColor = True
         '
         'Frm_Contracts
         '

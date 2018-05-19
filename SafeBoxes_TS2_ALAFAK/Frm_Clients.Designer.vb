@@ -50,6 +50,7 @@ Partial Class Frm_Clients
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
+        Me.TabControl1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(13, 14)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
@@ -195,7 +196,7 @@ Partial Class Frm_Clients
         Me.txt_bycname.Location = New System.Drawing.Point(175, 54)
         Me.txt_bycname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_bycname.Name = "txt_bycname"
-        Me.txt_bycname.Size = New System.Drawing.Size(302, 26)
+        Me.txt_bycname.Size = New System.Drawing.Size(302, 27)
         Me.txt_bycname.TabIndex = 10
         '
         'rdb_byClientid
@@ -213,7 +214,7 @@ Partial Class Frm_Clients
         Me.txt_bycid.Location = New System.Drawing.Point(175, 14)
         Me.txt_bycid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_bycid.Name = "txt_bycid"
-        Me.txt_bycid.Size = New System.Drawing.Size(302, 26)
+        Me.txt_bycid.Size = New System.Drawing.Size(302, 27)
         Me.txt_bycid.TabIndex = 8
         '
         'dgv_clients

@@ -77,6 +77,7 @@ Partial Class Frm_Employees
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
+        Me.TabControl1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(13, 14)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
@@ -209,7 +210,7 @@ Partial Class Frm_Employees
         Me.rdb_byEmpName.Location = New System.Drawing.Point(317, 9)
         Me.rdb_byEmpName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rdb_byEmpName.Name = "rdb_byEmpName"
-        Me.rdb_byEmpName.Size = New System.Drawing.Size(165, 24)
+        Me.rdb_byEmpName.Size = New System.Drawing.Size(164, 24)
         Me.rdb_byEmpName.TabIndex = 11
         Me.rdb_byEmpName.Text = "By Employee Name"
         Me.rdb_byEmpName.UseVisualStyleBackColor = True
@@ -222,7 +223,7 @@ Partial Class Frm_Employees
         Me.txt_byEmpname.Location = New System.Drawing.Point(317, 58)
         Me.txt_byEmpname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_byEmpname.Name = "txt_byEmpname"
-        Me.txt_byEmpname.Size = New System.Drawing.Size(324, 26)
+        Me.txt_byEmpname.Size = New System.Drawing.Size(324, 27)
         Me.txt_byEmpname.TabIndex = 10
         '
         'txt_byEmpid
@@ -231,7 +232,7 @@ Partial Class Frm_Employees
         Me.txt_byEmpid.Location = New System.Drawing.Point(9, 58)
         Me.txt_byEmpid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_byEmpid.Name = "txt_byEmpid"
-        Me.txt_byEmpid.Size = New System.Drawing.Size(299, 26)
+        Me.txt_byEmpid.Size = New System.Drawing.Size(299, 27)
         Me.txt_byEmpid.TabIndex = 8
         '
         'rdb_byEmpid

@@ -77,7 +77,7 @@ Partial Class Frm_Boxes
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.TabControl1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(13, 14)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TabControl1.Name = "TabControl1"
@@ -224,7 +224,7 @@ Partial Class Frm_Boxes
         Me.rdb_byBoxSize.Location = New System.Drawing.Point(9, 56)
         Me.rdb_byBoxSize.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rdb_byBoxSize.Name = "rdb_byBoxSize"
-        Me.rdb_byBoxSize.Size = New System.Drawing.Size(111, 24)
+        Me.rdb_byBoxSize.Size = New System.Drawing.Size(109, 24)
         Me.rdb_byBoxSize.TabIndex = 11
         Me.rdb_byBoxSize.Text = "By Box Size"
         Me.rdb_byBoxSize.UseVisualStyleBackColor = True
@@ -235,7 +235,7 @@ Partial Class Frm_Boxes
         Me.txt_bybid.Location = New System.Drawing.Point(175, 14)
         Me.txt_bybid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_bybid.Name = "txt_bybid"
-        Me.txt_bybid.Size = New System.Drawing.Size(352, 26)
+        Me.txt_bybid.Size = New System.Drawing.Size(352, 27)
         Me.txt_bybid.TabIndex = 8
         '
         'rdb_byBoxid

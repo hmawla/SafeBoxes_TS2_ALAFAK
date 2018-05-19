@@ -78,6 +78,7 @@ Partial Class Frm_InfoVoucher
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
+        Me.TabControl1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(13, 13)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -93,10 +94,10 @@ Partial Class Frm_InfoVoucher
         Me.tab_datacontrol.Controls.Add(Me.btn_modinfovouch)
         Me.tab_datacontrol.Controls.Add(Me.btn_delinfovouch)
         Me.tab_datacontrol.Controls.Add(Me.btn_newinfovouch)
-        Me.tab_datacontrol.Location = New System.Drawing.Point(4, 22)
+        Me.tab_datacontrol.Location = New System.Drawing.Point(4, 29)
         Me.tab_datacontrol.Name = "tab_datacontrol"
         Me.tab_datacontrol.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_datacontrol.Size = New System.Drawing.Size(687, 176)
+        Me.tab_datacontrol.Size = New System.Drawing.Size(687, 169)
         Me.tab_datacontrol.TabIndex = 0
         Me.tab_datacontrol.Text = "Data Control"
         Me.tab_datacontrol.UseVisualStyleBackColor = True
@@ -216,7 +217,7 @@ Partial Class Frm_InfoVoucher
         Me.rdb_byClientName.AutoSize = True
         Me.rdb_byClientName.Location = New System.Drawing.Point(6, 72)
         Me.rdb_byClientName.Name = "rdb_byClientName"
-        Me.rdb_byClientName.Size = New System.Drawing.Size(97, 17)
+        Me.rdb_byClientName.Size = New System.Drawing.Size(135, 24)
         Me.rdb_byClientName.TabIndex = 11
         Me.rdb_byClientName.Text = "By Client Name"
         Me.rdb_byClientName.UseVisualStyleBackColor = True
@@ -229,7 +230,7 @@ Partial Class Frm_InfoVoucher
         Me.txt_byClientName.Location = New System.Drawing.Point(6, 104)
         Me.txt_byClientName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byClientName.Name = "txt_byClientName"
-        Me.txt_byClientName.Size = New System.Drawing.Size(236, 20)
+        Me.txt_byClientName.Size = New System.Drawing.Size(236, 27)
         Me.txt_byClientName.TabIndex = 10
         '
         'rdb_byinfovouchid
@@ -246,7 +247,7 @@ Partial Class Frm_InfoVoucher
         Me.txt_byInfovouchid.Location = New System.Drawing.Point(6, 38)
         Me.txt_byInfovouchid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byInfovouchid.Name = "txt_byInfovouchid"
-        Me.txt_byInfovouchid.Size = New System.Drawing.Size(236, 20)
+        Me.txt_byInfovouchid.Size = New System.Drawing.Size(236, 27)
         Me.txt_byInfovouchid.TabIndex = 8
         '
         'Frm_InfoVoucher
