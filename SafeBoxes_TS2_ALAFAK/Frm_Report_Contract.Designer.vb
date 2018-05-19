@@ -29,7 +29,7 @@ Partial Class Frm_Report_Contract
         Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
         Me.Rdb_ByContId = New System.Windows.Forms.RadioButton()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.CRptV_Contract = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -114,22 +114,22 @@ Partial Class Frm_Report_Contract
         Me.DateTimePicker1.Size = New System.Drawing.Size(204, 26)
         Me.DateTimePicker1.TabIndex = 11
         '
-        'CrystalReportViewer1
+        'CRptV_Contract
         '
-        Me.CrystalReportViewer1.ActiveViewIndex = -1
-        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.CrystalReportViewer1.Location = New System.Drawing.Point(12, 152)
-        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(688, 428)
-        Me.CrystalReportViewer1.TabIndex = 21
+        Me.CRptV_Contract.ActiveViewIndex = -1
+        Me.CRptV_Contract.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CRptV_Contract.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CRptV_Contract.Location = New System.Drawing.Point(12, 152)
+        Me.CRptV_Contract.Name = "CRptV_Contract"
+        Me.CRptV_Contract.Size = New System.Drawing.Size(688, 428)
+        Me.CRptV_Contract.TabIndex = 21
         '
         'Frm_Report_Contract
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(718, 592)
-        Me.Controls.Add(Me.CrystalReportViewer1)
+        Me.Controls.Add(Me.CRptV_Contract)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Frm_Report_Contract"
         Me.Text = "Frm_Report_Contract"
@@ -145,5 +145,5 @@ Partial Class Frm_Report_Contract
     Friend WithEvents dtpick_exdate As DateTimePicker
     Friend WithEvents Rdb_ByContId As RadioButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents CRptV_Contract As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

@@ -322,6 +322,12 @@
     <Compile Include="Frm_SelectContract.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Rpt_Contract.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_Contract.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Rpt_MissingKeys.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -454,6 +460,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Redeliver_Date.resx">
       <DependentUpon>Redeliver_Date.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_Contract.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Contract.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_MissingKeys.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
