@@ -132,7 +132,7 @@ Partial Class Frm_Report_Contract
         Me.Controls.Add(Me.CRptV_Contract)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Frm_Report_Contract"
-        Me.Text = "Frm_Report_Contract"
+        Me.Text = " "
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
