@@ -40,8 +40,6 @@ Partial Class Frm_Connects
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.Txt_EmpName = New System.Windows.Forms.TextBox()
         CType(Me.DGV_Connects, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -63,8 +61,8 @@ Partial Class Frm_Connects
         Me.DGV_Connects.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DGV_Connects.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DGV_Connects.GridColor = System.Drawing.Color.PowderBlue
-        Me.DGV_Connects.Location = New System.Drawing.Point(15, 140)
-        Me.DGV_Connects.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DGV_Connects.Location = New System.Drawing.Point(22, 216)
+        Me.DGV_Connects.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.DGV_Connects.MultiSelect = False
         Me.DGV_Connects.Name = "DGV_Connects"
         Me.DGV_Connects.ReadOnly = True
@@ -72,7 +70,7 @@ Partial Class Frm_Connects
         Me.DGV_Connects.RowHeadersVisible = False
         Me.DGV_Connects.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_Connects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_Connects.Size = New System.Drawing.Size(653, 346)
+        Me.DGV_Connects.Size = New System.Drawing.Size(618, 287)
         Me.DGV_Connects.TabIndex = 86
         '
         'Column1
@@ -109,9 +107,10 @@ Partial Class Frm_Connects
         '
         Me.Btn_Submit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Btn_Submit.Enabled = False
-        Me.Btn_Submit.Location = New System.Drawing.Point(592, 496)
+        Me.Btn_Submit.Location = New System.Drawing.Point(526, 517)
+        Me.Btn_Submit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Btn_Submit.Name = "Btn_Submit"
-        Me.Btn_Submit.Size = New System.Drawing.Size(75, 26)
+        Me.Btn_Submit.Size = New System.Drawing.Size(112, 40)
         Me.Btn_Submit.TabIndex = 85
         Me.Btn_Submit.Text = "Submit"
         Me.Btn_Submit.UseVisualStyleBackColor = True
@@ -119,9 +118,10 @@ Partial Class Frm_Connects
         'Btn_Connects
         '
         Me.Btn_Connects.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Connects.Location = New System.Drawing.Point(593, 104)
+        Me.Btn_Connects.Location = New System.Drawing.Point(532, 155)
+        Me.Btn_Connects.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Btn_Connects.Name = "Btn_Connects"
-        Me.Btn_Connects.Size = New System.Drawing.Size(75, 26)
+        Me.Btn_Connects.Size = New System.Drawing.Size(112, 40)
         Me.Btn_Connects.TabIndex = 84
         Me.Btn_Connects.Text = "Connect"
         Me.Btn_Connects.UseVisualStyleBackColor = True
@@ -132,11 +132,11 @@ Partial Class Frm_Connects
         Me.Lbl_infovId.Depth = 0
         Me.Lbl_infovId.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.Lbl_infovId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Lbl_infovId.Location = New System.Drawing.Point(11, 9)
-        Me.Lbl_infovId.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
+        Me.Lbl_infovId.Location = New System.Drawing.Point(16, 14)
+        Me.Lbl_infovId.Margin = New System.Windows.Forms.Padding(14, 0, 14, 0)
         Me.Lbl_infovId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Lbl_infovId.Name = "Lbl_infovId"
-        Me.Lbl_infovId.Size = New System.Drawing.Size(171, 19)
+        Me.Lbl_infovId.Size = New System.Drawing.Size(170, 18)
         Me.Lbl_infovId.TabIndex = 77
         Me.Lbl_infovId.Text = "InfoVoucher ID: <InfoId>"
         '
@@ -146,11 +146,11 @@ Partial Class Frm_Connects
         Me.Lbl_EmpId.Depth = 0
         Me.Lbl_EmpId.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.Lbl_EmpId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Lbl_EmpId.Location = New System.Drawing.Point(187, 9)
-        Me.Lbl_EmpId.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
+        Me.Lbl_EmpId.Location = New System.Drawing.Point(214, 14)
+        Me.Lbl_EmpId.Margin = New System.Windows.Forms.Padding(14, 0, 14, 0)
         Me.Lbl_EmpId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Lbl_EmpId.Name = "Lbl_EmpId"
-        Me.Lbl_EmpId.Size = New System.Drawing.Size(159, 19)
+        Me.Lbl_EmpId.Size = New System.Drawing.Size(158, 18)
         Me.Lbl_EmpId.TabIndex = 76
         Me.Lbl_EmpId.Text = "Employee ID: <EmpId>"
         '
@@ -158,13 +158,13 @@ Partial Class Frm_Connects
         '
         Me.MaterialLabel1.AutoSize = True
         Me.MaterialLabel1.Depth = 0
-        Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(14, 108)
-        Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(21, 166)
+        Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
-        Me.MaterialLabel1.Size = New System.Drawing.Size(102, 20)
+        Me.MaterialLabel1.Size = New System.Drawing.Size(99, 19)
         Me.MaterialLabel1.TabIndex = 88
         Me.MaterialLabel1.Text = "Answer Note:"
         '
@@ -172,10 +172,10 @@ Partial Class Frm_Connects
         '
         Me.txt_note.Enabled = False
         Me.txt_note.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_note.Location = New System.Drawing.Point(120, 104)
-        Me.txt_note.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_note.Location = New System.Drawing.Point(132, 162)
+        Me.txt_note.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.txt_note.Name = "txt_note"
-        Me.txt_note.Size = New System.Drawing.Size(466, 27)
+        Me.txt_note.Size = New System.Drawing.Size(390, 27)
         Me.txt_note.TabIndex = 87
         '
         'GroupBox1
@@ -183,9 +183,11 @@ Partial Class Frm_Connects
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(19, 31)
+        Me.GroupBox1.Location = New System.Drawing.Point(19, 36)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(219, 65)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(167, 100)
         Me.GroupBox1.TabIndex = 89
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Answer :"
@@ -193,9 +195,10 @@ Partial Class Frm_Connects
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(101, 36)
+        Me.RadioButton2.Location = New System.Drawing.Point(8, 59)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(47, 24)
+        Me.RadioButton2.Size = New System.Drawing.Size(47, 23)
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "No"
@@ -204,9 +207,10 @@ Partial Class Frm_Connects
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(101, 13)
+        Me.RadioButton1.Location = New System.Drawing.Point(8, 28)
+        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(53, 24)
+        Me.RadioButton1.Size = New System.Drawing.Size(53, 23)
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Yes"
@@ -218,9 +222,11 @@ Partial Class Frm_Connects
         Me.GroupBox2.Controls.Add(Me.RadioButton4)
         Me.GroupBox2.Enabled = False
         Me.GroupBox2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(244, 33)
+        Me.GroupBox2.Location = New System.Drawing.Point(194, 39)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(219, 63)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(328, 97)
         Me.GroupBox2.TabIndex = 90
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Result :"
@@ -228,9 +234,10 @@ Partial Class Frm_Connects
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(93, 36)
+        Me.RadioButton3.Location = New System.Drawing.Point(8, 56)
+        Me.RadioButton3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(47, 24)
+        Me.RadioButton3.Size = New System.Drawing.Size(47, 23)
         Me.RadioButton3.TabIndex = 3
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "No"
@@ -239,45 +246,20 @@ Partial Class Frm_Connects
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(93, 13)
+        Me.RadioButton4.Location = New System.Drawing.Point(8, 25)
+        Me.RadioButton4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(53, 24)
+        Me.RadioButton4.Size = New System.Drawing.Size(53, 23)
         Me.RadioButton4.TabIndex = 2
         Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "Yes"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
-        'MaterialLabel3
-        '
-        Me.MaterialLabel3.AutoSize = True
-        Me.MaterialLabel3.Depth = 0
-        Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel3.Location = New System.Drawing.Point(470, 31)
-        Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel3.Name = "MaterialLabel3"
-        Me.MaterialLabel3.Size = New System.Drawing.Size(123, 19)
-        Me.MaterialLabel3.TabIndex = 92
-        Me.MaterialLabel3.Text = "Employee Name:"
-        '
-        'Txt_EmpName
-        '
-        Me.Txt_EmpName.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_EmpName.Location = New System.Drawing.Point(474, 57)
-        Me.Txt_EmpName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Txt_EmpName.Name = "Txt_EmpName"
-        Me.Txt_EmpName.ReadOnly = True
-        Me.Txt_EmpName.Size = New System.Drawing.Size(187, 27)
-        Me.Txt_EmpName.TabIndex = 91
-        '
         'Frm_Connects
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(679, 530)
-        Me.Controls.Add(Me.MaterialLabel3)
-        Me.Controls.Add(Me.Txt_EmpName)
+        Me.ClientSize = New System.Drawing.Size(656, 570)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.MaterialLabel1)
@@ -287,6 +269,8 @@ Partial Class Frm_Connects
         Me.Controls.Add(Me.Btn_Connects)
         Me.Controls.Add(Me.Lbl_infovId)
         Me.Controls.Add(Me.Lbl_EmpId)
+        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Frm_Connects"
         Me.Text = "Frm_Connects"
         CType(Me.DGV_Connects, System.ComponentModel.ISupportInitialize).EndInit()
@@ -311,8 +295,6 @@ Partial Class Frm_Connects
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton4 As RadioButton
-    Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Txt_EmpName As TextBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn

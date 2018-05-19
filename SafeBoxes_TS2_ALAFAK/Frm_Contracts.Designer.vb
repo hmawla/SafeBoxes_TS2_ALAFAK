@@ -92,10 +92,10 @@ Partial Class Frm_Contracts
         Me.tab_datacontrol.Controls.Add(Me.btn_modcontract)
         Me.tab_datacontrol.Controls.Add(Me.btn_delcontract)
         Me.tab_datacontrol.Controls.Add(Me.btn_newcontract)
-        Me.tab_datacontrol.Location = New System.Drawing.Point(4, 29)
+        Me.tab_datacontrol.Location = New System.Drawing.Point(4, 28)
         Me.tab_datacontrol.Name = "tab_datacontrol"
         Me.tab_datacontrol.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_datacontrol.Size = New System.Drawing.Size(660, 141)
+        Me.tab_datacontrol.Size = New System.Drawing.Size(660, 142)
         Me.tab_datacontrol.TabIndex = 0
         Me.tab_datacontrol.Text = "Data Control"
         Me.tab_datacontrol.UseVisualStyleBackColor = True
@@ -248,10 +248,10 @@ Partial Class Frm_Contracts
         Me.tab_filter.Controls.Add(Me.txt_bycontid)
         Me.tab_filter.Controls.Add(Me.rdb_byboxid)
         Me.tab_filter.Controls.Add(Me.txt_byboxid)
-        Me.tab_filter.Location = New System.Drawing.Point(4, 29)
+        Me.tab_filter.Location = New System.Drawing.Point(4, 28)
         Me.tab_filter.Name = "tab_filter"
         Me.tab_filter.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_filter.Size = New System.Drawing.Size(660, 141)
+        Me.tab_filter.Size = New System.Drawing.Size(660, 142)
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
@@ -284,7 +284,7 @@ Partial Class Frm_Contracts
         Me.rdb_bycontid.AutoSize = True
         Me.rdb_bycontid.Location = New System.Drawing.Point(6, 43)
         Me.rdb_bycontid.Name = "rdb_bycontid"
-        Me.rdb_bycontid.Size = New System.Drawing.Size(127, 24)
+        Me.rdb_bycontid.Size = New System.Drawing.Size(128, 23)
         Me.rdb_bycontid.TabIndex = 11
         Me.rdb_bycontid.Text = "By Contract ID"
         Me.rdb_bycontid.UseVisualStyleBackColor = True
