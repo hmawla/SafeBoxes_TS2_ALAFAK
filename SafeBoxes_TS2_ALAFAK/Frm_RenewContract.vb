@@ -7,6 +7,7 @@
         EmpId = Frm_main.loggedEmpId
         Lbl_ContId.Text = "Contract ID: " & ContId
         Lbl_EmpId.Text = "Employee ID: " & EmpId
+        DTPick_Expire.Value = DateTime.Now.AddYears(1)
     End Sub
 
     Private Sub SelectClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectClientToolStripMenuItem.Click

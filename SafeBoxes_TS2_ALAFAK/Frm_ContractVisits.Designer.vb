@@ -87,6 +87,7 @@ Partial Class Frm_ContractVisits
         '
         'Txt_ClientId
         '
+        Me.Txt_ClientId.ContextMenuStrip = Me.ClientMenuStrip
         Me.Txt_ClientId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Txt_ClientId.Location = New System.Drawing.Point(157, 65)
         Me.Txt_ClientId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -111,6 +112,7 @@ Partial Class Frm_ContractVisits
         'DTPick_Expire
         '
         Me.DTPick_Expire.CustomFormat = "dd/mm/yyyy"
+        Me.DTPick_Expire.Enabled = False
         Me.DTPick_Expire.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.DTPick_Expire.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DTPick_Expire.Location = New System.Drawing.Point(12, 65)
@@ -151,6 +153,7 @@ Partial Class Frm_ContractVisits
         'Lbl_EmpId
         '
         Me.Lbl_EmpId.AutoSize = True
+        Me.Lbl_EmpId.ContextMenuStrip = Me.EmployeeMenuStrip
         Me.Lbl_EmpId.Depth = 0
         Me.Lbl_EmpId.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.Lbl_EmpId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -195,7 +198,7 @@ Partial Class Frm_ContractVisits
         'SelectClientToolStripMenuItem
         '
         Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
-        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SelectClientToolStripMenuItem.Text = "Select Client"
         '
         'Btn_Submit

@@ -7,6 +7,7 @@
         EmpId = Frm_main.loggedEmpId
         Lbl_ContId.Text = "Contract ID: " & ContId
         Lbl_EmpId.Text = "Employee ID: " & EmpId
+        DTPick_Expire.Value = Date.Now()
     End Sub
 
     Private Sub ClientMenuStrip_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ClientMenuStrip.Opening
@@ -98,5 +99,11 @@ the_End:
         Else
             Btn_Submit.Enabled = False
         End If
+    End Sub
+
+    Private Sub SelectClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectClientToolStripMenuItem.Click
+        Frm_main.clientid = 0
+        Frm_Clients.ShowDialog()
+        Txt_ClientId.Text = Frm_main.clientid
     End Sub
 End Class

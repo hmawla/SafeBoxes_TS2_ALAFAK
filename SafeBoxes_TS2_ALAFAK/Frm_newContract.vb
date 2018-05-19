@@ -96,7 +96,7 @@ Public Class Frm_newContract
             cbox_streets.SelectedValue = rows.Item(1)
             cbox_buildings.SelectedValue = rows.Item(0)
         End If
-
+        dtpick_exdate.Value = DateTime.Now.AddYears(1)
         formLoaded = True
     End Sub
 
