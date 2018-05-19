@@ -340,6 +340,12 @@
       <DependentUpon>Rpt_Contract.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rpt_InfoVoucher.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_InfoVoucher.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Rpt_MissingKeys.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -490,6 +496,10 @@
     <EmbeddedResource Include="Rpt_Contract.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Contract.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_InfoVoucher.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_InfoVoucher.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_MissingKeys.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

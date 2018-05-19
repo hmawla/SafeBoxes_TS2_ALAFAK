@@ -39,10 +39,14 @@ Partial Class Frm_InfoVoucher
         Me.txt_byClientName = New System.Windows.Forms.TextBox()
         Me.rdb_byinfovouchid = New System.Windows.Forms.RadioButton()
         Me.txt_byInfovouchid = New System.Windows.Forms.TextBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv_infovouchers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
         Me.tab_filter.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv_infovouchers
@@ -60,7 +64,7 @@ Partial Class Frm_InfoVoucher
         Me.dgv_infovouchers.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgv_infovouchers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgv_infovouchers.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_infovouchers.Location = New System.Drawing.Point(13, 223)
+        Me.dgv_infovouchers.Location = New System.Drawing.Point(13, 229)
         Me.dgv_infovouchers.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgv_infovouchers.MultiSelect = False
         Me.dgv_infovouchers.Name = "dgv_infovouchers"
@@ -69,7 +73,7 @@ Partial Class Frm_InfoVoucher
         Me.dgv_infovouchers.RowHeadersVisible = False
         Me.dgv_infovouchers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_infovouchers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_infovouchers.Size = New System.Drawing.Size(695, 311)
+        Me.dgv_infovouchers.Size = New System.Drawing.Size(695, 305)
         Me.dgv_infovouchers.TabIndex = 10
         '
         'TabControl1
@@ -79,7 +83,7 @@ Partial Class Frm_InfoVoucher
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
         Me.TabControl1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(13, 13)
+        Me.TabControl1.Location = New System.Drawing.Point(13, 27)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(695, 202)
@@ -181,10 +185,10 @@ Partial Class Frm_InfoVoucher
         Me.tab_filter.Controls.Add(Me.txt_byClientName)
         Me.tab_filter.Controls.Add(Me.rdb_byinfovouchid)
         Me.tab_filter.Controls.Add(Me.txt_byInfovouchid)
-        Me.tab_filter.Location = New System.Drawing.Point(4, 22)
+        Me.tab_filter.Location = New System.Drawing.Point(4, 29)
         Me.tab_filter.Name = "tab_filter"
         Me.tab_filter.Padding = New System.Windows.Forms.Padding(3)
-        Me.tab_filter.Size = New System.Drawing.Size(687, 176)
+        Me.tab_filter.Size = New System.Drawing.Size(687, 169)
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
@@ -217,7 +221,7 @@ Partial Class Frm_InfoVoucher
         Me.rdb_byClientName.AutoSize = True
         Me.rdb_byClientName.Location = New System.Drawing.Point(6, 72)
         Me.rdb_byClientName.Name = "rdb_byClientName"
-        Me.rdb_byClientName.Size = New System.Drawing.Size(135, 24)
+        Me.rdb_byClientName.Size = New System.Drawing.Size(137, 24)
         Me.rdb_byClientName.TabIndex = 11
         Me.rdb_byClientName.Text = "By Client Name"
         Me.rdb_byClientName.UseVisualStyleBackColor = True
@@ -250,11 +254,35 @@ Partial Class Frm_InfoVoucher
         Me.txt_byInfovouchid.Size = New System.Drawing.Size(236, 27)
         Me.txt_byInfovouchid.TabIndex = 8
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Font = New System.Drawing.Font("Roboto", 8.0!)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportsToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(720, 24)
+        Me.MenuStrip1.TabIndex = 11
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
+        Me.ReportsToolStripMenuItem.Text = "Reports"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(170, 22)
+        Me.ToolStripMenuItem1.Text = "InfoVoucher Report"
+        '
         'Frm_InfoVoucher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(720, 547)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.dgv_infovouchers)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Frm_InfoVoucher"
@@ -265,7 +293,10 @@ Partial Class Frm_InfoVoucher
         Me.tab_datacontrol.PerformLayout()
         Me.tab_filter.ResumeLayout(False)
         Me.tab_filter.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -286,4 +317,7 @@ Partial Class Frm_InfoVoucher
     Friend WithEvents rdb_byinfovouchid As RadioButton
     Friend WithEvents txt_byInfovouchid As TextBox
     Friend WithEvents btn_connects As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class
