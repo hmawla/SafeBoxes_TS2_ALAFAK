@@ -102,7 +102,7 @@ Partial Class Frm_Contracts
         '
         'btn_visits
         '
-        Me.btn_visits.Location = New System.Drawing.Point(321, 96)
+        Me.btn_visits.Location = New System.Drawing.Point(321, 95)
         Me.btn_visits.Name = "btn_visits"
         Me.btn_visits.Size = New System.Drawing.Size(151, 29)
         Me.btn_visits.TabIndex = 16
@@ -113,7 +113,7 @@ Partial Class Frm_Contracts
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(473, 3)
+        Me.Label2.Location = New System.Drawing.Point(473, 2)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(98, 19)
         Me.Label2.TabIndex = 15
@@ -121,7 +121,7 @@ Partial Class Frm_Contracts
         '
         'btn_authorize
         '
-        Me.btn_authorize.Location = New System.Drawing.Point(477, 61)
+        Me.btn_authorize.Location = New System.Drawing.Point(477, 60)
         Me.btn_authorize.Name = "btn_authorize"
         Me.btn_authorize.Size = New System.Drawing.Size(151, 29)
         Me.btn_authorize.TabIndex = 14
@@ -130,7 +130,7 @@ Partial Class Frm_Contracts
         '
         'btn_withdraw
         '
-        Me.btn_withdraw.Location = New System.Drawing.Point(477, 26)
+        Me.btn_withdraw.Location = New System.Drawing.Point(477, 25)
         Me.btn_withdraw.Name = "btn_withdraw"
         Me.btn_withdraw.Size = New System.Drawing.Size(151, 29)
         Me.btn_withdraw.TabIndex = 13
@@ -139,7 +139,7 @@ Partial Class Frm_Contracts
         '
         'btn_end
         '
-        Me.btn_end.Location = New System.Drawing.Point(320, 61)
+        Me.btn_end.Location = New System.Drawing.Point(320, 60)
         Me.btn_end.Name = "btn_end"
         Me.btn_end.Size = New System.Drawing.Size(151, 29)
         Me.btn_end.TabIndex = 12
@@ -150,7 +150,7 @@ Partial Class Frm_Contracts
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label4.Location = New System.Drawing.Point(316, 3)
+        Me.Label4.Location = New System.Drawing.Point(316, 2)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(141, 19)
         Me.Label4.TabIndex = 11
@@ -158,7 +158,7 @@ Partial Class Frm_Contracts
         '
         'btn_renew
         '
-        Me.btn_renew.Location = New System.Drawing.Point(320, 26)
+        Me.btn_renew.Location = New System.Drawing.Point(320, 25)
         Me.btn_renew.Name = "btn_renew"
         Me.btn_renew.Size = New System.Drawing.Size(151, 29)
         Me.btn_renew.TabIndex = 10
@@ -169,7 +169,7 @@ Partial Class Frm_Contracts
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(159, 3)
+        Me.Label3.Location = New System.Drawing.Point(159, 2)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(107, 19)
         Me.Label3.TabIndex = 9
@@ -178,7 +178,7 @@ Partial Class Frm_Contracts
         'btn_keydelivered
         '
         Me.btn_keydelivered.Enabled = False
-        Me.btn_keydelivered.Location = New System.Drawing.Point(163, 96)
+        Me.btn_keydelivered.Location = New System.Drawing.Point(163, 95)
         Me.btn_keydelivered.Name = "btn_keydelivered"
         Me.btn_keydelivered.Size = New System.Drawing.Size(151, 29)
         Me.btn_keydelivered.TabIndex = 8
@@ -187,7 +187,7 @@ Partial Class Frm_Contracts
         '
         'btn_showmissingkeys
         '
-        Me.btn_showmissingkeys.Location = New System.Drawing.Point(163, 26)
+        Me.btn_showmissingkeys.Location = New System.Drawing.Point(163, 25)
         Me.btn_showmissingkeys.Name = "btn_showmissingkeys"
         Me.btn_showmissingkeys.Size = New System.Drawing.Size(151, 29)
         Me.btn_showmissingkeys.TabIndex = 7
@@ -196,7 +196,7 @@ Partial Class Frm_Contracts
         '
         'btn_addmissingkeys
         '
-        Me.btn_addmissingkeys.Location = New System.Drawing.Point(163, 61)
+        Me.btn_addmissingkeys.Location = New System.Drawing.Point(163, 60)
         Me.btn_addmissingkeys.Name = "btn_addmissingkeys"
         Me.btn_addmissingkeys.Size = New System.Drawing.Size(151, 29)
         Me.btn_addmissingkeys.TabIndex = 6
@@ -215,7 +215,7 @@ Partial Class Frm_Contracts
         '
         'btn_modcontract
         '
-        Me.btn_modcontract.Location = New System.Drawing.Point(6, 61)
+        Me.btn_modcontract.Location = New System.Drawing.Point(6, 60)
         Me.btn_modcontract.Name = "btn_modcontract"
         Me.btn_modcontract.Size = New System.Drawing.Size(151, 29)
         Me.btn_modcontract.TabIndex = 2
@@ -224,7 +224,7 @@ Partial Class Frm_Contracts
         '
         'btn_delcontract
         '
-        Me.btn_delcontract.Location = New System.Drawing.Point(6, 96)
+        Me.btn_delcontract.Location = New System.Drawing.Point(6, 95)
         Me.btn_delcontract.Name = "btn_delcontract"
         Me.btn_delcontract.Size = New System.Drawing.Size(151, 29)
         Me.btn_delcontract.TabIndex = 1
@@ -233,7 +233,7 @@ Partial Class Frm_Contracts
         '
         'btn_newcontract
         '
-        Me.btn_newcontract.Location = New System.Drawing.Point(6, 26)
+        Me.btn_newcontract.Location = New System.Drawing.Point(6, 25)
         Me.btn_newcontract.Name = "btn_newcontract"
         Me.btn_newcontract.Size = New System.Drawing.Size(151, 29)
         Me.btn_newcontract.TabIndex = 0

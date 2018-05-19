@@ -105,22 +105,22 @@ Partial Class Frm_Boxes
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(163, 5)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(141, 20)
+        Me.Label2.Size = New System.Drawing.Size(125, 19)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Selected Details"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(8, 5)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 20)
+        Me.Label1.Size = New System.Drawing.Size(61, 19)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Control"
         '
@@ -224,7 +224,7 @@ Partial Class Frm_Boxes
         Me.rdb_byBoxSize.Location = New System.Drawing.Point(9, 56)
         Me.rdb_byBoxSize.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rdb_byBoxSize.Name = "rdb_byBoxSize"
-        Me.rdb_byBoxSize.Size = New System.Drawing.Size(109, 24)
+        Me.rdb_byBoxSize.Size = New System.Drawing.Size(109, 23)
         Me.rdb_byBoxSize.TabIndex = 11
         Me.rdb_byBoxSize.Text = "By Box Size"
         Me.rdb_byBoxSize.UseVisualStyleBackColor = True
@@ -255,7 +255,7 @@ Partial Class Frm_Boxes
         Me.ClientSize = New System.Drawing.Size(700, 628)
         Me.Controls.Add(Me.dgv_boxes)
         Me.Controls.Add(Me.TabControl1)
-        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Boxes"
         Me.Text = "Boxes Management"

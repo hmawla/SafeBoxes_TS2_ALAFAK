@@ -38,10 +38,13 @@ Partial Class Frm_SignatureCards
         Me.rdb_byCname = New System.Windows.Forms.RadioButton()
         Me.txt_bybid = New System.Windows.Forms.TextBox()
         Me.rdb_bysigncardid = New System.Windows.Forms.RadioButton()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv_signcard, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
         Me.tab_filter.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv_signcard
@@ -59,8 +62,8 @@ Partial Class Frm_SignatureCards
         Me.dgv_signcard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgv_signcard.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgv_signcard.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_signcard.Location = New System.Drawing.Point(19, 222)
-        Me.dgv_signcard.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.dgv_signcard.Location = New System.Drawing.Point(15, 263)
+        Me.dgv_signcard.Margin = New System.Windows.Forms.Padding(9, 12, 9, 12)
         Me.dgv_signcard.MultiSelect = False
         Me.dgv_signcard.Name = "dgv_signcard"
         Me.dgv_signcard.ReadOnly = True
@@ -68,7 +71,7 @@ Partial Class Frm_SignatureCards
         Me.dgv_signcard.RowHeadersVisible = False
         Me.dgv_signcard.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_signcard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_signcard.Size = New System.Drawing.Size(662, 386)
+        Me.dgv_signcard.Size = New System.Drawing.Size(637, 290)
         Me.dgv_signcard.TabIndex = 14
         '
         'TabControl1
@@ -77,12 +80,12 @@ Partial Class Frm_SignatureCards
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.tab_datacontrol)
         Me.TabControl1.Controls.Add(Me.tab_filter)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TabControl1.Location = New System.Drawing.Point(19, 20)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TabControl1.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.TabControl1.Location = New System.Drawing.Point(15, 32)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(662, 189)
+        Me.TabControl1.Size = New System.Drawing.Size(640, 215)
         Me.TabControl1.TabIndex = 13
         '
         'tab_datacontrol
@@ -94,10 +97,10 @@ Partial Class Frm_SignatureCards
         Me.tab_datacontrol.Controls.Add(Me.btn_delbox)
         Me.tab_datacontrol.Controls.Add(Me.btn_newbox)
         Me.tab_datacontrol.Location = New System.Drawing.Point(4, 29)
-        Me.tab_datacontrol.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.tab_datacontrol.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.tab_datacontrol.Name = "tab_datacontrol"
-        Me.tab_datacontrol.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tab_datacontrol.Size = New System.Drawing.Size(654, 156)
+        Me.tab_datacontrol.Padding = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.tab_datacontrol.Size = New System.Drawing.Size(632, 182)
         Me.tab_datacontrol.TabIndex = 0
         Me.tab_datacontrol.Text = "Data Control"
         Me.tab_datacontrol.UseVisualStyleBackColor = True
@@ -105,22 +108,22 @@ Partial Class Frm_SignatureCards
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(163, 5)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(171, 9)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(141, 20)
+        Me.Label2.Size = New System.Drawing.Size(125, 19)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Selected Details"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(8, 5)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(8, 8)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 20)
+        Me.Label1.Size = New System.Drawing.Size(61, 19)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Control"
         '
@@ -128,18 +131,18 @@ Partial Class Frm_SignatureCards
         '
         Me.txt_details.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txt_details.Location = New System.Drawing.Point(167, 30)
-        Me.txt_details.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_details.Location = New System.Drawing.Point(175, 37)
+        Me.txt_details.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_details.Multiline = True
         Me.txt_details.Name = "txt_details"
         Me.txt_details.ReadOnly = True
-        Me.txt_details.Size = New System.Drawing.Size(479, 107)
+        Me.txt_details.Size = New System.Drawing.Size(445, 118)
         Me.txt_details.TabIndex = 3
         '
         'btn_modbox
         '
-        Me.btn_modbox.Location = New System.Drawing.Point(8, 69)
-        Me.btn_modbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_modbox.Location = New System.Drawing.Point(12, 81)
+        Me.btn_modbox.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_modbox.Name = "btn_modbox"
         Me.btn_modbox.Size = New System.Drawing.Size(151, 29)
         Me.btn_modbox.TabIndex = 2
@@ -148,8 +151,8 @@ Partial Class Frm_SignatureCards
         '
         'btn_delbox
         '
-        Me.btn_delbox.Location = New System.Drawing.Point(8, 108)
-        Me.btn_delbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_delbox.Location = New System.Drawing.Point(12, 126)
+        Me.btn_delbox.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_delbox.Name = "btn_delbox"
         Me.btn_delbox.Size = New System.Drawing.Size(151, 29)
         Me.btn_delbox.TabIndex = 6
@@ -157,8 +160,8 @@ Partial Class Frm_SignatureCards
         '
         'btn_newbox
         '
-        Me.btn_newbox.Location = New System.Drawing.Point(8, 30)
-        Me.btn_newbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_newbox.Location = New System.Drawing.Point(12, 36)
+        Me.btn_newbox.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_newbox.Name = "btn_newbox"
         Me.btn_newbox.Size = New System.Drawing.Size(151, 29)
         Me.btn_newbox.TabIndex = 0
@@ -174,10 +177,10 @@ Partial Class Frm_SignatureCards
         Me.tab_filter.Controls.Add(Me.txt_bybid)
         Me.tab_filter.Controls.Add(Me.rdb_bysigncardid)
         Me.tab_filter.Location = New System.Drawing.Point(4, 29)
-        Me.tab_filter.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.tab_filter.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.tab_filter.Name = "tab_filter"
-        Me.tab_filter.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.tab_filter.Size = New System.Drawing.Size(654, 156)
+        Me.tab_filter.Padding = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.tab_filter.Size = New System.Drawing.Size(1003, 258)
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
@@ -185,20 +188,20 @@ Partial Class Frm_SignatureCards
         'txt_bycname
         '
         Me.txt_bycname.Enabled = False
-        Me.txt_bycname.Location = New System.Drawing.Point(175, 55)
-        Me.txt_bycname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_bycname.Location = New System.Drawing.Point(262, 85)
+        Me.txt_bycname.Margin = New System.Windows.Forms.Padding(9, 12, 9, 12)
         Me.txt_bycname.Name = "txt_bycname"
-        Me.txt_bycname.Size = New System.Drawing.Size(352, 26)
+        Me.txt_bycname.Size = New System.Drawing.Size(526, 27)
         Me.txt_bycname.TabIndex = 14
         '
         'btn_reset
         '
         Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_reset.Enabled = False
-        Me.btn_reset.Location = New System.Drawing.Point(608, 110)
-        Me.btn_reset.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.btn_reset.Location = New System.Drawing.Point(912, 169)
+        Me.btn_reset.Margin = New System.Windows.Forms.Padding(9, 12, 9, 12)
         Me.btn_reset.Name = "btn_reset"
-        Me.btn_reset.Size = New System.Drawing.Size(36, 33)
+        Me.btn_reset.Size = New System.Drawing.Size(54, 51)
         Me.btn_reset.TabIndex = 12
         Me.btn_reset.Text = "X"
         Me.btn_reset.UseVisualStyleBackColor = True
@@ -206,10 +209,10 @@ Partial Class Frm_SignatureCards
         'btn_search
         '
         Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_search.Location = New System.Drawing.Point(511, 110)
-        Me.btn_search.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.btn_search.Location = New System.Drawing.Point(766, 169)
+        Me.btn_search.Margin = New System.Windows.Forms.Padding(9, 12, 9, 12)
         Me.btn_search.Name = "btn_search"
-        Me.btn_search.Size = New System.Drawing.Size(85, 33)
+        Me.btn_search.Size = New System.Drawing.Size(128, 51)
         Me.btn_search.TabIndex = 9
         Me.btn_search.Text = "Filter"
         Me.btn_search.UseVisualStyleBackColor = True
@@ -217,8 +220,8 @@ Partial Class Frm_SignatureCards
         'rdb_byCname
         '
         Me.rdb_byCname.AutoSize = True
-        Me.rdb_byCname.Location = New System.Drawing.Point(9, 56)
-        Me.rdb_byCname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.rdb_byCname.Location = New System.Drawing.Point(14, 86)
+        Me.rdb_byCname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.rdb_byCname.Name = "rdb_byCname"
         Me.rdb_byCname.Size = New System.Drawing.Size(135, 24)
         Me.rdb_byCname.TabIndex = 11
@@ -228,28 +231,48 @@ Partial Class Frm_SignatureCards
         'txt_bybid
         '
         Me.txt_bybid.Enabled = False
-        Me.txt_bybid.Location = New System.Drawing.Point(175, 14)
-        Me.txt_bybid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_bybid.Location = New System.Drawing.Point(262, 22)
+        Me.txt_bybid.Margin = New System.Windows.Forms.Padding(9, 12, 9, 12)
         Me.txt_bybid.Name = "txt_bybid"
-        Me.txt_bybid.Size = New System.Drawing.Size(352, 26)
+        Me.txt_bybid.Size = New System.Drawing.Size(526, 27)
         Me.txt_bybid.TabIndex = 8
         '
         'rdb_bysigncardid
         '
-        Me.rdb_bysigncardid.Location = New System.Drawing.Point(9, 9)
-        Me.rdb_bysigncardid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.rdb_bysigncardid.Location = New System.Drawing.Point(14, 14)
+        Me.rdb_bysigncardid.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.rdb_bysigncardid.Name = "rdb_bysigncardid"
-        Me.rdb_bysigncardid.Size = New System.Drawing.Size(156, 37)
+        Me.rdb_bysigncardid.Size = New System.Drawing.Size(234, 57)
         Me.rdb_bysigncardid.TabIndex = 13
         Me.rdb_bysigncardid.Text = "By Sign Card ID"
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportsToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(670, 24)
+        Me.MenuStrip1.TabIndex = 15
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.ReportsToolStripMenuItem.Text = "Reports"
+        '
         'Frm_SignatureCards
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(700, 628)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(670, 574)
         Me.Controls.Add(Me.dgv_signcard)
         Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_SignatureCards"
         Me.Text = "Signature Cards Manager"
         CType(Me.dgv_signcard, System.ComponentModel.ISupportInitialize).EndInit()
@@ -258,7 +281,10 @@ Partial Class Frm_SignatureCards
         Me.tab_datacontrol.PerformLayout()
         Me.tab_filter.ResumeLayout(False)
         Me.tab_filter.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -278,4 +304,6 @@ Partial Class Frm_SignatureCards
     Friend WithEvents rdb_byCname As RadioButton
     Friend WithEvents txt_bybid As TextBox
     Friend WithEvents rdb_bysigncardid As RadioButton
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
 End Class
