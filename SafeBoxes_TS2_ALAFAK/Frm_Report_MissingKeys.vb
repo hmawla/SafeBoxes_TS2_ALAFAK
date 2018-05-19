@@ -3,9 +3,6 @@
     Dim CrysReport As New Rpt_MissingKeys
 
     Private Sub Frm_Report_MissingKeys_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        RptDbDataSet.Reset()
-        RptDbDataSet = ReadQueryOut("SELECT MissKeyId, MissKeyDate, RedeliverDate, ContId FROM MissingKeys").Copy()
-        CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
         RptV_MissingKeys.ReportSource = CrysReport
         RptV_MissingKeys.RefreshReport()
     End Sub

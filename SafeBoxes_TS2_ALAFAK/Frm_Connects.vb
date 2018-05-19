@@ -9,12 +9,12 @@
         EmpId = Frm_main.loggedEmpId
         Lbl_infovId.Text = "InfoVoucher ID: " & infoVouchid
         Lbl_EmpId.Text = "Employee ID: " & EmpId
-        Try
-            ds = ReadQueryOut("SELECT EmpId, EmpFName + ' ' + EmpLName FROM Employees WHERE EmpId = " & EmpId)
-            Txt_EmpName.Text = ds.Tables(0).Rows(0).Item(1)
-        Catch ex As Exception
-            Txt_EmpName.Text = ""
-        End Try
+        'Try
+        '    ds = ReadQueryOut("SELECT EmpId, EmpFName + ' ' + EmpLName FROM Employees WHERE EmpId = " & EmpId)
+        '    Txt_EmpName.Text = ds.Tables(0).Rows(0).Item(1)
+        'Catch ex As Exception
+        '    Txt_EmpName.Text = ""
+        'End Try
     End Sub
 
     Private Sub DGV_Visits_SelectionChanged(sender As Object, e As EventArgs)
@@ -36,7 +36,7 @@
     Private Sub Btn_Connects_Click(sender As Object, e As EventArgs) Handles Btn_Connects.Click
         If txt_note.Text <> "" Then
 
-            DGV_Connects.Rows.Add(infoVouchid, Ans, txt_note.Text, Res, Txt_EmpName.Text)
+            'DGV_Connects.Rows.Add(infoVouchid, Ans, txt_note.Text, Res, Txt_EmpName.Text)
 
         Else
             MessageBox.Show("Insert a note first !")

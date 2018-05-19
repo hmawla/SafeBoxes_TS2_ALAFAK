@@ -28,9 +28,8 @@ Partial Class Frm_Report_Authorizations
         Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.dgv_authorizations = New System.Windows.Forms.DataGridView()
+        Me.RptV_Authorizations = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.dgv_authorizations, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -103,32 +102,18 @@ Partial Class Frm_Report_Authorizations
         Me.DateTimePicker1.Size = New System.Drawing.Size(204, 26)
         Me.DateTimePicker1.TabIndex = 11
         '
-        'dgv_authorizations
+        'RptV_Authorizations
         '
-        Me.dgv_authorizations.AllowUserToAddRows = False
-        Me.dgv_authorizations.AllowUserToDeleteRows = False
-        Me.dgv_authorizations.AllowUserToResizeRows = False
-        Me.dgv_authorizations.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.RptV_Authorizations.ActiveViewIndex = -1
+        Me.RptV_Authorizations.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgv_authorizations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgv_authorizations.BackgroundColor = System.Drawing.Color.White
-        Me.dgv_authorizations.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_authorizations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_authorizations.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dgv_authorizations.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgv_authorizations.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_authorizations.Location = New System.Drawing.Point(12, 157)
-        Me.dgv_authorizations.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.dgv_authorizations.MultiSelect = False
-        Me.dgv_authorizations.Name = "dgv_authorizations"
-        Me.dgv_authorizations.ReadOnly = True
-        Me.dgv_authorizations.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_authorizations.RowHeadersVisible = False
-        Me.dgv_authorizations.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.dgv_authorizations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_authorizations.Size = New System.Drawing.Size(689, 344)
-        Me.dgv_authorizations.TabIndex = 18
+        Me.RptV_Authorizations.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RptV_Authorizations.Cursor = System.Windows.Forms.Cursors.Default
+        Me.RptV_Authorizations.Location = New System.Drawing.Point(12, 152)
+        Me.RptV_Authorizations.Name = "RptV_Authorizations"
+        Me.RptV_Authorizations.Size = New System.Drawing.Size(689, 354)
+        Me.RptV_Authorizations.TabIndex = 21
         '
         'Frm_Report_Authorizations
         '
@@ -136,15 +121,14 @@ Partial Class Frm_Report_Authorizations
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(716, 518)
+        Me.Controls.Add(Me.RptV_Authorizations)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.dgv_authorizations)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Report_Authorizations"
         Me.Text = "Frm_Report_Authorizations"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.dgv_authorizations, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -155,5 +139,5 @@ Partial Class Frm_Report_Authorizations
     Friend WithEvents dtpick_exdate As DateTimePicker
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents dgv_authorizations As DataGridView
+    Friend WithEvents RptV_Authorizations As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

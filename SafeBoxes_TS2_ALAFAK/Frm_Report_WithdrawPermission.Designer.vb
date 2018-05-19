@@ -28,9 +28,8 @@ Partial Class Frm_Report_WithdrawPermission
         Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.dgv_withdraw = New System.Windows.Forms.DataGridView()
+        Me.RptV_Withdraw = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.dgv_withdraw, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -103,32 +102,18 @@ Partial Class Frm_Report_WithdrawPermission
         Me.DateTimePicker1.Size = New System.Drawing.Size(204, 26)
         Me.DateTimePicker1.TabIndex = 11
         '
-        'dgv_withdraw
+        'RptV_Withdraw
         '
-        Me.dgv_withdraw.AllowUserToAddRows = False
-        Me.dgv_withdraw.AllowUserToDeleteRows = False
-        Me.dgv_withdraw.AllowUserToResizeRows = False
-        Me.dgv_withdraw.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.RptV_Withdraw.ActiveViewIndex = -1
+        Me.RptV_Withdraw.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgv_withdraw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgv_withdraw.BackgroundColor = System.Drawing.Color.White
-        Me.dgv_withdraw.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_withdraw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_withdraw.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dgv_withdraw.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgv_withdraw.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_withdraw.Location = New System.Drawing.Point(12, 157)
-        Me.dgv_withdraw.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.dgv_withdraw.MultiSelect = False
-        Me.dgv_withdraw.Name = "dgv_withdraw"
-        Me.dgv_withdraw.ReadOnly = True
-        Me.dgv_withdraw.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_withdraw.RowHeadersVisible = False
-        Me.dgv_withdraw.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.dgv_withdraw.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_withdraw.Size = New System.Drawing.Size(690, 363)
-        Me.dgv_withdraw.TabIndex = 18
+        Me.RptV_Withdraw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RptV_Withdraw.Cursor = System.Windows.Forms.Cursors.Default
+        Me.RptV_Withdraw.Location = New System.Drawing.Point(12, 152)
+        Me.RptV_Withdraw.Name = "RptV_Withdraw"
+        Me.RptV_Withdraw.Size = New System.Drawing.Size(690, 373)
+        Me.RptV_Withdraw.TabIndex = 20
         '
         'Frm_Report_WithdrawPermission
         '
@@ -136,15 +121,14 @@ Partial Class Frm_Report_WithdrawPermission
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(717, 537)
+        Me.Controls.Add(Me.RptV_Withdraw)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.dgv_withdraw)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Report_WithdrawPermission"
         Me.Text = "Frm_Report_WithdrawPermission"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.dgv_withdraw, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -155,5 +139,5 @@ Partial Class Frm_Report_WithdrawPermission
     Friend WithEvents dtpick_exdate As DateTimePicker
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents dgv_withdraw As DataGridView
+    Friend WithEvents RptV_Withdraw As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

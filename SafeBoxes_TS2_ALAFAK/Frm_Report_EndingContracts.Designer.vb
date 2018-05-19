@@ -28,9 +28,8 @@ Partial Class Frm_Report_EndingContracts
         Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.dgv_ending = New System.Windows.Forms.DataGridView()
+        Me.RptV_EndingContracts = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.dgv_ending, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -103,32 +102,18 @@ Partial Class Frm_Report_EndingContracts
         Me.DateTimePicker1.Size = New System.Drawing.Size(204, 26)
         Me.DateTimePicker1.TabIndex = 11
         '
-        'dgv_ending
+        'RptV_EndingContracts
         '
-        Me.dgv_ending.AllowUserToAddRows = False
-        Me.dgv_ending.AllowUserToDeleteRows = False
-        Me.dgv_ending.AllowUserToResizeRows = False
-        Me.dgv_ending.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.RptV_EndingContracts.ActiveViewIndex = -1
+        Me.RptV_EndingContracts.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgv_ending.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgv_ending.BackgroundColor = System.Drawing.Color.White
-        Me.dgv_ending.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_ending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_ending.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dgv_ending.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgv_ending.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_ending.Location = New System.Drawing.Point(15, 157)
-        Me.dgv_ending.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.dgv_ending.MultiSelect = False
-        Me.dgv_ending.Name = "dgv_ending"
-        Me.dgv_ending.ReadOnly = True
-        Me.dgv_ending.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_ending.RowHeadersVisible = False
-        Me.dgv_ending.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.dgv_ending.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_ending.Size = New System.Drawing.Size(695, 368)
-        Me.dgv_ending.TabIndex = 18
+        Me.RptV_EndingContracts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RptV_EndingContracts.Cursor = System.Windows.Forms.Cursors.Default
+        Me.RptV_EndingContracts.Location = New System.Drawing.Point(15, 152)
+        Me.RptV_EndingContracts.Name = "RptV_EndingContracts"
+        Me.RptV_EndingContracts.Size = New System.Drawing.Size(695, 378)
+        Me.RptV_EndingContracts.TabIndex = 19
         '
         'Frm_Report_EndingContracts
         '
@@ -136,15 +121,14 @@ Partial Class Frm_Report_EndingContracts
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(725, 542)
+        Me.Controls.Add(Me.RptV_EndingContracts)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.dgv_ending)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Report_EndingContracts"
         Me.Text = "Frm_Report_EndingContracts"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.dgv_ending, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -155,5 +139,5 @@ Partial Class Frm_Report_EndingContracts
     Friend WithEvents dtpick_exdate As DateTimePicker
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents dgv_ending As DataGridView
+    Friend WithEvents RptV_EndingContracts As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class
