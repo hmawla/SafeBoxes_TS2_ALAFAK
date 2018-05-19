@@ -35,7 +35,7 @@
 
     Private Sub Btn_Connects_Click(sender As Object, e As EventArgs) Handles Btn_Connects.Click
         If txt_note.Text <> "" Then
-
+            'We dont need to display the employees name in a textbox, make a new variable and put the name in it
             'DGV_Connects.Rows.Add(infoVouchid, Ans, txt_note.Text, Res, Txt_EmpName.Text)
 
         Else

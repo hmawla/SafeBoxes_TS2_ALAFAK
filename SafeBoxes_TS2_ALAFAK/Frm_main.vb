@@ -10,12 +10,6 @@ Public Class Frm_main
 
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
         InitCon()
-        Dim materialSkinManager As MaterialSkin.MaterialSkinManager
-        materialSkinManager = materialSkinManager.Instance
-        materialSkinManager.AddFormToManage(Me)
-        materialSkinManager.Theme = materialSkinManager.Themes.LIGHT
-        materialSkinManager.ColorScheme = New ColorScheme(Primary.DeepPurple800, Primary.DeepPurple900, Primary.DeepPurple500, Accent.LightBlue200, TextShade.WHITE)
-
     End Sub
 
 
