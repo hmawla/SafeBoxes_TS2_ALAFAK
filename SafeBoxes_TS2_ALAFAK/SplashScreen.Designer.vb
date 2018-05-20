@@ -24,11 +24,6 @@ Partial Class SplashScreen
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.AddOwnedForm(Frm_Report_MissingKeys)
-        Me.AddOwnedForm(Frm_Report_Authorizations)
-        Me.AddOwnedForm(Frm_Report_Contract)
-        Me.AddOwnedForm(Frm_Report_EndingContracts)
-        Me.AddOwnedForm(Frm_Report_WithdrawPermission)
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -51,7 +46,6 @@ Partial Class SplashScreen
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SplashScreen"
-        Me.Opacity = 0.9R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
