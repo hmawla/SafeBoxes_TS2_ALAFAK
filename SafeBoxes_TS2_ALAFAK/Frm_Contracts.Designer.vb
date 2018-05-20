@@ -55,6 +55,7 @@ Partial Class Frm_Contracts
         Me.VisitsReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.WithdrawReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.AuthorizationReport = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
         CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -102,6 +103,7 @@ Partial Class Frm_Contracts
         Me.rdb_bycontid.Depth = 0
         Me.rdb_bycontid.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.rdb_bycontid.Location = New System.Drawing.Point(4, 36)
+        Me.rdb_bycontid.Margin = New System.Windows.Forms.Padding(0)
         Me.rdb_bycontid.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.rdb_bycontid.MouseState = MaterialSkin.MouseState.HOVER
         Me.rdb_bycontid.Name = "rdb_bycontid"
@@ -135,6 +137,7 @@ Partial Class Frm_Contracts
         Me.rdb_byboxid.Depth = 0
         Me.rdb_byboxid.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.rdb_byboxid.Location = New System.Drawing.Point(6, 6)
+        Me.rdb_byboxid.Margin = New System.Windows.Forms.Padding(0)
         Me.rdb_byboxid.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.rdb_byboxid.MouseState = MaterialSkin.MouseState.HOVER
         Me.rdb_byboxid.Name = "rdb_byboxid"
@@ -201,7 +204,7 @@ Partial Class Frm_Contracts
         Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabControl1.Name = "MaterialTabControl1"
         Me.MaterialTabControl1.SelectedIndex = 0
-        Me.MaterialTabControl1.Size = New System.Drawing.Size(668, 164)
+        Me.MaterialTabControl1.Size = New System.Drawing.Size(668, 153)
         Me.MaterialTabControl1.TabIndex = 17
         '
         'TabPage1
@@ -225,7 +228,7 @@ Partial Class Frm_Contracts
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(660, 131)
+        Me.TabPage1.Size = New System.Drawing.Size(660, 120)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Controls"
         '
@@ -330,9 +333,9 @@ Partial Class Frm_Contracts
         Me.btn_withdraw.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_withdraw.Name = "btn_withdraw"
         Me.btn_withdraw.Primary = True
-        Me.btn_withdraw.Size = New System.Drawing.Size(178, 36)
+        Me.btn_withdraw.Size = New System.Drawing.Size(94, 36)
         Me.btn_withdraw.TabIndex = 13
-        Me.btn_withdraw.Text = "Withdraw Permission"
+        Me.btn_withdraw.Text = "Withdraw"
         Me.btn_withdraw.UseVisualStyleBackColor = True
         '
         'btn_modcontract
@@ -494,7 +497,7 @@ Partial Class Frm_Contracts
         Me.MaterialContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MissingKeysReport, Me.RenewReport, Me.ContractEndingReport, Me.VisitsReport, Me.WithdrawReport, Me.AuthorizationReport})
         Me.MaterialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialContextMenuStrip1.Name = "MaterialContextMenuStrip1"
-        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(199, 158)
+        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(199, 136)
         '
         'MissingKeysReport
         '
@@ -532,6 +535,19 @@ Partial Class Frm_Contracts
         Me.AuthorizationReport.Size = New System.Drawing.Size(198, 22)
         Me.AuthorizationReport.Text = "Authorization Report"
         '
+        'MaterialDivider1
+        '
+        Me.MaterialDivider1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MaterialDivider1.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialDivider1.Depth = 0
+        Me.MaterialDivider1.Location = New System.Drawing.Point(0, 258)
+        Me.MaterialDivider1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialDivider1.Name = "MaterialDivider1"
+        Me.MaterialDivider1.Size = New System.Drawing.Size(693, 1)
+        Me.MaterialDivider1.TabIndex = 17
+        Me.MaterialDivider1.Text = "MaterialDivider1"
+        '
         'Frm_Contracts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -539,6 +555,7 @@ Partial Class Frm_Contracts
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(693, 591)
         Me.ContextMenuStrip = Me.MaterialContextMenuStrip1
+        Me.Controls.Add(Me.MaterialDivider1)
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.Controls.Add(Me.MaterialTabSelector1)
         Me.Controls.Add(Me.dgv_contracts)
@@ -589,4 +606,5 @@ Partial Class Frm_Contracts
     Friend WithEvents VisitsReport As ToolStripMenuItem
     Friend WithEvents WithdrawReport As ToolStripMenuItem
     Friend WithEvents AuthorizationReport As ToolStripMenuItem
+    Friend WithEvents MaterialDivider1 As MaterialSkin.Controls.MaterialDivider
 End Class

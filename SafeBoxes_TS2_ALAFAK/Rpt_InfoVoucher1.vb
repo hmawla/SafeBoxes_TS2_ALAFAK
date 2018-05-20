@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class Rpt_InfoVoucher1
+Public Class Rpt_InfoVoucher
     Inherits ReportClass
     
     Public Sub New()
@@ -136,7 +136,7 @@ Public Class CachedRpt_InfoVoucher
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As Rpt_InfoVoucher1 = New Rpt_InfoVoucher1()
+        Dim rpt As Rpt_InfoVoucher = New Rpt_InfoVoucher()
         rpt.Site = Me.Site
         Return rpt
     End Function
