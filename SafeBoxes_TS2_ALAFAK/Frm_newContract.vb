@@ -101,7 +101,9 @@ Public Class Frm_newContract
     End Sub
 
     Private Sub SelectBoxToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectBoxToolStripMenuItem.Click
-        Frm_SelectBox.ShowDialog()
+        Frm_main.boxId = 0
+        Frm_Boxes.ShowDialog()
+        txt_boxes.Text = Frm_main.boxId
     End Sub
 
     Private Sub CBox_regions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbox_regions.SelectedIndexChanged

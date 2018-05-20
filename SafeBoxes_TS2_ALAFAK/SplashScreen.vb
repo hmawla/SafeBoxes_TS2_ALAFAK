@@ -10,6 +10,7 @@ Public Class SplashScreen
         Me.AddOwnedForm(Frm_Report_Contract)
         Me.AddOwnedForm(Frm_Report_EndingContracts)
         Me.AddOwnedForm(Frm_Report_WithdrawPermission)
+        Me.AddOwnedForm(Frm_Report_Visits)
     End Sub
 
     Private Sub SplashScreen_Shown(sender As Object, e As EventArgs) Handles Me.Shown

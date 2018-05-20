@@ -67,4 +67,17 @@
     Private Sub txt_bybid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bybid.KeyPress
         Only_Number(txt_bybid, e)
     End Sub
+
+    Private Sub dgv_boxes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_boxes.CellDoubleClick
+        If Frm_main.boxid = 0 Then
+            Try
+                If dgv_boxes.SelectedRows(0).Cells(0).Value > 0 Then
+                End If
+                Frm_main.boxId = dgv_boxes.SelectedRows(0).Cells(0).Value
+                Me.Dispose()
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
 End Class

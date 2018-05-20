@@ -7,6 +7,7 @@ Public Class Frm_main
     Public employeeid As Integer
     Public loggedEmpId As Integer
     Public infovouchid As Integer
+    Public boxId As Integer
 
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
         InitCon()

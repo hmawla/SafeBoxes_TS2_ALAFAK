@@ -82,13 +82,6 @@ the_End:
         Me.Dispose()
     End Sub
 
-    Private Sub SelectDifferentEmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectDifferentEmployeeToolStripMenuItem.Click
-        Frm_main.employeeid = 0
-        Frm_Employees.ShowDialog()
-        EmpId = Frm_main.employeeid
-        Lbl_EmpId.Text = "Employee ID: " & EmpId
-    End Sub
-
     Private Sub Txt_ClientId_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_ClientId.KeyPress
         Only_Number(Txt_ClientId, e)
     End Sub
@@ -105,5 +98,12 @@ the_End:
         Frm_main.clientid = 0
         Frm_Clients.ShowDialog()
         Txt_ClientId.Text = Frm_main.clientid
+    End Sub
+
+    Private Sub SelectDifferentEmployeeToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SelectDifferentEmployeeToolStripMenuItem1.Click
+        Frm_main.employeeid = 0
+        Frm_Employees.ShowDialog()
+        EmpId = Frm_main.employeeid
+        Lbl_EmpId.Text = "Employee ID: " & EmpId
     End Sub
 End Class
