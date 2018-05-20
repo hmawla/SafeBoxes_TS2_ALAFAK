@@ -79,6 +79,16 @@
             txt_clientid.Focus()
         End If
     End Sub
+    Private Sub txt_clientid_TextChanged(sender As Object, e As EventArgs) Handles txt_clientid.TextChanged
+        Try
+            Dim ds As New DataSet
+            ds = ReadQueryOut("SELECT ClientFName + ' ' + ClientLName FROM Clients WHERE ClientId = " & txt_clientid.Text)
+            txt_clientname.Text = ds.Tables(0).Rows(0).Item(0)
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 
     Private Sub cbox_regions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbox_regions.SelectedIndexChanged
         If formLoaded Then
@@ -223,4 +233,6 @@
     Private Sub txt_mailpost_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_mailpost.KeyPress
         Only_Number(txt_mailpost, e)
     End Sub
+
+
 End Class
