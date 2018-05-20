@@ -202,4 +202,12 @@
     Private Sub VisitsReport_Click(sender As Object, e As EventArgs) Handles VisitsReport.Click
         Frm_Report_Visits.ShowDialog()
     End Sub
+
+    Private Sub btn_withdraw_Click(sender As Object, e As EventArgs) Handles btn_withdraw.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to grant permission to withdraw rental fees for Contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value & " from Account#" & dgv_contracts.SelectedRows(0).Cells(6).Value, "Withdraw Permission", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            Dim theNewId As Integer = GenID("Permissions", "PermId")
+            ExecuteQuery("INSERT INTO Permissions VALUES(" & theNewId & ", date(), " & dgv_contracts.SelectedRows(0).Cells(0).Value & ")")
+        End If
+    End Sub
 End Class
