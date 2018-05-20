@@ -146,8 +146,6 @@ Partial Class Frm_NewInfoVoucher
         'chk_phone
         '
         Me.chk_phone.AutoSize = True
-        Me.chk_phone.Checked = True
-        Me.chk_phone.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chk_phone.Location = New System.Drawing.Point(6, 25)
         Me.chk_phone.Name = "chk_phone"
         Me.chk_phone.Size = New System.Drawing.Size(138, 24)

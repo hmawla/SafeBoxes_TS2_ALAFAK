@@ -232,10 +232,10 @@
     <Compile Include="Frm_Boxes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Connects.Designer.vb">
-      <DependentUpon>Frm_Connects.vb</DependentUpon>
+    <Compile Include="Frm_NewConnects.Designer.vb">
+      <DependentUpon>Frm_NewConnects.vb</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Connects.vb">
+    <Compile Include="Frm_NewConnects.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_ContractVisits.Designer.vb">
@@ -505,8 +505,8 @@
     <EmbeddedResource Include="Frm_Companies.resx">
       <DependentUpon>Frm_Companies.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Connects.resx">
-      <DependentUpon>Frm_Connects.vb</DependentUpon>
+    <EmbeddedResource Include="Frm_NewConnects.resx">
+      <DependentUpon>Frm_NewConnects.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Contracts.resx">
       <DependentUpon>Frm_Contracts.vb</DependentUpon>

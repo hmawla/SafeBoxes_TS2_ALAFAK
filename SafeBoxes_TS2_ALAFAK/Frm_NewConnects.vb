@@ -1,4 +1,4 @@
-﻿Public Class Frm_Connects
+﻿Public Class Frm_NewConnects
     Dim infoVouchid As Integer
     Dim EmpId As Integer
     Dim ds As New DataSet
@@ -17,23 +17,7 @@
         'End Try
     End Sub
 
-    Private Sub DGV_Visits_SelectionChanged(sender As Object, e As EventArgs)
-        If DGV_Connects.Rows.Count > 0 Then
-            Btn_Submit.Enabled = True
-        Else
-            Btn_Submit.Enabled = False
-        End If
-    End Sub
-
-    Private Sub DGV_Visits_SelectionChanged_1(sender As Object, e As EventArgs) Handles DGV_Connects.SelectionChanged
-        If DGV_Connects.Rows.Count > 0 Then
-            Btn_Submit.Enabled = True
-        Else
-            Btn_Submit.Enabled = False
-        End If
-    End Sub
-
-    Private Sub Btn_Connects_Click(sender As Object, e As EventArgs) Handles Btn_Connects.Click
+    Private Sub Btn_Connects_Click(sender As Object, e As EventArgs)
         If txt_note.Text <> "" Then
             'We dont need to display the employees name in a textbox, make a new variable and put the name in it
             'DGV_Connects.Rows.Add(infoVouchid, Ans, txt_note.Text, Res, Txt_EmpName.Text)
@@ -49,12 +33,7 @@
     End Sub
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
-        For i As Integer = 0 To DGV_Connects.Rows.Count - 1
-            Dim theNewId As Integer = GenID("Connects", "ConnectId")
-            ExecuteQuery("INSERT INTO Connects VALUES(" & theNewId & ", date(), date(), " & DGV_Connects.Rows(i).Cells(1).Value & ", " & DGV_Connects.Rows(i).Cells(3).Value & ", " & infoVouchid & ", " & EmpId & ")")
-            ExecuteQuery("INSERT INTO AnswerNote VALUES(" & theNewId & ", date(), date(), " & DGV_Connects.Rows(i).Cells(1).Value & ", " & DGV_Connects.Rows(i).Cells(3).Value & ", '" & DGV_Connects.Rows(i).Cells(2).Value & "', " & infoVouchid & ", " & EmpId & ")")
-        Next
-        Me.Dispose()
+
     End Sub
 
     Private Sub RadioButton1_CheckedChanged_1(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged, RadioButton1.CheckedChanged

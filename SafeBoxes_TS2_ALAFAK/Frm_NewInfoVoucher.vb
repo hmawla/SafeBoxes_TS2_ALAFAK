@@ -14,26 +14,40 @@
             ExecuteQuery("INSERT INTO InfoVoucher(InfoVouchId) VALUES(" & theNewId & ")")
         Else
             theNewId = Frm_InfoVoucher.infovouchId
-            Dim theContDetails As New DataSet
-            theContDetails = ReadQueryOut("SELECT * FROM InfoVoucher WHERE InfoVouchId = " & theNewId)
-            Dim rows As DataRow = theContDetails.Tables(0).Rows(0)
-            dtpick_fromtime.Value = rows.Item(1)
-            dtpick_totime.Value = rows.Item(2)
-            txt_subjectbody.Text = rows.Item(4)
-            txt_contractid.Text = rows.Item(5)
-            txt_clientid.Text = rows.Item(8)
-            Dim theBuilding As String = rows.Item(6)
-            Dim theinfosubjecttitleid As String = rows.Item(7)
-            theContDetails.Reset()
-            theContDetails = ReadQueryOut("SELECT BuildingId, Streets.StreetId, RegionId FROM Buildings, Streets WHERE BuildingId = " & theBuilding)
-            rows = theContDetails.Tables(0).Rows(0)
-            cbox_regions.SelectedValue = rows.Item(2)
-            cbox_streets.SelectedValue = rows.Item(1)
-            cbox_buildings.SelectedValue = rows.Item(0)
-            theContDetails.Reset()
-            theContDetails = ReadQueryOut("SELECT InfoSubjTitleId, InfoSubjTitle FROM InfoSubjectTitles WHERE InfoSubjTitleId = " & theinfosubjecttitleid)
-            rows = theContDetails.Tables(0).Rows(0)
-            cbox_subjecttitles.SelectedValue = rows.Item(0)
+            Dim theMainDetails As New DataSet
+            theMainDetails = ReadQueryOut("SELECT InfoVouchFromTime, InfoVouchToTime, SubjectDetails, ContId, ClientId, InfoSubjTitleId, BuildingId FROM InfoVoucher WHERE InfoVouchId = " & theNewId).Copy
+            Dim rows As DataRow = theMainDetails.Tables(0).Rows(0)
+            dtpick_fromtime.Value = rows.Item(0)
+            dtpick_totime.Value = rows.Item(1)
+            txt_subjectbody.Text = rows.Item(2)
+            txt_contractid.Text = rows.Item(3)
+            txt_clientid.Text = rows.Item(4)
+            cbox_subjecttitles.SelectedValue = rows.Item(5)
+            Dim theBuildingDetails As New DataSet
+            theMainDetails = ReadQueryOut("SELECT RegionId, S.StreetId FROM Buildings B, Streets S WHERE B.StreetId = S.StreetId AND BuildingId = " & rows.Item(6)).Copy
+            cbox_regions.SelectedValue = theMainDetails.Tables(0).Rows(0).Item(0)
+            FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+            cbox_streets.SelectedValue = theMainDetails.Tables(0).Rows(0).Item(1)
+            FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+            cbox_buildings.SelectedValue = rows.Item(6)
+            Dim theConnWaysDetails As New DataSet
+            theConnWaysDetails = ReadQueryOut("SELECT ConnWayId, ConnWayText FROM ConnWaysInfoVoucher WHERE InfoVoucherId = " & theNewId).Copy
+            For Each row As DataRow In theConnWaysDetails.Tables(0).Rows
+                If row.Item(0) = 1 Then
+                    chk_phone.Checked = True
+                    txt_phonenumber.Text = row.Item(1)
+                ElseIf row.Item(0) = 2 Then
+                    chk_mailpost.Checked = True
+                    txt_mailpost.Text = row.Item(1)
+                ElseIf row.Item(0) = 3 Then
+                    chk_email.Checked = True
+                    txt_email.Text = row.Item(1)
+                Else
+                    chk_other.Checked = True
+                    txt_otherconn.Text = row.Item(1)
+                End If
+            Next
+
         End If
         formLoaded = True
     End Sub
