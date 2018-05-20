@@ -172,6 +172,12 @@
     <Compile Include="Frm_Report_Boxes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_Report_Client.Designer.vb">
+      <DependentUpon>Frm_Report_Client.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_Client.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_Report_Connects.Designer.vb">
       <DependentUpon>Frm_Report_Connects.vb</DependentUpon>
     </Compile>
@@ -194,6 +200,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Rpt_Boxes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt_Clients.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_Clients.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Rpt_Connects.vb">
@@ -446,6 +458,9 @@
     <EmbeddedResource Include="Frm_Report_Boxes.resx">
       <DependentUpon>Frm_Report_Boxes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_Client.resx">
+      <DependentUpon>Frm_Report_Client.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_Connects.resx">
       <DependentUpon>Frm_Report_Connects.vb</DependentUpon>
     </EmbeddedResource>
@@ -459,6 +474,10 @@
     <EmbeddedResource Include="Rpt_Boxes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Boxes1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_Clients.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Clients.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Connects.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
