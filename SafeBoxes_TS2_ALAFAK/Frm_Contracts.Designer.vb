@@ -494,7 +494,7 @@ Partial Class Frm_Contracts
         Me.MaterialContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MissingKeysReport, Me.RenewReport, Me.ContractEndingReport, Me.VisitsReport, Me.WithdrawReport, Me.AuthorizationReport})
         Me.MaterialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialContextMenuStrip1.Name = "MaterialContextMenuStrip1"
-        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(199, 136)
+        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(199, 158)
         '
         'MissingKeysReport
         '

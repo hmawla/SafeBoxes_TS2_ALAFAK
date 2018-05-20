@@ -200,6 +200,6 @@
     End Sub
 
     Private Sub VisitsReport_Click(sender As Object, e As EventArgs) Handles VisitsReport.Click
-
+        Frm_Report_Visits.ShowDialog()
     End Sub
 End Class
