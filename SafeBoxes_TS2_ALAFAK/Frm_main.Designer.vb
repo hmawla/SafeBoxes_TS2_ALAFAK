@@ -32,14 +32,16 @@ Partial Class Frm_main
         Me.lbl_managers = New MaterialSkin.Controls.MaterialLabel()
         Me.Lbl_WelcomeEmp = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialDivider2 = New MaterialSkin.Controls.MaterialDivider()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialDivider3 = New MaterialSkin.Controls.MaterialDivider()
         Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.MaterialDivider4 = New MaterialSkin.Controls.MaterialDivider()
+        Me.MaterialFlatButton2 = New MaterialSkin.Controls.MaterialFlatButton()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -195,29 +197,6 @@ Partial Class Frm_main
         Me.MaterialDivider1.TabIndex = 31
         Me.MaterialDivider1.Text = "MaterialDivider1"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.SafeBoxes_TS2_ALAFAK.My.Resources.Resources.Logo1
-        Me.PictureBox2.Location = New System.Drawing.Point(731, 68)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(149, 124)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 30
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.SafeBoxes_TS2_ALAFAK.My.Resources.Resources.Logo
-        Me.PictureBox1.Location = New System.Drawing.Point(-2, 68)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(521, 124)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 29
-        Me.PictureBox1.TabStop = False
-        '
         'MaterialLabel1
         '
         Me.MaterialLabel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -304,11 +283,63 @@ Partial Class Frm_main
         Me.MaterialFlatButton1.Text = "Clients Accounts Manager"
         Me.MaterialFlatButton1.UseVisualStyleBackColor = True
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.SafeBoxes_TS2_ALAFAK.My.Resources.Resources.Logo1
+        Me.PictureBox2.Location = New System.Drawing.Point(731, 68)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(149, 124)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 30
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.SafeBoxes_TS2_ALAFAK.My.Resources.Resources.Logo
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, 68)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(521, 124)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 29
+        Me.PictureBox1.TabStop = False
+        '
+        'MaterialDivider4
+        '
+        Me.MaterialDivider4.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialDivider4.Depth = 0
+        Me.MaterialDivider4.Location = New System.Drawing.Point(243, 565)
+        Me.MaterialDivider4.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialDivider4.Name = "MaterialDivider4"
+        Me.MaterialDivider4.Size = New System.Drawing.Size(1, 23)
+        Me.MaterialDivider4.TabIndex = 38
+        Me.MaterialDivider4.Text = "MaterialDivider4"
+        '
+        'MaterialFlatButton2
+        '
+        Me.MaterialFlatButton2.AutoSize = True
+        Me.MaterialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialFlatButton2.Depth = 0
+        Me.MaterialFlatButton2.Icon = Nothing
+        Me.MaterialFlatButton2.Location = New System.Drawing.Point(251, 559)
+        Me.MaterialFlatButton2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MaterialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialFlatButton2.Name = "MaterialFlatButton2"
+        Me.MaterialFlatButton2.Primary = True
+        Me.MaterialFlatButton2.Size = New System.Drawing.Size(243, 36)
+        Me.MaterialFlatButton2.TabIndex = 39
+        Me.MaterialFlatButton2.Text = "Companies Accounts Manager"
+        Me.MaterialFlatButton2.UseVisualStyleBackColor = True
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(920, 655)
+        Me.Controls.Add(Me.MaterialFlatButton2)
+        Me.Controls.Add(Me.MaterialDivider4)
         Me.Controls.Add(Me.MaterialFlatButton1)
         Me.Controls.Add(Me.MaterialDivider3)
         Me.Controls.Add(Me.MaterialRaisedButton2)
@@ -355,4 +386,6 @@ Partial Class Frm_main
     Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialDivider3 As MaterialSkin.Controls.MaterialDivider
     Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents MaterialDivider4 As MaterialSkin.Controls.MaterialDivider
+    Friend WithEvents MaterialFlatButton2 As MaterialSkin.Controls.MaterialFlatButton
 End Class

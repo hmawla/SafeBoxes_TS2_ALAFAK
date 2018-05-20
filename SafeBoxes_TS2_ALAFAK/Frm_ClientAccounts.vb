@@ -16,6 +16,5 @@
         ClientId = dgv_accounts.SelectedRows(0).Cells(0).Value
         Frm_SelectBox.ShowDialog()
         FillDGV(dgv_accounts, "SELECT ca.AccountId AS [ACCOUNT ID],ClientFName AS [FIRST NAME],ClientLName AS [LAST NAME],SignCardId FROM  ClientDepAccount ca,Clients c,SignCardsAccounts sca WHERE ca.ClientId=c.ClientId AND ca.AccountId=sca.AccountId")
-
     End Sub
 End Class
