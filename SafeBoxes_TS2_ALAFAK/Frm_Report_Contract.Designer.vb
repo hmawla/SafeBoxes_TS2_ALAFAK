@@ -43,6 +43,7 @@ Partial Class Frm_Report_Contract
         Me.GroupBox1.Controls.Add(Me.dtpick_exdate)
         Me.GroupBox1.Controls.Add(Me.Rdb_ByContId)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(688, 134)
@@ -55,7 +56,7 @@ Partial Class Frm_Report_Contract
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(579, 104)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(71, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(92, 24)
         Me.CheckBox1.TabIndex = 17
         Me.CheckBox1.Text = "Delivered"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -65,7 +66,7 @@ Partial Class Frm_Report_Contract
         Me.Txt_ContId.Location = New System.Drawing.Point(6, 57)
         Me.Txt_ContId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Txt_ContId.Name = "Txt_ContId"
-        Me.Txt_ContId.Size = New System.Drawing.Size(234, 20)
+        Me.Txt_ContId.Size = New System.Drawing.Size(234, 27)
         Me.Txt_ContId.TabIndex = 12
         '
         'RadioButton2
@@ -73,7 +74,7 @@ Partial Class Frm_Report_Contract
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Location = New System.Drawing.Point(250, 25)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(121, 17)
+        Me.RadioButton2.Size = New System.Drawing.Size(165, 24)
         Me.RadioButton2.TabIndex = 15
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "By Date (FROM-TO)"
@@ -96,7 +97,7 @@ Partial Class Frm_Report_Contract
         Me.Rdb_ByContId.AutoSize = True
         Me.Rdb_ByContId.Location = New System.Drawing.Point(6, 25)
         Me.Rdb_ByContId.Name = "Rdb_ByContId"
-        Me.Rdb_ByContId.Size = New System.Drawing.Size(94, 17)
+        Me.Rdb_ByContId.Size = New System.Drawing.Size(127, 24)
         Me.Rdb_ByContId.TabIndex = 16
         Me.Rdb_ByContId.TabStop = True
         Me.Rdb_ByContId.Text = "By Contract ID"
@@ -119,6 +120,7 @@ Partial Class Frm_Report_Contract
         Me.CRptV_Contract.ActiveViewIndex = -1
         Me.CRptV_Contract.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CRptV_Contract.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CRptV_Contract.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CRptV_Contract.Location = New System.Drawing.Point(12, 152)
         Me.CRptV_Contract.Name = "CRptV_Contract"
         Me.CRptV_Contract.Size = New System.Drawing.Size(688, 428)
