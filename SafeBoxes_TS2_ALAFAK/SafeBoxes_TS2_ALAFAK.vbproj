@@ -166,6 +166,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_Report_Boxes.Designer.vb">
+      <DependentUpon>Frm_Report_Boxes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_Boxes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_Connects.Designer.vb">
+      <DependentUpon>Frm_Report_Connects.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_Connects.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_Report_Visits.Designer.vb">
       <DependentUpon>Frm_Report_Visits.vb</DependentUpon>
     </Compile>
@@ -176,6 +188,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Rpt_Authorizations.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt_boxes.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_boxes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt_Connects.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rpt_Connects.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Rpt_EndingContract.vb">
@@ -419,12 +443,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frm_Report_Boxes.resx">
+      <DependentUpon>Frm_Report_Boxes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_Connects.resx">
+      <DependentUpon>Frm_Report_Connects.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_Visits.resx">
       <DependentUpon>Frm_Report_Visits.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Authorizations.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Authorizations.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_boxes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_boxes.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_Connects.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_Connects.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_EndingContract.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
