@@ -16,6 +16,7 @@ Public Class Frm_Login
     Private Sub Frm_Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         materialSkinManager.AddFormToManage(Me)
         materialSkinManager.AddFormToManage(Frm_main)
+        materialSkinManager.AddFormToManage(Frm_Contracts)
         materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         materialSkinManager.ColorScheme = New ColorScheme(Primary.DeepPurple800, Primary.DeepPurple900, Primary.DeepPurple500, Accent.LightBlue200, TextShade.WHITE)
     End Sub

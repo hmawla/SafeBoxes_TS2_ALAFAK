@@ -198,4 +198,8 @@
     Private Sub ClientAuthorizationsReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AuthorizationReport.Click
         Frm_Report_Authorizations.ShowDialog()
     End Sub
+
+    Private Sub VisitsReport_Click(sender As Object, e As EventArgs) Handles VisitsReport.Click
+
+    End Sub
 End Class

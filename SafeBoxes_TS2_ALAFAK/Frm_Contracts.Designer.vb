@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Frm_Contracts
     Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,10 @@ Partial Class Frm_Contracts
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btn_reset = New System.Windows.Forms.Button()
-        Me.btn_search = New System.Windows.Forms.Button()
+        Me.btn_reset = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.rdb_bycontid = New System.Windows.Forms.RadioButton()
         Me.txt_bycontid = New System.Windows.Forms.TextBox()
         Me.rdb_byboxid = New System.Windows.Forms.RadioButton()
@@ -31,21 +31,21 @@ Partial Class Frm_Contracts
         Me.dgv_contracts = New System.Windows.Forms.DataGridView()
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.btn_visits = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btn_newcontract = New System.Windows.Forms.Button()
-        Me.btn_authorize = New System.Windows.Forms.Button()
-        Me.btn_delcontract = New System.Windows.Forms.Button()
-        Me.btn_withdraw = New System.Windows.Forms.Button()
-        Me.btn_modcontract = New System.Windows.Forms.Button()
-        Me.btn_end = New System.Windows.Forms.Button()
-        Me.btn_addmissingkeys = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.btn_showmissingkeys = New System.Windows.Forms.Button()
-        Me.btn_renew = New System.Windows.Forms.Button()
-        Me.btn_keydelivered = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btn_visits = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.Label1 = New MaterialSkin.Controls.MaterialLabel()
+        Me.Label2 = New MaterialSkin.Controls.MaterialLabel()
+        Me.btn_newcontract = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btn_authorize = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btn_delcontract = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btn_withdraw = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btn_modcontract = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btn_end = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btn_addmissingkeys = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.Label4 = New MaterialSkin.Controls.MaterialLabel()
+        Me.btn_showmissingkeys = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btn_renew = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btn_keydelivered = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.Label3 = New MaterialSkin.Controls.MaterialLabel()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.MaterialContextMenuStrip1 = New MaterialSkin.Controls.MaterialContextMenuStrip()
@@ -65,11 +65,17 @@ Partial Class Frm_Contracts
         'btn_reset
         '
         Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_reset.AutoSize = True
+        Me.btn_reset.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_reset.Depth = 0
         Me.btn_reset.Enabled = False
-        Me.btn_reset.Location = New System.Drawing.Point(629, 115)
+        Me.btn_reset.Icon = Nothing
+        Me.btn_reset.Location = New System.Drawing.Point(626, 108)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_reset.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_reset.Name = "btn_reset"
-        Me.btn_reset.Size = New System.Drawing.Size(24, 35)
+        Me.btn_reset.Primary = False
+        Me.btn_reset.Size = New System.Drawing.Size(30, 36)
         Me.btn_reset.TabIndex = 12
         Me.btn_reset.Text = "X"
         Me.btn_reset.UseVisualStyleBackColor = True
@@ -77,10 +83,16 @@ Partial Class Frm_Contracts
         'btn_search
         '
         Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_search.Location = New System.Drawing.Point(551, 113)
+        Me.btn_search.AutoSize = True
+        Me.btn_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_search.Depth = 0
+        Me.btn_search.Icon = Nothing
+        Me.btn_search.Location = New System.Drawing.Point(548, 106)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_search.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_search.Name = "btn_search"
-        Me.btn_search.Size = New System.Drawing.Size(70, 35)
+        Me.btn_search.Primary = False
+        Me.btn_search.Size = New System.Drawing.Size(64, 36)
         Me.btn_search.TabIndex = 9
         Me.btn_search.Text = "Filter"
         Me.btn_search.UseVisualStyleBackColor = True
@@ -131,12 +143,13 @@ Partial Class Frm_Contracts
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgv_contracts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_contracts.BackgroundColor = System.Drawing.Color.White
+        Me.dgv_contracts.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_contracts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgv_contracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_contracts.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgv_contracts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgv_contracts.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_contracts.Location = New System.Drawing.Point(13, 288)
+        Me.dgv_contracts.Location = New System.Drawing.Point(13, 268)
         Me.dgv_contracts.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgv_contracts.MultiSelect = False
         Me.dgv_contracts.Name = "dgv_contracts"
@@ -145,7 +158,7 @@ Partial Class Frm_Contracts
         Me.dgv_contracts.RowHeadersVisible = False
         Me.dgv_contracts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_contracts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_contracts.Size = New System.Drawing.Size(668, 289)
+        Me.dgv_contracts.Size = New System.Drawing.Size(668, 309)
         Me.dgv_contracts.TabIndex = 8
         '
         'MaterialTabControl1
@@ -159,11 +172,12 @@ Partial Class Frm_Contracts
         Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabControl1.Name = "MaterialTabControl1"
         Me.MaterialTabControl1.SelectedIndex = 0
-        Me.MaterialTabControl1.Size = New System.Drawing.Size(668, 176)
+        Me.MaterialTabControl1.Size = New System.Drawing.Size(668, 164)
         Me.MaterialTabControl1.TabIndex = 17
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.Controls.Add(Me.btn_visits)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.Label2)
@@ -182,16 +196,22 @@ Partial Class Frm_Contracts
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(660, 143)
+        Me.TabPage1.Size = New System.Drawing.Size(660, 131)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Control"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TabPage1.Text = "Controls"
         '
         'btn_visits
         '
-        Me.btn_visits.Location = New System.Drawing.Point(321, 95)
+        Me.btn_visits.AutoSize = True
+        Me.btn_visits.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_visits.Depth = 0
+        Me.btn_visits.Icon = Nothing
+        Me.btn_visits.Location = New System.Drawing.Point(320, 94)
+        Me.btn_visits.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_visits.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_visits.Name = "btn_visits"
-        Me.btn_visits.Size = New System.Drawing.Size(151, 29)
+        Me.btn_visits.Primary = True
+        Me.btn_visits.Size = New System.Drawing.Size(62, 36)
         Me.btn_visits.TabIndex = 16
         Me.btn_visits.Text = "Visits"
         Me.btn_visits.UseVisualStyleBackColor = True
@@ -199,82 +219,137 @@ Partial Class Frm_Contracts
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Depth = 0
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(6, 3)
+        Me.Label1.MouseState = MaterialSkin.MouseState.HOVER
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 19)
+        Me.Label1.Size = New System.Drawing.Size(59, 19)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Control"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Depth = 0
+        Me.Label2.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(473, 2)
+        Me.Label2.MouseState = MaterialSkin.MouseState.HOVER
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 19)
+        Me.Label2.Size = New System.Drawing.Size(93, 19)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Permissions"
         '
         'btn_newcontract
         '
-        Me.btn_newcontract.Location = New System.Drawing.Point(6, 25)
+        Me.btn_newcontract.AutoSize = True
+        Me.btn_newcontract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_newcontract.Depth = 0
+        Me.btn_newcontract.Icon = Nothing
+        Me.btn_newcontract.Location = New System.Drawing.Point(10, 22)
+        Me.btn_newcontract.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_newcontract.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_newcontract.Name = "btn_newcontract"
-        Me.btn_newcontract.Size = New System.Drawing.Size(151, 29)
+        Me.btn_newcontract.Primary = True
+        Me.btn_newcontract.Size = New System.Drawing.Size(81, 36)
         Me.btn_newcontract.TabIndex = 0
         Me.btn_newcontract.Text = "Add new"
         Me.btn_newcontract.UseVisualStyleBackColor = True
         '
         'btn_authorize
         '
-        Me.btn_authorize.Location = New System.Drawing.Point(477, 60)
+        Me.btn_authorize.AutoSize = True
+        Me.btn_authorize.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_authorize.Depth = 0
+        Me.btn_authorize.Icon = Nothing
+        Me.btn_authorize.Location = New System.Drawing.Point(477, 58)
+        Me.btn_authorize.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_authorize.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_authorize.Name = "btn_authorize"
-        Me.btn_authorize.Size = New System.Drawing.Size(151, 29)
+        Me.btn_authorize.Primary = True
+        Me.btn_authorize.Size = New System.Drawing.Size(95, 36)
         Me.btn_authorize.TabIndex = 14
         Me.btn_authorize.Text = "Authorize"
         Me.btn_authorize.UseVisualStyleBackColor = True
         '
         'btn_delcontract
         '
-        Me.btn_delcontract.Location = New System.Drawing.Point(6, 95)
+        Me.btn_delcontract.AutoSize = True
+        Me.btn_delcontract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_delcontract.Depth = 0
+        Me.btn_delcontract.Icon = Nothing
+        Me.btn_delcontract.Location = New System.Drawing.Point(10, 94)
+        Me.btn_delcontract.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_delcontract.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_delcontract.Name = "btn_delcontract"
-        Me.btn_delcontract.Size = New System.Drawing.Size(151, 29)
+        Me.btn_delcontract.Primary = True
+        Me.btn_delcontract.Size = New System.Drawing.Size(138, 36)
         Me.btn_delcontract.TabIndex = 1
         Me.btn_delcontract.Text = "Delete Selected"
         Me.btn_delcontract.UseVisualStyleBackColor = True
         '
         'btn_withdraw
         '
-        Me.btn_withdraw.Location = New System.Drawing.Point(477, 25)
+        Me.btn_withdraw.AutoSize = True
+        Me.btn_withdraw.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_withdraw.Depth = 0
+        Me.btn_withdraw.Icon = Nothing
+        Me.btn_withdraw.Location = New System.Drawing.Point(477, 22)
+        Me.btn_withdraw.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_withdraw.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_withdraw.Name = "btn_withdraw"
-        Me.btn_withdraw.Size = New System.Drawing.Size(151, 29)
+        Me.btn_withdraw.Primary = True
+        Me.btn_withdraw.Size = New System.Drawing.Size(178, 36)
         Me.btn_withdraw.TabIndex = 13
         Me.btn_withdraw.Text = "Withdraw Permission"
         Me.btn_withdraw.UseVisualStyleBackColor = True
         '
         'btn_modcontract
         '
-        Me.btn_modcontract.Location = New System.Drawing.Point(6, 60)
+        Me.btn_modcontract.AutoSize = True
+        Me.btn_modcontract.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_modcontract.Depth = 0
+        Me.btn_modcontract.Icon = Nothing
+        Me.btn_modcontract.Location = New System.Drawing.Point(10, 58)
+        Me.btn_modcontract.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_modcontract.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_modcontract.Name = "btn_modcontract"
-        Me.btn_modcontract.Size = New System.Drawing.Size(151, 29)
+        Me.btn_modcontract.Primary = True
+        Me.btn_modcontract.Size = New System.Drawing.Size(140, 36)
         Me.btn_modcontract.TabIndex = 2
         Me.btn_modcontract.Text = "Modify Selected"
         Me.btn_modcontract.UseVisualStyleBackColor = True
         '
         'btn_end
         '
-        Me.btn_end.Location = New System.Drawing.Point(320, 60)
+        Me.btn_end.AutoSize = True
+        Me.btn_end.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_end.Depth = 0
+        Me.btn_end.Icon = Nothing
+        Me.btn_end.Location = New System.Drawing.Point(320, 58)
+        Me.btn_end.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_end.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_end.Name = "btn_end"
-        Me.btn_end.Size = New System.Drawing.Size(151, 29)
+        Me.btn_end.Primary = True
+        Me.btn_end.Size = New System.Drawing.Size(47, 36)
         Me.btn_end.TabIndex = 12
         Me.btn_end.Text = "End"
         Me.btn_end.UseVisualStyleBackColor = True
         '
         'btn_addmissingkeys
         '
-        Me.btn_addmissingkeys.Location = New System.Drawing.Point(163, 60)
+        Me.btn_addmissingkeys.AutoSize = True
+        Me.btn_addmissingkeys.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_addmissingkeys.Depth = 0
+        Me.btn_addmissingkeys.Icon = Nothing
+        Me.btn_addmissingkeys.Location = New System.Drawing.Point(163, 58)
+        Me.btn_addmissingkeys.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_addmissingkeys.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_addmissingkeys.Name = "btn_addmissingkeys"
-        Me.btn_addmissingkeys.Size = New System.Drawing.Size(151, 29)
+        Me.btn_addmissingkeys.Primary = True
+        Me.btn_addmissingkeys.Size = New System.Drawing.Size(107, 36)
         Me.btn_addmissingkeys.TabIndex = 6
         Me.btn_addmissingkeys.Text = "Add Missing"
         Me.btn_addmissingkeys.UseVisualStyleBackColor = True
@@ -282,37 +357,61 @@ Partial Class Frm_Contracts
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Depth = 0
+        Me.Label4.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(316, 2)
+        Me.Label4.MouseState = MaterialSkin.MouseState.HOVER
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(141, 19)
+        Me.Label4.Size = New System.Drawing.Size(132, 19)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Manage Contracts"
         '
         'btn_showmissingkeys
         '
-        Me.btn_showmissingkeys.Location = New System.Drawing.Point(163, 25)
+        Me.btn_showmissingkeys.AutoSize = True
+        Me.btn_showmissingkeys.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_showmissingkeys.Depth = 0
+        Me.btn_showmissingkeys.Icon = Nothing
+        Me.btn_showmissingkeys.Location = New System.Drawing.Point(163, 22)
+        Me.btn_showmissingkeys.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_showmissingkeys.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_showmissingkeys.Name = "btn_showmissingkeys"
-        Me.btn_showmissingkeys.Size = New System.Drawing.Size(151, 29)
+        Me.btn_showmissingkeys.Primary = True
+        Me.btn_showmissingkeys.Size = New System.Drawing.Size(119, 36)
         Me.btn_showmissingkeys.TabIndex = 7
         Me.btn_showmissingkeys.Text = "Show Missing"
         Me.btn_showmissingkeys.UseVisualStyleBackColor = True
         '
         'btn_renew
         '
-        Me.btn_renew.Location = New System.Drawing.Point(320, 25)
+        Me.btn_renew.AutoSize = True
+        Me.btn_renew.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_renew.Depth = 0
+        Me.btn_renew.Icon = Nothing
+        Me.btn_renew.Location = New System.Drawing.Point(320, 22)
+        Me.btn_renew.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_renew.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_renew.Name = "btn_renew"
-        Me.btn_renew.Size = New System.Drawing.Size(151, 29)
+        Me.btn_renew.Primary = True
+        Me.btn_renew.Size = New System.Drawing.Size(67, 36)
         Me.btn_renew.TabIndex = 10
         Me.btn_renew.Text = "Renew"
         Me.btn_renew.UseVisualStyleBackColor = True
         '
         'btn_keydelivered
         '
+        Me.btn_keydelivered.AutoSize = True
+        Me.btn_keydelivered.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_keydelivered.Depth = 0
         Me.btn_keydelivered.Enabled = False
-        Me.btn_keydelivered.Location = New System.Drawing.Point(163, 95)
+        Me.btn_keydelivered.Icon = Nothing
+        Me.btn_keydelivered.Location = New System.Drawing.Point(163, 94)
+        Me.btn_keydelivered.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.btn_keydelivered.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_keydelivered.Name = "btn_keydelivered"
-        Me.btn_keydelivered.Size = New System.Drawing.Size(151, 29)
+        Me.btn_keydelivered.Primary = True
+        Me.btn_keydelivered.Size = New System.Drawing.Size(119, 36)
         Me.btn_keydelivered.TabIndex = 8
         Me.btn_keydelivered.Text = "Key Delivered"
         Me.btn_keydelivered.UseVisualStyleBackColor = True
@@ -320,15 +419,19 @@ Partial Class Frm_Contracts
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Depth = 0
+        Me.Label3.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(159, 2)
+        Me.Label3.MouseState = MaterialSkin.MouseState.HOVER
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 19)
+        Me.Label3.Size = New System.Drawing.Size(98, 19)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Manage Keys"
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.White
         Me.TabPage2.Controls.Add(Me.btn_reset)
         Me.TabPage2.Controls.Add(Me.rdb_byboxid)
         Me.TabPage2.Controls.Add(Me.btn_search)
@@ -338,13 +441,14 @@ Partial Class Frm_Contracts
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(660, 143)
+        Me.TabPage2.Size = New System.Drawing.Size(660, 152)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Filter"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'MaterialTabSelector1
         '
+        Me.MaterialTabSelector1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
         Me.MaterialTabSelector1.Location = New System.Drawing.Point(0, 63)
@@ -423,8 +527,8 @@ Partial Class Frm_Contracts
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents btn_reset As Button
-    Friend WithEvents btn_search As Button
+    Friend WithEvents btn_reset As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents btn_search As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents rdb_bycontid As RadioButton
     Friend WithEvents txt_bycontid As TextBox
     Friend WithEvents rdb_byboxid As RadioButton
@@ -432,21 +536,21 @@ Partial Class Frm_Contracts
     Friend WithEvents dgv_contracts As DataGridView
     Friend WithEvents MaterialTabControl1 As MaterialSkin.Controls.MaterialTabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents btn_visits As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents btn_newcontract As Button
-    Friend WithEvents btn_authorize As Button
-    Friend WithEvents btn_delcontract As Button
-    Friend WithEvents btn_withdraw As Button
-    Friend WithEvents btn_modcontract As Button
-    Friend WithEvents btn_end As Button
-    Friend WithEvents btn_addmissingkeys As Button
-    Friend WithEvents Label4 As Label
-    Friend WithEvents btn_showmissingkeys As Button
-    Friend WithEvents btn_renew As Button
-    Friend WithEvents btn_keydelivered As Button
-    Friend WithEvents Label3 As Label
+    Friend WithEvents btn_visits As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents Label1 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents Label2 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents btn_newcontract As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents btn_authorize As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents btn_delcontract As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents btn_withdraw As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents btn_modcontract As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents btn_end As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents btn_addmissingkeys As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents Label4 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents btn_showmissingkeys As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents btn_renew As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents btn_keydelivered As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents Label3 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents MaterialTabSelector1 As MaterialSkin.Controls.MaterialTabSelector
     Friend WithEvents MaterialContextMenuStrip1 As MaterialSkin.Controls.MaterialContextMenuStrip
