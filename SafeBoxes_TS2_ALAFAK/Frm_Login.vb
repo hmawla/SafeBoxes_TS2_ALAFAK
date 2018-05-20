@@ -17,6 +17,7 @@ Public Class Frm_Login
         materialSkinManager.AddFormToManage(Me)
         materialSkinManager.AddFormToManage(Frm_main)
         materialSkinManager.AddFormToManage(Frm_Contracts)
+        materialSkinManager.AddFormToManage(Frm_ContractVisits)
         materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         materialSkinManager.ColorScheme = New ColorScheme(Primary.DeepPurple800, Primary.DeepPurple900, Primary.DeepPurple500, Accent.LightBlue200, TextShade.WHITE)
     End Sub

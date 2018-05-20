@@ -34,21 +34,17 @@
     End Sub
 
     Private Sub Btn_Add_Click(sender As Object, e As EventArgs) Handles Btn_Add.Click
-        If txt_note.Text <> "" Then
-            For i As Integer = 0 To DGV_Visits.Rows.Count - 1
-                If Txt_ClientId.Text = DGV_Visits.Rows(i).Cells(0).Value Then
-                    MessageBox.Show("Client Already Added!")
-                    GoTo the_End
-                End If
-            Next
-            ds = ReadQueryOut("SELECT ClientId, ClientFName + ' ' + ClientLName, ClientDOB FROM Clients WHERE ClientId = " & Txt_ClientId.Text)
-            Dim theDate As Date = ds.Tables(0).Rows(0).Item(2)
+        For i As Integer = 0 To DGV_Visits.Rows.Count - 1
+            If Txt_ClientId.Text = DGV_Visits.Rows(i).Cells(0).Value Then
+                MessageBox.Show("Client Already Added!")
+                GoTo the_End
+            End If
+        Next
+        ds = ReadQueryOut("SELECT ClientId, ClientFName + ' ' + ClientLName, ClientDOB FROM Clients WHERE ClientId = " & Txt_ClientId.Text)
+        Dim theDate As Date = ds.Tables(0).Rows(0).Item(2)
 
-            DGV_Visits.Rows.Add(ds.Tables(0).Rows(0).Item(0), ds.Tables(0).Rows(0).Item(1), theDate.ToShortDateString())
+        DGV_Visits.Rows.Add(ds.Tables(0).Rows(0).Item(0), ds.Tables(0).Rows(0).Item(1), theDate.ToShortDateString())
 the_End:
-        Else
-            MessageBox.Show("Kindly insert a note first <3 :* mwah")
-        End If
 
     End Sub
 
@@ -69,15 +65,20 @@ the_End:
     End Sub
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
-        Dim theNewId As Integer = GenID("Visits", "VisitId")
-        Dim theNewvId As Integer = GenID("VisitNotes", "VisitNoteId")
-        ExecuteQuery("INSERT INTO Visits VALUES(" & theNewId & ", date(), date(), " & ContId & ", " & EmpId & ")")
-        ExecuteQuery("INSERT INTO VisitsVisitNotes VALUES(" & theNewId & ",'" & theNewvId & "')")
-        ExecuteQuery("INSERT INTO VisitNotes VALUES(" & theNewvId & ",'" & txt_note.Text & "')")
+        If DGV_Visits.Rows.Count > 0 Then
+            Dim theNewId As Integer = GenID("Visits", "VisitId")
+            Dim theNewvId As Integer = GenID("VisitNotes", "VisitNoteId")
+            ExecuteQuery("INSERT INTO Visits VALUES(" & theNewId & ", date(), time(), " & ContId & ", " & EmpId & ")")
+            ExecuteQuery("INSERT INTO VisitsVisitNotes VALUES(" & theNewId & ",'" & theNewvId & "')")
+            ExecuteQuery("INSERT INTO VisitNotes VALUES(" & theNewvId & ",'" & txt_note.Text & "')")
 
-        For i As Integer = 0 To DGV_Visits.Rows.Count - 1
-            ExecuteQuery("INSERT INTO ClientVisit VALUES(" & DGV_Visits.Rows(i).Cells(0).Value & ", " & theNewId & ")")
-        Next
+            For i As Integer = 0 To DGV_Visits.Rows.Count - 1
+                ExecuteQuery("INSERT INTO ClientVisit VALUES(" & DGV_Visits.Rows(i).Cells(0).Value & ", " & theNewId & ")")
+            Next
+        Else
+            MessageBox.Show("Please add at least one visitor!")
+        End If
+
         Me.Dispose()
     End Sub
 
