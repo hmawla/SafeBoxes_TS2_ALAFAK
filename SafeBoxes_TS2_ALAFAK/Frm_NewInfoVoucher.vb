@@ -85,7 +85,7 @@
             ds = ReadQueryOut("SELECT ClientFName + ' ' + ClientLName FROM Clients WHERE ClientId = " & txt_clientid.Text)
             txt_clientname.Text = ds.Tables(0).Rows(0).Item(0)
         Catch ex As Exception
-
+            txt_clientname.Text = ""
         End Try
 
     End Sub

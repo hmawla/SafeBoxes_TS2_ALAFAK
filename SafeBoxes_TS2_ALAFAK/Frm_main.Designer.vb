@@ -100,7 +100,7 @@ Partial Class Frm_main
         Me.btn_infovouchman.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_infovouchman.Depth = 0
         Me.btn_infovouchman.Icon = Nothing
-        Me.btn_infovouchman.Location = New System.Drawing.Point(16, 467)
+        Me.btn_infovouchman.Location = New System.Drawing.Point(13, 513)
         Me.btn_infovouchman.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_infovouchman.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_infovouchman.Name = "btn_infovouchman"
@@ -116,7 +116,7 @@ Partial Class Frm_main
         Me.MaterialRaisedButton18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton18.Depth = 0
         Me.MaterialRaisedButton18.Icon = Nothing
-        Me.MaterialRaisedButton18.Location = New System.Drawing.Point(16, 375)
+        Me.MaterialRaisedButton18.Location = New System.Drawing.Point(13, 421)
         Me.MaterialRaisedButton18.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaterialRaisedButton18.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton18.Name = "MaterialRaisedButton18"
@@ -132,7 +132,7 @@ Partial Class Frm_main
         Me.MaterialRaisedButton19.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton19.Depth = 0
         Me.MaterialRaisedButton19.Icon = Nothing
-        Me.MaterialRaisedButton19.Location = New System.Drawing.Point(16, 421)
+        Me.MaterialRaisedButton19.Location = New System.Drawing.Point(13, 467)
         Me.MaterialRaisedButton19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaterialRaisedButton19.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton19.Name = "MaterialRaisedButton19"
@@ -148,7 +148,7 @@ Partial Class Frm_main
         Me.MaterialRaisedButton20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton20.Depth = 0
         Me.MaterialRaisedButton20.Icon = Nothing
-        Me.MaterialRaisedButton20.Location = New System.Drawing.Point(16, 513)
+        Me.MaterialRaisedButton20.Location = New System.Drawing.Point(13, 559)
         Me.MaterialRaisedButton20.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaterialRaisedButton20.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton20.Name = "MaterialRaisedButton20"
@@ -217,7 +217,7 @@ Partial Class Frm_main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialDivider2.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.MaterialDivider2.Depth = 0
-        Me.MaterialDivider2.Location = New System.Drawing.Point(-4, 594)
+        Me.MaterialDivider2.Location = New System.Drawing.Point(-4, 601)
         Me.MaterialDivider2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialDivider2.Name = "MaterialDivider2"
         Me.MaterialDivider2.Size = New System.Drawing.Size(929, 1)
@@ -231,7 +231,7 @@ Partial Class Frm_main
         Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton1.Depth = 0
         Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(822, 607)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(822, 628)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
@@ -247,7 +247,7 @@ Partial Class Frm_main
         Me.MaterialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton2.Depth = 0
         Me.MaterialRaisedButton2.Icon = Nothing
-        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(761, 607)
+        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(761, 628)
         Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
         Me.MaterialRaisedButton2.Primary = True
@@ -273,7 +273,7 @@ Partial Class Frm_main
         Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialFlatButton1.Depth = 0
         Me.MaterialFlatButton1.Icon = Nothing
-        Me.MaterialFlatButton1.Location = New System.Drawing.Point(16, 559)
+        Me.MaterialFlatButton1.Location = New System.Drawing.Point(16, 375)
         Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
@@ -310,7 +310,7 @@ Partial Class Frm_main
         '
         Me.MaterialDivider4.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.MaterialDivider4.Depth = 0
-        Me.MaterialDivider4.Location = New System.Drawing.Point(243, 565)
+        Me.MaterialDivider4.Location = New System.Drawing.Point(243, 381)
         Me.MaterialDivider4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialDivider4.Name = "MaterialDivider4"
         Me.MaterialDivider4.Size = New System.Drawing.Size(1, 23)
@@ -323,7 +323,7 @@ Partial Class Frm_main
         Me.MaterialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialFlatButton2.Depth = 0
         Me.MaterialFlatButton2.Icon = Nothing
-        Me.MaterialFlatButton2.Location = New System.Drawing.Point(251, 559)
+        Me.MaterialFlatButton2.Location = New System.Drawing.Point(251, 375)
         Me.MaterialFlatButton2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaterialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialFlatButton2.Name = "MaterialFlatButton2"
@@ -337,7 +337,7 @@ Partial Class Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(920, 655)
+        Me.ClientSize = New System.Drawing.Size(920, 676)
         Me.Controls.Add(Me.MaterialFlatButton2)
         Me.Controls.Add(Me.MaterialDivider4)
         Me.Controls.Add(Me.MaterialFlatButton1)

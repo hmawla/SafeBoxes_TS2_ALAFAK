@@ -1,13 +1,13 @@
 ﻿Imports MaterialSkin
 
 Public Class Frm_main
-    Public accountid As Integer
-    Public clientid As Integer
-    Public contractid As Integer
-    Public employeeid As Integer
-    Public loggedEmpId As Integer
-    Public infovouchid As Integer
-    Public boxId As Integer
+    Public accountid As Integer = vbNull
+    Public clientid As Integer = vbNull
+    Public contractid As Integer = vbNull
+    Public employeeid As Integer = vbNull
+    Public loggedEmpId As Integer = vbNull
+    Public infovouchid As Integer = vbNull
+    Public boxId As Integer = vbNull
 
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
         InitCon()
