@@ -237,6 +237,7 @@ Partial Class Frm_NewInfoVoucher
         Me.dtpick_fromtime.Name = "dtpick_fromtime"
         Me.dtpick_fromtime.Size = New System.Drawing.Size(139, 27)
         Me.dtpick_fromtime.TabIndex = 70
+        Me.dtpick_fromtime.Value = New Date(2018, 5, 20, 0, 0, 0, 0)
         '
         'MaterialLabel2
         '
@@ -313,6 +314,7 @@ Partial Class Frm_NewInfoVoucher
         Me.dtpick_totime.Name = "dtpick_totime"
         Me.dtpick_totime.Size = New System.Drawing.Size(139, 26)
         Me.dtpick_totime.TabIndex = 72
+        Me.dtpick_totime.Value = New Date(2018, 5, 20, 23, 59, 0, 0)
         '
         'MaterialLabel12
         '
