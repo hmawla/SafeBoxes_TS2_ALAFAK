@@ -552,6 +552,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_InfoVoucher.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Rpt_InfoVoucher1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_MissingKeys.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
