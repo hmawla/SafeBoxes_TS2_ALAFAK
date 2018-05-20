@@ -24,10 +24,10 @@ Partial Class Frm_Contracts
     Private Sub InitializeComponent()
         Me.btn_reset = New MaterialSkin.Controls.MaterialFlatButton()
         Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
-        Me.rdb_bycontid = New System.Windows.Forms.RadioButton()
-        Me.txt_bycontid = New System.Windows.Forms.TextBox()
-        Me.rdb_byboxid = New System.Windows.Forms.RadioButton()
-        Me.txt_byboxid = New System.Windows.Forms.TextBox()
+        Me.rdb_bycontid = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.txt_bycontid = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.rdb_byboxid = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.txt_byboxid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.dgv_contracts = New System.Windows.Forms.DataGridView()
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -70,7 +70,7 @@ Partial Class Frm_Contracts
         Me.btn_reset.Depth = 0
         Me.btn_reset.Enabled = False
         Me.btn_reset.Icon = Nothing
-        Me.btn_reset.Location = New System.Drawing.Point(626, 108)
+        Me.btn_reset.Location = New System.Drawing.Point(626, 87)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_reset.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_reset.Name = "btn_reset"
@@ -87,7 +87,7 @@ Partial Class Frm_Contracts
         Me.btn_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_search.Depth = 0
         Me.btn_search.Icon = Nothing
-        Me.btn_search.Location = New System.Drawing.Point(548, 106)
+        Me.btn_search.Location = New System.Drawing.Point(548, 85)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_search.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_search.Name = "btn_search"
@@ -99,9 +99,13 @@ Partial Class Frm_Contracts
         '
         'rdb_bycontid
         '
-        Me.rdb_bycontid.AutoSize = True
-        Me.rdb_bycontid.Location = New System.Drawing.Point(6, 43)
+        Me.rdb_bycontid.Depth = 0
+        Me.rdb_bycontid.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.rdb_bycontid.Location = New System.Drawing.Point(4, 36)
+        Me.rdb_bycontid.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.rdb_bycontid.MouseState = MaterialSkin.MouseState.HOVER
         Me.rdb_bycontid.Name = "rdb_bycontid"
+        Me.rdb_bycontid.Ripple = True
         Me.rdb_bycontid.Size = New System.Drawing.Size(127, 24)
         Me.rdb_bycontid.TabIndex = 11
         Me.rdb_bycontid.Text = "By Contract ID"
@@ -109,29 +113,54 @@ Partial Class Frm_Contracts
         '
         'txt_bycontid
         '
+        Me.txt_bycontid.Depth = 0
         Me.txt_bycontid.Enabled = False
-        Me.txt_bycontid.Location = New System.Drawing.Point(138, 42)
+        Me.txt_bycontid.Hint = ""
+        Me.txt_bycontid.Location = New System.Drawing.Point(139, 36)
         Me.txt_bycontid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_bycontid.MaxLength = 32767
+        Me.txt_bycontid.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_bycontid.Name = "txt_bycontid"
-        Me.txt_bycontid.Size = New System.Drawing.Size(215, 27)
+        Me.txt_bycontid.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_bycontid.SelectedText = ""
+        Me.txt_bycontid.SelectionLength = 0
+        Me.txt_bycontid.SelectionStart = 0
+        Me.txt_bycontid.Size = New System.Drawing.Size(215, 23)
         Me.txt_bycontid.TabIndex = 10
+        Me.txt_bycontid.TabStop = False
+        Me.txt_bycontid.UseSystemPasswordChar = False
         '
         'rdb_byboxid
         '
+        Me.rdb_byboxid.Depth = 0
+        Me.rdb_byboxid.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.rdb_byboxid.Location = New System.Drawing.Point(6, 6)
+        Me.rdb_byboxid.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.rdb_byboxid.MouseState = MaterialSkin.MouseState.HOVER
         Me.rdb_byboxid.Name = "rdb_byboxid"
+        Me.rdb_byboxid.Ripple = True
         Me.rdb_byboxid.Size = New System.Drawing.Size(104, 24)
         Me.rdb_byboxid.TabIndex = 13
         Me.rdb_byboxid.Text = "By Box ID"
         '
         'txt_byboxid
         '
+        Me.txt_byboxid.Depth = 0
         Me.txt_byboxid.Enabled = False
-        Me.txt_byboxid.Location = New System.Drawing.Point(138, 5)
+        Me.txt_byboxid.Hint = ""
+        Me.txt_byboxid.Location = New System.Drawing.Point(139, 7)
         Me.txt_byboxid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_byboxid.MaxLength = 32767
+        Me.txt_byboxid.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_byboxid.Name = "txt_byboxid"
-        Me.txt_byboxid.Size = New System.Drawing.Size(215, 27)
+        Me.txt_byboxid.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_byboxid.SelectedText = ""
+        Me.txt_byboxid.SelectionLength = 0
+        Me.txt_byboxid.SelectionStart = 0
+        Me.txt_byboxid.Size = New System.Drawing.Size(215, 23)
         Me.txt_byboxid.TabIndex = 8
+        Me.txt_byboxid.TabStop = False
+        Me.txt_byboxid.UseSystemPasswordChar = False
         '
         'dgv_contracts
         '
@@ -441,7 +470,7 @@ Partial Class Frm_Contracts
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(660, 152)
+        Me.TabPage2.Size = New System.Drawing.Size(660, 131)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Filter"
         '
@@ -529,10 +558,10 @@ Partial Class Frm_Contracts
     End Sub
     Friend WithEvents btn_reset As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents btn_search As MaterialSkin.Controls.MaterialFlatButton
-    Friend WithEvents rdb_bycontid As RadioButton
-    Friend WithEvents txt_bycontid As TextBox
-    Friend WithEvents rdb_byboxid As RadioButton
-    Friend WithEvents txt_byboxid As TextBox
+    Friend WithEvents rdb_bycontid As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents txt_bycontid As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents rdb_byboxid As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents txt_byboxid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents dgv_contracts As DataGridView
     Friend WithEvents MaterialTabControl1 As MaterialSkin.Controls.MaterialTabControl
     Friend WithEvents TabPage1 As TabPage
