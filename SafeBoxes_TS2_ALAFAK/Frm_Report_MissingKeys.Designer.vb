@@ -70,7 +70,7 @@ Partial Class Frm_Report_MissingKeys
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Location = New System.Drawing.Point(250, 25)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(165, 23)
+        Me.RadioButton2.Size = New System.Drawing.Size(165, 24)
         Me.RadioButton2.TabIndex = 15
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "By Date (FROM-TO)"
@@ -81,7 +81,7 @@ Partial Class Frm_Report_MissingKeys
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Location = New System.Drawing.Point(6, 25)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(127, 23)
+        Me.RadioButton1.Size = New System.Drawing.Size(127, 24)
         Me.RadioButton1.TabIndex = 16
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "By Contract ID"
@@ -109,7 +109,7 @@ Partial Class Frm_Report_MissingKeys
         Me.Chk_Delivered.AutoSize = True
         Me.Chk_Delivered.Location = New System.Drawing.Point(579, 104)
         Me.Chk_Delivered.Name = "Chk_Delivered"
-        Me.Chk_Delivered.Size = New System.Drawing.Size(92, 23)
+        Me.Chk_Delivered.Size = New System.Drawing.Size(92, 24)
         Me.Chk_Delivered.TabIndex = 17
         Me.Chk_Delivered.Text = "Delivered"
         Me.Chk_Delivered.UseVisualStyleBackColor = True
