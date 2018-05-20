@@ -76,7 +76,7 @@ Partial Class Frm_Report_Connects
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Location = New System.Drawing.Point(250, 25)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(169, 24)
+        Me.RadioButton2.Size = New System.Drawing.Size(165, 24)
         Me.RadioButton2.TabIndex = 15
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "By Date (FROM-TO)"
@@ -99,7 +99,7 @@ Partial Class Frm_Report_Connects
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Location = New System.Drawing.Point(6, 25)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(158, 24)
+        Me.RadioButton1.Size = New System.Drawing.Size(153, 24)
         Me.RadioButton1.TabIndex = 16
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "By InfoVoucher ID"

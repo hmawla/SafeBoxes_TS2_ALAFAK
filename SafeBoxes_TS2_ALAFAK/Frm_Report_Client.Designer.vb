@@ -24,10 +24,10 @@ Partial Class Frm_Report_Client
     Private Sub InitializeComponent()
         Me.CRptV_Clients = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txt_cname = New System.Windows.Forms.TextBox()
         Me.Txt_ContId = New System.Windows.Forms.TextBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Rdb_ByClientId = New System.Windows.Forms.RadioButton()
-        Me.txt_cname = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,6 +58,14 @@ Partial Class Frm_Report_Client
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filter"
         '
+        'txt_cname
+        '
+        Me.txt_cname.Location = New System.Drawing.Point(250, 57)
+        Me.txt_cname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_cname.Name = "txt_cname"
+        Me.txt_cname.Size = New System.Drawing.Size(234, 27)
+        Me.txt_cname.TabIndex = 18
+        '
         'Txt_ContId
         '
         Me.Txt_ContId.Location = New System.Drawing.Point(6, 57)
@@ -87,14 +95,6 @@ Partial Class Frm_Report_Client
         Me.Rdb_ByClientId.TabStop = True
         Me.Rdb_ByClientId.Text = "By Client ID"
         Me.Rdb_ByClientId.UseVisualStyleBackColor = True
-        '
-        'txt_cname
-        '
-        Me.txt_cname.Location = New System.Drawing.Point(250, 57)
-        Me.txt_cname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txt_cname.Name = "txt_cname"
-        Me.txt_cname.Size = New System.Drawing.Size(234, 27)
-        Me.txt_cname.TabIndex = 18
         '
         'Frm_Report_Client
         '

@@ -32,6 +32,8 @@ Partial Class Frm_ContractVisits
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
         Me.Lbl_ContId = New MaterialSkin.Controls.MaterialLabel()
         Me.Lbl_EmpId = New MaterialSkin.Controls.MaterialLabel()
+        Me.EmployeeMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectDifferentEmployeeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DGVMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Btn_Submit = New MaterialSkin.Controls.MaterialFlatButton()
@@ -41,12 +43,10 @@ Partial Class Frm_ContractVisits
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txt_note = New System.Windows.Forms.TextBox()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
-        Me.EmployeeMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
-        Me.SelectDifferentEmployeeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientMenuStrip.SuspendLayout()
+        Me.EmployeeMenuStrip.SuspendLayout()
         Me.DGVMenuStrip.SuspendLayout()
         CType(Me.DGV_Visits, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.EmployeeMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'Btn_Add
@@ -176,6 +176,21 @@ Partial Class Frm_ContractVisits
         Me.Lbl_EmpId.TabIndex = 60
         Me.Lbl_EmpId.Text = "Employee ID: <EmpId>"
         '
+        'EmployeeMenuStrip
+        '
+        Me.EmployeeMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EmployeeMenuStrip.Depth = 0
+        Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem1})
+        Me.EmployeeMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
+        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 26)
+        '
+        'SelectDifferentEmployeeToolStripMenuItem1
+        '
+        Me.SelectDifferentEmployeeToolStripMenuItem1.Name = "SelectDifferentEmployeeToolStripMenuItem1"
+        Me.SelectDifferentEmployeeToolStripMenuItem1.Size = New System.Drawing.Size(209, 22)
+        Me.SelectDifferentEmployeeToolStripMenuItem1.Text = "Select Different Employee"
+        '
         'DGVMenuStrip
         '
         Me.DGVMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoveSelectedToolStripMenuItem})
@@ -283,21 +298,6 @@ Partial Class Frm_ContractVisits
         Me.MaterialLabel1.TabIndex = 75
         Me.MaterialLabel1.Text = "Visit Notes:"
         '
-        'EmployeeMenuStrip
-        '
-        Me.EmployeeMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.EmployeeMenuStrip.Depth = 0
-        Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem1})
-        Me.EmployeeMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
-        Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
-        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 26)
-        '
-        'SelectDifferentEmployeeToolStripMenuItem1
-        '
-        Me.SelectDifferentEmployeeToolStripMenuItem1.Name = "SelectDifferentEmployeeToolStripMenuItem1"
-        Me.SelectDifferentEmployeeToolStripMenuItem1.Size = New System.Drawing.Size(209, 22)
-        Me.SelectDifferentEmployeeToolStripMenuItem1.Text = "Select Different Employee"
-        '
         'Frm_ContractVisits
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -319,9 +319,9 @@ Partial Class Frm_ContractVisits
         Me.Name = "Frm_ContractVisits"
         Me.Text = "Frm_ContractVisits"
         Me.ClientMenuStrip.ResumeLayout(False)
+        Me.EmployeeMenuStrip.ResumeLayout(False)
         Me.DGVMenuStrip.ResumeLayout(False)
         CType(Me.DGV_Visits, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.EmployeeMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

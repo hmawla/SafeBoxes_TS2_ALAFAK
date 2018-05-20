@@ -32,12 +32,12 @@ Partial Class Frm_ClientAccounts
         Me.btn_delbox = New System.Windows.Forms.Button()
         Me.btn_newbox = New System.Windows.Forms.Button()
         Me.tab_filter = New System.Windows.Forms.TabPage()
+        Me.txt_cname = New System.Windows.Forms.TextBox()
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
         Me.rdb_byCname = New System.Windows.Forms.RadioButton()
         Me.txt_byaccid = New System.Windows.Forms.TextBox()
         Me.rdb_byAccid = New System.Windows.Forms.RadioButton()
-        Me.txt_cname = New System.Windows.Forms.TextBox()
         CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
@@ -182,6 +182,15 @@ Partial Class Frm_ClientAccounts
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
         '
+        'txt_cname
+        '
+        Me.txt_cname.Enabled = False
+        Me.txt_cname.Location = New System.Drawing.Point(175, 55)
+        Me.txt_cname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_cname.Name = "txt_cname"
+        Me.txt_cname.Size = New System.Drawing.Size(352, 27)
+        Me.txt_cname.TabIndex = 14
+        '
         'btn_reset
         '
         Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -233,15 +242,6 @@ Partial Class Frm_ClientAccounts
         Me.rdb_byAccid.Size = New System.Drawing.Size(156, 37)
         Me.rdb_byAccid.TabIndex = 13
         Me.rdb_byAccid.Text = "By Account ID"
-        '
-        'txt_cname
-        '
-        Me.txt_cname.Enabled = False
-        Me.txt_cname.Location = New System.Drawing.Point(175, 55)
-        Me.txt_cname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.txt_cname.Name = "txt_cname"
-        Me.txt_cname.Size = New System.Drawing.Size(352, 27)
-        Me.txt_cname.TabIndex = 14
         '
         'Frm_ClientAccounts
         '

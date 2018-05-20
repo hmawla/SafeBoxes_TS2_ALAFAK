@@ -5,4 +5,8 @@
         RptV_Boxes.ReportSource = CrysReport
         RptV_Boxes.RefreshReport()
     End Sub
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+        Only_Number(TextBox1, e)
+    End Sub
 End Class

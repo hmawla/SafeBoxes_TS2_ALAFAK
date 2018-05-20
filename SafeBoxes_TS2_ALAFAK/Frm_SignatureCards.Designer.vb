@@ -112,7 +112,7 @@ Partial Class Frm_SignatureCards
         Me.Label2.Location = New System.Drawing.Point(171, 9)
         Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(125, 19)
+        Me.Label2.Size = New System.Drawing.Size(125, 20)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Selected Details"
         '
@@ -123,7 +123,7 @@ Partial Class Frm_SignatureCards
         Me.Label1.Location = New System.Drawing.Point(8, 8)
         Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 19)
+        Me.Label1.Size = New System.Drawing.Size(61, 20)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Control"
         '
@@ -180,7 +180,7 @@ Partial Class Frm_SignatureCards
         Me.tab_filter.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.tab_filter.Name = "tab_filter"
         Me.tab_filter.Padding = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.tab_filter.Size = New System.Drawing.Size(1003, 258)
+        Me.tab_filter.Size = New System.Drawing.Size(632, 182)
         Me.tab_filter.TabIndex = 1
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
@@ -188,10 +188,10 @@ Partial Class Frm_SignatureCards
         'txt_bycname
         '
         Me.txt_bycname.Enabled = False
-        Me.txt_bycname.Location = New System.Drawing.Point(262, 85)
+        Me.txt_bycname.Location = New System.Drawing.Point(162, 85)
         Me.txt_bycname.Margin = New System.Windows.Forms.Padding(9, 12, 9, 12)
         Me.txt_bycname.Name = "txt_bycname"
-        Me.txt_bycname.Size = New System.Drawing.Size(526, 27)
+        Me.txt_bycname.Size = New System.Drawing.Size(371, 27)
         Me.txt_bycname.TabIndex = 14
         '
         'btn_reset
@@ -231,10 +231,10 @@ Partial Class Frm_SignatureCards
         'txt_bybid
         '
         Me.txt_bybid.Enabled = False
-        Me.txt_bybid.Location = New System.Drawing.Point(262, 22)
+        Me.txt_bybid.Location = New System.Drawing.Point(162, 29)
         Me.txt_bybid.Margin = New System.Windows.Forms.Padding(9, 12, 9, 12)
         Me.txt_bybid.Name = "txt_bybid"
-        Me.txt_bybid.Size = New System.Drawing.Size(526, 27)
+        Me.txt_bybid.Size = New System.Drawing.Size(371, 27)
         Me.txt_bybid.TabIndex = 8
         '
         'rdb_bysigncardid

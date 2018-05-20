@@ -140,4 +140,16 @@ Public Class Frm_newContract
     Private Sub txt_phone1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_phone1.KeyPress
         Only_Number(txt_phone1, e)
     End Sub
+
+    Private Sub cbox_regions_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_regions.KeyPress
+        Only_char(cbox_regions, e)
+    End Sub
+
+    Private Sub cbox_streets_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_streets.KeyPress
+        Only_char(cbox_streets, e)
+    End Sub
+
+    Private Sub cbox_buildings_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_buildings.KeyPress
+        Only_char(cbox_buildings, e)
+    End Sub
 End Class

@@ -47,4 +47,12 @@
 
         End If
     End Sub
+
+    Private Sub txt_bybid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bybid.KeyPress
+        Only_Number(txt_bybid, e)
+    End Sub
+
+    Private Sub txt_bycname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bycname.KeyPress
+        Only_char(txt_bycname, e)
+    End Sub
 End Class

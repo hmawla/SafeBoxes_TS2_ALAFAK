@@ -17,4 +17,12 @@
         Frm_SelectBox.ShowDialog()
         FillDGV(dgv_accounts, "SELECT ca.AccountId AS [ACCOUNT ID],ClientFName AS [FIRST NAME],ClientLName AS [LAST NAME],SignCardId FROM  ClientDepAccount ca,Clients c,SignCardsAccounts sca WHERE ca.ClientId=c.ClientId AND ca.AccountId=sca.AccountId")
     End Sub
+
+    Private Sub txt_byaccid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byaccid.KeyPress
+        Only_Number(txt_byaccid, e)
+    End Sub
+
+    Private Sub txt_cname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_cname.KeyPress
+        Only_char(txt_cname, e)
+    End Sub
 End Class

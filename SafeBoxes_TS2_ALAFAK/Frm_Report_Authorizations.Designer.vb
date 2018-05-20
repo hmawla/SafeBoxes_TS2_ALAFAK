@@ -27,7 +27,7 @@ Partial Class Frm_Report_Authorizations
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Dte_from = New System.Windows.Forms.DateTimePicker()
         Me.RptV_Authorizations = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -40,7 +40,7 @@ Partial Class Frm_Report_Authorizations
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.dtpick_exdate)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.Dte_from)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(689, 134)
@@ -90,17 +90,17 @@ Partial Class Frm_Report_Authorizations
         Me.RadioButton1.Text = "By Contract ID"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
-        'DateTimePicker1
+        'Dte_from
         '
-        Me.DateTimePicker1.CustomFormat = "dd/mm/yyyy"
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(250, 55)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
-        Me.DateTimePicker1.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(204, 26)
-        Me.DateTimePicker1.TabIndex = 11
+        Me.Dte_from.CustomFormat = "dd/mm/yyyy"
+        Me.Dte_from.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Dte_from.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.Dte_from.Location = New System.Drawing.Point(250, 55)
+        Me.Dte_from.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
+        Me.Dte_from.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
+        Me.Dte_from.Name = "Dte_from"
+        Me.Dte_from.Size = New System.Drawing.Size(204, 26)
+        Me.Dte_from.TabIndex = 11
         '
         'RptV_Authorizations
         '
@@ -138,6 +138,6 @@ Partial Class Frm_Report_Authorizations
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents dtpick_exdate As DateTimePicker
     Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Dte_from As DateTimePicker
     Friend WithEvents RptV_Authorizations As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

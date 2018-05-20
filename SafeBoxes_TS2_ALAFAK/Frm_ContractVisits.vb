@@ -106,4 +106,8 @@ the_End:
         EmpId = Frm_main.employeeid
         Lbl_EmpId.Text = "Employee ID: " & EmpId
     End Sub
+
+    Private Sub Txt_ClientName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_ClientName.KeyPress
+        Only_char(Txt_ClientName, e)
+    End Sub
 End Class

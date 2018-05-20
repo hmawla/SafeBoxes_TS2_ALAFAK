@@ -34,7 +34,7 @@ Partial Class Frm_Login
         Me.Label1.Location = New System.Drawing.Point(52, 80)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 19)
+        Me.Label1.Size = New System.Drawing.Size(96, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Employee ID"
         '

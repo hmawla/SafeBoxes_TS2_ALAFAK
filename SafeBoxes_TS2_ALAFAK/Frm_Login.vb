@@ -21,4 +21,8 @@ Public Class Frm_Login
         materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         materialSkinManager.ColorScheme = New ColorScheme(Primary.DeepPurple800, Primary.DeepPurple900, Primary.DeepPurple500, Accent.LightBlue200, TextShade.WHITE)
     End Sub
+
+    Private Sub txt_empid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_empid.KeyPress
+        Only_Number(txt_empid, e)
+    End Sub
 End Class
