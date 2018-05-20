@@ -202,10 +202,10 @@
       <DependentUpon>Rpt_Authorizations.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Rpt_boxes.vb">
+    <Compile Include="Rpt_Boxes1.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Rpt_boxes.rpt</DependentUpon>
+      <DependentUpon>Rpt_Boxes.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Rpt_Clients.vb">
@@ -480,9 +480,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Authorizations.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Rpt_boxes.rpt">
+    <EmbeddedResource Include="Rpt_Boxes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Rpt_boxes.vb</LastGenOutput>
+      <LastGenOutput>Rpt_Boxes1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Clients.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
