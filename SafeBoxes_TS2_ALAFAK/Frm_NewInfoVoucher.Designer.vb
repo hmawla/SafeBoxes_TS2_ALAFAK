@@ -229,10 +229,13 @@ Partial Class Frm_NewInfoVoucher
         '
         'dtpick_fromtime
         '
-        Me.dtpick_fromtime.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpick_fromtime.CalendarFont = New System.Drawing.Font("Roboto", 12.0!)
+        Me.dtpick_fromtime.CustomFormat = "HH:mm"
+        Me.dtpick_fromtime.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.dtpick_fromtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpick_fromtime.Location = New System.Drawing.Point(13, 44)
         Me.dtpick_fromtime.Name = "dtpick_fromtime"
-        Me.dtpick_fromtime.Size = New System.Drawing.Size(139, 26)
+        Me.dtpick_fromtime.Size = New System.Drawing.Size(139, 27)
         Me.dtpick_fromtime.TabIndex = 70
         '
         'MaterialLabel2
@@ -304,7 +307,8 @@ Partial Class Frm_NewInfoVoucher
         '
         'dtpick_totime
         '
-        Me.dtpick_totime.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpick_totime.CustomFormat = "HH:mm"
+        Me.dtpick_totime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpick_totime.Location = New System.Drawing.Point(158, 44)
         Me.dtpick_totime.Name = "dtpick_totime"
         Me.dtpick_totime.Size = New System.Drawing.Size(139, 26)

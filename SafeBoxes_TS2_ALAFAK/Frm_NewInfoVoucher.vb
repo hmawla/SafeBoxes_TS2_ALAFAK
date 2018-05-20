@@ -2,17 +2,13 @@
     Dim formLoaded As Boolean = False
     Dim check
     Dim theNewId As Integer
-    Dim isSubmitting As Boolean = False
     Private Sub Frm_NewInfoVoucher_Load(sender As Object, e As EventArgs) Handles Me.Load
         FillCBox(cbox_subjecttitles, "SELECT InfoSubjTitleId, InfoSubjTitle FROM InfoSubjectTitles", "InfoSubjTitleId", "InfoSubjTitle")
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
         FillCheckList(chklist_exceptdays, "SELECT * FROM Days", "DayId", "DayName")
-        If Frm_InfoVoucher.infovouchId = 0 Then
-            theNewId = GenID("InfoVoucher", "InfoVouchId")
-            ExecuteQuery("INSERT INTO InfoVoucher(InfoVouchId) VALUES(" & theNewId & ")")
-        Else
+        If Not Frm_InfoVoucher.infovouchId = 0 Then
             theNewId = Frm_InfoVoucher.infovouchId
             Dim theMainDetails As New DataSet
             theMainDetails = ReadQueryOut("SELECT InfoVouchFromTime, InfoVouchToTime, SubjectDetails, ContId, ClientId, InfoSubjTitleId, BuildingId FROM InfoVoucher WHERE InfoVouchId = " & theNewId).Copy
@@ -47,7 +43,12 @@
                     txt_otherconn.Text = row.Item(1)
                 End If
             Next
+            Dim theDaysDetails As New DataSet
+            theDaysDetails = ReadQueryOut("SELECT DayId FROM InfoVoucherExDays WHERE InfoVouchId = " & theNewId).Copy
+            For Each row As DataRow In theDaysDetails.Tables(0).Rows
 
+                chklist_exceptdays.SetItemChecked(row.Item(0) - 1, True)
+            Next
         End If
         formLoaded = True
     End Sub
@@ -117,12 +118,6 @@
         Only_Number(txt_contractid, e)
     End Sub
 
-    Private Sub dtpick_totime_ValueChanged(sender As Object, e As EventArgs) Handles dtpick_totime.ValueChanged, dtpick_fromtime.ValueChanged
-        If dtpick_fromtime.Value >= dtpick_totime.Value Then
-            MessageBox.Show("To time should be greater than from time !")
-        End If
-    End Sub
-
     Private Sub chk_phone_CheckedChanged(sender As Object, e As EventArgs) Handles chk_phone.CheckedChanged
         Toggle(txt_phonenumber)
     End Sub
@@ -140,33 +135,46 @@
     End Sub
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
-        isSubmitting = True
-        ExecuteQuery("UPDATE InfoVoucher SET InfoVouchFromTime = '" & dtpick_fromtime.Value.ToShortTimeString & "',InfoVouchToTime = '" & dtpick_totime.Value.ToShortTimeString & "',InfoVouchDate = '" & Date.Today.ToShortDateString & "',SubjectDetails = '" & txt_subjectbody.Text & "',Contid = " & txt_contractid.Text & ",BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ",InfoSubjTitleId = " & cbox_subjecttitles.SelectedValue & ",ClientId = " & txt_clientid.Text & " WHERE InfoVouchId = " & theNewId)
+        If Frm_InfoVoucher.infovouchId = 0 Then
+            If txt_phonenumber.Text.Count > 0 Or txt_email.Text.Count > 0 Or txt_mailpost.Text.Count > 0 Or txt_otherconn.Text.Count > 0 Then
+                If dtpick_fromtime.Value.TimeOfDay > dtpick_totime.Value.TimeOfDay Then
+                    MessageBox.Show("To time should be greater than from time!")
+                Else
+                    theNewId = GenID("InfoVoucher", "InfoVouchId")
+                    ExecuteQuery("INSERT INTO InfoVoucher VALUES(" & theNewId & ", '" & dtpick_fromtime.Value.ToShortTimeString & "', '" & dtpick_totime.Value.ToShortTimeString & "', date(), '" & txt_subjectbody.Text & "', " & txt_contractid.Text & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & cbox_subjecttitles.SelectedValue & ", " & txt_clientid.Text & ")")
 
-        For Each indexChecked In chklist_exceptdays.CheckedIndices
-            ExecuteQuery("INSERT INTO InfoVoucherExDays Values(" & theNewId & ", " & (Int(indexChecked.ToString()) + 1) & ")")
-        Next
+                    For Each indexChecked In chklist_exceptdays.CheckedIndices
+                        ExecuteQuery("INSERT INTO InfoVoucherExDays Values(" & theNewId & ", " & (Int(indexChecked.ToString()) + 1) & ")")
+                    Next
 
 
-        If chk_phone.Checked Then
-            ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 1, '" & txt_phonenumber.Text & "')")
+                    If chk_phone.Checked Then
+                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 1, '" & txt_phonenumber.Text & "')")
+                    End If
+                    If chk_mailpost.Checked Then
+                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 2, '" & txt_mailpost.Text & "')")
+                    End If
+                    If chk_email.Checked Then
+                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 3, '" & txt_email.Text & "')")
+                    End If
+                    If chk_other.Checked Then
+                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 4, '" & txt_otherconn.Text & "')")
+                    End If
+                    Me.Dispose()
+                End If
+
+            Else
+                MessageBox.Show("Enter at least one connection way!")
+            End If
+        Else
+
         End If
-        If chk_mailpost.Checked Then
-            ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 2, '" & txt_mailpost.Text & "')")
-        End If
-        If chk_email.Checked Then
-            ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 3, '" & txt_email.Text & "')")
-        End If
-        If chk_other.Checked Then
-            ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 4, '" & txt_otherconn.Text & "')")
-        End If
-        Me.Close()
+
+
     End Sub
 
     Private Sub Frm_NewInfoVoucher_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        If isSubmitting = False And Frm_InfoVoucher.infovouchId = 0 Then
-            ExecuteQuery("DELETE FROM InfoVoucher WHERE InfoVoucherId = " & theNewId)
-        End If
+        Me.Dispose()
     End Sub
 
     Private Sub cbox_subjecttitles_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_subjecttitles.KeyPress
