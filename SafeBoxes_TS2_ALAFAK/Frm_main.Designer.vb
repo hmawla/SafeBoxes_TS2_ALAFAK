@@ -39,6 +39,7 @@ Partial Class Frm_main
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialDivider3 = New MaterialSkin.Controls.MaterialDivider()
+        Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -287,11 +288,28 @@ Partial Class Frm_main
         Me.MaterialDivider3.TabIndex = 36
         Me.MaterialDivider3.Text = "MaterialDivider3"
         '
+        'MaterialFlatButton1
+        '
+        Me.MaterialFlatButton1.AutoSize = True
+        Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialFlatButton1.Depth = 0
+        Me.MaterialFlatButton1.Icon = Nothing
+        Me.MaterialFlatButton1.Location = New System.Drawing.Point(16, 559)
+        Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
+        Me.MaterialFlatButton1.Primary = True
+        Me.MaterialFlatButton1.Size = New System.Drawing.Size(220, 36)
+        Me.MaterialFlatButton1.TabIndex = 37
+        Me.MaterialFlatButton1.Text = "Clients Accounts Manager"
+        Me.MaterialFlatButton1.UseVisualStyleBackColor = True
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(920, 655)
+        Me.Controls.Add(Me.MaterialFlatButton1)
         Me.Controls.Add(Me.MaterialDivider3)
         Me.Controls.Add(Me.MaterialRaisedButton2)
         Me.Controls.Add(Me.MaterialRaisedButton1)
@@ -336,4 +354,5 @@ Partial Class Frm_main
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialDivider3 As MaterialSkin.Controls.MaterialDivider
+    Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
 End Class

@@ -45,4 +45,8 @@ Public Class Frm_main
     Private Sub MaterialRaisedButton20_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton20.Click
         Frm_SignatureCards.Show()
     End Sub
+
+    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton1.Click
+        Frm_ClientAccounts.Show()
+    End Sub
 End Class
