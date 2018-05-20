@@ -172,6 +172,12 @@
     <Compile Include="Frm_ClientAccounts.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_CompaniesAccounts.Designer.vb">
+      <DependentUpon>Frm_CompaniesAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_CompaniesAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_Report_Boxes.Designer.vb">
       <DependentUpon>Frm_Report_Boxes.vb</DependentUpon>
     </Compile>
@@ -463,6 +469,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Frm_ClientAccounts.resx">
       <DependentUpon>Frm_ClientAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_CompaniesAccounts.resx">
+      <DependentUpon>Frm_CompaniesAccounts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_Boxes.resx">
       <DependentUpon>Frm_Report_Boxes.vb</DependentUpon>

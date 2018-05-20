@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Frm_ClientAccounts
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class Frm_CompaniesAccounts
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Frm_ClientAccounts
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgv_accounts = New System.Windows.Forms.DataGridView()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -32,12 +32,12 @@ Partial Class Frm_ClientAccounts
         Me.btn_delbox = New System.Windows.Forms.Button()
         Me.btn_newbox = New System.Windows.Forms.Button()
         Me.tab_filter = New System.Windows.Forms.TabPage()
+        Me.txt_cname = New System.Windows.Forms.TextBox()
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btn_search = New System.Windows.Forms.Button()
         Me.rdb_byCname = New System.Windows.Forms.RadioButton()
         Me.txt_byaccid = New System.Windows.Forms.TextBox()
         Me.rdb_byAccid = New System.Windows.Forms.RadioButton()
-        Me.txt_cname = New System.Windows.Forms.TextBox()
         CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
@@ -69,7 +69,7 @@ Partial Class Frm_ClientAccounts
         Me.dgv_accounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_accounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_accounts.Size = New System.Drawing.Size(662, 386)
-        Me.dgv_accounts.TabIndex = 14
+        Me.dgv_accounts.TabIndex = 16
         '
         'TabControl1
         '
@@ -83,7 +83,7 @@ Partial Class Frm_ClientAccounts
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(662, 189)
-        Me.TabControl1.TabIndex = 13
+        Me.TabControl1.TabIndex = 17
         '
         'tab_datacontrol
         '
@@ -182,6 +182,15 @@ Partial Class Frm_ClientAccounts
         Me.tab_filter.Text = "Filter"
         Me.tab_filter.UseVisualStyleBackColor = True
         '
+        'txt_cname
+        '
+        Me.txt_cname.Enabled = False
+        Me.txt_cname.Location = New System.Drawing.Point(175, 55)
+        Me.txt_cname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_cname.Name = "txt_cname"
+        Me.txt_cname.Size = New System.Drawing.Size(352, 27)
+        Me.txt_cname.TabIndex = 14
+        '
         'btn_reset
         '
         Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -211,9 +220,9 @@ Partial Class Frm_ClientAccounts
         Me.rdb_byCname.Location = New System.Drawing.Point(9, 56)
         Me.rdb_byCname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rdb_byCname.Name = "rdb_byCname"
-        Me.rdb_byCname.Size = New System.Drawing.Size(135, 24)
+        Me.rdb_byCname.Size = New System.Drawing.Size(163, 24)
         Me.rdb_byCname.TabIndex = 11
-        Me.rdb_byCname.Text = "By Client Name"
+        Me.rdb_byCname.Text = "By Company Name"
         Me.rdb_byCname.UseVisualStyleBackColor = True
         '
         'txt_byaccid
@@ -234,24 +243,15 @@ Partial Class Frm_ClientAccounts
         Me.rdb_byAccid.TabIndex = 13
         Me.rdb_byAccid.Text = "By Account ID"
         '
-        'txt_cname
-        '
-        Me.txt_cname.Enabled = False
-        Me.txt_cname.Location = New System.Drawing.Point(175, 55)
-        Me.txt_cname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.txt_cname.Name = "txt_cname"
-        Me.txt_cname.Size = New System.Drawing.Size(352, 27)
-        Me.txt_cname.TabIndex = 14
-        '
-        'Frm_ClientAccounts
+        'Frm_CompaniesAccounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(700, 628)
-        Me.Controls.Add(Me.dgv_accounts)
         Me.Controls.Add(Me.TabControl1)
-        Me.Name = "Frm_ClientAccounts"
-        Me.Text = "Frm_Accounts"
+        Me.Controls.Add(Me.dgv_accounts)
+        Me.Name = "Frm_CompaniesAccounts"
+        Me.Text = "Frm_CompaniesAccounts"
         CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.tab_datacontrol.ResumeLayout(False)
@@ -272,10 +272,10 @@ Partial Class Frm_ClientAccounts
     Friend WithEvents btn_delbox As Button
     Friend WithEvents btn_newbox As Button
     Friend WithEvents tab_filter As TabPage
+    Friend WithEvents txt_cname As TextBox
     Friend WithEvents btn_reset As Button
     Friend WithEvents btn_search As Button
     Friend WithEvents rdb_byCname As RadioButton
     Friend WithEvents txt_byaccid As TextBox
     Friend WithEvents rdb_byAccid As RadioButton
-    Friend WithEvents txt_cname As TextBox
 End Class

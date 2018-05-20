@@ -49,4 +49,8 @@ Public Class Frm_main
     Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton1.Click
         Frm_ClientAccounts.Show()
     End Sub
+
+    Private Sub MaterialFlatButton2_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton2.Click
+        Frm_CompaniesAccounts.Show()
+    End Sub
 End Class
