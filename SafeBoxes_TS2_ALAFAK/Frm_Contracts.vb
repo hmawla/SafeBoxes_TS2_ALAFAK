@@ -119,11 +119,11 @@
         End If
     End Sub
 
-    Private Sub MissingKeysReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MissingKeysReportsToolStripMenuItem.Click
+    Private Sub MissingKeysReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MissingKeysReport.Click
         Frm_Report_MissingKeys.ShowDialog()
     End Sub
 
-    Private Sub RenewReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenewReportsToolStripMenuItem.Click
+    Private Sub RenewReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RenewReport.Click
         Frm_Report_RenewContract.ShowDialog()
     End Sub
 
@@ -187,15 +187,15 @@
         FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
     End Sub
 
-    Private Sub ContractsEndReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContractsEndReportsToolStripMenuItem.Click
+    Private Sub ContractsEndReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContractEndingReport.Click
         Frm_Report_EndingContracts.ShowDialog()
     End Sub
 
-    Private Sub WithdrawPermissionsReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WithdrawPermissionsReportsToolStripMenuItem.Click
+    Private Sub WithdrawPermissionsReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WithdrawReport.Click
         Frm_Report_WithdrawPermission.ShowDialog()
     End Sub
 
-    Private Sub ClientAuthorizationsReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientAuthorizationsReportsToolStripMenuItem.Click
+    Private Sub ClientAuthorizationsReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AuthorizationReport.Click
         Frm_Report_Authorizations.ShowDialog()
     End Sub
 End Class
