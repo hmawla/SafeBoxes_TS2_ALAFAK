@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Frm_ContractVisits
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -23,22 +23,20 @@ Partial Class Frm_ContractVisits
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Btn_Add = New System.Windows.Forms.Button()
+        Me.Btn_Add = New MaterialSkin.Controls.MaterialFlatButton()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.Txt_ClientName = New System.Windows.Forms.TextBox()
-        Me.Txt_ClientId = New System.Windows.Forms.TextBox()
+        Me.Txt_ClientName = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.Txt_ClientId = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.ClientMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
-        Me.DTPick_Expire = New System.Windows.Forms.DateTimePicker()
-        Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.Lbl_ContId = New MaterialSkin.Controls.MaterialLabel()
         Me.Lbl_EmpId = New MaterialSkin.Controls.MaterialLabel()
         Me.EmployeeMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DGVMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Btn_Submit = New System.Windows.Forms.Button()
+        Me.Btn_Submit = New MaterialSkin.Controls.MaterialFlatButton()
         Me.DGV_Visits = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,11 +51,18 @@ Partial Class Frm_ContractVisits
         '
         'Btn_Add
         '
+        Me.Btn_Add.AutoSize = True
+        Me.Btn_Add.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_Add.Depth = 0
         Me.Btn_Add.Enabled = False
         Me.Btn_Add.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Add.Location = New System.Drawing.Point(590, 65)
+        Me.Btn_Add.Icon = Nothing
+        Me.Btn_Add.Location = New System.Drawing.Point(253, 114)
+        Me.Btn_Add.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Btn_Add.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Add.Name = "Btn_Add"
-        Me.Btn_Add.Size = New System.Drawing.Size(75, 26)
+        Me.Btn_Add.Primary = False
+        Me.Btn_Add.Size = New System.Drawing.Size(48, 36)
         Me.Btn_Add.TabIndex = 68
         Me.Btn_Add.Text = "Add"
         Me.Btn_Add.UseVisualStyleBackColor = True
@@ -66,35 +71,55 @@ Partial Class Frm_ContractVisits
         '
         Me.MaterialLabel3.AutoSize = True
         Me.MaterialLabel3.Depth = 0
-        Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel3.Location = New System.Drawing.Point(310, 41)
-        Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MaterialLabel3.Location = New System.Drawing.Point(15, 162)
+        Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
-        Me.MaterialLabel3.Size = New System.Drawing.Size(99, 20)
+        Me.MaterialLabel3.Size = New System.Drawing.Size(96, 19)
         Me.MaterialLabel3.TabIndex = 67
         Me.MaterialLabel3.Text = "Client Name:"
         '
         'Txt_ClientName
         '
+        Me.Txt_ClientName.Depth = 0
+        Me.Txt_ClientName.Enabled = False
         Me.Txt_ClientName.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_ClientName.Location = New System.Drawing.Point(313, 65)
-        Me.Txt_ClientName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Txt_ClientName.Hint = ""
+        Me.Txt_ClientName.Location = New System.Drawing.Point(123, 158)
+        Me.Txt_ClientName.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.Txt_ClientName.MaxLength = 32767
+        Me.Txt_ClientName.MouseState = MaterialSkin.MouseState.HOVER
         Me.Txt_ClientName.Name = "Txt_ClientName"
-        Me.Txt_ClientName.ReadOnly = True
-        Me.Txt_ClientName.Size = New System.Drawing.Size(270, 27)
+        Me.Txt_ClientName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Txt_ClientName.SelectedText = ""
+        Me.Txt_ClientName.SelectionLength = 0
+        Me.Txt_ClientName.SelectionStart = 0
+        Me.Txt_ClientName.Size = New System.Drawing.Size(178, 23)
         Me.Txt_ClientName.TabIndex = 66
+        Me.Txt_ClientName.TabStop = False
+        Me.Txt_ClientName.UseSystemPasswordChar = False
         '
         'Txt_ClientId
         '
         Me.Txt_ClientId.ContextMenuStrip = Me.ClientMenuStrip
+        Me.Txt_ClientId.Depth = 0
         Me.Txt_ClientId.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_ClientId.Location = New System.Drawing.Point(157, 65)
-        Me.Txt_ClientId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Txt_ClientId.Hint = ""
+        Me.Txt_ClientId.Location = New System.Drawing.Point(123, 119)
+        Me.Txt_ClientId.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.Txt_ClientId.MaxLength = 32767
+        Me.Txt_ClientId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Txt_ClientId.Name = "Txt_ClientId"
-        Me.Txt_ClientId.Size = New System.Drawing.Size(148, 27)
+        Me.Txt_ClientId.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Txt_ClientId.SelectedText = ""
+        Me.Txt_ClientId.SelectionLength = 0
+        Me.Txt_ClientId.SelectionStart = 0
+        Me.Txt_ClientId.Size = New System.Drawing.Size(120, 23)
         Me.Txt_ClientId.TabIndex = 64
+        Me.Txt_ClientId.TabStop = False
+        Me.Txt_ClientId.UseSystemPasswordChar = False
         '
         'ClientMenuStrip
         '
@@ -112,54 +137,27 @@ Partial Class Frm_ContractVisits
         '
         Me.MaterialLabel7.AutoSize = True
         Me.MaterialLabel7.Depth = 0
-        Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel7.Location = New System.Drawing.Point(154, 41)
-        Me.MaterialLabel7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MaterialLabel7.Location = New System.Drawing.Point(15, 123)
+        Me.MaterialLabel7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel7.Name = "MaterialLabel7"
-        Me.MaterialLabel7.Size = New System.Drawing.Size(71, 20)
+        Me.MaterialLabel7.Size = New System.Drawing.Size(70, 19)
         Me.MaterialLabel7.TabIndex = 65
         Me.MaterialLabel7.Text = "Client ID:"
-        '
-        'DTPick_Expire
-        '
-        Me.DTPick_Expire.CustomFormat = "dd/mm/yyyy"
-        Me.DTPick_Expire.Enabled = False
-        Me.DTPick_Expire.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DTPick_Expire.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPick_Expire.Location = New System.Drawing.Point(12, 65)
-        Me.DTPick_Expire.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.DTPick_Expire.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
-        Me.DTPick_Expire.Name = "DTPick_Expire"
-        Me.DTPick_Expire.Size = New System.Drawing.Size(137, 27)
-        Me.DTPick_Expire.TabIndex = 62
-        '
-        'MaterialLabel2
-        '
-        Me.MaterialLabel2.AutoSize = True
-        Me.MaterialLabel2.Depth = 0
-        Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel2.Location = New System.Drawing.Point(9, 41)
-        Me.MaterialLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel2.Name = "MaterialLabel2"
-        Me.MaterialLabel2.Size = New System.Drawing.Size(80, 20)
-        Me.MaterialLabel2.TabIndex = 63
-        Me.MaterialLabel2.Text = "Visit Date:"
         '
         'Lbl_ContId
         '
         Me.Lbl_ContId.AutoSize = True
         Me.Lbl_ContId.Depth = 0
-        Me.Lbl_ContId.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_ContId.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.Lbl_ContId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Lbl_ContId.Location = New System.Drawing.Point(9, 9)
-        Me.Lbl_ContId.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
+        Me.Lbl_ContId.Location = New System.Drawing.Point(15, 73)
+        Me.Lbl_ContId.Margin = New System.Windows.Forms.Padding(14, 0, 14, 0)
         Me.Lbl_ContId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Lbl_ContId.Name = "Lbl_ContId"
-        Me.Lbl_ContId.Size = New System.Drawing.Size(157, 20)
+        Me.Lbl_ContId.Size = New System.Drawing.Size(153, 19)
         Me.Lbl_ContId.TabIndex = 61
         Me.Lbl_ContId.Text = "Contract ID: <ContId>"
         '
@@ -168,13 +166,13 @@ Partial Class Frm_ContractVisits
         Me.Lbl_EmpId.AutoSize = True
         Me.Lbl_EmpId.ContextMenuStrip = Me.EmployeeMenuStrip
         Me.Lbl_EmpId.Depth = 0
-        Me.Lbl_EmpId.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_EmpId.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.Lbl_EmpId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Lbl_EmpId.Location = New System.Drawing.Point(185, 9)
-        Me.Lbl_EmpId.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
+        Me.Lbl_EmpId.Location = New System.Drawing.Point(216, 73)
+        Me.Lbl_EmpId.Margin = New System.Windows.Forms.Padding(14, 0, 14, 0)
         Me.Lbl_EmpId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Lbl_EmpId.Name = "Lbl_EmpId"
-        Me.Lbl_EmpId.Size = New System.Drawing.Size(165, 20)
+        Me.Lbl_EmpId.Size = New System.Drawing.Size(159, 19)
         Me.Lbl_EmpId.TabIndex = 60
         Me.Lbl_EmpId.Text = "Employee ID: <EmpId>"
         '
@@ -205,10 +203,17 @@ Partial Class Frm_ContractVisits
         'Btn_Submit
         '
         Me.Btn_Submit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Btn_Submit.AutoSize = True
+        Me.Btn_Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_Submit.Depth = 0
         Me.Btn_Submit.Enabled = False
-        Me.Btn_Submit.Location = New System.Drawing.Point(590, 496)
+        Me.Btn_Submit.Icon = Nothing
+        Me.Btn_Submit.Location = New System.Drawing.Point(532, 524)
+        Me.Btn_Submit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Btn_Submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Submit.Name = "Btn_Submit"
-        Me.Btn_Submit.Size = New System.Drawing.Size(75, 26)
+        Me.Btn_Submit.Primary = False
+        Me.Btn_Submit.Size = New System.Drawing.Size(71, 36)
         Me.Btn_Submit.TabIndex = 72
         Me.Btn_Submit.Text = "Submit"
         Me.Btn_Submit.UseVisualStyleBackColor = True
@@ -223,6 +228,7 @@ Partial Class Frm_ContractVisits
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DGV_Visits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DGV_Visits.BackgroundColor = System.Drawing.Color.White
+        Me.DGV_Visits.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DGV_Visits.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DGV_Visits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGV_Visits.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
@@ -230,8 +236,8 @@ Partial Class Frm_ContractVisits
         Me.DGV_Visits.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DGV_Visits.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DGV_Visits.GridColor = System.Drawing.Color.PowderBlue
-        Me.DGV_Visits.Location = New System.Drawing.Point(13, 130)
-        Me.DGV_Visits.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DGV_Visits.Location = New System.Drawing.Point(20, 197)
+        Me.DGV_Visits.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.DGV_Visits.MultiSelect = False
         Me.DGV_Visits.Name = "DGV_Visits"
         Me.DGV_Visits.ReadOnly = True
@@ -239,7 +245,7 @@ Partial Class Frm_ContractVisits
         Me.DGV_Visits.RowHeadersVisible = False
         Me.DGV_Visits.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_Visits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_Visits.Size = New System.Drawing.Size(653, 356)
+        Me.DGV_Visits.Size = New System.Drawing.Size(583, 314)
         Me.DGV_Visits.TabIndex = 73
         '
         'Column1
@@ -265,32 +271,35 @@ Partial Class Frm_ContractVisits
         '
         'txt_note
         '
+        Me.txt_note.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txt_note.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_note.Location = New System.Drawing.Point(110, 99)
-        Me.txt_note.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_note.Location = New System.Drawing.Point(412, 114)
+        Me.txt_note.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_note.Multiline = True
         Me.txt_note.Name = "txt_note"
-        Me.txt_note.Size = New System.Drawing.Size(555, 27)
+        Me.txt_note.Size = New System.Drawing.Size(191, 67)
         Me.txt_note.TabIndex = 74
         '
         'MaterialLabel1
         '
         Me.MaterialLabel1.AutoSize = True
         Me.MaterialLabel1.Depth = 0
-        Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(13, 103)
-        Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(311, 114)
+        Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
-        Me.MaterialLabel1.Size = New System.Drawing.Size(89, 20)
+        Me.MaterialLabel1.Size = New System.Drawing.Size(89, 19)
         Me.MaterialLabel1.TabIndex = 75
         Me.MaterialLabel1.Text = "Visit Notes:"
         '
         'Frm_ContractVisits
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(679, 530)
+        Me.ClientSize = New System.Drawing.Size(618, 569)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.txt_note)
         Me.Controls.Add(Me.DGV_Visits)
@@ -300,10 +309,10 @@ Partial Class Frm_ContractVisits
         Me.Controls.Add(Me.Txt_ClientName)
         Me.Controls.Add(Me.Txt_ClientId)
         Me.Controls.Add(Me.MaterialLabel7)
-        Me.Controls.Add(Me.DTPick_Expire)
-        Me.Controls.Add(Me.MaterialLabel2)
         Me.Controls.Add(Me.Lbl_ContId)
         Me.Controls.Add(Me.Lbl_EmpId)
+        Me.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_ContractVisits"
         Me.Text = "Frm_ContractVisits"
         Me.ClientMenuStrip.ResumeLayout(False)
@@ -315,13 +324,11 @@ Partial Class Frm_ContractVisits
 
     End Sub
 
-    Friend WithEvents Btn_Add As Button
+    Friend WithEvents Btn_Add As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Txt_ClientName As TextBox
-    Friend WithEvents Txt_ClientId As TextBox
+    Friend WithEvents Txt_ClientName As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents Txt_ClientId As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents DTPick_Expire As DateTimePicker
-    Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Lbl_ContId As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Lbl_EmpId As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents EmployeeMenuStrip As ContextMenuStrip
@@ -330,7 +337,7 @@ Partial Class Frm_ContractVisits
     Friend WithEvents RemoveSelectedToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClientMenuStrip As ContextMenuStrip
     Friend WithEvents SelectClientToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Btn_Submit As Button
+    Friend WithEvents Btn_Submit As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents DGV_Visits As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
