@@ -35,6 +35,7 @@ Partial Class Frm_Report_MissingKeys
         '
         'TextBox1
         '
+        Me.TextBox1.Enabled = False
         Me.TextBox1.Location = New System.Drawing.Point(6, 57)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox1.Name = "TextBox1"

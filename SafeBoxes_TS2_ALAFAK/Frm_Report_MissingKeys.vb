@@ -29,5 +29,53 @@
             MessageBox.Show("To Date should be greater than from date!")
             dtpick_exdate.Value = DateTimePicker1.Value.AddDays(1)
         End If
+        If Chk_Delivered.Checked Then
+            RptDbDataSet.Reset()
+            RptDbDataSet = ReadQueryOut("SELECT MissKeyId, MissKeyDate, RedeliverDate, ContId FROM MissingKeys WHERE RedeliverDate IS NOT NULL AND MissKeyDate BETWEEN '" & DateTimePicker1.Value & "' AND '" & dtpick_exdate.Value & "'").Copy()
+            CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+            RptV_MissingKeys.ReportSource = CrysReport
+            RptV_MissingKeys.RefreshReport()
+        Else
+            RptDbDataSet.Reset()
+            RptDbDataSet = ReadQueryOut("SELECT MissKeyId, MissKeyDate, RedeliverDate, ContId FROM MissingKeys WHERE MissKeyDate BETWEEN '" & DateTimePicker1.Value & "' AND '" & dtpick_exdate.Value & "'").Copy()
+            CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+            RptV_MissingKeys.ReportSource = CrysReport
+            RptV_MissingKeys.RefreshReport()
+        End If
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        If Chk_Delivered.Checked Then
+            RptDbDataSet.Reset()
+            RptDbDataSet = ReadQueryOut("SELECT MissKeyId, MissKeyDate, RedeliverDate, ContId FROM MissingKeys WHERE RedeliverDate IS NOT NULL AND ContId =" & TextBox1.Text).Copy()
+            CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+            RptV_MissingKeys.ReportSource = CrysReport
+            RptV_MissingKeys.RefreshReport()
+        Else
+            RptDbDataSet.Reset()
+            RptDbDataSet = ReadQueryOut("SELECT MissKeyId, MissKeyDate, RedeliverDate, ContId FROM MissingKeys WHERE ContId =" & TextBox1.Text).Copy()
+            CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+            RptV_MissingKeys.ReportSource = CrysReport
+            RptV_MissingKeys.RefreshReport()
+        End If
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        If RadioButton1.Checked Then
+            TextBox1.Enabled = True
+        Else
+            TextBox1.Enabled = False
+        End If
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        If RadioButton2.Checked Then
+            DateTimePicker1.Enabled = True
+            dtpick_exdate.Enabled = True
+        Else
+            DateTimePicker1.Enabled = False
+            dtpick_exdate.Enabled = False
+        End If
     End Sub
 End Class
