@@ -5,12 +5,12 @@ Imports System.Threading
 
 Public Class SplashScreen
     Private Sub SplashScreen_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Me.AddOwnedForm(Frm_Report_MissingKeys)
-        Me.AddOwnedForm(Frm_Report_Authorizations)
-        Me.AddOwnedForm(Frm_Report_Contract)
-        Me.AddOwnedForm(Frm_Report_EndingContracts)
-        Me.AddOwnedForm(Frm_Report_WithdrawPermission)
-        Me.AddOwnedForm(Frm_Report_Visits)
+        'Me.AddOwnedForm(Frm_Report_MissingKeys)
+        'Me.AddOwnedForm(Frm_Report_Authorizations)
+        'Me.AddOwnedForm(Frm_Report_Contract)
+        'Me.AddOwnedForm(Frm_Report_EndingContracts)
+        'Me.AddOwnedForm(Frm_Report_WithdrawPermission)
+        'Me.AddOwnedForm(Frm_Report_Visits)
     End Sub
 
     Private Sub SplashScreen_Shown(sender As Object, e As EventArgs) Handles Me.Shown
