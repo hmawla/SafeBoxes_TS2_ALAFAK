@@ -153,7 +153,7 @@ Partial Class Frm_Boxes
         Me.btn_reset.Depth = 0
         Me.btn_reset.Enabled = False
         Me.btn_reset.Icon = Nothing
-        Me.btn_reset.Location = New System.Drawing.Point(606, 109)
+        Me.btn_reset.Location = New System.Drawing.Point(606, 92)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_reset.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_reset.Name = "btn_reset"
@@ -170,7 +170,7 @@ Partial Class Frm_Boxes
         Me.btn_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_search.Depth = 0
         Me.btn_search.Icon = Nothing
-        Me.btn_search.Location = New System.Drawing.Point(509, 109)
+        Me.btn_search.Location = New System.Drawing.Point(509, 92)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_search.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_search.Name = "btn_search"
