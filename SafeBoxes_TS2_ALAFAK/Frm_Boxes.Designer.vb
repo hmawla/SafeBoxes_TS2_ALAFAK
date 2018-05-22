@@ -267,7 +267,7 @@ Partial Class Frm_Boxes
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(651, 136)
+        Me.TabPage2.Size = New System.Drawing.Size(651, 133)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Filter"
         '

@@ -1,4 +1,6 @@
-﻿Public Class Frm_ClientAccounts
+﻿
+Public Class Frm_ClientAccounts
+
     Public ClientId As Integer
 
     Private Sub Frm_Accounts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -25,4 +27,5 @@
     Private Sub txt_cname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_cname.KeyPress
         Only_char(txt_cname, e)
     End Sub
+
 End Class
