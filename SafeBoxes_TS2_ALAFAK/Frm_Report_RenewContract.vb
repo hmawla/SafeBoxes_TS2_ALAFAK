@@ -20,5 +20,28 @@
             MessageBox.Show("To Date should be greater than from date!")
             dtpick_exdate.Value = DateTimePicker1.Value.AddDays(1)
         End If
+        RptDbDataSet.Reset() 'reset the dataset incase it has data
+        RptDbDataSet = ReadQueryOut("SELECT * FROM Renew WHERE (RenewDate BETWEEN #" & DateTimePicker1.Value.ToShortDateString & "# AND #" & dtpick_exdate.Value.ToShortDateString & "#)").Copy() 'Set the condition on the desired table
+        CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0)) 'Override the table(0) (First table in the Creport database) using the condition
+        CRptV_Renew.ReportSource = CrysReport 'set the viewer's source to the created instance of the creport
+        CRptV_Renew.RefreshReport() 'Refresh the viewer (may not be needed)
+    End Sub
+
+    Private Sub Rdb_ByContId_CheckedChanged(sender As Object, e As EventArgs) Handles Rdb_ByContId.CheckedChanged
+        If Rdb_ByContId.Checked Then
+            Txt_ContId.Enabled = True
+        Else
+            Txt_ContId.Enabled = False
+        End If
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        If RadioButton2.Checked Then
+            DateTimePicker1.Enabled = True
+            dtpick_exdate.Enabled = True
+        Else
+            DateTimePicker1.Enabled = False
+            dtpick_exdate.Enabled = False
+        End If
     End Sub
 End Class
