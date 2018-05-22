@@ -15,5 +15,36 @@
             MessageBox.Show("To Date should be greater than from date!")
             dtpick_exdate.Value = DateTimePicker1.Value.AddDays(1)
         End If
+        RptDbDataSet.Reset()
+        RptDbDataSet = ReadQueryOut("SELECT * FROM Connects WHERE (ConnectDate BETWEEN #" & DateTimePicker1.Value.ToShortDateString & "# AND #" & dtpick_exdate.Value.ToShortDateString & "#)").Copy()
+        CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+        RptV_connects.ReportSource = CrysReport
+        RptV_connects.RefreshReport()
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        If RadioButton1.Checked Then
+            TextBox1.Enabled = True
+        Else
+            TextBox1.Enabled = False
+        End If
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        If RadioButton2.Checked Then
+            DateTimePicker1.Enabled = True
+            dtpick_exdate.Enabled = True
+        Else
+            DateTimePicker1.Enabled = False
+            dtpick_exdate.Enabled = False
+        End If
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        RptDbDataSet.Reset()
+        RptDbDataSet = ReadQueryOut("SELECT * FROM Connects WHERE ConnectId =" & TextBox1.Text).Copy()
+        CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+        RptV_connects.ReportSource = CrysReport
+        RptV_connects.RefreshReport()
     End Sub
 End Class

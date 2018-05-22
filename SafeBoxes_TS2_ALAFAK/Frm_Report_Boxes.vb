@@ -9,4 +9,12 @@
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
         Only_Number(TextBox1, e)
     End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        RptDbDataSet.Reset()
+        RptDbDataSet = ReadQueryOut("SELECT * FROM Boxes WHERE BocId =" & TextBox1.Text).Copy()
+        CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+        RptV_Boxes.ReportSource = CrysReport
+        RptV_Boxes.RefreshReport()
+    End Sub
 End Class

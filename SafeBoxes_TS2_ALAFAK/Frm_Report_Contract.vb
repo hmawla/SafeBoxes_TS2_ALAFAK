@@ -7,4 +7,8 @@
         CRptV_Contract.ReportSource = CrysReport 'set the viewer's source to the created instance of the creport
         CRptV_Contract.RefreshReport() 'Refresh the viewer (may not be needed)
     End Sub
+
+    Private Sub Rdb_ByContId_CheckedChanged(sender As Object, e As EventArgs) Handles Rdb_ByContId.CheckedChanged
+
+    End Sub
 End Class

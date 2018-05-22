@@ -25,7 +25,7 @@ Partial Class Frm_Report_Client
         Me.CRptV_Clients = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txt_cname = New System.Windows.Forms.TextBox()
-        Me.Txt_ContId = New System.Windows.Forms.TextBox()
+        Me.Txt_CId = New System.Windows.Forms.TextBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Rdb_ByClientId = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
@@ -47,7 +47,7 @@ Partial Class Frm_Report_Client
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.txt_cname)
-        Me.GroupBox1.Controls.Add(Me.Txt_ContId)
+        Me.GroupBox1.Controls.Add(Me.Txt_CId)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.Rdb_ByClientId)
         Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -66,13 +66,13 @@ Partial Class Frm_Report_Client
         Me.txt_cname.Size = New System.Drawing.Size(234, 27)
         Me.txt_cname.TabIndex = 18
         '
-        'Txt_ContId
+        'Txt_CId
         '
-        Me.Txt_ContId.Location = New System.Drawing.Point(6, 57)
-        Me.Txt_ContId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Txt_ContId.Name = "Txt_ContId"
-        Me.Txt_ContId.Size = New System.Drawing.Size(234, 27)
-        Me.Txt_ContId.TabIndex = 12
+        Me.Txt_CId.Location = New System.Drawing.Point(6, 57)
+        Me.Txt_CId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Txt_CId.Name = "Txt_CId"
+        Me.Txt_CId.Size = New System.Drawing.Size(234, 27)
+        Me.Txt_CId.TabIndex = 12
         '
         'RadioButton2
         '
@@ -113,7 +113,7 @@ Partial Class Frm_Report_Client
 
     Friend WithEvents CRptV_Clients As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Txt_ContId As TextBox
+    Friend WithEvents Txt_CId As TextBox
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents Rdb_ByClientId As RadioButton
     Friend WithEvents txt_cname As TextBox

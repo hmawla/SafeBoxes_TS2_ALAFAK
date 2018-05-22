@@ -110,7 +110,6 @@ Partial Class Frm_newContract
         'dtpick_exdate
         '
         Me.dtpick_exdate.CustomFormat = "dd/mm/yyyy"
-        Me.dtpick_exdate.Enabled = False
         Me.dtpick_exdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.dtpick_exdate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpick_exdate.Location = New System.Drawing.Point(328, 311)
