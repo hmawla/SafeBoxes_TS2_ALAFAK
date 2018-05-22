@@ -33,7 +33,7 @@
     End Sub
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
-
+        Dim Note As String = InputBox("Answer Note", "Enter your Answer note below: ", "Note Example")
     End Sub
 
     Private Sub RadioButton1_CheckedChanged_1(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged, RadioButton1.CheckedChanged

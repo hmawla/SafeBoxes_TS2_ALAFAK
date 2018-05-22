@@ -40,7 +40,6 @@ Partial Class Frm_NewConnects
         'Btn_Submit
         '
         Me.Btn_Submit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Btn_Submit.Enabled = False
         Me.Btn_Submit.Location = New System.Drawing.Point(535, 160)
         Me.Btn_Submit.Margin = New System.Windows.Forms.Padding(4)
         Me.Btn_Submit.Name = "Btn_Submit"
@@ -180,7 +179,7 @@ Partial Class Frm_NewConnects
         Me.RadioButton4.Text = "Yes"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
-        'Frm_Connects
+        'Frm_NewConnects
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -192,7 +191,7 @@ Partial Class Frm_NewConnects
         Me.Controls.Add(Me.Lbl_EmpId)
         Me.Font = New System.Drawing.Font("Roboto", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Frm_Connects"
+        Me.Name = "Frm_NewConnects"
         Me.Text = "Frm_Connects"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
