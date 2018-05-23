@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Frm_NewAccountClient
     Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,13 @@ Partial Class Frm_NewAccountClient
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_compname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TextBox1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.TabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabControl1.SuspendLayout()
@@ -43,7 +43,7 @@ Partial Class Frm_NewAccountClient
         Me.MaterialLabel5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel5.Name = "MaterialLabel5"
-        Me.MaterialLabel5.Size = New System.Drawing.Size(69, 18)
+        Me.MaterialLabel5.Size = New System.Drawing.Size(70, 19)
         Me.MaterialLabel5.TabIndex = 53
         Me.MaterialLabel5.Text = "Client ID:"
         '
@@ -75,25 +75,36 @@ Partial Class Frm_NewAccountClient
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
-        Me.MaterialLabel1.Size = New System.Drawing.Size(95, 18)
+        Me.MaterialLabel1.Size = New System.Drawing.Size(96, 19)
         Me.MaterialLabel1.TabIndex = 55
         Me.MaterialLabel1.Text = "Client Name:"
         '
         'TextBox1
         '
+        Me.TextBox1.Depth = 0
+        Me.TextBox1.Hint = ""
         Me.TextBox1.Location = New System.Drawing.Point(160, 118)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox1.MaxLength = 32767
+        Me.TextBox1.MouseState = MaterialSkin.MouseState.HOVER
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(252, 26)
+        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TextBox1.SelectedText = ""
+        Me.TextBox1.SelectionLength = 0
+        Me.TextBox1.SelectionStart = 0
+        Me.TextBox1.Size = New System.Drawing.Size(252, 23)
         Me.TextBox1.TabIndex = 54
+        Me.TextBox1.TabStop = False
+        Me.TextBox1.UseSystemPasswordChar = False
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Depth = 0
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl1.MouseState = MaterialSkin.MouseState.HOVER
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(699, 415)
@@ -144,8 +155,8 @@ Partial Class Frm_NewAccountClient
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_compname As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TextBox1 As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents TabControl1 As MaterialSkin.Controls.MaterialTabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
 End Class
