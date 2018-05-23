@@ -25,5 +25,4 @@ Public Class SplashScreen
         Me.Hide()
     End Sub
 
-
 End Class
