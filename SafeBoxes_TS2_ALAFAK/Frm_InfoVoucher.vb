@@ -5,19 +5,19 @@
         FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS ID, InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId AS [Contract ID], BuildingName AS Address, InfoSubjTitle, ClientFName AS [Client Name] FROM InfoVoucher i,Clients c, Buildings b,InfoSubjectTitles ist WHERE i.BuildingId = b.BuildingId AND i.ClientId = c.ClientId AND i.InfoSubjTitleId=ist.InfoSubjTitleId")
     End Sub
 
-    Private Sub btn_newinfovouch_Click(sender As Object, e As EventArgs)
+    Private Sub btn_newinfovouch_Click(sender As Object, e As EventArgs) Handles btn_newinfovouch.Click
         infovouchId = 0
         Frm_NewInfoVoucher.ShowDialog()
         FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS [ID], InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId, BuildingName, InfoSubjTitle, ClientFName FROM InfoVoucher, Buildings, Clients, InfoSubjectTitles WHERE InfoVoucher.BuildingId=Buildings.BuildingId AND InfoVoucher.InfoSubjTitleId=InfoSubjectTitles.InfoSubjTitleId AND InfoVoucher.ClientId=Clients.ClientId")
     End Sub
 
-    Private Sub btn_modinfovouch_Click(sender As Object, e As EventArgs)
+    Private Sub btn_modinfovouch_Click(sender As Object, e As EventArgs) Handles btn_modinfovouch.Click
         infovouchId = dgv_infovouchers.SelectedRows(0).Cells(0).Value
         Frm_NewInfoVoucher.ShowDialog()
         FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS [ID], InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId, BuildingName, InfoSubjTitle, ClientFName FROM InfoVoucher, Buildings, Clients, InfoSubjectTitles WHERE InfoVoucher.BuildingId=Buildings.BuildingId AND InfoVoucher.InfoSubjTitleId=InfoSubjectTitles.InfoSubjTitleId AND InfoVoucher.ClientId=Clients.ClientId")
     End Sub
 
-    Private Sub btn_delinfovouch_Click(sender As Object, e As EventArgs)
+    Private Sub btn_delinfovouch_Click(sender As Object, e As EventArgs) Handles btn_delinfovouch.Click
         ExecuteQuery("DELETE FROM InfoVoucher WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
         FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS [ID], InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId, BuildingName, InfoSubjTitle, ClientFName FROM InfoVoucher, Buildings, Clients, InfoSubjectTitles WHERE InfoVoucher.BuildingId=Buildings.BuildingId AND InfoVoucher.InfoSubjTitleId=InfoSubjectTitles.InfoSubjTitleId AND InfoVoucher.ClientId=Clients.ClientId")
     End Sub
@@ -34,19 +34,19 @@
         End Try
     End Sub
 
-    Private Sub rdb_byinfovouchid_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub rdb_byinfovouchid_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byinfovouchid.CheckedChanged
         txt_byInfovouchid.Enabled = True
         txt_byClientName.Enabled = False
         txt_byClientName.Text = ""
     End Sub
 
-    Private Sub rdb_byClientName_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub rdb_byClientName_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byClientName.CheckedChanged
         txt_byInfovouchid.Enabled = False
         txt_byClientName.Enabled = True
         txt_byInfovouchid.Text = ""
     End Sub
 
-    Private Sub btn_search_Click(sender As Object, e As EventArgs)
+    Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
         btn_reset.Enabled = True
         If rdb_byinfovouchid.Checked Then
             FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS ID, InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId AS [Contract ID], BuildingName AS Address, InfoSubjTitle, ClientFName AS [Client Name] FROM InfoVoucher i,Clients c, Buildings b,InfoSubjectTitles ist WHERE i.InfoVouchId=" & txt_byInfovouchid.Text & " AND i.BuildingId = b.BuildingId AND i.ClientId = c.ClientId AND i.InfoSubjTitleId=ist.InfoSubjTitleId")
@@ -67,22 +67,22 @@
         End If
     End Sub
 
-    Private Sub btn_reset_Click(sender As Object, e As EventArgs)
+    Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click
         FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS ID, InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId AS [Contract ID], BuildingName AS Address, InfoSubjTitle, ClientFName AS [Client Name] FROM InfoVoucher i,Clients c, Buildings b,InfoSubjectTitles ist WHERE i.BuildingId = b.BuildingId AND i.ClientId = c.ClientId AND i.InfoSubjTitleId=ist.InfoSubjTitleId")
         btn_reset.Enabled = False
         txt_byInfovouchid.Text = ""
         txt_byClientName.Text = ""
     End Sub
 
-    Private Sub txt_byInfovouchid_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txt_byInfovouchid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byInfovouchid.KeyPress
         Only_Number(txt_byInfovouchid, e)
     End Sub
 
-    Private Sub txt_byClientName_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub txt_byClientName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byClientName.KeyPress
         Only_char(txt_byClientName, e)
     End Sub
 
-    Private Sub btn_connects_Click(sender As Object, e As EventArgs)
+    Private Sub btn_connects_Click(sender As Object, e As EventArgs) Handles btn_connects.Click
         Frm_main.infovouchid = dgv_infovouchers.SelectedRows(0).Cells(0).Value
         Frm_NewConnects.ShowDialog()
         FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS ID, InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId AS [Contract ID], BuildingName AS Address, InfoSubjTitle, ClientFName AS [Client Name] FROM InfoVoucher i,Clients c, Buildings b,InfoSubjectTitles ist WHERE i.BuildingId = b.BuildingId AND i.ClientId = c.ClientId AND i.InfoSubjTitleId=ist.InfoSubjTitleId")
