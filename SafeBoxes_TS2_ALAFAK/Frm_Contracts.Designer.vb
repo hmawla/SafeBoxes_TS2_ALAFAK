@@ -71,7 +71,7 @@ Partial Class Frm_Contracts
         Me.btn_reset.Depth = 0
         Me.btn_reset.Enabled = False
         Me.btn_reset.Icon = Nothing
-        Me.btn_reset.Location = New System.Drawing.Point(626, 87)
+        Me.btn_reset.Location = New System.Drawing.Point(623, 81)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_reset.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_reset.Name = "btn_reset"
@@ -88,7 +88,7 @@ Partial Class Frm_Contracts
         Me.btn_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_search.Depth = 0
         Me.btn_search.Icon = Nothing
-        Me.btn_search.Location = New System.Drawing.Point(548, 85)
+        Me.btn_search.Location = New System.Drawing.Point(551, 81)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_search.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_search.Name = "btn_search"
@@ -101,8 +101,8 @@ Partial Class Frm_Contracts
         'rdb_bycontid
         '
         Me.rdb_bycontid.Depth = 0
-        Me.rdb_bycontid.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.rdb_bycontid.Location = New System.Drawing.Point(4, 36)
+        Me.rdb_bycontid.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_bycontid.Location = New System.Drawing.Point(31, 50)
         Me.rdb_bycontid.Margin = New System.Windows.Forms.Padding(0)
         Me.rdb_bycontid.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.rdb_bycontid.MouseState = MaterialSkin.MouseState.HOVER
@@ -117,8 +117,9 @@ Partial Class Frm_Contracts
         '
         Me.txt_bycontid.Depth = 0
         Me.txt_bycontid.Enabled = False
+        Me.txt_bycontid.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_bycontid.Hint = ""
-        Me.txt_bycontid.Location = New System.Drawing.Point(139, 36)
+        Me.txt_bycontid.Location = New System.Drawing.Point(166, 50)
         Me.txt_bycontid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_bycontid.MaxLength = 32767
         Me.txt_bycontid.MouseState = MaterialSkin.MouseState.HOVER
@@ -127,7 +128,7 @@ Partial Class Frm_Contracts
         Me.txt_bycontid.SelectedText = ""
         Me.txt_bycontid.SelectionLength = 0
         Me.txt_bycontid.SelectionStart = 0
-        Me.txt_bycontid.Size = New System.Drawing.Size(215, 23)
+        Me.txt_bycontid.Size = New System.Drawing.Size(315, 23)
         Me.txt_bycontid.TabIndex = 10
         Me.txt_bycontid.TabStop = False
         Me.txt_bycontid.UseSystemPasswordChar = False
@@ -135,8 +136,8 @@ Partial Class Frm_Contracts
         'rdb_byboxid
         '
         Me.rdb_byboxid.Depth = 0
-        Me.rdb_byboxid.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.rdb_byboxid.Location = New System.Drawing.Point(6, 6)
+        Me.rdb_byboxid.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_byboxid.Location = New System.Drawing.Point(33, 20)
         Me.rdb_byboxid.Margin = New System.Windows.Forms.Padding(0)
         Me.rdb_byboxid.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.rdb_byboxid.MouseState = MaterialSkin.MouseState.HOVER
@@ -150,8 +151,9 @@ Partial Class Frm_Contracts
         '
         Me.txt_byboxid.Depth = 0
         Me.txt_byboxid.Enabled = False
+        Me.txt_byboxid.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_byboxid.Hint = ""
-        Me.txt_byboxid.Location = New System.Drawing.Point(139, 7)
+        Me.txt_byboxid.Location = New System.Drawing.Point(166, 21)
         Me.txt_byboxid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_byboxid.MaxLength = 32767
         Me.txt_byboxid.MouseState = MaterialSkin.MouseState.HOVER
@@ -160,7 +162,7 @@ Partial Class Frm_Contracts
         Me.txt_byboxid.SelectedText = ""
         Me.txt_byboxid.SelectionLength = 0
         Me.txt_byboxid.SelectionStart = 0
-        Me.txt_byboxid.Size = New System.Drawing.Size(215, 23)
+        Me.txt_byboxid.Size = New System.Drawing.Size(315, 23)
         Me.txt_byboxid.TabIndex = 8
         Me.txt_byboxid.TabStop = False
         Me.txt_byboxid.UseSystemPasswordChar = False
@@ -181,7 +183,7 @@ Partial Class Frm_Contracts
         Me.dgv_contracts.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgv_contracts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgv_contracts.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_contracts.Location = New System.Drawing.Point(13, 268)
+        Me.dgv_contracts.Location = New System.Drawing.Point(13, 281)
         Me.dgv_contracts.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgv_contracts.MultiSelect = False
         Me.dgv_contracts.Name = "dgv_contracts"
@@ -190,7 +192,7 @@ Partial Class Frm_Contracts
         Me.dgv_contracts.RowHeadersVisible = False
         Me.dgv_contracts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_contracts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_contracts.Size = New System.Drawing.Size(668, 309)
+        Me.dgv_contracts.Size = New System.Drawing.Size(668, 296)
         Me.dgv_contracts.TabIndex = 8
         '
         'MaterialTabControl1
@@ -204,7 +206,7 @@ Partial Class Frm_Contracts
         Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabControl1.Name = "MaterialTabControl1"
         Me.MaterialTabControl1.SelectedIndex = 0
-        Me.MaterialTabControl1.Size = New System.Drawing.Size(668, 153)
+        Me.MaterialTabControl1.Size = New System.Drawing.Size(668, 169)
         Me.MaterialTabControl1.TabIndex = 17
         '
         'TabPage1
@@ -228,7 +230,7 @@ Partial Class Frm_Contracts
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(660, 120)
+        Me.TabPage1.Size = New System.Drawing.Size(660, 136)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Controls"
         '
@@ -473,7 +475,7 @@ Partial Class Frm_Contracts
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(660, 131)
+        Me.TabPage2.Size = New System.Drawing.Size(660, 133)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Filter"
         '

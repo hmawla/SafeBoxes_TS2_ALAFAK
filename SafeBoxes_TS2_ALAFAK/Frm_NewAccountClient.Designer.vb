@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Frm_NewAccountClient
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -23,7 +23,7 @@ Partial Class Frm_NewAccountClient
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_compname = New System.Windows.Forms.TextBox()
+        Me.txt_compname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -132,7 +132,7 @@ Partial Class Frm_NewAccountClient
     End Sub
 
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_compname As TextBox
+    Friend WithEvents txt_compname As MaterialSkin.Controls.MaterialSingleLineTextField()
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TabControl1 As TabControl

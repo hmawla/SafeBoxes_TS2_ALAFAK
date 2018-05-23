@@ -58,7 +58,7 @@ Partial Class Frm_Clients
         Me.dgv_clients.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgv_clients.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgv_clients.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_clients.Location = New System.Drawing.Point(13, 280)
+        Me.dgv_clients.Location = New System.Drawing.Point(13, 297)
         Me.dgv_clients.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgv_clients.MultiSelect = False
         Me.dgv_clients.Name = "dgv_clients"
@@ -67,17 +67,17 @@ Partial Class Frm_Clients
         Me.dgv_clients.RowHeadersVisible = False
         Me.dgv_clients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_clients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_clients.Size = New System.Drawing.Size(693, 287)
+        Me.dgv_clients.Size = New System.Drawing.Size(693, 270)
         Me.dgv_clients.TabIndex = 10
         '
         'MaterialTabSelector1
         '
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
-        Me.MaterialTabSelector1.Location = New System.Drawing.Point(1, 64)
+        Me.MaterialTabSelector1.Location = New System.Drawing.Point(0, 64)
         Me.MaterialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabSelector1.Name = "MaterialTabSelector1"
-        Me.MaterialTabSelector1.Size = New System.Drawing.Size(718, 36)
+        Me.MaterialTabSelector1.Size = New System.Drawing.Size(722, 36)
         Me.MaterialTabSelector1.TabIndex = 14
         Me.MaterialTabSelector1.Text = "MaterialTabSelector1"
         '
@@ -90,7 +90,7 @@ Partial Class Frm_Clients
         Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabControl1.Name = "MaterialTabControl1"
         Me.MaterialTabControl1.SelectedIndex = 0
-        Me.MaterialTabControl1.Size = New System.Drawing.Size(692, 166)
+        Me.MaterialTabControl1.Size = New System.Drawing.Size(692, 187)
         Me.MaterialTabControl1.TabIndex = 15
         '
         'TabPage1
@@ -103,7 +103,7 @@ Partial Class Frm_Clients
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(651, 133)
+        Me.TabPage1.Size = New System.Drawing.Size(684, 154)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Controls"
         '

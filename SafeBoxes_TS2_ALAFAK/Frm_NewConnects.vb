@@ -4,6 +4,7 @@
     Dim ds As New DataSet
     Dim answer As Integer
     Dim result As Integer
+
     Private Sub Frm_Connects_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         infoVouchid = Frm_main.infovouchid
         EmpId = Frm_main.loggedEmpId
