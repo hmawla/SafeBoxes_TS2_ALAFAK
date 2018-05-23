@@ -59,7 +59,6 @@ Partial Class Frm_CompaniesAccounts
         Me.dgv_accounts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgv_accounts.GridColor = System.Drawing.Color.PowderBlue
         Me.dgv_accounts.Location = New System.Drawing.Point(13, 283)
-        Me.dgv_accounts.Location = New System.Drawing.Point(13, 272)
         Me.dgv_accounts.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.dgv_accounts.MultiSelect = False
         Me.dgv_accounts.Name = "dgv_accounts"
@@ -68,18 +67,13 @@ Partial Class Frm_CompaniesAccounts
         Me.dgv_accounts.RowHeadersVisible = False
         Me.dgv_accounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_accounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_accounts.Size = New System.Drawing.Size(675, 319)
-        Me.dgv_accounts.Size = New System.Drawing.Size(673, 330)
+        Me.dgv_accounts.Size = New System.Drawing.Size(673, 319)
         Me.dgv_accounts.TabIndex = 16
         '
         'MaterialTabSelector1
         '
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
-        Me.MaterialTabSelector1.Location = New System.Drawing.Point(1, 64)
-        Me.MaterialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialTabSelector1.Name = "MaterialTabSelector1"
-        Me.MaterialTabSelector1.Size = New System.Drawing.Size(700, 36)
         Me.MaterialTabSelector1.Location = New System.Drawing.Point(0, 64)
         Me.MaterialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabSelector1.Name = "MaterialTabSelector1"
@@ -92,16 +86,11 @@ Partial Class Frm_CompaniesAccounts
         Me.MaterialTabControl1.Controls.Add(Me.TabPage1)
         Me.MaterialTabControl1.Controls.Add(Me.TabPage2)
         Me.MaterialTabControl1.Depth = 0
-        Me.MaterialTabControl1.Location = New System.Drawing.Point(13, 106)
-        Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialTabControl1.Name = "MaterialTabControl1"
-        Me.MaterialTabControl1.SelectedIndex = 0
-        Me.MaterialTabControl1.Size = New System.Drawing.Size(675, 166)
         Me.MaterialTabControl1.Location = New System.Drawing.Point(14, 106)
         Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabControl1.Name = "MaterialTabControl1"
         Me.MaterialTabControl1.SelectedIndex = 0
-        Me.MaterialTabControl1.Size = New System.Drawing.Size(676, 166)
+        Me.MaterialTabControl1.Size = New System.Drawing.Size(676, 170)
         Me.MaterialTabControl1.TabIndex = 19
         '
         'TabPage1
@@ -114,8 +103,7 @@ Partial Class Frm_CompaniesAccounts
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(667, 140)
-        Me.TabPage1.Size = New System.Drawing.Size(668, 140)
+        Me.TabPage1.Size = New System.Drawing.Size(668, 144)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Controls"
         '
@@ -192,7 +180,6 @@ Partial Class Frm_CompaniesAccounts
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(667, 140)
         Me.TabPage2.Size = New System.Drawing.Size(668, 140)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Filter"
@@ -238,7 +225,6 @@ Partial Class Frm_CompaniesAccounts
         Me.btn_reset.Depth = 0
         Me.btn_reset.Enabled = False
         Me.btn_reset.Icon = Nothing
-        Me.btn_reset.Location = New System.Drawing.Point(622, 92)
         Me.btn_reset.Location = New System.Drawing.Point(607, 92)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_reset.MouseState = MaterialSkin.MouseState.HOVER
@@ -275,7 +261,6 @@ Partial Class Frm_CompaniesAccounts
         Me.btn_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_search.Depth = 0
         Me.btn_search.Icon = Nothing
-        Me.btn_search.Location = New System.Drawing.Point(525, 92)
         Me.btn_search.Location = New System.Drawing.Point(510, 92)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_search.MouseState = MaterialSkin.MouseState.HOVER

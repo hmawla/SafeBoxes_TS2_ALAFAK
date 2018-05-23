@@ -10,4 +10,17 @@
     Private Sub txt_cname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_cname.KeyPress
         Only_char(txt_cname, e)
     End Sub
+
+    Private Sub dgv_accounts_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_accounts.CellDoubleClick
+        If Frm_main.accountid = 0 Then
+            Try
+                If dgv_accounts.SelectedRows(0).Cells(0).Value > 0 Then
+                End If
+                Frm_main.accountid = dgv_accounts.SelectedRows(0).Cells(0).Value
+                Me.Dispose()
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
 End Class
