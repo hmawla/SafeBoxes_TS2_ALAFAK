@@ -24,12 +24,12 @@ Partial Class Frm_NewAccountClient
     Private Sub InitializeComponent()
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_compname = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_cid = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
+        Me.txt_cname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
@@ -49,26 +49,16 @@ Partial Class Frm_NewAccountClient
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.txt_cname)
         Me.TabPage1.Controls.Add(Me.MaterialLabel5)
         Me.TabPage1.Controls.Add(Me.MaterialLabel1)
-        Me.TabPage1.Controls.Add(Me.txt_compname)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.txt_cid)
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(667, 256)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
-        '
-        'TabPage2
-        '
-        Me.TabPage2.BackColor = System.Drawing.Color.White
-        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(667, 256)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
         '
         'MaterialLabel5
         '
@@ -98,34 +88,33 @@ Partial Class Frm_NewAccountClient
         Me.MaterialLabel1.TabIndex = 59
         Me.MaterialLabel1.Text = "Client Name:"
         '
-        'txt_compname
+        'txt_cid
         '
-        Me.txt_compname.Depth = 0
-        Me.txt_compname.Hint = ""
-        Me.txt_compname.Location = New System.Drawing.Point(7, 34)
-        Me.txt_compname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txt_compname.MaxLength = 32767
-        Me.txt_compname.MouseState = MaterialSkin.MouseState.HOVER
-        Me.txt_compname.Name = "txt_compname"
-        Me.txt_compname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txt_compname.SelectedText = ""
-        Me.txt_compname.SelectionLength = 0
-        Me.txt_compname.SelectionStart = 0
-        Me.txt_compname.Size = New System.Drawing.Size(139, 23)
-        Me.txt_compname.TabIndex = 56
-        Me.txt_compname.TabStop = False
-        Me.txt_compname.UseSystemPasswordChar = False
+        Me.txt_cid.Depth = 0
+        Me.txt_cid.Hint = ""
+        Me.txt_cid.Location = New System.Drawing.Point(7, 34)
+        Me.txt_cid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_cid.MaxLength = 32767
+        Me.txt_cid.MouseState = MaterialSkin.MouseState.HOVER
+        Me.txt_cid.Name = "txt_cid"
+        Me.txt_cid.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_cid.SelectedText = ""
+        Me.txt_cid.SelectionLength = 0
+        Me.txt_cid.SelectionStart = 0
+        Me.txt_cid.Size = New System.Drawing.Size(139, 23)
+        Me.txt_cid.TabIndex = 56
+        Me.txt_cid.TabStop = False
+        Me.txt_cid.UseSystemPasswordChar = False
         '
-        'TextBox1
+        'TabPage2
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(154, 34)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox1.MaxLength = 32767
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(252, 26)
-        Me.TextBox1.TabIndex = 58
+        Me.TabPage2.BackColor = System.Drawing.Color.White
+        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(667, 256)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "TabPage2"
         '
         'MaterialTabSelector1
         '
@@ -137,6 +126,24 @@ Partial Class Frm_NewAccountClient
         Me.MaterialTabSelector1.Size = New System.Drawing.Size(704, 37)
         Me.MaterialTabSelector1.TabIndex = 60
         Me.MaterialTabSelector1.Text = "MaterialTabSelector1"
+        '
+        'txt_cname
+        '
+        Me.txt_cname.Depth = 0
+        Me.txt_cname.Hint = ""
+        Me.txt_cname.Location = New System.Drawing.Point(154, 34)
+        Me.txt_cname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_cname.MaxLength = 32767
+        Me.txt_cname.MouseState = MaterialSkin.MouseState.HOVER
+        Me.txt_cname.Name = "txt_cname"
+        Me.txt_cname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_cname.SelectedText = ""
+        Me.txt_cname.SelectionLength = 0
+        Me.txt_cname.SelectionStart = 0
+        Me.txt_cname.Size = New System.Drawing.Size(212, 23)
+        Me.txt_cname.TabIndex = 60
+        Me.txt_cname.TabStop = False
+        Me.txt_cname.UseSystemPasswordChar = False
         '
         'Frm_NewAccountClient
         '
@@ -161,8 +168,8 @@ Partial Class Frm_NewAccountClient
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_compname As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_cid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents MaterialTabSelector1 As MaterialSkin.Controls.MaterialTabSelector
+    Friend WithEvents txt_cname As MaterialSkin.Controls.MaterialSingleLineTextField
 End Class
