@@ -4,6 +4,7 @@ Imports System.Diagnostics
 Imports System.Threading
 
 Public Class SplashScreen
+
     Private Sub SplashScreen_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Me.AddOwnedForm(Frm_Report_MissingKeys)
         'Me.AddOwnedForm(Frm_Report_Authorizations)
@@ -25,4 +26,7 @@ Public Class SplashScreen
         Me.Hide()
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
 End Class

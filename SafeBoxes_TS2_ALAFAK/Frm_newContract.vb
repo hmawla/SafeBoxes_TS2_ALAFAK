@@ -28,13 +28,13 @@ Public Class Frm_newContract
                     i = i + 1
                 Next
             Else
-                MsgBox("Invalid Account ID!")
+                MessageBox.Show("Invalid Account ID!")
                 txt_accountid.Focus()
                 txt_accountid.SelectAll()
             End If
 
         Catch ex As Exception
-            MsgBox("Invalid Account ID!")
+            MessageBox.Show("Invalid Account ID!")
             txt_accountid.Focus()
             txt_accountid.SelectAll()
         End Try
@@ -152,4 +152,5 @@ Public Class Frm_newContract
     Private Sub cbox_buildings_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbox_buildings.KeyPress
         Only_char(cbox_buildings, e)
     End Sub
+
 End Class

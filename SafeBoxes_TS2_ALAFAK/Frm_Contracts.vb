@@ -61,8 +61,8 @@
 
     Private Sub btn_addmissingkeys_Click(sender As Object, e As EventArgs) Handles btn_addmissingkeys.Click
         If Not Exists(dgv_contracts.SelectedRows(0).Cells(0).Value, "SELECT ContId FROM MissingKeys WHERE RedeliverDate IS NULL AND ContId = " & dgv_contracts.SelectedRows(0).Cells(0).Value) Then
-            Dim result As DialogResult = MessageBox.Show("Are you sure you want to submit missing keys to contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value, "Submit Missing Keys", MessageBoxButtons.YesNo)
-            If result = DialogResult.Yes Then
+            MessageBox.Show("Are you sure you want to submit missing keys to contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value, "Submit Missing Keys", MessageBoxButtons.YesNo)
+            If mesResult = DialogResult.Yes Then
                 Dim theNewId As Integer = GenID("MissingKeys", "MissKeyId")
                 ExecuteQuery("INSERT INTO MissingKeys(MissKeyId, MissKeyDate, ContId) VALUES(" & theNewId & ", date(), " & dgv_contracts.SelectedRows(0).Cells(0).Value & ")")
             End If
@@ -136,11 +136,12 @@
     End Sub
 
     Private Sub btn_end_Click(sender As Object, e As EventArgs) Handles btn_end.Click
-        Dim result As DialogResult = MessageBox.Show("Are you sure you want to end contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value, "End Contract", MessageBoxButtons.YesNo)
-        If result = DialogResult.Yes Then
+        MessageBox.Show("Are you sure you want to end contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value, "End Contract", MessageBoxButtons.YesNo)
+        If mesResult = DialogResult.Yes Then
             Dim theNewId As Integer = GenID("ContEnd", "ContEndId")
             ExecuteQuery("INSERT INTO ContEnd VALUES(" & theNewId & ", date(), " & dgv_contracts.SelectedRows(0).Cells(0).Value & ")")
-            MessageBox.Show("Contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value & " is now ended and cannot be reused!")
+            Dim mesBox = New MessageBox
+            mesBox.Show("Contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value & " is now ended and cannot be reused!")
             FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
         End If
 
@@ -206,8 +207,8 @@
     End Sub
 
     Private Sub btn_withdraw_Click(sender As Object, e As EventArgs) Handles btn_withdraw.Click
-        Dim result As DialogResult = MessageBox.Show("Are you sure you want to grant permission to withdraw rental fees for Contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value & " from Account#" & dgv_contracts.SelectedRows(0).Cells(6).Value, "Withdraw Permission", MessageBoxButtons.YesNo)
-        If result = DialogResult.Yes Then
+        MessageBox.Show("Are you sure you want to grant permission to withdraw rental fees for Contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value & " from Account#" & dgv_contracts.SelectedRows(0).Cells(6).Value, "Withdraw Permission", MessageBoxButtons.YesNo)
+        If mesResult = DialogResult.Yes Then
             Dim theNewId As Integer = GenID("Permissions", "PermId")
             ExecuteQuery("INSERT INTO Permissions VALUES(" & theNewId & ", date(), " & dgv_contracts.SelectedRows(0).Cells(0).Value & ")")
         End If

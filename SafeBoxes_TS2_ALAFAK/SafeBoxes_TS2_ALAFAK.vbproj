@@ -208,6 +208,12 @@
     <Compile Include="Frm_Report_Visits.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MessageBox.Designer.vb">
+      <DependentUpon>MessageBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Rpt_Authorizations.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -493,6 +499,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_Visits.resx">
       <DependentUpon>Frm_Report_Visits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox.resx">
+      <DependentUpon>MessageBox.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_Authorizations.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
