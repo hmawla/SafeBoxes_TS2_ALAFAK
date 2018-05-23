@@ -24,6 +24,8 @@ Partial Class Frm_NewConnects
     Private Sub InitializeComponent()
         Me.Lbl_infovId = New MaterialSkin.Controls.MaterialLabel()
         Me.Lbl_EmpId = New MaterialSkin.Controls.MaterialLabel()
+        Me.SelectEmployee = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.Rdb_AnswerN = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Rdb_AnswerY = New MaterialSkin.Controls.MaterialRadioButton()
@@ -33,8 +35,6 @@ Partial Class Frm_NewConnects
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.Rdb_ResultY = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Rdb_ResultN = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.SelectEmployee = New MaterialSkin.Controls.MaterialContextMenuStrip()
-        Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.SelectEmployee.SuspendLayout()
@@ -70,6 +70,21 @@ Partial Class Frm_NewConnects
         Me.Lbl_EmpId.Size = New System.Drawing.Size(159, 19)
         Me.Lbl_EmpId.TabIndex = 76
         Me.Lbl_EmpId.Text = "Employee ID: <EmpId>"
+        '
+        'SelectEmployee
+        '
+        Me.SelectEmployee.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.SelectEmployee.Depth = 0
+        Me.SelectEmployee.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
+        Me.SelectEmployee.MouseState = MaterialSkin.MouseState.HOVER
+        Me.SelectEmployee.Name = "SelectEmployee"
+        Me.SelectEmployee.Size = New System.Drawing.Size(210, 26)
+        '
+        'SelectDifferentEmployeeToolStripMenuItem
+        '
+        Me.SelectDifferentEmployeeToolStripMenuItem.Name = "SelectDifferentEmployeeToolStripMenuItem"
+        Me.SelectDifferentEmployeeToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.SelectDifferentEmployeeToolStripMenuItem.Text = "Select Different Employee"
         '
         'MaterialLabel2
         '
@@ -143,7 +158,7 @@ Partial Class Frm_NewConnects
         Me.Btn_Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_Submit.Depth = 0
         Me.Btn_Submit.Icon = Nothing
-        Me.Btn_Submit.Location = New System.Drawing.Point(307, 300)
+        Me.Btn_Submit.Location = New System.Drawing.Point(324, 279)
         Me.Btn_Submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Submit.Name = "Btn_Submit"
         Me.Btn_Submit.Primary = True
@@ -188,7 +203,7 @@ Partial Class Frm_NewConnects
         Me.Rdb_ResultY.Depth = 0
         Me.Rdb_ResultY.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.Rdb_ResultY.Location = New System.Drawing.Point(10, 42)
-        Me.Rdb_ResultY.Margin = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.Rdb_ResultY.Margin = New System.Windows.Forms.Padding(0)
         Me.Rdb_ResultY.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.Rdb_ResultY.MouseState = MaterialSkin.MouseState.HOVER
         Me.Rdb_ResultY.Name = "Rdb_ResultY"
@@ -215,21 +230,6 @@ Partial Class Frm_NewConnects
         Me.Rdb_ResultN.TabStop = True
         Me.Rdb_ResultN.Text = "No"
         Me.Rdb_ResultN.UseVisualStyleBackColor = True
-        '
-        'SelectEmployee
-        '
-        Me.SelectEmployee.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.SelectEmployee.Depth = 0
-        Me.SelectEmployee.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
-        Me.SelectEmployee.MouseState = MaterialSkin.MouseState.HOVER
-        Me.SelectEmployee.Name = "SelectEmployee"
-        Me.SelectEmployee.Size = New System.Drawing.Size(210, 26)
-        '
-        'SelectDifferentEmployeeToolStripMenuItem
-        '
-        Me.SelectDifferentEmployeeToolStripMenuItem.Name = "SelectDifferentEmployeeToolStripMenuItem"
-        Me.SelectDifferentEmployeeToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
-        Me.SelectDifferentEmployeeToolStripMenuItem.Text = "Select Different Employee"
         '
         'GroupBox1
         '
@@ -258,7 +258,7 @@ Partial Class Frm_NewConnects
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(390, 348)
+        Me.ClientSize = New System.Drawing.Size(407, 327)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Chk_AnswerNote)
@@ -269,7 +269,7 @@ Partial Class Frm_NewConnects
         Me.Font = New System.Drawing.Font("Roboto", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_NewConnects"
-        Me.Text = "Frm_Connects"
+        Me.Text = "Connecting to client"
         Me.SelectEmployee.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

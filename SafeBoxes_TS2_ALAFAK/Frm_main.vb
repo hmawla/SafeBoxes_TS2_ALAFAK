@@ -13,9 +13,8 @@ Public Class Frm_main
         InitCon()
     End Sub
 
-
     Private Sub Frm_main_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        End
+        SplashScreen.Close()
     End Sub
 
     Private Sub btn_contractsman_Click(sender As Object, e As EventArgs) Handles btn_contractsman.Click

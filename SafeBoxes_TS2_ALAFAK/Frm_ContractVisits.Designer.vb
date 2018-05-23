@@ -211,7 +211,7 @@ Partial Class Frm_ContractVisits
         Me.Btn_Submit.Depth = 0
         Me.Btn_Submit.Enabled = False
         Me.Btn_Submit.Icon = Nothing
-        Me.Btn_Submit.Location = New System.Drawing.Point(532, 524)
+        Me.Btn_Submit.Location = New System.Drawing.Point(579, 524)
         Me.Btn_Submit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Btn_Submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Submit.Name = "Btn_Submit"
@@ -248,7 +248,7 @@ Partial Class Frm_ContractVisits
         Me.DGV_Visits.RowHeadersVisible = False
         Me.DGV_Visits.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_Visits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_Visits.Size = New System.Drawing.Size(583, 314)
+        Me.DGV_Visits.Size = New System.Drawing.Size(630, 314)
         Me.DGV_Visits.TabIndex = 73
         '
         'Column1
@@ -281,7 +281,7 @@ Partial Class Frm_ContractVisits
         Me.txt_note.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.txt_note.Multiline = True
         Me.txt_note.Name = "txt_note"
-        Me.txt_note.Size = New System.Drawing.Size(191, 67)
+        Me.txt_note.Size = New System.Drawing.Size(238, 67)
         Me.txt_note.TabIndex = 74
         '
         'MaterialLabel1
@@ -302,7 +302,8 @@ Partial Class Frm_ContractVisits
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(618, 569)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(665, 569)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.txt_note)
         Me.Controls.Add(Me.DGV_Visits)
