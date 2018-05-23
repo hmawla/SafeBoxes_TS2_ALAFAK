@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Frm_NewCompany
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -27,8 +27,8 @@ Partial Class Frm_NewCompany
         Me.SelectRep = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectRepresentativeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
-        Me.btn_submit = New System.Windows.Forms.Button()
-        Me.txt_compname = New System.Windows.Forms.TextBox()
+        Me.btn_submit = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.txt_compname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.lbl_compid = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_comptypes = New System.Windows.Forms.ComboBox()
         Me.SelectRep.SuspendLayout()
@@ -40,7 +40,7 @@ Partial Class Frm_NewCompany
         Me.MaterialLabel8.Depth = 0
         Me.MaterialLabel8.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel8.Location = New System.Drawing.Point(276, 48)
+        Me.MaterialLabel8.Location = New System.Drawing.Point(272, 112)
         Me.MaterialLabel8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel8.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel8.Name = "MaterialLabel8"
@@ -66,7 +66,7 @@ Partial Class Frm_NewCompany
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel5.Location = New System.Drawing.Point(15, 46)
+        Me.MaterialLabel5.Location = New System.Drawing.Point(11, 110)
         Me.MaterialLabel5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel5.Name = "MaterialLabel5"
@@ -76,7 +76,7 @@ Partial Class Frm_NewCompany
         '
         'btn_submit
         '
-        Me.btn_submit.Location = New System.Drawing.Point(422, 106)
+        Me.btn_submit.Location = New System.Drawing.Point(418, 170)
         Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_submit.Name = "btn_submit"
         Me.btn_submit.Size = New System.Drawing.Size(131, 35)
@@ -86,7 +86,7 @@ Partial Class Frm_NewCompany
         '
         'txt_compname
         '
-        Me.txt_compname.Location = New System.Drawing.Point(19, 70)
+        Me.txt_compname.Location = New System.Drawing.Point(15, 134)
         Me.txt_compname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_compname.Name = "txt_compname"
         Me.txt_compname.Size = New System.Drawing.Size(252, 26)
@@ -98,7 +98,7 @@ Partial Class Frm_NewCompany
         Me.lbl_compid.Depth = 0
         Me.lbl_compid.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.lbl_compid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lbl_compid.Location = New System.Drawing.Point(15, 9)
+        Me.lbl_compid.Location = New System.Drawing.Point(11, 73)
         Me.lbl_compid.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.lbl_compid.MouseState = MaterialSkin.MouseState.HOVER
         Me.lbl_compid.Name = "lbl_compid"
@@ -111,7 +111,7 @@ Partial Class Frm_NewCompany
         Me.cbox_comptypes.BackColor = System.Drawing.Color.White
         Me.cbox_comptypes.ForeColor = System.Drawing.Color.Black
         Me.cbox_comptypes.FormattingEnabled = True
-        Me.cbox_comptypes.Location = New System.Drawing.Point(279, 70)
+        Me.cbox_comptypes.Location = New System.Drawing.Point(275, 134)
         Me.cbox_comptypes.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_comptypes.Name = "cbox_comptypes"
         Me.cbox_comptypes.Size = New System.Drawing.Size(274, 28)
@@ -122,7 +122,7 @@ Partial Class Frm_NewCompany
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(571, 158)
+        Me.ClientSize = New System.Drawing.Size(571, 222)
         Me.Controls.Add(Me.MaterialLabel8)
         Me.Controls.Add(Me.cbox_comptypes)
         Me.Controls.Add(Me.MaterialLabel5)
@@ -130,7 +130,6 @@ Partial Class Frm_NewCompany
         Me.Controls.Add(Me.txt_compname)
         Me.Controls.Add(Me.lbl_compid)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm_NewCompany"
         Me.Text = "New Company"
@@ -142,8 +141,8 @@ Partial Class Frm_NewCompany
 
     Friend WithEvents MaterialLabel8 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents btn_submit As Button
-    Friend WithEvents txt_compname As TextBox
+    Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents txt_compname As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents lbl_compid As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_comptypes As ComboBox
     Friend WithEvents SelectRep As ContextMenuStrip

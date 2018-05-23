@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Frm_NewClient
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -23,20 +23,20 @@ Partial Class Frm_NewClient
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lbl_cid = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_fname = New System.Windows.Forms.TextBox()
-        Me.btn_submit = New System.Windows.Forms.Button()
+        Me.txt_fname = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.btn_submit = New MaterialSkin.Controls.MaterialFlatButton()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_father = New System.Windows.Forms.TextBox()
+        Me.txt_father = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_lname = New System.Windows.Forms.TextBox()
-        Me.txt_mother = New System.Windows.Forms.TextBox()
+        Me.txt_lname = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.txt_mother = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.dtpick_birth = New System.Windows.Forms.DateTimePicker()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_rnumber = New System.Windows.Forms.TextBox()
+        Me.txt_rnumber = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_pbnumber = New System.Windows.Forms.TextBox()
+        Me.txt_pbnumber = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_regions = New System.Windows.Forms.ComboBox()
@@ -48,7 +48,7 @@ Partial Class Frm_NewClient
         Me.lbl_cid.Depth = 0
         Me.lbl_cid.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.lbl_cid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lbl_cid.Location = New System.Drawing.Point(15, 9)
+        Me.lbl_cid.Location = New System.Drawing.Point(15, 73)
         Me.lbl_cid.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.lbl_cid.MouseState = MaterialSkin.MouseState.HOVER
         Me.lbl_cid.Name = "lbl_cid"
@@ -58,7 +58,7 @@ Partial Class Frm_NewClient
         '
         'txt_fname
         '
-        Me.txt_fname.Location = New System.Drawing.Point(19, 70)
+        Me.txt_fname.Location = New System.Drawing.Point(19, 134)
         Me.txt_fname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_fname.Name = "txt_fname"
         Me.txt_fname.Size = New System.Drawing.Size(148, 26)
@@ -66,7 +66,7 @@ Partial Class Frm_NewClient
         '
         'btn_submit
         '
-        Me.btn_submit.Location = New System.Drawing.Point(212, 271)
+        Me.btn_submit.Location = New System.Drawing.Point(212, 335)
         Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_submit.Name = "btn_submit"
         Me.btn_submit.Size = New System.Drawing.Size(112, 35)
@@ -80,7 +80,7 @@ Partial Class Frm_NewClient
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel5.Location = New System.Drawing.Point(15, 46)
+        Me.MaterialLabel5.Location = New System.Drawing.Point(15, 110)
         Me.MaterialLabel5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel5.Name = "MaterialLabel5"
@@ -94,7 +94,7 @@ Partial Class Frm_NewClient
         Me.MaterialLabel6.Depth = 0
         Me.MaterialLabel6.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel6.Location = New System.Drawing.Point(15, 101)
+        Me.MaterialLabel6.Location = New System.Drawing.Point(15, 165)
         Me.MaterialLabel6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel6.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel6.Name = "MaterialLabel6"
@@ -104,7 +104,7 @@ Partial Class Frm_NewClient
         '
         'txt_father
         '
-        Me.txt_father.Location = New System.Drawing.Point(19, 125)
+        Me.txt_father.Location = New System.Drawing.Point(19, 189)
         Me.txt_father.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_father.Name = "txt_father"
         Me.txt_father.Size = New System.Drawing.Size(148, 26)
@@ -116,7 +116,7 @@ Partial Class Frm_NewClient
         Me.MaterialLabel7.Depth = 0
         Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel7.Location = New System.Drawing.Point(171, 46)
+        Me.MaterialLabel7.Location = New System.Drawing.Point(171, 110)
         Me.MaterialLabel7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel7.Name = "MaterialLabel7"
@@ -126,7 +126,7 @@ Partial Class Frm_NewClient
         '
         'txt_lname
         '
-        Me.txt_lname.Location = New System.Drawing.Point(175, 70)
+        Me.txt_lname.Location = New System.Drawing.Point(175, 134)
         Me.txt_lname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_lname.Name = "txt_lname"
         Me.txt_lname.Size = New System.Drawing.Size(148, 26)
@@ -134,7 +134,7 @@ Partial Class Frm_NewClient
         '
         'txt_mother
         '
-        Me.txt_mother.Location = New System.Drawing.Point(175, 125)
+        Me.txt_mother.Location = New System.Drawing.Point(175, 189)
         Me.txt_mother.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_mother.Name = "txt_mother"
         Me.txt_mother.Size = New System.Drawing.Size(148, 26)
@@ -146,7 +146,7 @@ Partial Class Frm_NewClient
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(171, 101)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(171, 165)
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
@@ -159,7 +159,7 @@ Partial Class Frm_NewClient
         Me.dtpick_birth.CustomFormat = "dd-mm-yyyy"
         Me.dtpick_birth.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.dtpick_birth.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpick_birth.Location = New System.Drawing.Point(19, 178)
+        Me.dtpick_birth.Location = New System.Drawing.Point(19, 242)
         Me.dtpick_birth.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.dtpick_birth.Name = "dtpick_birth"
         Me.dtpick_birth.Size = New System.Drawing.Size(148, 26)
@@ -171,7 +171,7 @@ Partial Class Frm_NewClient
         Me.MaterialLabel2.Depth = 0
         Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel2.Location = New System.Drawing.Point(15, 156)
+        Me.MaterialLabel2.Location = New System.Drawing.Point(15, 220)
         Me.MaterialLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel2.Name = "MaterialLabel2"
@@ -181,7 +181,7 @@ Partial Class Frm_NewClient
         '
         'txt_rnumber
         '
-        Me.txt_rnumber.Location = New System.Drawing.Point(20, 235)
+        Me.txt_rnumber.Location = New System.Drawing.Point(20, 299)
         Me.txt_rnumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_rnumber.Name = "txt_rnumber"
         Me.txt_rnumber.Size = New System.Drawing.Size(148, 26)
@@ -193,7 +193,7 @@ Partial Class Frm_NewClient
         Me.MaterialLabel3.Depth = 0
         Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel3.Location = New System.Drawing.Point(16, 211)
+        Me.MaterialLabel3.Location = New System.Drawing.Point(16, 275)
         Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
@@ -203,7 +203,7 @@ Partial Class Frm_NewClient
         '
         'txt_pbnumber
         '
-        Me.txt_pbnumber.Location = New System.Drawing.Point(176, 235)
+        Me.txt_pbnumber.Location = New System.Drawing.Point(176, 299)
         Me.txt_pbnumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_pbnumber.Name = "txt_pbnumber"
         Me.txt_pbnumber.Size = New System.Drawing.Size(148, 26)
@@ -215,7 +215,7 @@ Partial Class Frm_NewClient
         Me.MaterialLabel4.Depth = 0
         Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel4.Location = New System.Drawing.Point(172, 211)
+        Me.MaterialLabel4.Location = New System.Drawing.Point(172, 275)
         Me.MaterialLabel4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel4.Name = "MaterialLabel4"
@@ -229,7 +229,7 @@ Partial Class Frm_NewClient
         Me.MaterialLabel8.Depth = 0
         Me.MaterialLabel8.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel8.Location = New System.Drawing.Point(172, 158)
+        Me.MaterialLabel8.Location = New System.Drawing.Point(172, 222)
         Me.MaterialLabel8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel8.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel8.Name = "MaterialLabel8"
@@ -242,7 +242,7 @@ Partial Class Frm_NewClient
         Me.cbox_regions.BackColor = System.Drawing.Color.White
         Me.cbox_regions.ForeColor = System.Drawing.Color.Black
         Me.cbox_regions.FormattingEnabled = True
-        Me.cbox_regions.Location = New System.Drawing.Point(175, 180)
+        Me.cbox_regions.Location = New System.Drawing.Point(175, 244)
         Me.cbox_regions.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_regions.Name = "cbox_regions"
         Me.cbox_regions.Size = New System.Drawing.Size(148, 28)
@@ -253,7 +253,7 @@ Partial Class Frm_NewClient
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(337, 320)
+        Me.ClientSize = New System.Drawing.Size(337, 383)
         Me.Controls.Add(Me.MaterialLabel8)
         Me.Controls.Add(Me.cbox_regions)
         Me.Controls.Add(Me.txt_pbnumber)
@@ -273,7 +273,6 @@ Partial Class Frm_NewClient
         Me.Controls.Add(Me.txt_fname)
         Me.Controls.Add(Me.lbl_cid)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_NewClient"
         Me.Text = "Frm_NewClient"
@@ -283,20 +282,20 @@ Partial Class Frm_NewClient
     End Sub
 
     Friend WithEvents lbl_cid As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_fname As TextBox
-    Friend WithEvents btn_submit As Button
+    Friend WithEvents txt_fname As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel6 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_father As TextBox
+    Friend WithEvents txt_father As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_lname As TextBox
-    Friend WithEvents txt_mother As TextBox
+    Friend WithEvents txt_lname As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents txt_mother As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents dtpick_birth As DateTimePicker
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_rnumber As TextBox
+    Friend WithEvents txt_rnumber As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_pbnumber As TextBox
+    Friend WithEvents txt_pbnumber As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel4 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel8 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_regions As ComboBox
