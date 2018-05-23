@@ -132,7 +132,7 @@ Partial Class Frm_NewAccountClient
     End Sub
 
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_compname As MaterialSkin.Controls.MaterialSingleLineTextField()
+    Friend WithEvents txt_compname As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TabControl1 As TabControl
