@@ -16,17 +16,13 @@ Public Class SplashScreen
 
     Private Sub SplashScreen_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         For Each frm As Form In Me.OwnedForms
-            frm.WindowState = WindowState.Minimized
+            frm.WindowState = 1
             frm.Show()
             Thread.Sleep(50)
-            frm.WindowState = WindowState.Normal
+            frm.WindowState = 0
             frm.Hide()
         Next
         Frm_Login.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
     End Sub
 End Class
