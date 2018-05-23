@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Frm_NewInfoVoucher
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -25,19 +25,19 @@ Partial Class Frm_NewInfoVoucher
         Me.components = New System.ComponentModel.Container()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_clientid = New System.Windows.Forms.TextBox()
+        Me.txt_clientid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.ClientSelector = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.txt_clientname = New System.Windows.Forms.TextBox()
-        Me.txt_phonenumber = New System.Windows.Forms.TextBox()
-        Me.chk_phone = New System.Windows.Forms.CheckBox()
-        Me.chk_mailpost = New System.Windows.Forms.CheckBox()
-        Me.txt_mailpost = New System.Windows.Forms.TextBox()
-        Me.chk_email = New System.Windows.Forms.CheckBox()
-        Me.txt_email = New System.Windows.Forms.TextBox()
-        Me.chk_other = New System.Windows.Forms.CheckBox()
-        Me.txt_otherconn = New System.Windows.Forms.TextBox()
+        Me.txt_clientname = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.txt_phonenumber = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.chk_phone = New MaterialSkin.Controls.MaterialCheckBox()
+        Me.chk_mailpost = New MaterialSkin.Controls.MaterialCheckBox()
+        Me.txt_mailpost = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.chk_email = New MaterialSkin.Controls.MaterialCheckBox()
+        Me.txt_email = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.chk_other = New MaterialSkin.Controls.MaterialCheckBox()
+        Me.txt_otherconn = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dtpick_fromtime = New System.Windows.Forms.DateTimePicker()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
@@ -56,9 +56,9 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_subjectbody = New System.Windows.Forms.TextBox()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
-        Me.btn_submit = New System.Windows.Forms.Button()
+        Me.btn_submit = New MaterialSkin.Controls.MaterialFlatButton()
         Me.cbox_subjecttitles = New System.Windows.Forms.ComboBox()
-        Me.txt_contractid = New System.Windows.Forms.TextBox()
+        Me.txt_contractid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.ContractSelector = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ContraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewContractToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -76,7 +76,7 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel5.Location = New System.Drawing.Point(15, 9)
+        Me.MaterialLabel5.Location = New System.Drawing.Point(15, 79)
         Me.MaterialLabel5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel5.Name = "MaterialLabel5"
@@ -90,7 +90,7 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(119, 9)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(119, 79)
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
@@ -101,11 +101,21 @@ Partial Class Frm_NewInfoVoucher
         'txt_clientid
         '
         Me.txt_clientid.ContextMenuStrip = Me.ClientSelector
-        Me.txt_clientid.Location = New System.Drawing.Point(19, 33)
+        Me.txt_clientid.Depth = 0
+        Me.txt_clientid.Hint = ""
+        Me.txt_clientid.Location = New System.Drawing.Point(19, 103)
         Me.txt_clientid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_clientid.MaxLength = 32767
+        Me.txt_clientid.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_clientid.Name = "txt_clientid"
-        Me.txt_clientid.Size = New System.Drawing.Size(96, 26)
+        Me.txt_clientid.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_clientid.SelectedText = ""
+        Me.txt_clientid.SelectionLength = 0
+        Me.txt_clientid.SelectionStart = 0
+        Me.txt_clientid.Size = New System.Drawing.Size(96, 23)
         Me.txt_clientid.TabIndex = 56
+        Me.txt_clientid.TabStop = False
+        Me.txt_clientid.UseSystemPasswordChar = False
         '
         'ClientSelector
         '
@@ -127,21 +137,41 @@ Partial Class Frm_NewInfoVoucher
         '
         'txt_clientname
         '
-        Me.txt_clientname.Location = New System.Drawing.Point(123, 33)
+        Me.txt_clientname.Depth = 0
+        Me.txt_clientname.Enabled = False
+        Me.txt_clientname.Hint = ""
+        Me.txt_clientname.Location = New System.Drawing.Point(123, 103)
         Me.txt_clientname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_clientname.MaxLength = 32767
+        Me.txt_clientname.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_clientname.Name = "txt_clientname"
-        Me.txt_clientname.ReadOnly = True
-        Me.txt_clientname.Size = New System.Drawing.Size(175, 26)
+        Me.txt_clientname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_clientname.SelectedText = ""
+        Me.txt_clientname.SelectionLength = 0
+        Me.txt_clientname.SelectionStart = 0
+        Me.txt_clientname.Size = New System.Drawing.Size(175, 23)
         Me.txt_clientname.TabIndex = 58
+        Me.txt_clientname.TabStop = False
+        Me.txt_clientname.UseSystemPasswordChar = False
         '
         'txt_phonenumber
         '
+        Me.txt_phonenumber.Depth = 0
         Me.txt_phonenumber.Enabled = False
+        Me.txt_phonenumber.Hint = ""
         Me.txt_phonenumber.Location = New System.Drawing.Point(6, 57)
         Me.txt_phonenumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_phonenumber.MaxLength = 32767
+        Me.txt_phonenumber.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_phonenumber.Name = "txt_phonenumber"
-        Me.txt_phonenumber.Size = New System.Drawing.Size(156, 26)
+        Me.txt_phonenumber.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_phonenumber.SelectedText = ""
+        Me.txt_phonenumber.SelectionLength = 0
+        Me.txt_phonenumber.SelectionStart = 0
+        Me.txt_phonenumber.Size = New System.Drawing.Size(156, 23)
         Me.txt_phonenumber.TabIndex = 60
+        Me.txt_phonenumber.TabStop = False
+        Me.txt_phonenumber.UseSystemPasswordChar = False
         '
         'chk_phone
         '
@@ -165,12 +195,22 @@ Partial Class Frm_NewInfoVoucher
         '
         'txt_mailpost
         '
+        Me.txt_mailpost.Depth = 0
         Me.txt_mailpost.Enabled = False
+        Me.txt_mailpost.Hint = ""
         Me.txt_mailpost.Location = New System.Drawing.Point(170, 57)
         Me.txt_mailpost.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_mailpost.MaxLength = 32767
+        Me.txt_mailpost.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_mailpost.Name = "txt_mailpost"
-        Me.txt_mailpost.Size = New System.Drawing.Size(156, 26)
+        Me.txt_mailpost.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_mailpost.SelectedText = ""
+        Me.txt_mailpost.SelectionLength = 0
+        Me.txt_mailpost.SelectionStart = 0
+        Me.txt_mailpost.Size = New System.Drawing.Size(156, 23)
         Me.txt_mailpost.TabIndex = 63
+        Me.txt_mailpost.TabStop = False
+        Me.txt_mailpost.UseSystemPasswordChar = False
         '
         'chk_email
         '
@@ -184,12 +224,22 @@ Partial Class Frm_NewInfoVoucher
         '
         'txt_email
         '
+        Me.txt_email.Depth = 0
         Me.txt_email.Enabled = False
+        Me.txt_email.Hint = ""
         Me.txt_email.Location = New System.Drawing.Point(334, 57)
         Me.txt_email.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_email.MaxLength = 32767
+        Me.txt_email.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_email.Name = "txt_email"
-        Me.txt_email.Size = New System.Drawing.Size(156, 26)
+        Me.txt_email.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_email.SelectedText = ""
+        Me.txt_email.SelectionLength = 0
+        Me.txt_email.SelectionStart = 0
+        Me.txt_email.Size = New System.Drawing.Size(156, 23)
         Me.txt_email.TabIndex = 65
+        Me.txt_email.TabStop = False
+        Me.txt_email.UseSystemPasswordChar = False
         '
         'chk_other
         '
@@ -203,12 +253,22 @@ Partial Class Frm_NewInfoVoucher
         '
         'txt_otherconn
         '
+        Me.txt_otherconn.Depth = 0
         Me.txt_otherconn.Enabled = False
+        Me.txt_otherconn.Hint = ""
         Me.txt_otherconn.Location = New System.Drawing.Point(6, 123)
         Me.txt_otherconn.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_otherconn.MaxLength = 32767
+        Me.txt_otherconn.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_otherconn.Name = "txt_otherconn"
-        Me.txt_otherconn.Size = New System.Drawing.Size(484, 26)
+        Me.txt_otherconn.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_otherconn.SelectedText = ""
+        Me.txt_otherconn.SelectionLength = 0
+        Me.txt_otherconn.SelectionStart = 0
+        Me.txt_otherconn.Size = New System.Drawing.Size(484, 23)
         Me.txt_otherconn.TabIndex = 67
+        Me.txt_otherconn.TabStop = False
+        Me.txt_otherconn.UseSystemPasswordChar = False
         '
         'GroupBox1
         '
@@ -220,7 +280,7 @@ Partial Class Frm_NewInfoVoucher
         Me.GroupBox1.Controls.Add(Me.chk_email)
         Me.GroupBox1.Controls.Add(Me.chk_mailpost)
         Me.GroupBox1.Controls.Add(Me.txt_email)
-        Me.GroupBox1.Location = New System.Drawing.Point(547, 305)
+        Me.GroupBox1.Location = New System.Drawing.Point(547, 375)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(522, 180)
         Me.GroupBox1.TabIndex = 69
@@ -261,7 +321,7 @@ Partial Class Frm_NewInfoVoucher
         Me.GroupBox2.Controls.Add(Me.dtpick_totime)
         Me.GroupBox2.Controls.Add(Me.MaterialLabel2)
         Me.GroupBox2.Controls.Add(Me.dtpick_fromtime)
-        Me.GroupBox2.Location = New System.Drawing.Point(547, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(547, 84)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(522, 179)
         Me.GroupBox2.TabIndex = 72
@@ -399,7 +459,7 @@ Partial Class Frm_NewInfoVoucher
         Me.GroupBox3.Controls.Add(Me.cbox_streets)
         Me.GroupBox3.Controls.Add(Me.MaterialLabel7)
         Me.GroupBox3.Controls.Add(Me.cbox_regions)
-        Me.GroupBox3.Location = New System.Drawing.Point(547, 199)
+        Me.GroupBox3.Location = New System.Drawing.Point(547, 269)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(522, 100)
         Me.GroupBox3.TabIndex = 79
@@ -412,7 +472,7 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel8.Depth = 0
         Me.MaterialLabel8.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel8.Location = New System.Drawing.Point(15, 64)
+        Me.MaterialLabel8.Location = New System.Drawing.Point(15, 134)
         Me.MaterialLabel8.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel8.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel8.Name = "MaterialLabel8"
@@ -422,7 +482,7 @@ Partial Class Frm_NewInfoVoucher
         '
         'txt_subjectbody
         '
-        Me.txt_subjectbody.Location = New System.Drawing.Point(19, 143)
+        Me.txt_subjectbody.Location = New System.Drawing.Point(19, 213)
         Me.txt_subjectbody.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_subjectbody.Multiline = True
         Me.txt_subjectbody.Name = "txt_subjectbody"
@@ -436,7 +496,7 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel9.Depth = 0
         Me.MaterialLabel9.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel9.Location = New System.Drawing.Point(15, 119)
+        Me.MaterialLabel9.Location = New System.Drawing.Point(15, 189)
         Me.MaterialLabel9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel9.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel9.Name = "MaterialLabel9"
@@ -446,9 +506,16 @@ Partial Class Frm_NewInfoVoucher
         '
         'btn_submit
         '
-        Me.btn_submit.Location = New System.Drawing.Point(447, 29)
+        Me.btn_submit.AutoSize = True
+        Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_submit.Depth = 0
+        Me.btn_submit.Icon = Nothing
+        Me.btn_submit.Location = New System.Drawing.Point(447, 99)
+        Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_submit.Name = "btn_submit"
-        Me.btn_submit.Size = New System.Drawing.Size(93, 34)
+        Me.btn_submit.Primary = False
+        Me.btn_submit.Size = New System.Drawing.Size(71, 36)
         Me.btn_submit.TabIndex = 83
         Me.btn_submit.Text = "Submit"
         Me.btn_submit.UseVisualStyleBackColor = True
@@ -456,7 +523,7 @@ Partial Class Frm_NewInfoVoucher
         'cbox_subjecttitles
         '
         Me.cbox_subjecttitles.FormattingEnabled = True
-        Me.cbox_subjecttitles.Location = New System.Drawing.Point(19, 86)
+        Me.cbox_subjecttitles.Location = New System.Drawing.Point(19, 156)
         Me.cbox_subjecttitles.Name = "cbox_subjecttitles"
         Me.cbox_subjecttitles.Size = New System.Drawing.Size(521, 28)
         Me.cbox_subjecttitles.TabIndex = 84
@@ -464,11 +531,21 @@ Partial Class Frm_NewInfoVoucher
         'txt_contractid
         '
         Me.txt_contractid.ContextMenuStrip = Me.ContractSelector
-        Me.txt_contractid.Location = New System.Drawing.Point(306, 33)
+        Me.txt_contractid.Depth = 0
+        Me.txt_contractid.Hint = ""
+        Me.txt_contractid.Location = New System.Drawing.Point(306, 103)
         Me.txt_contractid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_contractid.MaxLength = 32767
+        Me.txt_contractid.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_contractid.Name = "txt_contractid"
-        Me.txt_contractid.Size = New System.Drawing.Size(134, 26)
+        Me.txt_contractid.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_contractid.SelectedText = ""
+        Me.txt_contractid.SelectionLength = 0
+        Me.txt_contractid.SelectionStart = 0
+        Me.txt_contractid.Size = New System.Drawing.Size(134, 23)
         Me.txt_contractid.TabIndex = 86
+        Me.txt_contractid.TabStop = False
+        Me.txt_contractid.UseSystemPasswordChar = False
         '
         'ContractSelector
         '
@@ -494,7 +571,7 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel10.Depth = 0
         Me.MaterialLabel10.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel10.Location = New System.Drawing.Point(302, 9)
+        Me.MaterialLabel10.Location = New System.Drawing.Point(302, 79)
         Me.MaterialLabel10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel10.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel10.Name = "MaterialLabel10"
@@ -507,7 +584,7 @@ Partial Class Frm_NewInfoVoucher
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1081, 501)
+        Me.ClientSize = New System.Drawing.Size(1081, 627)
         Me.Controls.Add(Me.MaterialLabel10)
         Me.Controls.Add(Me.txt_contractid)
         Me.Controls.Add(Me.cbox_subjecttitles)
@@ -541,16 +618,16 @@ Partial Class Frm_NewInfoVoucher
 
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_clientid As TextBox
-    Friend WithEvents txt_clientname As TextBox
-    Friend WithEvents txt_phonenumber As TextBox
-    Friend WithEvents chk_phone As CheckBox
-    Friend WithEvents chk_mailpost As CheckBox
-    Friend WithEvents txt_mailpost As TextBox
-    Friend WithEvents chk_email As CheckBox
-    Friend WithEvents txt_email As TextBox
-    Friend WithEvents chk_other As CheckBox
-    Friend WithEvents txt_otherconn As TextBox
+    Friend WithEvents txt_clientid As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents txt_clientname As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents txt_phonenumber As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents chk_phone As MaterialSkin.Controls.MaterialCheckBox
+    Friend WithEvents chk_mailpost As MaterialSkin.Controls.MaterialCheckBox
+    Friend WithEvents txt_mailpost As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents chk_email As MaterialSkin.Controls.MaterialCheckBox
+    Friend WithEvents txt_email As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents chk_other As MaterialSkin.Controls.MaterialCheckBox
+    Friend WithEvents txt_otherconn As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents dtpick_fromtime As DateTimePicker
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
@@ -569,11 +646,11 @@ Partial Class Frm_NewInfoVoucher
     Friend WithEvents MaterialLabel8 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_subjectbody As TextBox
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents btn_submit As Button
+    Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents cbox_subjecttitles As ComboBox
     Friend WithEvents ClientSelector As ContextMenuStrip
     Friend WithEvents SelectClientToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents txt_contractid As TextBox
+    Friend WithEvents txt_contractid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel10 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents ContractSelector As ContextMenuStrip
     Friend WithEvents ContraToolStripMenuItem As ToolStripMenuItem

@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Frm_RenewContract
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -35,14 +35,14 @@ Partial Class Frm_RenewContract
         Me.Lbl_ContId = New MaterialSkin.Controls.MaterialLabel()
         Me.DTPick_Expire = New System.Windows.Forms.DateTimePicker()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
-        Me.Txt_ClientId = New System.Windows.Forms.TextBox()
+        Me.Txt_ClientId = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.ClientMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
-        Me.Txt_ClientName = New System.Windows.Forms.TextBox()
+        Me.Txt_ClientName = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.Btn_Add = New System.Windows.Forms.Button()
-        Me.Btn_Submit = New System.Windows.Forms.Button()
+        Me.Btn_Add = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.Btn_Submit = New MaterialSkin.Controls.MaterialFlatButton()
         CType(Me.DGV_Clients, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DGVMenuStrip.SuspendLayout()
         Me.EmployeeMenuStrip.SuspendLayout()
@@ -66,7 +66,7 @@ Partial Class Frm_RenewContract
         Me.DGV_Clients.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DGV_Clients.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DGV_Clients.GridColor = System.Drawing.Color.PowderBlue
-        Me.DGV_Clients.Location = New System.Drawing.Point(13, 101)
+        Me.DGV_Clients.Location = New System.Drawing.Point(13, 190)
         Me.DGV_Clients.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DGV_Clients.MultiSelect = False
         Me.DGV_Clients.Name = "DGV_Clients"
@@ -75,7 +75,7 @@ Partial Class Frm_RenewContract
         Me.DGV_Clients.RowHeadersVisible = False
         Me.DGV_Clients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_Clients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_Clients.Size = New System.Drawing.Size(653, 387)
+        Me.DGV_Clients.Size = New System.Drawing.Size(653, 232)
         Me.DGV_Clients.TabIndex = 13
         '
         'Column1
@@ -118,7 +118,7 @@ Partial Class Frm_RenewContract
         Me.Lbl_EmpId.Depth = 0
         Me.Lbl_EmpId.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.Lbl_EmpId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Lbl_EmpId.Location = New System.Drawing.Point(186, 9)
+        Me.Lbl_EmpId.Location = New System.Drawing.Point(194, 81)
         Me.Lbl_EmpId.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Lbl_EmpId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Lbl_EmpId.Name = "Lbl_EmpId"
@@ -144,7 +144,7 @@ Partial Class Frm_RenewContract
         Me.Lbl_ContId.Depth = 0
         Me.Lbl_ContId.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.Lbl_ContId.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Lbl_ContId.Location = New System.Drawing.Point(10, 9)
+        Me.Lbl_ContId.Location = New System.Drawing.Point(18, 81)
         Me.Lbl_ContId.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Lbl_ContId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Lbl_ContId.Name = "Lbl_ContId"
@@ -157,7 +157,7 @@ Partial Class Frm_RenewContract
         Me.DTPick_Expire.CustomFormat = "dd/mm/yyyy"
         Me.DTPick_Expire.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.DTPick_Expire.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPick_Expire.Location = New System.Drawing.Point(13, 65)
+        Me.DTPick_Expire.Location = New System.Drawing.Point(21, 137)
         Me.DTPick_Expire.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.DTPick_Expire.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
         Me.DTPick_Expire.Name = "DTPick_Expire"
@@ -170,7 +170,7 @@ Partial Class Frm_RenewContract
         Me.MaterialLabel2.Depth = 0
         Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel2.Location = New System.Drawing.Point(10, 41)
+        Me.MaterialLabel2.Location = New System.Drawing.Point(18, 113)
         Me.MaterialLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel2.Name = "MaterialLabel2"
@@ -182,7 +182,7 @@ Partial Class Frm_RenewContract
         '
         Me.Txt_ClientId.ContextMenuStrip = Me.ClientMenuStrip
         Me.Txt_ClientId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Txt_ClientId.Location = New System.Drawing.Point(158, 65)
+        Me.Txt_ClientId.Location = New System.Drawing.Point(166, 137)
         Me.Txt_ClientId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Txt_ClientId.Name = "Txt_ClientId"
         Me.Txt_ClientId.Size = New System.Drawing.Size(148, 26)
@@ -206,7 +206,7 @@ Partial Class Frm_RenewContract
         Me.MaterialLabel7.Depth = 0
         Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel7.Location = New System.Drawing.Point(155, 41)
+        Me.MaterialLabel7.Location = New System.Drawing.Point(163, 113)
         Me.MaterialLabel7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel7.Name = "MaterialLabel7"
@@ -217,10 +217,10 @@ Partial Class Frm_RenewContract
         'Txt_ClientName
         '
         Me.Txt_ClientName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Txt_ClientName.Location = New System.Drawing.Point(314, 65)
+        Me.Txt_ClientName.Location = New System.Drawing.Point(322, 137)
         Me.Txt_ClientName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Txt_ClientName.Name = "Txt_ClientName"
-        Me.Txt_ClientName.ReadOnly = True
+        Me.Txt_ClientName.Enabled = False
         Me.Txt_ClientName.Size = New System.Drawing.Size(270, 26)
         Me.Txt_ClientName.TabIndex = 56
         '
@@ -230,7 +230,7 @@ Partial Class Frm_RenewContract
         Me.MaterialLabel3.Depth = 0
         Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel3.Location = New System.Drawing.Point(311, 41)
+        Me.MaterialLabel3.Location = New System.Drawing.Point(319, 113)
         Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
@@ -241,7 +241,7 @@ Partial Class Frm_RenewContract
         'Btn_Add
         '
         Me.Btn_Add.Enabled = False
-        Me.Btn_Add.Location = New System.Drawing.Point(591, 65)
+        Me.Btn_Add.Location = New System.Drawing.Point(599, 137)
         Me.Btn_Add.Name = "Btn_Add"
         Me.Btn_Add.Size = New System.Drawing.Size(75, 26)
         Me.Btn_Add.TabIndex = 58
@@ -252,7 +252,7 @@ Partial Class Frm_RenewContract
         '
         Me.Btn_Submit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Btn_Submit.Enabled = False
-        Me.Btn_Submit.Location = New System.Drawing.Point(591, 496)
+        Me.Btn_Submit.Location = New System.Drawing.Point(591, 430)
         Me.Btn_Submit.Name = "Btn_Submit"
         Me.Btn_Submit.Size = New System.Drawing.Size(75, 26)
         Me.Btn_Submit.TabIndex = 59
@@ -264,7 +264,7 @@ Partial Class Frm_RenewContract
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(679, 530)
+        Me.ClientSize = New System.Drawing.Size(679, 464)
         Me.Controls.Add(Me.Btn_Submit)
         Me.Controls.Add(Me.Btn_Add)
         Me.Controls.Add(Me.MaterialLabel3)
@@ -294,15 +294,15 @@ Partial Class Frm_RenewContract
     Friend WithEvents Lbl_ContId As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents DTPick_Expire As DateTimePicker
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Txt_ClientId As TextBox
+    Friend WithEvents Txt_ClientId As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Txt_ClientName As TextBox
+    Friend WithEvents Txt_ClientName As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Btn_Add As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Btn_Submit As Button
+    Friend WithEvents Btn_Submit As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents ClientMenuStrip As ContextMenuStrip
     Friend WithEvents SelectClientToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmployeeMenuStrip As ContextMenuStrip
