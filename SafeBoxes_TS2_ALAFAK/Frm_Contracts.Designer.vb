@@ -101,7 +101,7 @@ Partial Class Frm_Contracts
         'rdb_bycontid
         '
         Me.rdb_bycontid.Depth = 0
-        Me.rdb_bycontid.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_bycontid.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.rdb_bycontid.Location = New System.Drawing.Point(31, 50)
         Me.rdb_bycontid.Margin = New System.Windows.Forms.Padding(0)
         Me.rdb_bycontid.MouseLocation = New System.Drawing.Point(-1, -1)
@@ -136,7 +136,7 @@ Partial Class Frm_Contracts
         'rdb_byboxid
         '
         Me.rdb_byboxid.Depth = 0
-        Me.rdb_byboxid.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdb_byboxid.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.rdb_byboxid.Location = New System.Drawing.Point(33, 20)
         Me.rdb_byboxid.Margin = New System.Windows.Forms.Padding(0)
         Me.rdb_byboxid.MouseLocation = New System.Drawing.Point(-1, -1)
@@ -475,7 +475,7 @@ Partial Class Frm_Contracts
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(660, 133)
+        Me.TabPage2.Size = New System.Drawing.Size(660, 136)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Filter"
         '
@@ -543,7 +543,7 @@ Partial Class Frm_Contracts
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialDivider1.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.MaterialDivider1.Depth = 0
-        Me.MaterialDivider1.Location = New System.Drawing.Point(0, 258)
+        Me.MaterialDivider1.Location = New System.Drawing.Point(0, 276)
         Me.MaterialDivider1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialDivider1.Name = "MaterialDivider1"
         Me.MaterialDivider1.Size = New System.Drawing.Size(693, 1)
