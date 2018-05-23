@@ -43,17 +43,27 @@ Partial Class Frm_NewAccountClient
         Me.MaterialLabel5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel5.Name = "MaterialLabel5"
-        Me.MaterialLabel5.Size = New System.Drawing.Size(70, 19)
+        Me.MaterialLabel5.Size = New System.Drawing.Size(69, 18)
         Me.MaterialLabel5.TabIndex = 53
         Me.MaterialLabel5.Text = "Client ID:"
         '
         'txt_compname
         '
+        Me.txt_compname.Depth = 0
+        Me.txt_compname.Hint = ""
         Me.txt_compname.Location = New System.Drawing.Point(13, 118)
         Me.txt_compname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_compname.MaxLength = 32767
+        Me.txt_compname.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_compname.Name = "txt_compname"
-        Me.txt_compname.Size = New System.Drawing.Size(139, 26)
+        Me.txt_compname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_compname.SelectedText = ""
+        Me.txt_compname.SelectionLength = 0
+        Me.txt_compname.SelectionStart = 0
+        Me.txt_compname.Size = New System.Drawing.Size(139, 23)
         Me.txt_compname.TabIndex = 52
+        Me.txt_compname.TabStop = False
+        Me.txt_compname.UseSystemPasswordChar = False
         '
         'MaterialLabel1
         '
@@ -65,7 +75,7 @@ Partial Class Frm_NewAccountClient
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
-        Me.MaterialLabel1.Size = New System.Drawing.Size(96, 19)
+        Me.MaterialLabel1.Size = New System.Drawing.Size(95, 18)
         Me.MaterialLabel1.TabIndex = 55
         Me.MaterialLabel1.Text = "Client Name:"
         '
@@ -91,6 +101,7 @@ Partial Class Frm_NewAccountClient
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.Color.White
         Me.TabPage1.Controls.Add(Me.MaterialLabel5)
         Me.TabPage1.Controls.Add(Me.MaterialLabel1)
         Me.TabPage1.Controls.Add(Me.txt_compname)
@@ -101,17 +112,16 @@ Partial Class Frm_NewAccountClient
         Me.TabPage1.Size = New System.Drawing.Size(691, 382)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
-        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.White
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(691, 382)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Frm_NewAccountClient
         '
