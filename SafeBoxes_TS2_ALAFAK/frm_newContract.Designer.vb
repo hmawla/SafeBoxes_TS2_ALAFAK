@@ -22,7 +22,6 @@ Partial Class Frm_newContract
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.txt_phone1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.Label3 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
@@ -41,7 +40,7 @@ Partial Class Frm_newContract
         Me.SelectAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_clientinfo = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.txt_clientinfo = New System.Windows.Forms.TextBox()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_contnote = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.btn_submit = New MaterialSkin.Controls.MaterialFlatButton()
@@ -99,7 +98,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(333, 356)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(333, 332)
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
@@ -126,7 +125,7 @@ Partial Class Frm_newContract
         Me.dtpick_exdate.CustomFormat = "dd/mm/yyyy"
         Me.dtpick_exdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.dtpick_exdate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpick_exdate.Location = New System.Drawing.Point(333, 378)
+        Me.dtpick_exdate.Location = New System.Drawing.Point(333, 354)
         Me.dtpick_exdate.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.dtpick_exdate.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
         Me.dtpick_exdate.Name = "dtpick_exdate"
@@ -264,7 +263,10 @@ Partial Class Frm_newContract
         '
         'AccountsMenuStrip
         '
+        Me.AccountsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.AccountsMenuStrip.Depth = 0
         Me.AccountsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectAccountToolStripMenuItem, Me.NewAccountToolStripMenuItem})
+        Me.AccountsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
         Me.AccountsMenuStrip.Name = "AccountsMenuStrip"
         Me.AccountsMenuStrip.Size = New System.Drawing.Size(154, 48)
         '
@@ -297,23 +299,17 @@ Partial Class Frm_newContract
         'txt_clientinfo
         '
         Me.txt_clientinfo.BackColor = System.Drawing.Color.White
+        Me.txt_clientinfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_clientinfo.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txt_clientinfo.Depth = 0
         Me.txt_clientinfo.Font = New System.Drawing.Font("Agency FB", 13.0!, System.Drawing.FontStyle.Bold)
-        Me.txt_clientinfo.Hint = ""
         Me.txt_clientinfo.Location = New System.Drawing.Point(333, 134)
         Me.txt_clientinfo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.txt_clientinfo.MaxLength = 32767
-        Me.txt_clientinfo.MouseState = MaterialSkin.MouseState.HOVER
+        Me.txt_clientinfo.Multiline = True
         Me.txt_clientinfo.Name = "txt_clientinfo"
-        Me.txt_clientinfo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txt_clientinfo.SelectedText = ""
-        Me.txt_clientinfo.SelectionLength = 0
-        Me.txt_clientinfo.SelectionStart = 0
-        Me.txt_clientinfo.Size = New System.Drawing.Size(221, 23)
+        Me.txt_clientinfo.ReadOnly = True
+        Me.txt_clientinfo.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.txt_clientinfo.Size = New System.Drawing.Size(221, 190)
         Me.txt_clientinfo.TabIndex = 36
-        Me.txt_clientinfo.TabStop = False
-        Me.txt_clientinfo.UseSystemPasswordChar = False
         '
         'MaterialLabel9
         '
@@ -353,7 +349,7 @@ Partial Class Frm_newContract
         Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_submit.Depth = 0
         Me.btn_submit.Icon = Nothing
-        Me.btn_submit.Location = New System.Drawing.Point(478, 365)
+        Me.btn_submit.Location = New System.Drawing.Point(478, 351)
         Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_submit.Name = "btn_submit"
@@ -385,7 +381,10 @@ Partial Class Frm_newContract
         '
         'BoxesMenuStrip
         '
+        Me.BoxesMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BoxesMenuStrip.Depth = 0
         Me.BoxesMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectBoxToolStripMenuItem})
+        Me.BoxesMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
         Me.BoxesMenuStrip.Name = "BoxesMenuStrip"
         Me.BoxesMenuStrip.Size = New System.Drawing.Size(128, 26)
         '
@@ -426,9 +425,12 @@ Partial Class Frm_newContract
         '
         'EmployeeMenuStrip
         '
+        Me.EmployeeMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EmployeeMenuStrip.Depth = 0
         Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
+        Me.EmployeeMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
         Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
-        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 48)
+        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 26)
         '
         'SelectDifferentEmployeeToolStripMenuItem
         '
@@ -491,7 +493,7 @@ Partial Class Frm_newContract
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(562, 435)
+        Me.ClientSize = New System.Drawing.Size(562, 414)
         Me.Controls.Add(Me.MaterialLabel12)
         Me.Controls.Add(Me.cbox_streets)
         Me.Controls.Add(Me.MaterialLabel2)
@@ -547,7 +549,7 @@ Partial Class Frm_newContract
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_accountid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel8 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_clientinfo As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents txt_clientinfo As System.Windows.Forms.TextBox
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_contnote As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialFlatButton
