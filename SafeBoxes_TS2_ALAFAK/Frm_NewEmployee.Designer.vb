@@ -48,19 +48,39 @@ Partial Class Frm_NewEmployee
         '
         'txt_lname
         '
+        Me.txt_lname.Depth = 0
+        Me.txt_lname.Hint = ""
         Me.txt_lname.Location = New System.Drawing.Point(346, 136)
         Me.txt_lname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_lname.MaxLength = 32767
+        Me.txt_lname.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_lname.Name = "txt_lname"
-        Me.txt_lname.Size = New System.Drawing.Size(150, 26)
+        Me.txt_lname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_lname.SelectedText = ""
+        Me.txt_lname.SelectionLength = 0
+        Me.txt_lname.SelectionStart = 0
+        Me.txt_lname.Size = New System.Drawing.Size(150, 23)
         Me.txt_lname.TabIndex = 54
+        Me.txt_lname.TabStop = False
+        Me.txt_lname.UseSystemPasswordChar = False
         '
         'txt_father
         '
+        Me.txt_father.Depth = 0
+        Me.txt_father.Hint = ""
         Me.txt_father.Location = New System.Drawing.Point(183, 136)
         Me.txt_father.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_father.MaxLength = 32767
+        Me.txt_father.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_father.Name = "txt_father"
-        Me.txt_father.Size = New System.Drawing.Size(151, 26)
+        Me.txt_father.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_father.SelectedText = ""
+        Me.txt_father.SelectionLength = 0
+        Me.txt_father.SelectionStart = 0
+        Me.txt_father.Size = New System.Drawing.Size(151, 23)
         Me.txt_father.TabIndex = 53
+        Me.txt_father.TabStop = False
+        Me.txt_father.UseSystemPasswordChar = False
         '
         'MaterialLabel6
         '
@@ -92,21 +112,37 @@ Partial Class Frm_NewEmployee
         '
         'btn_submit
         '
-        Me.btn_submit.Location = New System.Drawing.Point(376, 178)
+        Me.btn_submit.AutoSize = True
+        Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_submit.Depth = 0
+        Me.btn_submit.Icon = Nothing
+        Me.btn_submit.Location = New System.Drawing.Point(425, 175)
         Me.btn_submit.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_submit.Name = "btn_submit"
-        Me.btn_submit.Size = New System.Drawing.Size(120, 31)
+        Me.btn_submit.Primary = False
+        Me.btn_submit.Size = New System.Drawing.Size(71, 36)
         Me.btn_submit.TabIndex = 50
         Me.btn_submit.Text = "Submit"
         Me.btn_submit.UseVisualStyleBackColor = True
         '
         'txt_fname
         '
+        Me.txt_fname.Depth = 0
+        Me.txt_fname.Hint = ""
         Me.txt_fname.Location = New System.Drawing.Point(20, 136)
         Me.txt_fname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_fname.MaxLength = 32767
+        Me.txt_fname.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_fname.Name = "txt_fname"
-        Me.txt_fname.Size = New System.Drawing.Size(151, 26)
+        Me.txt_fname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_fname.SelectedText = ""
+        Me.txt_fname.SelectionLength = 0
+        Me.txt_fname.SelectionStart = 0
+        Me.txt_fname.Size = New System.Drawing.Size(151, 23)
         Me.txt_fname.TabIndex = 49
+        Me.txt_fname.TabStop = False
+        Me.txt_fname.UseSystemPasswordChar = False
         '
         'lbl_Empid
         '

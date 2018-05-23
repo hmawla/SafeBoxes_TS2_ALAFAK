@@ -58,18 +58,34 @@ Partial Class Frm_NewClient
         '
         'txt_fname
         '
+        Me.txt_fname.Depth = 0
+        Me.txt_fname.Hint = ""
         Me.txt_fname.Location = New System.Drawing.Point(19, 134)
         Me.txt_fname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_fname.MaxLength = 32767
+        Me.txt_fname.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_fname.Name = "txt_fname"
-        Me.txt_fname.Size = New System.Drawing.Size(148, 26)
+        Me.txt_fname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_fname.SelectedText = ""
+        Me.txt_fname.SelectionLength = 0
+        Me.txt_fname.SelectionStart = 0
+        Me.txt_fname.Size = New System.Drawing.Size(148, 23)
         Me.txt_fname.TabIndex = 0
+        Me.txt_fname.TabStop = False
+        Me.txt_fname.UseSystemPasswordChar = False
         '
         'btn_submit
         '
-        Me.btn_submit.Location = New System.Drawing.Point(212, 335)
+        Me.btn_submit.AutoSize = True
+        Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_submit.Depth = 0
+        Me.btn_submit.Icon = Nothing
+        Me.btn_submit.Location = New System.Drawing.Point(253, 333)
         Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_submit.Name = "btn_submit"
-        Me.btn_submit.Size = New System.Drawing.Size(112, 35)
+        Me.btn_submit.Primary = False
+        Me.btn_submit.Size = New System.Drawing.Size(71, 36)
         Me.btn_submit.TabIndex = 8
         Me.btn_submit.Text = "Submit"
         Me.btn_submit.UseVisualStyleBackColor = True
@@ -104,11 +120,21 @@ Partial Class Frm_NewClient
         '
         'txt_father
         '
+        Me.txt_father.Depth = 0
+        Me.txt_father.Hint = ""
         Me.txt_father.Location = New System.Drawing.Point(19, 189)
         Me.txt_father.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_father.MaxLength = 32767
+        Me.txt_father.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_father.Name = "txt_father"
-        Me.txt_father.Size = New System.Drawing.Size(148, 26)
+        Me.txt_father.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_father.SelectedText = ""
+        Me.txt_father.SelectionLength = 0
+        Me.txt_father.SelectionStart = 0
+        Me.txt_father.Size = New System.Drawing.Size(148, 23)
         Me.txt_father.TabIndex = 2
+        Me.txt_father.TabStop = False
+        Me.txt_father.UseSystemPasswordChar = False
         '
         'MaterialLabel7
         '
@@ -126,19 +152,39 @@ Partial Class Frm_NewClient
         '
         'txt_lname
         '
+        Me.txt_lname.Depth = 0
+        Me.txt_lname.Hint = ""
         Me.txt_lname.Location = New System.Drawing.Point(175, 134)
         Me.txt_lname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_lname.MaxLength = 32767
+        Me.txt_lname.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_lname.Name = "txt_lname"
-        Me.txt_lname.Size = New System.Drawing.Size(148, 26)
+        Me.txt_lname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_lname.SelectedText = ""
+        Me.txt_lname.SelectionLength = 0
+        Me.txt_lname.SelectionStart = 0
+        Me.txt_lname.Size = New System.Drawing.Size(148, 23)
         Me.txt_lname.TabIndex = 1
+        Me.txt_lname.TabStop = False
+        Me.txt_lname.UseSystemPasswordChar = False
         '
         'txt_mother
         '
+        Me.txt_mother.Depth = 0
+        Me.txt_mother.Hint = ""
         Me.txt_mother.Location = New System.Drawing.Point(175, 189)
         Me.txt_mother.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_mother.MaxLength = 32767
+        Me.txt_mother.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_mother.Name = "txt_mother"
-        Me.txt_mother.Size = New System.Drawing.Size(148, 26)
+        Me.txt_mother.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_mother.SelectedText = ""
+        Me.txt_mother.SelectionLength = 0
+        Me.txt_mother.SelectionStart = 0
+        Me.txt_mother.Size = New System.Drawing.Size(148, 23)
         Me.txt_mother.TabIndex = 3
+        Me.txt_mother.TabStop = False
+        Me.txt_mother.UseSystemPasswordChar = False
         '
         'MaterialLabel1
         '
@@ -181,11 +227,21 @@ Partial Class Frm_NewClient
         '
         'txt_rnumber
         '
+        Me.txt_rnumber.Depth = 0
+        Me.txt_rnumber.Hint = ""
         Me.txt_rnumber.Location = New System.Drawing.Point(20, 299)
         Me.txt_rnumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_rnumber.MaxLength = 32767
+        Me.txt_rnumber.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_rnumber.Name = "txt_rnumber"
-        Me.txt_rnumber.Size = New System.Drawing.Size(148, 26)
+        Me.txt_rnumber.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_rnumber.SelectedText = ""
+        Me.txt_rnumber.SelectionLength = 0
+        Me.txt_rnumber.SelectionStart = 0
+        Me.txt_rnumber.Size = New System.Drawing.Size(148, 23)
         Me.txt_rnumber.TabIndex = 6
+        Me.txt_rnumber.TabStop = False
+        Me.txt_rnumber.UseSystemPasswordChar = False
         '
         'MaterialLabel3
         '
@@ -203,11 +259,21 @@ Partial Class Frm_NewClient
         '
         'txt_pbnumber
         '
+        Me.txt_pbnumber.Depth = 0
+        Me.txt_pbnumber.Hint = ""
         Me.txt_pbnumber.Location = New System.Drawing.Point(176, 299)
         Me.txt_pbnumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_pbnumber.MaxLength = 32767
+        Me.txt_pbnumber.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_pbnumber.Name = "txt_pbnumber"
-        Me.txt_pbnumber.Size = New System.Drawing.Size(148, 26)
+        Me.txt_pbnumber.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_pbnumber.SelectedText = ""
+        Me.txt_pbnumber.SelectionLength = 0
+        Me.txt_pbnumber.SelectionStart = 0
+        Me.txt_pbnumber.Size = New System.Drawing.Size(148, 23)
         Me.txt_pbnumber.TabIndex = 7
+        Me.txt_pbnumber.TabStop = False
+        Me.txt_pbnumber.UseSystemPasswordChar = False
         '
         'MaterialLabel4
         '

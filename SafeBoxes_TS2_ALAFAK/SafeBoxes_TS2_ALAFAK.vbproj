@@ -166,6 +166,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_Authorize.Designer.vb">
+      <DependentUpon>Frm_Authorize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Authorize.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_ClientAccounts.Designer.vb">
       <DependentUpon>Frm_ClientAccounts.vb</DependentUpon>
     </Compile>
@@ -485,6 +491,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Frm_Authorize.resx">
+      <DependentUpon>Frm_Authorize.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_ClientAccounts.resx">
       <DependentUpon>Frm_ClientAccounts.vb</DependentUpon>
     </EmbeddedResource>

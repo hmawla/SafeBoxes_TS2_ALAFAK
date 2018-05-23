@@ -213,4 +213,8 @@
             ExecuteQuery("INSERT INTO Permissions VALUES(" & theNewId & ", date(), " & dgv_contracts.SelectedRows(0).Cells(0).Value & ")")
         End If
     End Sub
+
+    Private Sub btn_authorize_Click(sender As Object, e As EventArgs) Handles btn_authorize.Click
+        Frm_Authorize.ShowDialog()
+    End Sub
 End Class
