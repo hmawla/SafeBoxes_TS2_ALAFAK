@@ -122,7 +122,6 @@ Partial Class Frm_NewAccountClient
         Me.TextBox1.Location = New System.Drawing.Point(154, 34)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox1.MaxLength = 32767
-        Me.TextBox1.MouseState = MaterialSkin.MouseState.HOVER
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(252, 26)
