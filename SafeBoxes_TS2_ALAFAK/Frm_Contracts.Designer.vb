@@ -55,6 +55,10 @@ Partial Class Frm_Contracts
         Me.VisitsReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.WithdrawReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.AuthorizationReport = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SelectBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SelectAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CompanyAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
         CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
@@ -496,10 +500,10 @@ Partial Class Frm_Contracts
         '
         Me.MaterialContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MaterialContextMenuStrip1.Depth = 0
-        Me.MaterialContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MissingKeysReport, Me.RenewReport, Me.ContractEndingReport, Me.VisitsReport, Me.WithdrawReport, Me.AuthorizationReport})
+        Me.MaterialContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MissingKeysReport, Me.RenewReport, Me.ContractEndingReport, Me.VisitsReport, Me.WithdrawReport, Me.AuthorizationReport, Me.SelectBoxToolStripMenuItem, Me.SelectAccountToolStripMenuItem})
         Me.MaterialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialContextMenuStrip1.Name = "MaterialContextMenuStrip1"
-        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(199, 136)
+        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(199, 202)
         '
         'MissingKeysReport
         '
@@ -536,6 +540,31 @@ Partial Class Frm_Contracts
         Me.AuthorizationReport.Name = "AuthorizationReport"
         Me.AuthorizationReport.Size = New System.Drawing.Size(198, 22)
         Me.AuthorizationReport.Text = "Authorization Report"
+        '
+        'SelectBoxToolStripMenuItem
+        '
+        Me.SelectBoxToolStripMenuItem.Name = "SelectBoxToolStripMenuItem"
+        Me.SelectBoxToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.SelectBoxToolStripMenuItem.Text = "Select Box"
+        '
+        'SelectAccountToolStripMenuItem
+        '
+        Me.SelectAccountToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientAccountToolStripMenuItem, Me.CompanyAccountToolStripMenuItem})
+        Me.SelectAccountToolStripMenuItem.Name = "SelectAccountToolStripMenuItem"
+        Me.SelectAccountToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.SelectAccountToolStripMenuItem.Text = "Select Account"
+        '
+        'ClientAccountToolStripMenuItem
+        '
+        Me.ClientAccountToolStripMenuItem.Name = "ClientAccountToolStripMenuItem"
+        Me.ClientAccountToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.ClientAccountToolStripMenuItem.Text = "Client Account"
+        '
+        'CompanyAccountToolStripMenuItem
+        '
+        Me.CompanyAccountToolStripMenuItem.Name = "CompanyAccountToolStripMenuItem"
+        Me.CompanyAccountToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.CompanyAccountToolStripMenuItem.Text = "Company Account"
         '
         'MaterialDivider1
         '
@@ -609,4 +638,8 @@ Partial Class Frm_Contracts
     Friend WithEvents WithdrawReport As ToolStripMenuItem
     Friend WithEvents AuthorizationReport As ToolStripMenuItem
     Friend WithEvents MaterialDivider1 As MaterialSkin.Controls.MaterialDivider
+    Friend WithEvents SelectBoxToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SelectAccountToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClientAccountToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CompanyAccountToolStripMenuItem As ToolStripMenuItem
 End Class

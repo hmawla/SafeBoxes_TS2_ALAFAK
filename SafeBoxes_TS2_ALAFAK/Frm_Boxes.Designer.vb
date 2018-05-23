@@ -59,7 +59,7 @@ Partial Class Frm_Boxes
         Me.dgv_boxes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgv_boxes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgv_boxes.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_boxes.Location = New System.Drawing.Point(13, 276)
+        Me.dgv_boxes.Location = New System.Drawing.Point(13, 286)
         Me.dgv_boxes.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.dgv_boxes.MultiSelect = False
         Me.dgv_boxes.Name = "dgv_boxes"
@@ -68,7 +68,7 @@ Partial Class Frm_Boxes
         Me.dgv_boxes.RowHeadersVisible = False
         Me.dgv_boxes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_boxes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_boxes.Size = New System.Drawing.Size(662, 326)
+        Me.dgv_boxes.Size = New System.Drawing.Size(662, 316)
         Me.dgv_boxes.TabIndex = 12
         '
         'Label1
@@ -238,7 +238,7 @@ Partial Class Frm_Boxes
         Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabControl1.Name = "MaterialTabControl1"
         Me.MaterialTabControl1.SelectedIndex = 0
-        Me.MaterialTabControl1.Size = New System.Drawing.Size(659, 166)
+        Me.MaterialTabControl1.Size = New System.Drawing.Size(659, 176)
         Me.MaterialTabControl1.TabIndex = 13
         '
         'TabPage1
@@ -251,7 +251,7 @@ Partial Class Frm_Boxes
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(651, 133)
+        Me.TabPage1.Size = New System.Drawing.Size(651, 143)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Controls"
         '
