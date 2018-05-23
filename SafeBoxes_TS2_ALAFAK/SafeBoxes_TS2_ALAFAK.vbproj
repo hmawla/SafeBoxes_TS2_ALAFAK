@@ -208,6 +208,12 @@
     <Compile Include="Frm_Report_Visits.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InputBox.Designer.vb">
+      <DependentUpon>InputBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InputBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MessageBox.Designer.vb">
       <DependentUpon>MessageBox.vb</DependentUpon>
     </Compile>
@@ -499,6 +505,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_Visits.resx">
       <DependentUpon>Frm_Report_Visits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.resx">
+      <DependentUpon>InputBox.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBox.resx">
       <DependentUpon>MessageBox.vb</DependentUpon>

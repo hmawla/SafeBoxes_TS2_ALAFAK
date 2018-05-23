@@ -41,4 +41,8 @@
         mesResult = DialogResult.Yes
         Close()
     End Sub
+
+    Private Sub MessageBox_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        mesResult = DialogResult.Cancel
+    End Sub
 End Class
