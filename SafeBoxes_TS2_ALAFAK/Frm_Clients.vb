@@ -18,8 +18,8 @@ Public Class Frm_Clients
     End Sub
 
     Private Sub btn_delclient_Click(sender As Object, e As EventArgs) Handles btn_delclient.Click
-        Dim result As Object = InputBox("Enter admin password:", "Delete Client#" & dgv_clients.SelectedRows(0).Cells(0).Value, "")
-        If result = "12345" Then
+        InputBox.Show("Enter admin password:", "Delete Client#" & dgv_clients.SelectedRows(0).Cells(0).Value, True)
+        If inResult = "12345" Then
             ExecuteQuery("DELETE FROM Clients WHERE ClientId = " & dgv_clients.SelectedRows(0).Cells(0).Value)
             FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName AS [First Name], ClientMName AS [Father Name], ClientLName AS [Last Name], ClientDOB AS [Date Of Birth], ClientMother AS [Mother Name], ClientRegisterNbr, PostBoxNbr,RegionName  FROM Clients c,Regions r WHERE c.RegionId=r.RegionId")
         Else

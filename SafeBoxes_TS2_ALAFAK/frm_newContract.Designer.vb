@@ -493,7 +493,7 @@ Partial Class Frm_newContract
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(562, 414)
+        Me.ClientSize = New System.Drawing.Size(562, 404)
         Me.Controls.Add(Me.MaterialLabel12)
         Me.Controls.Add(Me.cbox_streets)
         Me.Controls.Add(Me.MaterialLabel2)
