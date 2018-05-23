@@ -27,10 +27,12 @@
     End Sub
 
     Private Sub btn_delcontract_Click(sender As Object, e As EventArgs) Handles btn_delcontract.Click
-        Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete contract #" & dgv_contracts.SelectedRows(0).Cells(0).Value, "Delete Contract", MessageBoxButtons.YesNo)
-        If result = DialogResult.Yes Then
+        Dim result As Object = InputBox("Enter admin password:", "Delete Contract#" & dgv_contracts.SelectedRows(0).Cells(0).Value, "")
+        If result = "12345" Then
             ExecuteQuery("DELETE FROM Contract WHERE ContId = " & dgv_contracts.SelectedRows(0).Cells(0).Value)
             FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd)")
+        Else
+            MessageBox.Show("Wrong password!")
         End If
 
     End Sub

@@ -6,6 +6,7 @@
         If Frm_Clients.clientId = 0 Then
             theNewId = GenID("Clients", "ClientId")
             lbl_cid.Text = "ClientId ID: " & theNewId
+            dtpick_birth.Value = Today.AddYears(-18)
         Else
             theNewId = Frm_Clients.clientId
             lbl_cid.Text = "Client ID: " & theNewId
@@ -34,8 +35,14 @@
             If Not Exists(cbox_regions.Text, "SELECT RegionName FROM Regions") Then
                 ExecuteQuery("INSERT INTO Regions VALUES(" & GenID("Regions", "RegionId") & ", '" & cbox_regions.Text & "')")
             End If
-            ExecuteQuery("UPDATE Clients SET ClientFName = '" & txt_fname.Text & "', ClientLName = '" & txt_lname.Text & "', ClientMName = '" & txt_father.Text & "', ClientMother = '" & txt_mother.Text & "', ClientDOB = '" & dtpick_birth.Value.ToShortDateString & "', ClientRegisterNbr = " & txt_rnumber.Text & ", PostBoxNbr = " & txt_pbnumber.Text & ", RegionId = " & cbox_regions.SelectedValue & " WHERE ClientId = " & theNewId)
-            Frm_main.clientid = theNewId
+            If Frm_Clients.clientId = 0 Then
+                Console.WriteLine("INSERT INTO Clients VALUES(" & theNewId & ", '" & txt_fname.Text & "', '" & txt_lname.Text & "', '" & txt_father.Text & "', '" & txt_mother.Text & "', '" & dtpick_birth.Value.ToShortDateString & "', " & txt_rnumber.Text & ", " & txt_pbnumber.Text & ", " & cbox_regions.SelectedValue & ")")
+                ExecuteQuery("INSERT INTO Clients VALUES(" & theNewId & ", '" & txt_fname.Text & "', '" & txt_lname.Text & "', '" & txt_father.Text & "', '" & dtpick_birth.Value.ToShortDateString & "', '" & txt_mother.Text & "', " & txt_rnumber.Text & ", " & txt_pbnumber.Text & ", " & cbox_regions.SelectedValue & ")")
+                Frm_main.clientid = theNewId
+            Else
+                ExecuteQuery("UPDATE Clients SET ClientFName = '" & txt_fname.Text & "', ClientLName = '" & txt_lname.Text & "', ClientMName = '" & txt_father.Text & "', ClientMother = '" & txt_mother.Text & "', ClientDOB = '" & dtpick_birth.Value.ToShortDateString & "', ClientRegisterNbr = " & txt_rnumber.Text & ", PostBoxNbr = " & txt_pbnumber.Text & ", RegionId = " & cbox_regions.SelectedValue & " WHERE ClientId = " & theNewId)
+            End If
+
             Me.Dispose()
         End If
     End Sub

@@ -1,5 +1,9 @@
 ﻿Imports System.Data.OleDb
 Module OleDb_Tools
+    'Created and managed by Hussein Almawla
+    'Open source @github.com
+    'Copyright MawlaTelecom.com
+
     'Declare the connection string to be used later (change this when LDM database is done)
     Private ReadOnly conString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DATADIRECTORY|OurTables.accdb;"
 
