@@ -26,6 +26,7 @@ Partial Class Frm_InfoVoucher
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Btn_NewInfoResult = New MaterialSkin.Controls.MaterialFlatButton()
         Me.btn_connects = New MaterialSkin.Controls.MaterialFlatButton()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.btn_modinfovouch = New MaterialSkin.Controls.MaterialFlatButton()
@@ -100,6 +101,7 @@ Partial Class Frm_InfoVoucher
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Btn_NewInfoResult)
         Me.TabPage1.Controls.Add(Me.btn_connects)
         Me.TabPage1.Controls.Add(Me.MaterialLabel1)
         Me.TabPage1.Controls.Add(Me.btn_modinfovouch)
@@ -112,13 +114,28 @@ Partial Class Frm_InfoVoucher
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Controls"
         '
+        'Btn_NewInfoResult
+        '
+        Me.Btn_NewInfoResult.AutoSize = True
+        Me.Btn_NewInfoResult.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_NewInfoResult.Depth = 0
+        Me.Btn_NewInfoResult.Icon = Nothing
+        Me.Btn_NewInfoResult.Location = New System.Drawing.Point(176, 74)
+        Me.Btn_NewInfoResult.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Btn_NewInfoResult.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Btn_NewInfoResult.Name = "Btn_NewInfoResult"
+        Me.Btn_NewInfoResult.Primary = True
+        Me.Btn_NewInfoResult.Size = New System.Drawing.Size(137, 36)
+        Me.Btn_NewInfoResult.TabIndex = 8
+        Me.Btn_NewInfoResult.Text = "New Info Result"
+        '
         'btn_connects
         '
         Me.btn_connects.AutoSize = True
         Me.btn_connects.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_connects.Depth = 0
         Me.btn_connects.Icon = Nothing
-        Me.btn_connects.Location = New System.Drawing.Point(155, 106)
+        Me.btn_connects.Location = New System.Drawing.Point(176, 28)
         Me.btn_connects.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btn_connects.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_connects.Name = "btn_connects"
@@ -363,4 +380,5 @@ Partial Class Frm_InfoVoucher
     Friend WithEvents rdb_byClientName As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents MaterialContextMenuStrip1 As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents InfoVoucherReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Btn_NewInfoResult As MaterialSkin.Controls.MaterialFlatButton
 End Class
