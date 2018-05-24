@@ -107,6 +107,7 @@ Partial Class MessageBox
         Me.MinimizeBox = False
         Me.Name = "MessageBox"
         Me.Sizable = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MessageBox"
         Me.ResumeLayout(False)
         Me.PerformLayout()

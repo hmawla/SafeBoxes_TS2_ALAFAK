@@ -89,6 +89,7 @@ Partial Class InputBox
         Me.MinimizeBox = False
         Me.Name = "InputBox"
         Me.Sizable = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "InputBox"
         Me.ResumeLayout(False)
         Me.PerformLayout()

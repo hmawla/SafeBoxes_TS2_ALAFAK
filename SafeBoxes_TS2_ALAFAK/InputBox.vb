@@ -20,4 +20,8 @@
         inResult = Txt_Input.Text
         Me.Close()
     End Sub
+
+    Private Sub InputBox_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        inResult = "0"
+    End Sub
 End Class
