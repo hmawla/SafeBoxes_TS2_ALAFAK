@@ -81,7 +81,29 @@ theEnd:
     End Sub
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
-
+        If Txt_ClientName.Text.Count > 0 Then
+            If DGV_Rights.Rows.Count > 0 Then
+                If cbox_regions.Text.Count > 0 And cbox_streets.Text.Count > 0 And cbox_buildings.Text.Count > 0 Then
+                    Dim mss As New MessageBox
+                    mss.Show("Entering")
+                    Dim theNewId As Integer = GenID("Authorizations", "Authid")
+                    mss.Show("Generated")
+                    ExecuteQuery("INSERT INTO Authorizations VALUES(" & theNewId & ", date(), " & Frm_Contracts.contractId & ")")
+                    mss.Show("exeuted")
+                    For Each row As DataGridViewRow In DGV_Rights.Rows
+                        mss.Show("in  loop")
+                        ExecuteQuery("INSERT INTO AuthorizationAuthRight VALUES(" & theNewId & ", " & row.Cells(0).Value & ")")
+                    Next
+                    Me.Dispose()
+                Else
+                    MessageBox.Show("Invalid address!")
+                End If
+            Else
+                MessageBox.Show("Please choose at least one right!")
+            End If
+        Else
+            MessageBox.Show("Please enter a valid client!")
+        End If
     End Sub
 
     Private Sub ModifySelectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifySelectedToolStripMenuItem.Click
@@ -163,16 +185,6 @@ theEnd:
         Else
             MessageBox.Show("Please select before deleting!")
         End If
-    End Sub
-
-    Private Sub Txt_ClientId_Leave(sender As Object, e As EventArgs) Handles Txt_ClientId.Leave
-        Try
-            Dim ds As New DataSet
-            ds = ReadQueryOut("SELECT ClientFName + ' ' + ClientLName From Clients WHERE ClientId = " & Txt_ClientId.Text)
-            Txt_ClientName.Text = ds.Tables(0).Rows(0).Item(0)
-        Catch ex As Exception
-            MessageBox.Show("Invalid client ID!")
-        End Try
     End Sub
 
     Private Sub SelectClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectClientToolStripMenuItem.Click
