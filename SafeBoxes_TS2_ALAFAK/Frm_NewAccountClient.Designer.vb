@@ -24,12 +24,12 @@ Partial Class Frm_NewAccountClient
     Private Sub InitializeComponent()
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.txt_cname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_cid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
-        Me.txt_cname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
@@ -59,6 +59,24 @@ Partial Class Frm_NewAccountClient
         Me.TabPage1.Size = New System.Drawing.Size(667, 256)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
+        '
+        'txt_cname
+        '
+        Me.txt_cname.Depth = 0
+        Me.txt_cname.Hint = ""
+        Me.txt_cname.Location = New System.Drawing.Point(154, 34)
+        Me.txt_cname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_cname.MaxLength = 32767
+        Me.txt_cname.MouseState = MaterialSkin.MouseState.HOVER
+        Me.txt_cname.Name = "txt_cname"
+        Me.txt_cname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_cname.SelectedText = ""
+        Me.txt_cname.SelectionLength = 0
+        Me.txt_cname.SelectionStart = 0
+        Me.txt_cname.Size = New System.Drawing.Size(212, 23)
+        Me.txt_cname.TabIndex = 60
+        Me.txt_cname.TabStop = False
+        Me.txt_cname.UseSystemPasswordChar = False
         '
         'MaterialLabel5
         '
@@ -118,6 +136,9 @@ Partial Class Frm_NewAccountClient
         '
         'MaterialTabSelector1
         '
+        Me.MaterialTabSelector1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
         Me.MaterialTabSelector1.Location = New System.Drawing.Point(-2, 59)
@@ -126,24 +147,6 @@ Partial Class Frm_NewAccountClient
         Me.MaterialTabSelector1.Size = New System.Drawing.Size(704, 37)
         Me.MaterialTabSelector1.TabIndex = 60
         Me.MaterialTabSelector1.Text = "MaterialTabSelector1"
-        '
-        'txt_cname
-        '
-        Me.txt_cname.Depth = 0
-        Me.txt_cname.Hint = ""
-        Me.txt_cname.Location = New System.Drawing.Point(154, 34)
-        Me.txt_cname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txt_cname.MaxLength = 32767
-        Me.txt_cname.MouseState = MaterialSkin.MouseState.HOVER
-        Me.txt_cname.Name = "txt_cname"
-        Me.txt_cname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txt_cname.SelectedText = ""
-        Me.txt_cname.SelectionLength = 0
-        Me.txt_cname.SelectionStart = 0
-        Me.txt_cname.Size = New System.Drawing.Size(212, 23)
-        Me.txt_cname.TabIndex = 60
-        Me.txt_cname.TabStop = False
-        Me.txt_cname.UseSystemPasswordChar = False
         '
         'Frm_NewAccountClient
         '
@@ -156,7 +159,7 @@ Partial Class Frm_NewAccountClient
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_NewAccountClient"
-        Me.Text = "Frm_NewAccount"
+        Me.Text = "New CLient Account"
         Me.MaterialTabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()

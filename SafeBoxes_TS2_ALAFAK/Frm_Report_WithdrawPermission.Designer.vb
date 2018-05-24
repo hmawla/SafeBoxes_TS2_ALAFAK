@@ -126,7 +126,7 @@ Partial Class Frm_Report_WithdrawPermission
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Report_WithdrawPermission"
-        Me.Text = "Frm_Report_WithdrawPermission"
+        Me.Text = "Report Withdraw Permission"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

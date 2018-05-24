@@ -126,7 +126,7 @@ Partial Class Frm_Report_EndingContracts
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Report_EndingContracts"
-        Me.Text = "Frm_Report_EndingContracts"
+        Me.Text = "Report Ending Contracts"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

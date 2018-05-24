@@ -77,6 +77,9 @@ Partial Class Frm_InfoVoucher
         '
         'MaterialTabSelector1
         '
+        Me.MaterialTabSelector1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
         Me.MaterialTabSelector1.Location = New System.Drawing.Point(0, 64)
@@ -350,7 +353,7 @@ Partial Class Frm_InfoVoucher
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.Controls.Add(Me.dgv_infovouchers)
         Me.Name = "Frm_InfoVoucher"
-        Me.Text = "Frm_InfoVoucher"
+        Me.Text = "Info Voucher MAnagement"
         CType(Me.dgv_infovouchers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MaterialTabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)

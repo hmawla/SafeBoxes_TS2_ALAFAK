@@ -28,4 +28,5 @@ Public Class Frm_ClientAccounts
         Only_char(txt_cname, e)
     End Sub
 
+
 End Class

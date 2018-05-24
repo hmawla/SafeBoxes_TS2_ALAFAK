@@ -58,12 +58,14 @@
         txt_byEmpid.Enabled = True
         txt_byEmpname.Enabled = False
         txt_byEmpname.Text = ""
+        txt_byEmpid.Focus()
     End Sub
 
     Private Sub rdb_byEmpName_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byEmpName.CheckedChanged
         txt_byEmpid.Enabled = False
         txt_byEmpname.Enabled = True
         txt_byEmpid.Text = ""
+        txt_byEmpname.Focus()
     End Sub
 
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click

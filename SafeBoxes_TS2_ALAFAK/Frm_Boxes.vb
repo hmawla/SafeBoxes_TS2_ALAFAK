@@ -49,6 +49,7 @@
         txt_bybid.Enabled = True
         cbox_boxsizes.Enabled = False
         cbox_boxsizes.SelectedItem = -1
+        txt_bybid.Focus()
     End Sub
 
     Private Sub rdb_byBoxSize_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byBoxSize.CheckedChanged

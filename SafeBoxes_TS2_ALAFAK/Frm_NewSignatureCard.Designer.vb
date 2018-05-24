@@ -302,7 +302,7 @@ Partial Class Frm_NewSignatureCard
         Me.Controls.Add(Me.lbl_signcardid)
         Me.Controls.Add(Me.Label3)
         Me.Name = "Frm_NewSignatureCard"
-        Me.Text = "Frm_NewSignatureCard"
+        Me.Text = "New Signature Card"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

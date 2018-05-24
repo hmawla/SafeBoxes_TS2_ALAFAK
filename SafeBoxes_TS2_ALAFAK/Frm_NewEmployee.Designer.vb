@@ -175,7 +175,7 @@ Partial Class Frm_NewEmployee
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_NewEmployee"
-        Me.Text = "frm_NewEmployee"
+        Me.Text = "New Employee"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -84,7 +84,7 @@ Partial Class Frm_Report_Boxes
         Me.Controls.Add(Me.RptV_Boxes)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Frm_Report_Boxes"
-        Me.Text = "Frm_Report_Boxes"
+        Me.Text = "Report Boxes"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

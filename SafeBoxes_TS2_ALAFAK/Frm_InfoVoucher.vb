@@ -38,12 +38,14 @@
         txt_byInfovouchid.Enabled = True
         txt_byClientName.Enabled = False
         txt_byClientName.Text = ""
+        txt_byInfovouchid.Focus()
     End Sub
 
     Private Sub rdb_byClientName_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byClientName.CheckedChanged
         txt_byInfovouchid.Enabled = False
         txt_byClientName.Enabled = True
         txt_byInfovouchid.Text = ""
+        txt_byClientName.Focus()
     End Sub
 
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click

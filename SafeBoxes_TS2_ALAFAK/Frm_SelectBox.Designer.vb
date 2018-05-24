@@ -215,7 +215,7 @@ Partial Class Frm_SelectBox
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_SelectBox"
-        Me.Text = "Form1"
+        Me.Text = "Select Box"
         CType(Me.dgv_boxes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)

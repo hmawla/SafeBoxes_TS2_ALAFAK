@@ -125,7 +125,7 @@ Partial Class Frm_Report_Connects
         Me.Controls.Add(Me.RptV_connects)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Frm_Report_Connects"
-        Me.Text = "Frm_Report_Connects"
+        Me.Text = "Report Connects"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

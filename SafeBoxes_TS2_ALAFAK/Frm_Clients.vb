@@ -78,12 +78,14 @@ Public Class Frm_Clients
         txt_bycid.Enabled = True
         txt_bycname.Enabled = False
         txt_bycname.Text = ""
+        txt_bycid.Focus()
     End Sub
 
     Private Sub rdb_byClientName_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byClientName.CheckedChanged
         txt_bycid.Enabled = False
         txt_bycname.Enabled = True
         txt_bycid.Text = ""
+        txt_bycname.Focus()
     End Sub
 
     Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click

@@ -72,6 +72,9 @@ Partial Class Frm_CompaniesAccounts
         '
         'MaterialTabSelector1
         '
+        Me.MaterialTabSelector1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
         Me.MaterialTabSelector1.Location = New System.Drawing.Point(0, 64)
@@ -180,7 +183,7 @@ Partial Class Frm_CompaniesAccounts
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(668, 140)
+        Me.TabPage2.Size = New System.Drawing.Size(668, 144)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Filter"
         '
@@ -296,7 +299,7 @@ Partial Class Frm_CompaniesAccounts
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.Controls.Add(Me.dgv_accounts)
         Me.Name = "Frm_CompaniesAccounts"
-        Me.Text = "Frm_CompaniesAccounts"
+        Me.Text = "Companies Accounts Management"
         CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MaterialTabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
