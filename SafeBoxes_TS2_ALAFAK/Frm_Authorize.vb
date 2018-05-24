@@ -5,6 +5,7 @@
         FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
         FillCBox(CBox_AuthRights, "SELECT RightId, RightDesc FROM AuthRight", "RightId", "RightDesc")
+        Txt_ClientId.Focus()
         formLoaded = True
     End Sub
 
@@ -125,7 +126,7 @@ theEnd:
 
     Private Sub DeleteRegionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteRegionToolStripMenuItem.Click
         If cbox_regions.SelectedValue > 0 Then
-            InputBox.Show("Please enter admin password!", "Delete region#" & cbox_regions.SelectedValue, True)
+            InputBox.Show("Please enter admin password!" & vbNewLine & "All buildings and streets belonging to this region will be deleted!", "Delete region#" & cbox_regions.SelectedValue, True)
             If inResult = "12345" Then
                 ExecuteQuery("DELETE FROM Regions WHERE RegionId = " & cbox_regions.SelectedValue)
                 ExecuteQuery("DELETE FROM Buildings WHERE StreetId IN (SELECT StreetId FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue & ")")
@@ -162,5 +163,31 @@ theEnd:
         Else
             MessageBox.Show("Please select before deleting!")
         End If
+    End Sub
+
+    Private Sub Txt_ClientId_Leave(sender As Object, e As EventArgs) Handles Txt_ClientId.Leave
+        Try
+            Dim ds As New DataSet
+            ds = ReadQueryOut("SELECT ClientFName + ' ' + ClientLName From Clients WHERE ClientId = " & Txt_ClientId.Text)
+            Txt_ClientName.Text = ds.Tables(0).Rows(0).Item(0)
+        Catch ex As Exception
+            MessageBox.Show("Invalid client ID!")
+        End Try
+    End Sub
+
+    Private Sub SelectClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectClientToolStripMenuItem.Click
+        Frm_main.clientid = 0
+        Frm_Clients.ShowDialog()
+        Txt_ClientId.Text = Frm_main.clientid
+    End Sub
+
+    Private Sub Txt_ClientId_TextChanged(sender As Object, e As EventArgs) Handles Txt_ClientId.TextChanged
+        Try
+            Dim ds As New DataSet
+            ds = ReadQueryOut("SELECT ClientFName + ' ' + ClientLName From Clients WHERE ClientId = " & Txt_ClientId.Text)
+            Txt_ClientName.Text = ds.Tables(0).Rows(0).Item(0)
+        Catch ex As Exception
+            Txt_ClientName.Text = ""
+        End Try
     End Sub
 End Class

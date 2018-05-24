@@ -37,8 +37,14 @@ Partial Class Frm_Authorize
         Me.Btn_AddRight = New MaterialSkin.Controls.MaterialFlatButton()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_streets = New System.Windows.Forms.ComboBox()
+        Me.StreetsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ModifyStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_regions = New System.Windows.Forms.ComboBox()
+        Me.RegionMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ModifyRegionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteRegionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_buildings = New System.Windows.Forms.ComboBox()
         Me.BuildingsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
@@ -49,18 +55,15 @@ Partial Class Frm_Authorize
         Me.Btn_Submit = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.DGVMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegionMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
-        Me.ModifyRegionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteRegionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StreetsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
-        Me.ModifyStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DGV_Rights, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RightsMenuStrip.SuspendLayout()
+        Me.StreetsMenuStrip.SuspendLayout()
+        Me.RegionMenuStrip.SuspendLayout()
         Me.BuildingsMenuStrip.SuspendLayout()
         Me.DGVMenuStrip.SuspendLayout()
-        Me.RegionMenuStrip.SuspendLayout()
-        Me.StreetsMenuStrip.SuspendLayout()
+        Me.ClientMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'DGV_Rights
@@ -140,6 +143,7 @@ Partial Class Frm_Authorize
         '
         'Txt_ClientId
         '
+        Me.Txt_ClientId.ContextMenuStrip = Me.ClientMenuStrip
         Me.Txt_ClientId.Depth = 0
         Me.Txt_ClientId.Hint = ""
         Me.Txt_ClientId.Location = New System.Drawing.Point(16, 107)
@@ -257,6 +261,27 @@ Partial Class Frm_Authorize
         Me.cbox_streets.Size = New System.Drawing.Size(148, 27)
         Me.cbox_streets.TabIndex = 49
         '
+        'StreetsMenuStrip
+        '
+        Me.StreetsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.StreetsMenuStrip.Depth = 0
+        Me.StreetsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyStreetToolStripMenuItem, Me.DeleteStreetToolStripMenuItem})
+        Me.StreetsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.StreetsMenuStrip.Name = "StreetsMenuStrip"
+        Me.StreetsMenuStrip.Size = New System.Drawing.Size(146, 48)
+        '
+        'ModifyStreetToolStripMenuItem
+        '
+        Me.ModifyStreetToolStripMenuItem.Name = "ModifyStreetToolStripMenuItem"
+        Me.ModifyStreetToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.ModifyStreetToolStripMenuItem.Text = "Modify Street"
+        '
+        'DeleteStreetToolStripMenuItem
+        '
+        Me.DeleteStreetToolStripMenuItem.Name = "DeleteStreetToolStripMenuItem"
+        Me.DeleteStreetToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.DeleteStreetToolStripMenuItem.Text = "Delete Street"
+        '
         'MaterialLabel4
         '
         Me.MaterialLabel4.AutoSize = True
@@ -283,6 +308,27 @@ Partial Class Frm_Authorize
         Me.cbox_regions.Name = "cbox_regions"
         Me.cbox_regions.Size = New System.Drawing.Size(148, 27)
         Me.cbox_regions.TabIndex = 48
+        '
+        'RegionMenuStrip
+        '
+        Me.RegionMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RegionMenuStrip.Depth = 0
+        Me.RegionMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyRegionToolStripMenuItem, Me.DeleteRegionToolStripMenuItem})
+        Me.RegionMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.RegionMenuStrip.Name = "RegionMenuStrip"
+        Me.RegionMenuStrip.Size = New System.Drawing.Size(153, 48)
+        '
+        'ModifyRegionToolStripMenuItem
+        '
+        Me.ModifyRegionToolStripMenuItem.Name = "ModifyRegionToolStripMenuItem"
+        Me.ModifyRegionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ModifyRegionToolStripMenuItem.Text = "Modify Region"
+        '
+        'DeleteRegionToolStripMenuItem
+        '
+        Me.DeleteRegionToolStripMenuItem.Name = "DeleteRegionToolStripMenuItem"
+        Me.DeleteRegionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteRegionToolStripMenuItem.Text = "Delete Region"
         '
         'MaterialLabel5
         '
@@ -390,47 +436,20 @@ Partial Class Frm_Authorize
         Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
         '
-        'RegionMenuStrip
+        'ClientMenuStrip
         '
-        Me.RegionMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.RegionMenuStrip.Depth = 0
-        Me.RegionMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyRegionToolStripMenuItem, Me.DeleteRegionToolStripMenuItem})
-        Me.RegionMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
-        Me.RegionMenuStrip.Name = "RegionMenuStrip"
-        Me.RegionMenuStrip.Size = New System.Drawing.Size(153, 48)
+        Me.ClientMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientMenuStrip.Depth = 0
+        Me.ClientMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
+        Me.ClientMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientMenuStrip.Name = "ClientMenuStrip"
+        Me.ClientMenuStrip.Size = New System.Drawing.Size(140, 26)
         '
-        'ModifyRegionToolStripMenuItem
+        'SelectClientToolStripMenuItem
         '
-        Me.ModifyRegionToolStripMenuItem.Name = "ModifyRegionToolStripMenuItem"
-        Me.ModifyRegionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ModifyRegionToolStripMenuItem.Text = "Modify Region"
-        '
-        'DeleteRegionToolStripMenuItem
-        '
-        Me.DeleteRegionToolStripMenuItem.Name = "DeleteRegionToolStripMenuItem"
-        Me.DeleteRegionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DeleteRegionToolStripMenuItem.Text = "Delete Region"
-        '
-        'StreetsMenuStrip
-        '
-        Me.StreetsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.StreetsMenuStrip.Depth = 0
-        Me.StreetsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyStreetToolStripMenuItem, Me.DeleteStreetToolStripMenuItem})
-        Me.StreetsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
-        Me.StreetsMenuStrip.Name = "StreetsMenuStrip"
-        Me.StreetsMenuStrip.Size = New System.Drawing.Size(146, 48)
-        '
-        'ModifyStreetToolStripMenuItem
-        '
-        Me.ModifyStreetToolStripMenuItem.Name = "ModifyStreetToolStripMenuItem"
-        Me.ModifyStreetToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ModifyStreetToolStripMenuItem.Text = "Modify Street"
-        '
-        'DeleteStreetToolStripMenuItem
-        '
-        Me.DeleteStreetToolStripMenuItem.Name = "DeleteStreetToolStripMenuItem"
-        Me.DeleteStreetToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DeleteStreetToolStripMenuItem.Text = "Delete Street"
+        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
+        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectClientToolStripMenuItem.Text = "Select Client"
         '
         'Frm_Authorize
         '
@@ -459,10 +478,11 @@ Partial Class Frm_Authorize
         Me.Text = "Authorization"
         CType(Me.DGV_Rights, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RightsMenuStrip.ResumeLayout(False)
+        Me.StreetsMenuStrip.ResumeLayout(False)
+        Me.RegionMenuStrip.ResumeLayout(False)
         Me.BuildingsMenuStrip.ResumeLayout(False)
         Me.DGVMenuStrip.ResumeLayout(False)
-        Me.RegionMenuStrip.ResumeLayout(False)
-        Me.StreetsMenuStrip.ResumeLayout(False)
+        Me.ClientMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -501,4 +521,6 @@ Partial Class Frm_Authorize
     Friend WithEvents StreetsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents ModifyStreetToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteStreetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClientMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents SelectClientToolStripMenuItem As ToolStripMenuItem
 End Class

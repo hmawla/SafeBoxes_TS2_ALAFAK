@@ -430,7 +430,7 @@ Partial Class Frm_newContract
         Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
         Me.EmployeeMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
         Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
-        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 26)
+        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 48)
         '
         'SelectDifferentEmployeeToolStripMenuItem
         '
