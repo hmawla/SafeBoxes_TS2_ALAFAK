@@ -4,6 +4,7 @@
         Lbl_Message.Text = message
         Me.Text = title
         Txt_Input.Text = ""
+        Txt_Input.UseSystemPasswordChar = False
         Me.ShowDialog()
     End Sub
     Public Overloads Sub Show(message As String, title As String, pass As Boolean)

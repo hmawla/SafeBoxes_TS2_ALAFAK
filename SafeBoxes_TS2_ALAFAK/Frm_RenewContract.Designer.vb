@@ -180,13 +180,24 @@ Partial Class Frm_RenewContract
         '
         'Txt_ClientId
         '
+        Me.Txt_ClientId.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Txt_ClientId.ContextMenuStrip = Me.ClientMenuStrip
+        Me.Txt_ClientId.Depth = 0
         Me.Txt_ClientId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Txt_ClientId.Hint = ""
         Me.Txt_ClientId.Location = New System.Drawing.Point(166, 137)
         Me.Txt_ClientId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Txt_ClientId.MaxLength = 32767
+        Me.Txt_ClientId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Txt_ClientId.Name = "Txt_ClientId"
-        Me.Txt_ClientId.Size = New System.Drawing.Size(148, 26)
+        Me.Txt_ClientId.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Txt_ClientId.SelectedText = ""
+        Me.Txt_ClientId.SelectionLength = 0
+        Me.Txt_ClientId.SelectionStart = 0
+        Me.Txt_ClientId.Size = New System.Drawing.Size(148, 23)
         Me.Txt_ClientId.TabIndex = 54
+        Me.Txt_ClientId.TabStop = False
+        Me.Txt_ClientId.UseSystemPasswordChar = False
         '
         'ClientMenuStrip
         '
@@ -202,6 +213,7 @@ Partial Class Frm_RenewContract
         '
         'MaterialLabel7
         '
+        Me.MaterialLabel7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialLabel7.AutoSize = True
         Me.MaterialLabel7.Depth = 0
         Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -216,16 +228,28 @@ Partial Class Frm_RenewContract
         '
         'Txt_ClientName
         '
+        Me.Txt_ClientName.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Txt_ClientName.Depth = 0
+        Me.Txt_ClientName.Enabled = False
         Me.Txt_ClientName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Txt_ClientName.Hint = ""
         Me.Txt_ClientName.Location = New System.Drawing.Point(322, 137)
         Me.Txt_ClientName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Txt_ClientName.MaxLength = 32767
+        Me.Txt_ClientName.MouseState = MaterialSkin.MouseState.HOVER
         Me.Txt_ClientName.Name = "Txt_ClientName"
-        Me.Txt_ClientName.Enabled = False
-        Me.Txt_ClientName.Size = New System.Drawing.Size(270, 26)
+        Me.Txt_ClientName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Txt_ClientName.SelectedText = ""
+        Me.Txt_ClientName.SelectionLength = 0
+        Me.Txt_ClientName.SelectionStart = 0
+        Me.Txt_ClientName.Size = New System.Drawing.Size(270, 23)
         Me.Txt_ClientName.TabIndex = 56
+        Me.Txt_ClientName.TabStop = False
+        Me.Txt_ClientName.UseSystemPasswordChar = False
         '
         'MaterialLabel3
         '
+        Me.MaterialLabel3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialLabel3.AutoSize = True
         Me.MaterialLabel3.Depth = 0
         Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
@@ -240,10 +264,18 @@ Partial Class Frm_RenewContract
         '
         'Btn_Add
         '
+        Me.Btn_Add.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Btn_Add.AutoSize = True
+        Me.Btn_Add.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_Add.Depth = 0
         Me.Btn_Add.Enabled = False
+        Me.Btn_Add.Icon = Nothing
         Me.Btn_Add.Location = New System.Drawing.Point(599, 137)
+        Me.Btn_Add.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Btn_Add.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Add.Name = "Btn_Add"
-        Me.Btn_Add.Size = New System.Drawing.Size(75, 26)
+        Me.Btn_Add.Primary = False
+        Me.Btn_Add.Size = New System.Drawing.Size(48, 36)
         Me.Btn_Add.TabIndex = 58
         Me.Btn_Add.Text = "Add"
         Me.Btn_Add.UseVisualStyleBackColor = True
@@ -251,10 +283,17 @@ Partial Class Frm_RenewContract
         'Btn_Submit
         '
         Me.Btn_Submit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Btn_Submit.AutoSize = True
+        Me.Btn_Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_Submit.Depth = 0
         Me.Btn_Submit.Enabled = False
+        Me.Btn_Submit.Icon = Nothing
         Me.Btn_Submit.Location = New System.Drawing.Point(591, 430)
+        Me.Btn_Submit.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Btn_Submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Submit.Name = "Btn_Submit"
-        Me.Btn_Submit.Size = New System.Drawing.Size(75, 26)
+        Me.Btn_Submit.Primary = False
+        Me.Btn_Submit.Size = New System.Drawing.Size(71, 36)
         Me.Btn_Submit.TabIndex = 59
         Me.Btn_Submit.Text = "Submit"
         Me.Btn_Submit.UseVisualStyleBackColor = True
@@ -298,7 +337,6 @@ Partial Class Frm_RenewContract
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Txt_ClientName As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents Btn_Add As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -309,4 +347,5 @@ Partial Class Frm_RenewContract
     Friend WithEvents SelectDifferentEmployeeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DGVMenuStrip As ContextMenuStrip
     Friend WithEvents RemoveSelectedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Btn_Add As MaterialSkin.Controls.MaterialFlatButton
 End Class

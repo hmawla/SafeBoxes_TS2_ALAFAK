@@ -4,6 +4,163 @@
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+        FillCBox(CBox_AuthRights, "SELECT RightId, RightDesc FROM AuthRight", "RightId", "RightDesc")
         formLoaded = True
+    End Sub
+
+    Private Sub Btn_AddRight_Click(sender As Object, e As EventArgs) Handles Btn_AddRight.Click
+        For i As Integer = 0 To DGV_Rights.Rows.Count - 1
+            If CBox_AuthRights.SelectedValue = DGV_Rights.Rows(i).Cells(0).Value Then
+                MessageBox.Show("Right Already Added!")
+                GoTo theEnd
+            End If
+        Next
+        DGV_Rights.Rows.Add(AddRight(CBox_AuthRights), CBox_AuthRights.Text)
+        FillCBox(CBox_AuthRights, "SELECT RightId, RightDesc FROM AuthRight", "RightId", "RightDesc")
+theEnd:
+
+
+    End Sub
+
+    Private Sub CBox_regions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbox_regions.SelectedIndexChanged
+        If formLoaded Then
+            FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+        End If
+    End Sub
+
+    Private Sub CBox_streets_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbox_streets.SelectedIndexChanged
+        If formLoaded Then
+            FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+        End If
+    End Sub
+
+    Private Sub RemoveSelectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveSelectedToolStripMenuItem.Click
+        If DGV_Rights.Rows.Count > 0 Then
+            DGV_Rights.Rows.RemoveAt(DGV_Rights.SelectedRows(0).Index)
+        Else
+            MessageBox.Show("Please select a row!")
+        End If
+    End Sub
+
+    Private Sub ModifyRightToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifyRightToolStripMenuItem.Click
+        If CBox_AuthRights.SelectedValue > 0 Then
+            InputBox.Show("Modify right's Description:", "Modify right#" & CBox_AuthRights.SelectedValue)
+            If inResult.Count > 0 Then
+                ExecuteQuery("UPDATE AuthRight SET RightDesc = '" & inResult & "' WHERE RightId = " & CBox_AuthRights.SelectedValue)
+                For i As Integer = 0 To DGV_Rights.Rows.Count - 1
+                    If CBox_AuthRights.SelectedValue = DGV_Rights.Rows(i).Cells(0).Value Then
+                        DGV_Rights.Rows(i).Cells(1).Value = inResult
+                    End If
+                Next
+                FillCBox(CBox_AuthRights, "SELECT RightId, RightDesc FROM AuthRight", "RightId", "RightDesc")
+            Else
+                MessageBox.Show("Invalid description!")
+            End If
+
+        Else
+            MessageBox.Show("Please select before modifying!")
+        End If
+    End Sub
+
+    Private Sub DeleteRightToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteRightToolStripMenuItem.Click
+        If CBox_AuthRights.SelectedValue > 0 Then
+            InputBox.Show("Please enter admin password!", "Delete right#" & CBox_AuthRights.SelectedValue, True)
+            If inResult = "12345" Then
+                ExecuteQuery("DELETE FROM AuthRight WHERE RightId = " & CBox_AuthRights.SelectedValue)
+            End If
+            For i As Integer = 0 To DGV_Rights.Rows.Count - 1
+                If CBox_AuthRights.SelectedValue = DGV_Rights.Rows(i).Cells(0).Value Then
+                    DGV_Rights.Rows.RemoveAt(DGV_Rights.Rows(i).Index)
+                End If
+            Next
+            FillCBox(CBox_AuthRights, "SELECT RightId, RightDesc FROM AuthRight", "RightId", "RightDesc")
+        Else
+            MessageBox.Show("Please select before deleting!")
+        End If
+    End Sub
+
+    Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
+
+    End Sub
+
+    Private Sub ModifySelectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifySelectedToolStripMenuItem.Click
+        If cbox_buildings.SelectedValue > 0 Then
+            InputBox.Show("Modify building's Name:", "Modify building#" & cbox_buildings.SelectedValue)
+            If inResult.Count > 0 Then
+                ExecuteQuery("UPDATE Buildings SET BuildingName = '" & inResult & "' WHERE BuildingId = " & cbox_buildings.SelectedValue)
+                FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+            Else
+                MessageBox.Show("Invalid name!")
+            End If
+        Else
+            MessageBox.Show("Please select before modifying!")
+        End If
+    End Sub
+
+    Private Sub DeleteBuildingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteBuildingToolStripMenuItem.Click
+        If cbox_buildings.SelectedValue > 0 Then
+            InputBox.Show("Please enter admin password!", "Delete building#" & cbox_buildings.SelectedValue, True)
+            If inResult = "12345" Then
+                ExecuteQuery("DELETE FROM Buildings WHERE BuildingId = " & cbox_buildings.SelectedValue)
+            End If
+            FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+        Else
+            MessageBox.Show("Please select before deleting!")
+        End If
+    End Sub
+
+    Private Sub ModifyRegionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifyRegionToolStripMenuItem.Click
+        If cbox_regions.SelectedValue > 0 Then
+            InputBox.Show("Modify region's Name:", "Modify region#" & cbox_regions.SelectedValue)
+            If inResult.Count > 0 Then
+                ExecuteQuery("UPDATE Regions SET RegionName = '" & inResult & "' WHERE RegionId = " & cbox_regions.SelectedValue)
+                FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
+            Else
+                MessageBox.Show("Invalid name!")
+            End If
+        Else
+            MessageBox.Show("Please select before modifying!")
+        End If
+    End Sub
+
+    Private Sub DeleteRegionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteRegionToolStripMenuItem.Click
+        If cbox_regions.SelectedValue > 0 Then
+            InputBox.Show("Please enter admin password!", "Delete region#" & cbox_regions.SelectedValue, True)
+            If inResult = "12345" Then
+                ExecuteQuery("DELETE FROM Regions WHERE RegionId = " & cbox_regions.SelectedValue)
+                ExecuteQuery("DELETE FROM Buildings WHERE StreetId IN (SELECT StreetId FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue & ")")
+                ExecuteQuery("DELETE FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue)
+            End If
+            FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
+        Else
+            MessageBox.Show("Please select before deleting!")
+        End If
+    End Sub
+
+    Private Sub ModifyStreetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifyStreetToolStripMenuItem.Click
+        If cbox_streets.SelectedValue > 0 Then
+            InputBox.Show("Modify street's Name:", "Modify street#" & cbox_streets.SelectedValue)
+            If inResult.Count > 0 Then
+                ExecuteQuery("UPDATE Streets SET StreetName = '" & inResult & "' WHERE StreetId = " & cbox_streets.SelectedValue)
+                FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+            Else
+                MessageBox.Show("Invalid name!")
+            End If
+        Else
+            MessageBox.Show("Please select before modifying!")
+        End If
+    End Sub
+
+    Private Sub DeleteStreetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteStreetToolStripMenuItem.Click
+        If cbox_streets.SelectedValue > 0 Then
+            InputBox.Show("Please enter admin password!" & vbNewLine & "All buildings belonging to this street will be deleted!", "Delete street#" & cbox_streets.SelectedValue, True)
+            If inResult = "12345" Then
+                ExecuteQuery("DELETE FROM Buildings WHERE StreetId  = " & cbox_streets.SelectedValue)
+                ExecuteQuery("DELETE FROM Streets WHERE StreetId = " & cbox_streets.SelectedValue)
+            End If
+            FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+        Else
+            MessageBox.Show("Please select before deleting!")
+        End If
     End Sub
 End Class

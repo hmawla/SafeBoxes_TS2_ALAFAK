@@ -22,66 +22,121 @@ Partial Class Frm_Authorize
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgv_contracts = New System.Windows.Forms.DataGridView()
+        Me.DGV_Rights = New System.Windows.Forms.DataGridView()
+        Me.RightId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RightDescription = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CBox_AuthRights = New System.Windows.Forms.ComboBox()
+        Me.RightsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ModifyRightToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteRightToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Txt_ClientId = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.Txt_ClientName = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.Btn_AddRight = New MaterialSkin.Controls.MaterialFlatButton()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_streets = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_regions = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_buildings = New System.Windows.Forms.ComboBox()
+        Me.BuildingsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ModifySelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteBuildingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialDivider2 = New MaterialSkin.Controls.MaterialDivider()
         Me.Btn_Submit = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.RightId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RightDescription = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DGVMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegionMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ModifyRegionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteRegionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StreetsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ModifyStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        CType(Me.DGV_Rights, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RightsMenuStrip.SuspendLayout()
+        Me.BuildingsMenuStrip.SuspendLayout()
+        Me.DGVMenuStrip.SuspendLayout()
+        Me.RegionMenuStrip.SuspendLayout()
+        Me.StreetsMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
-        'dgv_contracts
+        'DGV_Rights
         '
-        Me.dgv_contracts.AllowUserToAddRows = False
-        Me.dgv_contracts.AllowUserToDeleteRows = False
-        Me.dgv_contracts.AllowUserToResizeRows = False
-        Me.dgv_contracts.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.DGV_Rights.AllowUserToAddRows = False
+        Me.DGV_Rights.AllowUserToDeleteRows = False
+        Me.DGV_Rights.AllowUserToResizeRows = False
+        Me.DGV_Rights.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgv_contracts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgv_contracts.BackgroundColor = System.Drawing.Color.White
-        Me.dgv_contracts.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgv_contracts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_contracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_contracts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RightId, Me.RightDescription})
-        Me.dgv_contracts.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dgv_contracts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgv_contracts.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_contracts.Location = New System.Drawing.Point(13, 259)
-        Me.dgv_contracts.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.dgv_contracts.MultiSelect = False
-        Me.dgv_contracts.Name = "dgv_contracts"
-        Me.dgv_contracts.ReadOnly = True
-        Me.dgv_contracts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_contracts.RowHeadersVisible = False
-        Me.dgv_contracts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.dgv_contracts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_contracts.Size = New System.Drawing.Size(643, 218)
-        Me.dgv_contracts.TabIndex = 9
+        Me.DGV_Rights.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_Rights.BackgroundColor = System.Drawing.Color.White
+        Me.DGV_Rights.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGV_Rights.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DGV_Rights.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV_Rights.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RightId, Me.RightDescription})
+        Me.DGV_Rights.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DGV_Rights.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.DGV_Rights.GridColor = System.Drawing.Color.PowderBlue
+        Me.DGV_Rights.Location = New System.Drawing.Point(13, 259)
+        Me.DGV_Rights.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DGV_Rights.MultiSelect = False
+        Me.DGV_Rights.Name = "DGV_Rights"
+        Me.DGV_Rights.ReadOnly = True
+        Me.DGV_Rights.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DGV_Rights.RowHeadersVisible = False
+        Me.DGV_Rights.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
+        Me.DGV_Rights.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_Rights.Size = New System.Drawing.Size(648, 218)
+        Me.DGV_Rights.TabIndex = 9
+        '
+        'RightId
+        '
+        Me.RightId.FillWeight = 8.387229!
+        Me.RightId.HeaderText = "Right ID"
+        Me.RightId.Name = "RightId"
+        Me.RightId.ReadOnly = True
+        '
+        'RightDescription
+        '
+        Me.RightDescription.FillWeight = 46.68891!
+        Me.RightDescription.HeaderText = "Right Description"
+        Me.RightDescription.Name = "RightDescription"
+        Me.RightDescription.ReadOnly = True
         '
         'CBox_AuthRights
         '
         Me.CBox_AuthRights.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CBox_AuthRights.ContextMenuStrip = Me.RightsMenuStrip
         Me.CBox_AuthRights.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.CBox_AuthRights.FormattingEnabled = True
-        Me.CBox_AuthRights.Location = New System.Drawing.Point(337, 217)
+        Me.CBox_AuthRights.Location = New System.Drawing.Point(342, 217)
         Me.CBox_AuthRights.Name = "CBox_AuthRights"
         Me.CBox_AuthRights.Size = New System.Drawing.Size(221, 27)
         Me.CBox_AuthRights.TabIndex = 10
+        '
+        'RightsMenuStrip
+        '
+        Me.RightsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RightsMenuStrip.Depth = 0
+        Me.RightsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyRightToolStripMenuItem, Me.DeleteRightToolStripMenuItem})
+        Me.RightsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.RightsMenuStrip.Name = "RightsMenuStrip"
+        Me.RightsMenuStrip.Size = New System.Drawing.Size(144, 48)
+        '
+        'ModifyRightToolStripMenuItem
+        '
+        Me.ModifyRightToolStripMenuItem.Name = "ModifyRightToolStripMenuItem"
+        Me.ModifyRightToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.ModifyRightToolStripMenuItem.Text = "Modify Right"
+        '
+        'DeleteRightToolStripMenuItem
+        '
+        Me.DeleteRightToolStripMenuItem.Name = "DeleteRightToolStripMenuItem"
+        Me.DeleteRightToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.DeleteRightToolStripMenuItem.Text = "Delete Right"
         '
         'Txt_ClientId
         '
@@ -151,29 +206,29 @@ Partial Class Frm_Authorize
         Me.MaterialLabel3.Depth = 0
         Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel3.Location = New System.Drawing.Point(333, 195)
+        Me.MaterialLabel3.Location = New System.Drawing.Point(338, 195)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
         Me.MaterialLabel3.Size = New System.Drawing.Size(149, 19)
         Me.MaterialLabel3.TabIndex = 15
         Me.MaterialLabel3.Text = "Authorization Rights:"
         '
-        'MaterialFlatButton1
+        'Btn_AddRight
         '
-        Me.MaterialFlatButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MaterialFlatButton1.AutoSize = True
-        Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialFlatButton1.Depth = 0
-        Me.MaterialFlatButton1.Icon = Nothing
-        Me.MaterialFlatButton1.Location = New System.Drawing.Point(565, 212)
-        Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
-        Me.MaterialFlatButton1.Primary = True
-        Me.MaterialFlatButton1.Size = New System.Drawing.Size(91, 36)
-        Me.MaterialFlatButton1.TabIndex = 16
-        Me.MaterialFlatButton1.Text = "Add Right"
-        Me.MaterialFlatButton1.UseVisualStyleBackColor = True
+        Me.Btn_AddRight.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Btn_AddRight.AutoSize = True
+        Me.Btn_AddRight.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_AddRight.Depth = 0
+        Me.Btn_AddRight.Icon = Nothing
+        Me.Btn_AddRight.Location = New System.Drawing.Point(570, 212)
+        Me.Btn_AddRight.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Btn_AddRight.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Btn_AddRight.Name = "Btn_AddRight"
+        Me.Btn_AddRight.Primary = True
+        Me.Btn_AddRight.Size = New System.Drawing.Size(91, 36)
+        Me.Btn_AddRight.TabIndex = 16
+        Me.Btn_AddRight.Text = "Add Right"
+        Me.Btn_AddRight.UseVisualStyleBackColor = True
         '
         'MaterialLabel12
         '
@@ -192,6 +247,7 @@ Partial Class Frm_Authorize
         'cbox_streets
         '
         Me.cbox_streets.BackColor = System.Drawing.Color.White
+        Me.cbox_streets.ContextMenuStrip = Me.StreetsMenuStrip
         Me.cbox_streets.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.cbox_streets.ForeColor = System.Drawing.Color.Black
         Me.cbox_streets.FormattingEnabled = True
@@ -218,6 +274,7 @@ Partial Class Frm_Authorize
         'cbox_regions
         '
         Me.cbox_regions.BackColor = System.Drawing.Color.White
+        Me.cbox_regions.ContextMenuStrip = Me.RegionMenuStrip
         Me.cbox_regions.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.cbox_regions.ForeColor = System.Drawing.Color.Black
         Me.cbox_regions.FormattingEnabled = True
@@ -244,6 +301,7 @@ Partial Class Frm_Authorize
         'cbox_buildings
         '
         Me.cbox_buildings.BackColor = System.Drawing.Color.White
+        Me.cbox_buildings.ContextMenuStrip = Me.BuildingsMenuStrip
         Me.cbox_buildings.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.cbox_buildings.ForeColor = System.Drawing.Color.Black
         Me.cbox_buildings.FormattingEnabled = True
@@ -252,6 +310,27 @@ Partial Class Frm_Authorize
         Me.cbox_buildings.Name = "cbox_buildings"
         Me.cbox_buildings.Size = New System.Drawing.Size(148, 27)
         Me.cbox_buildings.TabIndex = 50
+        '
+        'BuildingsMenuStrip
+        '
+        Me.BuildingsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BuildingsMenuStrip.Depth = 0
+        Me.BuildingsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifySelectedToolStripMenuItem, Me.DeleteBuildingToolStripMenuItem})
+        Me.BuildingsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.BuildingsMenuStrip.Name = "BuildingsMenuStrip"
+        Me.BuildingsMenuStrip.Size = New System.Drawing.Size(160, 48)
+        '
+        'ModifySelectedToolStripMenuItem
+        '
+        Me.ModifySelectedToolStripMenuItem.Name = "ModifySelectedToolStripMenuItem"
+        Me.ModifySelectedToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.ModifySelectedToolStripMenuItem.Text = "Modify Building"
+        '
+        'DeleteBuildingToolStripMenuItem
+        '
+        Me.DeleteBuildingToolStripMenuItem.Name = "DeleteBuildingToolStripMenuItem"
+        Me.DeleteBuildingToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.DeleteBuildingToolStripMenuItem.Text = "Delete Building"
         '
         'MaterialLabel6
         '
@@ -276,7 +355,7 @@ Partial Class Frm_Authorize
         Me.MaterialDivider2.Location = New System.Drawing.Point(-2, 485)
         Me.MaterialDivider2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialDivider2.Name = "MaterialDivider2"
-        Me.MaterialDivider2.Size = New System.Drawing.Size(674, 1)
+        Me.MaterialDivider2.Size = New System.Drawing.Size(679, 1)
         Me.MaterialDivider2.TabIndex = 55
         Me.MaterialDivider2.Text = "MaterialDivider2"
         '
@@ -287,7 +366,7 @@ Partial Class Frm_Authorize
         Me.Btn_Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_Submit.Depth = 0
         Me.Btn_Submit.Icon = Nothing
-        Me.Btn_Submit.Location = New System.Drawing.Point(586, 492)
+        Me.Btn_Submit.Location = New System.Drawing.Point(591, 492)
         Me.Btn_Submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Submit.Name = "Btn_Submit"
         Me.Btn_Submit.Primary = True
@@ -296,26 +375,69 @@ Partial Class Frm_Authorize
         Me.Btn_Submit.Text = "Submit"
         Me.Btn_Submit.UseVisualStyleBackColor = True
         '
-        'RightId
+        'DGVMenuStrip
         '
-        Me.RightId.FillWeight = 8.387229!
-        Me.RightId.HeaderText = "Right ID"
-        Me.RightId.Name = "RightId"
-        Me.RightId.ReadOnly = True
+        Me.DGVMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DGVMenuStrip.Depth = 0
+        Me.DGVMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoveSelectedToolStripMenuItem})
+        Me.DGVMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.DGVMenuStrip.Name = "DGVMenuStrip"
+        Me.DGVMenuStrip.Size = New System.Drawing.Size(165, 26)
         '
-        'RightDescription
+        'RemoveSelectedToolStripMenuItem
         '
-        Me.RightDescription.FillWeight = 46.68891!
-        Me.RightDescription.HeaderText = "Right Description"
-        Me.RightDescription.Name = "RightDescription"
-        Me.RightDescription.ReadOnly = True
+        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
+        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
+        '
+        'RegionMenuStrip
+        '
+        Me.RegionMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RegionMenuStrip.Depth = 0
+        Me.RegionMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyRegionToolStripMenuItem, Me.DeleteRegionToolStripMenuItem})
+        Me.RegionMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.RegionMenuStrip.Name = "RegionMenuStrip"
+        Me.RegionMenuStrip.Size = New System.Drawing.Size(153, 48)
+        '
+        'ModifyRegionToolStripMenuItem
+        '
+        Me.ModifyRegionToolStripMenuItem.Name = "ModifyRegionToolStripMenuItem"
+        Me.ModifyRegionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ModifyRegionToolStripMenuItem.Text = "Modify Region"
+        '
+        'DeleteRegionToolStripMenuItem
+        '
+        Me.DeleteRegionToolStripMenuItem.Name = "DeleteRegionToolStripMenuItem"
+        Me.DeleteRegionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteRegionToolStripMenuItem.Text = "Delete Region"
+        '
+        'StreetsMenuStrip
+        '
+        Me.StreetsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.StreetsMenuStrip.Depth = 0
+        Me.StreetsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyStreetToolStripMenuItem, Me.DeleteStreetToolStripMenuItem})
+        Me.StreetsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.StreetsMenuStrip.Name = "StreetsMenuStrip"
+        Me.StreetsMenuStrip.Size = New System.Drawing.Size(146, 48)
+        '
+        'ModifyStreetToolStripMenuItem
+        '
+        Me.ModifyStreetToolStripMenuItem.Name = "ModifyStreetToolStripMenuItem"
+        Me.ModifyStreetToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ModifyStreetToolStripMenuItem.Text = "Modify Street"
+        '
+        'DeleteStreetToolStripMenuItem
+        '
+        Me.DeleteStreetToolStripMenuItem.Name = "DeleteStreetToolStripMenuItem"
+        Me.DeleteStreetToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteStreetToolStripMenuItem.Text = "Delete Street"
         '
         'Frm_Authorize
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(669, 540)
+        Me.ClientSize = New System.Drawing.Size(674, 540)
         Me.Controls.Add(Me.Btn_Submit)
         Me.Controls.Add(Me.MaterialDivider2)
         Me.Controls.Add(Me.MaterialLabel6)
@@ -325,30 +447,35 @@ Partial Class Frm_Authorize
         Me.Controls.Add(Me.cbox_regions)
         Me.Controls.Add(Me.MaterialLabel5)
         Me.Controls.Add(Me.cbox_buildings)
-        Me.Controls.Add(Me.MaterialFlatButton1)
+        Me.Controls.Add(Me.Btn_AddRight)
         Me.Controls.Add(Me.MaterialLabel3)
         Me.Controls.Add(Me.MaterialLabel2)
         Me.Controls.Add(Me.Txt_ClientName)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.Txt_ClientId)
         Me.Controls.Add(Me.CBox_AuthRights)
-        Me.Controls.Add(Me.dgv_contracts)
+        Me.Controls.Add(Me.DGV_Rights)
         Me.Name = "Frm_Authorize"
         Me.Text = "Authorization"
-        CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGV_Rights, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RightsMenuStrip.ResumeLayout(False)
+        Me.BuildingsMenuStrip.ResumeLayout(False)
+        Me.DGVMenuStrip.ResumeLayout(False)
+        Me.RegionMenuStrip.ResumeLayout(False)
+        Me.StreetsMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents dgv_contracts As DataGridView
+    Friend WithEvents DGV_Rights As DataGridView
     Friend WithEvents CBox_AuthRights As ComboBox
     Friend WithEvents Txt_ClientId As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Txt_ClientName As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents Btn_AddRight As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents MaterialLabel12 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_streets As ComboBox
     Friend WithEvents MaterialLabel4 As MaterialSkin.Controls.MaterialLabel
@@ -360,4 +487,18 @@ Partial Class Frm_Authorize
     Friend WithEvents Btn_Submit As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents RightId As DataGridViewTextBoxColumn
     Friend WithEvents RightDescription As DataGridViewTextBoxColumn
+    Friend WithEvents DGVMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents RemoveSelectedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RightsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ModifyRightToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteRightToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BuildingsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ModifySelectedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteBuildingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegionMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ModifyRegionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteRegionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StreetsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ModifyStreetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteStreetToolStripMenuItem As ToolStripMenuItem
 End Class

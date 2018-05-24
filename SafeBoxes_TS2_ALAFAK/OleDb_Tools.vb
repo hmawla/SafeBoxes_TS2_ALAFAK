@@ -151,6 +151,16 @@ End_Of_For:
         Return theBuildingId
     End Function
 
+    Public Function AddRight(ByRef theCBox As ComboBox) As Integer
+        If Exists(theCBox.SelectedValue, "SELECT RightId FROM AuthRight") Then
+            Return theCBox.SelectedValue
+        Else
+            Dim theNewId As Integer = GenID("AuthRight", "RightId")
+            ExecuteQuery("INSERT INTO AuthRight VALUES(" & theNewId & ", '" & theCBox.Text & "')")
+            Return theNewId
+        End If
+    End Function
+
     'Used to check textboxes for characters other than numbers
     Public Sub Only_Number(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then

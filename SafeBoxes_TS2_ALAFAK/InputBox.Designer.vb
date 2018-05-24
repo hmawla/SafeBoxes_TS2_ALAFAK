@@ -32,7 +32,7 @@ Partial Class InputBox
         Me.Txt_Input.BackColor = System.Drawing.SystemColors.Control
         Me.Txt_Input.Depth = 0
         Me.Txt_Input.Hint = ""
-        Me.Txt_Input.Location = New System.Drawing.Point(12, 135)
+        Me.Txt_Input.Location = New System.Drawing.Point(12, 153)
         Me.Txt_Input.MaxLength = 32767
         Me.Txt_Input.MouseState = MaterialSkin.MouseState.HOVER
         Me.Txt_Input.Name = "Txt_Input"
@@ -52,7 +52,7 @@ Partial Class InputBox
         Me.Btn_OK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_OK.Depth = 0
         Me.Btn_OK.Icon = Nothing
-        Me.Btn_OK.Location = New System.Drawing.Point(287, 130)
+        Me.Btn_OK.Location = New System.Drawing.Point(287, 140)
         Me.Btn_OK.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_OK.Name = "Btn_OK"
         Me.Btn_OK.Primary = True
@@ -81,7 +81,7 @@ Partial Class InputBox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(338, 178)
+        Me.ClientSize = New System.Drawing.Size(338, 188)
         Me.Controls.Add(Me.Lbl_Message)
         Me.Controls.Add(Me.Btn_OK)
         Me.Controls.Add(Me.Txt_Input)
