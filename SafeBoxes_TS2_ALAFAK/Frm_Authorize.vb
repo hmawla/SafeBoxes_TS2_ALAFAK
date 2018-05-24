@@ -84,14 +84,9 @@ theEnd:
         If Txt_ClientName.Text.Count > 0 Then
             If DGV_Rights.Rows.Count > 0 Then
                 If cbox_regions.Text.Count > 0 And cbox_streets.Text.Count > 0 And cbox_buildings.Text.Count > 0 Then
-                    Dim mss As New MessageBox
-                    mss.Show("Entering")
                     Dim theNewId As Integer = GenID("Authorizations", "Authid")
-                    mss.Show("Generated")
                     ExecuteQuery("INSERT INTO Authorizations VALUES(" & theNewId & ", date(), " & Frm_Contracts.contractId & ")")
-                    mss.Show("exeuted")
                     For Each row As DataGridViewRow In DGV_Rights.Rows
-                        mss.Show("in  loop")
                         ExecuteQuery("INSERT INTO AuthorizationAuthRight VALUES(" & theNewId & ", " & row.Cells(0).Value & ")")
                     Next
                     Me.Dispose()
@@ -110,8 +105,10 @@ theEnd:
         If cbox_buildings.SelectedValue > 0 Then
             InputBox.Show("Modify building's Name:", "Modify building#" & cbox_buildings.SelectedValue)
             If inResult.Count > 0 Then
-                ExecuteQuery("UPDATE Buildings SET BuildingName = '" & inResult & "' WHERE BuildingId = " & cbox_buildings.SelectedValue)
-                FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+                If Not inResult.Equals("0") Then
+                    ExecuteQuery("UPDATE Buildings SET BuildingName = '" & inResult & "' WHERE BuildingId = " & cbox_buildings.SelectedValue)
+                    FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+                End If
             Else
                 MessageBox.Show("Invalid name!")
             End If
@@ -123,10 +120,16 @@ theEnd:
     Private Sub DeleteBuildingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteBuildingToolStripMenuItem.Click
         If cbox_buildings.SelectedValue > 0 Then
             InputBox.Show("Please enter admin password!", "Delete building#" & cbox_buildings.SelectedValue, True)
-            If inResult = "12345" Then
-                ExecuteQuery("DELETE FROM Buildings WHERE BuildingId = " & cbox_buildings.SelectedValue)
+            If Not inResult.Equals("0") Then
+                If inResult = "12345" Then
+                    ExecuteQuery("DELETE FROM Buildings WHERE BuildingId = " & cbox_buildings.SelectedValue)
+                    FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+                Else
+                    MessageBox.Show("Invalid password!")
+                End If
             End If
-            FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+
+
         Else
             MessageBox.Show("Please select before deleting!")
         End If
@@ -136,8 +139,10 @@ theEnd:
         If cbox_regions.SelectedValue > 0 Then
             InputBox.Show("Modify region's Name:", "Modify region#" & cbox_regions.SelectedValue)
             If inResult.Count > 0 Then
-                ExecuteQuery("UPDATE Regions SET RegionName = '" & inResult & "' WHERE RegionId = " & cbox_regions.SelectedValue)
-                FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
+                If Not inResult.Equals("0") Then
+                    ExecuteQuery("UPDATE Regions SET RegionName = '" & inResult & "' WHERE RegionId = " & cbox_regions.SelectedValue)
+                    FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
+                End If
             Else
                 MessageBox.Show("Invalid name!")
             End If
@@ -149,12 +154,16 @@ theEnd:
     Private Sub DeleteRegionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteRegionToolStripMenuItem.Click
         If cbox_regions.SelectedValue > 0 Then
             InputBox.Show("Please enter admin password!" & vbNewLine & "All buildings and streets belonging to this region will be deleted!", "Delete region#" & cbox_regions.SelectedValue, True)
-            If inResult = "12345" Then
-                ExecuteQuery("DELETE FROM Regions WHERE RegionId = " & cbox_regions.SelectedValue)
-                ExecuteQuery("DELETE FROM Buildings WHERE StreetId IN (SELECT StreetId FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue & ")")
-                ExecuteQuery("DELETE FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue)
+            If Not inResult.Equals("0") Then
+                If inResult = "12345" Then
+                    ExecuteQuery("DELETE FROM Regions WHERE RegionId = " & cbox_regions.SelectedValue)
+                    ExecuteQuery("DELETE FROM Buildings WHERE StreetId IN (SELECT StreetId FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue & ")")
+                    ExecuteQuery("DELETE FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue)
+                    FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
+                Else
+                    MessageBox.Show("Invalid password!")
+                End If
             End If
-            FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         Else
             MessageBox.Show("Please select before deleting!")
         End If
@@ -164,8 +173,10 @@ theEnd:
         If cbox_streets.SelectedValue > 0 Then
             InputBox.Show("Modify street's Name:", "Modify street#" & cbox_streets.SelectedValue)
             If inResult.Count > 0 Then
-                ExecuteQuery("UPDATE Streets SET StreetName = '" & inResult & "' WHERE StreetId = " & cbox_streets.SelectedValue)
-                FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+                If Not inResult.Equals("0") Then
+                    ExecuteQuery("UPDATE Streets SET StreetName = '" & inResult & "' WHERE StreetId = " & cbox_streets.SelectedValue)
+                    FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+                End If
             Else
                 MessageBox.Show("Invalid name!")
             End If
@@ -177,11 +188,13 @@ theEnd:
     Private Sub DeleteStreetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteStreetToolStripMenuItem.Click
         If cbox_streets.SelectedValue > 0 Then
             InputBox.Show("Please enter admin password!" & vbNewLine & "All buildings belonging to this street will be deleted!", "Delete street#" & cbox_streets.SelectedValue, True)
-            If inResult = "12345" Then
-                ExecuteQuery("DELETE FROM Buildings WHERE StreetId  = " & cbox_streets.SelectedValue)
-                ExecuteQuery("DELETE FROM Streets WHERE StreetId = " & cbox_streets.SelectedValue)
+            If Not inResult.Equals("0") Then
+                If inResult = "12345" Then
+                    ExecuteQuery("DELETE FROM Buildings WHERE StreetId  = " & cbox_streets.SelectedValue)
+                    ExecuteQuery("DELETE FROM Streets WHERE StreetId = " & cbox_streets.SelectedValue)
+                    FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+                End If
             End If
-            FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
         Else
             MessageBox.Show("Please select before deleting!")
         End If
