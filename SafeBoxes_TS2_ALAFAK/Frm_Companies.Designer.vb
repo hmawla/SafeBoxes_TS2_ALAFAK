@@ -31,12 +31,12 @@ Partial Class Frm_Companies
         Me.btn_newcompany = New MaterialSkin.Controls.MaterialFlatButton()
         Me.btn_delcompany = New MaterialSkin.Controls.MaterialFlatButton()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.txt_bycname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.rdb_bycompid = New MaterialSkin.Controls.MaterialRadioButton()
         Me.btn_reset = New MaterialSkin.Controls.MaterialFlatButton()
         Me.txt_bycid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.rdb_bycompName = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.txt_bycname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         CType(Me.dgv_companies, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -72,6 +72,9 @@ Partial Class Frm_Companies
         '
         'MaterialTabSelector1
         '
+        Me.MaterialTabSelector1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
         Me.MaterialTabSelector1.Location = New System.Drawing.Point(0, 64)
@@ -184,6 +187,25 @@ Partial Class Frm_Companies
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Filter"
         '
+        'txt_bycname
+        '
+        Me.txt_bycname.Depth = 0
+        Me.txt_bycname.Enabled = False
+        Me.txt_bycname.Hint = ""
+        Me.txt_bycname.Location = New System.Drawing.Point(173, 62)
+        Me.txt_bycname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.txt_bycname.MaxLength = 32767
+        Me.txt_bycname.MouseState = MaterialSkin.MouseState.HOVER
+        Me.txt_bycname.Name = "txt_bycname"
+        Me.txt_bycname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_bycname.SelectedText = ""
+        Me.txt_bycname.SelectionLength = 0
+        Me.txt_bycname.SelectionStart = 0
+        Me.txt_bycname.Size = New System.Drawing.Size(352, 23)
+        Me.txt_bycname.TabIndex = 14
+        Me.txt_bycname.TabStop = False
+        Me.txt_bycname.UseSystemPasswordChar = False
+        '
         'rdb_bycompid
         '
         Me.rdb_bycompid.Depth = 0
@@ -267,25 +289,6 @@ Partial Class Frm_Companies
         Me.rdb_bycompName.TabIndex = 11
         Me.rdb_bycompName.Text = "By Company Name"
         Me.rdb_bycompName.UseVisualStyleBackColor = True
-        '
-        'txt_bycname
-        '
-        Me.txt_bycname.Depth = 0
-        Me.txt_bycname.Enabled = False
-        Me.txt_bycname.Hint = ""
-        Me.txt_bycname.Location = New System.Drawing.Point(173, 62)
-        Me.txt_bycname.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.txt_bycname.MaxLength = 32767
-        Me.txt_bycname.MouseState = MaterialSkin.MouseState.HOVER
-        Me.txt_bycname.Name = "txt_bycname"
-        Me.txt_bycname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txt_bycname.SelectedText = ""
-        Me.txt_bycname.SelectionLength = 0
-        Me.txt_bycname.SelectionStart = 0
-        Me.txt_bycname.Size = New System.Drawing.Size(352, 23)
-        Me.txt_bycname.TabIndex = 14
-        Me.txt_bycname.TabStop = False
-        Me.txt_bycname.UseSystemPasswordChar = False
         '
         'Frm_Companies
         '

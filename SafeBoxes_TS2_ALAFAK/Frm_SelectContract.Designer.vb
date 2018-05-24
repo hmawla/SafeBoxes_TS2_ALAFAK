@@ -180,7 +180,7 @@ Partial Class Frm_SelectContract
         Me.Controls.Add(Me.grp_search)
         Me.Controls.Add(Me.dgv_contracts)
         Me.Name = "Frm_SelectContract"
-        Me.Text = "Frm_SelectContract"
+        Me.Text = "Select Contract"
         Me.grp_search.ResumeLayout(False)
         Me.grp_search.PerformLayout()
         Me.ContextAccountSelect.ResumeLayout(False)

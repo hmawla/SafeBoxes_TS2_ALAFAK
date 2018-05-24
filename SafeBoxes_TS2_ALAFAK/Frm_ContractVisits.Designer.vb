@@ -318,7 +318,7 @@ Partial Class Frm_ContractVisits
         Me.Font = New System.Drawing.Font("Roboto", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_ContractVisits"
-        Me.Text = "Frm_ContractVisits"
+        Me.Text = "Contract Visits Management"
         Me.ClientMenuStrip.ResumeLayout(False)
         Me.EmployeeMenuStrip.ResumeLayout(False)
         Me.DGVMenuStrip.ResumeLayout(False)

@@ -30,13 +30,13 @@ Partial Class Frm_ClientAccounts
         Me.btn_newbox = New MaterialSkin.Controls.MaterialFlatButton()
         Me.btn_delbox = New MaterialSkin.Controls.MaterialFlatButton()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btn_reset = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.txt_cname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txt_byaccid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.rdb_byCname = New MaterialSkin.Controls.MaterialRadioButton()
         Me.rdb_byAccid = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
-        Me.btn_reset = New MaterialSkin.Controls.MaterialFlatButton()
-        Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -174,6 +174,41 @@ Partial Class Frm_ClientAccounts
         Me.TabPage2.TabIndex = 0
         Me.TabPage2.Text = "Filter"
         '
+        'btn_reset
+        '
+        Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_reset.AutoSize = True
+        Me.btn_reset.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_reset.Depth = 0
+        Me.btn_reset.Enabled = False
+        Me.btn_reset.Icon = Nothing
+        Me.btn_reset.Location = New System.Drawing.Point(610, 93)
+        Me.btn_reset.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.btn_reset.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_reset.Name = "btn_reset"
+        Me.btn_reset.Primary = False
+        Me.btn_reset.Size = New System.Drawing.Size(30, 36)
+        Me.btn_reset.TabIndex = 14
+        Me.btn_reset.Text = "X"
+        Me.btn_reset.UseVisualStyleBackColor = True
+        '
+        'btn_search
+        '
+        Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_search.AutoSize = True
+        Me.btn_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_search.Depth = 0
+        Me.btn_search.Icon = Nothing
+        Me.btn_search.Location = New System.Drawing.Point(534, 93)
+        Me.btn_search.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.btn_search.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_search.Name = "btn_search"
+        Me.btn_search.Primary = False
+        Me.btn_search.Size = New System.Drawing.Size(64, 36)
+        Me.btn_search.TabIndex = 13
+        Me.btn_search.Text = "Filter"
+        Me.btn_search.UseVisualStyleBackColor = True
+        '
         'txt_cname
         '
         Me.txt_cname.Depth = 0
@@ -253,41 +288,6 @@ Partial Class Frm_ClientAccounts
         Me.MaterialTabSelector1.TabIndex = 15
         Me.MaterialTabSelector1.Text = "MaterialTabSelector1"
         '
-        'btn_reset
-        '
-        Me.btn_reset.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_reset.AutoSize = True
-        Me.btn_reset.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_reset.Depth = 0
-        Me.btn_reset.Enabled = False
-        Me.btn_reset.Icon = Nothing
-        Me.btn_reset.Location = New System.Drawing.Point(610, 93)
-        Me.btn_reset.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.btn_reset.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btn_reset.Name = "btn_reset"
-        Me.btn_reset.Primary = False
-        Me.btn_reset.Size = New System.Drawing.Size(30, 36)
-        Me.btn_reset.TabIndex = 14
-        Me.btn_reset.Text = "X"
-        Me.btn_reset.UseVisualStyleBackColor = True
-        '
-        'btn_search
-        '
-        Me.btn_search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_search.AutoSize = True
-        Me.btn_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_search.Depth = 0
-        Me.btn_search.Icon = Nothing
-        Me.btn_search.Location = New System.Drawing.Point(534, 93)
-        Me.btn_search.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.btn_search.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btn_search.Name = "btn_search"
-        Me.btn_search.Primary = False
-        Me.btn_search.Size = New System.Drawing.Size(64, 36)
-        Me.btn_search.TabIndex = 13
-        Me.btn_search.Text = "Filter"
-        Me.btn_search.UseVisualStyleBackColor = True
-        '
         'Frm_ClientAccounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -297,7 +297,7 @@ Partial Class Frm_ClientAccounts
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.Controls.Add(Me.dgv_accounts)
         Me.Name = "Frm_ClientAccounts"
-        Me.Text = "Frm_Accounts"
+        Me.Text = "Client Accounts Management"
         CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MaterialTabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)

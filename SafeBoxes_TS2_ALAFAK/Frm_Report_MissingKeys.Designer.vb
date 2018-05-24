@@ -139,7 +139,7 @@ Partial Class Frm_Report_MissingKeys
         Me.Font = New System.Drawing.Font("Roboto", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_Report_MissingKeys"
-        Me.Text = "Frm_Report_MissingKeys"
+        Me.Text = "Report Missing Keys"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

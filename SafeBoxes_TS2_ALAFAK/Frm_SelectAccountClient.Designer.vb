@@ -168,7 +168,7 @@ Partial Class Frm_SelectAccountClient
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_SelectAccountClient"
-        Me.Text = "Frm_SelectAccount"
+        Me.Text = "Select Account"
         CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grp_search.ResumeLayout(False)
         Me.grp_search.PerformLayout()

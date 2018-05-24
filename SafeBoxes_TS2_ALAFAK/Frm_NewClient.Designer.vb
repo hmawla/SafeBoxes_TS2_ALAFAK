@@ -341,7 +341,7 @@ Partial Class Frm_NewClient
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_NewClient"
-        Me.Text = "Frm_NewClient"
+        Me.Text = "New Client"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

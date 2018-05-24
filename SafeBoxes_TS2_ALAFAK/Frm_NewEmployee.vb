@@ -6,7 +6,7 @@
         If txt_fname.Text = "" Or txt_lname.Text = "" Or txt_father.Text = "" Then
             MessageBox.Show("Please fill all needed information!")
         Else
-            ExecuteQuery("UPDATE Employees SET EmpFName = '" & txt_fname.Text & "', EmpLName = '" & txt_lname.Text & "', EmpMName = '" & txt_fname.Text & "' WHERE EmpId = " & theNewId)
+            ExecuteQuery("UPDATE Employees SET EmpFName = '" & txt_fname.Text & "', EmpLName = '" & txt_lname.Text & "', EmpMName = '" & txt_father.Text & "' WHERE EmpId = " & theNewId)
             Frm_main.employeeid = theNewId
             Me.Dispose()
         End If

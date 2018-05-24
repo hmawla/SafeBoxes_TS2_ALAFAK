@@ -166,7 +166,7 @@ Partial Class Frm_SelectClient
         Me.Controls.Add(Me.grp_search)
         Me.Controls.Add(Me.dgv_clients)
         Me.Name = "Frm_SelectClient"
-        Me.Text = "Frm_SelectClient"
+        Me.Text = "Select Client"
         Me.grp_search.ResumeLayout(False)
         Me.grp_search.PerformLayout()
         CType(Me.dgv_clients, System.ComponentModel.ISupportInitialize).EndInit()

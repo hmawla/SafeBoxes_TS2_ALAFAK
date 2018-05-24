@@ -149,14 +149,17 @@
 
     Private Sub rdb_byboxid_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_byboxid.CheckedChanged
         txt_byboxid.Enabled = True
+
         txt_bycontid.Enabled = False
         txt_bycontid.Text = ""
+        txt_byboxid.Focus()
     End Sub
 
     Private Sub rdb_bycontid_CheckedChanged(sender As Object, e As EventArgs) Handles rdb_bycontid.CheckedChanged
         txt_byboxid.Enabled = False
         txt_bycontid.Enabled = True
         txt_byboxid.Text = ""
+        txt_bycontid.Focus()
     End Sub
 
     Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click

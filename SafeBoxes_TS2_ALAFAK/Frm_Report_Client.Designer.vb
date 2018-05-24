@@ -104,7 +104,7 @@ Partial Class Frm_Report_Client
         Me.Controls.Add(Me.CRptV_Clients)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Frm_Report_Client"
-        Me.Text = "Frm_Report_Client"
+        Me.Text = "Report Client"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
