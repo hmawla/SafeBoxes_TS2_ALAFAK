@@ -30,6 +30,8 @@ Partial Class Frm_Authorize
         Me.ModifyRightToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteRightToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Txt_ClientId = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.ClientMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.Txt_ClientName = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
@@ -55,15 +57,13 @@ Partial Class Frm_Authorize
         Me.Btn_Submit = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.DGVMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
-        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DGV_Rights, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RightsMenuStrip.SuspendLayout()
+        Me.ClientMenuStrip.SuspendLayout()
         Me.StreetsMenuStrip.SuspendLayout()
         Me.RegionMenuStrip.SuspendLayout()
         Me.BuildingsMenuStrip.SuspendLayout()
         Me.DGVMenuStrip.SuspendLayout()
-        Me.ClientMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'DGV_Rights
@@ -92,7 +92,7 @@ Partial Class Frm_Authorize
         Me.DGV_Rights.RowHeadersVisible = False
         Me.DGV_Rights.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_Rights.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_Rights.Size = New System.Drawing.Size(648, 218)
+        Me.DGV_Rights.Size = New System.Drawing.Size(642, 231)
         Me.DGV_Rights.TabIndex = 9
         '
         'RightId
@@ -115,7 +115,7 @@ Partial Class Frm_Authorize
         Me.CBox_AuthRights.ContextMenuStrip = Me.RightsMenuStrip
         Me.CBox_AuthRights.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.CBox_AuthRights.FormattingEnabled = True
-        Me.CBox_AuthRights.Location = New System.Drawing.Point(342, 217)
+        Me.CBox_AuthRights.Location = New System.Drawing.Point(336, 217)
         Me.CBox_AuthRights.Name = "CBox_AuthRights"
         Me.CBox_AuthRights.Size = New System.Drawing.Size(221, 27)
         Me.CBox_AuthRights.TabIndex = 10
@@ -158,6 +158,21 @@ Partial Class Frm_Authorize
         Me.Txt_ClientId.TabIndex = 11
         Me.Txt_ClientId.TabStop = False
         Me.Txt_ClientId.UseSystemPasswordChar = False
+        '
+        'ClientMenuStrip
+        '
+        Me.ClientMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientMenuStrip.Depth = 0
+        Me.ClientMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
+        Me.ClientMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientMenuStrip.Name = "ClientMenuStrip"
+        Me.ClientMenuStrip.Size = New System.Drawing.Size(140, 26)
+        '
+        'SelectClientToolStripMenuItem
+        '
+        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
+        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.SelectClientToolStripMenuItem.Text = "Select Client"
         '
         'MaterialLabel1
         '
@@ -210,7 +225,7 @@ Partial Class Frm_Authorize
         Me.MaterialLabel3.Depth = 0
         Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel3.Location = New System.Drawing.Point(338, 195)
+        Me.MaterialLabel3.Location = New System.Drawing.Point(332, 195)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
         Me.MaterialLabel3.Size = New System.Drawing.Size(149, 19)
@@ -224,7 +239,7 @@ Partial Class Frm_Authorize
         Me.Btn_AddRight.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_AddRight.Depth = 0
         Me.Btn_AddRight.Icon = Nothing
-        Me.Btn_AddRight.Location = New System.Drawing.Point(570, 212)
+        Me.Btn_AddRight.Location = New System.Drawing.Point(564, 212)
         Me.Btn_AddRight.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Btn_AddRight.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_AddRight.Name = "Btn_AddRight"
@@ -398,10 +413,10 @@ Partial Class Frm_Authorize
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialDivider2.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.MaterialDivider2.Depth = 0
-        Me.MaterialDivider2.Location = New System.Drawing.Point(-2, 485)
+        Me.MaterialDivider2.Location = New System.Drawing.Point(-2, 498)
         Me.MaterialDivider2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialDivider2.Name = "MaterialDivider2"
-        Me.MaterialDivider2.Size = New System.Drawing.Size(679, 1)
+        Me.MaterialDivider2.Size = New System.Drawing.Size(673, 1)
         Me.MaterialDivider2.TabIndex = 55
         Me.MaterialDivider2.Text = "MaterialDivider2"
         '
@@ -412,7 +427,7 @@ Partial Class Frm_Authorize
         Me.Btn_Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_Submit.Depth = 0
         Me.Btn_Submit.Icon = Nothing
-        Me.Btn_Submit.Location = New System.Drawing.Point(591, 492)
+        Me.Btn_Submit.Location = New System.Drawing.Point(585, 505)
         Me.Btn_Submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Submit.Name = "Btn_Submit"
         Me.Btn_Submit.Primary = True
@@ -436,27 +451,12 @@ Partial Class Frm_Authorize
         Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
         '
-        'ClientMenuStrip
-        '
-        Me.ClientMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientMenuStrip.Depth = 0
-        Me.ClientMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
-        Me.ClientMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
-        Me.ClientMenuStrip.Name = "ClientMenuStrip"
-        Me.ClientMenuStrip.Size = New System.Drawing.Size(140, 26)
-        '
-        'SelectClientToolStripMenuItem
-        '
-        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
-        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.SelectClientToolStripMenuItem.Text = "Select Client"
-        '
         'Frm_Authorize
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(674, 540)
+        Me.ClientSize = New System.Drawing.Size(668, 553)
         Me.Controls.Add(Me.Btn_Submit)
         Me.Controls.Add(Me.MaterialDivider2)
         Me.Controls.Add(Me.MaterialLabel6)
@@ -478,11 +478,11 @@ Partial Class Frm_Authorize
         Me.Text = "Authorization"
         CType(Me.DGV_Rights, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RightsMenuStrip.ResumeLayout(False)
+        Me.ClientMenuStrip.ResumeLayout(False)
         Me.StreetsMenuStrip.ResumeLayout(False)
         Me.RegionMenuStrip.ResumeLayout(False)
         Me.BuildingsMenuStrip.ResumeLayout(False)
         Me.DGVMenuStrip.ResumeLayout(False)
-        Me.ClientMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
