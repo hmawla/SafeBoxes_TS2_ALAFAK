@@ -184,6 +184,12 @@
     <Compile Include="Frm_CompaniesAccounts.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_NewBox.Designer.vb">
+      <DependentUpon>Frm_NewBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_NewBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_NewSignatureCard.Designer.vb">
       <DependentUpon>Frm_NewSignatureCard.vb</DependentUpon>
     </Compile>
@@ -499,6 +505,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_CompaniesAccounts.resx">
       <DependentUpon>Frm_CompaniesAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NewBox.resx">
+      <DependentUpon>Frm_NewBox.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewSignatureCard.resx">
       <DependentUpon>Frm_NewSignatureCard.vb</DependentUpon>
