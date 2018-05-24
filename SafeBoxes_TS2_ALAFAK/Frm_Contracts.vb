@@ -2,10 +2,7 @@
     '==========================================
     '        What is still missing:
     '==========================================
-    'We need to fix the filters in the next tab
-    'Should make showdialog Yes/No as "are you sure you want to delete this" (DONE)
-    'Should print selected contract's account owner/s into the read only multiline textbox
-    'Check for more awesome ideas :P
+    'You tell me :P
     '==========================================
     Public redeliverDate As Date
     Public contractId As Integer

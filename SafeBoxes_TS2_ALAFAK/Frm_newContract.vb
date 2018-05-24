@@ -5,11 +5,7 @@ Public Class Frm_newContract
     Dim EmpId As Integer
     Dim formLoaded As Boolean = False
     Dim ds As DataSet
-    Dim anotherds As DataSet
     Dim theNewId As Integer
-    Dim isSubmitting As Boolean = False
-    Dim bs As New BindingSource
-
 
     Private Sub SelectAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAccountToolStripMenuItem.Click
         Frm_main.accountid = 0
@@ -17,75 +13,61 @@ Public Class Frm_newContract
         txt_accountid.Text = Frm_main.accountid
     End Sub
 
-    Private Sub Txt_accountid_Leave(sender As Object, e As EventArgs) Handles txt_accountid.Leave
-        txt_clientinfo.Text = ""
-        Dim i As Integer = 1
-        Try
-            ds = ReadQueryOut("SELECT c.ClientId, ClientFName, ClientLName, ClientDOB FROM Clients c, ClientDepAccount a WHERE c.ClientId = a.ClientId AND a.accountid = " & txt_accountid.Text)
-            If ds.Tables(0).Rows.Count <> 0 Then
-                For Each datarow As DataRow In ds.Tables(0).Rows
-                    txt_clientinfo.Text = txt_clientinfo.Text & "(" & i & ")" & vbNewLine & "Client ID: " & datarow.Item(0) & vbNewLine & "Client Name: " & datarow.Item(1) & " " & datarow.Item(2) & vbNewLine & "Birth Date: " & datarow.Item(3) & vbNewLine & vbNewLine
-                    i = i + 1
-                Next
-            Else
-                MessageBox.Show("Invalid Account ID!")
-                txt_accountid.Focus()
-                txt_accountid.SelectAll()
-            End If
-
-        Catch ex As Exception
-            MessageBox.Show("Invalid Account ID!")
-            txt_accountid.Focus()
-            txt_accountid.SelectAll()
-        End Try
-
-    End Sub
 
     Private Sub Btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
-        isSubmitting = True
-        If txt_accountid.Text = "" Or txt_boxes.Text = "" Or txt_floor.Text = "" Then
-            MessageBox.Show("Please fill all needed information!")
-        ElseIf txt_contnote.TextLength > 0 Then
-            ExecuteQuery("UPDATE Contract SET AccountId = " & txt_accountid.Text & ", BoxId = " & txt_boxes.Text & ", BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", EmpId = " & EmpId & ", ContFloor = " & txt_floor.Value & ", ContBDate = '" & Date.Today.ToShortDateString & "', ContToDate = '" & dtpick_exdate.Value.ToShortDateString & "', ContPhone1 = '" & txt_phone1.Text & "', ContPhone2 = '" & txt_phone2.Text & "', ContNote = '" & txt_contnote.Text & "' WHERE ContId = " & theNewId)
-            Frm_main.contractid = theNewId
-            Me.Close()
+        If Rdb_Client.Checked And Exists(txt_accountid.Text, "SELECT AccountId FROM ClientDepAccount") Then
+            If Exists(txt_boxes.Text, "SELECT BoxId FROM Boxes WHERE BoxId NOT IN (SELECT BoxId FROM Contract WHERE ContId NOT IN (SELECT ContId FROM ContEnd))") Then
+                If txt_accountid.Text.Count > 0 And txt_boxes.Text.Count > 0 And txt_phone1.Text.Count > 0 And txt_phone2.Text.Count > 0 Then
+                    If Frm_Contracts.contractId = 0 Then
+                        theNewId = GenID("Contract", "ContId")
+                        If txt_contnote.TextLength > 0 Then
+                            ExecuteQuery("INSERT INTO Contract VALUES(" & theNewId & ", date(), '" & dtpick_exdate.Value.ToShortDateString & "', '" & txt_contnote.Text & "', " & txt_floor.Value & ", '" & txt_phone1.Text & "', '" & txt_phone2.Text & "', " & EmpId & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & txt_accountid.Text & ", " & txt_boxes.Text & ")")
+                        Else
+                            ExecuteQuery("INSERT INTO Contract VALUES(" & theNewId & ", date(), '" & dtpick_exdate.Value.ToShortDateString & "', '', " & txt_floor.Value & ", '" & txt_phone1.Text & "', '" & txt_phone2.Text & "', " & EmpId & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & txt_accountid.Text & ", " & txt_boxes.Text & ")")
+                        End If
+                    Else
+                        If txt_contnote.TextLength > 0 Then
+                            ExecuteQuery("UPDATE Contract SET AccountId = " & txt_accountid.Text & ", BoxId = " & txt_boxes.Text & ", BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", EmpId = " & EmpId & ", ContFloor = " & txt_floor.Value & ", ContBDate = '" & Date.Today.ToShortDateString & "', ContToDate = '" & dtpick_exdate.Value.ToShortDateString & "', ContPhone1 = '" & txt_phone1.Text & "', ContPhone2 = '" & txt_phone2.Text & "', ContNote = '" & txt_contnote.Text & "' WHERE ContId = " & theNewId)
+                            Frm_main.contractid = theNewId
+                        Else
+                            ExecuteQuery("UPDATE Contract SET AccountId = " & txt_accountid.Text & ", BoxId = " & txt_boxes.Text & ", BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", EmpId = " & EmpId & ", ContFloor = " & txt_floor.Value & ", ContBDate = '" & Date.Today.ToShortDateString & "', ContToDate = '" & dtpick_exdate.Value.ToShortDateString & "', ContPhone1 = '" & txt_phone1.Text & "', ContPhone2 = '" & txt_phone2.Text & "' WHERE ContId = " & theNewId)
+                            Frm_main.contractid = theNewId
+                        End If
+                    End If
+                    Me.Dispose()
+                Else
+                    MessageBox.Show("Please fill all needed information!")
+                End If
+            Else
+                MessageBox.Show("Invalid box ID!")
+            End If
+        ElseIf Rdb_Company.Checked And Exists(txt_accountid.Text, "SELECT AccountId FROM CompanyAccounts") Then
+            'Company checked
         Else
-            ExecuteQuery("UPDATE Contract SET AccountId = " & txt_accountid.Text & ", BoxId = " & txt_boxes.Text & ", BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", EmpId = " & EmpId & ", ContFloor = " & txt_floor.Value & ", ContBDate = '" & Date.Today.ToShortDateString & "', ContToDate = '" & dtpick_exdate.Value.ToShortDateString & "', ContPhone1 = '" & txt_phone1.Text & "', ContPhone2 = '" & txt_phone2.Text & "' WHERE ContId = " & theNewId)
-            Frm_main.contractid = theNewId
-            Me.Close()
+            MessageBox.Show("Invalid account ID!")
         End If
-
-    End Sub
-
-    'Check for problems
-    Private Sub Frm_newContract_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        If isSubmitting = False And Frm_Contracts.contractId = 0 Then
-            ExecuteQuery("DELETE FROM Contract WHERE ContId = " & theNewId)
-        End If
-
     End Sub
 
     Private Sub Frm_newContract_Load(sender As Object, e As EventArgs) Handles Me.Load
-        EmpId = Frm_main.loggedEmpId
+
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
-        lbl_empid.Text = "Employee ID: " & EmpId
+
         If Frm_Contracts.contractId = 0 Then
-            theNewId = GenID("Contract", "ContId")
-            ExecuteQuery("INSERT INTO Contract(ContId) VALUES(" & theNewId & ")")
-            lbl_contractid.Text = "Contract ID: " & theNewId
+            EmpId = Frm_main.loggedEmpId
+            dtpick_exdate.Value = DateTime.Now.AddYears(1)
         Else
             theNewId = Frm_Contracts.contractId
-            lbl_contractid.Text = "Contract ID: " & theNewId
             Dim theContDetails As New DataSet
-            theContDetails = ReadQueryOut("SELECT * FROM Contract WHERE ContId = " & theNewId)
+            theContDetails = ReadQueryOut("SELECT * FROM Contract WHERE ContId = " & theNewId).Copy
             Dim rows As DataRow = theContDetails.Tables(0).Rows(0)
             dtpick_exdate.Value = rows.Item(2)
             txt_contnote.Text = rows.Item(3)
             txt_floor.Value = rows.Item(4)
             txt_phone1.Text = rows.Item(5)
             txt_phone2.Text = rows.Item(6)
+            EmpId = rows.Item(7)
             txt_accountid.Text = rows.Item(9)
             txt_boxes.Text = rows.Item(10)
             Dim theBuilding As String = rows.Item(8)
@@ -96,7 +78,7 @@ Public Class Frm_newContract
             cbox_streets.SelectedValue = rows.Item(1)
             cbox_buildings.SelectedValue = rows.Item(0)
         End If
-        dtpick_exdate.Value = DateTime.Now.AddYears(1)
+        lbl_empid.Text = "Employee ID: " & EmpId
         formLoaded = True
     End Sub
 
@@ -153,4 +135,125 @@ Public Class Frm_newContract
         Only_char(cbox_buildings, e)
     End Sub
 
+    Private Sub ModifySelectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifySelectedToolStripMenuItem.Click
+        If cbox_buildings.SelectedValue > 0 Then
+            InputBox.Show("Modify building's Name:", "Modify building#" & cbox_buildings.SelectedValue)
+            If inResult.Count > 0 Then
+                If Not inResult.Equals("0") Then
+                    ExecuteQuery("UPDATE Buildings SET BuildingName = '" & inResult & "' WHERE BuildingId = " & cbox_buildings.SelectedValue)
+                    FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+                End If
+            Else
+                MessageBox.Show("Invalid name!")
+            End If
+        Else
+            MessageBox.Show("Please select before modifying!")
+        End If
+    End Sub
+
+    Private Sub DeleteBuildingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteBuildingToolStripMenuItem.Click
+        If cbox_buildings.SelectedValue > 0 Then
+            InputBox.Show("Please enter admin password!", "Delete building#" & cbox_buildings.SelectedValue, True)
+            If Not inResult.Equals("0") Then
+                If inResult = "12345" Then
+                    ExecuteQuery("DELETE FROM Buildings WHERE BuildingId = " & cbox_buildings.SelectedValue)
+                    FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
+                Else
+                    MessageBox.Show("Invalid password!")
+                End If
+            End If
+
+
+        Else
+            MessageBox.Show("Please select before deleting!")
+        End If
+    End Sub
+
+    Private Sub ModifyRegionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifyRegionToolStripMenuItem.Click
+        If cbox_regions.SelectedValue > 0 Then
+            InputBox.Show("Modify region's Name:", "Modify region#" & cbox_regions.SelectedValue)
+            If inResult.Count > 0 Then
+                If Not inResult.Equals("0") Then
+                    ExecuteQuery("UPDATE Regions SET RegionName = '" & inResult & "' WHERE RegionId = " & cbox_regions.SelectedValue)
+                    FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
+                End If
+            Else
+                MessageBox.Show("Invalid name!")
+            End If
+        Else
+            MessageBox.Show("Please select before modifying!")
+        End If
+    End Sub
+
+    Private Sub DeleteRegionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteRegionToolStripMenuItem.Click
+        If cbox_regions.SelectedValue > 0 Then
+            InputBox.Show("Please enter admin password!" & vbNewLine & "All buildings and streets belonging to this region will be deleted!", "Delete region#" & cbox_regions.SelectedValue, True)
+            If Not inResult.Equals("0") Then
+                If inResult = "12345" Then
+                    ExecuteQuery("DELETE FROM Regions WHERE RegionId = " & cbox_regions.SelectedValue)
+                    ExecuteQuery("DELETE FROM Buildings WHERE StreetId IN (SELECT StreetId FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue & ")")
+                    ExecuteQuery("DELETE FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue)
+                    FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
+                Else
+                    MessageBox.Show("Invalid password!")
+                End If
+            End If
+        Else
+            MessageBox.Show("Please select before deleting!")
+        End If
+    End Sub
+
+    Private Sub ModifyStreetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModifyStreetToolStripMenuItem.Click
+        If cbox_streets.SelectedValue > 0 Then
+            InputBox.Show("Modify street's Name:", "Modify street#" & cbox_streets.SelectedValue)
+            If inResult.Count > 0 Then
+                If Not inResult.Equals("0") Then
+                    ExecuteQuery("UPDATE Streets SET StreetName = '" & inResult & "' WHERE StreetId = " & cbox_streets.SelectedValue)
+                    FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+                End If
+            Else
+                MessageBox.Show("Invalid name!")
+            End If
+        Else
+            MessageBox.Show("Please select before modifying!")
+        End If
+    End Sub
+
+    Private Sub DeleteStreetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteStreetToolStripMenuItem.Click
+        If cbox_streets.SelectedValue > 0 Then
+            InputBox.Show("Please enter admin password!" & vbNewLine & "All buildings belonging to this street will be deleted!", "Delete street#" & cbox_streets.SelectedValue, True)
+            If Not inResult.Equals("0") Then
+                If inResult = "12345" Then
+                    ExecuteQuery("DELETE FROM Buildings WHERE StreetId  = " & cbox_streets.SelectedValue)
+                    ExecuteQuery("DELETE FROM Streets WHERE StreetId = " & cbox_streets.SelectedValue)
+                    FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
+                End If
+            End If
+        Else
+            MessageBox.Show("Please select before deleting!")
+        End If
+    End Sub
+
+    Private Sub txt_accountid_TextChanged(sender As Object, e As EventArgs) Handles txt_accountid.TextChanged
+        txt_clientinfo.Text = ""
+        Dim i As Integer = 1
+        Try
+            ds = ReadQueryOut("SELECT c.ClientId, ClientFName, ClientLName, ClientDOB FROM Clients c, ClientDepAccount a WHERE c.ClientId = a.ClientId AND a.accountid = " & txt_accountid.Text)
+            If ds.Tables(0).Rows.Count <> 0 Then
+                For Each datarow As DataRow In ds.Tables(0).Rows
+                    txt_clientinfo.Text = txt_clientinfo.Text & "(" & i & ")" & vbNewLine & "Client ID: " & datarow.Item(0) & vbNewLine & "Client Name: " & datarow.Item(1) & " " & datarow.Item(2) & vbNewLine & "Birth Date: " & datarow.Item(3) & vbNewLine & vbNewLine
+                    i = i + 1
+                Next
+            Else
+                txt_clientinfo.Text = ""
+            End If
+
+        Catch ex As Exception
+            txt_clientinfo.Text = ""
+        End Try
+    End Sub
+
+    Private Sub Frm_newContract_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Me.Dispose()
+    End Sub
 End Class

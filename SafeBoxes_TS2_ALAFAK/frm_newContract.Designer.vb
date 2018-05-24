@@ -25,9 +25,11 @@ Partial Class Frm_newContract
         Me.txt_phone1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.Label3 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
-        Me.lbl_contractid = New MaterialSkin.Controls.MaterialLabel()
         Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
         Me.cbox_buildings = New System.Windows.Forms.ComboBox()
+        Me.BuildingsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ModifySelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteBuildingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_floor = New System.Windows.Forms.NumericUpDown()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
@@ -43,7 +45,6 @@ Partial Class Frm_newContract
         Me.txt_clientinfo = New System.Windows.Forms.TextBox()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_contnote = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.btn_submit = New MaterialSkin.Controls.MaterialFlatButton()
         Me.txt_boxes = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.BoxesMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.SelectBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,12 +54,28 @@ Partial Class Frm_newContract
         Me.SelectDifferentEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_regions = New System.Windows.Forms.ComboBox()
+        Me.RegionMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ModifyRegionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteRegionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_streets = New System.Windows.Forms.ComboBox()
+        Me.StreetsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ModifyStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RightsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ModifyRightToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteRightToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Rdb_Client = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Rdb_Company = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.btn_submit = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.BuildingsMenuStrip.SuspendLayout()
         CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AccountsMenuStrip.SuspendLayout()
         Me.BoxesMenuStrip.SuspendLayout()
         Me.EmployeeMenuStrip.SuspendLayout()
+        Me.RegionMenuStrip.SuspendLayout()
+        Me.StreetsMenuStrip.SuspendLayout()
+        Me.RightsMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'txt_phone1
@@ -102,23 +119,9 @@ Partial Class Frm_newContract
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
-        Me.MaterialLabel1.Size = New System.Drawing.Size(94, 19)
+        Me.MaterialLabel1.Size = New System.Drawing.Size(88, 19)
         Me.MaterialLabel1.TabIndex = 21
-        Me.MaterialLabel1.Text = "Expiry Date:*"
-        '
-        'lbl_contractid
-        '
-        Me.lbl_contractid.AutoSize = True
-        Me.lbl_contractid.Depth = 0
-        Me.lbl_contractid.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.lbl_contractid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lbl_contractid.Location = New System.Drawing.Point(18, 76)
-        Me.lbl_contractid.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbl_contractid.MouseState = MaterialSkin.MouseState.HOVER
-        Me.lbl_contractid.Name = "lbl_contractid"
-        Me.lbl_contractid.Size = New System.Drawing.Size(153, 19)
-        Me.lbl_contractid.TabIndex = 23
-        Me.lbl_contractid.Text = "Contract ID: <ContId>"
+        Me.MaterialLabel1.Text = "Expiry Date:"
         '
         'dtpick_exdate
         '
@@ -135,6 +138,7 @@ Partial Class Frm_newContract
         'cbox_buildings
         '
         Me.cbox_buildings.BackColor = System.Drawing.Color.White
+        Me.cbox_buildings.ContextMenuStrip = Me.BuildingsMenuStrip
         Me.cbox_buildings.ForeColor = System.Drawing.Color.Black
         Me.cbox_buildings.FormattingEnabled = True
         Me.cbox_buildings.Location = New System.Drawing.Point(21, 297)
@@ -142,6 +146,27 @@ Partial Class Frm_newContract
         Me.cbox_buildings.Name = "cbox_buildings"
         Me.cbox_buildings.Size = New System.Drawing.Size(148, 28)
         Me.cbox_buildings.TabIndex = 6
+        '
+        'BuildingsMenuStrip
+        '
+        Me.BuildingsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BuildingsMenuStrip.Depth = 0
+        Me.BuildingsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifySelectedToolStripMenuItem, Me.DeleteBuildingToolStripMenuItem})
+        Me.BuildingsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.BuildingsMenuStrip.Name = "BuildingsMenuStrip"
+        Me.BuildingsMenuStrip.Size = New System.Drawing.Size(160, 48)
+        '
+        'ModifySelectedToolStripMenuItem
+        '
+        Me.ModifySelectedToolStripMenuItem.Name = "ModifySelectedToolStripMenuItem"
+        Me.ModifySelectedToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.ModifySelectedToolStripMenuItem.Text = "Modify Building"
+        '
+        'DeleteBuildingToolStripMenuItem
+        '
+        Me.DeleteBuildingToolStripMenuItem.Name = "DeleteBuildingToolStripMenuItem"
+        Me.DeleteBuildingToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.DeleteBuildingToolStripMenuItem.Text = "Delete Building"
         '
         'MaterialLabel3
         '
@@ -153,9 +178,9 @@ Partial Class Frm_newContract
         Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
-        Me.MaterialLabel3.Size = New System.Drawing.Size(59, 19)
+        Me.MaterialLabel3.Size = New System.Drawing.Size(53, 19)
         Me.MaterialLabel3.TabIndex = 26
-        Me.MaterialLabel3.Text = "Street*:"
+        Me.MaterialLabel3.Text = "Street:"
         '
         'txt_floor
         '
@@ -191,9 +216,9 @@ Partial Class Frm_newContract
         Me.MaterialLabel5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel5.Name = "MaterialLabel5"
-        Me.MaterialLabel5.Size = New System.Drawing.Size(130, 19)
+        Me.MaterialLabel5.Size = New System.Drawing.Size(124, 19)
         Me.MaterialLabel5.TabIndex = 29
-        Me.MaterialLabel5.Text = "Phone Number 1:*"
+        Me.MaterialLabel5.Text = "Phone Number 1:"
         '
         'MaterialLabel6
         '
@@ -230,6 +255,7 @@ Partial Class Frm_newContract
         'MaterialLabel7
         '
         Me.MaterialLabel7.AutoSize = True
+        Me.MaterialLabel7.ContextMenuStrip = Me.AccountsMenuStrip
         Me.MaterialLabel7.Depth = 0
         Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -237,9 +263,9 @@ Partial Class Frm_newContract
         Me.MaterialLabel7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel7.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel7.Name = "MaterialLabel7"
-        Me.MaterialLabel7.Size = New System.Drawing.Size(93, 19)
+        Me.MaterialLabel7.Size = New System.Drawing.Size(87, 19)
         Me.MaterialLabel7.TabIndex = 32
-        Me.MaterialLabel7.Text = "Account ID:*"
+        Me.MaterialLabel7.Text = "Account ID:"
         '
         'txt_accountid
         '
@@ -343,22 +369,6 @@ Partial Class Frm_newContract
         Me.txt_contnote.TabStop = False
         Me.txt_contnote.UseSystemPasswordChar = False
         '
-        'btn_submit
-        '
-        Me.btn_submit.AutoSize = True
-        Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_submit.Depth = 0
-        Me.btn_submit.Icon = Nothing
-        Me.btn_submit.Location = New System.Drawing.Point(478, 351)
-        Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btn_submit.Name = "btn_submit"
-        Me.btn_submit.Primary = False
-        Me.btn_submit.Size = New System.Drawing.Size(71, 36)
-        Me.btn_submit.TabIndex = 10
-        Me.btn_submit.Text = "Submit"
-        Me.btn_submit.UseVisualStyleBackColor = True
-        '
         'txt_boxes
         '
         Me.txt_boxes.ContextMenuStrip = Me.BoxesMenuStrip
@@ -397,6 +407,7 @@ Partial Class Frm_newContract
         'MaterialLabel10
         '
         Me.MaterialLabel10.AutoSize = True
+        Me.MaterialLabel10.ContextMenuStrip = Me.BoxesMenuStrip
         Me.MaterialLabel10.Depth = 0
         Me.MaterialLabel10.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -404,9 +415,9 @@ Partial Class Frm_newContract
         Me.MaterialLabel10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel10.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel10.Name = "MaterialLabel10"
-        Me.MaterialLabel10.Size = New System.Drawing.Size(62, 19)
+        Me.MaterialLabel10.Size = New System.Drawing.Size(56, 19)
         Me.MaterialLabel10.TabIndex = 40
-        Me.MaterialLabel10.Text = "Box ID:*"
+        Me.MaterialLabel10.Text = "Box ID:"
         '
         'lbl_empid
         '
@@ -415,7 +426,7 @@ Partial Class Frm_newContract
         Me.lbl_empid.Depth = 0
         Me.lbl_empid.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.lbl_empid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lbl_empid.Location = New System.Drawing.Point(183, 76)
+        Me.lbl_empid.Location = New System.Drawing.Point(329, 72)
         Me.lbl_empid.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_empid.MouseState = MaterialSkin.MouseState.HOVER
         Me.lbl_empid.Name = "lbl_empid"
@@ -430,7 +441,7 @@ Partial Class Frm_newContract
         Me.EmployeeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectDifferentEmployeeToolStripMenuItem})
         Me.EmployeeMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
         Me.EmployeeMenuStrip.Name = "EmployeeMenuStrip"
-        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 48)
+        Me.EmployeeMenuStrip.Size = New System.Drawing.Size(210, 26)
         '
         'SelectDifferentEmployeeToolStripMenuItem
         '
@@ -448,13 +459,14 @@ Partial Class Frm_newContract
         Me.MaterialLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel2.Name = "MaterialLabel2"
-        Me.MaterialLabel2.Size = New System.Drawing.Size(65, 19)
+        Me.MaterialLabel2.Size = New System.Drawing.Size(59, 19)
         Me.MaterialLabel2.TabIndex = 45
-        Me.MaterialLabel2.Text = "Region*:"
+        Me.MaterialLabel2.Text = "Region:"
         '
         'cbox_regions
         '
         Me.cbox_regions.BackColor = System.Drawing.Color.White
+        Me.cbox_regions.ContextMenuStrip = Me.RegionMenuStrip
         Me.cbox_regions.ForeColor = System.Drawing.Color.Black
         Me.cbox_regions.FormattingEnabled = True
         Me.cbox_regions.Location = New System.Drawing.Point(21, 244)
@@ -462,6 +474,27 @@ Partial Class Frm_newContract
         Me.cbox_regions.Name = "cbox_regions"
         Me.cbox_regions.Size = New System.Drawing.Size(148, 28)
         Me.cbox_regions.TabIndex = 4
+        '
+        'RegionMenuStrip
+        '
+        Me.RegionMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RegionMenuStrip.Depth = 0
+        Me.RegionMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyRegionToolStripMenuItem, Me.DeleteRegionToolStripMenuItem})
+        Me.RegionMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.RegionMenuStrip.Name = "RegionMenuStrip"
+        Me.RegionMenuStrip.Size = New System.Drawing.Size(153, 48)
+        '
+        'ModifyRegionToolStripMenuItem
+        '
+        Me.ModifyRegionToolStripMenuItem.Name = "ModifyRegionToolStripMenuItem"
+        Me.ModifyRegionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ModifyRegionToolStripMenuItem.Text = "Modify Region"
+        '
+        'DeleteRegionToolStripMenuItem
+        '
+        Me.DeleteRegionToolStripMenuItem.Name = "DeleteRegionToolStripMenuItem"
+        Me.DeleteRegionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteRegionToolStripMenuItem.Text = "Delete Region"
         '
         'MaterialLabel12
         '
@@ -473,13 +506,14 @@ Partial Class Frm_newContract
         Me.MaterialLabel12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel12.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel12.Name = "MaterialLabel12"
-        Me.MaterialLabel12.Size = New System.Drawing.Size(72, 19)
+        Me.MaterialLabel12.Size = New System.Drawing.Size(66, 19)
         Me.MaterialLabel12.TabIndex = 47
-        Me.MaterialLabel12.Text = "Building:*"
+        Me.MaterialLabel12.Text = "Building:"
         '
         'cbox_streets
         '
         Me.cbox_streets.BackColor = System.Drawing.Color.White
+        Me.cbox_streets.ContextMenuStrip = Me.StreetsMenuStrip
         Me.cbox_streets.ForeColor = System.Drawing.Color.Black
         Me.cbox_streets.FormattingEnabled = True
         Me.cbox_streets.Location = New System.Drawing.Point(177, 244)
@@ -488,12 +522,106 @@ Partial Class Frm_newContract
         Me.cbox_streets.Size = New System.Drawing.Size(148, 28)
         Me.cbox_streets.TabIndex = 5
         '
+        'StreetsMenuStrip
+        '
+        Me.StreetsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.StreetsMenuStrip.Depth = 0
+        Me.StreetsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyStreetToolStripMenuItem, Me.DeleteStreetToolStripMenuItem})
+        Me.StreetsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.StreetsMenuStrip.Name = "StreetsMenuStrip"
+        Me.StreetsMenuStrip.Size = New System.Drawing.Size(146, 48)
+        '
+        'ModifyStreetToolStripMenuItem
+        '
+        Me.ModifyStreetToolStripMenuItem.Name = "ModifyStreetToolStripMenuItem"
+        Me.ModifyStreetToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.ModifyStreetToolStripMenuItem.Text = "Modify Street"
+        '
+        'DeleteStreetToolStripMenuItem
+        '
+        Me.DeleteStreetToolStripMenuItem.Name = "DeleteStreetToolStripMenuItem"
+        Me.DeleteStreetToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.DeleteStreetToolStripMenuItem.Text = "Delete Street"
+        '
+        'RightsMenuStrip
+        '
+        Me.RightsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RightsMenuStrip.Depth = 0
+        Me.RightsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyRightToolStripMenuItem, Me.DeleteRightToolStripMenuItem})
+        Me.RightsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
+        Me.RightsMenuStrip.Name = "RightsMenuStrip"
+        Me.RightsMenuStrip.Size = New System.Drawing.Size(144, 48)
+        '
+        'ModifyRightToolStripMenuItem
+        '
+        Me.ModifyRightToolStripMenuItem.Name = "ModifyRightToolStripMenuItem"
+        Me.ModifyRightToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.ModifyRightToolStripMenuItem.Text = "Modify Right"
+        '
+        'DeleteRightToolStripMenuItem
+        '
+        Me.DeleteRightToolStripMenuItem.Name = "DeleteRightToolStripMenuItem"
+        Me.DeleteRightToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.DeleteRightToolStripMenuItem.Text = "Delete Right"
+        '
+        'Rdb_Client
+        '
+        Me.Rdb_Client.AutoSize = True
+        Me.Rdb_Client.Checked = True
+        Me.Rdb_Client.Depth = 0
+        Me.Rdb_Client.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Rdb_Client.Location = New System.Drawing.Point(9, 72)
+        Me.Rdb_Client.Margin = New System.Windows.Forms.Padding(0)
+        Me.Rdb_Client.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Rdb_Client.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Rdb_Client.Name = "Rdb_Client"
+        Me.Rdb_Client.Ripple = True
+        Me.Rdb_Client.Size = New System.Drawing.Size(64, 30)
+        Me.Rdb_Client.TabIndex = 48
+        Me.Rdb_Client.TabStop = True
+        Me.Rdb_Client.Text = "Client"
+        Me.Rdb_Client.UseVisualStyleBackColor = True
+        '
+        'Rdb_Company
+        '
+        Me.Rdb_Company.AutoSize = True
+        Me.Rdb_Company.Depth = 0
+        Me.Rdb_Company.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Rdb_Company.Location = New System.Drawing.Point(78, 72)
+        Me.Rdb_Company.Margin = New System.Windows.Forms.Padding(0)
+        Me.Rdb_Company.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Rdb_Company.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Rdb_Company.Name = "Rdb_Company"
+        Me.Rdb_Company.Ripple = True
+        Me.Rdb_Company.Size = New System.Drawing.Size(87, 30)
+        Me.Rdb_Company.TabIndex = 49
+        Me.Rdb_Company.Text = "Company"
+        Me.Rdb_Company.UseVisualStyleBackColor = True
+        '
+        'btn_submit
+        '
+        Me.btn_submit.AutoSize = True
+        Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_submit.Depth = 0
+        Me.btn_submit.Icon = Nothing
+        Me.btn_submit.Location = New System.Drawing.Point(477, 351)
+        Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_submit.Name = "btn_submit"
+        Me.btn_submit.Primary = True
+        Me.btn_submit.Size = New System.Drawing.Size(71, 36)
+        Me.btn_submit.TabIndex = 50
+        Me.btn_submit.Text = "Submit"
+        Me.btn_submit.UseVisualStyleBackColor = True
+        '
         'Frm_newContract
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(562, 404)
+        Me.Controls.Add(Me.btn_submit)
+        Me.Controls.Add(Me.Rdb_Company)
+        Me.Controls.Add(Me.Rdb_Client)
         Me.Controls.Add(Me.MaterialLabel12)
         Me.Controls.Add(Me.cbox_streets)
         Me.Controls.Add(Me.MaterialLabel2)
@@ -501,7 +629,6 @@ Partial Class Frm_newContract
         Me.Controls.Add(Me.lbl_empid)
         Me.Controls.Add(Me.txt_boxes)
         Me.Controls.Add(Me.MaterialLabel10)
-        Me.Controls.Add(Me.btn_submit)
         Me.Controls.Add(Me.MaterialLabel9)
         Me.Controls.Add(Me.txt_contnote)
         Me.Controls.Add(Me.txt_clientinfo)
@@ -516,7 +643,6 @@ Partial Class Frm_newContract
         Me.Controls.Add(Me.MaterialLabel3)
         Me.Controls.Add(Me.cbox_buildings)
         Me.Controls.Add(Me.dtpick_exdate)
-        Me.Controls.Add(Me.lbl_contractid)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txt_phone1)
@@ -525,10 +651,14 @@ Partial Class Frm_newContract
         Me.MaximizeBox = False
         Me.Name = "Frm_newContract"
         Me.Text = "New Contract"
+        Me.BuildingsMenuStrip.ResumeLayout(False)
         CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AccountsMenuStrip.ResumeLayout(False)
         Me.BoxesMenuStrip.ResumeLayout(False)
         Me.EmployeeMenuStrip.ResumeLayout(False)
+        Me.RegionMenuStrip.ResumeLayout(False)
+        Me.StreetsMenuStrip.ResumeLayout(False)
+        Me.RightsMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -537,7 +667,6 @@ Partial Class Frm_newContract
     Friend WithEvents txt_phone1 As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents Label3 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents lbl_contractid As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents dtpick_exdate As DateTimePicker
     Friend WithEvents cbox_buildings As ComboBox
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
@@ -552,7 +681,6 @@ Partial Class Frm_newContract
     Friend WithEvents txt_clientinfo As System.Windows.Forms.TextBox
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_contnote As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents txt_boxes As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel10 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents lbl_empid As MaterialSkin.Controls.MaterialLabel
@@ -567,4 +695,19 @@ Partial Class Frm_newContract
     Friend WithEvents cbox_streets As ComboBox
     Friend WithEvents EmployeeMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents SelectDifferentEmployeeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RightsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ModifyRightToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteRightToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BuildingsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ModifySelectedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteBuildingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegionMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ModifyRegionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteRegionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StreetsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ModifyStreetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DeleteStreetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Rdb_Client As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Rdb_Company As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialRaisedButton
 End Class
