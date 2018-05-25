@@ -37,10 +37,10 @@ Partial Class Frm_newContract
         Me.MaterialLabel6 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_phone2 = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_accountid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.AccountsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.SelectAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.txt_accountid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_clientinfo = New System.Windows.Forms.TextBox()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
@@ -62,9 +62,6 @@ Partial Class Frm_newContract
         Me.StreetsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.ModifyStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RightsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
-        Me.ModifyRightToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteRightToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Rdb_Client = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Rdb_Company = New MaterialSkin.Controls.MaterialRadioButton()
         Me.btn_submit = New MaterialSkin.Controls.MaterialRaisedButton()
@@ -75,7 +72,6 @@ Partial Class Frm_newContract
         Me.EmployeeMenuStrip.SuspendLayout()
         Me.RegionMenuStrip.SuspendLayout()
         Me.StreetsMenuStrip.SuspendLayout()
-        Me.RightsMenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'txt_phone1
@@ -154,18 +150,18 @@ Partial Class Frm_newContract
         Me.BuildingsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifySelectedToolStripMenuItem, Me.DeleteBuildingToolStripMenuItem})
         Me.BuildingsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
         Me.BuildingsMenuStrip.Name = "BuildingsMenuStrip"
-        Me.BuildingsMenuStrip.Size = New System.Drawing.Size(160, 48)
+        Me.BuildingsMenuStrip.Size = New System.Drawing.Size(181, 70)
         '
         'ModifySelectedToolStripMenuItem
         '
         Me.ModifySelectedToolStripMenuItem.Name = "ModifySelectedToolStripMenuItem"
-        Me.ModifySelectedToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.ModifySelectedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ModifySelectedToolStripMenuItem.Text = "Modify Building"
         '
         'DeleteBuildingToolStripMenuItem
         '
         Me.DeleteBuildingToolStripMenuItem.Name = "DeleteBuildingToolStripMenuItem"
-        Me.DeleteBuildingToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.DeleteBuildingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DeleteBuildingToolStripMenuItem.Text = "Delete Building"
         '
         'MaterialLabel3
@@ -267,26 +263,6 @@ Partial Class Frm_newContract
         Me.MaterialLabel7.TabIndex = 32
         Me.MaterialLabel7.Text = "Account ID:"
         '
-        'txt_accountid
-        '
-        Me.txt_accountid.ContextMenuStrip = Me.AccountsMenuStrip
-        Me.txt_accountid.Depth = 0
-        Me.txt_accountid.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.txt_accountid.Hint = ""
-        Me.txt_accountid.Location = New System.Drawing.Point(21, 134)
-        Me.txt_accountid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txt_accountid.MaxLength = 32767
-        Me.txt_accountid.MouseState = MaterialSkin.MouseState.HOVER
-        Me.txt_accountid.Name = "txt_accountid"
-        Me.txt_accountid.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txt_accountid.SelectedText = ""
-        Me.txt_accountid.SelectionLength = 0
-        Me.txt_accountid.SelectionStart = 0
-        Me.txt_accountid.Size = New System.Drawing.Size(148, 23)
-        Me.txt_accountid.TabIndex = 0
-        Me.txt_accountid.TabStop = False
-        Me.txt_accountid.UseSystemPasswordChar = False
-        '
         'AccountsMenuStrip
         '
         Me.AccountsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -307,6 +283,26 @@ Partial Class Frm_newContract
         Me.NewAccountToolStripMenuItem.Name = "NewAccountToolStripMenuItem"
         Me.NewAccountToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.NewAccountToolStripMenuItem.Text = "New Account"
+        '
+        'txt_accountid
+        '
+        Me.txt_accountid.ContextMenuStrip = Me.AccountsMenuStrip
+        Me.txt_accountid.Depth = 0
+        Me.txt_accountid.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.txt_accountid.Hint = ""
+        Me.txt_accountid.Location = New System.Drawing.Point(21, 134)
+        Me.txt_accountid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_accountid.MaxLength = 32767
+        Me.txt_accountid.MouseState = MaterialSkin.MouseState.HOVER
+        Me.txt_accountid.Name = "txt_accountid"
+        Me.txt_accountid.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_accountid.SelectedText = ""
+        Me.txt_accountid.SelectionLength = 0
+        Me.txt_accountid.SelectionStart = 0
+        Me.txt_accountid.Size = New System.Drawing.Size(148, 23)
+        Me.txt_accountid.TabIndex = 0
+        Me.txt_accountid.TabStop = False
+        Me.txt_accountid.UseSystemPasswordChar = False
         '
         'MaterialLabel8
         '
@@ -543,27 +539,6 @@ Partial Class Frm_newContract
         Me.DeleteStreetToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.DeleteStreetToolStripMenuItem.Text = "Delete Street"
         '
-        'RightsMenuStrip
-        '
-        Me.RightsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.RightsMenuStrip.Depth = 0
-        Me.RightsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyRightToolStripMenuItem, Me.DeleteRightToolStripMenuItem})
-        Me.RightsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
-        Me.RightsMenuStrip.Name = "RightsMenuStrip"
-        Me.RightsMenuStrip.Size = New System.Drawing.Size(144, 48)
-        '
-        'ModifyRightToolStripMenuItem
-        '
-        Me.ModifyRightToolStripMenuItem.Name = "ModifyRightToolStripMenuItem"
-        Me.ModifyRightToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
-        Me.ModifyRightToolStripMenuItem.Text = "Modify Right"
-        '
-        'DeleteRightToolStripMenuItem
-        '
-        Me.DeleteRightToolStripMenuItem.Name = "DeleteRightToolStripMenuItem"
-        Me.DeleteRightToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
-        Me.DeleteRightToolStripMenuItem.Text = "Delete Right"
-        '
         'Rdb_Client
         '
         Me.Rdb_Client.AutoSize = True
@@ -658,7 +633,6 @@ Partial Class Frm_newContract
         Me.EmployeeMenuStrip.ResumeLayout(False)
         Me.RegionMenuStrip.ResumeLayout(False)
         Me.StreetsMenuStrip.ResumeLayout(False)
-        Me.RightsMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -695,9 +669,6 @@ Partial Class Frm_newContract
     Friend WithEvents cbox_streets As ComboBox
     Friend WithEvents EmployeeMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents SelectDifferentEmployeeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RightsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
-    Friend WithEvents ModifyRightToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DeleteRightToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BuildingsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents ModifySelectedToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteBuildingToolStripMenuItem As ToolStripMenuItem
