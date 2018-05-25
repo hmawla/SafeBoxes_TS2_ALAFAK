@@ -184,18 +184,6 @@
     <Compile Include="Frm_Authorize.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_ClientAccounts.Designer.vb">
-      <DependentUpon>Frm_ClientAccounts.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_ClientAccounts.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_CompaniesAccounts.Designer.vb">
-      <DependentUpon>Frm_CompaniesAccounts.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_CompaniesAccounts.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Frm_NewBox.Designer.vb">
       <DependentUpon>Frm_NewBox.vb</DependentUpon>
     </Compile>
@@ -518,12 +506,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Authorize.resx">
       <DependentUpon>Frm_Authorize.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ClientAccounts.resx">
-      <DependentUpon>Frm_ClientAccounts.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_CompaniesAccounts.resx">
-      <DependentUpon>Frm_CompaniesAccounts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewBox.resx">
       <DependentUpon>Frm_NewBox.vb</DependentUpon>

@@ -20,6 +20,9 @@
     Private Sub Btn_NewAccount_Click(sender As Object, e As EventArgs) Handles Btn_NewAccount.Click
         If Rdb_Clients.Checked Then
             'Clients Codes
+            Frm_NewAccountClient.ShowDialog()
+            FillDGV(DGV_Accounts, "SELECT AccountId AS [Account ID], C.ClientId AS [Client ID], ClientFName + ' ' + ClientLName AS [Client's Name] FROM Clients C, ClientDepAccount A WHERE C.ClientId = A.ClientId")
+
         Else
             'Companies Codes
         End If

@@ -245,11 +245,4 @@
         Frm_Authorize.ShowDialog()
         FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd) And ContToDate > date()")
     End Sub
-
-    Private Sub CompanyAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CompanyAccountToolStripMenuItem.Click
-        Frm_main.accountid = 0
-        Frm_CompaniesAccounts.ShowDialog()
-        FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd) And ContToDate > date() AND Contract.AccountId=" & Frm_main.accountid)
-
-    End Sub
 End Class

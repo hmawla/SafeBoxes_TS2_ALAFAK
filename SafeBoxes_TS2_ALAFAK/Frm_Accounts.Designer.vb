@@ -108,7 +108,7 @@ Partial Class Frm_Accounts
         Me.Btn_ModAccount.Depth = 0
         Me.Btn_ModAccount.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ModAccount.Icon = Nothing
-        Me.Btn_ModAccount.Location = New System.Drawing.Point(9, 58)
+        Me.Btn_ModAccount.Location = New System.Drawing.Point(4, 68)
         Me.Btn_ModAccount.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Btn_ModAccount.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_ModAccount.Name = "Btn_ModAccount"
@@ -125,7 +125,7 @@ Partial Class Frm_Accounts
         Me.Btn_NewAccount.Depth = 0
         Me.Btn_NewAccount.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_NewAccount.Icon = Nothing
-        Me.Btn_NewAccount.Location = New System.Drawing.Point(9, 19)
+        Me.Btn_NewAccount.Location = New System.Drawing.Point(4, 29)
         Me.Btn_NewAccount.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Btn_NewAccount.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_NewAccount.Name = "Btn_NewAccount"
@@ -142,7 +142,7 @@ Partial Class Frm_Accounts
         Me.Btn_DelAccount.Depth = 0
         Me.Btn_DelAccount.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_DelAccount.Icon = Nothing
-        Me.Btn_DelAccount.Location = New System.Drawing.Point(9, 97)
+        Me.Btn_DelAccount.Location = New System.Drawing.Point(4, 107)
         Me.Btn_DelAccount.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Btn_DelAccount.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_DelAccount.Name = "Btn_DelAccount"
