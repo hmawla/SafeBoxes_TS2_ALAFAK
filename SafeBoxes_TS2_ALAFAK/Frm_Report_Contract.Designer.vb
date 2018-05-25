@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Frm_Report_Contract
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -23,11 +23,11 @@ Partial Class Frm_Report_Contract
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Txt_ContId = New System.Windows.Forms.TextBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.CheckBox1 = New MaterialSkin.Controls.MaterialCheckBox()
+        Me.Txt_ContId = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.RadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
-        Me.Rdb_ByContId = New System.Windows.Forms.RadioButton()
+        Me.Rdb_ByContId = New MaterialSkin.Controls.MaterialRadioButton()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.CRptV_Contract = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
@@ -37,6 +37,7 @@ Partial Class Frm_Report_Contract
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.CheckBox1)
         Me.GroupBox1.Controls.Add(Me.Txt_ContId)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
@@ -44,7 +45,7 @@ Partial Class Frm_Report_Contract
         Me.GroupBox1.Controls.Add(Me.Rdb_ByContId)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 79)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(688, 134)
         Me.GroupBox1.TabIndex = 20
@@ -54,27 +55,49 @@ Partial Class Frm_Report_Contract
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Depth = 0
+        Me.CheckBox1.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.CheckBox1.Location = New System.Drawing.Point(579, 104)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.CheckBox1.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.CheckBox1.MouseState = MaterialSkin.MouseState.HOVER
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(92, 24)
+        Me.CheckBox1.Ripple = True
+        Me.CheckBox1.Size = New System.Drawing.Size(87, 30)
         Me.CheckBox1.TabIndex = 17
         Me.CheckBox1.Text = "Delivered"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Txt_ContId
         '
+        Me.Txt_ContId.Depth = 0
+        Me.Txt_ContId.Hint = ""
         Me.Txt_ContId.Location = New System.Drawing.Point(6, 57)
         Me.Txt_ContId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Txt_ContId.MaxLength = 32767
+        Me.Txt_ContId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Txt_ContId.Name = "Txt_ContId"
-        Me.Txt_ContId.Size = New System.Drawing.Size(234, 27)
+        Me.Txt_ContId.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Txt_ContId.SelectedText = ""
+        Me.Txt_ContId.SelectionLength = 0
+        Me.Txt_ContId.SelectionStart = 0
+        Me.Txt_ContId.Size = New System.Drawing.Size(234, 23)
         Me.Txt_ContId.TabIndex = 12
+        Me.Txt_ContId.TabStop = False
+        Me.Txt_ContId.UseSystemPasswordChar = False
         '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Depth = 0
+        Me.RadioButton2.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.RadioButton2.Location = New System.Drawing.Point(250, 25)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadioButton2.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.RadioButton2.MouseState = MaterialSkin.MouseState.HOVER
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(165, 24)
+        Me.RadioButton2.Ripple = True
+        Me.RadioButton2.Size = New System.Drawing.Size(149, 30)
         Me.RadioButton2.TabIndex = 15
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "By Date (FROM-TO)"
@@ -95,9 +118,15 @@ Partial Class Frm_Report_Contract
         'Rdb_ByContId
         '
         Me.Rdb_ByContId.AutoSize = True
+        Me.Rdb_ByContId.Depth = 0
+        Me.Rdb_ByContId.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.Rdb_ByContId.Location = New System.Drawing.Point(6, 25)
+        Me.Rdb_ByContId.Margin = New System.Windows.Forms.Padding(0)
+        Me.Rdb_ByContId.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Rdb_ByContId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Rdb_ByContId.Name = "Rdb_ByContId"
-        Me.Rdb_ByContId.Size = New System.Drawing.Size(127, 24)
+        Me.Rdb_ByContId.Ripple = True
+        Me.Rdb_ByContId.Size = New System.Drawing.Size(117, 30)
         Me.Rdb_ByContId.TabIndex = 16
         Me.Rdb_ByContId.TabStop = True
         Me.Rdb_ByContId.Text = "By Contract ID"
@@ -121,9 +150,9 @@ Partial Class Frm_Report_Contract
         Me.CRptV_Contract.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CRptV_Contract.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRptV_Contract.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CRptV_Contract.Location = New System.Drawing.Point(12, 152)
+        Me.CRptV_Contract.Location = New System.Drawing.Point(12, 219)
         Me.CRptV_Contract.Name = "CRptV_Contract"
-        Me.CRptV_Contract.Size = New System.Drawing.Size(688, 428)
+        Me.CRptV_Contract.Size = New System.Drawing.Size(688, 361)
         Me.CRptV_Contract.TabIndex = 21
         '
         'Frm_Report_Contract
@@ -141,11 +170,11 @@ Partial Class Frm_Report_Contract
 
     End Sub
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Txt_ContId As TextBox
-    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents CheckBox1 As MaterialSkin.Controls.MaterialCheckBox
+    Friend WithEvents Txt_ContId As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents RadioButton2 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents dtpick_exdate As DateTimePicker
-    Friend WithEvents Rdb_ByContId As RadioButton
+    Friend WithEvents Rdb_ByContId As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents CRptV_Contract As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class
