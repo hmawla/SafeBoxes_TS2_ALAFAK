@@ -70,6 +70,7 @@ Partial Class Frm_NewInfoVoucher
         'MaterialLabel5
         '
         Me.MaterialLabel5.AutoSize = True
+        Me.MaterialLabel5.ContextMenuStrip = Me.ClientSelector
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -97,6 +98,7 @@ Partial Class Frm_NewInfoVoucher
         '
         'txt_clientid
         '
+        Me.txt_clientid.ContextMenuStrip = Me.ClientSelector
         Me.txt_clientid.Depth = 0
         Me.txt_clientid.Hint = ""
         Me.txt_clientid.Location = New System.Drawing.Point(19, 103)
@@ -516,6 +518,7 @@ Partial Class Frm_NewInfoVoucher
         '
         'txt_contractid
         '
+        Me.txt_contractid.ContextMenuStrip = Me.ContractSelector
         Me.txt_contractid.Depth = 0
         Me.txt_contractid.Hint = ""
         Me.txt_contractid.Location = New System.Drawing.Point(306, 103)
@@ -535,6 +538,7 @@ Partial Class Frm_NewInfoVoucher
         'MaterialLabel10
         '
         Me.MaterialLabel10.AutoSize = True
+        Me.MaterialLabel10.ContextMenuStrip = Me.ContractSelector
         Me.MaterialLabel10.Depth = 0
         Me.MaterialLabel10.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -613,7 +617,9 @@ Partial Class Frm_NewInfoVoucher
         Me.Controls.Add(Me.txt_clientname)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MaximizeBox = False
         Me.Name = "Frm_NewInfoVoucher"
+        Me.Sizable = False
         Me.Text = "Info Voucher"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
