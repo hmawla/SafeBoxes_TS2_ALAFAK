@@ -2,7 +2,7 @@
 Public Class Frm_Clients
     Public clientId As Integer
     Private Sub Frm_Clients_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName AS [First Name], ClientMName AS [Father Name], ClientLName AS [Last Name], ClientDOB AS [Date Of Birth], ClientMother AS [Mother Name], ClientRegisterNbr, PostBoxNbr,RegionName  FROM Clients c,Regions r WHERE c.RegionId=r.RegionId")
+        FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName + ' ' + ClientLName AS [Client's Name], ClientMName AS [Father's Name], ClientMother AS [Mother's Name], ClientDOB AS [Date of Birth], ClientRegisterNbr AS [Register#], PostBoxNbr AS [Post Box#], RegionName AS [Birth Place] FROM Clients C, Regions R WHERE C.RegionId = R.RegionId")
     End Sub
 
     Private Sub btn_newclient_Click(sender As Object, e As EventArgs) Handles btn_newclient.Click
