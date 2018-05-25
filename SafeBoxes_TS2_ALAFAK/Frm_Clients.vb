@@ -8,13 +8,13 @@ Public Class Frm_Clients
     Private Sub btn_newclient_Click(sender As Object, e As EventArgs) Handles btn_newclient.Click
         clientId = 0
         Frm_NewClient.ShowDialog()
-        FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName AS [First Name], ClientMName AS [Father Name], ClientLName AS [Last Name], ClientDOB AS [Date Of Birth], ClientMother AS [Mother Name], ClientRegisterNbr, PostBoxNbr,RegionName  FROM Clients c,Regions r WHERE c.RegionId=r.RegionId")
+        FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName + ' ' + ClientLName AS [Client's Name], ClientMName AS [Father's Name], ClientMother AS [Mother's Name], ClientDOB AS [Date of Birth], ClientRegisterNbr AS [Register#], PostBoxNbr AS [Post Box#], RegionName AS [Birth Place] FROM Clients C, Regions R WHERE C.RegionId = R.RegionId")
     End Sub
 
     Private Sub btn_modclient_Click(sender As Object, e As EventArgs) Handles btn_modclient.Click
         clientId = dgv_clients.SelectedRows(0).Cells(0).Value
         Frm_NewClient.ShowDialog()
-        FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName AS [First Name], ClientMName AS [Father Name], ClientLName AS [Last Name], ClientDOB AS [Date Of Birth], ClientMother AS [Mother Name], ClientRegisterNbr, PostBoxNbr,RegionName  FROM Clients c,Regions r WHERE c.RegionId=r.RegionId")
+        FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName + ' ' + ClientLName AS [Client's Name], ClientMName AS [Father's Name], ClientMother AS [Mother's Name], ClientDOB AS [Date of Birth], ClientRegisterNbr AS [Register#], PostBoxNbr AS [Post Box#], RegionName AS [Birth Place] FROM Clients C, Regions R WHERE C.RegionId = R.RegionId")
     End Sub
 
     Private Sub btn_delclient_Click(sender As Object, e As EventArgs) Handles btn_delclient.Click
@@ -22,7 +22,7 @@ Public Class Frm_Clients
         If Not inResult.Equals("0") Then
             If inResult = "12345" Then
                 ExecuteQuery("DELETE FROM Clients WHERE ClientId = " & dgv_clients.SelectedRows(0).Cells(0).Value)
-                FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName AS [First Name], ClientMName AS [Father Name], ClientLName AS [Last Name], ClientDOB AS [Date Of Birth], ClientMother AS [Mother Name], ClientRegisterNbr, PostBoxNbr,RegionName  FROM Clients c,Regions r WHERE c.RegionId=r.RegionId")
+                FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName + ' ' + ClientLName AS [Client's Name], ClientMName AS [Father's Name], ClientMother AS [Mother's Name], ClientDOB AS [Date of Birth], ClientRegisterNbr AS [Register#], PostBoxNbr AS [Post Box#], RegionName AS [Birth Place] FROM Clients C, Regions R WHERE C.RegionId = R.RegionId")
             Else
                 MessageBox.Show("Wrong password!")
             End If
@@ -57,21 +57,30 @@ Public Class Frm_Clients
     Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
         btn_reset.Enabled = True
         If rdb_byClientid.Checked Then
-            FillDGV(dgv_clients, "SELECT ClientId as ID, ClientFName + ' ' + ClientLName as [Full Name], ClientMName as [Father's Name], ClientMother as [Mother's Name], ClientDOB as [Birth Date] FROM Clients WHERE ClientId = " & txt_bycid.Text)
-        Else
-            Dim firstName As String
-            Dim lastName As String = ""
-            firstName = txt_bycname.Text.Split(New Char() {" "c})(0)
-            Try
-                lastName = txt_bycname.Text.Split(New Char() {" "c})(1)
-            Catch ex As Exception
-
-            End Try
-            Dim theQuery As String = "SELECT ClientId as ID, ClientFName + ' ' + ClientLName as [Full Name], ClientMName as [Father's Name], ClientMother as [Mother's Name], ClientDOB as [Birth Date] FROM Clients WHERE ClientFName LIKE '%" & firstName & "%'"
-            If lastName <> "" Then
-                theQuery = "SELECT ClientId as ID, ClientFName + ' ' + ClientLName as [Full Name], ClientMName as [Father's Name], ClientMother as [Mother's Name], ClientDOB as [Birth Date] FROM Clients WHERE ClientFName LIKE '%" & firstName & "%' AND ClientLName LIKE '%" & lastName & "%'"
+            If txt_bycid.Text.Count > 0 Then
+                FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName + ' ' + ClientLName AS [Client's Name], ClientMName AS [Father's Name], ClientMother AS [Mother's Name], ClientDOB AS [Date of Birth], ClientRegisterNbr AS [Register#], PostBoxNbr AS [Post Box#], RegionName AS [Birth Place] FROM Clients C, Regions R WHERE C.RegionId = R.RegionId AND ClientId = " & txt_bycid.Text)
+            Else
+                MessageBox.Show("Enter a valid ID!")
             End If
-            FillDGV(dgv_clients, theQuery)
+
+        Else
+            If txt_bycname.Text.Count > 0 Then
+                Dim firstName As String
+                Dim lastName As String = ""
+                firstName = txt_bycname.Text.Split(New Char() {" "c})(0)
+                Try
+                    lastName = txt_bycname.Text.Split(New Char() {" "c})(1)
+                Catch ex As Exception
+
+                End Try
+                Dim theQuery As String = "SELECT ClientId AS [ID], ClientFName + ' ' + ClientLName AS [Client's Name], ClientMName AS [Father's Name], ClientMother AS [Mother's Name], ClientDOB AS [Date of Birth], ClientRegisterNbr AS [Register#], PostBoxNbr AS [Post Box#], RegionName AS [Birth Place] FROM Clients C, Regions R WHERE C.RegionId = R.RegionId AND ClientFName LIKE '%" & firstName & "%'"
+                If lastName <> "" Then
+                    theQuery = "SELECT ClientId AS [ID], ClientFName + ' ' + ClientLName AS [Client's Name], ClientMName AS [Father's Name], ClientMother AS [Mother's Name], ClientDOB AS [Date of Birth], ClientRegisterNbr AS [Register#], PostBoxNbr AS [Post Box#], RegionName AS [Birth Place] FROM Clients C, Regions R WHERE C.RegionId = R.RegionId AND ClientFName LIKE '%" & firstName & "%' AND ClientLName LIKE '%" & lastName & "%'"
+                End If
+                FillDGV(dgv_clients, theQuery)
+            Else
+                MessageBox.Show("Enter a valid name!")
+            End If
         End If
     End Sub
 
@@ -90,7 +99,7 @@ Public Class Frm_Clients
     End Sub
 
     Private Sub btn_reset_Click(sender As Object, e As EventArgs) Handles btn_reset.Click
-        FillDGV(dgv_clients, "SELECT ClientId as ID, ClientFName + ' ' + ClientLName as [Full Name], ClientMName as [Father's Name], ClientMother as [Mother's Name], ClientDOB as [Birth Date] FROM Clients")
+        FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName + ' ' + ClientLName AS [Client's Name], ClientMName AS [Father's Name], ClientMother AS [Mother's Name], ClientDOB AS [Date of Birth], ClientRegisterNbr AS [Register#], PostBoxNbr AS [Post Box#], RegionName AS [Birth Place] FROM Clients C, Regions R WHERE C.RegionId = R.RegionId")
         btn_reset.Enabled = False
         txt_bycid.Text = ""
         txt_bycname.Text = ""
