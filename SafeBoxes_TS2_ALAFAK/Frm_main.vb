@@ -48,14 +48,6 @@ Public Class Frm_main
         Frm_SignatureCards.ShowDialog()
     End Sub
 
-    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs)
-        Frm_ClientAccounts.ShowDialog()
-    End Sub
-
-    Private Sub MaterialFlatButton2_Click(sender As Object, e As EventArgs)
-        Frm_CompaniesAccounts.ShowDialog()
-    End Sub
-
     Private Sub Frm_main_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
         PictureBox3.Visible = False
     End Sub

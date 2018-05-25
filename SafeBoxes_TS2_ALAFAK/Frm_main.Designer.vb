@@ -33,7 +33,6 @@ Partial Class Frm_main
         Me.Lbl_WelcomeEmp = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialDivider2 = New MaterialSkin.Controls.MaterialDivider()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialDivider3 = New MaterialSkin.Controls.MaterialDivider()
@@ -42,6 +41,7 @@ Partial Class Frm_main
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.Btn_AccountsManager = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.MaterialDivider2 = New MaterialSkin.Controls.MaterialDivider()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,19 +212,6 @@ Partial Class Frm_main
         Me.MaterialLabel1.TabIndex = 32
         Me.MaterialLabel1.Text = "Hussein, Hadi, Mohammad"
         '
-        'MaterialDivider2
-        '
-        Me.MaterialDivider2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MaterialDivider2.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialDivider2.Depth = 0
-        Me.MaterialDivider2.Location = New System.Drawing.Point(-1, 601)
-        Me.MaterialDivider2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialDivider2.Name = "MaterialDivider2"
-        Me.MaterialDivider2.Size = New System.Drawing.Size(1133, 1)
-        Me.MaterialDivider2.TabIndex = 33
-        Me.MaterialDivider2.Text = "MaterialDivider2"
-        '
         'MaterialRaisedButton1
         '
         Me.MaterialRaisedButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -334,6 +321,19 @@ Partial Class Frm_main
         Me.Btn_AccountsManager.Text = "Accounts Manager"
         Me.Btn_AccountsManager.UseVisualStyleBackColor = True
         '
+        'MaterialDivider2
+        '
+        Me.MaterialDivider2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MaterialDivider2.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialDivider2.Depth = 0
+        Me.MaterialDivider2.Location = New System.Drawing.Point(-1, 601)
+        Me.MaterialDivider2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialDivider2.Name = "MaterialDivider2"
+        Me.MaterialDivider2.Size = New System.Drawing.Size(1133, 1)
+        Me.MaterialDivider2.TabIndex = 33
+        Me.MaterialDivider2.Text = "MaterialDivider2"
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -383,11 +383,11 @@ Partial Class Frm_main
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents MaterialDivider1 As MaterialSkin.Controls.MaterialDivider
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents MaterialDivider2 As MaterialSkin.Controls.MaterialDivider
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialDivider3 As MaterialSkin.Controls.MaterialDivider
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Btn_AccountsManager As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents MaterialDivider2 As MaterialSkin.Controls.MaterialDivider
 End Class
