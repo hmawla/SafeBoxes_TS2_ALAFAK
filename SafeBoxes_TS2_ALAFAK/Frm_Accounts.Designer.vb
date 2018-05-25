@@ -34,15 +34,15 @@ Partial Class Frm_Accounts
         Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.txt_cname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txt_byaccid = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.rdb_byCname = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.rdb_byAccid = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.dgv_accounts = New System.Windows.Forms.DataGridView()
+        Me.Rdb_ByName = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Rdb_ByAccId = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.DGV_Accounts = New System.Windows.Forms.DataGridView()
         Me.Rdb_Companies = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Rdb_Clients = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGV_Accounts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MaterialTabSelector1
@@ -154,11 +154,11 @@ Partial Class Frm_Accounts
         Me.TabPage2.Controls.Add(Me.btn_search)
         Me.TabPage2.Controls.Add(Me.txt_cname)
         Me.TabPage2.Controls.Add(Me.txt_byaccid)
-        Me.TabPage2.Controls.Add(Me.rdb_byCname)
-        Me.TabPage2.Controls.Add(Me.rdb_byAccid)
+        Me.TabPage2.Controls.Add(Me.Rdb_ByName)
+        Me.TabPage2.Controls.Add(Me.Rdb_ByAccId)
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(646, 137)
+        Me.TabPage2.Size = New System.Drawing.Size(768, 137)
         Me.TabPage2.TabIndex = 0
         Me.TabPage2.Text = "Filter"
         '
@@ -170,7 +170,7 @@ Partial Class Frm_Accounts
         Me.btn_reset.Depth = 0
         Me.btn_reset.Enabled = False
         Me.btn_reset.Icon = Nothing
-        Me.btn_reset.Location = New System.Drawing.Point(610, 93)
+        Me.btn_reset.Location = New System.Drawing.Point(732, 93)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_reset.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_reset.Name = "btn_reset"
@@ -187,7 +187,7 @@ Partial Class Frm_Accounts
         Me.btn_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_search.Depth = 0
         Me.btn_search.Icon = Nothing
-        Me.btn_search.Location = New System.Drawing.Point(534, 93)
+        Me.btn_search.Location = New System.Drawing.Point(656, 93)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.btn_search.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_search.Name = "btn_search"
@@ -233,65 +233,65 @@ Partial Class Frm_Accounts
         Me.txt_byaccid.TabStop = False
         Me.txt_byaccid.UseSystemPasswordChar = False
         '
-        'rdb_byCname
+        'Rdb_ByName
         '
-        Me.rdb_byCname.AutoSize = True
-        Me.rdb_byCname.Depth = 0
-        Me.rdb_byCname.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.rdb_byCname.Location = New System.Drawing.Point(9, 73)
-        Me.rdb_byCname.Margin = New System.Windows.Forms.Padding(0)
-        Me.rdb_byCname.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.rdb_byCname.MouseState = MaterialSkin.MouseState.HOVER
-        Me.rdb_byCname.Name = "rdb_byCname"
-        Me.rdb_byCname.Ripple = True
-        Me.rdb_byCname.Size = New System.Drawing.Size(123, 30)
-        Me.rdb_byCname.TabIndex = 1
-        Me.rdb_byCname.Text = "By Client Name"
-        Me.rdb_byCname.UseVisualStyleBackColor = True
+        Me.Rdb_ByName.AutoSize = True
+        Me.Rdb_ByName.Depth = 0
+        Me.Rdb_ByName.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Rdb_ByName.Location = New System.Drawing.Point(9, 73)
+        Me.Rdb_ByName.Margin = New System.Windows.Forms.Padding(0)
+        Me.Rdb_ByName.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Rdb_ByName.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Rdb_ByName.Name = "Rdb_ByName"
+        Me.Rdb_ByName.Ripple = True
+        Me.Rdb_ByName.Size = New System.Drawing.Size(84, 30)
+        Me.Rdb_ByName.TabIndex = 1
+        Me.Rdb_ByName.Text = "By Name"
+        Me.Rdb_ByName.UseVisualStyleBackColor = True
         '
-        'rdb_byAccid
+        'Rdb_ByAccId
         '
-        Me.rdb_byAccid.AutoSize = True
-        Me.rdb_byAccid.Depth = 0
-        Me.rdb_byAccid.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.rdb_byAccid.Location = New System.Drawing.Point(9, 15)
-        Me.rdb_byAccid.Margin = New System.Windows.Forms.Padding(0)
-        Me.rdb_byAccid.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.rdb_byAccid.MouseState = MaterialSkin.MouseState.HOVER
-        Me.rdb_byAccid.Name = "rdb_byAccid"
-        Me.rdb_byAccid.Ripple = True
-        Me.rdb_byAccid.Size = New System.Drawing.Size(115, 30)
-        Me.rdb_byAccid.TabIndex = 0
-        Me.rdb_byAccid.Text = "By Account ID"
-        Me.rdb_byAccid.UseVisualStyleBackColor = True
+        Me.Rdb_ByAccId.AutoSize = True
+        Me.Rdb_ByAccId.Depth = 0
+        Me.Rdb_ByAccId.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Rdb_ByAccId.Location = New System.Drawing.Point(9, 15)
+        Me.Rdb_ByAccId.Margin = New System.Windows.Forms.Padding(0)
+        Me.Rdb_ByAccId.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Rdb_ByAccId.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Rdb_ByAccId.Name = "Rdb_ByAccId"
+        Me.Rdb_ByAccId.Ripple = True
+        Me.Rdb_ByAccId.Size = New System.Drawing.Size(115, 30)
+        Me.Rdb_ByAccId.TabIndex = 0
+        Me.Rdb_ByAccId.Text = "By Account ID"
+        Me.Rdb_ByAccId.UseVisualStyleBackColor = True
         '
-        'dgv_accounts
+        'DGV_Accounts
         '
-        Me.dgv_accounts.AllowUserToAddRows = False
-        Me.dgv_accounts.AllowUserToDeleteRows = False
-        Me.dgv_accounts.AllowUserToResizeRows = False
-        Me.dgv_accounts.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.DGV_Accounts.AllowUserToAddRows = False
+        Me.DGV_Accounts.AllowUserToDeleteRows = False
+        Me.DGV_Accounts.AllowUserToResizeRows = False
+        Me.DGV_Accounts.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgv_accounts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgv_accounts.BackgroundColor = System.Drawing.Color.White
-        Me.dgv_accounts.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.dgv_accounts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_accounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_accounts.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dgv_accounts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgv_accounts.GridColor = System.Drawing.Color.PowderBlue
-        Me.dgv_accounts.Location = New System.Drawing.Point(12, 282)
-        Me.dgv_accounts.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
-        Me.dgv_accounts.MultiSelect = False
-        Me.dgv_accounts.Name = "dgv_accounts"
-        Me.dgv_accounts.ReadOnly = True
-        Me.dgv_accounts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.dgv_accounts.RowHeadersVisible = False
-        Me.dgv_accounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
-        Me.dgv_accounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_accounts.Size = New System.Drawing.Size(773, 302)
-        Me.dgv_accounts.TabIndex = 17
+        Me.DGV_Accounts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_Accounts.BackgroundColor = System.Drawing.Color.White
+        Me.DGV_Accounts.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DGV_Accounts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DGV_Accounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV_Accounts.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DGV_Accounts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.DGV_Accounts.GridColor = System.Drawing.Color.PowderBlue
+        Me.DGV_Accounts.Location = New System.Drawing.Point(12, 282)
+        Me.DGV_Accounts.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
+        Me.DGV_Accounts.MultiSelect = False
+        Me.DGV_Accounts.Name = "DGV_Accounts"
+        Me.DGV_Accounts.ReadOnly = True
+        Me.DGV_Accounts.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DGV_Accounts.RowHeadersVisible = False
+        Me.DGV_Accounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
+        Me.DGV_Accounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DGV_Accounts.Size = New System.Drawing.Size(773, 302)
+        Me.DGV_Accounts.TabIndex = 17
         '
         'Rdb_Companies
         '
@@ -313,6 +313,7 @@ Partial Class Frm_Accounts
         'Rdb_Clients
         '
         Me.Rdb_Clients.AutoSize = True
+        Me.Rdb_Clients.Checked = True
         Me.Rdb_Clients.Depth = 0
         Me.Rdb_Clients.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.Rdb_Clients.Location = New System.Drawing.Point(587, 101)
@@ -334,7 +335,7 @@ Partial Class Frm_Accounts
         Me.ClientSize = New System.Drawing.Size(800, 601)
         Me.Controls.Add(Me.MaterialTabSelector1)
         Me.Controls.Add(Me.MaterialTabControl1)
-        Me.Controls.Add(Me.dgv_accounts)
+        Me.Controls.Add(Me.DGV_Accounts)
         Me.Name = "Frm_Accounts"
         Me.Text = "Accounts Manager | Clients"
         Me.MaterialTabControl1.ResumeLayout(False)
@@ -342,7 +343,7 @@ Partial Class Frm_Accounts
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.dgv_accounts, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGV_Accounts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -359,9 +360,9 @@ Partial Class Frm_Accounts
     Friend WithEvents btn_search As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents txt_cname As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents txt_byaccid As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents rdb_byCname As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents rdb_byAccid As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents dgv_accounts As DataGridView
+    Friend WithEvents Rdb_ByName As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Rdb_ByAccId As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents DGV_Accounts As DataGridView
     Friend WithEvents Rdb_Clients As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents Rdb_Companies As MaterialSkin.Controls.MaterialRadioButton
 End Class
