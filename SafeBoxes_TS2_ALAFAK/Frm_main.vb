@@ -48,11 +48,11 @@ Public Class Frm_main
         Frm_SignatureCards.ShowDialog()
     End Sub
 
-    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton1.Click
+    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs)
         Frm_ClientAccounts.ShowDialog()
     End Sub
 
-    Private Sub MaterialFlatButton2_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton2.Click
+    Private Sub MaterialFlatButton2_Click(sender As Object, e As EventArgs)
         Frm_CompaniesAccounts.ShowDialog()
     End Sub
 
@@ -62,5 +62,9 @@ Public Class Frm_main
 
     Private Sub Frm_main_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         PictureBox3.Visible = True
+    End Sub
+
+    Private Sub Btn_AccountsManager_Click(sender As Object, e As EventArgs) Handles Btn_AccountsManager.Click
+        Frm_Accounts.ShowDialog()
     End Sub
 End Class
