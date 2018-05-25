@@ -65,6 +65,17 @@ Module OleDb_Tools
 
     End Function
 
+    'Used to generate a new unique ID for Accounts Tables
+    Public Function GenAccID()
+        dbDataSet = ReadQueryOut("SELECT MAX(AccountId) FROM (SELECT AccountId FROM ClientDepAccount UNION SELECT AccountId FROM ClientRepAccount UNION SELECT AccountId FROM CompanyAccounts UNION SELECT AccountId FROM SignCardsAccounts)")
+        If Not dbDataSet.Tables(0).Rows(0).Item(0).GetType.ToString().ToLower().Equals("system.dbnull") Then
+            Return dbDataSet.Tables(0).Rows(0).Item(0) + 1
+        Else
+            Return 1
+        End If
+
+    End Function
+
     'Fills a Combobox with the given query
     Public Sub FillCBox(ByRef theCBox As ComboBox, ByVal theQuery As String, ByVal ValueMember As String, ByVal DisplayName As String)
         Dim cBoxDbDataSet As New DataSet
