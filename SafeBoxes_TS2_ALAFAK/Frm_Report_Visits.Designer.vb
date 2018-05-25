@@ -41,9 +41,9 @@ Partial Class Frm_Report_Visits
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CRptV_Visits.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CRptV_Visits.Cursor = System.Windows.Forms.Cursors.Default
-        Me.CRptV_Visits.Location = New System.Drawing.Point(12, 152)
+        Me.CRptV_Visits.Location = New System.Drawing.Point(12, 213)
         Me.CRptV_Visits.Name = "CRptV_Visits"
-        Me.CRptV_Visits.Size = New System.Drawing.Size(706, 373)
+        Me.CRptV_Visits.Size = New System.Drawing.Size(706, 312)
         Me.CRptV_Visits.TabIndex = 22
         '
         'GroupBox1
@@ -56,7 +56,7 @@ Partial Class Frm_Report_Visits
         Me.GroupBox1.Controls.Add(Me.dtpick_exdate)
         Me.GroupBox1.Controls.Add(Me.Rdb_ByContId)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 73)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(706, 134)
         Me.GroupBox1.TabIndex = 21
@@ -66,27 +66,49 @@ Partial Class Frm_Report_Visits
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Depth = 0
+        Me.CheckBox1.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.CheckBox1.Location = New System.Drawing.Point(579, 104)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.CheckBox1.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.CheckBox1.MouseState = MaterialSkin.MouseState.HOVER
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(92, 24)
+        Me.CheckBox1.Ripple = True
+        Me.CheckBox1.Size = New System.Drawing.Size(87, 30)
         Me.CheckBox1.TabIndex = 17
         Me.CheckBox1.Text = "Delivered"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Txt_ContId
         '
+        Me.Txt_ContId.Depth = 0
+        Me.Txt_ContId.Hint = ""
         Me.Txt_ContId.Location = New System.Drawing.Point(6, 57)
         Me.Txt_ContId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Txt_ContId.MaxLength = 32767
+        Me.Txt_ContId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Txt_ContId.Name = "Txt_ContId"
-        Me.Txt_ContId.Size = New System.Drawing.Size(234, 27)
+        Me.Txt_ContId.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Txt_ContId.SelectedText = ""
+        Me.Txt_ContId.SelectionLength = 0
+        Me.Txt_ContId.SelectionStart = 0
+        Me.Txt_ContId.Size = New System.Drawing.Size(234, 23)
         Me.Txt_ContId.TabIndex = 12
+        Me.Txt_ContId.TabStop = False
+        Me.Txt_ContId.UseSystemPasswordChar = False
         '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Depth = 0
+        Me.RadioButton2.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.RadioButton2.Location = New System.Drawing.Point(250, 25)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadioButton2.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.RadioButton2.MouseState = MaterialSkin.MouseState.HOVER
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(165, 24)
+        Me.RadioButton2.Ripple = True
+        Me.RadioButton2.Size = New System.Drawing.Size(149, 30)
         Me.RadioButton2.TabIndex = 15
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "By Date (FROM-TO)"
@@ -107,9 +129,15 @@ Partial Class Frm_Report_Visits
         'Rdb_ByContId
         '
         Me.Rdb_ByContId.AutoSize = True
+        Me.Rdb_ByContId.Depth = 0
+        Me.Rdb_ByContId.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.Rdb_ByContId.Location = New System.Drawing.Point(6, 25)
+        Me.Rdb_ByContId.Margin = New System.Windows.Forms.Padding(0)
+        Me.Rdb_ByContId.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Rdb_ByContId.MouseState = MaterialSkin.MouseState.HOVER
         Me.Rdb_ByContId.Name = "Rdb_ByContId"
-        Me.Rdb_ByContId.Size = New System.Drawing.Size(127, 24)
+        Me.Rdb_ByContId.Ripple = True
+        Me.Rdb_ByContId.Size = New System.Drawing.Size(117, 30)
         Me.Rdb_ByContId.TabIndex = 16
         Me.Rdb_ByContId.TabStop = True
         Me.Rdb_ByContId.Text = "By Contract ID"

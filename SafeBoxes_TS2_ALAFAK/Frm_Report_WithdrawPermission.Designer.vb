@@ -23,10 +23,10 @@ Partial Class Frm_Report_WithdrawPermission
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.TextBox1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.RadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.RptV_Withdraw = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
@@ -41,7 +41,7 @@ Partial Class Frm_Report_WithdrawPermission
         Me.GroupBox1.Controls.Add(Me.dtpick_exdate)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 76)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(690, 134)
         Me.GroupBox1.TabIndex = 19
@@ -50,18 +50,34 @@ Partial Class Frm_Report_WithdrawPermission
         '
         'TextBox1
         '
+        Me.TextBox1.Depth = 0
+        Me.TextBox1.Hint = ""
         Me.TextBox1.Location = New System.Drawing.Point(6, 57)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TextBox1.MaxLength = 32767
+        Me.TextBox1.MouseState = MaterialSkin.MouseState.HOVER
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(234, 26)
+        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TextBox1.SelectedText = ""
+        Me.TextBox1.SelectionLength = 0
+        Me.TextBox1.SelectionStart = 0
+        Me.TextBox1.Size = New System.Drawing.Size(234, 23)
         Me.TextBox1.TabIndex = 12
+        Me.TextBox1.TabStop = False
+        Me.TextBox1.UseSystemPasswordChar = False
         '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Depth = 0
+        Me.RadioButton2.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.RadioButton2.Location = New System.Drawing.Point(250, 25)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadioButton2.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.RadioButton2.MouseState = MaterialSkin.MouseState.HOVER
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(171, 24)
+        Me.RadioButton2.Ripple = True
+        Me.RadioButton2.Size = New System.Drawing.Size(149, 30)
         Me.RadioButton2.TabIndex = 15
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "By Date (FROM-TO)"
@@ -82,9 +98,15 @@ Partial Class Frm_Report_WithdrawPermission
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Depth = 0
+        Me.RadioButton1.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.RadioButton1.Location = New System.Drawing.Point(6, 25)
+        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadioButton1.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.RadioButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(131, 24)
+        Me.RadioButton1.Ripple = True
+        Me.RadioButton1.Size = New System.Drawing.Size(117, 30)
         Me.RadioButton1.TabIndex = 16
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "By Contract ID"
@@ -110,9 +132,9 @@ Partial Class Frm_Report_WithdrawPermission
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RptV_Withdraw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RptV_Withdraw.Cursor = System.Windows.Forms.Cursors.Default
-        Me.RptV_Withdraw.Location = New System.Drawing.Point(12, 152)
+        Me.RptV_Withdraw.Location = New System.Drawing.Point(12, 216)
         Me.RptV_Withdraw.Name = "RptV_Withdraw"
-        Me.RptV_Withdraw.Size = New System.Drawing.Size(690, 373)
+        Me.RptV_Withdraw.Size = New System.Drawing.Size(690, 309)
         Me.RptV_Withdraw.TabIndex = 20
         '
         'Frm_Report_WithdrawPermission
@@ -134,10 +156,10 @@ Partial Class Frm_Report_WithdrawPermission
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents TextBox1 As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents RadioButton2 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents dtpick_exdate As DateTimePicker
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RadioButton1 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents RptV_Withdraw As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class
