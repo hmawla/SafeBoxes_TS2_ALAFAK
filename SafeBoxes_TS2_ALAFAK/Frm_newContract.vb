@@ -67,6 +67,7 @@ Public Class Frm_newContract
             theContDetails = ReadQueryOut("SELECT * FROM Contract WHERE ContId = " & theNewId).Copy
             Dim rows As DataRow = theContDetails.Tables(0).Rows(0)
             dtpick_exdate.Value = rows.Item(2)
+            dtpick_exdate.Enabled = False
             txt_contnote.Text = rows.Item(3)
             txt_floor.Value = rows.Item(4)
             txt_phone1.Text = rows.Item(5)
