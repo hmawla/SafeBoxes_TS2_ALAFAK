@@ -63,22 +63,6 @@
         Only_Number(txt_clientid, e)
     End Sub
 
-    Private Sub txt_clientid_Leave(sender As Object, e As EventArgs) Handles txt_clientid.Leave
-        If txt_clientid.Text <> "" Then
-            If Exists(txt_clientid.Text, "SELECT ClientId FROM Clients") Then
-                Dim ds As New DataSet
-                ds = ReadQueryOut("SELECT ClientFName + ' ' + ClientLName FROM Clients WHERE ClientId = " & txt_clientid.Text)
-                txt_clientname.Text = ds.Tables(0).Rows(0).Item(0)
-            Else
-                MessageBox.Show("Invalid Client ID!")
-                txt_clientid.Focus()
-                txt_clientid.SelectAll()
-            End If
-        Else
-            MessageBox.Show("Invalid Client ID!")
-            txt_clientid.Focus()
-        End If
-    End Sub
     Private Sub txt_clientid_TextChanged(sender As Object, e As EventArgs) Handles txt_clientid.TextChanged
         Try
             Dim ds As New DataSet
@@ -145,63 +129,72 @@
     End Sub
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
-        If Frm_InfoVoucher.infovouchId = 0 Then
-            If txt_phonenumber.Text.Count > 0 Or txt_email.Text.Count > 0 Or txt_mailpost.Text.Count > 0 Or txt_otherconn.Text.Count > 0 Then
-                If dtpick_fromtime.Value.TimeOfDay > dtpick_totime.Value.TimeOfDay Then
-                    MessageBox.Show("To time should be greater than from time!")
-                Else
-                    theNewId = GenID("InfoVoucher", "InfoVouchId")
-                    ExecuteQuery("INSERT INTO InfoVoucher VALUES(" & theNewId & ", '" & dtpick_fromtime.Value.ToShortTimeString & "', '" & dtpick_totime.Value.ToShortTimeString & "', date(), '" & txt_subjectbody.Text & "', " & txt_contractid.Text & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & cbox_subjecttitles.SelectedValue & ", " & txt_clientid.Text & ")")
+        If txt_clientname.Text.Count > 0 Then
+            If Exists(txt_contractid.Text, "SELECT ContId WHERE ContId NOT IN (SELECT ContId FROM ContEnd) And ContToDate > date()") Then
+                If Frm_InfoVoucher.infovouchId = 0 Then
+                    If txt_phonenumber.Text.Count > 0 Or txt_email.Text.Count > 0 Or txt_mailpost.Text.Count > 0 Or txt_otherconn.Text.Count > 0 Then
+                        If dtpick_fromtime.Value.TimeOfDay > dtpick_totime.Value.TimeOfDay Then
+                            MessageBox.Show("To time should be greater than from time!")
+                        Else
+                            theNewId = GenID("InfoVoucher", "InfoVouchId")
+                            ExecuteQuery("INSERT INTO InfoVoucher VALUES(" & theNewId & ", '" & dtpick_fromtime.Value.ToShortTimeString & "', '" & dtpick_totime.Value.ToShortTimeString & "', date(), '" & txt_subjectbody.Text & "', " & txt_contractid.Text & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & cbox_subjecttitles.SelectedValue & ", " & txt_clientid.Text & ")")
 
-                    For Each indexChecked In chklist_exceptdays.CheckedIndices
-                        ExecuteQuery("INSERT INTO InfoVoucherExDays Values(" & theNewId & ", " & (Int(indexChecked.ToString()) + 1) & ")")
-                    Next
-                    If chk_phone.Checked Then
-                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 1, '" & txt_phonenumber.Text & "')")
+                            For Each indexChecked In chklist_exceptdays.CheckedIndices
+                                ExecuteQuery("INSERT INTO InfoVoucherExDays Values(" & theNewId & ", " & (Int(indexChecked.ToString()) + 1) & ")")
+                            Next
+                            If chk_phone.Checked Then
+                                ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 1, '" & txt_phonenumber.Text & "')")
+                            End If
+                            If chk_mailpost.Checked Then
+                                ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 2, '" & txt_mailpost.Text & "')")
+                            End If
+                            If chk_email.Checked Then
+                                ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 3, '" & txt_email.Text & "')")
+                            End If
+                            If chk_other.Checked Then
+                                ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 4, '" & txt_otherconn.Text & "')")
+                            End If
+                            Me.Dispose()
+                        End If
+                    Else
+                        MessageBox.Show("Enter at least one connection way!")
                     End If
-                    If chk_mailpost.Checked Then
-                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 2, '" & txt_mailpost.Text & "')")
+                Else
+                    If txt_phonenumber.Text.Count > 0 Or txt_email.Text.Count > 0 Or txt_mailpost.Text.Count > 0 Or txt_otherconn.Text.Count > 0 Then
+                        If dtpick_fromtime.Value.TimeOfDay > dtpick_totime.Value.TimeOfDay Then
+                            MessageBox.Show("To time should be greater than from time!")
+                        Else
+                            ExecuteQuery("UPDATE InfoVoucher SET InfoVouchFromTime = '" & dtpick_fromtime.Value.ToShortTimeString & "',InfoVouchToTime = '" & dtpick_totime.Value.ToShortTimeString & "',InfoVouchDate = '" & Date.Today.ToShortDateString & "',SubjectDetails = '" & txt_subjectbody.Text & "',Contid = " & txt_contractid.Text & ",BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ",InfoSubjTitleId = " & cbox_subjecttitles.SelectedValue & ",ClientId = " & txt_clientid.Text & " WHERE InfoVouchId = " & theNewId)
+                            ExecuteQuery("DELETE FROM InfoVoucherExDays WHERE InfoVouchId = " & theNewId)
+                            ExecuteQuery("DELETE FROM ConnWaysInfoVoucher WHERE InfoVouchId = " & theNewId)
+                            For Each indexChecked In chklist_exceptdays.CheckedIndices
+                                ExecuteQuery("INSERT INTO InfoVoucherExDays Values(" & theNewId & ", " & (Int(indexChecked.ToString()) + 1) & ")")
+                            Next
+                            If chk_phone.Checked Then
+                                ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 1, '" & txt_phonenumber.Text & "')")
+                            End If
+                            If chk_mailpost.Checked Then
+                                ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 2, '" & txt_mailpost.Text & "')")
+                            End If
+                            If chk_email.Checked Then
+                                ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 3, '" & txt_email.Text & "')")
+                            End If
+                            If chk_other.Checked Then
+                                ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 4, '" & txt_otherconn.Text & "')")
+                            End If
+                            Me.Dispose()
+                        End If
+                    Else
+                        MessageBox.Show("Enter at least one connection way!")
                     End If
-                    If chk_email.Checked Then
-                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 3, '" & txt_email.Text & "')")
-                    End If
-                    If chk_other.Checked Then
-                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 4, '" & txt_otherconn.Text & "')")
-                    End If
-                    Me.Dispose()
                 End If
             Else
-                MessageBox.Show("Enter at least one connection way!")
+                MessageBox.Show("Invalid contract ID!")
             End If
         Else
-            If txt_phonenumber.Text.Count > 0 Or txt_email.Text.Count > 0 Or txt_mailpost.Text.Count > 0 Or txt_otherconn.Text.Count > 0 Then
-                If dtpick_fromtime.Value.TimeOfDay > dtpick_totime.Value.TimeOfDay Then
-                    MessageBox.Show("To time should be greater than from time!")
-                Else
-                    ExecuteQuery("UPDATE InfoVoucher SET InfoVouchFromTime = '" & dtpick_fromtime.Value.ToShortTimeString & "',InfoVouchToTime = '" & dtpick_totime.Value.ToShortTimeString & "',InfoVouchDate = '" & Date.Today.ToShortDateString & "',SubjectDetails = '" & txt_subjectbody.Text & "',Contid = " & txt_contractid.Text & ",BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ",InfoSubjTitleId = " & cbox_subjecttitles.SelectedValue & ",ClientId = " & txt_clientid.Text & " WHERE InfoVouchId = " & theNewId)
-                    ExecuteQuery("DELETE FROM InfoVoucherExDays WHERE InfoVouchId = " & theNewId)
-                    ExecuteQuery("DELETE FROM ConnWaysInfoVoucher WHERE InfoVouchId = " & theNewId)
-                    For Each indexChecked In chklist_exceptdays.CheckedIndices
-                        ExecuteQuery("INSERT INTO InfoVoucherExDays Values(" & theNewId & ", " & (Int(indexChecked.ToString()) + 1) & ")")
-                    Next
-                    If chk_phone.Checked Then
-                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 1, '" & txt_phonenumber.Text & "')")
-                    End If
-                    If chk_mailpost.Checked Then
-                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 2, '" & txt_mailpost.Text & "')")
-                    End If
-                    If chk_email.Checked Then
-                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 3, '" & txt_email.Text & "')")
-                    End If
-                    If chk_other.Checked Then
-                        ExecuteQuery("INSERT INTO ConnWaysInfoVoucher Values(" & theNewId & ", 4, '" & txt_otherconn.Text & "')")
-                    End If
-                    Me.Dispose()
-                End If
-            Else
-                MessageBox.Show("Enter at least one connection way!")
-            End If
+            MessageBox.Show("Invalid client ID!")
         End If
+
 
 
     End Sub
@@ -233,6 +226,4 @@
     Private Sub txt_mailpost_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_mailpost.KeyPress
         Only_Number(txt_mailpost, e)
     End Sub
-
-
 End Class

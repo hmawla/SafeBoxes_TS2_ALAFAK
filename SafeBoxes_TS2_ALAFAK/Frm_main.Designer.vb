@@ -108,9 +108,9 @@ Partial Class Frm_main
         Me.btn_infovouchman.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_infovouchman.Name = "btn_infovouchman"
         Me.btn_infovouchman.Primary = True
-        Me.btn_infovouchman.Size = New System.Drawing.Size(183, 36)
+        Me.btn_infovouchman.Size = New System.Drawing.Size(187, 36)
         Me.btn_infovouchman.TabIndex = 23
-        Me.btn_infovouchman.Text = "InfoVoucher Manager"
+        Me.btn_infovouchman.Text = "Info Voucher Manager"
         Me.btn_infovouchman.UseVisualStyleBackColor = True
         '
         'MaterialRaisedButton18

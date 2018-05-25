@@ -56,13 +56,13 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_subjectbody = New System.Windows.Forms.TextBox()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
-        Me.btn_submit = New MaterialSkin.Controls.MaterialFlatButton()
         Me.cbox_subjecttitles = New System.Windows.Forms.ComboBox()
         Me.txt_contractid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.ContractSelector = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ContraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewContractToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
+        Me.btn_submit = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.ClientSelector.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -176,9 +176,15 @@ Partial Class Frm_NewInfoVoucher
         'chk_phone
         '
         Me.chk_phone.AutoSize = True
+        Me.chk_phone.Depth = 0
+        Me.chk_phone.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.chk_phone.Location = New System.Drawing.Point(6, 25)
+        Me.chk_phone.Margin = New System.Windows.Forms.Padding(0)
+        Me.chk_phone.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.chk_phone.MouseState = MaterialSkin.MouseState.HOVER
         Me.chk_phone.Name = "chk_phone"
-        Me.chk_phone.Size = New System.Drawing.Size(138, 24)
+        Me.chk_phone.Ripple = True
+        Me.chk_phone.Size = New System.Drawing.Size(125, 30)
         Me.chk_phone.TabIndex = 62
         Me.chk_phone.Text = "Phone Number:"
         Me.chk_phone.UseVisualStyleBackColor = True
@@ -186,9 +192,15 @@ Partial Class Frm_NewInfoVoucher
         'chk_mailpost
         '
         Me.chk_mailpost.AutoSize = True
+        Me.chk_mailpost.Depth = 0
+        Me.chk_mailpost.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.chk_mailpost.Location = New System.Drawing.Point(170, 25)
+        Me.chk_mailpost.Margin = New System.Windows.Forms.Padding(0)
+        Me.chk_mailpost.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.chk_mailpost.MouseState = MaterialSkin.MouseState.HOVER
         Me.chk_mailpost.Name = "chk_mailpost"
-        Me.chk_mailpost.Size = New System.Drawing.Size(156, 24)
+        Me.chk_mailpost.Ripple = True
+        Me.chk_mailpost.Size = New System.Drawing.Size(144, 30)
         Me.chk_mailpost.TabIndex = 64
         Me.chk_mailpost.Text = "Mail Post Number:"
         Me.chk_mailpost.UseVisualStyleBackColor = True
@@ -215,9 +227,15 @@ Partial Class Frm_NewInfoVoucher
         'chk_email
         '
         Me.chk_email.AutoSize = True
+        Me.chk_email.Depth = 0
+        Me.chk_email.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.chk_email.Location = New System.Drawing.Point(334, 25)
+        Me.chk_email.Margin = New System.Windows.Forms.Padding(0)
+        Me.chk_email.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.chk_email.MouseState = MaterialSkin.MouseState.HOVER
         Me.chk_email.Name = "chk_email"
-        Me.chk_email.Size = New System.Drawing.Size(71, 24)
+        Me.chk_email.Ripple = True
+        Me.chk_email.Size = New System.Drawing.Size(68, 30)
         Me.chk_email.TabIndex = 66
         Me.chk_email.Text = "Email:"
         Me.chk_email.UseVisualStyleBackColor = True
@@ -244,9 +262,15 @@ Partial Class Frm_NewInfoVoucher
         'chk_other
         '
         Me.chk_other.AutoSize = True
+        Me.chk_other.Depth = 0
+        Me.chk_other.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.chk_other.Location = New System.Drawing.Point(6, 91)
+        Me.chk_other.Margin = New System.Windows.Forms.Padding(0)
+        Me.chk_other.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.chk_other.MouseState = MaterialSkin.MouseState.HOVER
         Me.chk_other.Name = "chk_other"
-        Me.chk_other.Size = New System.Drawing.Size(72, 24)
+        Me.chk_other.Ripple = True
+        Me.chk_other.Size = New System.Drawing.Size(67, 30)
         Me.chk_other.TabIndex = 68
         Me.chk_other.Text = "Other:"
         Me.chk_other.UseVisualStyleBackColor = True
@@ -504,22 +528,6 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel9.TabIndex = 82
         Me.MaterialLabel9.Text = "Subject Body:"
         '
-        'btn_submit
-        '
-        Me.btn_submit.AutoSize = True
-        Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_submit.Depth = 0
-        Me.btn_submit.Icon = Nothing
-        Me.btn_submit.Location = New System.Drawing.Point(447, 99)
-        Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
-        Me.btn_submit.Name = "btn_submit"
-        Me.btn_submit.Primary = False
-        Me.btn_submit.Size = New System.Drawing.Size(71, 36)
-        Me.btn_submit.TabIndex = 83
-        Me.btn_submit.Text = "Submit"
-        Me.btn_submit.UseVisualStyleBackColor = True
-        '
         'cbox_subjecttitles
         '
         Me.cbox_subjecttitles.FormattingEnabled = True
@@ -579,16 +587,31 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel10.TabIndex = 87
         Me.MaterialLabel10.Text = "Contract ID:"
         '
+        'btn_submit
+        '
+        Me.btn_submit.AutoSize = True
+        Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_submit.Depth = 0
+        Me.btn_submit.Icon = Nothing
+        Me.btn_submit.Location = New System.Drawing.Point(447, 97)
+        Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
+        Me.btn_submit.Name = "btn_submit"
+        Me.btn_submit.Primary = True
+        Me.btn_submit.Size = New System.Drawing.Size(71, 36)
+        Me.btn_submit.TabIndex = 88
+        Me.btn_submit.Text = "Submit"
+        Me.btn_submit.UseVisualStyleBackColor = True
+        '
         'Frm_NewInfoVoucher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1081, 627)
+        Me.Controls.Add(Me.btn_submit)
         Me.Controls.Add(Me.MaterialLabel10)
         Me.Controls.Add(Me.txt_contractid)
         Me.Controls.Add(Me.cbox_subjecttitles)
-        Me.Controls.Add(Me.btn_submit)
         Me.Controls.Add(Me.MaterialLabel9)
         Me.Controls.Add(Me.txt_subjectbody)
         Me.Controls.Add(Me.MaterialLabel8)
@@ -646,7 +669,6 @@ Partial Class Frm_NewInfoVoucher
     Friend WithEvents MaterialLabel8 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_subjectbody As TextBox
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents cbox_subjecttitles As ComboBox
     Friend WithEvents ClientSelector As ContextMenuStrip
     Friend WithEvents SelectClientToolStripMenuItem As ToolStripMenuItem
@@ -656,4 +678,5 @@ Partial Class Frm_NewInfoVoucher
     Friend WithEvents ContraToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewClientToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewContractToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialRaisedButton
 End Class

@@ -353,7 +353,7 @@ Partial Class Frm_InfoVoucher
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.Controls.Add(Me.dgv_infovouchers)
         Me.Name = "Frm_InfoVoucher"
-        Me.Text = "Info Voucher MAnagement"
+        Me.Text = "Info Voucher Management"
         CType(Me.dgv_infovouchers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MaterialTabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
