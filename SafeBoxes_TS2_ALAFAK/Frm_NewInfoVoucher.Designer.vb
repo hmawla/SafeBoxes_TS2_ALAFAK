@@ -299,6 +299,7 @@ Partial Class Frm_NewInfoVoucher
         Me.dtpick_fromtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpick_fromtime.Location = New System.Drawing.Point(13, 44)
         Me.dtpick_fromtime.Name = "dtpick_fromtime"
+        Me.dtpick_fromtime.ShowUpDown = True
         Me.dtpick_fromtime.Size = New System.Drawing.Size(139, 27)
         Me.dtpick_fromtime.TabIndex = 70
         Me.dtpick_fromtime.Value = New Date(2018, 5, 20, 0, 0, 0, 0)
@@ -376,6 +377,7 @@ Partial Class Frm_NewInfoVoucher
         Me.dtpick_totime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpick_totime.Location = New System.Drawing.Point(158, 44)
         Me.dtpick_totime.Name = "dtpick_totime"
+        Me.dtpick_totime.ShowUpDown = True
         Me.dtpick_totime.Size = New System.Drawing.Size(139, 26)
         Me.dtpick_totime.TabIndex = 72
         Me.dtpick_totime.Value = New Date(2018, 5, 20, 23, 59, 0, 0)
