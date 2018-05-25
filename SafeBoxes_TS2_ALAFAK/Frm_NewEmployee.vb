@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub Frm_NewEmployee_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        If isSubmitting = False Then
+        If isSubmitting = False And Frm_Employees.EmpId = 0 Then
             ExecuteQuery("DELETE FROM Employees WHERE EmpId = " & theNewId)
             Me.Dispose()
         End If
