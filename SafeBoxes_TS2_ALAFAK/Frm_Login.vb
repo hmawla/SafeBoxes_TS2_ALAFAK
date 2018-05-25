@@ -9,6 +9,8 @@ Public Class Frm_Login
             Me.Dispose()
         Else
             MessageBox.Show("Invalid Employee ID!")
+            txt_empid.Text = ""
+            txt_empid.Focus()
         End If
 
     End Sub
