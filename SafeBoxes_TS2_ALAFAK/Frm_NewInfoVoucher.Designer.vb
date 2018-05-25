@@ -22,13 +22,9 @@ Partial Class Frm_NewInfoVoucher
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_clientid = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.ClientSelector = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txt_clientname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txt_phonenumber = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.chk_phone = New MaterialSkin.Controls.MaterialCheckBox()
@@ -58,22 +54,22 @@ Partial Class Frm_NewInfoVoucher
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_subjecttitles = New System.Windows.Forms.ComboBox()
         Me.txt_contractid = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.ContractSelector = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ContraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewContractToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel10 = New MaterialSkin.Controls.MaterialLabel()
         Me.btn_submit = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.ClientSelector.SuspendLayout()
+        Me.ClientSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectClientToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContractSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectContractToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.ClientSelector.SuspendLayout()
         Me.ContractSelector.SuspendLayout()
         Me.SuspendLayout()
         '
         'MaterialLabel5
         '
         Me.MaterialLabel5.AutoSize = True
-        Me.MaterialLabel5.ContextMenuStrip = Me.ClientSelector
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -101,7 +97,6 @@ Partial Class Frm_NewInfoVoucher
         '
         'txt_clientid
         '
-        Me.txt_clientid.ContextMenuStrip = Me.ClientSelector
         Me.txt_clientid.Depth = 0
         Me.txt_clientid.Hint = ""
         Me.txt_clientid.Location = New System.Drawing.Point(19, 103)
@@ -117,24 +112,6 @@ Partial Class Frm_NewInfoVoucher
         Me.txt_clientid.TabIndex = 56
         Me.txt_clientid.TabStop = False
         Me.txt_clientid.UseSystemPasswordChar = False
-        '
-        'ClientSelector
-        '
-        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem, Me.NewClientToolStripMenuItem})
-        Me.ClientSelector.Name = "ContextMenuStrip1"
-        Me.ClientSelector.Size = New System.Drawing.Size(140, 48)
-        '
-        'SelectClientToolStripMenuItem
-        '
-        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
-        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
-        Me.SelectClientToolStripMenuItem.Text = "Select Client"
-        '
-        'NewClientToolStripMenuItem
-        '
-        Me.NewClientToolStripMenuItem.Name = "NewClientToolStripMenuItem"
-        Me.NewClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
-        Me.NewClientToolStripMenuItem.Text = "New Client"
         '
         'txt_clientname
         '
@@ -539,7 +516,6 @@ Partial Class Frm_NewInfoVoucher
         '
         'txt_contractid
         '
-        Me.txt_contractid.ContextMenuStrip = Me.ContractSelector
         Me.txt_contractid.Depth = 0
         Me.txt_contractid.Hint = ""
         Me.txt_contractid.Location = New System.Drawing.Point(306, 103)
@@ -556,28 +532,9 @@ Partial Class Frm_NewInfoVoucher
         Me.txt_contractid.TabStop = False
         Me.txt_contractid.UseSystemPasswordChar = False
         '
-        'ContractSelector
-        '
-        Me.ContractSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContraToolStripMenuItem, Me.NewContractToolStripMenuItem})
-        Me.ContractSelector.Name = "ContractSelector"
-        Me.ContractSelector.Size = New System.Drawing.Size(155, 48)
-        '
-        'ContraToolStripMenuItem
-        '
-        Me.ContraToolStripMenuItem.Name = "ContraToolStripMenuItem"
-        Me.ContraToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
-        Me.ContraToolStripMenuItem.Text = "Select Contract"
-        '
-        'NewContractToolStripMenuItem
-        '
-        Me.NewContractToolStripMenuItem.Name = "NewContractToolStripMenuItem"
-        Me.NewContractToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
-        Me.NewContractToolStripMenuItem.Text = "New Contract"
-        '
         'MaterialLabel10
         '
         Me.MaterialLabel10.AutoSize = True
-        Me.MaterialLabel10.ContextMenuStrip = Me.ContractSelector
         Me.MaterialLabel10.Depth = 0
         Me.MaterialLabel10.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -604,6 +561,36 @@ Partial Class Frm_NewInfoVoucher
         Me.btn_submit.Text = "Submit"
         Me.btn_submit.UseVisualStyleBackColor = True
         '
+        'ClientSelector
+        '
+        Me.ClientSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientSelector.Depth = 0
+        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem1})
+        Me.ClientSelector.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientSelector.Name = "MaterialContextMenuStrip1"
+        Me.ClientSelector.Size = New System.Drawing.Size(140, 26)
+        '
+        'SelectClientToolStripMenuItem1
+        '
+        Me.SelectClientToolStripMenuItem1.Name = "SelectClientToolStripMenuItem1"
+        Me.SelectClientToolStripMenuItem1.Size = New System.Drawing.Size(139, 22)
+        Me.SelectClientToolStripMenuItem1.Text = "Select Client"
+        '
+        'ContractSelector
+        '
+        Me.ContractSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ContractSelector.Depth = 0
+        Me.ContractSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectContractToolStripMenuItem})
+        Me.ContractSelector.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ContractSelector.Name = "ContractSelector"
+        Me.ContractSelector.Size = New System.Drawing.Size(155, 26)
+        '
+        'SelectContractToolStripMenuItem
+        '
+        Me.SelectContractToolStripMenuItem.Name = "SelectContractToolStripMenuItem"
+        Me.SelectContractToolStripMenuItem.Size = New System.Drawing.Size(154, 22)
+        Me.SelectContractToolStripMenuItem.Text = "Select Contract"
+        '
         'Frm_NewInfoVoucher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -628,13 +615,13 @@ Partial Class Frm_NewInfoVoucher
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_NewInfoVoucher"
         Me.Text = "Info Voucher"
-        Me.ClientSelector.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.ClientSelector.ResumeLayout(False)
         Me.ContractSelector.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -672,13 +659,11 @@ Partial Class Frm_NewInfoVoucher
     Friend WithEvents txt_subjectbody As TextBox
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_subjecttitles As ComboBox
-    Friend WithEvents ClientSelector As ContextMenuStrip
-    Friend WithEvents SelectClientToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents txt_contractid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel10 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents ContractSelector As ContextMenuStrip
-    Friend WithEvents ContraToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NewClientToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NewContractToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents ClientSelector As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents SelectClientToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ContractSelector As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents SelectContractToolStripMenuItem As ToolStripMenuItem
 End Class

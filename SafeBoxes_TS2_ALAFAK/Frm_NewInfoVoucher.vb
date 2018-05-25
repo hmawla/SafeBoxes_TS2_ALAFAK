@@ -53,10 +53,12 @@
         formLoaded = True
     End Sub
 
-    Private Sub SelectClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectClientToolStripMenuItem.Click
+    Private Sub SelectClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectClientToolStripMenuItem1.Click
         Frm_main.clientid = 0
+        MessageBox.Show("Double click on the desired client to select it!")
         Frm_SelectClient.ShowDialog()
         txt_clientid.Text = Frm_main.clientid
+        Frm_main.clientid = -1
     End Sub
 
     Private Sub txt_clientid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_clientid.KeyPress
@@ -86,24 +88,10 @@
         End If
     End Sub
 
-    Private Sub NewClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewClientToolStripMenuItem.Click
-        Frm_main.clientid = 0
-        Frm_NewClient.ShowDialog()
-        txt_clientid.Text = Frm_main.clientid
-        Frm_main.clientid = -1
-    End Sub
-
-    Private Sub ContraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContraToolStripMenuItem.Click
+    Private Sub ContraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectContractToolStripMenuItem.Click
         Frm_main.contractid = 0
         MessageBox.Show("Double click on the desired contract to select it!")
         Frm_Contracts.ShowDialog()
-        txt_contractid.Text = Frm_main.contractid
-        Frm_main.contractid = -1
-    End Sub
-
-    Private Sub NewContractToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewContractToolStripMenuItem.Click
-        Frm_main.contractid = 0
-        Frm_newContract.ShowDialog()
         txt_contractid.Text = Frm_main.contractid
         Frm_main.contractid = -1
     End Sub
