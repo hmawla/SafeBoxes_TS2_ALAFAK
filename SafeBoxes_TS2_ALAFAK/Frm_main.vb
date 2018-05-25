@@ -55,4 +55,12 @@ Public Class Frm_main
     Private Sub MaterialFlatButton2_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton2.Click
         Frm_CompaniesAccounts.ShowDialog()
     End Sub
+
+    Private Sub Frm_main_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
+        PictureBox3.Visible = False
+    End Sub
+
+    Private Sub Frm_main_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        PictureBox3.Visible = True
+    End Sub
 End Class

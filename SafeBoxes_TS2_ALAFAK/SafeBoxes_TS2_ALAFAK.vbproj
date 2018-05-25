@@ -688,6 +688,7 @@
     <Content Include="OurTables.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\SafeBoxesVideoTutorials.gif" />
     <None Include="Resources\Logo.jpg" />
     <None Include="Resources\afakLogo.png" />
     <None Include="Resources\Logo.png" />

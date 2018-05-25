@@ -38,10 +38,13 @@ Partial Class Frm_main
         Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialDivider3 = New MaterialSkin.Controls.MaterialDivider()
         Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MaterialDivider4 = New MaterialSkin.Controls.MaterialDivider()
         Me.MaterialFlatButton2 = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -193,7 +196,7 @@ Partial Class Frm_main
         Me.MaterialDivider1.Location = New System.Drawing.Point(-2, 198)
         Me.MaterialDivider1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialDivider1.Name = "MaterialDivider1"
-        Me.MaterialDivider1.Size = New System.Drawing.Size(929, 1)
+        Me.MaterialDivider1.Size = New System.Drawing.Size(1133, 1)
         Me.MaterialDivider1.TabIndex = 31
         Me.MaterialDivider1.Text = "MaterialDivider1"
         '
@@ -204,7 +207,7 @@ Partial Class Frm_main
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(713, 172)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(917, 172)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
         Me.MaterialLabel1.Size = New System.Drawing.Size(189, 19)
@@ -220,7 +223,7 @@ Partial Class Frm_main
         Me.MaterialDivider2.Location = New System.Drawing.Point(-4, 601)
         Me.MaterialDivider2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialDivider2.Name = "MaterialDivider2"
-        Me.MaterialDivider2.Size = New System.Drawing.Size(929, 1)
+        Me.MaterialDivider2.Size = New System.Drawing.Size(1133, 1)
         Me.MaterialDivider2.TabIndex = 33
         Me.MaterialDivider2.Text = "MaterialDivider2"
         '
@@ -231,7 +234,7 @@ Partial Class Frm_main
         Me.MaterialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton1.Depth = 0
         Me.MaterialRaisedButton1.Icon = Nothing
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(822, 628)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(1026, 628)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
@@ -247,7 +250,7 @@ Partial Class Frm_main
         Me.MaterialRaisedButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialRaisedButton2.Depth = 0
         Me.MaterialRaisedButton2.Icon = Nothing
-        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(761, 628)
+        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(965, 628)
         Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
         Me.MaterialRaisedButton2.Primary = True
@@ -283,29 +286,6 @@ Partial Class Frm_main
         Me.MaterialFlatButton1.Text = "Clients Accounts Manager"
         Me.MaterialFlatButton1.UseVisualStyleBackColor = True
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.SafeBoxes_TS2_ALAFAK.My.Resources.Resources.Logo1
-        Me.PictureBox2.Location = New System.Drawing.Point(731, 68)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(149, 124)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 30
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.SafeBoxes_TS2_ALAFAK.My.Resources.Resources.Logo
-        Me.PictureBox1.Location = New System.Drawing.Point(-2, 68)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(521, 124)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 29
-        Me.PictureBox1.TabStop = False
-        '
         'MaterialDivider4
         '
         Me.MaterialDivider4.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -333,11 +313,63 @@ Partial Class Frm_main
         Me.MaterialFlatButton2.Text = "Companies Accounts Manager"
         Me.MaterialFlatButton2.UseVisualStyleBackColor = True
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox3.BackColor = System.Drawing.Color.White
+        Me.PictureBox3.Image = Global.SafeBoxes_TS2_ALAFAK.My.Resources.Resources.SafeBoxesVideoTutorials
+        Me.PictureBox3.Location = New System.Drawing.Point(572, 250)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(386, 217)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 40
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.SafeBoxes_TS2_ALAFAK.My.Resources.Resources.Logo1
+        Me.PictureBox2.Location = New System.Drawing.Point(935, 68)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(149, 124)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 30
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.SafeBoxes_TS2_ALAFAK.My.Resources.Resources.Logo
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, 68)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(521, 124)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 29
+        Me.PictureBox1.TabStop = False
+        '
+        'MaterialLabel2
+        '
+        Me.MaterialLabel2.AutoSize = True
+        Me.MaterialLabel2.Depth = 0
+        Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel2.Location = New System.Drawing.Point(568, 221)
+        Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel2.Name = "MaterialLabel2"
+        Me.MaterialLabel2.Size = New System.Drawing.Size(69, 19)
+        Me.MaterialLabel2.TabIndex = 41
+        Me.MaterialLabel2.Text = "Tutorials"
+        '
         'Frm_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(920, 676)
+        Me.ClientSize = New System.Drawing.Size(1124, 676)
+        Me.Controls.Add(Me.MaterialLabel2)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.MaterialFlatButton2)
         Me.Controls.Add(Me.MaterialDivider4)
         Me.Controls.Add(Me.MaterialFlatButton1)
@@ -362,6 +394,7 @@ Partial Class Frm_main
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Frm_main"
         Me.Text = "Main Menu"
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -388,4 +421,6 @@ Partial Class Frm_main
     Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents MaterialDivider4 As MaterialSkin.Controls.MaterialDivider
     Friend WithEvents MaterialFlatButton2 As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
 End Class
