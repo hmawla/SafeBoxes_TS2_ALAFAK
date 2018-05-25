@@ -73,6 +73,7 @@ Partial Class Frm_NewInfoVoucher
         'MaterialLabel5
         '
         Me.MaterialLabel5.AutoSize = True
+        Me.MaterialLabel5.ContextMenuStrip = Me.ClientSelector
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -576,6 +577,7 @@ Partial Class Frm_NewInfoVoucher
         'MaterialLabel10
         '
         Me.MaterialLabel10.AutoSize = True
+        Me.MaterialLabel10.ContextMenuStrip = Me.ContractSelector
         Me.MaterialLabel10.Depth = 0
         Me.MaterialLabel10.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
