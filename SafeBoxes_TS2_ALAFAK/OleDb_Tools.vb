@@ -163,7 +163,7 @@ End_Of_For:
     End Function
 
     Public Function AddRight(ByRef theCBox As ComboBox) As Integer
-        If Exists(theCBox.SelectedValue, "SELECT RightId FROM AuthRight") Then
+        If theCBox.SelectedIndex >= 0 Then
             Return theCBox.SelectedValue
         Else
             Dim theNewId As Integer = GenID("AuthRight", "RightId")

@@ -25,6 +25,8 @@
 
         Else
             'Companies Codes
+            Frm_NewCompany.ShowDialog()
+            FillDGV(DGV_Accounts, "SELECT AccountId AS [Account ID], C.CompId AS [Company ID], CompName AS [Company's Name] FROM CompanyAccounts A, Company AS C WHERE A.CompId = C.CompId")
         End If
     End Sub
 

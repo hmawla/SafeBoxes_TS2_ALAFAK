@@ -31,4 +31,10 @@ Public Class Frm_Login
     Private Sub txt_empid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_empid.KeyPress
         Only_Number(txt_empid, e)
     End Sub
+
+    Private Sub txt_empid_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_empid.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btn_login.PerformClick()
+        End If
+    End Sub
 End Class

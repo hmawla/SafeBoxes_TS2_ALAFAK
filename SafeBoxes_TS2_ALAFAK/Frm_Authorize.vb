@@ -68,13 +68,15 @@ theEnd:
             InputBox.Show("Please enter admin password!", "Delete right#" & CBox_AuthRights.SelectedValue, True)
             If inResult = "12345" Then
                 ExecuteQuery("DELETE FROM AuthRight WHERE RightId = " & CBox_AuthRights.SelectedValue)
+                For i As Integer = 0 To DGV_Rights.Rows.Count - 1
+                    If CBox_AuthRights.SelectedValue = DGV_Rights.Rows(i).Cells(0).Value Then
+                        DGV_Rights.Rows.RemoveAt(DGV_Rights.Rows(i).Index)
+                        GoTo theEnd
+                    End If
+                Next
+theEnd:
+                FillCBox(CBox_AuthRights, "SELECT RightId, RightDesc FROM AuthRight", "RightId", "RightDesc")
             End If
-            For i As Integer = 0 To DGV_Rights.Rows.Count - 1
-                If CBox_AuthRights.SelectedValue = DGV_Rights.Rows(i).Cells(0).Value Then
-                    DGV_Rights.Rows.RemoveAt(DGV_Rights.Rows(i).Index)
-                End If
-            Next
-            FillCBox(CBox_AuthRights, "SELECT RightId, RightDesc FROM AuthRight", "RightId", "RightDesc")
         Else
             MessageBox.Show("Please select before deleting!")
         End If
