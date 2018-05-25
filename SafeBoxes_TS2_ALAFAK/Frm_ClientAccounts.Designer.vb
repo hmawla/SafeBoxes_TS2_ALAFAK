@@ -212,6 +212,7 @@ Partial Class Frm_ClientAccounts
         'txt_cname
         '
         Me.txt_cname.Depth = 0
+        Me.txt_cname.Enabled = False
         Me.txt_cname.Hint = ""
         Me.txt_cname.Location = New System.Drawing.Point(153, 80)
         Me.txt_cname.MaxLength = 32767
@@ -229,6 +230,7 @@ Partial Class Frm_ClientAccounts
         'txt_byaccid
         '
         Me.txt_byaccid.Depth = 0
+        Me.txt_byaccid.Enabled = False
         Me.txt_byaccid.Hint = ""
         Me.txt_byaccid.Location = New System.Drawing.Point(153, 22)
         Me.txt_byaccid.MaxLength = 32767
@@ -262,7 +264,6 @@ Partial Class Frm_ClientAccounts
         'rdb_byAccid
         '
         Me.rdb_byAccid.AutoSize = True
-        Me.rdb_byAccid.Checked = True
         Me.rdb_byAccid.Depth = 0
         Me.rdb_byAccid.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.rdb_byAccid.Location = New System.Drawing.Point(9, 15)
@@ -273,7 +274,6 @@ Partial Class Frm_ClientAccounts
         Me.rdb_byAccid.Ripple = True
         Me.rdb_byAccid.Size = New System.Drawing.Size(115, 30)
         Me.rdb_byAccid.TabIndex = 0
-        Me.rdb_byAccid.TabStop = True
         Me.rdb_byAccid.Text = "By Account ID"
         Me.rdb_byAccid.UseVisualStyleBackColor = True
         '
