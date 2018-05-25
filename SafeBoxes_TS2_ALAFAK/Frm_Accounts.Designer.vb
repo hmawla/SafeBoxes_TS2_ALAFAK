@@ -47,6 +47,8 @@ Partial Class Frm_Accounts
         '
         'MaterialTabSelector1
         '
+        Me.MaterialTabSelector1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
         Me.MaterialTabSelector1.Location = New System.Drawing.Point(-2, 59)
@@ -58,6 +60,8 @@ Partial Class Frm_Accounts
         '
         'MaterialTabControl1
         '
+        Me.MaterialTabControl1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabControl1.Controls.Add(Me.TabPage1)
         Me.MaterialTabControl1.Controls.Add(Me.TabPage2)
         Me.MaterialTabControl1.Depth = 0
@@ -281,7 +285,7 @@ Partial Class Frm_Accounts
         Me.DGV_Accounts.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DGV_Accounts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DGV_Accounts.GridColor = System.Drawing.Color.PowderBlue
-        Me.DGV_Accounts.Location = New System.Drawing.Point(12, 282)
+        Me.DGV_Accounts.Location = New System.Drawing.Point(12, 269)
         Me.DGV_Accounts.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.DGV_Accounts.MultiSelect = False
         Me.DGV_Accounts.Name = "DGV_Accounts"
@@ -290,7 +294,7 @@ Partial Class Frm_Accounts
         Me.DGV_Accounts.RowHeadersVisible = False
         Me.DGV_Accounts.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_Accounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_Accounts.Size = New System.Drawing.Size(773, 302)
+        Me.DGV_Accounts.Size = New System.Drawing.Size(773, 315)
         Me.DGV_Accounts.TabIndex = 17
         '
         'Rdb_Companies
