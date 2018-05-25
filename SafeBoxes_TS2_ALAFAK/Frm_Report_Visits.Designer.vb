@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Frm_Report_Visits
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -24,11 +24,11 @@ Partial Class Frm_Report_Visits
     Private Sub InitializeComponent()
         Me.CRptV_Visits = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Txt_ContId = New System.Windows.Forms.TextBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.CheckBox1 = New MaterialSkin.Controls.MaterialCheckBox()
+        Me.Txt_ContId = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.RadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
-        Me.Rdb_ByContId = New System.Windows.Forms.RadioButton()
+        Me.Rdb_ByContId = New MaterialSkin.Controls.MaterialRadioButton()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -147,10 +147,10 @@ Partial Class Frm_Report_Visits
 
     Friend WithEvents CRptV_Visits As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Txt_ContId As TextBox
-    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents CheckBox1 As MaterialSkin.Controls.MaterialCheckBox
+    Friend WithEvents Txt_ContId As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents RadioButton2 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents dtpick_exdate As DateTimePicker
-    Friend WithEvents Rdb_ByContId As RadioButton
+    Friend WithEvents Rdb_ByContId As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
