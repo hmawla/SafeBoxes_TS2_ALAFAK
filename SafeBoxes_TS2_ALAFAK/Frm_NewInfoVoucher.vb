@@ -130,7 +130,7 @@
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
         If txt_clientname.Text.Count > 0 Then
-            If Exists(txt_contractid.Text, "SELECT ContId WHERE ContId NOT IN (SELECT ContId FROM ContEnd) And ContToDate > date()") Then
+            If Exists(txt_contractid.Text, "SELECT ContId FROM Contract WHERE ContId NOT IN (SELECT ContId FROM ContEnd) And ContToDate > date()") Then
                 If Frm_InfoVoucher.infovouchId = 0 Then
                     If txt_phonenumber.Text.Count > 0 Or txt_email.Text.Count > 0 Or txt_mailpost.Text.Count > 0 Or txt_otherconn.Text.Count > 0 Then
                         If dtpick_fromtime.Value.TimeOfDay > dtpick_totime.Value.TimeOfDay Then
