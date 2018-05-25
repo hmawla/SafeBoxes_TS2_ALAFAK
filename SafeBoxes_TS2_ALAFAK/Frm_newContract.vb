@@ -16,8 +16,8 @@ Public Class Frm_newContract
 
     Private Sub Btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
         If Rdb_Client.Checked And Exists(txt_accountid.Text, "SELECT AccountId FROM ClientDepAccount") Then
-            If Exists(txt_boxes.Text, "SELECT BoxId FROM Boxes WHERE BoxId NOT IN (SELECT BoxId FROM Contract WHERE ContId NOT IN (SELECT ContId FROM ContEnd))") Or txt_boxes.Text = Frm_Contracts.boxId Then
-                If dtpick_exdate.Value < Today Then
+            If Exists(txt_boxes.Text, "SELECT BoxId FROM Boxes WHERE BoxId NOT IN (SELECT BoxId FROM Contract WHERE ContId NOT IN (SELECT ContId FROM ContEnd))") Or txt_boxes.Text.Equals(Frm_Contracts.boxId.ToString) Then
+                If dtpick_exdate.Value > DateAndTime.Today Then
                     If txt_accountid.Text.Count > 0 And txt_boxes.Text.Count > 0 And txt_phone1.Text.Count > 0 And txt_phone2.Text.Count > 0 Then
                         If Frm_Contracts.contractId = 0 Then
                             theNewId = GenID("Contract", "ContId")

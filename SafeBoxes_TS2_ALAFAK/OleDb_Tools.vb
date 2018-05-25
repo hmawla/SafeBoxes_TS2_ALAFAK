@@ -93,7 +93,7 @@ Module OleDb_Tools
 
         Dim i As Integer
         For i = 0 To dbDataSet.Tables(0).Rows.Count - 1
-            If dbDataSet.Tables(0).Rows(i).Item(0) = theObj Then
+            If dbDataSet.Tables(0).Rows(i).Item(0).ToString.Equals(theObj.ToString) Then
                 Return True
             End If
         Next
