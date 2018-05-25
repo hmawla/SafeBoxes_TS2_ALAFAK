@@ -76,21 +76,37 @@ Partial Class Frm_NewCompany
         '
         'btn_submit
         '
+        Me.btn_submit.AutoSize = True
+        Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_submit.Depth = 0
+        Me.btn_submit.Icon = Nothing
         Me.btn_submit.Location = New System.Drawing.Point(418, 170)
         Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_submit.Name = "btn_submit"
-        Me.btn_submit.Size = New System.Drawing.Size(131, 35)
+        Me.btn_submit.Primary = False
+        Me.btn_submit.Size = New System.Drawing.Size(71, 36)
         Me.btn_submit.TabIndex = 50
         Me.btn_submit.Text = "Submit"
         Me.btn_submit.UseVisualStyleBackColor = True
         '
         'txt_compname
         '
+        Me.txt_compname.Depth = 0
+        Me.txt_compname.Hint = ""
         Me.txt_compname.Location = New System.Drawing.Point(15, 134)
         Me.txt_compname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txt_compname.MaxLength = 32767
+        Me.txt_compname.MouseState = MaterialSkin.MouseState.HOVER
         Me.txt_compname.Name = "txt_compname"
-        Me.txt_compname.Size = New System.Drawing.Size(252, 26)
+        Me.txt_compname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txt_compname.SelectedText = ""
+        Me.txt_compname.SelectionLength = 0
+        Me.txt_compname.SelectionStart = 0
+        Me.txt_compname.Size = New System.Drawing.Size(252, 23)
         Me.txt_compname.TabIndex = 49
+        Me.txt_compname.TabStop = False
+        Me.txt_compname.UseSystemPasswordChar = False
         '
         'lbl_compid
         '
@@ -122,7 +138,7 @@ Partial Class Frm_NewCompany
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(571, 222)
+        Me.ClientSize = New System.Drawing.Size(632, 222)
         Me.Controls.Add(Me.MaterialLabel8)
         Me.Controls.Add(Me.cbox_comptypes)
         Me.Controls.Add(Me.MaterialLabel5)

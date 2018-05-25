@@ -30,4 +30,14 @@
             inResult = "0"
         End If
     End Sub
+
+    Private Sub InputBox_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Txt_Input.Focus()
+    End Sub
+
+    Private Sub Txt_Input_KeyDown(sender As Object, e As KeyEventArgs) Handles Txt_Input.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Btn_OK.PerformClick()
+        End If
+    End Sub
 End Class
