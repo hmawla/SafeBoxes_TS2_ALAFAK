@@ -17,26 +17,30 @@ Public Class Frm_newContract
     Private Sub Btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
         If Rdb_Client.Checked And Exists(txt_accountid.Text, "SELECT AccountId FROM ClientDepAccount") Then
             If Exists(txt_boxes.Text, "SELECT BoxId FROM Boxes WHERE BoxId NOT IN (SELECT BoxId FROM Contract WHERE ContId NOT IN (SELECT ContId FROM ContEnd))") Or txt_boxes.Text = Frm_Contracts.boxId Then
-                If txt_accountid.Text.Count > 0 And txt_boxes.Text.Count > 0 And txt_phone1.Text.Count > 0 And txt_phone2.Text.Count > 0 Then
-                    If Frm_Contracts.contractId = 0 Then
-                        theNewId = GenID("Contract", "ContId")
-                        If txt_contnote.TextLength > 0 Then
-                            ExecuteQuery("INSERT INTO Contract VALUES(" & theNewId & ", date(), '" & dtpick_exdate.Value.ToShortDateString & "', '" & txt_contnote.Text & "', " & txt_floor.Value & ", '" & txt_phone1.Text & "', '" & txt_phone2.Text & "', " & EmpId & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & txt_accountid.Text & ", " & txt_boxes.Text & ")")
+                If dtpick_exdate.Value < Today Then
+                    If txt_accountid.Text.Count > 0 And txt_boxes.Text.Count > 0 And txt_phone1.Text.Count > 0 And txt_phone2.Text.Count > 0 Then
+                        If Frm_Contracts.contractId = 0 Then
+                            theNewId = GenID("Contract", "ContId")
+                            If txt_contnote.TextLength > 0 Then
+                                ExecuteQuery("INSERT INTO Contract VALUES(" & theNewId & ", date(), '" & dtpick_exdate.Value.ToShortDateString & "', '" & txt_contnote.Text & "', " & txt_floor.Value & ", '" & txt_phone1.Text & "', '" & txt_phone2.Text & "', " & EmpId & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & txt_accountid.Text & ", " & txt_boxes.Text & ")")
+                            Else
+                                ExecuteQuery("INSERT INTO Contract VALUES(" & theNewId & ", date(), '" & dtpick_exdate.Value.ToShortDateString & "', '', " & txt_floor.Value & ", '" & txt_phone1.Text & "', '" & txt_phone2.Text & "', " & EmpId & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & txt_accountid.Text & ", " & txt_boxes.Text & ")")
+                            End If
                         Else
-                            ExecuteQuery("INSERT INTO Contract VALUES(" & theNewId & ", date(), '" & dtpick_exdate.Value.ToShortDateString & "', '', " & txt_floor.Value & ", '" & txt_phone1.Text & "', '" & txt_phone2.Text & "', " & EmpId & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", " & txt_accountid.Text & ", " & txt_boxes.Text & ")")
+                            If txt_contnote.TextLength > 0 Then
+                                ExecuteQuery("UPDATE Contract SET AccountId = " & txt_accountid.Text & ", BoxId = " & txt_boxes.Text & ", BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", EmpId = " & EmpId & ", ContFloor = " & txt_floor.Value & ", ContBDate = '" & Date.Today.ToShortDateString & "', ContToDate = '" & dtpick_exdate.Value.ToShortDateString & "', ContPhone1 = '" & txt_phone1.Text & "', ContPhone2 = '" & txt_phone2.Text & "', ContNote = '" & txt_contnote.Text & "' WHERE ContId = " & theNewId)
+                                Frm_main.contractid = theNewId
+                            Else
+                                ExecuteQuery("UPDATE Contract SET AccountId = " & txt_accountid.Text & ", BoxId = " & txt_boxes.Text & ", BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", EmpId = " & EmpId & ", ContFloor = " & txt_floor.Value & ", ContBDate = '" & Date.Today.ToShortDateString & "', ContToDate = '" & dtpick_exdate.Value.ToShortDateString & "', ContPhone1 = '" & txt_phone1.Text & "', ContPhone2 = '" & txt_phone2.Text & "' WHERE ContId = " & theNewId)
+                                Frm_main.contractid = theNewId
+                            End If
                         End If
+                        Me.Dispose()
                     Else
-                        If txt_contnote.TextLength > 0 Then
-                            ExecuteQuery("UPDATE Contract SET AccountId = " & txt_accountid.Text & ", BoxId = " & txt_boxes.Text & ", BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", EmpId = " & EmpId & ", ContFloor = " & txt_floor.Value & ", ContBDate = '" & Date.Today.ToShortDateString & "', ContToDate = '" & dtpick_exdate.Value.ToShortDateString & "', ContPhone1 = '" & txt_phone1.Text & "', ContPhone2 = '" & txt_phone2.Text & "', ContNote = '" & txt_contnote.Text & "' WHERE ContId = " & theNewId)
-                            Frm_main.contractid = theNewId
-                        Else
-                            ExecuteQuery("UPDATE Contract SET AccountId = " & txt_accountid.Text & ", BoxId = " & txt_boxes.Text & ", BuildingId = " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ", EmpId = " & EmpId & ", ContFloor = " & txt_floor.Value & ", ContBDate = '" & Date.Today.ToShortDateString & "', ContToDate = '" & dtpick_exdate.Value.ToShortDateString & "', ContPhone1 = '" & txt_phone1.Text & "', ContPhone2 = '" & txt_phone2.Text & "' WHERE ContId = " & theNewId)
-                            Frm_main.contractid = theNewId
-                        End If
+                        MessageBox.Show("Please fill all needed information!")
                     End If
-                    Me.Dispose()
                 Else
-                    MessageBox.Show("Please fill all needed information!")
+                    MessageBox.Show("Invalid date!")
                 End If
             Else
                 MessageBox.Show("Invalid box ID!")
