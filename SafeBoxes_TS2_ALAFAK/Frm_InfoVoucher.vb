@@ -26,6 +26,7 @@
         ExecuteQuery("DELETE FROM InfoVoucherExDays WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
         ExecuteQuery("DELETE FROM InfoResult WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
         ExecuteQuery("DELETE FROM ConnWaysInfoVoucher WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
+        ExecuteQuery("DELETE FROM TransferLaws WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
         FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS [ID], InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId, BuildingName, InfoSubjTitle, ClientFName FROM InfoVoucher, Buildings, Clients, InfoSubjectTitles WHERE InfoVoucher.BuildingId=Buildings.BuildingId AND InfoVoucher.InfoSubjTitleId=InfoSubjectTitles.InfoSubjTitleId AND InfoVoucher.ClientId=Clients.ClientId")
     End Sub
 
