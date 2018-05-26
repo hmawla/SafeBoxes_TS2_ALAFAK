@@ -82,4 +82,17 @@
     Private Sub txt_bycname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bycname.KeyPress
         Only_char(txt_bycname, e)
     End Sub
+
+    Private Sub dgv_companies_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_companies.CellDoubleClick
+        If Frm_main.companyId = 0 Then
+            Try
+                If dgv_companies.SelectedRows(0).Cells(0).Value > 0 Then
+                End If
+                Frm_main.companyId = dgv_companies.SelectedRows(0).Cells(0).Value
+                Me.Dispose()
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
 End Class
