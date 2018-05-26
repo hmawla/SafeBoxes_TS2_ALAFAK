@@ -56,7 +56,7 @@
     Private Sub SelectClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectClientToolStripMenuItem1.Click
         Frm_main.clientid = 0
         MessageBox.Show("Double click on the desired client to select it!")
-        Frm_SelectClient.ShowDialog()
+        Frm_Clients.ShowDialog()
         txt_clientid.Text = Frm_main.clientid
         Frm_main.clientid = -1
     End Sub

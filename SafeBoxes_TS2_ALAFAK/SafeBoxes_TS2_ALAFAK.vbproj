@@ -406,24 +406,6 @@
     <Compile Include="Frm_NewInfoVoucher.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_SelectBox.Designer.vb">
-      <DependentUpon>Frm_SelectBox.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_SelectBox.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_SelectClient.Designer.vb">
-      <DependentUpon>Frm_SelectClient.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_SelectClient.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_SelectContract.Designer.vb">
-      <DependentUpon>Frm_SelectContract.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_SelectContract.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Rpt_Contract.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -470,12 +452,6 @@
       <DependentUpon>Frm_NewContract.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm_NewContract.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_SelectAccountClient.Designer.vb">
-      <DependentUpon>Frm_SelectAccountClient.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_SelectAccountClient.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OleDb_Tools.vb" />
@@ -623,15 +599,6 @@
     <EmbeddedResource Include="Frm_Report_WithdrawPermission.resx">
       <DependentUpon>Frm_Report_WithdrawPermission.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_SelectBox.resx">
-      <DependentUpon>Frm_SelectBox.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_SelectClient.resx">
-      <DependentUpon>Frm_SelectClient.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_SelectContract.resx">
-      <DependentUpon>Frm_SelectContract.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm_SignatureCards.resx">
       <DependentUpon>Frm_SignatureCards.vb</DependentUpon>
     </EmbeddedResource>
@@ -670,9 +637,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewContract.resx">
       <DependentUpon>Frm_NewContract.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_SelectAccountClient.resx">
-      <DependentUpon>Frm_SelectAccountClient.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
