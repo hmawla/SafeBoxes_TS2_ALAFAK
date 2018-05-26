@@ -64,6 +64,7 @@ Partial Class Frm_NewAccountClient
         'MaterialLabel5
         '
         Me.MaterialLabel5.AutoSize = True
+        Me.MaterialLabel5.ContextMenuStrip = Me.ClientSelector
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -91,6 +92,7 @@ Partial Class Frm_NewAccountClient
         '
         'Txt_Cid
         '
+        Me.Txt_Cid.ContextMenuStrip = Me.ClientSelector
         Me.Txt_Cid.Depth = 0
         Me.Txt_Cid.Hint = ""
         Me.Txt_Cid.Location = New System.Drawing.Point(13, 100)
