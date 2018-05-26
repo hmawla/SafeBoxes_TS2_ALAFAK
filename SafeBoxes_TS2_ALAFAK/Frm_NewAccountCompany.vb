@@ -98,7 +98,7 @@ theEnd:
     Private Sub Frm_NewAccountCompany_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Not Frm_main.accountid = 0 Then
             theNewId = Frm_main.accountid
-            ds = ReadQueryOut("SELECT CA.CompId, CompName FROM CompanyAccounts AS CA, Company AS C WHERE C.CompId = CA.CompId AND AccountId = " & theNewId)
+            ds = ReadQueryOut("SELECT CA.ClientId, ClientFName + ' ' + ClientLName FROM ClientRepAccount AS CA, Clients AS C WHERE C.ClientId = CA.ClientId AND AccountId = " & theNewId)
             For Each row As DataRow In ds.Tables(0).Rows
                 DGV_Clients.Rows.Add(row.Item(0), row.Item(1))
             Next
