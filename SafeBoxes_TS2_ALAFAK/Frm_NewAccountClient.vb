@@ -54,4 +54,18 @@ theEnd:
     Private Sub RemoveSelectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveSelectedToolStripMenuItem.Click
         DGV_Clients.Rows.Remove(DGV_Clients.SelectedRows(0))
     End Sub
+
+    Private Sub Frm_NewAccountClient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Not Frm_main.accountid = 0 Then
+            theNewId = Frm_main.accountid
+            ds = ReadQueryOut("SELECT CA.ClientId, ClientFName + ' ' + ClientLName FROM ClientDepAccount AS CA, Clients AS C WHERE C.ClientId = CA.ClientId AND AccountId = " & theNewId)
+            For Each row As DataRow In ds.Tables(0).Rows
+                DGV_Clients.Rows.Add(row.Item(0), row.Item(1))
+            Next
+        End If
+    End Sub
+
+    Private Sub Frm_NewAccountClient_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Me.Dispose()
+    End Sub
 End Class
