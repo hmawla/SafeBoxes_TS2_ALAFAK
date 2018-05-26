@@ -24,8 +24,16 @@
             If txt_compname.Text = "" Or cbox_comptypes.Text = "" Then
                 MessageBox.Show("Please fill all needed information!")
             Else
+                Dim compTypeId As Integer
+                If cbox_comptypes.SelectedIndex < 0 Then
+                    compTypeId = GenID("CompType", "CompTypeId")
+                    ExecuteQuery("INSERT INTO CompType VALUES(" & compTypeId & ", '" & cbox_comptypes.Text & "', " & Rdb_Personal.Checked & ")")
+                Else
+                    compTypeId = cbox_comptypes.SelectedValue
+
+                End If
                 theNewId = GenID("Company", "CompId")
-                ExecuteQuery("INSERT INTO Company VALUES(" & theNewId & ", '" & txt_compname.Text & "', " & cbox_comptypes.SelectedValue & ")")
+                ExecuteQuery("INSERT INTO Company VALUES(" & theNewId & ", '" & txt_compname.Text & "', " & compTypeId & ")")
                 MessageBox.Show("Company Added!")
                 Me.Dispose()
             End If
@@ -33,7 +41,15 @@
             If txt_compname.Text = "" Or cbox_comptypes.Text = "" Then
                 MessageBox.Show("Please fill all needed information!")
             Else
-                ExecuteQuery("UPDATE Company SET CompName = '" & txt_compname.Text & "', CompTypeId = " & cbox_comptypes.SelectedValue & " WHERE CompId = " & theNewId)
+                Dim compTypeId As Integer
+                If cbox_comptypes.SelectedIndex < 0 Then
+                    compTypeId = GenID("CompType", "CompTypeId")
+                    ExecuteQuery("INSERT INTO CompType VALUES(" & compTypeId & ", '" & cbox_comptypes.Text & "', " & Rdb_Personal.Checked & ")")
+                Else
+                    compTypeId = cbox_comptypes.SelectedValue
+
+                End If
+                ExecuteQuery("UPDATE Company SET CompName = '" & txt_compname.Text & "', CompTypeId = " & compTypeId & " WHERE CompId = " & theNewId)
                 MessageBox.Show("Company Updated!")
                 Me.Dispose()
             End If
