@@ -21,9 +21,7 @@
     End Sub
 
     Private Sub Btn_Add_Click(sender As Object, e As EventArgs) Handles Btn_Add.Click
-        Dim mss As New MessageBox
         For Each row As DataGridViewRow In DGV_Clients.Rows
-            mss.Show(row.Cells(0).Value & vbNewLine & Txt_Cid.Text)
             If row.Cells(0).Value.ToString.Equals(Txt_Cid.Text.ToString) Then
                 MessageBox.Show("Client already added!")
                 GoTo theEnd
