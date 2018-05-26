@@ -3,6 +3,7 @@
 Public Class Frm_main
     Public accountid As Integer = vbNull
     Public clientid As Integer = vbNull
+    Public companyId As Integer = vbNull
     Public contractid As Integer = vbNull
     Public loggedEmpId As Integer = vbNull
     Public employeeid As Integer = vbNull
