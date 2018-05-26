@@ -33,7 +33,6 @@
             MessageBox.Show("Invalid Client ID!")
         End If
 theEnd:
-
     End Sub
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
@@ -50,7 +49,6 @@ theEnd:
                 Else
                     MessageBox.Show("Invalid Company ID!")
                 End If
-
             Else
                 MessageBox.Show("Please add at least one Client!")
             End If
@@ -67,13 +65,10 @@ theEnd:
                 Else
                     MessageBox.Show("Invalid Company ID!")
                 End If
-
             Else
                 MessageBox.Show("Please add at least one Client!")
             End If
         End If
-
-
     End Sub
 
     Private Sub RemoveSelectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveSelectedToolStripMenuItem.Click
