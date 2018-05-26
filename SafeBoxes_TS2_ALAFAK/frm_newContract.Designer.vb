@@ -62,8 +62,6 @@ Partial Class Frm_newContract
         Me.StreetsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.ModifyStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteStreetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Rdb_Client = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.Rdb_Company = New MaterialSkin.Controls.MaterialRadioButton()
         Me.btn_submit = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.BuildingsMenuStrip.SuspendLayout()
         CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -150,18 +148,18 @@ Partial Class Frm_newContract
         Me.BuildingsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifySelectedToolStripMenuItem, Me.DeleteBuildingToolStripMenuItem})
         Me.BuildingsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
         Me.BuildingsMenuStrip.Name = "BuildingsMenuStrip"
-        Me.BuildingsMenuStrip.Size = New System.Drawing.Size(181, 70)
+        Me.BuildingsMenuStrip.Size = New System.Drawing.Size(160, 48)
         '
         'ModifySelectedToolStripMenuItem
         '
         Me.ModifySelectedToolStripMenuItem.Name = "ModifySelectedToolStripMenuItem"
-        Me.ModifySelectedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ModifySelectedToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
         Me.ModifySelectedToolStripMenuItem.Text = "Modify Building"
         '
         'DeleteBuildingToolStripMenuItem
         '
         Me.DeleteBuildingToolStripMenuItem.Name = "DeleteBuildingToolStripMenuItem"
-        Me.DeleteBuildingToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteBuildingToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
         Me.DeleteBuildingToolStripMenuItem.Text = "Delete Building"
         '
         'MaterialLabel3
@@ -422,7 +420,7 @@ Partial Class Frm_newContract
         Me.lbl_empid.Depth = 0
         Me.lbl_empid.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.lbl_empid.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lbl_empid.Location = New System.Drawing.Point(329, 72)
+        Me.lbl_empid.Location = New System.Drawing.Point(18, 72)
         Me.lbl_empid.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_empid.MouseState = MaterialSkin.MouseState.HOVER
         Me.lbl_empid.Name = "lbl_empid"
@@ -539,40 +537,6 @@ Partial Class Frm_newContract
         Me.DeleteStreetToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.DeleteStreetToolStripMenuItem.Text = "Delete Street"
         '
-        'Rdb_Client
-        '
-        Me.Rdb_Client.AutoSize = True
-        Me.Rdb_Client.Checked = True
-        Me.Rdb_Client.Depth = 0
-        Me.Rdb_Client.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.Rdb_Client.Location = New System.Drawing.Point(9, 72)
-        Me.Rdb_Client.Margin = New System.Windows.Forms.Padding(0)
-        Me.Rdb_Client.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.Rdb_Client.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Rdb_Client.Name = "Rdb_Client"
-        Me.Rdb_Client.Ripple = True
-        Me.Rdb_Client.Size = New System.Drawing.Size(64, 30)
-        Me.Rdb_Client.TabIndex = 48
-        Me.Rdb_Client.TabStop = True
-        Me.Rdb_Client.Text = "Client"
-        Me.Rdb_Client.UseVisualStyleBackColor = True
-        '
-        'Rdb_Company
-        '
-        Me.Rdb_Company.AutoSize = True
-        Me.Rdb_Company.Depth = 0
-        Me.Rdb_Company.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.Rdb_Company.Location = New System.Drawing.Point(78, 72)
-        Me.Rdb_Company.Margin = New System.Windows.Forms.Padding(0)
-        Me.Rdb_Company.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.Rdb_Company.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Rdb_Company.Name = "Rdb_Company"
-        Me.Rdb_Company.Ripple = True
-        Me.Rdb_Company.Size = New System.Drawing.Size(87, 30)
-        Me.Rdb_Company.TabIndex = 49
-        Me.Rdb_Company.Text = "Company"
-        Me.Rdb_Company.UseVisualStyleBackColor = True
-        '
         'btn_submit
         '
         Me.btn_submit.AutoSize = True
@@ -595,8 +559,6 @@ Partial Class Frm_newContract
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(562, 404)
         Me.Controls.Add(Me.btn_submit)
-        Me.Controls.Add(Me.Rdb_Company)
-        Me.Controls.Add(Me.Rdb_Client)
         Me.Controls.Add(Me.MaterialLabel12)
         Me.Controls.Add(Me.cbox_streets)
         Me.Controls.Add(Me.MaterialLabel2)
@@ -678,7 +640,5 @@ Partial Class Frm_newContract
     Friend WithEvents StreetsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents ModifyStreetToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteStreetToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Rdb_Client As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents Rdb_Company As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialRaisedButton
 End Class
