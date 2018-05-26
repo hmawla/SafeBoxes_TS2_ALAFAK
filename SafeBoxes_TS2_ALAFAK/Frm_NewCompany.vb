@@ -1,16 +1,14 @@
 ﻿Public Class Frm_NewCompany
     Dim theNewId As Integer
-    Dim isSubmitting As Boolean = False
+    Dim ds As New DataSet
+    Dim formLoaded As Boolean = False
 
     Private Sub Frm_NewCompany_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillCBox(cbox_comptypes, "SELECT CompTypeId, CompType FROM CompType", "CompTypeId", "CompType")
         If Frm_Companies.companyId = 0 Then
-            theNewId = GenID("Company", "CompId")
-            ExecuteQuery("INSERT INTO Company(CompId) VALUES(" & theNewId & ")")
-            lbl_compid.Text = "Company ID: " & theNewId
+
         Else
             theNewId = Frm_Companies.companyId
-            lbl_compid.Text = "Company ID: " & theNewId
             Dim theContDetails As New DataSet
             theContDetails = ReadQueryOut("SELECT * FROM Company WHERE CompId = " & theNewId)
             Dim rows As DataRow = theContDetails.Tables(0).Rows(0)
@@ -21,20 +19,29 @@
             rows = theContDetails.Tables(0).Rows(0)
             cbox_comptypes.SelectedValue = rows.Item(1)
         End If
+        formLoaded = True
 
     End Sub
 
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
-        isSubmitting = True
-        If txt_compname.Text = "" Or cbox_comptypes.Text = "" Then
-            MessageBox.Show("Fill all needed information!")
+        If Frm_Companies.companyId = 0 Then
+            If txt_compname.Text = "" Or cbox_comptypes.Text = "" Then
+                MessageBox.Show("Please fill all needed information!")
+            Else
+                theNewId = GenID("Company", "CompId")
+                ExecuteQuery("INSERT INTO Company VALUES(" & theNewId & ", '" & txt_compname.Text & "', " & cbox_comptypes.SelectedValue & ")")
+                MessageBox.Show("Company Added!")
+                Me.Dispose()
+            End If
         Else
-            ExecuteQuery("UPDATE Company SET CompName = '" & txt_compname.Text & "', CompTypeId = " & cbox_comptypes.SelectedValue & " WHERE CompId = " & theNewId)
-            MessageBox.Show("Company Added!")
-            Me.Close()
+            If txt_compname.Text = "" Or cbox_comptypes.Text = "" Then
+                MessageBox.Show("Please fill all needed information!")
+            Else
+                ExecuteQuery("UPDATE Company SET CompName = '" & txt_compname.Text & "', CompTypeId = " & cbox_comptypes.SelectedValue & " WHERE CompId = " & theNewId)
+                MessageBox.Show("Company Updated!")
+                Me.Dispose()
+            End If
         End If
-
-
     End Sub
 
     Private Sub txt_compname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_compname.KeyPress
@@ -46,9 +53,18 @@
     End Sub
 
     Private Sub Frm_NewCompany_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        If Not isSubmitting Then
-            ExecuteQuery("DELETE FROM Company WHERE CompId = " & theNewId)
-            Me.Dispose()
-        End If
+        Me.Dispose()
+    End Sub
+
+    Private Sub cbox_comptypes_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbox_comptypes.TextChanged
+        Rdb_Personal.Enabled = False
+        Try
+            ds = ReadQueryOut("SELECT PersonalYN FROM CompType WHERE CompTypeId = " & cbox_comptypes.SelectedValue)
+            Rdb_Personal.Checked = ds.Tables(0).Rows(0).Item(0)
+        Catch ex As Exception
+            Rdb_Personal.Enabled = True
+            Rdb_Personal.Checked = False
+        End Try
+
     End Sub
 End Class
