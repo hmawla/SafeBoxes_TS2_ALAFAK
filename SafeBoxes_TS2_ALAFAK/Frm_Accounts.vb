@@ -57,10 +57,33 @@
     Private Sub Btn_DelAccount_Click(sender As Object, e As EventArgs) Handles Btn_DelAccount.Click
         If Rdb_Clients.Checked Then
             'Clients Codes
+            InputBox.Show("Enter admin password:", "Delete Account#" & DGV_Accounts.SelectedRows(0).Cells(0).Value, True)
+            If Not inResult.Equals("0") Then
+                If inResult = adminPass Then
+                    ExecuteQuery("DELETE FROM ClientDepAccount WHERE AccountId = " & DGV_Accounts.SelectedRows(0).Cells(0).Value)
+                    ExecuteQuery("DELETE FROM SignCardsAccounts WHERE AccountId = " & DGV_Accounts.SelectedRows(0).Cells(0).Value)
+                    FillDGV(DGV_Accounts, "SELECT AccountId AS [Account ID], C.ClientId AS [Client ID], ClientFName + ' ' + ClientLName AS [Client's Name] FROM Clients C, ClientDepAccount A WHERE C.ClientId = A.ClientId")
+                Else
+                    MessageBox.Show("Wrong password!")
+                End If
+            End If
         Else
             'Companies Codes
+            InputBox.Show("Enter admin password:", "Delete Account#" & DGV_Accounts.SelectedRows(0).Cells(0).Value, True)
+            If Not inResult.Equals("0") Then
+                If inResult = adminPass Then
+                    ExecuteQuery("DELETE FROM CompanyAccounts WHERE AccountId = " & DGV_Accounts.SelectedRows(0).Cells(0).Value)
+                    ExecuteQuery("DELETE FROM ClientRepAccount WHERE AccountId = " & DGV_Accounts.SelectedRows(0).Cells(0).Value)
+                    ExecuteQuery("DELETE FROM SignCardsAccounts WHERE AccountId = " & DGV_Accounts.SelectedRows(0).Cells(0).Value)
+                    FillDGV(DGV_Accounts, "SELECT AccountId AS [Account ID], C.CompId AS [Company ID], CompName AS [Company's Name] FROM CompanyAccounts A, Company AS C WHERE A.CompId = C.CompId")
+                Else
+                    MessageBox.Show("Wrong password!")
+                End If
+            End If
         End If
     End Sub
 
-
+    Private Sub Frm_Accounts_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Me.Dispose()
+    End Sub
 End Class
