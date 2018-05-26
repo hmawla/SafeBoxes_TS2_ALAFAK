@@ -27,9 +27,13 @@ Partial Class Frm_NewAccountCompany
         Me.DGV_Clients = New System.Windows.Forms.DataGridView()
         Me.ClientId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClientName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClientRemover = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Btn_Add = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Txt_CName = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
+        Me.ClientSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.Txt_Cid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.Txt_CompName = New MaterialSkin.Controls.MaterialSingleLineTextField()
@@ -38,15 +42,11 @@ Partial Class Frm_NewAccountCompany
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.Txt_CompId = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.ClientRemover = New MaterialSkin.Controls.MaterialContextMenuStrip()
-        Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
-        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         CType(Me.DGV_Clients, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CompanySelector.SuspendLayout()
         Me.ClientRemover.SuspendLayout()
         Me.ClientSelector.SuspendLayout()
+        Me.CompanySelector.SuspendLayout()
         Me.SuspendLayout()
         '
         'Btn_Submit
@@ -122,6 +122,21 @@ Partial Class Frm_NewAccountCompany
         Me.ClientName.Name = "ClientName"
         Me.ClientName.ReadOnly = True
         '
+        'ClientRemover
+        '
+        Me.ClientRemover.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientRemover.Depth = 0
+        Me.ClientRemover.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoveSelectedToolStripMenuItem})
+        Me.ClientRemover.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientRemover.Name = "ClientRemover"
+        Me.ClientRemover.Size = New System.Drawing.Size(165, 26)
+        '
+        'RemoveSelectedToolStripMenuItem
+        '
+        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
+        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
+        '
         'Btn_Add
         '
         Me.Btn_Add.AutoSize = True
@@ -170,6 +185,21 @@ Partial Class Frm_NewAccountCompany
         Me.MaterialLabel5.Size = New System.Drawing.Size(70, 19)
         Me.MaterialLabel5.TabIndex = 70
         Me.MaterialLabel5.Text = "Client ID:"
+        '
+        'ClientSelector
+        '
+        Me.ClientSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientSelector.Depth = 0
+        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
+        Me.ClientSelector.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientSelector.Name = "ClientSelector"
+        Me.ClientSelector.Size = New System.Drawing.Size(140, 26)
+        '
+        'SelectClientToolStripMenuItem
+        '
+        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
+        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.SelectClientToolStripMenuItem.Text = "Select Client"
         '
         'MaterialLabel1
         '
@@ -286,36 +316,6 @@ Partial Class Frm_NewAccountCompany
         Me.Txt_CompId.TabStop = False
         Me.Txt_CompId.UseSystemPasswordChar = False
         '
-        'ClientRemover
-        '
-        Me.ClientRemover.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientRemover.Depth = 0
-        Me.ClientRemover.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoveSelectedToolStripMenuItem})
-        Me.ClientRemover.MouseState = MaterialSkin.MouseState.HOVER
-        Me.ClientRemover.Name = "ClientRemover"
-        Me.ClientRemover.Size = New System.Drawing.Size(165, 26)
-        '
-        'RemoveSelectedToolStripMenuItem
-        '
-        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
-        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
-        '
-        'ClientSelector
-        '
-        Me.ClientSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSelector.Depth = 0
-        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
-        Me.ClientSelector.MouseState = MaterialSkin.MouseState.HOVER
-        Me.ClientSelector.Name = "ClientSelector"
-        Me.ClientSelector.Size = New System.Drawing.Size(140, 26)
-        '
-        'SelectClientToolStripMenuItem
-        '
-        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
-        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
-        Me.SelectClientToolStripMenuItem.Text = "Select Client"
-        '
         'MaterialLabel4
         '
         Me.MaterialLabel4.AutoSize = True
@@ -356,9 +356,9 @@ Partial Class Frm_NewAccountCompany
         Me.Sizable = False
         Me.Text = "New Company's Account"
         CType(Me.DGV_Clients, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CompanySelector.ResumeLayout(False)
         Me.ClientRemover.ResumeLayout(False)
         Me.ClientSelector.ResumeLayout(False)
+        Me.CompanySelector.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

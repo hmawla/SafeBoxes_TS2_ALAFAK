@@ -22,7 +22,7 @@
 
     Private Sub Btn_Add_Click(sender As Object, e As EventArgs) Handles Btn_Add.Click
         For Each row As DataGridViewRow In DGV_Clients.Rows
-            If row.Cells(0).Value.Equals(Txt_Cid.Text) Then
+            If row.Cells(0).Value.ToString.Equals(Txt_Cid.Text.ToString) Then
                 MessageBox.Show("Client already added!")
                 GoTo theEnd
             End If
@@ -37,22 +37,42 @@ theEnd:
     End Sub
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
-        If DGV_Clients.Rows.Count > 0 Then
-            If Txt_CompName.Text.Count > 0 Then
-                theNewId = GenAccID()
-                ExecuteQuery("Insert INTO CompanyAccounts VALUES(" & theNewId & ", " & Txt_CompId.Text & ")")
-                For Each row As DataGridViewRow In DGV_Clients.Rows
-                    ExecuteQuery("INSERT INTO ClientRepAccount VALUES(" & row.Cells(0).Value & ", " & theNewId & ")")
-                Next
-                MessageBox.Show("Account Added!")
-                Me.Dispose()
-            Else
-                MessageBox.Show("Invalid Company ID!")
-            End If
+        If Frm_main.accountid = 0 Then
+            If DGV_Clients.Rows.Count > 0 Then
+                If Txt_CompName.Text.Count > 0 Then
+                    theNewId = GenAccID()
+                    ExecuteQuery("Insert INTO CompanyAccounts VALUES(" & Txt_CompId.Text & ", " & theNewId & ")")
+                    For Each row As DataGridViewRow In DGV_Clients.Rows
+                        ExecuteQuery("INSERT INTO ClientRepAccount VALUES(" & row.Cells(0).Value & ", " & theNewId & ")")
+                    Next
+                    MessageBox.Show("Account Added!")
+                    Me.Dispose()
+                Else
+                    MessageBox.Show("Invalid Company ID!")
+                End If
 
+            Else
+                MessageBox.Show("Please add at least one Client!")
+            End If
         Else
-            MessageBox.Show("Please add at least one Client!")
+            If DGV_Clients.Rows.Count > 0 Then
+                If Txt_CompName.Text.Count > 0 Then
+                    ExecuteQuery("UPDATE CompanyAccounts SET Compid = " & Txt_CompId.Text & " WHERE AccountId = " & theNewId)
+                    ExecuteQuery("DELETE FROM ClientRepAccount WHERE AccountId = " & theNewId)
+                    For Each row As DataGridViewRow In DGV_Clients.Rows
+                        ExecuteQuery("INSERT INTO ClientRepAccount VALUES(" & row.Cells(0).Value & ", " & theNewId & ")")
+                    Next
+                    MessageBox.Show("Account Modified!")
+                    Me.Dispose()
+                Else
+                    MessageBox.Show("Invalid Company ID!")
+                End If
+
+            Else
+                MessageBox.Show("Please add at least one Client!")
+            End If
         End If
+
 
     End Sub
 
@@ -73,5 +93,15 @@ theEnd:
         Catch ex As Exception
             Txt_CompName.Text = ""
         End Try
+    End Sub
+
+    Private Sub Frm_NewAccountCompany_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Not Frm_main.accountid = 0 Then
+            theNewId = Frm_main.accountid
+            ds = ReadQueryOut("SELECT CA.CompId, CompName FROM CompanyAccounts AS CA, Company AS C WHERE C.CompId = CA.CompId AND AccountId = " & theNewId)
+            For Each row As DataRow In ds.Tables(0).Rows
+                DGV_Clients.Rows.Add(row.Item(0), row.Item(1))
+            Next
+        End If
     End Sub
 End Class
