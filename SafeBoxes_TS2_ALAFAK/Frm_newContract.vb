@@ -15,7 +15,7 @@ Public Class Frm_newContract
 
 
     Private Sub Btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
-        If Rdb_Client.Checked And Exists(txt_accountid.Text, "SELECT AccountId FROM ClientDepAccount") Then
+        If Exists(txt_accountid.Text, "SELECT AccountId FROM ClientDepAccount") Then
             If Exists(txt_boxes.Text, "SELECT BoxId FROM Boxes WHERE BoxId NOT IN (SELECT BoxId FROM Contract WHERE ContId NOT IN (SELECT ContId FROM ContEnd))") Or txt_boxes.Text.Equals(Frm_Contracts.boxId.ToString) Then
                 If dtpick_exdate.Value > DateAndTime.Today Then
                     If txt_accountid.Text.Count > 0 And txt_boxes.Text.Count > 0 And txt_phone1.Text.Count > 0 And txt_phone2.Text.Count > 0 Then
@@ -45,8 +45,6 @@ Public Class Frm_newContract
             Else
                 MessageBox.Show("Invalid box ID!")
             End If
-        ElseIf Rdb_Company.Checked And Exists(txt_accountid.Text, "SELECT AccountId FROM CompanyAccounts") Then
-            'Company checked
         Else
             MessageBox.Show("Invalid account ID!")
         End If
