@@ -32,11 +32,17 @@ Partial Class Frm_NewAccountCompany
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.Txt_Cid = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.MaterialSingleLineTextField1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.Txt_CompName = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialSingleLineTextField2 = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.Txt_CompId = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.ClientRemover = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DGV_Clients, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ClientRemover.SuspendLayout()
+        Me.ClientSelector.SuspendLayout()
         Me.SuspendLayout()
         '
         'Btn_Submit
@@ -46,7 +52,7 @@ Partial Class Frm_NewAccountCompany
         Me.Btn_Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_Submit.Depth = 0
         Me.Btn_Submit.Icon = Nothing
-        Me.Btn_Submit.Location = New System.Drawing.Point(363, 542)
+        Me.Btn_Submit.Location = New System.Drawing.Point(363, 512)
         Me.Btn_Submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Submit.Name = "Btn_Submit"
         Me.Btn_Submit.Primary = True
@@ -61,7 +67,7 @@ Partial Class Frm_NewAccountCompany
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialDivider2.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.MaterialDivider2.Depth = 0
-        Me.MaterialDivider2.Location = New System.Drawing.Point(-3, 530)
+        Me.MaterialDivider2.Location = New System.Drawing.Point(-3, 500)
         Me.MaterialDivider2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialDivider2.Name = "MaterialDivider2"
         Me.MaterialDivider2.Size = New System.Drawing.Size(452, 1)
@@ -94,7 +100,7 @@ Partial Class Frm_NewAccountCompany
         Me.DGV_Clients.RowHeadersVisible = False
         Me.DGV_Clients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_Clients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_Clients.Size = New System.Drawing.Size(419, 330)
+        Me.DGV_Clients.Size = New System.Drawing.Size(419, 300)
         Me.DGV_Clients.TabIndex = 74
         '
         'ClientId
@@ -191,24 +197,24 @@ Partial Class Frm_NewAccountCompany
         Me.Txt_Cid.TabStop = False
         Me.Txt_Cid.UseSystemPasswordChar = False
         '
-        'MaterialSingleLineTextField1
+        'Txt_CompName
         '
-        Me.MaterialSingleLineTextField1.Depth = 0
-        Me.MaterialSingleLineTextField1.Enabled = False
-        Me.MaterialSingleLineTextField1.Hint = ""
-        Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(135, 98)
-        Me.MaterialSingleLineTextField1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MaterialSingleLineTextField1.MaxLength = 32767
-        Me.MaterialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialSingleLineTextField1.Name = "MaterialSingleLineTextField1"
-        Me.MaterialSingleLineTextField1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MaterialSingleLineTextField1.SelectedText = ""
-        Me.MaterialSingleLineTextField1.SelectionLength = 0
-        Me.MaterialSingleLineTextField1.SelectionStart = 0
-        Me.MaterialSingleLineTextField1.Size = New System.Drawing.Size(298, 23)
-        Me.MaterialSingleLineTextField1.TabIndex = 80
-        Me.MaterialSingleLineTextField1.TabStop = False
-        Me.MaterialSingleLineTextField1.UseSystemPasswordChar = False
+        Me.Txt_CompName.Depth = 0
+        Me.Txt_CompName.Enabled = False
+        Me.Txt_CompName.Hint = ""
+        Me.Txt_CompName.Location = New System.Drawing.Point(135, 98)
+        Me.Txt_CompName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Txt_CompName.MaxLength = 32767
+        Me.Txt_CompName.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Txt_CompName.Name = "Txt_CompName"
+        Me.Txt_CompName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Txt_CompName.SelectedText = ""
+        Me.Txt_CompName.SelectionLength = 0
+        Me.Txt_CompName.SelectionStart = 0
+        Me.Txt_CompName.Size = New System.Drawing.Size(298, 23)
+        Me.Txt_CompName.TabIndex = 80
+        Me.Txt_CompName.TabStop = False
+        Me.Txt_CompName.UseSystemPasswordChar = False
         '
         'MaterialLabel2
         '
@@ -238,33 +244,64 @@ Partial Class Frm_NewAccountCompany
         Me.MaterialLabel3.TabIndex = 79
         Me.MaterialLabel3.Text = "Company Name:"
         '
-        'MaterialSingleLineTextField2
+        'Txt_CompId
         '
-        Me.MaterialSingleLineTextField2.Depth = 0
-        Me.MaterialSingleLineTextField2.Hint = ""
-        Me.MaterialSingleLineTextField2.Location = New System.Drawing.Point(19, 98)
-        Me.MaterialSingleLineTextField2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MaterialSingleLineTextField2.MaxLength = 32767
-        Me.MaterialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialSingleLineTextField2.Name = "MaterialSingleLineTextField2"
-        Me.MaterialSingleLineTextField2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MaterialSingleLineTextField2.SelectedText = ""
-        Me.MaterialSingleLineTextField2.SelectionLength = 0
-        Me.MaterialSingleLineTextField2.SelectionStart = 0
-        Me.MaterialSingleLineTextField2.Size = New System.Drawing.Size(108, 23)
-        Me.MaterialSingleLineTextField2.TabIndex = 77
-        Me.MaterialSingleLineTextField2.TabStop = False
-        Me.MaterialSingleLineTextField2.UseSystemPasswordChar = False
+        Me.Txt_CompId.Depth = 0
+        Me.Txt_CompId.Hint = ""
+        Me.Txt_CompId.Location = New System.Drawing.Point(19, 98)
+        Me.Txt_CompId.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Txt_CompId.MaxLength = 32767
+        Me.Txt_CompId.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Txt_CompId.Name = "Txt_CompId"
+        Me.Txt_CompId.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Txt_CompId.SelectedText = ""
+        Me.Txt_CompId.SelectionLength = 0
+        Me.Txt_CompId.SelectionStart = 0
+        Me.Txt_CompId.Size = New System.Drawing.Size(108, 23)
+        Me.Txt_CompId.TabIndex = 77
+        Me.Txt_CompId.TabStop = False
+        Me.Txt_CompId.UseSystemPasswordChar = False
+        '
+        'ClientRemover
+        '
+        Me.ClientRemover.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientRemover.Depth = 0
+        Me.ClientRemover.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoveSelectedToolStripMenuItem})
+        Me.ClientRemover.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientRemover.Name = "ClientRemover"
+        Me.ClientRemover.Size = New System.Drawing.Size(165, 26)
+        '
+        'RemoveSelectedToolStripMenuItem
+        '
+        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
+        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
+        '
+        'ClientSelector
+        '
+        Me.ClientSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientSelector.Depth = 0
+        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
+        Me.ClientSelector.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientSelector.Name = "ClientSelector"
+        Me.ClientSelector.Size = New System.Drawing.Size(181, 48)
+        '
+        'SelectClientToolStripMenuItem
+        '
+        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
+        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectClientToolStripMenuItem.Text = "Select Client"
         '
         'Frm_NewAccountCompany
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(446, 590)
-        Me.Controls.Add(Me.MaterialSingleLineTextField1)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(446, 560)
+        Me.Controls.Add(Me.Txt_CompName)
         Me.Controls.Add(Me.MaterialLabel2)
         Me.Controls.Add(Me.MaterialLabel3)
-        Me.Controls.Add(Me.MaterialSingleLineTextField2)
+        Me.Controls.Add(Me.Txt_CompId)
         Me.Controls.Add(Me.Btn_Submit)
         Me.Controls.Add(Me.MaterialDivider2)
         Me.Controls.Add(Me.DGV_Clients)
@@ -273,9 +310,14 @@ Partial Class Frm_NewAccountCompany
         Me.Controls.Add(Me.MaterialLabel5)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.Txt_Cid)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Frm_NewAccountCompany"
+        Me.Sizable = False
         Me.Text = "New Company's Account"
         CType(Me.DGV_Clients, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ClientRemover.ResumeLayout(False)
+        Me.ClientSelector.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -291,8 +333,12 @@ Partial Class Frm_NewAccountCompany
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Txt_Cid As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents Txt_CompName As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents MaterialSingleLineTextField2 As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents Txt_CompId As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents ClientRemover As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents RemoveSelectedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClientSelector As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents SelectClientToolStripMenuItem As ToolStripMenuItem
 End Class

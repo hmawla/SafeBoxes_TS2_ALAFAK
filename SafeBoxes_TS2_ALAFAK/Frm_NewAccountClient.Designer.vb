@@ -30,12 +30,12 @@ Partial Class Frm_NewAccountClient
         Me.ClientSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DGV_Clients = New System.Windows.Forms.DataGridView()
-        Me.MaterialDivider2 = New MaterialSkin.Controls.MaterialDivider()
-        Me.Btn_Submit = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.ClientId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClientName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClientRemover = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaterialDivider2 = New MaterialSkin.Controls.MaterialDivider()
+        Me.Btn_Submit = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.ClientSelector.SuspendLayout()
         CType(Me.DGV_Clients, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClientRemover.SuspendLayout()
@@ -166,6 +166,35 @@ Partial Class Frm_NewAccountClient
         Me.DGV_Clients.Size = New System.Drawing.Size(415, 348)
         Me.DGV_Clients.TabIndex = 66
         '
+        'ClientId
+        '
+        Me.ClientId.FillWeight = 40.60914!
+        Me.ClientId.HeaderText = "ID"
+        Me.ClientId.Name = "ClientId"
+        Me.ClientId.ReadOnly = True
+        '
+        'ClientName
+        '
+        Me.ClientName.FillWeight = 159.3909!
+        Me.ClientName.HeaderText = "Client's Name"
+        Me.ClientName.Name = "ClientName"
+        Me.ClientName.ReadOnly = True
+        '
+        'ClientRemover
+        '
+        Me.ClientRemover.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientRemover.Depth = 0
+        Me.ClientRemover.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoveSelectedToolStripMenuItem})
+        Me.ClientRemover.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientRemover.Name = "ClientRemover"
+        Me.ClientRemover.Size = New System.Drawing.Size(165, 26)
+        '
+        'RemoveSelectedToolStripMenuItem
+        '
+        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
+        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
+        '
         'MaterialDivider2
         '
         Me.MaterialDivider2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
@@ -193,35 +222,6 @@ Partial Class Frm_NewAccountClient
         Me.Btn_Submit.TabIndex = 68
         Me.Btn_Submit.Text = "Submit"
         Me.Btn_Submit.UseVisualStyleBackColor = True
-        '
-        'ClientId
-        '
-        Me.ClientId.FillWeight = 40.60914!
-        Me.ClientId.HeaderText = "ID"
-        Me.ClientId.Name = "ClientId"
-        Me.ClientId.ReadOnly = True
-        '
-        'ClientName
-        '
-        Me.ClientName.FillWeight = 159.3909!
-        Me.ClientName.HeaderText = "Client's Name"
-        Me.ClientName.Name = "ClientName"
-        Me.ClientName.ReadOnly = True
-        '
-        'ClientRemover
-        '
-        Me.ClientRemover.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientRemover.Depth = 0
-        Me.ClientRemover.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoveSelectedToolStripMenuItem})
-        Me.ClientRemover.MouseState = MaterialSkin.MouseState.HOVER
-        Me.ClientRemover.Name = "ClientRemover"
-        Me.ClientRemover.Size = New System.Drawing.Size(165, 26)
-        '
-        'RemoveSelectedToolStripMenuItem
-        '
-        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
-        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
         '
         'Frm_NewAccountClient
         '
