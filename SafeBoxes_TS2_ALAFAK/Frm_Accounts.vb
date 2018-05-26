@@ -86,4 +86,16 @@
     Private Sub Frm_Accounts_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Me.Dispose()
     End Sub
+
+    Private Sub DGV_Accounts_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Accounts.CellDoubleClick
+        If Frm_main.accountid = 0 Then
+            Frm_main.accountid = DGV_Accounts.SelectedRows(0).Cells(0).Value
+            If Rdb_Clients.Checked Then
+                Frm_main.isClient = True
+            Else
+                Frm_main.isClient = False
+            End If
+            Me.Dispose()
+        End If
+    End Sub
 End Class
