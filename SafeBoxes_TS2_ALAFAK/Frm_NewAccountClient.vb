@@ -37,17 +37,32 @@ theEnd:
     End Sub
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
-        If DGV_Clients.Rows.Count > 0 Then
-            theNewId = GenAccID()
-            For Each row As DataGridViewRow In DGV_Clients.Rows
-                ExecuteQuery("INSERT INTO ClientDepAccount VALUES(" & row.Cells(0).Value & ", " & theNewId & ")")
-            Next
-            MessageBox.Show("Account Added!")
-            Me.Dispose()
+        If Frm_main.accountid = 0 Then
+            If DGV_Clients.Rows.Count > 0 Then
+                theNewId = GenAccID()
+                For Each row As DataGridViewRow In DGV_Clients.Rows
+                    ExecuteQuery("INSERT INTO ClientDepAccount VALUES(" & row.Cells(0).Value & ", " & theNewId & ")")
+                Next
+                MessageBox.Show("Account Added!")
+                Me.Dispose()
 
+            Else
+                MessageBox.Show("Please add at least one Client!")
+            End If
         Else
-            MessageBox.Show("Please add at least one Client!")
+            If DGV_Clients.Rows.Count > 0 Then
+                ExecuteQuery("DELETE FROM ClientDepAccount WHERE AccountId = " & theNewId)
+                For Each row As DataGridViewRow In DGV_Clients.Rows
+                    ExecuteQuery("INSERT INTO ClientDepAccount VALUES(" & row.Cells(0).Value & ", " & theNewId & ")")
+                Next
+                MessageBox.Show("Account Added!")
+                Me.Dispose()
+
+            Else
+                MessageBox.Show("Please add at least one Client!")
+            End If
         End If
+
 
     End Sub
 
