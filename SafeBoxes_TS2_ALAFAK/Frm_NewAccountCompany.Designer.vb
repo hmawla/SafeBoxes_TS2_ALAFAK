@@ -34,13 +34,17 @@ Partial Class Frm_NewAccountCompany
         Me.Txt_Cid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.Txt_CompName = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
+        Me.CompanySelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.Txt_CompId = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.ClientRemover = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
         CType(Me.DGV_Clients, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CompanySelector.SuspendLayout()
         Me.ClientRemover.SuspendLayout()
         Me.ClientSelector.SuspendLayout()
         Me.SuspendLayout()
@@ -52,7 +56,7 @@ Partial Class Frm_NewAccountCompany
         Me.Btn_Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_Submit.Depth = 0
         Me.Btn_Submit.Icon = Nothing
-        Me.Btn_Submit.Location = New System.Drawing.Point(363, 512)
+        Me.Btn_Submit.Location = New System.Drawing.Point(365, 512)
         Me.Btn_Submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Submit.Name = "Btn_Submit"
         Me.Btn_Submit.Primary = True
@@ -70,7 +74,7 @@ Partial Class Frm_NewAccountCompany
         Me.MaterialDivider2.Location = New System.Drawing.Point(-3, 500)
         Me.MaterialDivider2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialDivider2.Name = "MaterialDivider2"
-        Me.MaterialDivider2.Size = New System.Drawing.Size(452, 1)
+        Me.MaterialDivider2.Size = New System.Drawing.Size(454, 1)
         Me.MaterialDivider2.TabIndex = 75
         Me.MaterialDivider2.Text = "MaterialDivider2"
         '
@@ -88,10 +92,11 @@ Partial Class Frm_NewAccountCompany
         Me.DGV_Clients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DGV_Clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGV_Clients.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClientId, Me.ClientName})
+        Me.DGV_Clients.ContextMenuStrip = Me.ClientRemover
         Me.DGV_Clients.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DGV_Clients.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DGV_Clients.GridColor = System.Drawing.Color.PowderBlue
-        Me.DGV_Clients.Location = New System.Drawing.Point(12, 201)
+        Me.DGV_Clients.Location = New System.Drawing.Point(12, 231)
         Me.DGV_Clients.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.DGV_Clients.MultiSelect = False
         Me.DGV_Clients.Name = "DGV_Clients"
@@ -100,7 +105,7 @@ Partial Class Frm_NewAccountCompany
         Me.DGV_Clients.RowHeadersVisible = False
         Me.DGV_Clients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.DGV_Clients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DGV_Clients.Size = New System.Drawing.Size(419, 300)
+        Me.DGV_Clients.Size = New System.Drawing.Size(421, 270)
         Me.DGV_Clients.TabIndex = 74
         '
         'ClientId
@@ -154,6 +159,7 @@ Partial Class Frm_NewAccountCompany
         'MaterialLabel5
         '
         Me.MaterialLabel5.AutoSize = True
+        Me.MaterialLabel5.ContextMenuStrip = Me.ClientSelector
         Me.MaterialLabel5.Depth = 0
         Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -181,6 +187,7 @@ Partial Class Frm_NewAccountCompany
         '
         'Txt_Cid
         '
+        Me.Txt_Cid.ContextMenuStrip = Me.ClientSelector
         Me.Txt_Cid.Depth = 0
         Me.Txt_Cid.Hint = ""
         Me.Txt_Cid.Location = New System.Drawing.Point(19, 167)
@@ -219,6 +226,7 @@ Partial Class Frm_NewAccountCompany
         'MaterialLabel2
         '
         Me.MaterialLabel2.AutoSize = True
+        Me.MaterialLabel2.ContextMenuStrip = Me.CompanySelector
         Me.MaterialLabel2.Depth = 0
         Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -229,6 +237,21 @@ Partial Class Frm_NewAccountCompany
         Me.MaterialLabel2.Size = New System.Drawing.Size(94, 19)
         Me.MaterialLabel2.TabIndex = 78
         Me.MaterialLabel2.Text = "Company ID:"
+        '
+        'CompanySelector
+        '
+        Me.CompanySelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CompanySelector.Depth = 0
+        Me.CompanySelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.CompanySelector.MouseState = MaterialSkin.MouseState.HOVER
+        Me.CompanySelector.Name = "ClientSelector"
+        Me.CompanySelector.Size = New System.Drawing.Size(161, 26)
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(160, 22)
+        Me.ToolStripMenuItem1.Text = "Select Company"
         '
         'MaterialLabel3
         '
@@ -246,6 +269,7 @@ Partial Class Frm_NewAccountCompany
         '
         'Txt_CompId
         '
+        Me.Txt_CompId.ContextMenuStrip = Me.CompanySelector
         Me.Txt_CompId.Depth = 0
         Me.Txt_CompId.Hint = ""
         Me.Txt_CompId.Location = New System.Drawing.Point(19, 98)
@@ -284,20 +308,36 @@ Partial Class Frm_NewAccountCompany
         Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
         Me.ClientSelector.MouseState = MaterialSkin.MouseState.HOVER
         Me.ClientSelector.Name = "ClientSelector"
-        Me.ClientSelector.Size = New System.Drawing.Size(181, 48)
+        Me.ClientSelector.Size = New System.Drawing.Size(140, 26)
         '
         'SelectClientToolStripMenuItem
         '
         Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
-        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.SelectClientToolStripMenuItem.Text = "Select Client"
+        '
+        'MaterialLabel4
+        '
+        Me.MaterialLabel4.AutoSize = True
+        Me.MaterialLabel4.ContextMenuStrip = Me.ClientSelector
+        Me.MaterialLabel4.Depth = 0
+        Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel4.Location = New System.Drawing.Point(15, 204)
+        Me.MaterialLabel4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel4.Name = "MaterialLabel4"
+        Me.MaterialLabel4.Size = New System.Drawing.Size(115, 19)
+        Me.MaterialLabel4.TabIndex = 81
+        Me.MaterialLabel4.Text = "Representators:"
         '
         'Frm_NewAccountCompany
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(446, 560)
+        Me.ClientSize = New System.Drawing.Size(448, 560)
+        Me.Controls.Add(Me.MaterialLabel4)
         Me.Controls.Add(Me.Txt_CompName)
         Me.Controls.Add(Me.MaterialLabel2)
         Me.Controls.Add(Me.MaterialLabel3)
@@ -316,6 +356,7 @@ Partial Class Frm_NewAccountCompany
         Me.Sizable = False
         Me.Text = "New Company's Account"
         CType(Me.DGV_Clients, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CompanySelector.ResumeLayout(False)
         Me.ClientRemover.ResumeLayout(False)
         Me.ClientSelector.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -341,4 +382,7 @@ Partial Class Frm_NewAccountCompany
     Friend WithEvents RemoveSelectedToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClientSelector As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents SelectClientToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CompanySelector As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents MaterialLabel4 As MaterialSkin.Controls.MaterialLabel
 End Class

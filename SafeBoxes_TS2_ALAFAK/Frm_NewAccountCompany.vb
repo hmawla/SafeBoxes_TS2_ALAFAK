@@ -38,11 +38,17 @@ theEnd:
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
         If DGV_Clients.Rows.Count > 0 Then
-            theNewId = GenAccID()
-            For Each row As DataGridViewRow In DGV_Clients.Rows
-                ExecuteQuery("INSERT INTO ClientDepAccount VALUES(" & row.Cells(0).Value & ", " & theNewId & ")")
-            Next
-            Me.Dispose()
+            If Txt_CompName.Text.Count > 0 Then
+                theNewId = GenAccID()
+                ExecuteQuery("Insert INTO CompanyAccounts VALUES(" & theNewId & ", " & Txt_CompId.Text & ")")
+                For Each row As DataGridViewRow In DGV_Clients.Rows
+                    ExecuteQuery("INSERT INTO ClientRepAccount VALUES(" & row.Cells(0).Value & ", " & theNewId & ")")
+                Next
+                MessageBox.Show("Account Added!")
+                Me.Dispose()
+            Else
+                MessageBox.Show("Invalid Company ID!")
+            End If
 
         Else
             MessageBox.Show("Please add at least one Client!")
@@ -52,5 +58,20 @@ theEnd:
 
     Private Sub RemoveSelectedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveSelectedToolStripMenuItem.Click
         DGV_Clients.Rows.Remove(DGV_Clients.SelectedRows(0))
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Frm_main.companyId = 0
+        Frm_Companies.ShowDialog()
+        Txt_CompId.Text = Frm_main.companyId
+    End Sub
+
+    Private Sub Txt_CompId_TextChanged(sender As Object, e As EventArgs) Handles Txt_CompId.TextChanged
+        Try
+            ds = ReadQueryOut("SELECT CompName FROM Company WHERE CompId = " & Txt_CompId.Text)
+            Txt_CompName.Text = ds.Tables(0).Rows(0).Item(0)
+        Catch ex As Exception
+            Txt_CompName.Text = ""
+        End Try
     End Sub
 End Class
