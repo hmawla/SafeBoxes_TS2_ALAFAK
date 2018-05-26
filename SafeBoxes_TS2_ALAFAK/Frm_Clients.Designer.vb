@@ -53,6 +53,7 @@ Partial Class Frm_Clients
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgv_clients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_clients.BackgroundColor = System.Drawing.Color.White
+        Me.dgv_clients.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_clients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgv_clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_clients.Cursor = System.Windows.Forms.Cursors.Hand
