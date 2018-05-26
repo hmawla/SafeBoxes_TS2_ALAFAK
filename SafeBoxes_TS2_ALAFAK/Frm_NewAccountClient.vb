@@ -42,6 +42,7 @@ theEnd:
             For Each row As DataGridViewRow In DGV_Clients.Rows
                 ExecuteQuery("INSERT INTO ClientDepAccount VALUES(" & row.Cells(0).Value & ", " & theNewId & ")")
             Next
+            MessageBox.Show("Account Added!")
             Me.Dispose()
 
         Else
