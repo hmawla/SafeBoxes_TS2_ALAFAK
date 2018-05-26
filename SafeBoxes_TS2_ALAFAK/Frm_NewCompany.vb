@@ -1,13 +1,10 @@
 ﻿Public Class Frm_NewCompany
     Dim theNewId As Integer
     Dim ds As New DataSet
-    Dim formLoaded As Boolean = False
 
     Private Sub Frm_NewCompany_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillCBox(cbox_comptypes, "SELECT CompTypeId, CompType FROM CompType", "CompTypeId", "CompType")
-        If Frm_Companies.companyId = 0 Then
-
-        Else
+        If Not Frm_Companies.companyId = 0 Then
             theNewId = Frm_Companies.companyId
             Dim theContDetails As New DataSet
             theContDetails = ReadQueryOut("SELECT * FROM Company WHERE CompId = " & theNewId)
@@ -19,7 +16,6 @@
             rows = theContDetails.Tables(0).Rows(0)
             cbox_comptypes.SelectedValue = rows.Item(1)
         End If
-        formLoaded = True
 
     End Sub
 

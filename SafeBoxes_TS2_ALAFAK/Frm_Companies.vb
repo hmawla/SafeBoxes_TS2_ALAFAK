@@ -19,8 +19,17 @@
     End Sub
 
     Private Sub btn_delcompany_Click(sender As Object, e As EventArgs) Handles btn_delcompany.Click
-        ExecuteQuery("DELETE FROM Company WHERE CompId = " & dgv_companies.SelectedRows(0).Cells(0).Value)
-        FillDGV(dgv_companies, "SELECT CompId AS [ID], CompName AS [Company Name], CompType AS [Company Type]  FROM Company c,CompType ct WHERE c.CompTypeId=ct.CompTypeId")
+        InputBox.Show("Enter admin password:" & vbNewLine & "Deleting a company will also delete all of its accounts!", "Delete Company#" & dgv_companies.SelectedRows(0).Cells(0).Value, True)
+        If Not inResult.Equals("0") Then
+            If inResult = adminPass Then
+                ExecuteQuery("DELETE FROM Company WHERE CompId = " & dgv_companies.SelectedRows(0).Cells(0).Value)
+                ExecuteQuery("DELETE FROM CompanyAccounts WHERE CompId = " & dgv_companies.SelectedRows(0).Cells(0).Value)
+                FillDGV(dgv_companies, "SELECT CompId AS [ID], CompName AS [Company Name], CompType AS [Company Type]  FROM Company c,CompType ct WHERE c.CompTypeId=ct.CompTypeId")
+            Else
+                MessageBox.Show("Wrong password!")
+            End If
+        End If
+
 
     End Sub
 

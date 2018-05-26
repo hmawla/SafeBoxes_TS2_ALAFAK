@@ -60,6 +60,7 @@ Partial Class Frm_Contracts
         Me.ClientAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CompanyAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
+        Me.Chk_Expired = New MaterialSkin.Controls.MaterialCheckBox()
         CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -470,6 +471,7 @@ Partial Class Frm_Contracts
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.White
+        Me.TabPage2.Controls.Add(Me.Chk_Expired)
         Me.TabPage2.Controls.Add(Me.btn_reset)
         Me.TabPage2.Controls.Add(Me.rdb_byboxid)
         Me.TabPage2.Controls.Add(Me.btn_search)
@@ -579,6 +581,22 @@ Partial Class Frm_Contracts
         Me.MaterialDivider1.TabIndex = 17
         Me.MaterialDivider1.Text = "MaterialDivider1"
         '
+        'Chk_Expired
+        '
+        Me.Chk_Expired.AutoSize = True
+        Me.Chk_Expired.Depth = 0
+        Me.Chk_Expired.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Chk_Expired.Location = New System.Drawing.Point(29, 82)
+        Me.Chk_Expired.Margin = New System.Windows.Forms.Padding(0)
+        Me.Chk_Expired.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Chk_Expired.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Chk_Expired.Name = "Chk_Expired"
+        Me.Chk_Expired.Ripple = True
+        Me.Chk_Expired.Size = New System.Drawing.Size(76, 30)
+        Me.Chk_Expired.TabIndex = 14
+        Me.Chk_Expired.Text = "Expired"
+        Me.Chk_Expired.UseVisualStyleBackColor = True
+        '
         'Frm_Contracts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -642,4 +660,5 @@ Partial Class Frm_Contracts
     Friend WithEvents SelectAccountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClientAccountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CompanyAccountToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Chk_Expired As MaterialSkin.Controls.MaterialCheckBox
 End Class

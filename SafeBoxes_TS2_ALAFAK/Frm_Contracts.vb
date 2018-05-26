@@ -29,7 +29,7 @@
     Private Sub btn_delcontract_Click(sender As Object, e As EventArgs) Handles btn_delcontract.Click
         InputBox.Show("Enter admin password:", "Delete Contract#" & dgv_contracts.SelectedRows(0).Cells(0).Value, True)
         If Not inResult.Equals("0") Then
-            If inResult = "12345" Then
+            If inResult = adminPass Then
                 ExecuteQuery("DELETE FROM Contract WHERE ContId = " & dgv_contracts.SelectedRows(0).Cells(0).Value)
                 ExecuteQuery("DELETE FROM SignatureCards WHERE ContId = " & dgv_contracts.SelectedRows(0).Cells(0).Value)
                 ExecuteQuery("DELETE FROM Permissions WHERE ContId = " & dgv_contracts.SelectedRows(0).Cells(0).Value)

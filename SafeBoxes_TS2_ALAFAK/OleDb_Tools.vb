@@ -4,6 +4,8 @@ Module OleDb_Tools
     'Open source @github.com
     'Copyright MawlaTelecom.com
 
+    'Admin Password
+    Public adminPass As String = "12345"
     'Used for our custom messagebox
     Public mesResult As DialogResult
     Public inResult As String

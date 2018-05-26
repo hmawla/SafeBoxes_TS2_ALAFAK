@@ -66,7 +66,7 @@ theEnd:
     Private Sub DeleteRightToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteRightToolStripMenuItem.Click
         If CBox_AuthRights.SelectedValue > 0 Then
             InputBox.Show("Please enter admin password!", "Delete right#" & CBox_AuthRights.SelectedValue, True)
-            If inResult = "12345" Then
+            If inResult = adminPass Then
                 ExecuteQuery("DELETE FROM AuthRight WHERE RightId = " & CBox_AuthRights.SelectedValue)
                 For i As Integer = 0 To DGV_Rights.Rows.Count - 1
                     If CBox_AuthRights.SelectedValue = DGV_Rights.Rows(i).Cells(0).Value Then
@@ -123,7 +123,7 @@ theEnd:
         If cbox_buildings.SelectedValue > 0 Then
             InputBox.Show("Please enter admin password!", "Delete building#" & cbox_buildings.SelectedValue, True)
             If Not inResult.Equals("0") Then
-                If inResult = "12345" Then
+                If inResult = adminPass Then
                     ExecuteQuery("DELETE FROM Buildings WHERE BuildingId = " & cbox_buildings.SelectedValue)
                     FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
                 Else
@@ -157,7 +157,7 @@ theEnd:
         If cbox_regions.SelectedValue > 0 Then
             InputBox.Show("Please enter admin password!" & vbNewLine & "All buildings and streets belonging to this region will be deleted!", "Delete region#" & cbox_regions.SelectedValue, True)
             If Not inResult.Equals("0") Then
-                If inResult = "12345" Then
+                If inResult = adminPass Then
                     ExecuteQuery("DELETE FROM Regions WHERE RegionId = " & cbox_regions.SelectedValue)
                     ExecuteQuery("DELETE FROM Buildings WHERE StreetId IN (SELECT StreetId FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue & ")")
                     ExecuteQuery("DELETE FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue)
@@ -191,7 +191,7 @@ theEnd:
         If cbox_streets.SelectedValue > 0 Then
             InputBox.Show("Please enter admin password!" & vbNewLine & "All buildings belonging to this street will be deleted!", "Delete street#" & cbox_streets.SelectedValue, True)
             If Not inResult.Equals("0") Then
-                If inResult = "12345" Then
+                If inResult = adminPass Then
                     ExecuteQuery("DELETE FROM Buildings WHERE StreetId  = " & cbox_streets.SelectedValue)
                     ExecuteQuery("DELETE FROM Streets WHERE StreetId = " & cbox_streets.SelectedValue)
                     FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
