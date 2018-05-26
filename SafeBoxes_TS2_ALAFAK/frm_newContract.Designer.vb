@@ -39,10 +39,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
         Me.AccountsMenuStrip = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.SelectAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.txt_accountid = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.MaterialLabel8 = New MaterialSkin.Controls.MaterialLabel()
-        Me.txt_clientinfo = New System.Windows.Forms.TextBox()
         Me.MaterialLabel9 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_contnote = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txt_boxes = New MaterialSkin.Controls.MaterialSingleLineTextField()
@@ -109,7 +106,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(333, 332)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(333, 218)
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
@@ -122,7 +119,7 @@ Partial Class Frm_newContract
         Me.dtpick_exdate.CustomFormat = "dd/mm/yyyy"
         Me.dtpick_exdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.dtpick_exdate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpick_exdate.Location = New System.Drawing.Point(333, 354)
+        Me.dtpick_exdate.Location = New System.Drawing.Point(333, 240)
         Me.dtpick_exdate.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.dtpick_exdate.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
         Me.dtpick_exdate.Name = "dtpick_exdate"
@@ -135,7 +132,7 @@ Partial Class Frm_newContract
         Me.cbox_buildings.ContextMenuStrip = Me.BuildingsMenuStrip
         Me.cbox_buildings.ForeColor = System.Drawing.Color.Black
         Me.cbox_buildings.FormattingEnabled = True
-        Me.cbox_buildings.Location = New System.Drawing.Point(21, 297)
+        Me.cbox_buildings.Location = New System.Drawing.Point(333, 182)
         Me.cbox_buildings.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_buildings.Name = "cbox_buildings"
         Me.cbox_buildings.Size = New System.Drawing.Size(148, 28)
@@ -168,7 +165,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel3.Depth = 0
         Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel3.Location = New System.Drawing.Point(174, 222)
+        Me.MaterialLabel3.Location = New System.Drawing.Point(486, 107)
         Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
@@ -179,7 +176,7 @@ Partial Class Frm_newContract
         'txt_floor
         '
         Me.txt_floor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.txt_floor.Location = New System.Drawing.Point(177, 298)
+        Me.txt_floor.Location = New System.Drawing.Point(489, 183)
         Me.txt_floor.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txt_floor.Maximum = New Decimal(New Integer() {15, 0, 0, 0})
         Me.txt_floor.Name = "txt_floor"
@@ -192,7 +189,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel4.Depth = 0
         Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel4.Location = New System.Drawing.Point(174, 275)
+        Me.MaterialLabel4.Location = New System.Drawing.Point(486, 160)
         Me.MaterialLabel4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel4.Name = "MaterialLabel4"
@@ -265,22 +262,16 @@ Partial Class Frm_newContract
         '
         Me.AccountsMenuStrip.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.AccountsMenuStrip.Depth = 0
-        Me.AccountsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectAccountToolStripMenuItem, Me.NewAccountToolStripMenuItem})
+        Me.AccountsMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectAccountToolStripMenuItem})
         Me.AccountsMenuStrip.MouseState = MaterialSkin.MouseState.HOVER
         Me.AccountsMenuStrip.Name = "AccountsMenuStrip"
-        Me.AccountsMenuStrip.Size = New System.Drawing.Size(154, 48)
+        Me.AccountsMenuStrip.Size = New System.Drawing.Size(154, 26)
         '
         'SelectAccountToolStripMenuItem
         '
         Me.SelectAccountToolStripMenuItem.Name = "SelectAccountToolStripMenuItem"
         Me.SelectAccountToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.SelectAccountToolStripMenuItem.Text = "Select Account"
-        '
-        'NewAccountToolStripMenuItem
-        '
-        Me.NewAccountToolStripMenuItem.Name = "NewAccountToolStripMenuItem"
-        Me.NewAccountToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
-        Me.NewAccountToolStripMenuItem.Text = "New Account"
         '
         'txt_accountid
         '
@@ -302,42 +293,13 @@ Partial Class Frm_newContract
         Me.txt_accountid.TabStop = False
         Me.txt_accountid.UseSystemPasswordChar = False
         '
-        'MaterialLabel8
-        '
-        Me.MaterialLabel8.AutoSize = True
-        Me.MaterialLabel8.Depth = 0
-        Me.MaterialLabel8.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel8.Location = New System.Drawing.Point(329, 110)
-        Me.MaterialLabel8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.MaterialLabel8.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel8.Name = "MaterialLabel8"
-        Me.MaterialLabel8.Size = New System.Drawing.Size(82, 19)
-        Me.MaterialLabel8.TabIndex = 35
-        Me.MaterialLabel8.Text = "Client Info:"
-        '
-        'txt_clientinfo
-        '
-        Me.txt_clientinfo.BackColor = System.Drawing.Color.White
-        Me.txt_clientinfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txt_clientinfo.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txt_clientinfo.Font = New System.Drawing.Font("Agency FB", 13.0!, System.Drawing.FontStyle.Bold)
-        Me.txt_clientinfo.Location = New System.Drawing.Point(333, 134)
-        Me.txt_clientinfo.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.txt_clientinfo.Multiline = True
-        Me.txt_clientinfo.Name = "txt_clientinfo"
-        Me.txt_clientinfo.ReadOnly = True
-        Me.txt_clientinfo.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txt_clientinfo.Size = New System.Drawing.Size(221, 190)
-        Me.txt_clientinfo.TabIndex = 36
-        '
         'MaterialLabel9
         '
         Me.MaterialLabel9.AutoSize = True
         Me.MaterialLabel9.Depth = 0
         Me.MaterialLabel9.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel9.Location = New System.Drawing.Point(18, 332)
+        Me.MaterialLabel9.Location = New System.Drawing.Point(18, 218)
         Me.MaterialLabel9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel9.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel9.Name = "MaterialLabel9"
@@ -349,7 +311,7 @@ Partial Class Frm_newContract
         '
         Me.txt_contnote.Depth = 0
         Me.txt_contnote.Hint = ""
-        Me.txt_contnote.Location = New System.Drawing.Point(21, 356)
+        Me.txt_contnote.Location = New System.Drawing.Point(21, 242)
         Me.txt_contnote.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_contnote.MaxLength = 32767
         Me.txt_contnote.MouseState = MaterialSkin.MouseState.HOVER
@@ -449,7 +411,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel2.Depth = 0
         Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel2.Location = New System.Drawing.Point(18, 222)
+        Me.MaterialLabel2.Location = New System.Drawing.Point(330, 107)
         Me.MaterialLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel2.Name = "MaterialLabel2"
@@ -463,7 +425,7 @@ Partial Class Frm_newContract
         Me.cbox_regions.ContextMenuStrip = Me.RegionMenuStrip
         Me.cbox_regions.ForeColor = System.Drawing.Color.Black
         Me.cbox_regions.FormattingEnabled = True
-        Me.cbox_regions.Location = New System.Drawing.Point(21, 244)
+        Me.cbox_regions.Location = New System.Drawing.Point(333, 129)
         Me.cbox_regions.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_regions.Name = "cbox_regions"
         Me.cbox_regions.Size = New System.Drawing.Size(148, 28)
@@ -496,7 +458,7 @@ Partial Class Frm_newContract
         Me.MaterialLabel12.Depth = 0
         Me.MaterialLabel12.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel12.Location = New System.Drawing.Point(18, 275)
+        Me.MaterialLabel12.Location = New System.Drawing.Point(330, 160)
         Me.MaterialLabel12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel12.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel12.Name = "MaterialLabel12"
@@ -510,7 +472,7 @@ Partial Class Frm_newContract
         Me.cbox_streets.ContextMenuStrip = Me.StreetsMenuStrip
         Me.cbox_streets.ForeColor = System.Drawing.Color.Black
         Me.cbox_streets.FormattingEnabled = True
-        Me.cbox_streets.Location = New System.Drawing.Point(177, 244)
+        Me.cbox_streets.Location = New System.Drawing.Point(489, 129)
         Me.cbox_streets.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_streets.Name = "cbox_streets"
         Me.cbox_streets.Size = New System.Drawing.Size(148, 28)
@@ -543,7 +505,7 @@ Partial Class Frm_newContract
         Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_submit.Depth = 0
         Me.btn_submit.Icon = Nothing
-        Me.btn_submit.Location = New System.Drawing.Point(477, 351)
+        Me.btn_submit.Location = New System.Drawing.Point(566, 230)
         Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_submit.Name = "btn_submit"
         Me.btn_submit.Primary = True
@@ -557,7 +519,7 @@ Partial Class Frm_newContract
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(562, 404)
+        Me.ClientSize = New System.Drawing.Size(649, 282)
         Me.Controls.Add(Me.btn_submit)
         Me.Controls.Add(Me.MaterialLabel12)
         Me.Controls.Add(Me.cbox_streets)
@@ -568,8 +530,6 @@ Partial Class Frm_newContract
         Me.Controls.Add(Me.MaterialLabel10)
         Me.Controls.Add(Me.MaterialLabel9)
         Me.Controls.Add(Me.txt_contnote)
-        Me.Controls.Add(Me.txt_clientinfo)
-        Me.Controls.Add(Me.MaterialLabel8)
         Me.Controls.Add(Me.txt_accountid)
         Me.Controls.Add(Me.MaterialLabel7)
         Me.Controls.Add(Me.MaterialLabel6)
@@ -586,7 +546,9 @@ Partial Class Frm_newContract
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Frm_newContract"
+        Me.Sizable = False
         Me.Text = "New Contract"
         Me.BuildingsMenuStrip.ResumeLayout(False)
         CType(Me.txt_floor, System.ComponentModel.ISupportInitialize).EndInit()
@@ -613,8 +575,6 @@ Partial Class Frm_newContract
     Friend WithEvents txt_phone2 As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_accountid As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents MaterialLabel8 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents txt_clientinfo As System.Windows.Forms.TextBox
     Friend WithEvents MaterialLabel9 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_contnote As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents txt_boxes As MaterialSkin.Controls.MaterialSingleLineTextField
@@ -622,7 +582,6 @@ Partial Class Frm_newContract
     Friend WithEvents lbl_empid As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents AccountsMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents SelectAccountToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NewAccountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BoxesMenuStrip As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents SelectBoxToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel

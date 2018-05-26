@@ -237,44 +237,6 @@ Public Class Frm_newContract
         End If
     End Sub
 
-    Private Sub txt_accountid_TextChanged(sender As Object, e As EventArgs) Handles txt_accountid.TextChanged
-        txt_clientinfo.Text = ""
-        If Frm_main.isClient Then
-            Dim i As Integer = 1
-            Try
-                ds = ReadQueryOut("SELECT c.ClientId, ClientFName, ClientLName, ClientDOB FROM Clients c, ClientDepAccount a WHERE c.ClientId = a.ClientId AND a.accountid = " & txt_accountid.Text)
-                If ds.Tables(0).Rows.Count <> 0 Then
-                    For Each datarow As DataRow In ds.Tables(0).Rows
-                        txt_clientinfo.Text = txt_clientinfo.Text & "(" & i & ")" & vbNewLine & "Client ID: " & datarow.Item(0) & vbNewLine & "Client Name: " & datarow.Item(1) & " " & datarow.Item(2) & vbNewLine & "Birth Date: " & datarow.Item(3) & vbNewLine & vbNewLine
-                        i = i + 1
-                    Next
-                Else
-                    txt_clientinfo.Text = ""
-                End If
-
-            Catch ex As Exception
-                txt_clientinfo.Text = ""
-            End Try
-        Else
-            Dim i As Integer = 1
-            Try
-                ds = ReadQueryOut("SELECT c.ClientId, ClientFName, ClientLName, ClientDOB FROM Clients c, ClientDepAccount a WHERE c.ClientId = a.ClientId AND a.accountid = " & txt_accountid.Text)
-                If ds.Tables(0).Rows.Count <> 0 Then
-                    For Each datarow As DataRow In ds.Tables(0).Rows
-                        txt_clientinfo.Text = txt_clientinfo.Text & "(" & i & ")" & vbNewLine & "Client ID: " & datarow.Item(0) & vbNewLine & "Client Name: " & datarow.Item(1) & " " & datarow.Item(2) & vbNewLine & "Birth Date: " & datarow.Item(3) & vbNewLine & vbNewLine
-                        i = i + 1
-                    Next
-                Else
-                    txt_clientinfo.Text = ""
-                End If
-
-            Catch ex As Exception
-                txt_clientinfo.Text = ""
-            End Try
-        End If
-
-    End Sub
-
     Private Sub Frm_newContract_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Me.Dispose()
     End Sub
