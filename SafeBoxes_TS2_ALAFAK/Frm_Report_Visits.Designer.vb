@@ -24,12 +24,12 @@ Partial Class Frm_Report_Visits
     Private Sub InitializeComponent()
         Me.CRptV_Visits = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New MaterialSkin.Controls.MaterialCheckBox()
+        Me.Btn_Search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.Txt_ContId = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.RadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.dtpick_exdate = New System.Windows.Forms.DateTimePicker()
+        Me.Rdb_ByDate = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Dtpick_ToDate = New System.Windows.Forms.DateTimePicker()
         Me.Rdb_ByContId = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Dtpick_FromDate = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,41 +43,42 @@ Partial Class Frm_Report_Visits
         Me.CRptV_Visits.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRptV_Visits.Location = New System.Drawing.Point(12, 213)
         Me.CRptV_Visits.Name = "CRptV_Visits"
-        Me.CRptV_Visits.Size = New System.Drawing.Size(706, 312)
+        Me.CRptV_Visits.Size = New System.Drawing.Size(678, 312)
         Me.CRptV_Visits.TabIndex = 22
         '
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.CheckBox1)
+        Me.GroupBox1.Controls.Add(Me.Btn_Search)
         Me.GroupBox1.Controls.Add(Me.Txt_ContId)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.dtpick_exdate)
+        Me.GroupBox1.Controls.Add(Me.Rdb_ByDate)
+        Me.GroupBox1.Controls.Add(Me.Dtpick_ToDate)
         Me.GroupBox1.Controls.Add(Me.Rdb_ByContId)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.Dtpick_FromDate)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(706, 134)
+        Me.GroupBox1.Size = New System.Drawing.Size(678, 134)
         Me.GroupBox1.TabIndex = 21
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filter"
         '
-        'CheckBox1
+        'Btn_Search
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Depth = 0
-        Me.CheckBox1.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.CheckBox1.Location = New System.Drawing.Point(579, 104)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(0)
-        Me.CheckBox1.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.CheckBox1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Ripple = True
-        Me.CheckBox1.Size = New System.Drawing.Size(87, 30)
-        Me.CheckBox1.TabIndex = 17
-        Me.CheckBox1.Text = "Delivered"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.Btn_Search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Btn_Search.AutoSize = True
+        Me.Btn_Search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_Search.Depth = 0
+        Me.Btn_Search.Icon = Nothing
+        Me.Btn_Search.Location = New System.Drawing.Point(597, 89)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Btn_Search.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Btn_Search.Name = "Btn_Search"
+        Me.Btn_Search.Primary = True
+        Me.Btn_Search.Size = New System.Drawing.Size(73, 36)
+        Me.Btn_Search.TabIndex = 19
+        Me.Btn_Search.Text = "Search"
+        Me.Btn_Search.UseVisualStyleBackColor = True
         '
         'Txt_ContId
         '
@@ -97,38 +98,40 @@ Partial Class Frm_Report_Visits
         Me.Txt_ContId.TabStop = False
         Me.Txt_ContId.UseSystemPasswordChar = False
         '
-        'RadioButton2
+        'Rdb_ByDate
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Depth = 0
-        Me.RadioButton2.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.RadioButton2.Location = New System.Drawing.Point(250, 25)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadioButton2.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.RadioButton2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Ripple = True
-        Me.RadioButton2.Size = New System.Drawing.Size(149, 30)
-        Me.RadioButton2.TabIndex = 15
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "By Date (FROM-TO)"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.Rdb_ByDate.AutoSize = True
+        Me.Rdb_ByDate.Depth = 0
+        Me.Rdb_ByDate.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Rdb_ByDate.Location = New System.Drawing.Point(250, 25)
+        Me.Rdb_ByDate.Margin = New System.Windows.Forms.Padding(0)
+        Me.Rdb_ByDate.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Rdb_ByDate.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Rdb_ByDate.Name = "Rdb_ByDate"
+        Me.Rdb_ByDate.Ripple = True
+        Me.Rdb_ByDate.Size = New System.Drawing.Size(149, 30)
+        Me.Rdb_ByDate.TabIndex = 15
+        Me.Rdb_ByDate.TabStop = True
+        Me.Rdb_ByDate.Text = "By Date (FROM-TO)"
+        Me.Rdb_ByDate.UseVisualStyleBackColor = True
         '
-        'dtpick_exdate
+        'Dtpick_ToDate
         '
-        Me.dtpick_exdate.CustomFormat = "dd/mm/yyyy"
-        Me.dtpick_exdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.dtpick_exdate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpick_exdate.Location = New System.Drawing.Point(466, 55)
-        Me.dtpick_exdate.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
-        Me.dtpick_exdate.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
-        Me.dtpick_exdate.Name = "dtpick_exdate"
-        Me.dtpick_exdate.Size = New System.Drawing.Size(204, 26)
-        Me.dtpick_exdate.TabIndex = 10
+        Me.Dtpick_ToDate.CustomFormat = "dd/mm/yyyy"
+        Me.Dtpick_ToDate.Enabled = False
+        Me.Dtpick_ToDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Dtpick_ToDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.Dtpick_ToDate.Location = New System.Drawing.Point(466, 55)
+        Me.Dtpick_ToDate.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
+        Me.Dtpick_ToDate.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
+        Me.Dtpick_ToDate.Name = "Dtpick_ToDate"
+        Me.Dtpick_ToDate.Size = New System.Drawing.Size(204, 26)
+        Me.Dtpick_ToDate.TabIndex = 10
         '
         'Rdb_ByContId
         '
         Me.Rdb_ByContId.AutoSize = True
+        Me.Rdb_ByContId.Checked = True
         Me.Rdb_ByContId.Depth = 0
         Me.Rdb_ByContId.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.Rdb_ByContId.Location = New System.Drawing.Point(6, 25)
@@ -143,24 +146,25 @@ Partial Class Frm_Report_Visits
         Me.Rdb_ByContId.Text = "By Contract ID"
         Me.Rdb_ByContId.UseVisualStyleBackColor = True
         '
-        'DateTimePicker1
+        'Dtpick_FromDate
         '
-        Me.DateTimePicker1.CustomFormat = "dd/mm/yyyy"
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(250, 55)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
-        Me.DateTimePicker1.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(204, 26)
-        Me.DateTimePicker1.TabIndex = 11
+        Me.Dtpick_FromDate.CustomFormat = "dd/mm/yyyy"
+        Me.Dtpick_FromDate.Enabled = False
+        Me.Dtpick_FromDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.Dtpick_FromDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.Dtpick_FromDate.Location = New System.Drawing.Point(250, 55)
+        Me.Dtpick_FromDate.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
+        Me.Dtpick_FromDate.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
+        Me.Dtpick_FromDate.Name = "Dtpick_FromDate"
+        Me.Dtpick_FromDate.Size = New System.Drawing.Size(204, 26)
+        Me.Dtpick_FromDate.TabIndex = 11
         '
         'Frm_Report_Visits
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(730, 537)
+        Me.ClientSize = New System.Drawing.Size(702, 537)
         Me.Controls.Add(Me.CRptV_Visits)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Roboto", 12.0!)
@@ -175,10 +179,10 @@ Partial Class Frm_Report_Visits
 
     Friend WithEvents CRptV_Visits As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents CheckBox1 As MaterialSkin.Controls.MaterialCheckBox
     Friend WithEvents Txt_ContId As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents RadioButton2 As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents dtpick_exdate As DateTimePicker
+    Friend WithEvents Rdb_ByDate As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Dtpick_ToDate As DateTimePicker
     Friend WithEvents Rdb_ByContId As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Dtpick_FromDate As DateTimePicker
+    Friend WithEvents Btn_Search As MaterialSkin.Controls.MaterialFlatButton
 End Class

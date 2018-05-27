@@ -24,17 +24,20 @@ Partial Class Frm_Report_Client
     Private Sub InitializeComponent()
         Me.CRptV_Clients = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Btn_Search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.txt_cname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.Txt_CId = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.RadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Rdb_ByClientId = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.Btn_Search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'CRptV_Clients
         '
         Me.CRptV_Clients.ActiveViewIndex = -1
+        Me.CRptV_Clients.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CRptV_Clients.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CRptV_Clients.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRptV_Clients.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -60,6 +63,22 @@ Partial Class Frm_Report_Client
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Filter"
+        '
+        'Btn_Search
+        '
+        Me.Btn_Search.AutoSize = True
+        Me.Btn_Search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_Search.Depth = 0
+        Me.Btn_Search.Icon = Nothing
+        Me.Btn_Search.Location = New System.Drawing.Point(608, 89)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Btn_Search.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Btn_Search.Name = "Btn_Search"
+        Me.Btn_Search.Primary = True
+        Me.Btn_Search.Size = New System.Drawing.Size(73, 36)
+        Me.Btn_Search.TabIndex = 19
+        Me.Btn_Search.Text = "Search"
+        Me.Btn_Search.UseVisualStyleBackColor = True
         '
         'txt_cname
         '
@@ -131,22 +150,6 @@ Partial Class Frm_Report_Client
         Me.Rdb_ByClientId.TabStop = True
         Me.Rdb_ByClientId.Text = "By Client ID"
         Me.Rdb_ByClientId.UseVisualStyleBackColor = True
-        '
-        'Btn_Search
-        '
-        Me.Btn_Search.AutoSize = True
-        Me.Btn_Search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Btn_Search.Depth = 0
-        Me.Btn_Search.Icon = Nothing
-        Me.Btn_Search.Location = New System.Drawing.Point(608, 89)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.Btn_Search.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Btn_Search.Name = "Btn_Search"
-        Me.Btn_Search.Primary = True
-        Me.Btn_Search.Size = New System.Drawing.Size(73, 36)
-        Me.Btn_Search.TabIndex = 19
-        Me.Btn_Search.Text = "Search"
-        Me.Btn_Search.UseVisualStyleBackColor = True
         '
         'Frm_Report_Client
         '

@@ -39,13 +39,14 @@ Partial Class Frm_InfoVoucher
         Me.txt_byInfovouchid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.rdb_byClientName = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.MaterialContextMenuStrip1 = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.Reports = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.InfoVoucherReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConnectsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv_infovouchers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.MaterialContextMenuStrip1.SuspendLayout()
+        Me.Reports.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv_infovouchers
@@ -58,6 +59,7 @@ Partial Class Frm_InfoVoucher
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgv_infovouchers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_infovouchers.BackgroundColor = System.Drawing.Color.White
+        Me.dgv_infovouchers.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_infovouchers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgv_infovouchers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_infovouchers.Cursor = System.Windows.Forms.Cursors.Hand
@@ -123,7 +125,7 @@ Partial Class Frm_InfoVoucher
         Me.Btn_NewInfoResult.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_NewInfoResult.Depth = 0
         Me.Btn_NewInfoResult.Icon = Nothing
-        Me.Btn_NewInfoResult.Location = New System.Drawing.Point(176, 74)
+        Me.Btn_NewInfoResult.Location = New System.Drawing.Point(176, 67)
         Me.Btn_NewInfoResult.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Btn_NewInfoResult.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_NewInfoResult.Name = "Btn_NewInfoResult"
@@ -327,28 +329,34 @@ Partial Class Frm_InfoVoucher
         Me.rdb_byClientName.Text = "By Client Name"
         Me.rdb_byClientName.UseVisualStyleBackColor = True
         '
-        'MaterialContextMenuStrip1
+        'Reports
         '
-        Me.MaterialContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialContextMenuStrip1.Depth = 0
-        Me.MaterialContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InfoVoucherReportToolStripMenuItem})
-        Me.MaterialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialContextMenuStrip1.Name = "MaterialContextMenuStrip1"
-        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(177, 26)
-        Me.MaterialContextMenuStrip1.Text = "Reports"
+        Me.Reports.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Reports.Depth = 0
+        Me.Reports.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InfoVoucherReportToolStripMenuItem, Me.ConnectsReportToolStripMenuItem})
+        Me.Reports.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Reports.Name = "MaterialContextMenuStrip1"
+        Me.Reports.Size = New System.Drawing.Size(181, 70)
+        Me.Reports.Text = "Reports"
         '
         'InfoVoucherReportToolStripMenuItem
         '
         Me.InfoVoucherReportToolStripMenuItem.Name = "InfoVoucherReportToolStripMenuItem"
-        Me.InfoVoucherReportToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.InfoVoucherReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InfoVoucherReportToolStripMenuItem.Text = "InfoVoucher Report"
+        '
+        'ConnectsReportToolStripMenuItem
+        '
+        Me.ConnectsReportToolStripMenuItem.Name = "ConnectsReportToolStripMenuItem"
+        Me.ConnectsReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ConnectsReportToolStripMenuItem.Text = "Connects Report"
         '
         'Frm_InfoVoucher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(720, 547)
-        Me.ContextMenuStrip = Me.MaterialContextMenuStrip1
+        Me.ContextMenuStrip = Me.Reports
         Me.Controls.Add(Me.MaterialTabSelector1)
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.Controls.Add(Me.dgv_infovouchers)
@@ -360,7 +368,7 @@ Partial Class Frm_InfoVoucher
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.MaterialContextMenuStrip1.ResumeLayout(False)
+        Me.Reports.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -381,7 +389,8 @@ Partial Class Frm_InfoVoucher
     Friend WithEvents txt_byInfovouchid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents btn_search As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents rdb_byClientName As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents MaterialContextMenuStrip1 As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents Reports As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents InfoVoucherReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Btn_NewInfoResult As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents ConnectsReportToolStripMenuItem As ToolStripMenuItem
 End Class
