@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class Rpt_Boxes1
+Public Class Rpt_Boxes
     Inherits ReportClass
     
     Public Sub New()
@@ -136,7 +136,7 @@ Public Class CachedRpt_Boxes
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As Rpt_Boxes1 = New Rpt_Boxes1()
+        Dim rpt As Rpt_Boxes = New Rpt_Boxes()
         rpt.Site = Me.Site
         Return rpt
     End Function
