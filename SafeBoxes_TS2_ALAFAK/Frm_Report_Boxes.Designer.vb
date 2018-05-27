@@ -94,6 +94,7 @@ Partial Class Frm_Report_Boxes
         '
         'Btn_Search
         '
+        Me.Btn_Search.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Btn_Search.AutoSize = True
         Me.Btn_Search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_Search.Depth = 0

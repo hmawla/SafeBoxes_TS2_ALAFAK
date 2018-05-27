@@ -5,6 +5,7 @@
         If Frm_Boxes.BoxId = 0 Then
             theNewId = GenID("Boxes", "BoxId")
             lbl_boxid.Text = "Box ID: " & theNewId
+            Me.Text = "New Box"
         Else
             theNewId = Frm_Boxes.BoxId
             lbl_boxid.Text = "Box ID: " & theNewId
@@ -12,11 +13,12 @@
             theContDetails = ReadQueryOut("SELECT * FROM Boxes WHERE BoxId = " & theNewId)
             Dim rows As DataRow = theContDetails.Tables(0).Rows(0)
             cbox_addsize.SelectedValue = rows.Item(1)
+            Me.Text = "Modify Box#" & theNewId
         End If
         Me.MinimumSize = New Size(337, 237)
     End Sub
 
-    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton1.Click
+    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
         If Frm_Boxes.BoxId = 0 Then
             Console.WriteLine("INSERT INTO Boxes VALUES(" & theNewId & ", " & cbox_addsize.SelectedValue & ")")
             ExecuteQuery("INSERT INTO Boxes VALUES(" & theNewId & ", " & cbox_addsize.SelectedValue & ")")

@@ -99,4 +99,7 @@
         FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS ID, InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId AS [Contract ID], BuildingName AS Address, InfoSubjTitle, ClientFName AS [Client Name] FROM InfoVoucher i,Clients c, Buildings b,InfoSubjectTitles ist WHERE i.BuildingId = b.BuildingId AND i.ClientId = c.ClientId AND i.InfoSubjTitleId=ist.InfoSubjTitleId")
     End Sub
 
+    Private Sub ConnectsReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConnectsReportToolStripMenuItem.Click
+        Frm_Report_Connects.ShowDialog()
+    End Sub
 End Class
