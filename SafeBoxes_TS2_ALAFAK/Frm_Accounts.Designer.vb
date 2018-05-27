@@ -25,6 +25,8 @@ Partial Class Frm_Accounts
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Rdb_Clients = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Rdb_Companies = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.Btn_ModAccount = New MaterialSkin.Controls.MaterialFlatButton()
         Me.Btn_NewAccount = New MaterialSkin.Controls.MaterialFlatButton()
@@ -37,8 +39,6 @@ Partial Class Frm_Accounts
         Me.Rdb_ByName = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Rdb_ByAccId = New MaterialSkin.Controls.MaterialRadioButton()
         Me.DGV_Accounts = New System.Windows.Forms.DataGridView()
-        Me.Rdb_Companies = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.Rdb_Clients = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -88,6 +88,41 @@ Partial Class Frm_Accounts
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Data Control"
         '
+        'Rdb_Clients
+        '
+        Me.Rdb_Clients.AutoSize = True
+        Me.Rdb_Clients.Checked = True
+        Me.Rdb_Clients.Depth = 0
+        Me.Rdb_Clients.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Rdb_Clients.Location = New System.Drawing.Point(587, 101)
+        Me.Rdb_Clients.Margin = New System.Windows.Forms.Padding(0)
+        Me.Rdb_Clients.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Rdb_Clients.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Rdb_Clients.Name = "Rdb_Clients"
+        Me.Rdb_Clients.Ripple = True
+        Me.Rdb_Clients.Size = New System.Drawing.Size(72, 30)
+        Me.Rdb_Clients.TabIndex = 12
+        Me.Rdb_Clients.TabStop = True
+        Me.Rdb_Clients.Text = "Clients"
+        Me.Rdb_Clients.UseVisualStyleBackColor = True
+        '
+        'Rdb_Companies
+        '
+        Me.Rdb_Companies.AutoSize = True
+        Me.Rdb_Companies.Depth = 0
+        Me.Rdb_Companies.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Rdb_Companies.Location = New System.Drawing.Point(659, 101)
+        Me.Rdb_Companies.Margin = New System.Windows.Forms.Padding(0)
+        Me.Rdb_Companies.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Rdb_Companies.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Rdb_Companies.Name = "Rdb_Companies"
+        Me.Rdb_Companies.Ripple = True
+        Me.Rdb_Companies.Size = New System.Drawing.Size(98, 30)
+        Me.Rdb_Companies.TabIndex = 11
+        Me.Rdb_Companies.TabStop = True
+        Me.Rdb_Companies.Text = "Companies"
+        Me.Rdb_Companies.UseVisualStyleBackColor = True
+        '
         'MaterialLabel1
         '
         Me.MaterialLabel1.AutoSize = True
@@ -125,7 +160,7 @@ Partial Class Frm_Accounts
         Me.Btn_NewAccount.Depth = 0
         Me.Btn_NewAccount.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_NewAccount.Icon = Nothing
-        Me.Btn_NewAccount.Location = New System.Drawing.Point(4, 29)
+        Me.Btn_NewAccount.Location = New System.Drawing.Point(9, 29)
         Me.Btn_NewAccount.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Btn_NewAccount.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_NewAccount.Name = "Btn_NewAccount"
@@ -296,41 +331,6 @@ Partial Class Frm_Accounts
         Me.DGV_Accounts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGV_Accounts.Size = New System.Drawing.Size(773, 315)
         Me.DGV_Accounts.TabIndex = 17
-        '
-        'Rdb_Companies
-        '
-        Me.Rdb_Companies.AutoSize = True
-        Me.Rdb_Companies.Depth = 0
-        Me.Rdb_Companies.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.Rdb_Companies.Location = New System.Drawing.Point(659, 101)
-        Me.Rdb_Companies.Margin = New System.Windows.Forms.Padding(0)
-        Me.Rdb_Companies.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.Rdb_Companies.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Rdb_Companies.Name = "Rdb_Companies"
-        Me.Rdb_Companies.Ripple = True
-        Me.Rdb_Companies.Size = New System.Drawing.Size(98, 30)
-        Me.Rdb_Companies.TabIndex = 11
-        Me.Rdb_Companies.TabStop = True
-        Me.Rdb_Companies.Text = "Companies"
-        Me.Rdb_Companies.UseVisualStyleBackColor = True
-        '
-        'Rdb_Clients
-        '
-        Me.Rdb_Clients.AutoSize = True
-        Me.Rdb_Clients.Checked = True
-        Me.Rdb_Clients.Depth = 0
-        Me.Rdb_Clients.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.Rdb_Clients.Location = New System.Drawing.Point(587, 101)
-        Me.Rdb_Clients.Margin = New System.Windows.Forms.Padding(0)
-        Me.Rdb_Clients.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.Rdb_Clients.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Rdb_Clients.Name = "Rdb_Clients"
-        Me.Rdb_Clients.Ripple = True
-        Me.Rdb_Clients.Size = New System.Drawing.Size(72, 30)
-        Me.Rdb_Clients.TabIndex = 12
-        Me.Rdb_Clients.TabStop = True
-        Me.Rdb_Clients.Text = "Clients"
-        Me.Rdb_Clients.UseVisualStyleBackColor = True
         '
         'Frm_Accounts
         '
