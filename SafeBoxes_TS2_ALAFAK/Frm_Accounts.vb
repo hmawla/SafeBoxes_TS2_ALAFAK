@@ -15,6 +15,7 @@
             Me.Text = "Accounts Manager | Companies"
             FillDGV(DGV_Accounts, "SELECT AccountId AS [Account ID], C.CompId AS [Company ID], CompName AS [Company's Name] FROM CompanyAccounts A, Company AS C WHERE A.CompId = C.CompId")
         End If
+        Me.Refresh()
     End Sub
 
     Private Sub Btn_NewAccount_Click(sender As Object, e As EventArgs) Handles Btn_NewAccount.Click
