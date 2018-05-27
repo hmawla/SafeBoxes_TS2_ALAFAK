@@ -2,6 +2,7 @@
     Public companyId As Integer
     Private Sub Frm_Companies_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillDGV(dgv_companies, "SELECT CompId AS [ID], CompName AS [Company Name], CompType AS [Company Type]  FROM Company c,CompType ct WHERE c.CompTypeId=ct.CompTypeId")
+        Me.MinimumSize = New Size(758, 569)
     End Sub
 
     Private Sub btn_modcompany_Click(sender As Object, e As EventArgs) Handles btn_modcompany.Click

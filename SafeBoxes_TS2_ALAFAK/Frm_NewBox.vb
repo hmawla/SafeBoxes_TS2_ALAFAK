@@ -13,7 +13,7 @@
             Dim rows As DataRow = theContDetails.Tables(0).Rows(0)
             cbox_addsize.SelectedValue = rows.Item(1)
         End If
-
+        Me.MinimumSize = New Size(337, 237)
     End Sub
 
     Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton1.Click

@@ -1,4 +1,5 @@
 ﻿Public Class Frm_Authorize
+
     Dim formLoaded As Boolean = False
     Private Sub Frm_Authorize_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
@@ -7,6 +8,7 @@
         FillCBox(CBox_AuthRights, "SELECT RightId, RightDesc FROM AuthRight", "RightId", "RightDesc")
         Txt_ClientId.Focus()
         formLoaded = True
+        Me.MinimumSize = New Size(668, 553)
     End Sub
 
     Private Sub Btn_AddRight_Click(sender As Object, e As EventArgs) Handles Btn_AddRight.Click

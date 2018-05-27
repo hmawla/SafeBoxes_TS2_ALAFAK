@@ -20,6 +20,7 @@
     End Sub
 
     Private Sub Frm_NewEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MinimumSize = New Size(511, 226)
         If Frm_Employees.EmpId = 0 Then
             theNewId = GenID("Employees", "EmpId")
             ExecuteQuery("INSERT INTO Employees(EmpId) VALUES(" & theNewId & ")")

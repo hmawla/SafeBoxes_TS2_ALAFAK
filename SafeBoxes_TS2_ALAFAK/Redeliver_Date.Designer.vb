@@ -58,12 +58,12 @@ Partial Class Redeliver_Date
         '
         Me.Label1.AutoSize = True
         Me.Label1.Depth = 0
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Label1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(5, 74)
         Me.Label1.MouseState = MaterialSkin.MouseState.HOVER
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(234, 20)
+        Me.Label1.Size = New System.Drawing.Size(225, 19)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Please choose the delivery date:"
         '

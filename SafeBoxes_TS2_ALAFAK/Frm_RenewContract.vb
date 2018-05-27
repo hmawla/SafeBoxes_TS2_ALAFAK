@@ -3,6 +3,7 @@
     Dim EmpId As Integer
     Dim ds As New DataSet
     Private Sub Frm_RenewContract_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MinimumSize = New Size(679, 464)
         ContId = Frm_main.contractid
         EmpId = Frm_main.loggedEmpId
         Lbl_ContId.Text = "Contract ID: " & ContId

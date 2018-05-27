@@ -16,6 +16,7 @@
             rows = theContDetails.Tables(0).Rows(0)
             cbox_comptypes.SelectedValue = rows.Item(1)
         End If
+        Me.MinimumSize = New Size(653, 191)
 
     End Sub
 

@@ -2,6 +2,7 @@
     Public EmpId As Integer
     Private Sub Frm_Employees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillDGV(dgv_employees, "SELECT EmpId AS [ID], EmpFName AS [First Name], EmpMName AS [Father Name], EmpLName AS [Last Name] FROM Employees")
+        Me.MinimumSize = New Size(685, 577)
     End Sub
 
     Private Sub Btn_newEmp_Click(sender As Object, e As EventArgs) Handles btn_newEmp.Click

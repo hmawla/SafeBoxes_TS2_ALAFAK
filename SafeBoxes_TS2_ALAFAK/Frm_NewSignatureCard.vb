@@ -9,6 +9,7 @@
 
 
     Private Sub Frm_NewSignatureCard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MinimumSize = New Size(349, 408)
         txt_cid.Text = ""
         txt_cnam.Text = ""
         txt_contid.Text = ""

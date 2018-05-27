@@ -98,5 +98,6 @@ theEnd:
                 DGV_Clients.Rows.Add(row.Item(0), row.Item(1))
             Next
         End If
+        Me.MinimumSize = New Size(448, 560)
     End Sub
 End Class

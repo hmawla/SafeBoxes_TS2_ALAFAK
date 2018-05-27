@@ -26,6 +26,7 @@ Public Class Frm_Login
         materialSkinManager.AddFormToManage(Frm_InfoVoucher)
         materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         materialSkinManager.ColorScheme = New ColorScheme(Primary.DeepPurple800, Primary.DeepPurple900, Primary.DeepPurple500, Accent.LightBlue200, TextShade.WHITE)
+        Me.MinimumSize = New Size(204, 179)
     End Sub
 
     Private Sub txt_empid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_empid.KeyPress

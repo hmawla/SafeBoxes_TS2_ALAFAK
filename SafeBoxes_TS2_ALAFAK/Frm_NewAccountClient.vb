@@ -78,6 +78,7 @@ theEnd:
                 DGV_Clients.Rows.Add(row.Item(0), row.Item(1))
             Next
         End If
+        Me.MinimumSize = New Size(445, 542)
     End Sub
 
     Private Sub Frm_NewAccountClient_Closed(sender As Object, e As EventArgs) Handles Me.Closed

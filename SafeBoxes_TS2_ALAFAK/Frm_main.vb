@@ -15,6 +15,7 @@ Public Class Frm_main
         ds = ReadQueryOut("SELECT EmpFName + ' ' + EmpLName FROM Employees WHERE EmpId = " & loggedEmpId)
         Lbl_WelcomeEmp.Text = "Welcome: " + ds.Tables(0).Rows(0).Item(0)
         InitCon()
+        Me.MinimumSize = New Size(1124, 676)
     End Sub
 
     Private Sub Frm_main_Closed(sender As Object, e As EventArgs) Handles Me.Closed

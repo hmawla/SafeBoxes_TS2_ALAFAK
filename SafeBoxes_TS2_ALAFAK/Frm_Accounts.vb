@@ -2,6 +2,7 @@
 
     Private Sub Frm_Accounts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Clients Codes
+        Me.MinimumSize = New Size(800, 600)
         FillDGV(DGV_Accounts, "SELECT AccountId AS [Account ID], C.ClientId AS [Client ID], ClientFName + ' ' + ClientLName AS [Client's Name] FROM Clients C, ClientDepAccount A WHERE C.ClientId = A.ClientId")
     End Sub
 

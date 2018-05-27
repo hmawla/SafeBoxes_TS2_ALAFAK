@@ -11,4 +11,8 @@
             dtpick_redeliverdate.Value = Date.Now
         End If
     End Sub
+
+    Private Sub Redeliver_Date_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MinimumSize = New Size(262, 146)
+    End Sub
 End Class

@@ -1,6 +1,7 @@
 ﻿Public Class Frm_SignatureCards
     Public signaturecardid As Integer = 0
     Private Sub Frm_SignatureCards_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MinimumSize = New Size(670, 574)
         FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
                                 SignCardNote AS [NOTE], ClientFName AS [CLIENT NAME],
                                 Nationality, ContId, CareerName AS [CAREER], BuildingName 

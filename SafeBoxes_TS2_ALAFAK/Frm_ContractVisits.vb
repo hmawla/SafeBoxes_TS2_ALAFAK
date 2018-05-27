@@ -7,6 +7,7 @@
         EmpId = Frm_main.loggedEmpId
         Lbl_ContId.Text = "Contract ID: " & ContId
         Lbl_EmpId.Text = "Employee ID: " & EmpId
+        Me.MinimumSize = New Size(665, 569)
     End Sub
 
     Private Sub ClientMenuStrip_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ClientMenuStrip.Opening

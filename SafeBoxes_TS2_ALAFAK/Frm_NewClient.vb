@@ -1,7 +1,7 @@
 ﻿Public Class Frm_NewClient
     Dim theNewId As Integer
     Private Sub Frm_NewClient_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.MinimumSize = New Size(337, 383)
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         If Frm_Clients.clientId = 0 Then
             theNewId = GenID("Clients", "ClientId")

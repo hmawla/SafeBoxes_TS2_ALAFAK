@@ -3,6 +3,7 @@ Public Class Frm_Clients
     Public clientId As Integer
     Private Sub Frm_Clients_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillDGV(dgv_clients, "SELECT ClientId AS [ID], ClientFName + ' ' + ClientLName AS [Client's Name], ClientMName AS [Father's Name], ClientMother AS [Mother's Name], ClientDOB AS [Date of Birth], ClientRegisterNbr AS [Register#], PostBoxNbr AS [Post Box#], RegionName AS [Birth Place] FROM Clients C, Regions R WHERE C.RegionId = R.RegionId")
+        Me.MinimumSize = New Size(719, 581)
     End Sub
 
     Private Sub btn_newclient_Click(sender As Object, e As EventArgs) Handles btn_newclient.Click

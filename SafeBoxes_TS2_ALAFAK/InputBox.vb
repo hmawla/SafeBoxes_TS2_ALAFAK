@@ -32,6 +32,7 @@
     End Sub
 
     Private Sub InputBox_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.MinimumSize = New Size(338, 188)
         Txt_Input.Focus()
     End Sub
 

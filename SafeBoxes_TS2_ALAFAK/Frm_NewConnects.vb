@@ -10,6 +10,7 @@
         EmpId = Frm_main.loggedEmpId
         Lbl_infovId.Text = "InfoVoucher ID: " & infoVouchid
         Lbl_EmpId.Text = "Employee ID: " & EmpId
+        Me.MinimumSize = New Size(407, 327)
     End Sub
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click

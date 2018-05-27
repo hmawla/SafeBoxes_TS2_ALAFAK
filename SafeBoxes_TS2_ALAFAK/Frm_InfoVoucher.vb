@@ -7,6 +7,7 @@
         theTime = dgv_infovouchers.Rows(0).Cells(1).Value
         dgv_infovouchers.Columns("From Time").DefaultCellStyle.Format = "t"
         dgv_infovouchers.Columns("To Time").DefaultCellStyle.Format = "t"
+        Me.MinimumSize = New Size(720, 547)
     End Sub
 
     Private Sub btn_newinfovouch_Click(sender As Object, e As EventArgs) Handles btn_newinfovouch.Click

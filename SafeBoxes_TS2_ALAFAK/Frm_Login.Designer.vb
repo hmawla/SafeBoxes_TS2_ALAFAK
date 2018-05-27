@@ -30,18 +30,18 @@ Partial Class Frm_Login
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(52, 80)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 20)
+        Me.Label1.Size = New System.Drawing.Size(100, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Employee ID"
         '
         'txt_empid
         '
         Me.txt_empid.Depth = 0
-        Me.txt_empid.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.txt_empid.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.txt_empid.Hint = ""
         Me.txt_empid.Location = New System.Drawing.Point(68, 102)
         Me.txt_empid.MaxLength = 32767

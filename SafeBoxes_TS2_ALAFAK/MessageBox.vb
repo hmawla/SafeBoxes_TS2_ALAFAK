@@ -54,4 +54,8 @@
             mesResult = DialogResult.Cancel
         End If
     End Sub
+
+    Private Sub MessageBox_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MinimumSize = New Size(345, 210)
+    End Sub
 End Class

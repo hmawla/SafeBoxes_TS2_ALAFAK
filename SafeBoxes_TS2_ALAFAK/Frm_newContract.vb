@@ -54,7 +54,7 @@ Public Class Frm_newContract
     End Sub
 
     Private Sub Frm_newContract_Load(sender As Object, e As EventArgs) Handles Me.Load
-
+        Me.MinimumSize = New Size(649, 282)
         FillCBox(cbox_regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
         FillCBox(cbox_streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_regions.SelectedValue, "StreetId", "StreetName")
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_streets.SelectedValue, "BuildingId", "BuildingName")
