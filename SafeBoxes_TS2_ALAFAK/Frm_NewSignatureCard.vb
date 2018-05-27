@@ -9,6 +9,13 @@
 
 
     Private Sub Frm_NewSignatureCard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txt_cid.Text = ""
+        txt_cnam.Text = ""
+        txt_contid.Text = ""
+        cbox_careers.Text = ""
+        cbox_buildings.Text = ""
+        cbox_Nation.Text = ""
+        txt_signnote.Text = ""
         EmpId = Frm_main.loggedEmpId
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings", "BuildingId", "BuildingName")
         FillCBox(cbox_Nation, "SELECT NationId, Nationality FROM Nationalities", "NationId", "Nationality")
