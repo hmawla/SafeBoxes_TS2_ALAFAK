@@ -178,6 +178,12 @@
     <Compile Include="Frm_NewAccountCompany.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NewBuilding.Designer.vb">
+      <DependentUpon>NewBuilding.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewBuilding.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Rpt_FATCA.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -484,6 +490,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewAccountCompany.resx">
       <DependentUpon>Frm_NewAccountCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewBuilding.resx">
+      <DependentUpon>NewBuilding.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_FATCA.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
