@@ -39,6 +39,8 @@ Partial Class Frm_Boxes
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.Boxreport = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.BoxesReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
+        Me.Btn_ModfyPrices = New MaterialSkin.Controls.MaterialFlatButton()
         CType(Me.dgv_boxes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -71,7 +73,7 @@ Partial Class Frm_Boxes
         Me.dgv_boxes.RowHeadersVisible = False
         Me.dgv_boxes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.dgv_boxes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_boxes.Size = New System.Drawing.Size(662, 316)
+        Me.dgv_boxes.Size = New System.Drawing.Size(671, 325)
         Me.dgv_boxes.TabIndex = 12
         '
         'Label1
@@ -234,6 +236,8 @@ Partial Class Frm_Boxes
         '
         'MaterialTabControl1
         '
+        Me.MaterialTabControl1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabControl1.Controls.Add(Me.TabPage1)
         Me.MaterialTabControl1.Controls.Add(Me.TabPage2)
         Me.MaterialTabControl1.Depth = 0
@@ -241,12 +245,14 @@ Partial Class Frm_Boxes
         Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabControl1.Name = "MaterialTabControl1"
         Me.MaterialTabControl1.SelectedIndex = 0
-        Me.MaterialTabControl1.Size = New System.Drawing.Size(659, 176)
+        Me.MaterialTabControl1.Size = New System.Drawing.Size(676, 176)
         Me.MaterialTabControl1.TabIndex = 13
         '
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Btn_ModfyPrices)
+        Me.TabPage1.Controls.Add(Me.MaterialLabel1)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.btn_modbox)
         Me.TabPage1.Controls.Add(Me.btn_newbox)
@@ -254,7 +260,7 @@ Partial Class Frm_Boxes
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(651, 143)
+        Me.TabPage1.Size = New System.Drawing.Size(668, 143)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Controls"
         '
@@ -270,7 +276,7 @@ Partial Class Frm_Boxes
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(651, 143)
+        Me.TabPage2.Size = New System.Drawing.Size(668, 143)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Filter"
         '
@@ -294,13 +300,43 @@ Partial Class Frm_Boxes
         Me.Boxreport.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BoxesReportToolStripMenuItem})
         Me.Boxreport.MouseState = MaterialSkin.MouseState.HOVER
         Me.Boxreport.Name = "Boxreport"
-        Me.Boxreport.Size = New System.Drawing.Size(181, 48)
+        Me.Boxreport.Size = New System.Drawing.Size(143, 26)
         '
         'BoxesReportToolStripMenuItem
         '
         Me.BoxesReportToolStripMenuItem.Name = "BoxesReportToolStripMenuItem"
-        Me.BoxesReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BoxesReportToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.BoxesReportToolStripMenuItem.Text = "Boxes Report"
+        '
+        'MaterialLabel1
+        '
+        Me.MaterialLabel1.AutoSize = True
+        Me.MaterialLabel1.Depth = 0
+        Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel1.Location = New System.Drawing.Point(175, 4)
+        Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel1.Name = "MaterialLabel1"
+        Me.MaterialLabel1.Size = New System.Drawing.Size(51, 19)
+        Me.MaterialLabel1.TabIndex = 7
+        Me.MaterialLabel1.Text = "Prices"
+        '
+        'Btn_ModfyPrices
+        '
+        Me.Btn_ModfyPrices.AutoSize = True
+        Me.Btn_ModfyPrices.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_ModfyPrices.Depth = 0
+        Me.Btn_ModfyPrices.Icon = Nothing
+        Me.Btn_ModfyPrices.Location = New System.Drawing.Point(179, 28)
+        Me.Btn_ModfyPrices.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Btn_ModfyPrices.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Btn_ModfyPrices.Name = "Btn_ModfyPrices"
+        Me.Btn_ModfyPrices.Primary = True
+        Me.Btn_ModfyPrices.Size = New System.Drawing.Size(121, 36)
+        Me.Btn_ModfyPrices.TabIndex = 8
+        Me.Btn_ModfyPrices.Text = "Modify Prices"
+        Me.Btn_ModfyPrices.UseVisualStyleBackColor = True
         '
         'Frm_Boxes
         '
@@ -344,4 +380,6 @@ Partial Class Frm_Boxes
     Friend WithEvents MaterialTabSelector1 As MaterialSkin.Controls.MaterialTabSelector
     Friend WithEvents Boxreport As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents BoxesReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Btn_ModfyPrices As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
 End Class
