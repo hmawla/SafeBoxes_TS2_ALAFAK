@@ -28,6 +28,7 @@ Partial Class Frm_Report_Client
         Me.Txt_CId = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.RadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Rdb_ByClientId = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Btn_Search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,6 +48,7 @@ Partial Class Frm_Report_Client
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.Btn_Search)
         Me.GroupBox1.Controls.Add(Me.txt_cname)
         Me.GroupBox1.Controls.Add(Me.Txt_CId)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
@@ -62,6 +64,7 @@ Partial Class Frm_Report_Client
         'txt_cname
         '
         Me.txt_cname.Depth = 0
+        Me.txt_cname.Enabled = False
         Me.txt_cname.Hint = ""
         Me.txt_cname.Location = New System.Drawing.Point(250, 57)
         Me.txt_cname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -108,13 +111,13 @@ Partial Class Frm_Report_Client
         Me.RadioButton2.Ripple = True
         Me.RadioButton2.Size = New System.Drawing.Size(123, 30)
         Me.RadioButton2.TabIndex = 15
-        Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "By Client Name"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'Rdb_ByClientId
         '
         Me.Rdb_ByClientId.AutoSize = True
+        Me.Rdb_ByClientId.Checked = True
         Me.Rdb_ByClientId.Depth = 0
         Me.Rdb_ByClientId.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.Rdb_ByClientId.Location = New System.Drawing.Point(6, 25)
@@ -128,6 +131,22 @@ Partial Class Frm_Report_Client
         Me.Rdb_ByClientId.TabStop = True
         Me.Rdb_ByClientId.Text = "By Client ID"
         Me.Rdb_ByClientId.UseVisualStyleBackColor = True
+        '
+        'Btn_Search
+        '
+        Me.Btn_Search.AutoSize = True
+        Me.Btn_Search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_Search.Depth = 0
+        Me.Btn_Search.Icon = Nothing
+        Me.Btn_Search.Location = New System.Drawing.Point(608, 89)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.Btn_Search.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Btn_Search.Name = "Btn_Search"
+        Me.Btn_Search.Primary = True
+        Me.Btn_Search.Size = New System.Drawing.Size(73, 36)
+        Me.Btn_Search.TabIndex = 19
+        Me.Btn_Search.Text = "Search"
+        Me.Btn_Search.UseVisualStyleBackColor = True
         '
         'Frm_Report_Client
         '
@@ -150,4 +169,5 @@ Partial Class Frm_Report_Client
     Friend WithEvents RadioButton2 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents Rdb_ByClientId As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents txt_cname As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents Btn_Search As MaterialSkin.Controls.MaterialFlatButton
 End Class
