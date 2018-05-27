@@ -23,7 +23,7 @@
     End Sub
 
     Private Sub btn_delinfovouch_Click(sender As Object, e As EventArgs) Handles btn_delinfovouch.Click
-        InputBox.Show("Enter admin password:" & vbNewLine & "Deleting a company will also delete all of its accounts!", "Delete InfoVoucher#" & dgv_infovouchers.SelectedRows(0).Cells(0).Value, True)
+        InputBox.Show("Enter admin password:", "Delete Info Voucher#" & dgv_infovouchers.SelectedRows(0).Cells(0).Value, True)
         If Not inResult.Equals("0") Then
             If inResult = adminPass Then
                 ExecuteQuery("DELETE FROM InfoVoucher WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)

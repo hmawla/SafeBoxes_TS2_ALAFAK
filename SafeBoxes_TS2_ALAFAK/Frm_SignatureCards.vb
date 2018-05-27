@@ -12,7 +12,14 @@
     End Sub
 
     Private Sub btn_delbox_Click(sender As Object, e As EventArgs) Handles btn_delbox.Click
-        ExecuteQuery("DELETE FROM SignatureCards WHERE SignCardId = " & dgv_signcard.SelectedRows(0).Cells(0).Value)
+        InputBox.Show("Enter admin password:", "Delete Signature Card#" & dgv_signcard.SelectedRows(0).Cells(0).Value, True)
+        If Not inResult.Equals("0") Then
+            If inResult = adminPass Then
+                ExecuteQuery("DELETE FROM SignatureCards WHERE SignCardId = " & dgv_signcard.SelectedRows(0).Cells(0).Value)
+            Else
+                MessageBox.Show("Wrong password!")
+            End If
+        End If
         FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
                                 SignCardNote AS [NOTE], ClientFName AS [CLIENT NAME],
                                 Nationality, ContId, CareerName AS [CAREER], BuildingName 
