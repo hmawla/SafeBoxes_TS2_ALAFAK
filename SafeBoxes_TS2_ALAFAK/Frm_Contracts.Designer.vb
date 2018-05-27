@@ -57,6 +57,7 @@ Partial Class Frm_Contracts
         Me.WithdrawReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.AuthorizationReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
+        Me.ContractReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -514,10 +515,10 @@ Partial Class Frm_Contracts
         '
         Me.MaterialContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MaterialContextMenuStrip1.Depth = 0
-        Me.MaterialContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MissingKeysReport, Me.RenewReport, Me.ContractEndingReport, Me.VisitsReport, Me.WithdrawReport, Me.AuthorizationReport})
+        Me.MaterialContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MissingKeysReport, Me.RenewReport, Me.ContractEndingReport, Me.VisitsReport, Me.WithdrawReport, Me.AuthorizationReport, Me.ContractReportToolStripMenuItem})
         Me.MaterialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialContextMenuStrip1.Name = "MaterialContextMenuStrip1"
-        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(199, 158)
+        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(199, 180)
         '
         'MissingKeysReport
         '
@@ -567,6 +568,12 @@ Partial Class Frm_Contracts
         Me.MaterialDivider1.Size = New System.Drawing.Size(693, 1)
         Me.MaterialDivider1.TabIndex = 17
         Me.MaterialDivider1.Text = "MaterialDivider1"
+        '
+        'ContractReportToolStripMenuItem
+        '
+        Me.ContractReportToolStripMenuItem.Name = "ContractReportToolStripMenuItem"
+        Me.ContractReportToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.ContractReportToolStripMenuItem.Text = "Contract Report"
         '
         'Frm_Contracts
         '
@@ -628,4 +635,5 @@ Partial Class Frm_Contracts
     Friend WithEvents AuthorizationReport As ToolStripMenuItem
     Friend WithEvents MaterialDivider1 As MaterialSkin.Controls.MaterialDivider
     Friend WithEvents Chk_Expired As MaterialSkin.Controls.MaterialCheckBox
+    Friend WithEvents ContractReportToolStripMenuItem As ToolStripMenuItem
 End Class
