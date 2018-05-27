@@ -172,6 +172,12 @@
     <Compile Include="Frm_Accounts.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_BoxPrices.Designer.vb">
+      <DependentUpon>Frm_BoxPrices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_BoxPrices.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_NewAccountCompany.Designer.vb">
       <DependentUpon>Frm_NewAccountCompany.vb</DependentUpon>
     </Compile>
@@ -487,6 +493,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Frm_Accounts.resx">
       <DependentUpon>Frm_Accounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_BoxPrices.resx">
+      <DependentUpon>Frm_BoxPrices.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewAccountCompany.resx">
       <DependentUpon>Frm_NewAccountCompany.vb</DependentUpon>

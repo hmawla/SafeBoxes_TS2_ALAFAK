@@ -3,7 +3,7 @@
 
     Private Sub Frm_Boxes_Load(sender As Object, e As EventArgs) Handles Me.Load
         FillCBox(cbox_boxsizes, "SELECT SizeId,Length + 'cm x ' + Width + 'cm x ' + Height + 'cm' AS prop FROM BoxSizes", "SizeId", "prop") 'Fill the search combo box with all available sizes
-        FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b,BoxSizes bs WHERE b.SizeId=bs.SizeId")
+        FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length, Width, Height, InsurancePrice, RentPrice FROM Boxes b, BoxSizes bs, BoxSizesDate bsd INNER JOIN (SELECT MAX(Date), SizeId FROM BoxSizesDate GROUP BY SizeId) rbsd ON (bsd.SizeId = rbsd.SizeId) WHERE b.SizeId = bs.SizeId AND bs.SizeId = bsd.SizeId")
         Me.MinimumSize = New Size(700, 628)
     End Sub
 
@@ -93,5 +93,10 @@
 
     Private Sub BoxesReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BoxesReportToolStripMenuItem.Click
         Frm_Report_Boxes.ShowDialog()
+    End Sub
+
+    Private Sub Btn_ModfyPrices_Click(sender As Object, e As EventArgs) Handles Btn_ModfyPrices.Click
+        Frm_BoxPrices.ShowDialog()
+        FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length, Width, Height, InsurancePrice, RentPrice, MAX(bsd.Date) FROM Boxes b, BoxSizes bs, BoxSizesDate bsd WHERE b.SizeId = bs.SizeId AND bs.SizeId = bsd.SizeId GROUP BY BoxId ,Length, Width, Height, InsurancePrice, RentPrice")
     End Sub
 End Class
