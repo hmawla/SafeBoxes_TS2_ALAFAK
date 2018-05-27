@@ -18,8 +18,15 @@
     End Sub
 
     Private Sub Btn_delEmp_Click(sender As Object, e As EventArgs) Handles btn_delEmp.Click
-        ExecuteQuery("DELETE FROM Employees WHERE EmpId = " & dgv_employees.SelectedRows(0).Cells(0).Value)
-        FillDGV(dgv_employees, "SELECT EmpId AS [ID], EmpFName AS [First Name], EmpMName AS [Father Name], EmpLName AS [Last Name] FROM Employees")
+        InputBox.Show("Enter admin password:", "Delete Employee#" & dgv_employees.SelectedRows(0).Cells(0).Value, True)
+        If Not inResult.Equals("0") Then
+            If inResult = adminPass Then
+                ExecuteQuery("DELETE FROM Employees WHERE EmpId = " & dgv_employees.SelectedRows(0).Cells(0).Value)
+                FillDGV(dgv_employees, "SELECT EmpId AS [ID], EmpFName AS [First Name], EmpMName AS [Father Name], EmpLName AS [Last Name] FROM Employees")
+            Else
+                MessageBox.Show("Wrong password!")
+            End If
+        End If
     End Sub
 
     Private Sub Dgv_employees_SelectionChanged(sender As Object, e As EventArgs) Handles dgv_employees.SelectionChanged
