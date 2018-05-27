@@ -88,6 +88,7 @@ theEnd:
                 If cbox_regions.Text.Count > 0 And cbox_streets.Text.Count > 0 And cbox_buildings.Text.Count > 0 Then
                     Dim theNewId As Integer = GenID("Authorizations", "Authid")
                     ExecuteQuery("INSERT INTO Authorizations VALUES(" & theNewId & ", date(), " & Frm_Contracts.contractId & ")")
+                    ExecuteQuery("INSERT INTO ClientAuthBuilding VALUES(" & Txt_ClientId.Text & ", " & theNewId & ", " & AddBuilding(cbox_regions, cbox_streets, cbox_buildings) & ")")
                     For Each row As DataGridViewRow In DGV_Rights.Rows
                         ExecuteQuery("INSERT INTO AuthorizationAuthRight VALUES(" & theNewId & ", " & row.Cells(0).Value & ")")
                     Next
