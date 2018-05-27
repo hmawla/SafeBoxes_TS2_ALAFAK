@@ -1,51 +1,42 @@
 ﻿Public Class Frm_Report_Authorizations
     Dim RptDbDataSet As New DataSet
     Dim CrysReport As New Rpt_Authorizations
-
-    Private Sub Frm_Report_Authorizations_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        RptV_Authorizations.ReportSource = CrysReport
-        RptV_Authorizations.RefreshReport()
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_ById.KeyPress
+        Only_Number(Txt_ById, e)
     End Sub
 
-    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
-        Only_Number(TextBox1, e)
-    End Sub
-
-    Private Sub dtpick_exdate_ValueChanged(sender As Object, e As EventArgs) Handles dtpick_exdate.ValueChanged, Dte_from.ValueChanged
-        If Dte_from.Value >= dtpick_exdate.Value Then
-            MessageBox.Show("To Date should be greater than from date!")
-            dtpick_exdate.Value = Dte_from.Value.AddDays(1)
-        End If
-        RptDbDataSet.Reset()
-        RptDbDataSet = ReadQueryOut("SELECT * FROM Authorization WHERE (AuthSignDate BETWEEN #" & Dte_from.Value.ToShortDateString & "# AND #" & dtpick_exdate.Value.ToShortDateString & "#)").Copy()
-        CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
-        RptV_Authorizations.ReportSource = CrysReport
-        RptV_Authorizations.RefreshReport()
-    End Sub
-
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-        If RadioButton1.Checked Then
-            TextBox1.Enabled = True
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles Rdb_ByContId.CheckedChanged
+        If Rdb_ByContId.Checked Then
+            Txt_ById.Enabled = True
+            Txt_ById.Text = ""
+            Dtpick_FromDate.Enabled = False
+            Dtpick_ToDate.Enabled = False
         Else
-            TextBox1.Enabled = False
+            Txt_ById.Enabled = False
+            Dtpick_FromDate.Enabled = True
+            Dtpick_ToDate.Enabled = True
         End If
     End Sub
 
-    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
-        If RadioButton2.Checked Then
-            Dte_from.Enabled = True
-            dtpick_exdate.Enabled = True
+    Private Sub Btn_Search_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
+        If Rdb_ByContId.Checked Then
+            RptDbDataSet.Reset()
+            Dim mss As New MessageBox
+            mss.Show("SELECT * FROM Authorization WHERE ContId = " & Txt_ById.Text)
+            RptDbDataSet = ReadQueryOut("SELECT * FROM Authorizations WHERE ContId =" & Txt_ById.Text).Copy()
+            CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+            RptV_Authorizations.ReportSource = CrysReport
+            RptV_Authorizations.RefreshReport()
         Else
-            Dte_from.Enabled = False
-            dtpick_exdate.Enabled = False
+            If Dtpick_FromDate.Value > Dtpick_ToDate.Value Then
+                MessageBox.Show("Invalid Dates!")
+            Else
+                RptDbDataSet.Reset()
+                RptDbDataSet = ReadQueryOut("SELECT * FROM Authorizations WHERE (AuthSignDate BETWEEN #" & Dtpick_FromDate.Value.ToShortDateString & "# AND #" & Dtpick_ToDate.Value.ToShortDateString & "#)").Copy()
+                CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+                RptV_Authorizations.ReportSource = CrysReport
+                RptV_Authorizations.RefreshReport()
+            End If
         End If
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        RptDbDataSet.Reset()
-        RptDbDataSet = ReadQueryOut("SELECT * FROM Authorization WHERE ContId =" & TextBox1.Text).Copy()
-        CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
-        RptV_Authorizations.ReportSource = CrysReport
-        RptV_Authorizations.RefreshReport()
     End Sub
 End Class

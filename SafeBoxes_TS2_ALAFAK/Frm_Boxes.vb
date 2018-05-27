@@ -81,4 +81,8 @@
             End Try
         End If
     End Sub
+
+    Private Sub BoxesReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BoxesReportToolStripMenuItem.Click
+        Frm_Report_Boxes.ShowDialog()
+    End Sub
 End Class

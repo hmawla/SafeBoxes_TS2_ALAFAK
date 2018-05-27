@@ -37,10 +37,13 @@ Partial Class Frm_Clients
         Me.txt_bycid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.rdb_byClientName = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.ClientsReport = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv_clients, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.ClientsReport.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv_clients
@@ -73,6 +76,8 @@ Partial Class Frm_Clients
         '
         'MaterialTabSelector1
         '
+        Me.MaterialTabSelector1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
         Me.MaterialTabSelector1.Location = New System.Drawing.Point(0, 64)
@@ -288,6 +293,21 @@ Partial Class Frm_Clients
         Me.rdb_byClientName.Text = "By Client Name"
         Me.rdb_byClientName.UseVisualStyleBackColor = True
         '
+        'ClientsReport
+        '
+        Me.ClientsReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientsReport.Depth = 0
+        Me.ClientsReport.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
+        Me.ClientsReport.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientsReport.Name = "ClientsReport"
+        Me.ClientsReport.Size = New System.Drawing.Size(181, 48)
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem2.Text = "Clients Report"
+        '
         'Frm_Clients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -307,6 +327,7 @@ Partial Class Frm_Clients
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.ClientsReport.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -325,4 +346,6 @@ Partial Class Frm_Clients
     Friend WithEvents btn_search As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents rdb_byClientName As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents txt_bycname As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents ClientsReport As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
 End Class

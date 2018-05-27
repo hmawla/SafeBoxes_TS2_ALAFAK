@@ -37,10 +37,13 @@ Partial Class Frm_Boxes
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
+        Me.Boxreport = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.BoxesReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv_boxes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.Boxreport.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv_boxes
@@ -273,8 +276,7 @@ Partial Class Frm_Boxes
         '
         'MaterialTabSelector1
         '
-        Me.MaterialTabSelector1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.MaterialTabSelector1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
@@ -285,12 +287,28 @@ Partial Class Frm_Boxes
         Me.MaterialTabSelector1.TabIndex = 0
         Me.MaterialTabSelector1.Text = "MaterialTabSelector1"
         '
+        'Boxreport
+        '
+        Me.Boxreport.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Boxreport.Depth = 0
+        Me.Boxreport.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BoxesReportToolStripMenuItem})
+        Me.Boxreport.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Boxreport.Name = "Boxreport"
+        Me.Boxreport.Size = New System.Drawing.Size(181, 48)
+        '
+        'BoxesReportToolStripMenuItem
+        '
+        Me.BoxesReportToolStripMenuItem.Name = "BoxesReportToolStripMenuItem"
+        Me.BoxesReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BoxesReportToolStripMenuItem.Text = "Boxes Report"
+        '
         'Frm_Boxes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 628)
+        Me.ContextMenuStrip = Me.Boxreport
         Me.Controls.Add(Me.MaterialTabSelector1)
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.Controls.Add(Me.dgv_boxes)
@@ -304,6 +322,7 @@ Partial Class Frm_Boxes
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.Boxreport.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -323,4 +342,6 @@ Partial Class Frm_Boxes
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents MaterialTabSelector1 As MaterialSkin.Controls.MaterialTabSelector
+    Friend WithEvents Boxreport As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents BoxesReportToolStripMenuItem As ToolStripMenuItem
 End Class

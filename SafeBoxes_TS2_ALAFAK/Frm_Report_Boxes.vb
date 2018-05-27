@@ -10,13 +10,13 @@
         If Rdb_ByBoxId.Checked Then
             RptDbDataSet.Reset()
             RptDbDataSet = ReadQueryOut("SELECT * FROM Boxes WHERE BoxId =" & Txt_ByBoxId.Text).Copy()
-            CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+            CrysReport.Database.Tables(2).SetDataSource(RptDbDataSet.Tables(0))
             RptV_Boxes.ReportSource = CrysReport
             RptV_Boxes.RefreshReport()
         Else
             RptDbDataSet.Reset()
-            RptDbDataSet = ReadQueryOut("SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b, BoxSizes bs, BoxSizesDate bsd WHERE b.SizeId = " & cbox_boxsizes.SelectedValue & " AND bs.SizeId = " & cbox_boxsizes.SelectedValue & " AND bsd.SizeId = " & cbox_boxsizes.SelectedValue).Copy()
-            CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0))
+            RptDbDataSet = ReadQueryOut("SELECT * FROM Boxes WHERE SizeId = " & cbox_boxsizes.SelectedValue).Copy()
+            CrysReport.Database.Tables(2).SetDataSource(RptDbDataSet.Tables(0))
             RptV_Boxes.ReportSource = CrysReport
             RptV_Boxes.RefreshReport()
         End If

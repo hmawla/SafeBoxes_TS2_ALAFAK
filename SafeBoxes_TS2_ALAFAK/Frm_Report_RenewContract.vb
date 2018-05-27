@@ -1,47 +1,38 @@
 ﻿Public Class Frm_Report_RenewContract
     Dim RptDbDataSet As New DataSet 'Declare the new dataset
     Dim CrysReport As New Rpt_Renew 'Declare an instance of the crystal report
-    Private Sub Frm_Report_RenewContract_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        RptDbDataSet.Reset() 'reset the dataset incase it has data
-        CRptV_Renew.ReportSource = CrysReport 'set the viewer's source to the created instance of the creport
-        CRptV_Renew.RefreshReport() 'Refresh the viewer (may not be needed)
-    End Sub
-
-    Private Sub Txt_ContId_TextChanged(sender As Object, e As EventArgs) Handles Txt_ContId.TextChanged
-        RptDbDataSet.Reset() 'reset the dataset incase it has data
-        RptDbDataSet = ReadQueryOut("SELECT * FROM Renew WHERE ContId = " & Txt_ContId.Text).Copy() 'Set the condition on the desired table
-        CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0)) 'Override the table(0) (First table in the Creport database) using the condition
-        CRptV_Renew.ReportSource = CrysReport 'set the viewer's source to the created instance of the creport
-        CRptV_Renew.RefreshReport() 'Refresh the viewer (may not be needed)
-    End Sub
-
-    Private Sub dtpick_exdate_ValueChanged(sender As Object, e As EventArgs) Handles dtpick_exdate.ValueChanged, DateTimePicker1.ValueChanged
-        If DateTimePicker1.Value >= dtpick_exdate.Value Then
-            MessageBox.Show("To Date should be greater than from date!")
-            dtpick_exdate.Value = DateTimePicker1.Value.AddDays(1)
-        End If
-        RptDbDataSet.Reset() 'reset the dataset incase it has data
-        RptDbDataSet = ReadQueryOut("SELECT * FROM Renew WHERE (RenewDate BETWEEN #" & DateTimePicker1.Value.ToShortDateString & "# AND #" & dtpick_exdate.Value.ToShortDateString & "#)").Copy() 'Set the condition on the desired table
-        CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0)) 'Override the table(0) (First table in the Creport database) using the condition
-        CRptV_Renew.ReportSource = CrysReport 'set the viewer's source to the created instance of the creport
-        CRptV_Renew.RefreshReport() 'Refresh the viewer (may not be needed)
-    End Sub
 
     Private Sub Rdb_ByContId_CheckedChanged(sender As Object, e As EventArgs) Handles Rdb_ByContId.CheckedChanged
         If Rdb_ByContId.Checked Then
             Txt_ContId.Enabled = True
+            Dtpick_FromDate.Enabled = False
+            Dtpick_ToDate.Enabled = False
         Else
             Txt_ContId.Enabled = False
+            Txt_ContId.Text = ""
+            Dtpick_FromDate.Enabled = True
+            Dtpick_ToDate.Enabled = True
         End If
     End Sub
 
-    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
-        If RadioButton2.Checked Then
-            DateTimePicker1.Enabled = True
-            dtpick_exdate.Enabled = True
+    Private Sub Btn_Search_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
+        If Rdb_ByContId.Checked Then
+            RptDbDataSet.Reset() 'reset the dataset incase it has data
+            RptDbDataSet = ReadQueryOut("SELECT * FROM Renew WHERE ContId = " & Txt_ContId.Text).Copy() 'Set the condition on the desired table
+            CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0)) 'Override the table(0) (First table in the Creport database) using the condition
+            CRptV_Renew.ReportSource = CrysReport 'set the viewer's source to the created instance of the creport
+            CRptV_Renew.RefreshReport() 'Refresh the viewer (may not be needed)
         Else
-            DateTimePicker1.Enabled = False
-            dtpick_exdate.Enabled = False
+            If Dtpick_FromDate.Value > Dtpick_ToDate.Value Then
+                MessageBox.Show("Invalid dates!")
+            Else
+                RptDbDataSet.Reset() 'reset the dataset incase it has data
+                RptDbDataSet = ReadQueryOut("SELECT * FROM Renew WHERE (RenewDate BETWEEN #" & Dtpick_FromDate.Value.ToShortDateString & "# AND #" & Dtpick_ToDate.Value.ToShortDateString & "#)").Copy() 'Set the condition on the desired table
+                CrysReport.Database.Tables(0).SetDataSource(RptDbDataSet.Tables(0)) 'Override the table(0) (First table in the Creport database) using the condition
+                CRptV_Renew.ReportSource = CrysReport 'set the viewer's source to the created instance of the creport
+                CRptV_Renew.RefreshReport() 'Refresh the viewer (may not be needed)
+            End If
+
         End If
     End Sub
 End Class

@@ -112,4 +112,8 @@ Public Class Frm_Clients
     Private Sub txt_bycid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_bycid.KeyPress
         Only_Number(txt_bycid, e)
     End Sub
+
+    Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
+        Frm_Report_Client.ShowDialog()
+    End Sub
 End Class

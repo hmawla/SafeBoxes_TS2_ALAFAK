@@ -47,6 +47,7 @@ Partial Class Frm_Contracts
         Me.btn_keydelivered = New MaterialSkin.Controls.MaterialFlatButton()
         Me.Label3 = New MaterialSkin.Controls.MaterialLabel()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Chk_Expired = New MaterialSkin.Controls.MaterialCheckBox()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.MaterialContextMenuStrip1 = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.MissingKeysReport = New System.Windows.Forms.ToolStripMenuItem()
@@ -55,12 +56,7 @@ Partial Class Frm_Contracts
         Me.VisitsReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.WithdrawReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.AuthorizationReport = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SelectBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SelectAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CompanyAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialDivider1 = New MaterialSkin.Controls.MaterialDivider()
-        Me.Chk_Expired = New MaterialSkin.Controls.MaterialCheckBox()
         CType(Me.dgv_contracts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -485,6 +481,22 @@ Partial Class Frm_Contracts
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Filter"
         '
+        'Chk_Expired
+        '
+        Me.Chk_Expired.AutoSize = True
+        Me.Chk_Expired.Depth = 0
+        Me.Chk_Expired.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Chk_Expired.Location = New System.Drawing.Point(29, 82)
+        Me.Chk_Expired.Margin = New System.Windows.Forms.Padding(0)
+        Me.Chk_Expired.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Chk_Expired.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Chk_Expired.Name = "Chk_Expired"
+        Me.Chk_Expired.Ripple = True
+        Me.Chk_Expired.Size = New System.Drawing.Size(76, 30)
+        Me.Chk_Expired.TabIndex = 14
+        Me.Chk_Expired.Text = "Expired"
+        Me.Chk_Expired.UseVisualStyleBackColor = True
+        '
         'MaterialTabSelector1
         '
         Me.MaterialTabSelector1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -502,10 +514,10 @@ Partial Class Frm_Contracts
         '
         Me.MaterialContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MaterialContextMenuStrip1.Depth = 0
-        Me.MaterialContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MissingKeysReport, Me.RenewReport, Me.ContractEndingReport, Me.VisitsReport, Me.WithdrawReport, Me.AuthorizationReport, Me.SelectBoxToolStripMenuItem, Me.SelectAccountToolStripMenuItem})
+        Me.MaterialContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MissingKeysReport, Me.RenewReport, Me.ContractEndingReport, Me.VisitsReport, Me.WithdrawReport, Me.AuthorizationReport})
         Me.MaterialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialContextMenuStrip1.Name = "MaterialContextMenuStrip1"
-        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(199, 180)
+        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(199, 158)
         '
         'MissingKeysReport
         '
@@ -543,31 +555,6 @@ Partial Class Frm_Contracts
         Me.AuthorizationReport.Size = New System.Drawing.Size(198, 22)
         Me.AuthorizationReport.Text = "Authorization Report"
         '
-        'SelectBoxToolStripMenuItem
-        '
-        Me.SelectBoxToolStripMenuItem.Name = "SelectBoxToolStripMenuItem"
-        Me.SelectBoxToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
-        Me.SelectBoxToolStripMenuItem.Text = "Select Box"
-        '
-        'SelectAccountToolStripMenuItem
-        '
-        Me.SelectAccountToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientAccountToolStripMenuItem, Me.CompanyAccountToolStripMenuItem})
-        Me.SelectAccountToolStripMenuItem.Name = "SelectAccountToolStripMenuItem"
-        Me.SelectAccountToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
-        Me.SelectAccountToolStripMenuItem.Text = "Select Account"
-        '
-        'ClientAccountToolStripMenuItem
-        '
-        Me.ClientAccountToolStripMenuItem.Name = "ClientAccountToolStripMenuItem"
-        Me.ClientAccountToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
-        Me.ClientAccountToolStripMenuItem.Text = "Client Account"
-        '
-        'CompanyAccountToolStripMenuItem
-        '
-        Me.CompanyAccountToolStripMenuItem.Name = "CompanyAccountToolStripMenuItem"
-        Me.CompanyAccountToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
-        Me.CompanyAccountToolStripMenuItem.Text = "Company Account"
-        '
         'MaterialDivider1
         '
         Me.MaterialDivider1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -580,22 +567,6 @@ Partial Class Frm_Contracts
         Me.MaterialDivider1.Size = New System.Drawing.Size(693, 1)
         Me.MaterialDivider1.TabIndex = 17
         Me.MaterialDivider1.Text = "MaterialDivider1"
-        '
-        'Chk_Expired
-        '
-        Me.Chk_Expired.AutoSize = True
-        Me.Chk_Expired.Depth = 0
-        Me.Chk_Expired.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.Chk_Expired.Location = New System.Drawing.Point(29, 82)
-        Me.Chk_Expired.Margin = New System.Windows.Forms.Padding(0)
-        Me.Chk_Expired.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.Chk_Expired.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Chk_Expired.Name = "Chk_Expired"
-        Me.Chk_Expired.Ripple = True
-        Me.Chk_Expired.Size = New System.Drawing.Size(76, 30)
-        Me.Chk_Expired.TabIndex = 14
-        Me.Chk_Expired.Text = "Expired"
-        Me.Chk_Expired.UseVisualStyleBackColor = True
         '
         'Frm_Contracts
         '
@@ -656,9 +627,5 @@ Partial Class Frm_Contracts
     Friend WithEvents WithdrawReport As ToolStripMenuItem
     Friend WithEvents AuthorizationReport As ToolStripMenuItem
     Friend WithEvents MaterialDivider1 As MaterialSkin.Controls.MaterialDivider
-    Friend WithEvents SelectBoxToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SelectAccountToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ClientAccountToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CompanyAccountToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Chk_Expired As MaterialSkin.Controls.MaterialCheckBox
 End Class
