@@ -23,11 +23,20 @@
     End Sub
 
     Private Sub btn_delinfovouch_Click(sender As Object, e As EventArgs) Handles btn_delinfovouch.Click
-        ExecuteQuery("DELETE FROM InfoVoucher WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
-        ExecuteQuery("DELETE FROM InfoVoucherExDays WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
-        ExecuteQuery("DELETE FROM InfoResult WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
-        ExecuteQuery("DELETE FROM ConnWaysInfoVoucher WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
-        ExecuteQuery("DELETE FROM TransferLaws WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
+        InputBox.Show("Enter admin password:" & vbNewLine & "Deleting a company will also delete all of its accounts!", "Delete InfoVoucher#" & dgv_infovouchers.SelectedRows(0).Cells(0).Value, True)
+        If Not inResult.Equals("0") Then
+            If inResult = adminPass Then
+                ExecuteQuery("DELETE FROM InfoVoucher WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
+                ExecuteQuery("DELETE FROM InfoVoucherExDays WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
+                ExecuteQuery("DELETE FROM InfoResult WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
+                ExecuteQuery("DELETE FROM ConnWaysInfoVoucher WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
+                ExecuteQuery("DELETE FROM TransferLaws WHERE InfoVouchId = " & dgv_infovouchers.SelectedRows(0).Cells(0).Value)
+            Else
+                MessageBox.Show("Wrong password!")
+            End If
+        End If
+
+
         FillDGV(dgv_infovouchers, "SELECT InfoVouchId AS [ID], InfoVouchFromTime AS [From Time], InfoVouchToTime AS [To Time], InfoVouchDate AS [Date], SubjectDetails, ContId, BuildingName, InfoSubjTitle, ClientFName FROM InfoVoucher, Buildings, Clients, InfoSubjectTitles WHERE InfoVoucher.BuildingId=Buildings.BuildingId AND InfoVoucher.InfoSubjTitleId=InfoSubjectTitles.InfoSubjTitleId AND InfoVoucher.ClientId=Clients.ClientId")
     End Sub
 

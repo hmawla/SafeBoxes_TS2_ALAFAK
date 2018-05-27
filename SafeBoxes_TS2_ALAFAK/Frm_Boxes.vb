@@ -20,8 +20,16 @@
     End Sub
 
     Private Sub btn_delbox_Click(sender As Object, e As EventArgs) Handles btn_delbox.Click
-        ExecuteQuery("DELETE FROM Boxes WHERE BoxId = " & dgv_boxes.SelectedRows(0).Cells(0).Value)
-        FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b,BoxSizes bs WHERE b.SizeId=bs.SizeId")
+        InputBox.Show("Enter admin password:", "Delete Box#" & dgv_boxes.SelectedRows(0).Cells(0).Value, True)
+        If Not inResult.Equals("0") Then
+            If inResult = adminPass Then
+                ExecuteQuery("DELETE FROM Boxes WHERE BoxId = " & dgv_boxes.SelectedRows(0).Cells(0).Value)
+                FillDGV(dgv_boxes, "SELECT BoxId AS [ID],Length,Width, Height FROM Boxes b,BoxSizes bs WHERE b.SizeId=bs.SizeId")
+            Else
+                MessageBox.Show("Wrong password!")
+            End If
+        End If
+
 
     End Sub
 
