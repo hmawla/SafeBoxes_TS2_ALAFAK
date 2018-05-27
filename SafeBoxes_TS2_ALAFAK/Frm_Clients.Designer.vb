@@ -300,12 +300,12 @@ Partial Class Frm_Clients
         Me.ClientsReport.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
         Me.ClientsReport.MouseState = MaterialSkin.MouseState.HOVER
         Me.ClientsReport.Name = "ClientsReport"
-        Me.ClientsReport.Size = New System.Drawing.Size(181, 48)
+        Me.ClientsReport.Size = New System.Drawing.Size(149, 26)
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(148, 22)
         Me.ToolStripMenuItem2.Text = "Clients Report"
         '
         'Frm_Clients
@@ -314,6 +314,7 @@ Partial Class Frm_Clients
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(719, 581)
+        Me.ContextMenuStrip = Me.ClientsReport
         Me.Controls.Add(Me.MaterialTabSelector1)
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.Controls.Add(Me.dgv_clients)
