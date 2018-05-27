@@ -60,4 +60,8 @@ Public Class Frm_main
     Private Sub Btn_AccountsManager_Click(sender As Object, e As EventArgs) Handles Btn_AccountsManager.Click
         Frm_Accounts.ShowDialog()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        NewBuilding.ShowDialog()
+    End Sub
 End Class
