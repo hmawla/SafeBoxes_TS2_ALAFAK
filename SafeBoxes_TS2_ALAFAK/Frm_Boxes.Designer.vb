@@ -41,6 +41,9 @@ Partial Class Frm_Boxes
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.Boxreport = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.BoxesReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Btn_ModifySize = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
+        Me.Btn_NewSize = New MaterialSkin.Controls.MaterialFlatButton()
         CType(Me.dgv_boxes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -251,6 +254,9 @@ Partial Class Frm_Boxes
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Btn_NewSize)
+        Me.TabPage1.Controls.Add(Me.Btn_ModifySize)
+        Me.TabPage1.Controls.Add(Me.MaterialLabel2)
         Me.TabPage1.Controls.Add(Me.Btn_ModfyPrices)
         Me.TabPage1.Controls.Add(Me.MaterialLabel1)
         Me.TabPage1.Controls.Add(Me.Label1)
@@ -270,7 +276,7 @@ Partial Class Frm_Boxes
         Me.Btn_ModfyPrices.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_ModfyPrices.Depth = 0
         Me.Btn_ModfyPrices.Icon = Nothing
-        Me.Btn_ModfyPrices.Location = New System.Drawing.Point(179, 28)
+        Me.Btn_ModfyPrices.Location = New System.Drawing.Point(321, 28)
         Me.Btn_ModfyPrices.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Btn_ModfyPrices.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_ModfyPrices.Name = "Btn_ModfyPrices"
@@ -286,7 +292,7 @@ Partial Class Frm_Boxes
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(175, 4)
+        Me.MaterialLabel1.Location = New System.Drawing.Point(317, 4)
         Me.MaterialLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
@@ -338,6 +344,52 @@ Partial Class Frm_Boxes
         Me.BoxesReportToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.BoxesReportToolStripMenuItem.Text = "Boxes Report"
         '
+        'Btn_ModifySize
+        '
+        Me.Btn_ModifySize.AutoSize = True
+        Me.Btn_ModifySize.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_ModifySize.Depth = 0
+        Me.Btn_ModifySize.Icon = Nothing
+        Me.Btn_ModifySize.Location = New System.Drawing.Point(171, 67)
+        Me.Btn_ModifySize.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Btn_ModifySize.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Btn_ModifySize.Name = "Btn_ModifySize"
+        Me.Btn_ModifySize.Primary = True
+        Me.Btn_ModifySize.Size = New System.Drawing.Size(103, 36)
+        Me.Btn_ModifySize.TabIndex = 10
+        Me.Btn_ModifySize.Text = "Modify Size"
+        Me.Btn_ModifySize.UseVisualStyleBackColor = True
+        '
+        'MaterialLabel2
+        '
+        Me.MaterialLabel2.AutoSize = True
+        Me.MaterialLabel2.Depth = 0
+        Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel2.Location = New System.Drawing.Point(167, 4)
+        Me.MaterialLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel2.Name = "MaterialLabel2"
+        Me.MaterialLabel2.Size = New System.Drawing.Size(45, 19)
+        Me.MaterialLabel2.TabIndex = 9
+        Me.MaterialLabel2.Text = "Sizes"
+        '
+        'Btn_NewSize
+        '
+        Me.Btn_NewSize.AutoSize = True
+        Me.Btn_NewSize.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Btn_NewSize.Depth = 0
+        Me.Btn_NewSize.Icon = Nothing
+        Me.Btn_NewSize.Location = New System.Drawing.Point(171, 28)
+        Me.Btn_NewSize.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Btn_NewSize.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Btn_NewSize.Name = "Btn_NewSize"
+        Me.Btn_NewSize.Primary = True
+        Me.Btn_NewSize.Size = New System.Drawing.Size(82, 36)
+        Me.Btn_NewSize.TabIndex = 11
+        Me.Btn_NewSize.Text = "New Size"
+        Me.Btn_NewSize.UseVisualStyleBackColor = True
+        '
         'Frm_Boxes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -382,4 +434,7 @@ Partial Class Frm_Boxes
     Friend WithEvents BoxesReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Btn_ModfyPrices As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents Btn_ModifySize As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents Btn_NewSize As MaterialSkin.Controls.MaterialFlatButton
 End Class

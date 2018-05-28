@@ -184,6 +184,30 @@
     <Compile Include="Frm_NewAccountCompany.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_NewBoxSize.Designer.vb">
+      <DependentUpon>Frm_NewBoxSize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_NewBoxSize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_newSignature.Designer.vb">
+      <DependentUpon>Frm_newSignature.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_newSignature.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_SelectSize.Designer.vb">
+      <DependentUpon>Frm_SelectSize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_SelectSize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Signatures.Designer.vb">
+      <DependentUpon>Frm_Signatures.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Signatures.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewBuilding.Designer.vb">
       <DependentUpon>NewBuilding.vb</DependentUpon>
     </Compile>
@@ -499,6 +523,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewAccountCompany.resx">
       <DependentUpon>Frm_NewAccountCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_NewBoxSize.resx">
+      <DependentUpon>Frm_NewBoxSize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_newSignature.resx">
+      <DependentUpon>Frm_newSignature.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_SelectSize.resx">
+      <DependentUpon>Frm_SelectSize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Signatures.resx">
+      <DependentUpon>Frm_Signatures.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewBuilding.resx">
       <DependentUpon>NewBuilding.vb</DependentUpon>

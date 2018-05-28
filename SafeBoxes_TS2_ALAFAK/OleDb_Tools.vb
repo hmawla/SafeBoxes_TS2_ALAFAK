@@ -1,4 +1,6 @@
 ﻿Imports System.Data.OleDb
+Imports System.IO
+
 Module OleDb_Tools
     'Created and managed by Hussein Almawla
     'Open source @github.com
@@ -199,5 +201,13 @@ End_Of_For:
             theObj.Enabled = True
         End If
     End Sub
+
+    Public Sub addNewSignature(thePic As Byte())
+        theCommand.CommandText = "INSERT INTO Signatures(SignId, SignArabic) VALUES(" & 1 & ", @p1)" 'Set the command text (set the query)
+        theCommand.Parameters.AddWithValue("@p1", thePic)
+        theCommand.Connection = theCon 'Set the connection the will be used by the command
+        theCommand.ExecuteNonQuery() 'Execute non SELECT query
+    End Sub
+
 
 End Module

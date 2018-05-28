@@ -9,6 +9,8 @@ Public Class Frm_main
     Public employeeid As Integer = vbNull
     Public infovouchid As Integer = vbNull
     Public boxId As Integer = vbNull
+    Public sizeId As Integer = vbNull
+    Public signatureId As Integer = vbNull
 
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim ds As New DataSet
@@ -64,5 +66,9 @@ Public Class Frm_main
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         NewBuilding.ShowDialog()
+    End Sub
+
+    Private Sub Btn_Signatures_Click(sender As Object, e As EventArgs) Handles Btn_Signatures.Click
+        Frm_Signatures.ShowDialog()
     End Sub
 End Class

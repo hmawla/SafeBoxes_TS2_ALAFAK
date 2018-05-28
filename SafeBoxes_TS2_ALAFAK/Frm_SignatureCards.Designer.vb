@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Frm_SignatureCards
     Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Frm_SignatureCards
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.dgv_signcard = New System.Windows.Forms.DataGridView()
         Me.TabControl1 = New MaterialSkin.Controls.MaterialTabControl()
@@ -56,6 +56,7 @@ Partial Class Frm_SignatureCards
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgv_signcard.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_signcard.BackgroundColor = System.Drawing.Color.White
+        Me.dgv_signcard.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_signcard.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgv_signcard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_signcard.Cursor = System.Windows.Forms.Cursors.Hand
@@ -225,7 +226,7 @@ Partial Class Frm_SignatureCards
         Me.btn_reset.Depth = 0
         Me.btn_reset.Enabled = False
         Me.btn_reset.Icon = Nothing
-        Me.btn_reset.Location = New System.Drawing.Point(912, 169)
+        Me.btn_reset.Location = New System.Drawing.Point(587, 126)
         Me.btn_reset.Margin = New System.Windows.Forms.Padding(9, 12, 9, 12)
         Me.btn_reset.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_reset.Name = "btn_reset"
@@ -242,7 +243,7 @@ Partial Class Frm_SignatureCards
         Me.btn_search.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_search.Depth = 0
         Me.btn_search.Icon = Nothing
-        Me.btn_search.Location = New System.Drawing.Point(766, 169)
+        Me.btn_search.Location = New System.Drawing.Point(505, 126)
         Me.btn_search.Margin = New System.Windows.Forms.Padding(9, 12, 9, 12)
         Me.btn_search.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_search.Name = "btn_search"
@@ -304,15 +305,14 @@ Partial Class Frm_SignatureCards
         '
         'MaterialTabSelector1
         '
-        Me.MaterialTabSelector1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.MaterialTabSelector1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialTabSelector1.BaseTabControl = Me.TabControl1
         Me.MaterialTabSelector1.Depth = 0
-        Me.MaterialTabSelector1.Location = New System.Drawing.Point(1, 63)
+        Me.MaterialTabSelector1.Location = New System.Drawing.Point(-7, 63)
         Me.MaterialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabSelector1.Name = "MaterialTabSelector1"
-        Me.MaterialTabSelector1.Size = New System.Drawing.Size(668, 37)
+        Me.MaterialTabSelector1.Size = New System.Drawing.Size(684, 37)
         Me.MaterialTabSelector1.TabIndex = 15
         Me.MaterialTabSelector1.Text = "MaterialTabSelector1"
         '

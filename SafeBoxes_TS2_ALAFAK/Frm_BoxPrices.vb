@@ -26,7 +26,7 @@
 
     Private Sub cbox_boxsizes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbox_boxsizes.SelectedIndexChanged
         If formLoaded Then
-            ds = ReadQueryOut("SELECT RentPrice, InsurancePrice FROM BoxSizesDate WHERE SizeId = " & cbox_boxsizes.SelectedValue)
+            ds = ReadQueryOut("SELECT BoxSizesDate.RentPrice, BoxSizesDate.InsurancePrice FROM ((Query1 INNER JOIN BoxSizesDate ON (Query1.MaxOfDate = BoxSizesDate.Date) AND (Query1.SizeId = BoxSizesDate.SizeId)) INNER JOIN BoxSizes ON Query1.SizeId = BoxSizes.SizeId) INNER JOIN Boxes ON BoxSizes.SizeId = Boxes.SizeId WHERE BoxSizesDate.SizeId = " & cbox_boxsizes.SelectedValue)
             RentPrice = ds.Tables(0).Rows(0).Item(0)
             InsPrice = ds.Tables(0).Rows(0).Item(1)
             Txt_RentPrice.Text = RentPrice
