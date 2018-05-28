@@ -18,6 +18,8 @@
         cbox_Nation.Text = ""
         txt_signnote.Text = ""
         EmpId = Frm_main.loggedEmpId
+        FillCBox(cbox_Regions, "SELECT RegionId, RegionName FROM Regions", "RegionId", "RegionName")
+        FillCBox(cbox_Streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_Regions.SelectedValue, "StreetId", "StreetName")
         FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings", "BuildingId", "BuildingName")
         FillCBox(cbox_Nation, "SELECT NationId, Nationality FROM Nationalities", "NationId", "Nationality")
         FillCBox(cbox_careers, "SELECT CareerId, CareerName FROM Careers", "CareerId", "CareerName")
@@ -71,5 +73,17 @@
 
     Private Sub txt_cid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_contid.KeyPress, txt_cid.KeyPress
         Only_Number(txt_cid, e)
+    End Sub
+
+    Private Sub cbox_Regions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbox_Regions.SelectedIndexChanged
+        If formLoaded Then
+            FillCBox(cbox_Streets, "SELECT StreetId, StreetName FROM Streets WHERE RegionId = " & cbox_Regions.SelectedValue, "StreetId", "StreetName")
+        End If
+    End Sub
+
+    Private Sub cbox_Streets_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbox_Streets.SelectedIndexChanged
+        If formLoaded Then
+            FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_Streets.SelectedValue, "BuildingId", "BuildingName")
+        End If
     End Sub
 End Class

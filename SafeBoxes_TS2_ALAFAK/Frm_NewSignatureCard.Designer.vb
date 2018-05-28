@@ -39,6 +39,10 @@ Partial Class Frm_NewSignatureCard
         Me.txt_cnam = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txt_contid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
+        Me.cbox_Regions = New System.Windows.Forms.ComboBox()
+        Me.cbox_Streets = New System.Windows.Forms.ComboBox()
+        Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
+        Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.SuspendLayout()
         '
         'MaterialLabel12
@@ -47,7 +51,7 @@ Partial Class Frm_NewSignatureCard
         Me.MaterialLabel12.Depth = 0
         Me.MaterialLabel12.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel12.Location = New System.Drawing.Point(17, 215)
+        Me.MaterialLabel12.Location = New System.Drawing.Point(177, 215)
         Me.MaterialLabel12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel12.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel12.Name = "MaterialLabel12"
@@ -60,7 +64,7 @@ Partial Class Frm_NewSignatureCard
         Me.cbox_Nation.BackColor = System.Drawing.Color.White
         Me.cbox_Nation.ForeColor = System.Drawing.Color.Black
         Me.cbox_Nation.FormattingEnabled = True
-        Me.cbox_Nation.Location = New System.Drawing.Point(177, 237)
+        Me.cbox_Nation.Location = New System.Drawing.Point(349, 237)
         Me.cbox_Nation.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_Nation.Name = "cbox_Nation"
         Me.cbox_Nation.Size = New System.Drawing.Size(148, 21)
@@ -72,7 +76,7 @@ Partial Class Frm_NewSignatureCard
         Me.MaterialLabel2.Depth = 0
         Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel2.Location = New System.Drawing.Point(174, 159)
+        Me.MaterialLabel2.Location = New System.Drawing.Point(345, 159)
         Me.MaterialLabel2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel2.Name = "MaterialLabel2"
@@ -85,7 +89,7 @@ Partial Class Frm_NewSignatureCard
         Me.cbox_careers.BackColor = System.Drawing.Color.White
         Me.cbox_careers.ForeColor = System.Drawing.Color.Black
         Me.cbox_careers.FormattingEnabled = True
-        Me.cbox_careers.Location = New System.Drawing.Point(177, 181)
+        Me.cbox_careers.Location = New System.Drawing.Point(349, 183)
         Me.cbox_careers.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_careers.Name = "cbox_careers"
         Me.cbox_careers.Size = New System.Drawing.Size(148, 21)
@@ -183,7 +187,7 @@ Partial Class Frm_NewSignatureCard
         Me.MaterialLabel3.Depth = 0
         Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel3.Location = New System.Drawing.Point(174, 215)
+        Me.MaterialLabel3.Location = New System.Drawing.Point(345, 215)
         Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
@@ -196,7 +200,7 @@ Partial Class Frm_NewSignatureCard
         Me.cbox_buildings.BackColor = System.Drawing.Color.White
         Me.cbox_buildings.ForeColor = System.Drawing.Color.Black
         Me.cbox_buildings.FormattingEnabled = True
-        Me.cbox_buildings.Location = New System.Drawing.Point(20, 237)
+        Me.cbox_buildings.Location = New System.Drawing.Point(181, 237)
         Me.cbox_buildings.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_buildings.Name = "cbox_buildings"
         Me.cbox_buildings.Size = New System.Drawing.Size(148, 21)
@@ -278,12 +282,66 @@ Partial Class Frm_NewSignatureCard
         Me.MaterialLabel1.TabIndex = 74
         Me.MaterialLabel1.Text = "Contract ID:*"
         '
+        'cbox_Regions
+        '
+        Me.cbox_Regions.BackColor = System.Drawing.Color.White
+        Me.cbox_Regions.ForeColor = System.Drawing.Color.Black
+        Me.cbox_Regions.FormattingEnabled = True
+        Me.cbox_Regions.Location = New System.Drawing.Point(181, 185)
+        Me.cbox_Regions.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cbox_Regions.Name = "cbox_Regions"
+        Me.cbox_Regions.Size = New System.Drawing.Size(148, 21)
+        Me.cbox_Regions.TabIndex = 75
+        '
+        'cbox_Streets
+        '
+        Me.cbox_Streets.BackColor = System.Drawing.Color.White
+        Me.cbox_Streets.ForeColor = System.Drawing.Color.Black
+        Me.cbox_Streets.FormattingEnabled = True
+        Me.cbox_Streets.Location = New System.Drawing.Point(20, 237)
+        Me.cbox_Streets.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cbox_Streets.Name = "cbox_Streets"
+        Me.cbox_Streets.Size = New System.Drawing.Size(148, 21)
+        Me.cbox_Streets.TabIndex = 76
+        '
+        'MaterialLabel4
+        '
+        Me.MaterialLabel4.AutoSize = True
+        Me.MaterialLabel4.Depth = 0
+        Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel4.Location = New System.Drawing.Point(177, 163)
+        Me.MaterialLabel4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel4.Name = "MaterialLabel4"
+        Me.MaterialLabel4.Size = New System.Drawing.Size(65, 19)
+        Me.MaterialLabel4.TabIndex = 77
+        Me.MaterialLabel4.Text = "Region:*"
+        '
+        'MaterialLabel5
+        '
+        Me.MaterialLabel5.AutoSize = True
+        Me.MaterialLabel5.Depth = 0
+        Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel5.Location = New System.Drawing.Point(17, 215)
+        Me.MaterialLabel5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel5.Name = "MaterialLabel5"
+        Me.MaterialLabel5.Size = New System.Drawing.Size(59, 19)
+        Me.MaterialLabel5.TabIndex = 78
+        Me.MaterialLabel5.Text = "Street:*"
+        '
         'Frm_NewSignatureCard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(349, 408)
+        Me.ClientSize = New System.Drawing.Size(510, 408)
+        Me.Controls.Add(Me.MaterialLabel5)
+        Me.Controls.Add(Me.MaterialLabel4)
+        Me.Controls.Add(Me.cbox_Streets)
+        Me.Controls.Add(Me.cbox_Regions)
         Me.Controls.Add(Me.txt_contid)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.MaterialLabel12)
@@ -325,4 +383,8 @@ Partial Class Frm_NewSignatureCard
     Friend WithEvents txt_cnam As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents txt_contid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents cbox_Regions As ComboBox
+    Friend WithEvents cbox_Streets As ComboBox
+    Friend WithEvents MaterialLabel4 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
 End Class

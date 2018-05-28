@@ -113,11 +113,11 @@ Partial Class Frm_Authorize
         '
         Me.CBox_AuthRights.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CBox_AuthRights.ContextMenuStrip = Me.RightsMenuStrip
-        Me.CBox_AuthRights.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.CBox_AuthRights.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.CBox_AuthRights.FormattingEnabled = True
         Me.CBox_AuthRights.Location = New System.Drawing.Point(336, 217)
         Me.CBox_AuthRights.Name = "CBox_AuthRights"
-        Me.CBox_AuthRights.Size = New System.Drawing.Size(221, 27)
+        Me.CBox_AuthRights.Size = New System.Drawing.Size(221, 26)
         Me.CBox_AuthRights.TabIndex = 10
         '
         'RightsMenuStrip
@@ -267,13 +267,13 @@ Partial Class Frm_Authorize
         '
         Me.cbox_streets.BackColor = System.Drawing.Color.White
         Me.cbox_streets.ContextMenuStrip = Me.StreetsMenuStrip
-        Me.cbox_streets.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.cbox_streets.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.cbox_streets.ForeColor = System.Drawing.Color.Black
         Me.cbox_streets.FormattingEnabled = True
         Me.cbox_streets.Location = New System.Drawing.Point(13, 217)
         Me.cbox_streets.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_streets.Name = "cbox_streets"
-        Me.cbox_streets.Size = New System.Drawing.Size(148, 27)
+        Me.cbox_streets.Size = New System.Drawing.Size(148, 26)
         Me.cbox_streets.TabIndex = 49
         '
         'StreetsMenuStrip
@@ -315,13 +315,13 @@ Partial Class Frm_Authorize
         '
         Me.cbox_regions.BackColor = System.Drawing.Color.White
         Me.cbox_regions.ContextMenuStrip = Me.RegionMenuStrip
-        Me.cbox_regions.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.cbox_regions.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.cbox_regions.ForeColor = System.Drawing.Color.Black
         Me.cbox_regions.FormattingEnabled = True
         Me.cbox_regions.Location = New System.Drawing.Point(169, 165)
         Me.cbox_regions.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_regions.Name = "cbox_regions"
-        Me.cbox_regions.Size = New System.Drawing.Size(148, 27)
+        Me.cbox_regions.Size = New System.Drawing.Size(148, 26)
         Me.cbox_regions.TabIndex = 48
         '
         'RegionMenuStrip
@@ -363,13 +363,13 @@ Partial Class Frm_Authorize
         '
         Me.cbox_buildings.BackColor = System.Drawing.Color.White
         Me.cbox_buildings.ContextMenuStrip = Me.BuildingsMenuStrip
-        Me.cbox_buildings.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.cbox_buildings.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.cbox_buildings.ForeColor = System.Drawing.Color.Black
         Me.cbox_buildings.FormattingEnabled = True
         Me.cbox_buildings.Location = New System.Drawing.Point(169, 217)
         Me.cbox_buildings.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cbox_buildings.Name = "cbox_buildings"
-        Me.cbox_buildings.Size = New System.Drawing.Size(148, 27)
+        Me.cbox_buildings.Size = New System.Drawing.Size(148, 26)
         Me.cbox_buildings.TabIndex = 50
         '
         'BuildingsMenuStrip
