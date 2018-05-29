@@ -77,7 +77,7 @@ Partial Class Frm_Signatures
         Me.Btn_ModSignature.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_ModSignature.Depth = 0
         Me.Btn_ModSignature.Icon = Nothing
-        Me.Btn_ModSignature.Location = New System.Drawing.Point(7, 67)
+        Me.Btn_ModSignature.Location = New System.Drawing.Point(5, 63)
         Me.Btn_ModSignature.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Btn_ModSignature.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_ModSignature.Name = "Btn_ModSignature"
@@ -109,7 +109,7 @@ Partial Class Frm_Signatures
         Me.Btn_DelSignature.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_DelSignature.Depth = 0
         Me.Btn_DelSignature.Icon = Nothing
-        Me.Btn_DelSignature.Location = New System.Drawing.Point(7, 106)
+        Me.Btn_DelSignature.Location = New System.Drawing.Point(7, 99)
         Me.Btn_DelSignature.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Btn_DelSignature.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_DelSignature.Name = "Btn_DelSignature"

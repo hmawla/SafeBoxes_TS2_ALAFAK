@@ -45,4 +45,24 @@
     Private Sub Frm_NewBoxSize_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Me.Dispose()
     End Sub
+
+    Private Sub Txt_Length_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_Length.KeyPress
+        Only_Number(Txt_Length, e)
+    End Sub
+
+    Private Sub Txt_Width_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_Width.KeyPress
+        Only_Number(Txt_Width, e)
+    End Sub
+
+    Private Sub Txt_Height_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_Height.KeyPress
+        Only_Number(Txt_Height, e)
+    End Sub
+
+    Private Sub Txt_InsPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_InsPrice.KeyPress
+        Only_Number(Txt_InsPrice, e)
+    End Sub
+
+    Private Sub Txt_RentPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_RentPrice.KeyPress
+        Only_Number(Txt_RentPrice, e)
+    End Sub
 End Class

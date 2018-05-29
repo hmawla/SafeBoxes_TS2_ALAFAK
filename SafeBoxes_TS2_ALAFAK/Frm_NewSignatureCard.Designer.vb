@@ -115,7 +115,7 @@ Partial Class Frm_NewSignatureCard
         Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_submit.Depth = 0
         Me.btn_submit.Icon = Nothing
-        Me.btn_submit.Location = New System.Drawing.Point(265, 360)
+        Me.btn_submit.Location = New System.Drawing.Point(426, 353)
         Me.btn_submit.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_submit.Name = "btn_submit"
@@ -145,7 +145,7 @@ Partial Class Frm_NewSignatureCard
         Me.txt_signnote.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_signnote.Multiline = True
         Me.txt_signnote.Name = "txt_signnote"
-        Me.txt_signnote.Size = New System.Drawing.Size(304, 49)
+        Me.txt_signnote.Size = New System.Drawing.Size(477, 49)
         Me.txt_signnote.TabIndex = 57
         '
         'txt_cid

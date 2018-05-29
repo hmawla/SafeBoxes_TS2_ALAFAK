@@ -33,4 +33,12 @@
             Txt_InsPrice.Text = InsPrice
         End If
     End Sub
+
+    Private Sub Txt_InsPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_InsPrice.KeyPress
+        Only_Number(Txt_InsPrice, e)
+    End Sub
+
+    Private Sub Txt_RentPrice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_RentPrice.KeyPress
+        Only_Number(Txt_RentPrice, e)
+    End Sub
 End Class

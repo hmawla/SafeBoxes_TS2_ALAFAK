@@ -34,12 +34,12 @@ Partial Class Frm_BoxPrices
         'cbox_boxsizes
         '
         Me.cbox_boxsizes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbox_boxsizes.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.cbox_boxsizes.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.cbox_boxsizes.FormattingEnabled = True
         Me.cbox_boxsizes.Location = New System.Drawing.Point(13, 99)
         Me.cbox_boxsizes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cbox_boxsizes.Name = "cbox_boxsizes"
-        Me.cbox_boxsizes.Size = New System.Drawing.Size(361, 27)
+        Me.cbox_boxsizes.Size = New System.Drawing.Size(361, 26)
         Me.cbox_boxsizes.TabIndex = 15
         '
         'Btn_Submit

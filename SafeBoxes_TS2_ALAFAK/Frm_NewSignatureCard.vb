@@ -86,4 +86,8 @@
             FillCBox(cbox_buildings, "SELECT BuildingId, BuildingName FROM Buildings WHERE StreetId = " & cbox_Streets.SelectedValue, "BuildingId", "BuildingName")
         End If
     End Sub
+
+    Private Sub txt_cnam_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_cnam.KeyPress
+        Only_char(txt_cnam, e)
+    End Sub
 End Class

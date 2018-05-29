@@ -100,4 +100,20 @@ theEnd:
         End If
         Me.MinimumSize = New Size(448, 560)
     End Sub
+
+    Private Sub Txt_CompId_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_CompId.KeyPress
+        Only_Number(Txt_CompId, e)
+    End Sub
+
+    Private Sub Txt_CompName_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles Txt_CompName.KeyPress
+        Only_char(Txt_CompName, e)
+    End Sub
+
+    Private Sub Txt_Cid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_Cid.KeyPress
+        Only_Number(Txt_Cid, e)
+    End Sub
+
+    Private Sub Txt_CName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_CName.KeyPress
+        Only_char(Txt_CName, e)
+    End Sub
 End Class

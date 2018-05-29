@@ -95,4 +95,26 @@
             Me.Dispose()
         End If
     End Sub
+
+    Private Sub txt_byaccid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byaccid.KeyPress
+        Only_Number(txt_byaccid, e)
+    End Sub
+
+    Private Sub txt_cname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_cname.KeyPress
+        Only_char(txt_cname, e)
+    End Sub
+
+    Private Sub Rdb_ByAccId_CheckedChanged(sender As Object, e As EventArgs) Handles Rdb_ByAccId.CheckedChanged
+        If Rdb_ByAccId.Checked = True Then
+            txt_byaccid.Enabled = True
+            txt_cname.Enabled = False
+            txt_byaccid.Focus()
+            txt_cname.Text = ""
+        Else
+            txt_cname.Enabled = True
+            txt_byaccid.Enabled = False
+            txt_cname.Focus()
+            txt_byaccid.Text = ""
+        End If
+    End Sub
 End Class

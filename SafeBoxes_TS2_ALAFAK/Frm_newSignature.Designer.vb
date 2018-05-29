@@ -27,12 +27,14 @@ Partial Class Frm_newSignature
         Me.Btn_Submit = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Btn_LatinBrowse = New MaterialSkin.Controls.MaterialFlatButton()
         Me.Txt_LatinFile = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.Rdb_Arabic = New MaterialSkin.Controls.MaterialRadioButton()
-        Me.Rdb_Latin = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_clientid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txt_clientname = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.Chk_arb = New System.Windows.Forms.CheckBox()
+        Me.chk_lat = New System.Windows.Forms.CheckBox()
+        Me.MaterialSingleLineTextField2 = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.SuspendLayout()
         '
         'Txt_ArabicFile
@@ -75,7 +77,7 @@ Partial Class Frm_newSignature
         Me.Btn_Submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Btn_Submit.Depth = 0
         Me.Btn_Submit.Icon = Nothing
-        Me.Btn_Submit.Location = New System.Drawing.Point(228, 264)
+        Me.Btn_Submit.Location = New System.Drawing.Point(228, 283)
         Me.Btn_Submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.Btn_Submit.Name = "Btn_Submit"
         Me.Btn_Submit.Primary = True
@@ -118,40 +120,6 @@ Partial Class Frm_newSignature
         Me.Txt_LatinFile.TabIndex = 4
         Me.Txt_LatinFile.TabStop = False
         Me.Txt_LatinFile.UseSystemPasswordChar = False
-        '
-        'Rdb_Arabic
-        '
-        Me.Rdb_Arabic.AutoSize = True
-        Me.Rdb_Arabic.Checked = True
-        Me.Rdb_Arabic.Depth = 0
-        Me.Rdb_Arabic.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.Rdb_Arabic.Location = New System.Drawing.Point(9, 133)
-        Me.Rdb_Arabic.Margin = New System.Windows.Forms.Padding(0)
-        Me.Rdb_Arabic.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.Rdb_Arabic.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Rdb_Arabic.Name = "Rdb_Arabic"
-        Me.Rdb_Arabic.Ripple = True
-        Me.Rdb_Arabic.Size = New System.Drawing.Size(131, 30)
-        Me.Rdb_Arabic.TabIndex = 8
-        Me.Rdb_Arabic.TabStop = True
-        Me.Rdb_Arabic.Text = "Arabic Signature"
-        Me.Rdb_Arabic.UseVisualStyleBackColor = True
-        '
-        'Rdb_Latin
-        '
-        Me.Rdb_Latin.AutoSize = True
-        Me.Rdb_Latin.Depth = 0
-        Me.Rdb_Latin.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.Rdb_Latin.Location = New System.Drawing.Point(9, 192)
-        Me.Rdb_Latin.Margin = New System.Windows.Forms.Padding(0)
-        Me.Rdb_Latin.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.Rdb_Latin.MouseState = MaterialSkin.MouseState.HOVER
-        Me.Rdb_Latin.Name = "Rdb_Latin"
-        Me.Rdb_Latin.Ripple = True
-        Me.Rdb_Latin.Size = New System.Drawing.Size(126, 30)
-        Me.Rdb_Latin.TabIndex = 9
-        Me.Rdb_Latin.Text = "Latin Signature:"
-        Me.Rdb_Latin.UseVisualStyleBackColor = True
         '
         'MaterialLabel5
         '
@@ -218,18 +186,72 @@ Partial Class Frm_newSignature
         Me.txt_clientname.TabStop = False
         Me.txt_clientname.UseSystemPasswordChar = False
         '
+        'Chk_arb
+        '
+        Me.Chk_arb.AutoSize = True
+        Me.Chk_arb.Location = New System.Drawing.Point(12, 137)
+        Me.Chk_arb.Name = "Chk_arb"
+        Me.Chk_arb.Size = New System.Drawing.Size(104, 17)
+        Me.Chk_arb.TabIndex = 64
+        Me.Chk_arb.Text = "Arabic Signature"
+        Me.Chk_arb.UseVisualStyleBackColor = True
+        '
+        'chk_lat
+        '
+        Me.chk_lat.AutoSize = True
+        Me.chk_lat.Location = New System.Drawing.Point(13, 202)
+        Me.chk_lat.Name = "chk_lat"
+        Me.chk_lat.Size = New System.Drawing.Size(100, 17)
+        Me.chk_lat.TabIndex = 65
+        Me.chk_lat.Text = "Latin Signature:"
+        Me.chk_lat.UseVisualStyleBackColor = True
+        '
+        'MaterialSingleLineTextField2
+        '
+        Me.MaterialSingleLineTextField2.Depth = 0
+        Me.MaterialSingleLineTextField2.Enabled = False
+        Me.MaterialSingleLineTextField2.Hint = ""
+        Me.MaterialSingleLineTextField2.Location = New System.Drawing.Point(10, 286)
+        Me.MaterialSingleLineTextField2.MaxLength = 32767
+        Me.MaterialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialSingleLineTextField2.Name = "MaterialSingleLineTextField2"
+        Me.MaterialSingleLineTextField2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MaterialSingleLineTextField2.SelectedText = ""
+        Me.MaterialSingleLineTextField2.SelectionLength = 0
+        Me.MaterialSingleLineTextField2.SelectionStart = 0
+        Me.MaterialSingleLineTextField2.Size = New System.Drawing.Size(135, 23)
+        Me.MaterialSingleLineTextField2.TabIndex = 67
+        Me.MaterialSingleLineTextField2.TabStop = False
+        Me.MaterialSingleLineTextField2.UseSystemPasswordChar = False
+        '
+        'MaterialLabel3
+        '
+        Me.MaterialLabel3.AutoSize = True
+        Me.MaterialLabel3.Depth = 0
+        Me.MaterialLabel3.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel3.Location = New System.Drawing.Point(5, 264)
+        Me.MaterialLabel3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel3.Name = "MaterialLabel3"
+        Me.MaterialLabel3.Size = New System.Drawing.Size(93, 19)
+        Me.MaterialLabel3.TabIndex = 69
+        Me.MaterialLabel3.Text = "Sign Card Id:"
+        '
         'Frm_newSignature
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(311, 312)
+        Me.ClientSize = New System.Drawing.Size(311, 331)
+        Me.Controls.Add(Me.MaterialLabel3)
+        Me.Controls.Add(Me.MaterialSingleLineTextField2)
+        Me.Controls.Add(Me.chk_lat)
+        Me.Controls.Add(Me.Chk_arb)
         Me.Controls.Add(Me.MaterialLabel5)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.txt_clientid)
         Me.Controls.Add(Me.txt_clientname)
-        Me.Controls.Add(Me.Rdb_Latin)
-        Me.Controls.Add(Me.Rdb_Arabic)
         Me.Controls.Add(Me.Btn_LatinBrowse)
         Me.Controls.Add(Me.Txt_LatinFile)
         Me.Controls.Add(Me.Btn_Submit)
@@ -250,10 +272,12 @@ Partial Class Frm_newSignature
     Friend WithEvents Btn_Submit As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents Btn_LatinBrowse As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents Txt_LatinFile As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents Rdb_Arabic As MaterialSkin.Controls.MaterialRadioButton
-    Friend WithEvents Rdb_Latin As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_clientid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents txt_clientname As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents Chk_arb As CheckBox
+    Friend WithEvents chk_lat As CheckBox
+    Friend WithEvents MaterialSingleLineTextField2 As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
 End Class

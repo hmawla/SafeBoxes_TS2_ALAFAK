@@ -24,11 +24,11 @@ Partial Class Frm_NewAccountClient
     Private Sub InitializeComponent()
         Me.Txt_CName = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
+        Me.ClientSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.Txt_Cid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.Btn_Add = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.ClientSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
-        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DGV_Clients = New System.Windows.Forms.DataGridView()
         Me.ClientId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClientName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -75,6 +75,21 @@ Partial Class Frm_NewAccountClient
         Me.MaterialLabel5.Size = New System.Drawing.Size(70, 19)
         Me.MaterialLabel5.TabIndex = 62
         Me.MaterialLabel5.Text = "Client ID:"
+        '
+        'ClientSelector
+        '
+        Me.ClientSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientSelector.Depth = 0
+        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
+        Me.ClientSelector.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientSelector.Name = "ClientSelector"
+        Me.ClientSelector.Size = New System.Drawing.Size(140, 26)
+        '
+        'SelectClientToolStripMenuItem
+        '
+        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
+        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.SelectClientToolStripMenuItem.Text = "Select Client"
         '
         'MaterialLabel1
         '
@@ -123,21 +138,6 @@ Partial Class Frm_NewAccountClient
         Me.Btn_Add.TabIndex = 65
         Me.Btn_Add.Text = "Add"
         Me.Btn_Add.UseVisualStyleBackColor = True
-        '
-        'ClientSelector
-        '
-        Me.ClientSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSelector.Depth = 0
-        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
-        Me.ClientSelector.MouseState = MaterialSkin.MouseState.HOVER
-        Me.ClientSelector.Name = "ClientSelector"
-        Me.ClientSelector.Size = New System.Drawing.Size(140, 26)
-        '
-        'SelectClientToolStripMenuItem
-        '
-        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
-        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
-        Me.SelectClientToolStripMenuItem.Text = "Select Client"
         '
         'DGV_Clients
         '

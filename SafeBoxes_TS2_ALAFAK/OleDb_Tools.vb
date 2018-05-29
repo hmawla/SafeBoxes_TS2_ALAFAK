@@ -202,12 +202,34 @@ End_Of_For:
         End If
     End Sub
 
-    Public Sub addNewSignature(thePic As Byte())
-        theCommand.CommandText = "INSERT INTO Signatures(SignId, SignArabic) VALUES(" & 1 & ", @p1)" 'Set the command text (set the query)
+    Public Sub addNewSignaturear(signid As Integer, thePic As Byte(), thePicLat As Byte(), type As Integer, thedate As Date, cid As Integer, signcardid As Integer)
+
+        theCommand.CommandText = "INSERT INTO Signatures VALUES(" & signid & ", @p1, NULL," & type & ",date()," & cid & "," & signcardid & ")" 'Set the command text (set the query)
+
         theCommand.Parameters.AddWithValue("@p1", thePic)
+        theCommand.Parameters.AddWithValue("@p2", thePicLat)
         theCommand.Connection = theCon 'Set the connection the will be used by the command
         theCommand.ExecuteNonQuery() 'Execute non SELECT query
     End Sub
 
+    Public Sub addNewSignaturelat(signid As Integer, thePic As Byte(), thePicLat As Byte(), type As Integer, thedate As Date, cid As Integer, signcardid As Integer)
+
+        theCommand.CommandText = "INSERT INTO Signatures VALUES(" & signid & ", NULL, @p2," & type & ",date()," & cid & "," & signcardid & ")" 'Set the command text (set the query)
+
+        theCommand.Parameters.AddWithValue("@p1", thePic)
+        theCommand.Parameters.AddWithValue("@p2", thePicLat)
+        theCommand.Connection = theCon 'Set the connection the will be used by the command
+        theCommand.ExecuteNonQuery() 'Execute non SELECT query
+    End Sub
+
+    Public Sub addNewSignatureboth(signid As Integer, thePic As Byte(), thePicLat As Byte(), type As Integer, thedate As Date, cid As Integer, signcardid As Integer)
+
+        theCommand.CommandText = "INSERT INTO Signatures VALUES(" & signid & ", @p1, @p2," & type & ",date()," & cid & "," & signcardid & ")" 'Set the command text (set the query)
+
+        theCommand.Parameters.AddWithValue("@p1", thePic)
+        theCommand.Parameters.AddWithValue("@p2", thePicLat)
+        theCommand.Connection = theCon 'Set the connection the will be used by the command
+        theCommand.ExecuteNonQuery() 'Execute non SELECT query
+    End Sub
 
 End Module

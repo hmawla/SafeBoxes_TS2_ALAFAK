@@ -84,4 +84,12 @@ theEnd:
     Private Sub Frm_NewAccountClient_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Me.Dispose()
     End Sub
+
+    Private Sub Txt_Cid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_Cid.KeyPress
+        Only_Number(Txt_Cid, e)
+    End Sub
+
+    Private Sub Txt_CName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txt_CName.KeyPress
+        Only_char(Txt_CName, e)
+    End Sub
 End Class

@@ -357,4 +357,8 @@
             MessageBox.Show("Please select before deleting!")
         End If
     End Sub
+
+    Private Sub txt_clientname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_clientname.KeyPress
+        Only_char(txt_clientname, e)
+    End Sub
 End Class
