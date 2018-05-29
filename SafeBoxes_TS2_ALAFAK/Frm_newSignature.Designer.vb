@@ -33,7 +33,7 @@ Partial Class Frm_newSignature
         Me.txt_clientname = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.Chk_arb = New System.Windows.Forms.CheckBox()
         Me.chk_lat = New System.Windows.Forms.CheckBox()
-        Me.MaterialSingleLineTextField2 = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.signc = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.SuspendLayout()
         '
@@ -206,23 +206,22 @@ Partial Class Frm_newSignature
         Me.chk_lat.Text = "Latin Signature:"
         Me.chk_lat.UseVisualStyleBackColor = True
         '
-        'MaterialSingleLineTextField2
+        'signc
         '
-        Me.MaterialSingleLineTextField2.Depth = 0
-        Me.MaterialSingleLineTextField2.Enabled = False
-        Me.MaterialSingleLineTextField2.Hint = ""
-        Me.MaterialSingleLineTextField2.Location = New System.Drawing.Point(10, 286)
-        Me.MaterialSingleLineTextField2.MaxLength = 32767
-        Me.MaterialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialSingleLineTextField2.Name = "MaterialSingleLineTextField2"
-        Me.MaterialSingleLineTextField2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MaterialSingleLineTextField2.SelectedText = ""
-        Me.MaterialSingleLineTextField2.SelectionLength = 0
-        Me.MaterialSingleLineTextField2.SelectionStart = 0
-        Me.MaterialSingleLineTextField2.Size = New System.Drawing.Size(135, 23)
-        Me.MaterialSingleLineTextField2.TabIndex = 67
-        Me.MaterialSingleLineTextField2.TabStop = False
-        Me.MaterialSingleLineTextField2.UseSystemPasswordChar = False
+        Me.signc.Depth = 0
+        Me.signc.Hint = ""
+        Me.signc.Location = New System.Drawing.Point(10, 286)
+        Me.signc.MaxLength = 32767
+        Me.signc.MouseState = MaterialSkin.MouseState.HOVER
+        Me.signc.Name = "signc"
+        Me.signc.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.signc.SelectedText = ""
+        Me.signc.SelectionLength = 0
+        Me.signc.SelectionStart = 0
+        Me.signc.Size = New System.Drawing.Size(135, 23)
+        Me.signc.TabIndex = 67
+        Me.signc.TabStop = False
+        Me.signc.UseSystemPasswordChar = False
         '
         'MaterialLabel3
         '
@@ -245,7 +244,7 @@ Partial Class Frm_newSignature
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(311, 331)
         Me.Controls.Add(Me.MaterialLabel3)
-        Me.Controls.Add(Me.MaterialSingleLineTextField2)
+        Me.Controls.Add(Me.signc)
         Me.Controls.Add(Me.chk_lat)
         Me.Controls.Add(Me.Chk_arb)
         Me.Controls.Add(Me.MaterialLabel5)
@@ -278,6 +277,6 @@ Partial Class Frm_newSignature
     Friend WithEvents txt_clientname As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents Chk_arb As CheckBox
     Friend WithEvents chk_lat As CheckBox
-    Friend WithEvents MaterialSingleLineTextField2 As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents signc As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
 End Class

@@ -1,6 +1,12 @@
 ﻿Public Class Frm_Signatures
+    Public sigcardid As Integer = 0
     Private Sub Brn_NewSignature_Click(sender As Object, e As EventArgs) Handles Brn_NewSignature.Click
         Frm_main.signatureId = 0
+        If Dgv_Signatures.Rows.Count > 0 Then
+            sigcardid = Dgv_Signatures.SelectedRows(0).Cells(4).Value
+        Else
+            sigcardid = 0
+        End If
         Frm_newSignature.ShowDialog()
     End Sub
 
