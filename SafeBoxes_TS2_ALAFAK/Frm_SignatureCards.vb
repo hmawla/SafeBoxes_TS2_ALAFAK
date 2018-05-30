@@ -2,13 +2,26 @@
     Public signaturecardid As Integer = 0
     Private Sub Frm_SignatureCards_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MinimumSize = New Size(670, 574)
-        FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
+        If Frm_main.signatureCardId = 0 Then
+            FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
+                                SignCardNote AS [NOTE], ClientFName AS [CLIENT NAME],
+                                Nationality, ContId, CareerName AS [CAREER], BuildingName 
+                                FROM SignatureCards sc, Clients c,
+                                Nationalities nat ,Careers ca ,Buildings b 
+                                WHERE sc.ClientId=c.CLientId AND sc.NationId=nat.NationId 
+                                AND sc.Careerid=ca.Careerid AND sc.BuildingId=b.BuildingId AND c.ClientId=" & Frm_main.clientid)
+
+        Else
+            FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
                                 SignCardNote AS [NOTE], ClientFName AS [CLIENT NAME],
                                 Nationality, ContId, CareerName AS [CAREER], BuildingName 
                                 FROM SignatureCards sc, Clients c,
                                 Nationalities nat ,Careers ca ,Buildings b 
                                 WHERE sc.ClientId=c.CLientId AND sc.NationId=nat.NationId 
                                 AND sc.Careerid=ca.Careerid AND sc.BuildingId=b.BuildingId")
+        End If
+
+
     End Sub
 
     Private Sub btn_delbox_Click(sender As Object, e As EventArgs) Handles btn_delbox.Click
@@ -77,13 +90,6 @@
     End Sub
 
     Private Sub dgv_signcard_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_signcard.CellDoubleClick
-        FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
-                                SignCardNote AS [NOTE], ClientFName AS [CLIENT NAME],
-                                Nationality, ContId, CareerName AS [CAREER], BuildingName 
-                                FROM SignatureCards sc, Clients c,
-                                Nationalities nat ,Careers ca ,Buildings b 
-                                WHERE sc.ClientId=c.CLientId AND sc.NationId=nat.NationId 
-                                AND sc.Careerid=ca.Careerid AND sc.BuildingId=b.BuildingId AND c.ClientId=" & Frm_main.clientid)
         If Frm_main.signatureCardId = 0 Then
             Try
                 If dgv_signcard.SelectedRows(0).Cells(0).Value > 0 Then

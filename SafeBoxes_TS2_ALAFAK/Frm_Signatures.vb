@@ -8,6 +8,7 @@
             sigcardid = 0
         End If
         Frm_newSignature.ShowDialog()
+        FillDGV(Dgv_Signatures, "SELECT SignId, SignType, SignDate, ClientFName + ' ' + ClientLName, SignCardId FROM Signatures s, Clients c WHERE s.ClientId = c.ClientId")
     End Sub
 
     Private Sub Frm_Signatures_Load(sender As Object, e As EventArgs) Handles MyBase.Load

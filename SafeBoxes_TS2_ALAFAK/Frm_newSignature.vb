@@ -2,7 +2,7 @@
 Public Class Frm_newSignature
     Dim theNewId As Integer
     Private Sub Frm_newSignature_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        txt_clientid.Focus()
     End Sub
     Private Sub txt_clientid_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_clientid.KeyPress
         Only_Number(txt_clientid, e)
@@ -61,29 +61,39 @@ Public Class Frm_newSignature
     End Sub
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
-        Dim ds1 As New DataSet
-        ds1 = ReadQueryOut("SELECT COUNT(SignType) from Signatures WHERE SignCardId=" & txt_signc.Text)
-        Dim type As Integer = ds1.Tables(0).Rows(0).Item(0)
-        theNewId = GenID("Signatures", "SignId")
+        If txt_clientid.Text = "" Or txt_signc.Text = "" Or (Chk_arb.Checked And Txt_ArabicFile.Text = "") Or (chk_lat.Checked And Txt_LatinFile.Text = "") Or (chk_lat.Checked = False And Chk_arb.Checked = False) Then
 
-        If type > 3 Then
-            MessageBox.Show("sign type :" & type & "has been inserted successfully")
-            MessageBox.Show("you reached the max sign types")
+            MessageBox.Show("Please enter all needed information to continue")
+
+
         Else
-            If Chk_arb.Checked = True And chk_lat.Checked = False Then
-                addNewSignaturear(theNewId, File.ReadAllBytes(Txt_ArabicFile.Text), File.ReadAllBytes(Txt_ArabicFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
-                Dim ds As New DataSet
-                ds = ReadQueryOut("SELECT SignArabic FROM Signatures")
-            ElseIf chk_lat.Checked = True And Chk_arb.Checked = False Then
-                addNewSignaturelat(theNewId, File.ReadAllBytes(Txt_LatinFile.Text), File.ReadAllBytes(Txt_LatinFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
+            Dim ds1 As New DataSet
+            ds1 = ReadQueryOut("SELECT COUNT(SignType) from Signatures WHERE SignCardId=" & txt_signc.Text)
+            Dim type As Integer = ds1.Tables(0).Rows(0).Item(0)
+            theNewId = GenID("Signatures", "SignId")
 
-                Dim ds As New DataSet
-                ds = ReadQueryOut("SELECT SignLatin FROM Signatures")
-            ElseIf chk_lat.Checked = True And Chk_arb.Checked = True Then
-                addNewSignatureboth(theNewId, File.ReadAllBytes(Txt_ArabicFile.Text), File.ReadAllBytes(Txt_LatinFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
+            If type > 3 Then
 
+                MessageBox.Show("you reached the max sign types for signature card number (" & txt_signc.Text & ")")
+                Me.Close()
+            Else
+                If Chk_arb.Checked = True And chk_lat.Checked = False Then
+                    addNewSignaturear(theNewId, File.ReadAllBytes(Txt_ArabicFile.Text), File.ReadAllBytes(Txt_ArabicFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
+                    Dim ds As New DataSet
+                    ds = ReadQueryOut("SELECT SignArabic FROM Signatures")
+                ElseIf chk_lat.Checked = True And Chk_arb.Checked = False Then
+                    addNewSignaturelat(theNewId, File.ReadAllBytes(Txt_LatinFile.Text), File.ReadAllBytes(Txt_LatinFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
+
+                    Dim ds As New DataSet
+                    ds = ReadQueryOut("SELECT SignLatin FROM Signatures")
+                ElseIf chk_lat.Checked = True And Chk_arb.Checked = True Then
+                    addNewSignatureboth(theNewId, File.ReadAllBytes(Txt_ArabicFile.Text), File.ReadAllBytes(Txt_LatinFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
+
+                End If
+                MessageBox.Show("sign type (" & type & ") has been inserted successfully")
             End If
         End If
+
 
 
     End Sub

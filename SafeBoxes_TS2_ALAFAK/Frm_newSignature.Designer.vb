@@ -232,6 +232,7 @@ Partial Class Frm_newSignature
         'txt_signc
         '
         Me.txt_signc.Depth = 0
+        Me.txt_signc.Enabled = False
         Me.txt_signc.Hint = ""
         Me.txt_signc.Location = New System.Drawing.Point(10, 286)
         Me.txt_signc.MaxLength = 32767
@@ -268,7 +269,7 @@ Partial Class Frm_newSignature
         Me.signcontx.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectSignnatureCardToolStripMenuItem})
         Me.signcontx.MouseState = MaterialSkin.MouseState.HOVER
         Me.signcontx.Name = "MaterialContextMenuStrip2"
-        Me.signcontx.Size = New System.Drawing.Size(193, 48)
+        Me.signcontx.Size = New System.Drawing.Size(193, 26)
         '
         'SelectSignnatureCardToolStripMenuItem
         '
