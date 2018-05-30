@@ -62,23 +62,25 @@ Public Class Frm_newSignature
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
         Dim ds1 As New DataSet
-        ds1 = ReadQueryOut("SELECT COUNT(SignType) from Signatures WHERE SignCardId=" & signc.Text)
+        ds1 = ReadQueryOut("SELECT COUNT(SignType) from Signatures WHERE SignCardId=" & txt_signc.Text)
         Dim type As Integer = ds1.Tables(0).Rows(0).Item(0)
         theNewId = GenID("Signatures", "SignId")
-        If type >= 3 Then
+
+        If type > 3 Then
+            MessageBox.Show("sign type :" & type & "has been inserted successfully")
             MessageBox.Show("you reached the max sign types")
         Else
             If Chk_arb.Checked = True And chk_lat.Checked = False Then
-                addNewSignaturear(theNewId, File.ReadAllBytes(Txt_ArabicFile.Text), File.ReadAllBytes(Txt_ArabicFile.Text), type, Date.Now, txt_clientid.Text, signc.Text)
+                addNewSignaturear(theNewId, File.ReadAllBytes(Txt_ArabicFile.Text), File.ReadAllBytes(Txt_ArabicFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
                 Dim ds As New DataSet
                 ds = ReadQueryOut("SELECT SignArabic FROM Signatures")
             ElseIf chk_lat.Checked = True And Chk_arb.Checked = False Then
-                addNewSignaturelat(theNewId, File.ReadAllBytes(Txt_LatinFile.Text), File.ReadAllBytes(Txt_LatinFile.Text), type, Date.Now, txt_clientid.Text, signc.Text)
+                addNewSignaturelat(theNewId, File.ReadAllBytes(Txt_LatinFile.Text), File.ReadAllBytes(Txt_LatinFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
 
                 Dim ds As New DataSet
                 ds = ReadQueryOut("SELECT SignLatin FROM Signatures")
             ElseIf chk_lat.Checked = True And Chk_arb.Checked = True Then
-                addNewSignatureboth(theNewId, File.ReadAllBytes(Txt_ArabicFile.Text), File.ReadAllBytes(Txt_LatinFile.Text), type, Date.Now, txt_clientid.Text, signc.Text)
+                addNewSignatureboth(theNewId, File.ReadAllBytes(Txt_ArabicFile.Text), File.ReadAllBytes(Txt_LatinFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
 
             End If
         End If
@@ -91,11 +93,49 @@ Public Class Frm_newSignature
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles Chk_arb.CheckedChanged
+        If Chk_arb.Checked Then
+            Btn_ArabicBrowse.Enabled = True
+        Else
+            Btn_ArabicBrowse.Enabled = False
+            Txt_ArabicFile.Text = ""
+        End If
 
     End Sub
 
     Private Sub chk_lat_CheckedChanged(sender As Object, e As EventArgs) Handles chk_lat.CheckedChanged
+        If chk_lat.Checked Then
+            Btn_LatinBrowse.Enabled = True
+        Else
+            Btn_LatinBrowse.Enabled = False
+            Txt_LatinFile.Text = ""
+        End If
 
-        Btn_LatinBrowse.Enabled = True
+    End Sub
+
+
+
+    Private Sub txt_clientid_Leave(sender As Object, e As EventArgs) Handles txt_clientid.Leave
+        Try
+            Dim ds As New DataSet
+            ds = ReadQueryOut("SELECT ClientFName + ' ' + ClientLName FROM Clients WHERE ClientId = " & txt_clientid.Text)
+            txt_clientname.Text = ds.Tables(0).Rows(0).Item(0)
+        Catch ex As Exception
+            txt_clientname.Text = ""
+        End Try
+    End Sub
+
+    Private Sub SelectClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectClientToolStripMenuItem.Click
+
+        Frm_main.clientid = 0
+        Frm_Clients.ShowDialog()
+        txt_clientid.Text = Frm_main.clientid
+
+    End Sub
+
+    Private Sub SelectSignnatureCardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectSignnatureCardToolStripMenuItem.Click
+        Frm_main.signatureCardId = 0
+        Frm_main.clientid = txt_clientid.Text
+        Frm_SignatureCards.ShowDialog()
+        txt_signc.Text = Frm_main.signatureCardId
     End Sub
 End Class

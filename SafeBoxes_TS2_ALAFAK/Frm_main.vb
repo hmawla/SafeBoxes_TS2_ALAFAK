@@ -11,6 +11,7 @@ Public Class Frm_main
     Public boxId As Integer = vbNull
     Public sizeId As Integer = vbNull
     Public signatureId As Integer = vbNull
+    Public signatureCardId As Integer = vbNull
 
     Private Sub Frm_main_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim ds As New DataSet

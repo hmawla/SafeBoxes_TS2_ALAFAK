@@ -75,4 +75,24 @@
                                 WHERE sc.ClientId=c.CLientId AND sc.NationId=nat.NationId 
                                 AND sc.Careerid=ca.Careerid AND sc.BuildingId=b.BuildingId")
     End Sub
+
+    Private Sub dgv_signcard_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_signcard.CellDoubleClick
+        FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
+                                SignCardNote AS [NOTE], ClientFName AS [CLIENT NAME],
+                                Nationality, ContId, CareerName AS [CAREER], BuildingName 
+                                FROM SignatureCards sc, Clients c,
+                                Nationalities nat ,Careers ca ,Buildings b 
+                                WHERE sc.ClientId=c.CLientId AND sc.NationId=nat.NationId 
+                                AND sc.Careerid=ca.Careerid AND sc.BuildingId=b.BuildingId AND c.ClientId=" & Frm_main.clientid)
+        If Frm_main.signatureCardId = 0 Then
+            Try
+                If dgv_signcard.SelectedRows(0).Cells(0).Value > 0 Then
+                End If
+                Frm_main.signatureCardId = dgv_signcard.SelectedRows(0).Cells(0).Value
+                Me.Dispose()
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
 End Class
