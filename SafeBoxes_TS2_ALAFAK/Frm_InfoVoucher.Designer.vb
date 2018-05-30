@@ -42,6 +42,7 @@ Partial Class Frm_InfoVoucher
         Me.Reports = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.InfoVoucherReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConnectsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
         CType(Me.dgv_infovouchers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -106,6 +107,7 @@ Partial Class Frm_InfoVoucher
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.MaterialFlatButton1)
         Me.TabPage1.Controls.Add(Me.Btn_NewInfoResult)
         Me.TabPage1.Controls.Add(Me.btn_connects)
         Me.TabPage1.Controls.Add(Me.MaterialLabel1)
@@ -351,6 +353,21 @@ Partial Class Frm_InfoVoucher
         Me.ConnectsReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ConnectsReportToolStripMenuItem.Text = "Connects Report"
         '
+        'MaterialFlatButton1
+        '
+        Me.MaterialFlatButton1.AutoSize = True
+        Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialFlatButton1.Depth = 0
+        Me.MaterialFlatButton1.Icon = Nothing
+        Me.MaterialFlatButton1.Location = New System.Drawing.Point(176, 101)
+        Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
+        Me.MaterialFlatButton1.Primary = True
+        Me.MaterialFlatButton1.Size = New System.Drawing.Size(113, 36)
+        Me.MaterialFlatButton1.TabIndex = 9
+        Me.MaterialFlatButton1.Text = "Info Results"
+        '
         'Frm_InfoVoucher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -393,4 +410,5 @@ Partial Class Frm_InfoVoucher
     Friend WithEvents InfoVoucherReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Btn_NewInfoResult As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents ConnectsReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
 End Class

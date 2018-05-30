@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class Rpt_InfoVoucher
+Public Class Info_voucher_report
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class Rpt_InfoVoucher
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "Rpt_InfoVoucher.rpt"
+            Return "Info_voucher_report.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class Rpt_InfoVoucher
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "SafeBoxes_TS2_ALAFAK.Rpt_InfoVoucher.rpt"
+            Return "SafeBoxes_TS2_ALAFAK.Info_voucher_report.rpt"
         End Get
         Set
             'Do nothing
@@ -94,7 +94,7 @@ Public Class Rpt_InfoVoucher
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedRpt_InfoVoucher
+Public Class CachedInfo_voucher_report
     Inherits Component
     Implements ICachedReport
     
@@ -136,7 +136,7 @@ Public Class CachedRpt_InfoVoucher
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As Rpt_InfoVoucher = New Rpt_InfoVoucher()
+        Dim rpt As Info_voucher_report = New Info_voucher_report()
         rpt.Site = Me.Site
         Return rpt
     End Function

@@ -29,20 +29,22 @@ Partial Class Frm_Report_Boxes
         Me.Btn_Search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.Txt_ByBoxId = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.Rdb_ByBoxId = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Rpt_Boxes1 = New SafeBoxes_TS2_ALAFAK.Rpt_Boxes()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'RptV_Boxes
         '
-        Me.RptV_Boxes.ActiveViewIndex = -1
+        Me.RptV_Boxes.ActiveViewIndex = 0
         Me.RptV_Boxes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RptV_Boxes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RptV_Boxes.Cursor = System.Windows.Forms.Cursors.Default
-        Me.RptV_Boxes.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RptV_Boxes.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RptV_Boxes.Location = New System.Drawing.Point(12, 188)
         Me.RptV_Boxes.Name = "RptV_Boxes"
+        Me.RptV_Boxes.ReportSource = Me.Rpt_Boxes1
         Me.RptV_Boxes.Size = New System.Drawing.Size(685, 307)
         Me.RptV_Boxes.TabIndex = 22
         '
@@ -56,7 +58,7 @@ Partial Class Frm_Report_Boxes
         Me.GroupBox1.Controls.Add(Me.Btn_Search)
         Me.GroupBox1.Controls.Add(Me.Txt_ByBoxId)
         Me.GroupBox1.Controls.Add(Me.Rdb_ByBoxId)
-        Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 73)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(679, 109)
@@ -68,12 +70,12 @@ Partial Class Frm_Report_Boxes
         '
         Me.cbox_boxsizes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbox_boxsizes.Enabled = False
-        Me.cbox_boxsizes.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.cbox_boxsizes.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
         Me.cbox_boxsizes.FormattingEnabled = True
         Me.cbox_boxsizes.Location = New System.Drawing.Point(148, 64)
         Me.cbox_boxsizes.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cbox_boxsizes.Name = "cbox_boxsizes"
-        Me.cbox_boxsizes.Size = New System.Drawing.Size(352, 27)
+        Me.cbox_boxsizes.Size = New System.Drawing.Size(352, 26)
         Me.cbox_boxsizes.TabIndex = 25
         '
         'Rdb_ByBoxSize
@@ -167,4 +169,5 @@ Partial Class Frm_Report_Boxes
     Friend WithEvents Btn_Search As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents cbox_boxsizes As ComboBox
     Friend WithEvents Rdb_ByBoxSize As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Rpt_Boxes1 As Rpt_Boxes
 End Class

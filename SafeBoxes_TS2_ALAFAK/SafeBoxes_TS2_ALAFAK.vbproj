@@ -178,6 +178,12 @@
     <Compile Include="Frm_BoxPrices.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_Info_Result.Designer.vb">
+      <DependentUpon>frm_Info_Result.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Info_Result.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_NewAccountCompany.Designer.vb">
       <DependentUpon>Frm_NewAccountCompany.vb</DependentUpon>
     </Compile>
@@ -196,6 +202,30 @@
     <Compile Include="Frm_newSignature.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm_report_client.Designer.vb">
+      <DependentUpon>frm_report_client.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_report_client.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_report_companies.Designer.vb">
+      <DependentUpon>frm_report_companies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_report_companies.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_InfoResult.Designer.vb">
+      <DependentUpon>Frm_Report_InfoResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_InfoResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_InfoVoucher.Designer.vb">
+      <DependentUpon>Frm_Report_InfoVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_InfoVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_SelectSize.Designer.vb">
       <DependentUpon>Frm_SelectSize.vb</DependentUpon>
     </Compile>
@@ -208,11 +238,47 @@
     <Compile Include="Frm_Signatures.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm_Report_BoxPrices.Designer.vb">
+      <DependentUpon>Frm_Report_BoxPrices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_BoxPrices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info_result_report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Info_result_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Info_voucher_report.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Info_voucher_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="NewBuilding.Designer.vb">
       <DependentUpon>NewBuilding.vb</DependentUpon>
     </Compile>
     <Compile Include="NewBuilding.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_boxprices.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_boxprices.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report_companies.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report_companies.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_InfoVoucher.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_InfoVoucher.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Rpt_FATCA.vb">
       <AutoGen>True</AutoGen>
@@ -242,12 +308,6 @@
       <DependentUpon>Frm_Report_Boxes.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm_Report_Boxes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Report_Client.Designer.vb">
-      <DependentUpon>Frm_Report_Client.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Report_Client.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Report_Connects.Designer.vb">
@@ -448,12 +508,6 @@
       <DependentUpon>Rpt_Contract.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Rpt_InfoVoucher1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Rpt_InfoVoucher.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Rpt_MissingKeys.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -521,6 +575,9 @@
     <EmbeddedResource Include="Frm_BoxPrices.resx">
       <DependentUpon>Frm_BoxPrices.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Info_Result.resx">
+      <DependentUpon>frm_Info_Result.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_NewAccountCompany.resx">
       <DependentUpon>Frm_NewAccountCompany.vb</DependentUpon>
     </EmbeddedResource>
@@ -530,14 +587,49 @@
     <EmbeddedResource Include="Frm_newSignature.resx">
       <DependentUpon>Frm_newSignature.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_report_client.resx">
+      <DependentUpon>frm_report_client.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_report_companies.resx">
+      <DependentUpon>frm_report_companies.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_InfoResult.resx">
+      <DependentUpon>Frm_Report_InfoResult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_InfoVoucher.resx">
+      <DependentUpon>Frm_Report_InfoVoucher.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_SelectSize.resx">
       <DependentUpon>Frm_SelectSize.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Signatures.resx">
       <DependentUpon>Frm_Signatures.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_BoxPrices.resx">
+      <DependentUpon>Frm_Report_BoxPrices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info_result_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Info_result_report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info_voucher_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Info_voucher_report.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewBuilding.resx">
       <DependentUpon>NewBuilding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_boxprices.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_boxprices.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_companies.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_companies.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_InfoVoucher.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_InfoVoucher.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_FATCA.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -554,9 +646,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_Boxes.resx">
       <DependentUpon>Frm_Report_Boxes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Report_Client.resx">
-      <DependentUpon>Frm_Report_Client.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_Connects.resx">
       <DependentUpon>Frm_Report_Connects.vb</DependentUpon>
@@ -662,10 +751,6 @@
     <EmbeddedResource Include="Rpt_Contract.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Rpt_Contract.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Rpt_InfoVoucher.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Rpt_InfoVoucher1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_MissingKeys.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
