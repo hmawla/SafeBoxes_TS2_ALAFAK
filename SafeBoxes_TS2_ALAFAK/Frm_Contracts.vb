@@ -1,9 +1,4 @@
 ﻿Public Class Frm_Contracts
-    '==========================================
-    '        What is still missing:
-    '==========================================
-    '   You tell me :P
-    '==========================================
     Public redeliverDate As Date
     Public contractId As Integer
     Public boxId As Integer
@@ -229,14 +224,14 @@
     End Sub
 
 
-    Private Sub SelectBoxToolStripMenuItem_Click(sender As Object, e As EventArgs) 
+    Private Sub SelectBoxToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Frm_main.boxId = 0
         Frm_Boxes.ShowDialog()
         FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd) And ContToDate > date() AND Contract.BoxId=" & Frm_main.boxId)
 
     End Sub
 
-    Private Sub ClientAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) 
+    Private Sub ClientAccountToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Frm_main.accountid = 0
         Frm_Accounts.ShowDialog()
         FillDGV(dgv_contracts, "SELECT ContId AS ID, ContBDate AS [Contract Date], ContToDate AS [Expire Date], ContPhone1 AS [Phone1], ContPhone2 AS [Phone2], BoxId AS [Box ID], AccountId AS [Account ID], BuildingName AS Address, EmpFName + ' ' + EmpLName AS Employee FROM Contract, Buildings, Employees WHERE Contract.BuildingId = Buildings.BuildingId AND Contract.EmpId = Employees.EmpId AND ContId NOT IN (SELECT ContId FROM ContEnd) And ContToDate > date() AND Contract.AccountId=" & Frm_main.accountid)
