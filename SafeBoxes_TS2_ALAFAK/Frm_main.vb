@@ -1,6 +1,4 @@
-﻿Imports MaterialSkin
-
-Public Class Frm_main
+﻿Public Class Frm_main
     Public accountid As Integer = vbNull
     Public clientid As Integer = vbNull
     Public companyId As Integer = vbNull
@@ -65,7 +63,7 @@ Public Class Frm_main
         Frm_Accounts.ShowDialog()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         NewBuilding.ShowDialog()
     End Sub
 

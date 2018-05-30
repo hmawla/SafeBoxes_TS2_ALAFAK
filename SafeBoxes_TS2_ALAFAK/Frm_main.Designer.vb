@@ -39,7 +39,6 @@ Partial Class Frm_main
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.Btn_AccountsManager = New MaterialSkin.Controls.MaterialFlatButton()
         Me.MaterialDivider2 = New MaterialSkin.Controls.MaterialDivider()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -300,15 +299,6 @@ Partial Class Frm_main
         Me.MaterialDivider2.TabIndex = 33
         Me.MaterialDivider2.Text = "MaterialDivider2"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(427, 221)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(135, 109)
-        Me.Button1.TabIndex = 43
-        Me.Button1.Text = "New building"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'PictureBox3
         '
         Me.PictureBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -380,7 +370,6 @@ Partial Class Frm_main
         Me.ClientSize = New System.Drawing.Size(1124, 676)
         Me.Controls.Add(Me.MaterialDivider4)
         Me.Controls.Add(Me.Btn_Signatures)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Btn_AccountsManager)
         Me.Controls.Add(Me.MaterialLabel2)
         Me.Controls.Add(Me.PictureBox3)
@@ -432,7 +421,6 @@ Partial Class Frm_main
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Btn_AccountsManager As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents MaterialDivider2 As MaterialSkin.Controls.MaterialDivider
-    Friend WithEvents Button1 As Button
     Friend WithEvents Btn_Signatures As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents MaterialDivider4 As MaterialSkin.Controls.MaterialDivider
 End Class

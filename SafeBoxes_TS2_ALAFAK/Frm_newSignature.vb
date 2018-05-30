@@ -16,7 +16,6 @@ Public Class Frm_newSignature
         Catch ex As Exception
             txt_clientname.Text = ""
         End Try
-
     End Sub
 
     Private Sub Btn_ArabicBrowse_Click(sender As Object, e As EventArgs) Handles Btn_ArabicBrowse.Click
@@ -62,18 +61,13 @@ Public Class Frm_newSignature
 
     Private Sub Btn_Submit_Click(sender As Object, e As EventArgs) Handles Btn_Submit.Click
         If txt_clientid.Text = "" Or txt_signc.Text = "" Or (Chk_arb.Checked And Txt_ArabicFile.Text = "") Or (chk_lat.Checked And Txt_LatinFile.Text = "") Or (chk_lat.Checked = False And Chk_arb.Checked = False) Then
-
             MessageBox.Show("Please enter all needed information to continue")
-
-
         Else
             Dim ds1 As New DataSet
             ds1 = ReadQueryOut("SELECT COUNT(SignType) from Signatures WHERE SignCardId=" & txt_signc.Text)
             Dim type As Integer = ds1.Tables(0).Rows(0).Item(0)
             theNewId = GenID("Signatures", "SignId")
-
             If type > 3 Then
-
                 MessageBox.Show("you reached the max sign types for signature card number (" & txt_signc.Text & ")")
                 Me.Close()
             Else
@@ -83,14 +77,14 @@ Public Class Frm_newSignature
                     ds = ReadQueryOut("SELECT SignArabic FROM Signatures")
                 ElseIf chk_lat.Checked = True And Chk_arb.Checked = False Then
                     addNewSignaturelat(theNewId, File.ReadAllBytes(Txt_LatinFile.Text), File.ReadAllBytes(Txt_LatinFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
-
                     Dim ds As New DataSet
                     ds = ReadQueryOut("SELECT SignLatin FROM Signatures")
                 ElseIf chk_lat.Checked = True And Chk_arb.Checked = True Then
                     addNewSignatureboth(theNewId, File.ReadAllBytes(Txt_ArabicFile.Text), File.ReadAllBytes(Txt_LatinFile.Text), type, Date.Now, txt_clientid.Text, txt_signc.Text)
 
                 End If
-                MessageBox.Show("sign type (" & type & ") has been inserted successfully")
+                MessageBox.Show("Signature #" & type & " has been added successfully!")
+                Me.Dispose()
             End If
         End If
 
@@ -105,8 +99,10 @@ Public Class Frm_newSignature
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles Chk_arb.CheckedChanged
         If Chk_arb.Checked Then
             Btn_ArabicBrowse.Enabled = True
+            Txt_ArabicFile.Enabled = True
         Else
             Btn_ArabicBrowse.Enabled = False
+            Txt_ArabicFile.Enabled = False
             Txt_ArabicFile.Text = ""
         End If
 
@@ -115,8 +111,10 @@ Public Class Frm_newSignature
     Private Sub chk_lat_CheckedChanged(sender As Object, e As EventArgs) Handles chk_lat.CheckedChanged
         If chk_lat.Checked Then
             Btn_LatinBrowse.Enabled = True
+            Txt_LatinFile.Enabled = True
         Else
             Btn_LatinBrowse.Enabled = False
+            Txt_LatinFile.Enabled = False
             Txt_LatinFile.Text = ""
         End If
 
@@ -135,17 +133,20 @@ Public Class Frm_newSignature
     End Sub
 
     Private Sub SelectClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectClientToolStripMenuItem.Click
-
         Frm_main.clientid = 0
         Frm_Clients.ShowDialog()
         txt_clientid.Text = Frm_main.clientid
-
     End Sub
 
     Private Sub SelectSignnatureCardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectSignnatureCardToolStripMenuItem.Click
-        Frm_main.signatureCardId = 0
-        Frm_main.clientid = txt_clientid.Text
-        Frm_SignatureCards.ShowDialog()
-        txt_signc.Text = Frm_main.signatureCardId
+        If txt_clientname.Text.Count > 0 Then
+            Frm_main.signatureCardId = 0
+            Frm_main.clientid = txt_clientid.Text
+            Frm_SignatureCards.ShowDialog()
+            txt_signc.Text = Frm_main.signatureCardId
+        Else
+            MessageBox.Show("Please select a client first!")
+        End If
+
     End Sub
 End Class

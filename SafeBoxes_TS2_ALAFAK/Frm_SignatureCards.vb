@@ -5,20 +5,20 @@
         If Frm_main.signatureCardId = 0 Then
             FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
                                 SignCardNote AS [NOTE], ClientFName AS [CLIENT NAME],
-                                Nationality, ContId, CareerName AS [CAREER], BuildingName 
+                                Nationality, ContId, CareerName AS [CAREER], 
                                 FROM SignatureCards sc, Clients c,
-                                Nationalities nat ,Careers ca ,Buildings b 
+                                Nationalities nat ,Careers ca
                                 WHERE sc.ClientId=c.CLientId AND sc.NationId=nat.NationId 
-                                AND sc.Careerid=ca.Careerid AND sc.BuildingId=b.BuildingId AND c.ClientId=" & Frm_main.clientid)
+                                AND sc.Careerid=ca.Careerid AND c.ClientId=" & Frm_main.clientid)
 
         Else
             FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
                                 SignCardNote AS [NOTE], ClientFName AS [CLIENT NAME],
-                                Nationality, ContId, CareerName AS [CAREER], BuildingName 
+                                Nationality, ContId, CareerName AS [CAREER] 
                                 FROM SignatureCards sc, Clients c,
-                                Nationalities nat ,Careers ca ,Buildings b 
+                                Nationalities nat ,Careers ca
                                 WHERE sc.ClientId=c.CLientId AND sc.NationId=nat.NationId 
-                                AND sc.Careerid=ca.Careerid AND sc.BuildingId=b.BuildingId")
+                                AND sc.Careerid=ca.Careerid")
         End If
 
 
@@ -79,14 +79,15 @@
     End Sub
 
     Private Sub btn_newbox_Click(sender As Object, e As EventArgs) Handles btn_newbox.Click
+        signaturecardid = 0
         Frm_NewSignatureCard.ShowDialog()
         FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
                                 SignCardNote AS [NOTE], ClientFName AS [CLIENT NAME],
-                                Nationality, ContId, CareerName AS [CAREER], BuildingName 
+                                Nationality, ContId, CareerName AS [CAREER]
                                 FROM SignatureCards sc, Clients c,
-                                Nationalities nat ,Careers ca ,Buildings b 
+                                Nationalities nat ,Careers ca
                                 WHERE sc.ClientId=c.CLientId AND sc.NationId=nat.NationId 
-                                AND sc.Careerid=ca.Careerid AND sc.BuildingId=b.BuildingId")
+                                AND sc.Careerid=ca.Careerid")
     End Sub
 
     Private Sub dgv_signcard_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_signcard.CellDoubleClick
@@ -100,5 +101,17 @@
 
             End Try
         End If
+    End Sub
+
+    Private Sub btn_modbox_Click(sender As Object, e As EventArgs) Handles btn_modbox.Click
+        signaturecardid = dgv_signcard.SelectedRows(0).Cells(0).Value
+        Frm_NewSignatureCard.ShowDialog()
+        FillDGV(dgv_signcard, "SELECT SignCardId AS [ID], SignCardDate AS [DATE],
+                                SignCardNote AS [NOTE], ClientFName AS [CLIENT NAME],
+                                Nationality, ContId, CareerName AS [CAREER]
+                                FROM SignatureCards sc, Clients c,
+                                Nationalities nat ,Careers ca
+                                WHERE sc.ClientId=c.CLientId AND sc.NationId=nat.NationId 
+                                AND sc.Careerid=ca.Careerid")
     End Sub
 End Class

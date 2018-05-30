@@ -33,8 +33,8 @@ Partial Class Frm_newSignature
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.txt_clientid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txt_clientname = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.Chk_arb = New System.Windows.Forms.CheckBox()
-        Me.chk_lat = New System.Windows.Forms.CheckBox()
+        Me.Chk_arb = New MaterialSkin.Controls.MaterialCheckBox()
+        Me.chk_lat = New MaterialSkin.Controls.MaterialCheckBox()
         Me.txt_signc = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.signcontx = New MaterialSkin.Controls.MaterialContextMenuStrip()
@@ -46,6 +46,7 @@ Partial Class Frm_newSignature
         'Txt_ArabicFile
         '
         Me.Txt_ArabicFile.Depth = 0
+        Me.Txt_ArabicFile.Enabled = False
         Me.Txt_ArabicFile.Hint = ""
         Me.Txt_ArabicFile.Location = New System.Drawing.Point(9, 166)
         Me.Txt_ArabicFile.MaxLength = 32767
@@ -155,7 +156,7 @@ Partial Class Frm_newSignature
         'SelectClientToolStripMenuItem
         '
         Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
-        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SelectClientToolStripMenuItem.Text = "Select Client"
         '
         'MaterialLabel1
@@ -212,9 +213,15 @@ Partial Class Frm_newSignature
         'Chk_arb
         '
         Me.Chk_arb.AutoSize = True
+        Me.Chk_arb.Depth = 0
+        Me.Chk_arb.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.Chk_arb.Location = New System.Drawing.Point(12, 137)
+        Me.Chk_arb.Margin = New System.Windows.Forms.Padding(0)
+        Me.Chk_arb.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Chk_arb.MouseState = MaterialSkin.MouseState.HOVER
         Me.Chk_arb.Name = "Chk_arb"
-        Me.Chk_arb.Size = New System.Drawing.Size(104, 17)
+        Me.Chk_arb.Ripple = True
+        Me.Chk_arb.Size = New System.Drawing.Size(132, 30)
         Me.Chk_arb.TabIndex = 64
         Me.Chk_arb.Text = "Arabic Signature"
         Me.Chk_arb.UseVisualStyleBackColor = True
@@ -222,9 +229,15 @@ Partial Class Frm_newSignature
         'chk_lat
         '
         Me.chk_lat.AutoSize = True
-        Me.chk_lat.Location = New System.Drawing.Point(13, 202)
+        Me.chk_lat.Depth = 0
+        Me.chk_lat.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.chk_lat.Location = New System.Drawing.Point(12, 197)
+        Me.chk_lat.Margin = New System.Windows.Forms.Padding(0)
+        Me.chk_lat.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.chk_lat.MouseState = MaterialSkin.MouseState.HOVER
         Me.chk_lat.Name = "chk_lat"
-        Me.chk_lat.Size = New System.Drawing.Size(100, 17)
+        Me.chk_lat.Ripple = True
+        Me.chk_lat.Size = New System.Drawing.Size(127, 30)
         Me.chk_lat.TabIndex = 65
         Me.chk_lat.Text = "Latin Signature:"
         Me.chk_lat.UseVisualStyleBackColor = True
@@ -232,7 +245,6 @@ Partial Class Frm_newSignature
         'txt_signc
         '
         Me.txt_signc.Depth = 0
-        Me.txt_signc.Enabled = False
         Me.txt_signc.Hint = ""
         Me.txt_signc.Location = New System.Drawing.Point(10, 286)
         Me.txt_signc.MaxLength = 32767
@@ -269,13 +281,13 @@ Partial Class Frm_newSignature
         Me.signcontx.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectSignnatureCardToolStripMenuItem})
         Me.signcontx.MouseState = MaterialSkin.MouseState.HOVER
         Me.signcontx.Name = "MaterialContextMenuStrip2"
-        Me.signcontx.Size = New System.Drawing.Size(193, 26)
+        Me.signcontx.Size = New System.Drawing.Size(187, 26)
         '
         'SelectSignnatureCardToolStripMenuItem
         '
         Me.SelectSignnatureCardToolStripMenuItem.Name = "SelectSignnatureCardToolStripMenuItem"
-        Me.SelectSignnatureCardToolStripMenuItem.Size = New System.Drawing.Size(192, 22)
-        Me.SelectSignnatureCardToolStripMenuItem.Text = "select Signnature Card"
+        Me.SelectSignnatureCardToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.SelectSignnatureCardToolStripMenuItem.Text = "Select Signature Card"
         '
         'Frm_newSignature
         '
@@ -317,8 +329,8 @@ Partial Class Frm_newSignature
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents txt_clientid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents txt_clientname As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents Chk_arb As CheckBox
-    Friend WithEvents chk_lat As CheckBox
+    Friend WithEvents Chk_arb As MaterialSkin.Controls.MaterialCheckBox
+    Friend WithEvents chk_lat As MaterialSkin.Controls.MaterialCheckBox
     Friend WithEvents txt_signc As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents client As MaterialSkin.Controls.MaterialContextMenuStrip
