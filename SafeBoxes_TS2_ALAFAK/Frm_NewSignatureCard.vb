@@ -34,27 +34,6 @@
         formLoaded = True
     End Sub
 
-    Private Sub txt_accountid_Leave(sender As Object, e As EventArgs) Handles txt_cid.Leave
-        txt_cnam.Text = ""
-        Dim i As Integer = 1
-        Try
-            ds = ReadQueryOut("SELECT ClientId, ClientFName, ClientLName, ClientDOB FROM Clients WHERE ClientId = " & txt_cid.Text)
-            If ds.Tables(0).Rows.Count <> 0 Then
-                txt_cnam.Text = ds.Tables(0).Rows(0).Item(1) & " " & ds.Tables(0).Rows(0).Item(2)
-            Else
-                MsgBox("Invalid Client ID!")
-                txt_cid.Focus()
-                txt_cid.SelectAll()
-            End If
-
-        Catch ex As Exception
-            MsgBox("Invalid Client ID!")
-            txt_cid.Focus()
-            txt_cid.SelectAll()
-        End Try
-
-    End Sub
-
     Private Sub btn_submit_Click(sender As Object, e As EventArgs) Handles btn_submit.Click
         isSubmitting = True
         If txt_cid.Text = "" Or txt_signnote.Text = "" Or txt_contid.Text = "" Then
@@ -90,4 +69,5 @@
     Private Sub txt_cnam_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_cnam.KeyPress
         Only_char(txt_cnam, e)
     End Sub
+
 End Class
