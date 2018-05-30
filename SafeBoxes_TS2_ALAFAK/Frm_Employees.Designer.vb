@@ -37,10 +37,13 @@ Partial Class Frm_Employees
         Me.txt_byEmpid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.rdb_byEmpName = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.EmployeesReport = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv_employees, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.EmployeesReport.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv_employees
@@ -53,6 +56,7 @@ Partial Class Frm_Employees
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgv_employees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_employees.BackgroundColor = System.Drawing.Color.White
+        Me.dgv_employees.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgv_employees.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.dgv_employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_employees.Cursor = System.Windows.Forms.Cursors.Hand
@@ -290,6 +294,21 @@ Partial Class Frm_Employees
         Me.rdb_byEmpName.Text = "By Employee Name"
         Me.rdb_byEmpName.UseVisualStyleBackColor = True
         '
+        'EmployeesReport
+        '
+        Me.EmployeesReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EmployeesReport.Depth = 0
+        Me.EmployeesReport.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportsToolStripMenuItem})
+        Me.EmployeesReport.MouseState = MaterialSkin.MouseState.HOVER
+        Me.EmployeesReport.Name = "EmployeesReport"
+        Me.EmployeesReport.Size = New System.Drawing.Size(181, 48)
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReportsToolStripMenuItem.Text = "Reports"
+        '
         'Frm_Employees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -309,6 +328,7 @@ Partial Class Frm_Employees
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.EmployeesReport.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -328,4 +348,6 @@ Partial Class Frm_Employees
     Friend WithEvents txt_byEmpid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents btn_search As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents rdb_byEmpName As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents EmployeesReport As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
 End Class

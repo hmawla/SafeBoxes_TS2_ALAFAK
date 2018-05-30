@@ -114,4 +114,8 @@
                                 WHERE sc.ClientId=c.CLientId AND sc.NationId=nat.NationId 
                                 AND sc.Careerid=ca.Careerid")
     End Sub
+
+    Private Sub ReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportsToolStripMenuItem.Click
+        Frm_Report_SignatureCard.ShowDialog()
+    End Sub
 End Class

@@ -106,4 +106,8 @@
     Private Sub txt_byEmpname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_byEmpname.KeyPress
         Only_char(txt_byEmpname, e)
     End Sub
+
+    Private Sub ReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportsToolStripMenuItem.Click
+
+    End Sub
 End Class

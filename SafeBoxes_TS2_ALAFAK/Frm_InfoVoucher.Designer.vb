@@ -336,19 +336,19 @@ Partial Class Frm_InfoVoucher
         Me.Reports.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InfoVoucherReportToolStripMenuItem, Me.ConnectsReportToolStripMenuItem})
         Me.Reports.MouseState = MaterialSkin.MouseState.HOVER
         Me.Reports.Name = "MaterialContextMenuStrip1"
-        Me.Reports.Size = New System.Drawing.Size(177, 48)
+        Me.Reports.Size = New System.Drawing.Size(181, 70)
         Me.Reports.Text = "Reports"
         '
         'InfoVoucherReportToolStripMenuItem
         '
         Me.InfoVoucherReportToolStripMenuItem.Name = "InfoVoucherReportToolStripMenuItem"
-        Me.InfoVoucherReportToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.InfoVoucherReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InfoVoucherReportToolStripMenuItem.Text = "InfoVoucher Report"
         '
         'ConnectsReportToolStripMenuItem
         '
         Me.ConnectsReportToolStripMenuItem.Name = "ConnectsReportToolStripMenuItem"
-        Me.ConnectsReportToolStripMenuItem.Size = New System.Drawing.Size(176, 22)
+        Me.ConnectsReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ConnectsReportToolStripMenuItem.Text = "Connects Report"
         '
         'Frm_InfoVoucher

@@ -37,10 +37,13 @@ Partial Class Frm_Companies
         Me.txt_bycid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.rdb_bycompName = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.CompaniesReport = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv_companies, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.CompaniesReport.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv_companies
@@ -290,6 +293,21 @@ Partial Class Frm_Companies
         Me.rdb_bycompName.Text = "By Company Name"
         Me.rdb_bycompName.UseVisualStyleBackColor = True
         '
+        'CompaniesReport
+        '
+        Me.CompaniesReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CompaniesReport.Depth = 0
+        Me.CompaniesReport.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportsToolStripMenuItem})
+        Me.CompaniesReport.MouseState = MaterialSkin.MouseState.HOVER
+        Me.CompaniesReport.Name = "CompaniesReport"
+        Me.CompaniesReport.Size = New System.Drawing.Size(181, 48)
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReportsToolStripMenuItem.Text = "Reports"
+        '
         'Frm_Companies
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -309,6 +327,7 @@ Partial Class Frm_Companies
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.CompaniesReport.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -328,4 +347,6 @@ Partial Class Frm_Companies
     Friend WithEvents txt_bycid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents btn_search As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents rdb_bycompName As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents CompaniesReport As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
 End Class

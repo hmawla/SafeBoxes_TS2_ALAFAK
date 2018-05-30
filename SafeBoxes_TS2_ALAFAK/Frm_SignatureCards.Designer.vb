@@ -36,14 +36,14 @@ Partial Class Frm_SignatureCards
         Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.rdb_byCname = New MaterialSkin.Controls.MaterialRadioButton()
         Me.txt_bybid = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.MaterialContextMenuStrip1 = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SignatureCardsReport = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         CType(Me.dgv_signcard, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.tab_datacontrol.SuspendLayout()
         Me.tab_filter.SuspendLayout()
-        Me.MaterialContextMenuStrip1.SuspendLayout()
+        Me.SignatureCardsReport.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgv_signcard
@@ -288,19 +288,19 @@ Partial Class Frm_SignatureCards
         Me.txt_bybid.TabStop = False
         Me.txt_bybid.UseSystemPasswordChar = False
         '
-        'MaterialContextMenuStrip1
+        'SignatureCardsReport
         '
-        Me.MaterialContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MaterialContextMenuStrip1.Depth = 0
-        Me.MaterialContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportsToolStripMenuItem})
-        Me.MaterialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialContextMenuStrip1.Name = "MaterialContextMenuStrip1"
-        Me.MaterialContextMenuStrip1.Size = New System.Drawing.Size(115, 26)
+        Me.SignatureCardsReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.SignatureCardsReport.Depth = 0
+        Me.SignatureCardsReport.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportsToolStripMenuItem})
+        Me.SignatureCardsReport.MouseState = MaterialSkin.MouseState.HOVER
+        Me.SignatureCardsReport.Name = "MaterialContextMenuStrip1"
+        Me.SignatureCardsReport.Size = New System.Drawing.Size(181, 48)
         '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'MaterialTabSelector1
@@ -335,7 +335,7 @@ Partial Class Frm_SignatureCards
         Me.tab_datacontrol.PerformLayout()
         Me.tab_filter.ResumeLayout(False)
         Me.tab_filter.PerformLayout()
-        Me.MaterialContextMenuStrip1.ResumeLayout(False)
+        Me.SignatureCardsReport.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -353,7 +353,7 @@ Partial Class Frm_SignatureCards
     Friend WithEvents btn_search As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents rdb_byCname As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents txt_bybid As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents MaterialContextMenuStrip1 As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents SignatureCardsReport As MaterialSkin.Controls.MaterialContextMenuStrip
     Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents rdb_bysigncardid As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents MaterialTabSelector1 As MaterialSkin.Controls.MaterialTabSelector

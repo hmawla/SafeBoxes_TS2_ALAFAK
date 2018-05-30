@@ -37,10 +37,13 @@ Partial Class Frm_Signatures
         Me.btn_search = New MaterialSkin.Controls.MaterialFlatButton()
         Me.rdb_bycompName = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Dgv_Signatures = New System.Windows.Forms.DataGridView()
+        Me.SignatureReport = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabPage1.SuspendLayout()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.Dgv_Signatures, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SignatureReport.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabPage1
@@ -292,6 +295,21 @@ Partial Class Frm_Signatures
         Me.Dgv_Signatures.Size = New System.Drawing.Size(679, 331)
         Me.Dgv_Signatures.TabIndex = 16
         '
+        'SignatureReport
+        '
+        Me.SignatureReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.SignatureReport.Depth = 0
+        Me.SignatureReport.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportToolStripMenuItem})
+        Me.SignatureReport.MouseState = MaterialSkin.MouseState.HOVER
+        Me.SignatureReport.Name = "SignatureReport"
+        Me.SignatureReport.Size = New System.Drawing.Size(181, 48)
+        '
+        'ReportToolStripMenuItem
+        '
+        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReportToolStripMenuItem.Text = "Reports"
+        '
         'Frm_Signatures
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -308,6 +326,7 @@ Partial Class Frm_Signatures
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.Dgv_Signatures, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SignatureReport.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -327,4 +346,6 @@ Partial Class Frm_Signatures
     Friend WithEvents btn_search As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents rdb_bycompName As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents Dgv_Signatures As DataGridView
+    Friend WithEvents SignatureReport As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
 End Class

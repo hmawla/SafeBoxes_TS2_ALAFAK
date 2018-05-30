@@ -96,4 +96,8 @@
             End Try
         End If
     End Sub
+
+    Private Sub ReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportsToolStripMenuItem.Click
+        Frm_Report_Companies.ShowDialog()
+    End Sub
 End Class

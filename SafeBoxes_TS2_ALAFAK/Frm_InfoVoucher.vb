@@ -117,4 +117,8 @@
         ExecuteQuery("INSERT INTO InfoResult VALUES(" & GenID("InfoResult", "InfoResultId") & ",'" & InputBox.Txt_Input.Text & "'," & dgv_infovouchers.SelectedRows(0).Cells(0).Value & ")")
 
     End Sub
+
+    Private Sub InfoVoucherReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InfoVoucherReportToolStripMenuItem.Click
+        Frm_Report_InfoVoucher.ShowDialog()
+    End Sub
 End Class
