@@ -55,4 +55,8 @@
             End If
         End If
     End Sub
+
+    Private Sub Frm_Report_Client_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Me.Dispose()
+    End Sub
 End Class

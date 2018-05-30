@@ -117,4 +117,8 @@
         ExecuteQuery("INSERT INTO InfoResult VALUES(" & GenID("InfoResult", "InfoResultId") & ",'" & InputBox.Txt_Input.Text & "'," & dgv_infovouchers.SelectedRows(0).Cells(0).Value & ")")
 
     End Sub
+
+    Private Sub MaterialFlatButton1_Click(sender As Object, e As EventArgs) Handles MaterialFlatButton1.Click
+        frm_Info_Result.ShowDialog()
+    End Sub
 End Class

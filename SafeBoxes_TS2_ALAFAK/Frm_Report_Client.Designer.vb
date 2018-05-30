@@ -29,20 +29,22 @@ Partial Class Frm_Report_Client
         Me.Txt_CId = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.RadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Rdb_ByClientId = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Rpt_Clients1 = New SafeBoxes_TS2_ALAFAK.Rpt_Clients()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'CRptV_Clients
         '
-        Me.CRptV_Clients.ActiveViewIndex = -1
+        Me.CRptV_Clients.ActiveViewIndex = 0
         Me.CRptV_Clients.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CRptV_Clients.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CRptV_Clients.Cursor = System.Windows.Forms.Cursors.Default
-        Me.CRptV_Clients.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CRptV_Clients.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CRptV_Clients.Location = New System.Drawing.Point(15, 215)
         Me.CRptV_Clients.Name = "CRptV_Clients"
+        Me.CRptV_Clients.ReportSource = Me.Rpt_Clients1
         Me.CRptV_Clients.Size = New System.Drawing.Size(688, 365)
         Me.CRptV_Clients.TabIndex = 23
         '
@@ -56,7 +58,7 @@ Partial Class Frm_Report_Client
         Me.GroupBox1.Controls.Add(Me.Txt_CId)
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.Rdb_ByClientId)
-        Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(15, 75)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(688, 134)
@@ -173,4 +175,5 @@ Partial Class Frm_Report_Client
     Friend WithEvents Rdb_ByClientId As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents txt_cname As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents Btn_Search As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents Rpt_Clients1 As Rpt_Clients
 End Class

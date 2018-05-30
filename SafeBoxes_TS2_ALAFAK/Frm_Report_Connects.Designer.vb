@@ -30,20 +30,22 @@ Partial Class Frm_Report_Connects
         Me.Dtpick_ToDate = New System.Windows.Forms.DateTimePicker()
         Me.Rdb_ById = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Dtpick_FromDate = New System.Windows.Forms.DateTimePicker()
+        Me.Rpt_Connects1 = New SafeBoxes_TS2_ALAFAK.Rpt_Connects()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'RptV_connects
         '
-        Me.RptV_connects.ActiveViewIndex = -1
+        Me.RptV_connects.ActiveViewIndex = 0
         Me.RptV_connects.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RptV_connects.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.RptV_connects.Cursor = System.Windows.Forms.Cursors.Default
-        Me.RptV_connects.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RptV_connects.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RptV_connects.Location = New System.Drawing.Point(12, 212)
         Me.RptV_connects.Name = "RptV_connects"
+        Me.RptV_connects.ReportSource = Me.Rpt_Connects1
         Me.RptV_connects.Size = New System.Drawing.Size(685, 283)
         Me.RptV_connects.TabIndex = 20
         '
@@ -58,7 +60,7 @@ Partial Class Frm_Report_Connects
         Me.GroupBox1.Controls.Add(Me.Dtpick_ToDate)
         Me.GroupBox1.Controls.Add(Me.Rdb_ById)
         Me.GroupBox1.Controls.Add(Me.Dtpick_FromDate)
-        Me.GroupBox1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 72)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(679, 134)
@@ -121,13 +123,13 @@ Partial Class Frm_Report_Connects
         '
         Me.Dtpick_ToDate.CustomFormat = "dd/mm/yyyy"
         Me.Dtpick_ToDate.Enabled = False
-        Me.Dtpick_ToDate.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Dtpick_ToDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Dtpick_ToDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.Dtpick_ToDate.Location = New System.Drawing.Point(466, 55)
         Me.Dtpick_ToDate.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.Dtpick_ToDate.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
         Me.Dtpick_ToDate.Name = "Dtpick_ToDate"
-        Me.Dtpick_ToDate.Size = New System.Drawing.Size(204, 27)
+        Me.Dtpick_ToDate.Size = New System.Drawing.Size(204, 26)
         Me.Dtpick_ToDate.TabIndex = 10
         '
         'Rdb_ById
@@ -152,13 +154,13 @@ Partial Class Frm_Report_Connects
         '
         Me.Dtpick_FromDate.CustomFormat = "dd/mm/yyyy"
         Me.Dtpick_FromDate.Enabled = False
-        Me.Dtpick_FromDate.Font = New System.Drawing.Font("Roboto", 12.0!)
+        Me.Dtpick_FromDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Dtpick_FromDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.Dtpick_FromDate.Location = New System.Drawing.Point(250, 55)
         Me.Dtpick_FromDate.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.Dtpick_FromDate.MinDate = New Date(2018, 5, 4, 0, 0, 0, 0)
         Me.Dtpick_FromDate.Name = "Dtpick_FromDate"
-        Me.Dtpick_FromDate.Size = New System.Drawing.Size(204, 27)
+        Me.Dtpick_FromDate.Size = New System.Drawing.Size(204, 26)
         Me.Dtpick_FromDate.TabIndex = 11
         '
         'Frm_Report_Connects
@@ -184,4 +186,5 @@ Partial Class Frm_Report_Connects
     Friend WithEvents Rdb_ById As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents Dtpick_FromDate As DateTimePicker
     Friend WithEvents Btn_Search As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents Rpt_Connects1 As Rpt_Connects
 End Class
