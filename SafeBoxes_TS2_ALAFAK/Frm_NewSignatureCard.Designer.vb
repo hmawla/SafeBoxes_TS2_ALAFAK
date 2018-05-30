@@ -22,7 +22,6 @@ Partial Class Frm_NewSignatureCard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MaterialLabel12 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_Nation = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.cbox_careers = New System.Windows.Forms.ComboBox()
@@ -32,32 +31,19 @@ Partial Class Frm_NewSignatureCard
         Me.txt_cid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel7 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
-        Me.cbox_buildings = New System.Windows.Forms.ComboBox()
         Me.lbl_signcardid = New MaterialSkin.Controls.MaterialLabel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_cnam = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txt_contid = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
-        Me.cbox_Regions = New System.Windows.Forms.ComboBox()
-        Me.cbox_Streets = New System.Windows.Forms.ComboBox()
-        Me.MaterialLabel4 = New MaterialSkin.Controls.MaterialLabel()
-        Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.btn_submit = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.ClientSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContractSelector = New MaterialSkin.Controls.MaterialContextMenuStrip()
+        Me.SelectContractToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientSelector.SuspendLayout()
+        Me.ContractSelector.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MaterialLabel12
-        '
-        Me.MaterialLabel12.AutoSize = True
-        Me.MaterialLabel12.Depth = 0
-        Me.MaterialLabel12.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel12.Location = New System.Drawing.Point(340, 213)
-        Me.MaterialLabel12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.MaterialLabel12.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel12.Name = "MaterialLabel12"
-        Me.MaterialLabel12.Size = New System.Drawing.Size(72, 19)
-        Me.MaterialLabel12.TabIndex = 71
-        Me.MaterialLabel12.Text = "Building:*"
         '
         'cbox_Nation
         '
@@ -117,7 +103,7 @@ Partial Class Frm_NewSignatureCard
         Me.MaterialLabel9.Depth = 0
         Me.MaterialLabel9.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel9.Location = New System.Drawing.Point(17, 272)
+        Me.MaterialLabel9.Location = New System.Drawing.Point(17, 211)
         Me.MaterialLabel9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MaterialLabel9.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel9.Name = "MaterialLabel9"
@@ -127,7 +113,7 @@ Partial Class Frm_NewSignatureCard
         '
         'txt_signnote
         '
-        Me.txt_signnote.Location = New System.Drawing.Point(20, 296)
+        Me.txt_signnote.Location = New System.Drawing.Point(20, 235)
         Me.txt_signnote.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txt_signnote.Multiline = True
         Me.txt_signnote.Name = "txt_signnote"
@@ -156,6 +142,7 @@ Partial Class Frm_NewSignatureCard
         'MaterialLabel7
         '
         Me.MaterialLabel7.AutoSize = True
+        Me.MaterialLabel7.ContextMenuStrip = Me.ClientSelector
         Me.MaterialLabel7.Depth = 0
         Me.MaterialLabel7.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -180,18 +167,6 @@ Partial Class Frm_NewSignatureCard
         Me.MaterialLabel3.Size = New System.Drawing.Size(92, 19)
         Me.MaterialLabel3.TabIndex = 62
         Me.MaterialLabel3.Text = "Nationality*:"
-        '
-        'cbox_buildings
-        '
-        Me.cbox_buildings.BackColor = System.Drawing.Color.White
-        Me.cbox_buildings.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.cbox_buildings.ForeColor = System.Drawing.Color.Black
-        Me.cbox_buildings.FormattingEnabled = True
-        Me.cbox_buildings.Location = New System.Drawing.Point(344, 235)
-        Me.cbox_buildings.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.cbox_buildings.Name = "cbox_buildings"
-        Me.cbox_buildings.Size = New System.Drawing.Size(154, 27)
-        Me.cbox_buildings.TabIndex = 55
         '
         'lbl_signcardid
         '
@@ -258,6 +233,7 @@ Partial Class Frm_NewSignatureCard
         'MaterialLabel1
         '
         Me.MaterialLabel1.AutoSize = True
+        Me.MaterialLabel1.ContextMenuStrip = Me.ContractSelector
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -269,65 +245,13 @@ Partial Class Frm_NewSignatureCard
         Me.MaterialLabel1.TabIndex = 74
         Me.MaterialLabel1.Text = "Contract ID:*"
         '
-        'cbox_Regions
-        '
-        Me.cbox_Regions.BackColor = System.Drawing.Color.White
-        Me.cbox_Regions.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.cbox_Regions.ForeColor = System.Drawing.Color.Black
-        Me.cbox_Regions.FormattingEnabled = True
-        Me.cbox_Regions.Location = New System.Drawing.Point(20, 235)
-        Me.cbox_Regions.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.cbox_Regions.Name = "cbox_Regions"
-        Me.cbox_Regions.Size = New System.Drawing.Size(154, 27)
-        Me.cbox_Regions.TabIndex = 75
-        '
-        'cbox_Streets
-        '
-        Me.cbox_Streets.BackColor = System.Drawing.Color.White
-        Me.cbox_Streets.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.cbox_Streets.ForeColor = System.Drawing.Color.Black
-        Me.cbox_Streets.FormattingEnabled = True
-        Me.cbox_Streets.Location = New System.Drawing.Point(182, 235)
-        Me.cbox_Streets.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.cbox_Streets.Name = "cbox_Streets"
-        Me.cbox_Streets.Size = New System.Drawing.Size(154, 27)
-        Me.cbox_Streets.TabIndex = 76
-        '
-        'MaterialLabel4
-        '
-        Me.MaterialLabel4.AutoSize = True
-        Me.MaterialLabel4.Depth = 0
-        Me.MaterialLabel4.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel4.Location = New System.Drawing.Point(16, 213)
-        Me.MaterialLabel4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel4.Name = "MaterialLabel4"
-        Me.MaterialLabel4.Size = New System.Drawing.Size(65, 19)
-        Me.MaterialLabel4.TabIndex = 77
-        Me.MaterialLabel4.Text = "Region:*"
-        '
-        'MaterialLabel5
-        '
-        Me.MaterialLabel5.AutoSize = True
-        Me.MaterialLabel5.Depth = 0
-        Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel5.Location = New System.Drawing.Point(178, 213)
-        Me.MaterialLabel5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel5.Name = "MaterialLabel5"
-        Me.MaterialLabel5.Size = New System.Drawing.Size(59, 19)
-        Me.MaterialLabel5.TabIndex = 78
-        Me.MaterialLabel5.Text = "Street:*"
-        '
         'btn_submit
         '
         Me.btn_submit.AutoSize = True
         Me.btn_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_submit.Depth = 0
         Me.btn_submit.Icon = Nothing
-        Me.btn_submit.Location = New System.Drawing.Point(427, 360)
+        Me.btn_submit.Location = New System.Drawing.Point(427, 299)
         Me.btn_submit.MouseState = MaterialSkin.MouseState.HOVER
         Me.btn_submit.Name = "btn_submit"
         Me.btn_submit.Primary = True
@@ -336,20 +260,45 @@ Partial Class Frm_NewSignatureCard
         Me.btn_submit.Text = "Submit"
         Me.btn_submit.UseVisualStyleBackColor = True
         '
+        'ClientSelector
+        '
+        Me.ClientSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ClientSelector.Depth = 0
+        Me.ClientSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectClientToolStripMenuItem})
+        Me.ClientSelector.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ClientSelector.Name = "ClientSelector"
+        Me.ClientSelector.Size = New System.Drawing.Size(140, 26)
+        '
+        'SelectClientToolStripMenuItem
+        '
+        Me.SelectClientToolStripMenuItem.Name = "SelectClientToolStripMenuItem"
+        Me.SelectClientToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectClientToolStripMenuItem.Text = "Select Client"
+        '
+        'ContractSelector
+        '
+        Me.ContractSelector.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ContractSelector.Depth = 0
+        Me.ContractSelector.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectContractToolStripMenuItem})
+        Me.ContractSelector.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ContractSelector.Name = "ContractSelector"
+        Me.ContractSelector.Size = New System.Drawing.Size(181, 48)
+        '
+        'SelectContractToolStripMenuItem
+        '
+        Me.SelectContractToolStripMenuItem.Name = "SelectContractToolStripMenuItem"
+        Me.SelectContractToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SelectContractToolStripMenuItem.Text = "Select Contract"
+        '
         'Frm_NewSignatureCard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(510, 408)
+        Me.ClientSize = New System.Drawing.Size(510, 346)
         Me.Controls.Add(Me.btn_submit)
-        Me.Controls.Add(Me.MaterialLabel5)
-        Me.Controls.Add(Me.MaterialLabel4)
-        Me.Controls.Add(Me.cbox_Streets)
-        Me.Controls.Add(Me.cbox_Regions)
         Me.Controls.Add(Me.txt_contid)
         Me.Controls.Add(Me.MaterialLabel1)
-        Me.Controls.Add(Me.MaterialLabel12)
         Me.Controls.Add(Me.cbox_Nation)
         Me.Controls.Add(Me.MaterialLabel2)
         Me.Controls.Add(Me.cbox_careers)
@@ -360,7 +309,6 @@ Partial Class Frm_NewSignatureCard
         Me.Controls.Add(Me.txt_cid)
         Me.Controls.Add(Me.MaterialLabel7)
         Me.Controls.Add(Me.MaterialLabel3)
-        Me.Controls.Add(Me.cbox_buildings)
         Me.Controls.Add(Me.lbl_signcardid)
         Me.Controls.Add(Me.Label3)
         Me.MaximizeBox = False
@@ -368,12 +316,12 @@ Partial Class Frm_NewSignatureCard
         Me.Name = "Frm_NewSignatureCard"
         Me.Sizable = False
         Me.Text = "New Signature Card"
+        Me.ClientSelector.ResumeLayout(False)
+        Me.ContractSelector.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MaterialLabel12 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_Nation As ComboBox
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents cbox_careers As ComboBox
@@ -383,15 +331,14 @@ Partial Class Frm_NewSignatureCard
     Friend WithEvents txt_cid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel7 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents cbox_buildings As ComboBox
     Friend WithEvents lbl_signcardid As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents Label3 As Label
     Friend WithEvents txt_cnam As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents txt_contid As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents cbox_Regions As ComboBox
-    Friend WithEvents cbox_Streets As ComboBox
-    Friend WithEvents MaterialLabel4 As MaterialSkin.Controls.MaterialLabel
-    Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents btn_submit As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents ClientSelector As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents SelectClientToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContractSelector As MaterialSkin.Controls.MaterialContextMenuStrip
+    Friend WithEvents SelectContractToolStripMenuItem As ToolStripMenuItem
 End Class
