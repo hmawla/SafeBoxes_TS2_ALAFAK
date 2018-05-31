@@ -38,4 +38,8 @@ Public Class Frm_Login
             btn_login.PerformClick()
         End If
     End Sub
+
+    Private Sub Frm_Login_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        End
+    End Sub
 End Class

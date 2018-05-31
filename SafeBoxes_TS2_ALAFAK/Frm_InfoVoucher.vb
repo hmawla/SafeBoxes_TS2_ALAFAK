@@ -121,4 +121,8 @@
     Private Sub InfoVoucherReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InfoVoucherReportToolStripMenuItem.Click
         Frm_Report_InfoVoucher.ShowDialog()
     End Sub
+
+    Private Sub InfoResultsReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InfoResultsReportToolStripMenuItem.Click
+        frm_Info_Result.ShowDialog()
+    End Sub
 End Class

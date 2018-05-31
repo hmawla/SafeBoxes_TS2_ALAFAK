@@ -301,12 +301,12 @@ Partial Class Frm_Employees
         Me.EmployeesReport.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportsToolStripMenuItem})
         Me.EmployeesReport.MouseState = MaterialSkin.MouseState.HOVER
         Me.EmployeesReport.Name = "EmployeesReport"
-        Me.EmployeesReport.Size = New System.Drawing.Size(181, 48)
+        Me.EmployeesReport.Size = New System.Drawing.Size(115, 26)
         '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
         Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'Frm_Employees
@@ -315,6 +315,7 @@ Partial Class Frm_Employees
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(685, 577)
+        Me.ContextMenuStrip = Me.EmployeesReport
         Me.Controls.Add(Me.MaterialTabSelector1)
         Me.Controls.Add(Me.MaterialTabControl1)
         Me.Controls.Add(Me.dgv_employees)

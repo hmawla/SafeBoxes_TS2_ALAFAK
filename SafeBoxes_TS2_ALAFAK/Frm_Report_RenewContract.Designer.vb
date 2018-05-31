@@ -30,6 +30,7 @@ Partial Class Frm_Report_RenewContract
         Me.Rdb_ByContId = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Dtpick_FromDate = New System.Windows.Forms.DateTimePicker()
         Me.CRptV_Renew = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.Rpt_example1 = New SafeBoxes_TS2_ALAFAK.Rpt_example()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -147,7 +148,7 @@ Partial Class Frm_Report_RenewContract
         '
         'CRptV_Renew
         '
-        Me.CRptV_Renew.ActiveViewIndex = -1
+        Me.CRptV_Renew.ActiveViewIndex = 0
         Me.CRptV_Renew.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -155,6 +156,7 @@ Partial Class Frm_Report_RenewContract
         Me.CRptV_Renew.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRptV_Renew.Location = New System.Drawing.Point(15, 213)
         Me.CRptV_Renew.Name = "CRptV_Renew"
+        Me.CRptV_Renew.ReportSource = Me.Rpt_example1
         Me.CRptV_Renew.Size = New System.Drawing.Size(688, 367)
         Me.CRptV_Renew.TabIndex = 20
         '
@@ -184,4 +186,5 @@ Partial Class Frm_Report_RenewContract
     Friend WithEvents Dtpick_FromDate As DateTimePicker
     Friend WithEvents CRptV_Renew As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents Btn_Search As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents Rpt_example1 As Rpt_example
 End Class

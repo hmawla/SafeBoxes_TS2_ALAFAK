@@ -31,8 +31,5 @@
 
     End Sub
 
-    Private Sub ReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportToolStripMenuItem.Click
-        Frm_Report_Signatures.ShowDialog()
-    End Sub
 End Class
 

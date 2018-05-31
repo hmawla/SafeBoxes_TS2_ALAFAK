@@ -244,16 +244,16 @@
     <Compile Include="Frm_Report_BoxPrices.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Info_result_report.vb">
+    <Compile Include="Rpt_example.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Info_result_report.rpt</DependentUpon>
+      <DependentUpon>Rpt_example.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Info_voucher_report.vb">
+    <Compile Include="Rpt_Info_result.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Info_voucher_report.rpt</DependentUpon>
+      <DependentUpon>Rpt_Info_result.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="NewBuilding.Designer.vb">
@@ -262,22 +262,22 @@
     <Compile Include="NewBuilding.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="report_boxprices.vb">
+    <Compile Include="Rpt_boxprices.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>report_boxprices.rpt</DependentUpon>
+      <DependentUpon>Rpt_boxprices.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="report_companies.vb">
+    <Compile Include="Rpt_companies.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>report_companies.rpt</DependentUpon>
+      <DependentUpon>Rpt_companies.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report_InfoVoucher.vb">
+    <Compile Include="Rpt_InfoVoucher.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Report_InfoVoucher.rpt</DependentUpon>
+      <DependentUpon>Rpt_InfoVoucher.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Rpt_FATCA.vb">
@@ -608,28 +608,28 @@
     <EmbeddedResource Include="Frm_Report_BoxPrices.resx">
       <DependentUpon>Frm_Report_BoxPrices.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Info_result_report.rpt">
+    <EmbeddedResource Include="Rpt_example.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Info_result_report.vb</LastGenOutput>
+      <LastGenOutput>Rpt_example.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Info_voucher_report.rpt">
+    <EmbeddedResource Include="Rpt_Info_result.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Info_voucher_report.vb</LastGenOutput>
+      <LastGenOutput>Rpt_Info_result.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="NewBuilding.resx">
       <DependentUpon>NewBuilding.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="report_boxprices.rpt">
+    <EmbeddedResource Include="Rpt_boxprices.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>report_boxprices.vb</LastGenOutput>
+      <LastGenOutput>Rpt_boxprices.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="report_companies.rpt">
+    <EmbeddedResource Include="Rpt_companies.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>report_companies.vb</LastGenOutput>
+      <LastGenOutput>Rpt_companies.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report_InfoVoucher.rpt">
+    <EmbeddedResource Include="Rpt_InfoVoucher.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Report_InfoVoucher.vb</LastGenOutput>
+      <LastGenOutput>Rpt_InfoVoucher.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Rpt_FATCA.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

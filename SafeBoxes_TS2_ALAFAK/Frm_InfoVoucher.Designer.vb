@@ -26,6 +26,7 @@ Partial Class Frm_InfoVoucher
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.MaterialTabControl1 = New MaterialSkin.Controls.MaterialTabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
         Me.Btn_NewInfoResult = New MaterialSkin.Controls.MaterialFlatButton()
         Me.btn_connects = New MaterialSkin.Controls.MaterialFlatButton()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
@@ -42,7 +43,7 @@ Partial Class Frm_InfoVoucher
         Me.Reports = New MaterialSkin.Controls.MaterialContextMenuStrip()
         Me.InfoVoucherReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConnectsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MaterialFlatButton1 = New MaterialSkin.Controls.MaterialFlatButton()
+        Me.InfoResultsReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv_infovouchers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -120,6 +121,21 @@ Partial Class Frm_InfoVoucher
         Me.TabPage1.Size = New System.Drawing.Size(686, 145)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Controls"
+        '
+        'MaterialFlatButton1
+        '
+        Me.MaterialFlatButton1.AutoSize = True
+        Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialFlatButton1.Depth = 0
+        Me.MaterialFlatButton1.Icon = Nothing
+        Me.MaterialFlatButton1.Location = New System.Drawing.Point(176, 101)
+        Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
+        Me.MaterialFlatButton1.Primary = True
+        Me.MaterialFlatButton1.Size = New System.Drawing.Size(113, 36)
+        Me.MaterialFlatButton1.TabIndex = 9
+        Me.MaterialFlatButton1.Text = "Info Results"
         '
         'Btn_NewInfoResult
         '
@@ -335,10 +351,10 @@ Partial Class Frm_InfoVoucher
         '
         Me.Reports.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Reports.Depth = 0
-        Me.Reports.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InfoVoucherReportToolStripMenuItem, Me.ConnectsReportToolStripMenuItem})
+        Me.Reports.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InfoVoucherReportToolStripMenuItem, Me.ConnectsReportToolStripMenuItem, Me.InfoResultsReportToolStripMenuItem})
         Me.Reports.MouseState = MaterialSkin.MouseState.HOVER
         Me.Reports.Name = "MaterialContextMenuStrip1"
-        Me.Reports.Size = New System.Drawing.Size(181, 70)
+        Me.Reports.Size = New System.Drawing.Size(181, 92)
         Me.Reports.Text = "Reports"
         '
         'InfoVoucherReportToolStripMenuItem
@@ -353,20 +369,11 @@ Partial Class Frm_InfoVoucher
         Me.ConnectsReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ConnectsReportToolStripMenuItem.Text = "Connects Report"
         '
-        'MaterialFlatButton1
+        'InfoResultsReportToolStripMenuItem
         '
-        Me.MaterialFlatButton1.AutoSize = True
-        Me.MaterialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialFlatButton1.Depth = 0
-        Me.MaterialFlatButton1.Icon = Nothing
-        Me.MaterialFlatButton1.Location = New System.Drawing.Point(176, 101)
-        Me.MaterialFlatButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MaterialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialFlatButton1.Name = "MaterialFlatButton1"
-        Me.MaterialFlatButton1.Primary = True
-        Me.MaterialFlatButton1.Size = New System.Drawing.Size(113, 36)
-        Me.MaterialFlatButton1.TabIndex = 9
-        Me.MaterialFlatButton1.Text = "Info Results"
+        Me.InfoResultsReportToolStripMenuItem.Name = "InfoResultsReportToolStripMenuItem"
+        Me.InfoResultsReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.InfoResultsReportToolStripMenuItem.Text = "Info Results Report"
         '
         'Frm_InfoVoucher
         '
@@ -411,4 +418,5 @@ Partial Class Frm_InfoVoucher
     Friend WithEvents Btn_NewInfoResult As MaterialSkin.Controls.MaterialFlatButton
     Friend WithEvents ConnectsReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MaterialFlatButton1 As MaterialSkin.Controls.MaterialFlatButton
+    Friend WithEvents InfoResultsReportToolStripMenuItem As ToolStripMenuItem
 End Class

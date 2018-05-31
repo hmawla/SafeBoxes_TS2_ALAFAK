@@ -23,8 +23,8 @@ Partial Class Frm_Report_InfoVoucher
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.Info_voucher_report1 = New SafeBoxes_TS2_ALAFAK.Info_voucher_report()
-        Me.Report_InfoVoucher1 = New SafeBoxes_TS2_ALAFAK.Report_InfoVoucher()
+        Me.Info_voucher_report1 = New SafeBoxes_TS2_ALAFAK.Rpt_InfoVoucher()
+        Me.Report_InfoVoucher1 = New SafeBoxes_TS2_ALAFAK.Rpt_InfoVoucher()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -52,6 +52,6 @@ Partial Class Frm_Report_InfoVoucher
     End Sub
 
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents Report_InfoVoucher1 As Report_InfoVoucher
-    Friend WithEvents Info_voucher_report1 As Info_voucher_report
+    Friend WithEvents Report_InfoVoucher1 As Rpt_InfoVoucher
+    Friend WithEvents Info_voucher_report1 As Rpt_InfoVoucher
 End Class

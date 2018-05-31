@@ -23,7 +23,7 @@ Partial Class frm_report_companies
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.report_companies1 = New SafeBoxes_TS2_ALAFAK.report_companies()
+        Me.report_companies1 = New SafeBoxes_TS2_ALAFAK.Rpt_companies()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -51,5 +51,5 @@ Partial Class frm_report_companies
     End Sub
 
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents report_companies1 As report_companies
+    Friend WithEvents report_companies1 As Rpt_companies
 End Class
